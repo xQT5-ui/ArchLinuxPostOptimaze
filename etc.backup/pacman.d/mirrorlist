@@ -1,0 +1,228 @@
+
+
+## Finland
+Server = http://arch.mirror.far.fi/$repo/os/$arch
+
+
+## Finland
+Server = http://arch.yhtez.xyz/$repo/os/$arch
+
+
+## Finland
+Server = http://mirror.wuki.li/archlinux/$repo/os/$arch
+
+
+## Finland
+Server = https://mirror.wuki.li/archlinux/$repo/os/$arch
+
+
+## Finland
+Server = https://arch.yhtez.xyz/$repo/os/$arch
+
+
+## Finland
+Server = http://mirror.5i.fi/archlinux/$repo/os/$arch
+
+
+## Finland
+Server = https://mirror1.sl-chat.ru/archlinux/$repo/os/$arch
+
+
+## Finland
+Server = http://mirrors.janbruckner.de/archlinux/$repo/os/$arch
+
+
+## Finland
+Server = https://mirror.srv.fail/archlinux/$repo/os/$arch
+
+
+## Finland
+Server = https://mirrors.janbruckner.de/archlinux/$repo/os/$arch
+
+
+## Finland
+Server = https://mirror.5i.fi/archlinux/$repo/os/$arch
+
+
+## Russia
+Server = http://mirror.nw-sys.ru/archlinux/$repo/os/$arch
+
+
+## Russia
+Server = https://mirror.nw-sys.ru/archlinux/$repo/os/$arch
+
+
+## Russia
+Server = https://mirror2.sl-chat.ru/archlinux/$repo/os/$arch
+
+
+## Russia
+Server = http://repository.su/archlinux/$repo/os/$arch
+
+
+## Russia
+Server = http://ru.mirrors.cicku.me/archlinux/$repo/os/$arch
+
+
+## Russia
+Server = https://ru.mirrors.cicku.me/archlinux/$repo/os/$arch
+
+
+## Russia
+Server = http://mirror.kamtv.ru/archlinux/$repo/os/$arch
+
+
+## Russia
+Server = https://mirror.kamtv.ru/archlinux/$repo/os/$arch
+
+
+## Russia
+Server = https://mirror3.sl-chat.ru/archlinux/$repo/os/$arch
+
+
+## Russia
+Server = https://repository.su/archlinux/$repo/os/$arch
+
+
+## Russia
+Server = https://mirror.kpfu.ru/archlinux/$repo/os/$arch
+
+
+## Russia
+Server = http://mirror.truenetwork.ru/archlinux/$repo/os/$arch
+
+
+## Russia
+Server = https://mirror.truenetwork.ru/archlinux/$repo/os/$arch
+
+
+## Russia
+Server = http://mirror.kpfu.ru/archlinux/$repo/os/$arch
+
+
+## Russia
+Server = http://mirrors.powernet.com.ru/archlinux/$repo/os/$arch
+
+
+## Russia
+Server = http://mirror.yandex.ru/archlinux/$repo/os/$arch
+
+
+## Russia
+Server = https://mirror.yandex.ru/archlinux/$repo/os/$arch
+
+
+## Sweden
+Server = https://mirror.osbeck.com/archlinux/$repo/os/$arch
+
+
+## Sweden
+Server = https://mirror.bahnhof.net/pub/archlinux/$repo/os/$arch
+
+
+## Sweden
+Server = http://ftp.myrveln.se/pub/linux/archlinux/$repo/os/$arch
+
+
+## Sweden
+Server = http://mirror.accum.se/mirror/archlinux/$repo/os/$arch
+
+
+## Sweden
+Server = https://mirror.accum.se/mirror/archlinux/$repo/os/$arch
+
+
+## Sweden
+Server = http://mirror.bahnhof.net/pub/archlinux/$repo/os/$arch
+
+
+## Sweden
+Server = https://ftp.myrveln.se/pub/linux/archlinux/$repo/os/$arch
+
+
+## Sweden
+Server = http://ftp.lysator.liu.se/pub/archlinux/$repo/os/$arch
+
+
+## Sweden
+Server = http://ftpmirror.infania.net/mirror/archlinux/$repo/os/$arch
+
+
+## Sweden
+Server = https://mirror.braindrainlan.nu/archlinux/$repo/os/$arch
+
+
+## Sweden
+Server = https://ftp.lysator.liu.se/pub/archlinux/$repo/os/$arch
+
+
+## Sweden
+Server = https://ftp.ludd.ltu.se/mirrors/archlinux/$repo/os/$arch
+
+
+## Switzerland
+Server = https://theswissbay.ch/archlinux/$repo/os/$arch
+
+
+## Switzerland
+Server = http://mirror.puzzle.ch/archlinux/$repo/os/$arch
+
+
+## Switzerland
+Server = https://ch.mirrors.cicku.me/archlinux/$repo/os/$arch
+
+
+## Switzerland
+Server = http://ch.mirrors.cicku.me/archlinux/$repo/os/$arch
+
+
+## Switzerland
+Server = https://mirror.worldhotspot.org/archlinux/$repo/os/$arch
+
+
+## Switzerland
+Server = https://mirror.puzzle.ch/archlinux/$repo/os/$arch
+
+
+## Switzerland
+Server = http://pkg.adfinis-on-exoscale.ch/archlinux-pkgbuild/$repo/os/$arch
+
+
+## Switzerland
+Server = http://mirror.init7.net/archlinux/$repo/os/$arch
+
+
+## Switzerland
+Server = http://mirror.metanet.ch/archlinux/$repo/os/$arch
+
+
+## Switzerland
+Server = https://mirror.metanet.ch/archlinux/$repo/os/$arch
+
+
+## Switzerland
+Server = https://mirror.init7.net/archlinux/$repo/os/$arch
+
+
+## Switzerland
+Server = http://pkg.adfinis-on-exoscale.ch/archlinux/$repo/os/$arch
+
+
+## Switzerland
+Server = http://pkg.adfinis.com/archlinux/$repo/os/$arch
+
+
+## Switzerland
+Server = https://pkg.adfinis.com/archlinux/$repo/os/$arch
+
+
+## Switzerland
+Server = https://pkg.adfinis-on-exoscale.ch/archlinux-pkgbuild/$repo/os/$arch
+
+
+## Switzerland
+Server = https://pkg.adfinis-on-exoscale.ch/archlinux/$repo/os/$arch
+
+
+## Switzerland
+Server = https://mirror.ungleich.ch/mirror/packages/archlinux/$repo/os/$arch

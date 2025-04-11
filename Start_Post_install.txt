@@ -1,0 +1,2 @@
+chmod +x arch_post_install.sh
+sudo ./Arch_Linux_Postinstall.sh
