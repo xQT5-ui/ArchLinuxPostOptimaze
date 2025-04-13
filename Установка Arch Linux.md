@@ -321,6 +321,9 @@ systemctl --user enable --now pipewire pipewire.socket pipewire-pulse wireplumbe
     - thermald = это демон для предотвращения перегрева процессоров Intel. Он мониторит температуру и применяет различные методы охлаждения:
         `sudo systemctl enable --now thermald`
 
+    - timeshift:
+        `sudo systemctl enable --now cronie.service`
+
 13. Настройка /etc/sysctl.d/:
 - создать файл "99-sysctl.conf" и заполнить его:
 ```bash
