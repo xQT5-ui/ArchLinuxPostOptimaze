@@ -6,6 +6,129 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
+# 2. Функция для настройки initramfs
+configure_initramfs() {
+   log_message "Настройка образов initramfs..."
+
+   # Добавление важных модулей (с проверкой на NVIDIA)
+   if $NVIDIA_PRESENT; then
+      echo "MODULES+=(nvidia nvidia_modeset nvidia_uvm nvidia_drm btrfs)" > /etc/mkinitcpio.conf.d/10-modules.conf
+   else
+      echo "MODULES+=(btrfs)" > /etc/mkinitcpio.conf.d/10-modules.conf
+   fi
+   check_success "добавление модулей в initramfs"
+
+   # Ускорение загрузки системы c помощью systemd
+   sed -i 's/HOOKS=.*/HOOKS=(systemd autodetect modconf microcode kms keyboard keymap sd-vconsole block filesystems)/' /etc/mkinitcpio.conf
+   check_success "настройка хуков для ускорения загрузки"
+
+   log_success "Образы initramfs успешно настроены"
+}
+
+# 3. Функция для повышения системных лимитов
+increase_system_limits() {
+   log_message "Повышение системных лимитов..."
+
+   sed -i 's/.*DefaultLimitNOFILE=.*/DefaultLimitNOFILE=1046576/' /etc/systemd/system.conf
+   check_success "настройка лимитов в system.conf"
+
+   sed -i 's/.*DefaultLimitNOFILE=.*/DefaultLimitNOFILE=1046576/' /etc/systemd/user.conf
+   check_success "настройка лимитов в user.conf"
+
+   sed -i '/#@student        -       maxlogins       4/a '"$SUDO_USER"' hard nofile 1046576' /etc/security/limits.conf
+   check_success "настройка лимитов в limits.conf"
+
+   log_success "Системные лимиты успешно повышены"
+}
+
+# 4. Функция для настройки загрузчика GRUB
+configure_bootloader() {
+   log_message "Настройка загрузчика GRUB..."
+
+   sed -i 's/^GRUB_TIMEOUT=[0-9]\+/GRUB_TIMEOUT=1/' /etc/default/grub
+   check_success "настройка таймаута GRUB"
+
+   if $NVIDIA_PRESENT; then
+      sed -i 's/^GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT="quiet splash nvidia-drm.modeset=1 modprobe.blacklist=nouveau zswap.enabled=0 tsc=reliable threadirqs"/' /etc/default/grub
+   else
+      sed -i 's/^GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT="quiet splash zswap.enabled=0 tsc=reliable threadirqs"/' /etc/default/grub
+   fi
+   check_success "настройка параметров ядра"
+
+   sed -i 's/^GRUB_TIMEOUT_STYLE=.*/GRUB_TIMEOUT_STYLE=countdown/' /etc/default/grub
+   check_success "настройка стиля таймаута GRUB"
+
+   log_success "Загрузчик GRUB успешно настроен"
+}
+
+# 5. Функция для настройки параметров ядра
+configure_sysctl() {
+   log_message "Настройка параметров ядра через sysctl..."
+
+   cat << EOF > /etc/sysctl.d/99-sysctl.conf
+# Оптимизация памяти для игр и мультимедиа
+vm.swappiness=20 # 100 - активно использовано zram
+vm.vfs_cache_pressure=50
+vm.max_map_count=262144
+
+# Параметр для предотвращения OOM
+vm.min_free_kbytes=131072 # 128 МБ
+
+# Улучшение сетевой производительности для онлайн-игр
+net.core.netdev_max_backlog=32768
+net.core.somaxconn=4096
+net.ipv4.tcp_fastopen=3
+net.ipv4.ip_local_port_range=1024 65000
+net.core.default_qdisc=fq_codel
+net.ipv4.tcp_mtu_probing=1
+net.ipv4.tcp_slow_start_after_idle=0
+net.ipv4.tcp_notsent_lowat=16384
+net.ipv4.tcp_tw_reuse=1
+net.ipv4.tcp_fin_timeout=30
+
+# Оптимизация UDP для игр
+net.core.rmem_max=16777216
+net.core.wmem_max=16777216
+net.core.rmem_default=16777216
+net.core.wmem_default=16777216
+net.ipv4.udp_mem=16777216 16777216 16777216
+
+# Оптимизация для Btrfs и SSD
+vm.dirty_background_bytes=134217728  # 128 МБ (для NVMe)
+vm.dirty_bytes=536870912 # 512MB
+EOF
+   check_success "создание конфигурации sysctl"
+
+   log_success "Параметры ядра успешно настроены"
+}
+
+# 6. Функция для настройки переменных окружения (NVIDIA)
+configure_wayland() {
+   log_message "Настройка поддержки Wayland..."
+
+   # Дополнение /etc/environment
+   if $NVIDIA_PRESENT; then
+      cat << EOF >> /etc/environment
+# Основные настройки NVIDIA для Wayland
+GBM_BACKEND=nvidia-drm
+__GLX_VENDOR_LIBRARY_NAME=nvidia
+LIBVA_DRIVER_NAME=nvidia
+#
+# Аппаратное ускорение видео (дополнение к существующим)
+VDPAU_DRIVER=nvidia  # Для декодирования видео через VDPAU
+NVD_BACKEND=direct  # Прямой доступ к GPU для Vulkan-приложений
+VDPAU_NVIDIA_ENABLE_NVDEC=1
+#
+# При проблемах с раcкрытием окон на весь экран
+# GSK_RENDERER=cairo
+EOF
+   fi
+   check_success "настройка переменных окружения для Wayland"
+
+   log_success "Поддержка Wayland успешно настроена"
+}
+
+
 # 16. Настройка plex media server
 echo 'Настройка plex media server...'
 
