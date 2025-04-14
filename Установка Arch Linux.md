@@ -201,8 +201,7 @@ yay -S --noconfirm v2raya [настройка здесь https://habr.com/ru/san
 ```
 > `yay -S --noconfirm appimagelauncher` - для запуска AppImage-приложений
 > `plymouth` - для графического экрана загрузки
-
-`yay -S ttf-ms-fonts` - шрифты от Microsoft
+> `yay -S ttf-ms-fonts` - шрифты от Microsoft
 
 10. Работа с PipeWire:
 - добавление себя в группу пользователей "realtime":
