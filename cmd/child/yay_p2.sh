@@ -127,6 +127,8 @@ install_aur_packages() {
         "visual-studio-code-bin"
         "v2raya"
         "ttf-ms-fonts"
+        "mkinitcpio-firmware"
+        "papirus-folders"
     )
 
     # Установка пакетов
