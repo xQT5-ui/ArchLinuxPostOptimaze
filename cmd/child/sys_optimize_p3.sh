@@ -8,19 +8,25 @@
 set -e  # Скрипт завершится при любой ошибке
 set -u  # Использование неопределенных переменных вызовет ошибку
 
-# Функция для вывода сообщений
+# Цвета для вывода сообщений
+BLUE="\e[1;34m"
+RED="\e[1;31m"
+GREEN="\e[1;32m"
+RESET="\e[0m"
+
+# Функция для вывода информационных сообщений
 log_message() {
-   echo -e "\e[1;34m[INFO] $1\e[0m"
+   echo -e "${BLUE}[INFO] $1${RESET}"
 }
 
 # Функция для вывода сообщений об ошибках
 log_error() {
-   echo -e "\e[1;31m[ERROR] $1\e[0m" >&2
+   echo -e "${RED}[ERROR] $1${RESET}" >&2
 }
 
 # Функция для вывода сообщений об успешном выполнении
 log_success() {
-   echo -e "\e[1;32m[SUCCESS] $1\e[0m"
+   echo -e "${GREEN}[SUCCESS] $1${RESET}"
 }
 
 # Функция для проверки успешности выполнения команды
@@ -109,9 +115,9 @@ configure_bootloader() {
    check_success "настройка таймаута GRUB"
 
    if $NVIDIA_PRESENT; then
-      sed -i 's/^GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT="quiet splash nvidia-drm.modeset=1 modprobe.blacklist=nouveau zswap.enabled=0 tsc=reliable threadirqs"/' /etc/default/grub
+      sed -i 's/^GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT="quiet splash nvidia-drm.modeset=1 modprobe.blacklist=nouveau zswap.enabled=0 tsc=reliable threadirqs intel_pstate=active"/' /etc/default/grub
    else
-      sed -i 's/^GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT="quiet splash zswap.enabled=0 tsc=reliable threadirqs"/' /etc/default/grub
+      sed -i 's/^GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT="quiet splash zswap.enabled=0 tsc=reliable threadirqs intel_pstate=active"/' /etc/default/grub
    fi
    check_success "настройка параметров ядра"
 
@@ -173,6 +179,7 @@ configure_wayland() {
 GBM_BACKEND=nvidia-drm
 __GLX_VENDOR_LIBRARY_NAME=nvidia
 LIBVA_DRIVER_NAME=nvidia
+__GL_MaxFramesAllowed=1 # Ограничивает кадры в фоновых окнах (аналог Nvidia Frame Rate Limiter)
 #
 # Аппаратное ускорение видео (дополнение к существующим)
 VDPAU_DRIVER=nvidia  # Для декодирования видео через VDPAU
@@ -307,10 +314,10 @@ options nvidia NVreg_EnableMSI=1 # Включает Message-Signaled Interrupts 
 options nvidia NVreg_UsePageAttributeTable=1 # Улучшает управление памятью через PAT
 options nvidia NVreg_PreserveVideoMemoryAllocations=1  # Сохранение видеопамяти при suspend
 options nvidia NVreg_EnableGpuFirmware=1  # Аппаратная инициализация для RTX >30xx
-options nvidia NVreg_RegistryDwords="PowerMizerEnable=0x1" # Приоритет производительности
 options nvidia NVreg_EnableHostAllocation=1    # +7% VRAM perf
 options nvidia NVreg_EnableResizableBar=1     # PCIe Resizable BAR
 options nvidia NVreg_RequireECC=0             # Для не-серверных GPU
+#options nvidia NVreg_RegistryDwords="PowerMizerEnable=0x1" # Приоритет производительности
 EOF
    check_success "создание нового конфига nvidia.conf"
 

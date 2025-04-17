@@ -1,0 +1,2 @@
+chmod +x ./Postinstall_start.sh && \
+./Postinstall_start.sh
