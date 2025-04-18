@@ -129,7 +129,7 @@ install_aur_packages() {
         "ventoy-bin"
         "plex-media-server"
         "nautilus-admin-gtk4"
-        "nautilus-open-any-terminal"
+        #"nautilus-open-any-terminal"
         "visual-studio-code-bin"
         "v2raya"
         "ttf-ms-fonts"

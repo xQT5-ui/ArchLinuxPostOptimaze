@@ -1,2 +1,4 @@
 chmod +x ./Postinstall_start.sh && \
 ./Postinstall_start.sh
+
+~42 минуты на весь процесс
