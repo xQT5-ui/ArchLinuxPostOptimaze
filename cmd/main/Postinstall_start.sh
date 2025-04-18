@@ -35,21 +35,21 @@ log_warning() {
 # Функция для проверки успешности выполнения команды
 check_success() {
    if [ $? -ne 0 ]; then
-      log_error "Ошибка при выполнении: $1"
+      log_error "Error during execution: $1"
       exit 1
    fi
 }
 
 # Проверка, что скрипт не запущен от имени root
 if [[ $EUID -eq 0 ]]; then
-    log_error "Этот скрипт НЕ должен быть запущен с правами суперпользователя"
-    echo "Используйте: $0 без sudo"
+    log_error "This script should NOT be run with superuser rights"
+    echo "Use: $0 without sudo"
     exit 1
 fi
 
 # Функция выдачи прав на запуск скриптов
 add_right_running() {
-    log_message "Выдаём права на запуск скриптов..."
+    log_message "We grant the rights to run scripts..."
 
     # Сохраняем текущую директорию
     CURRENT_DIR=$(pwd)
@@ -57,9 +57,9 @@ add_right_running() {
     # Выдаём права на запуск для After_reboot.sh
     if [ -f "./After_reboot.sh" ]; then
         chmod +x "./After_reboot.sh"
-        check_success "выдача прав на After_reboot.sh"
+        check_success "grant the rights to 'After_reboot.sh'"
     else
-        log_error "Файл After_reboot.sh не найден в текущей директории"
+        log_error "The 'After_reboot.sh' file was not found in the current directory"
     fi
 
     # Переходим в директорию cmd
@@ -67,11 +67,11 @@ add_right_running() {
     cd ..
     if [ -d "./cmd" ]; then
         cd ./cmd || {
-            log_error "Не удалось перейти в директорию ./cmd"
+            log_error "Couldn't navigate to the directory './cmd'"
             return 1
         }
     else
-        log_error "Директория ./cmd не найдена"
+        log_error "The directory './cmd' not found"
         return 1
     fi
 
@@ -80,27 +80,27 @@ add_right_running() {
         for script in ./child/*.sh; do
             if [ -f "$script" ]; then
                 chmod +x "$script"
-                check_success "выдача прав на $(basename "$script")"
+                check_success "grant the rights to '$(basename "$script")'"
             fi
         done
     else
-        log_error "Директория ./child не найдена"
+        log_error "The directory './child' not found"
         cd "$CURRENT_DIR" # Возвращаемся в исходную директорию
         return 1
     fi
 
     # Возвращаемся в исходную директорию
     cd "$CURRENT_DIR" || {
-        log_error "Не удалось вернуться в исходную директорию"
+        log_error "Couldn't return to the original directory"
         return 1
     }
 
-    log_success "Выдача прав на запуск скриптов успешно произведена"
+    log_success "The rights to run scripts have been successfully granted"
 }
 
 # Функция создания бэкапов
 create_backups() {
-    log_message "Создание бэкапов..."
+    log_message "Creating backups..."
 
     # Переходим на главного родителя
     cd ..
@@ -108,7 +108,7 @@ create_backups() {
 
     # Создаём структуру папок для бэкапов
     mkdir -p ./backups/{systemd,security,default}
-    check_success "создание папок для бэкапов"
+    check_success "creating folders for backups"
 
     # Массив файлов для бэкапа в корневую папку backups
     ROOT_BACKUPS=(
@@ -130,10 +130,10 @@ create_backups() {
         filename=$(basename "$file")
         # Проверяем, существует ли уже файл в папке бэкапов
         if [ -f "./backups/$filename" ]; then
-            log_warning "Файл $filename уже существует в папке бэкапов, пропускаем"
+            log_warning "The '$filename' file already exists in the backups folder, skip it"
         else
             cp "$file" ./backups/
-            check_success "скопировали $file"
+            check_success "copied '$file'"
         fi
     done
 
@@ -143,41 +143,41 @@ create_backups() {
         filename=$(basename "$file")
         # Проверяем, существует ли уже файл в папке бэкапов
         if [ -f "./backups/systemd/$filename" ]; then
-            log_warning "Файл $filename уже существует в папке бэкапов/systemd, пропускаем"
+            log_warning "The '$filename' already exists in the backups/systemd folder, skip it"
         else
             cp "$file" ./backups/systemd/
-            check_success "скопировали $file"
+            check_success "copied '$file'"
         fi
     done
 
     # Копируем остальные файлы
     if [ -f "./backups/security/limits.conf" ]; then
-        log_warning "Файл limits.conf уже существует в папке бэкапов/security, пропускаем"
+        log_warning "The 'limits.conf' file already exists in the backups/security folder, skip it"
     else
         cp /etc/security/limits.conf ./backups/security/
-        check_success "скопировали /etc/security/limits.conf"
+        check_success "copied '/etc/security/limits.conf'"
     fi
 
     if [ -f "./backups/default/grub" ]; then
-        log_warning "Файл grub уже существует в папке бэкапов/default, пропускаем"
+        log_warning "The 'grub' file already exists in the backups/default folder, skip it"
     else
         cp /etc/default/grub ./backups/default/
-        check_success "скопировали /etc/default/grub"
+        check_success "copied /etc/default/grub"
     fi
 
-    log_success "Создание бэкапов успешно произведено"
+    log_success "Backups were created successfully"
 }
 
 # Основная функция
 main() {
-    log_message "Начало установки пред-необходимых действий..."
+    log_message "The beginning of the installation of pre-necessary actions..."
 
     add_right_running
     create_backups
 
-    log_success "Установка пред-необходимых действий успешно произведена"
-    log_message "Начинается работа по пост-оптимизации системы..."
-    log_warning "--> ПРОСЬБА НЕ УХОДИТЬ ПОТОМУ ЧТО НЕОБХОДИМО БУДЕТ ВВОДИТЬ ПАРОЛЬ SUDO В РАЗНЫЕ МОМЕНТЫ ВРЕМЕНИ! <--"
+    log_success "Installation of pre-necessary actions has been successfully performed"
+    log_message "Work begins on post-optimization of the system..."
+    log_warning "--> PLEASE DO NOT LEAVE BECAUSE YOU WILL NEED TO ENTER THE SUDO PASSWORD AT DIFFERENT POINTS IN TIME! <--"
 
     # Запускаем скрипты последовательно
     sudo ./cmd/child/keyring_p0.sh && \

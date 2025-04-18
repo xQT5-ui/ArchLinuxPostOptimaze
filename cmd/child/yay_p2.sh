@@ -32,43 +32,43 @@ log_success() {
 # Функция для проверки успешности выполнения команды
 check_success() {
     if [ $? -ne 0 ]; then
-        log_error "Ошибка при выполнении: $1"
+        log_error "Error during execution: $1"
         exit 1
     fi
 }
 
 # Проверка, что скрипт не запущен от имени root
 if [[ $EUID -eq 0 ]]; then
-    log_error "Этот скрипт НЕ должен быть запущен с правами суперпользователя"
-    echo "Используйте: $0 без sudo"
+    log_error "This script should NOT be run with superuser rights"
+    echo "Use: $0 without sudo"
     exit 1
 fi
 
 # 1. Функция для установки yay
 install_yay() {
-    log_message "Установка yay..."
+    log_message "Installing yay..."
 
     cd ~
     git clone https://aur.archlinux.org/yay.git
-    check_success "клонирование репозитория yay"
+    check_success "cloning the yay repository"
 
     cd ~/yay
     makepkg -si --noconfirm
-    check_success "сборка и установка yay"
+    check_success "assembling and installing yay"
 
     cd ~
     rm -rf ~/yay
 
-    log_success "yay успешно установлен"
+    log_success "yay has been successfully installed"
 }
 
 # 2. Функция для проверки и установки yay
 setup_yay() {
     # Проверяем, установлен ли уже yay
     if command -v yay &> /dev/null; then
-        log_message "yay уже установлен"
+        log_message "yay is already installed"
     else
-        log_message "yay не установлен. Начинаем установку..."
+        log_message "yay is not installed. Starting the installation..."
         install_yay
     fi
 
@@ -80,10 +80,10 @@ setup_yay() {
         # Добавляем PATH в .bashrc для будущих сессий, если его там еще нет
         if ! grep -q 'export PATH="$PATH:~/.local/bin"' ~/.bashrc; then
             echo 'export PATH="$PATH:~/.local/bin"' >> ~/.bashrc
-            log_message "PATH обновлен в .bashrc"
+            log_message "PATH updated in ~/.bashrc"
         fi
     else
-        log_error "Не удалось установить yay. Пожалуйста, проверьте ошибки выше"
+        log_error "Couldn't install yay. Please check the errors above"
         exit 1
     fi
 }
@@ -94,30 +94,30 @@ install_package() {
     local max_attempts=3
     local attempt=1
 
-    log_message "Установка пакета: $package"
+    log_message "Instaling package: $package"
 
     while [ $attempt -le $max_attempts ]; do
         if yay -S --noconfirm "$package"; then
-            log_success "Пакет $package успешно установлен"
+            log_success "The '$package' package has been successfully installed"
             return 0
         else
-            log_error "Попытка $attempt из $max_attempts для установки $package не удалась. Повтор через 5 секунд..."
+            log_error "The $attempt from $max_attempts to install the '$package' failed. Repeat after 5 seconds..."
             sleep 5
             ((attempt++))
         fi
     done
 
-    log_error "Не удалось установить пакет $package после $max_attempts попыток"
+    log_error "Failed to install the '$package' after $max_attempts attempts"
     return 1
 }
 
 # 3. Функция для установки AUR-пакетов
 install_aur_packages() {
-    log_message "Установка пакетов из AUR..."
+    log_message "Installing packages from AUR..."
 
     # Обновляем кэш
     yay -Sy
-    check_success "обновление кэша yay"
+    check_success "updating the yay cache"
 
     # Список пакетов для установки
     local packages=(
@@ -147,18 +147,18 @@ install_aur_packages() {
 
     # Вывод информации о неудачных установках
     if [ ${#failed_packages[@]} -gt 0 ]; then
-        log_error "Следующие пакеты не удалось установить:"
+        log_error "The following packages could not be installed:"
         for package in "${failed_packages[@]}"; do
             echo "  - $package"
         done
     else
-        log_success "Все пакеты из AUR успешно установлены"
+        log_success "All packages from AUR have been successfully installed"
     fi
 }
 
 # 4. Функция для настройки makepkg.conf
 configure_makepkg() {
-    log_message "Настройка makepkg.conf..."
+    log_message "Setting up makepkg.conf..."
 
     cat << EOF > ~/.makepkg.conf
 # Оптимизированный ~/.makepkg.conf
@@ -188,62 +188,62 @@ BUILDDIR=/tmp/makepkg
 # Отключение дебаг-символов для уменьшения размера пакетов
 OPTIONS=(strip docs !libtool !staticlibs emptydirs zipman purge !debug lto)
 EOF
-    check_success "создание конфигурации makepkg"
+    check_success "creating the makepkg configuration"
 
-    log_success "makepkg.conf успешно настроен"
+    log_success "makepkg.conf has been successfully configured"
 }
 
 # 5. Функция для создания дополнительных папок
 create_directories() {
-    log_message "Создание дополнительных папок..."
+    log_message "Create additional folders..."
 
     mkdir -p ~/.themes
     mkdir -p ~/.icons
     mkdir -p ~/Загрузки/Torrents
-    check_success "создание пользовательских директорий"
+    check_success "creating custom directories"
 
     # Эти директории требуют sudo, поэтому обрабатываем их отдельно
     if sudo mkdir -p /media/movies /media/tvshows; then
-        log_success "Директории для медиа созданы"
+        log_success "Media directories have been created"
 
         # Создаем символические ссылки
         ln -sf /media/movies ~/Загрузки/Torrents
         ln -sf /media/tvshows ~/Загрузки/Torrents
-        check_success "создание символических ссылок"
+        check_success "creating symbolic links"
     else
-        log_error "Не удалось создать директории для медиа. Требуются права sudo"
+        log_error "Media directories could not be created. Sudo rights are required"
     fi
 
-    log_success "Дополнительные папки успешно созданы"
+    log_success "Additional folders have been successfully created"
 }
 
 # 6. Функция для настройки полномочий пользователя
 configure_user_permissions() {
-    log_message "Настройка полномочий пользователя..."
+    log_message "Setting up user permissions..."
 
     if sudo usermod -a -G video,realtime,audio $USER; then
-        log_success "Пользователь $USER добавлен в группы video, realtime и audio"
+        log_success "The user $USER has been added to the video, realtime, and audio groups"
     else
-        log_error "Не удалось добавить пользователя в группы. Требуются права sudo"
+        log_error "Couldn't add user to groups. Sudo rights are required"
     fi
 
     if sudo gpasswd -a $USER plex && sudo gpasswd -a $USER power; then
-        log_success "Пользователь $USER добавлен в группы plex и power"
+        log_success "The user $USER has been added to the plex and power groups"
     else
-        log_error "Не удалось добавить пользователя в группы plex и power. Требуются права sudo"
+        log_error "Couldn't add user to plex and power groups. Sudo rights are required"
     fi
 
     # Устанавливаем правильные права на файлы ZSH
     touch ~/.zshrc ~/.zsh_history
     chown $USER:$USER ~/.zshrc ~/.zsh_history
-    check_success "установка прав на файлы ZSH"
+    check_success "setting rights to ZSH files"
 
-    log_success "Полномочия пользователя успешно настроены"
+    log_success "The user's credentials have been successfully configured"
 }
 
 # Основная функция
 main() {
-   log_message "Начало процесса установки AUR-пакетов и настройки системы (Часть 2)..."
+   log_message "The beginning of the process of installing AUR packages and configuring the system (Part 2)..."
 
    setup_yay
    configure_makepkg
@@ -251,8 +251,8 @@ main() {
    create_directories
    configure_user_permissions
 
-   log_message "Все операции успешно завершены!"
-   log_success "===== КОНЕЦ 2-ой ЧАСТИ ====="
+   log_message "All operations have been completed successfully!"
+   log_success "===== END OF THE 2ND PART ====="
 }
 
 # Запуск основной функции

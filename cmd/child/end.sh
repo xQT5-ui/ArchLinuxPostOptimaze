@@ -38,21 +38,21 @@ log_warning() {
 # Функция для проверки успешности выполнения команды
 check_success() {
    if [ $? -ne 0 ]; then
-      log_error "Ошибка при выполнении: $1"
+      log_error "Error during execution: $1"
       exit 1
    fi
 }
 
 # Проверка наличия прав суперпользователя
 if [[ $EUID -ne 0 ]]; then
-   log_error "Этот скрипт должен быть запущен с правами суперпользователя"
-   echo "Используйте: sudo $0"
+   log_error "This script must be run with superuser rights"
+   echo "Use: sudo $0"
    exit 1
 fi
 
 # 1. Функция очистки лишних пакетов
 delete_old_packages() {
-   log_message "Очистка лишних пакетов..."
+   log_message "Cleaning of excess packages..."
 
    # Временно отключаем режим завершения при ошибке
    set +e
@@ -60,7 +60,7 @@ delete_old_packages() {
    # Очистка кэша пакетов
    pacman -Scc --noconfirm
    if [ $? -ne 0 ]; then
-      log_warning "Не удалось очистить кэш пакетов, но продолжаем выполнение"
+      log_warning "Failed to clear the packet cache, but continue execution"
    fi
 
    # Удаление ненужных пакетов
@@ -68,37 +68,37 @@ delete_old_packages() {
    if [ -n "$ORPHANS" ]; then
       pacman -Rscn $ORPHANS --noconfirm
       if [ $? -ne 0 ]; then
-         log_warning "Не удалось удалить некоторые ненужные пакеты, но продолжаем выполнение"
+         log_warning "It was not possible to delete some unnecessary packages, but we continue to execute"
       fi
    else
-      log_message "Ненужных пакетов не обнаружено"
+      log_message "No unnecessary packages were found."
    fi
 
    # Включаем режим завершения при ошибке обратно
    set -e
 
-   log_success "Очистка лишних пакетов завершена"
+   log_success "Cleaning of excess packages is completed"
 }
 
 # 2. Функция повтрного обновления initramfs и grub-загрузчик
 upd_init() {
-   log_message "Обновление initramfs и grub-загрузчик..."
+   log_message "Updating initramfs and the grub loader..."
 
    mkinitcpio -P && grub-mkconfig -o /boot/grub/grub.cfg
-   check_success "обновление initramfs и grub-загрузчик"
+   check_success "updating initramfs and the grub loader"
 
-   log_success "Обновление initramfs и grub-загрузчик успешно проведено"
+   log_success "initramfs and grub loader have been updated successfully"
 }
 
 # Основная функция
 main() {
-   log_message "Начало процесса завершающих работ для Arch Linux (Часть 5)..."
+   log_message "The beginning of the completion process for Arch Linux (Part 5)..."
 
    delete_old_packages
    upd_init
 
-   log_success "===== КОНЕЦ 5-ой ЧАСТИ ====="
-   log_warning "Установка и оптимизация завершены. Рекомендуется перезагрузить систему."
+   log_success "===== END OF THE 5TH PART ====="
+   log_warning "Installation and optimization are complete. It is recommended to reboot the system!"
 }
 
 # Запуск основной функции
