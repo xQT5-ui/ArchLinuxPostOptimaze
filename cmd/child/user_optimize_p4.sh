@@ -95,7 +95,7 @@ optimize_gnome() {
 
 # 3. Функция для настройки ZSH
 configure_zsh() {
-   log_message "SSH configuration..."
+   log_message "ZSH configuration..."
 
    touch ~/.zshrc ~/.zsh_history
    check_success "creating ZSH configuration files"
