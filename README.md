@@ -14,12 +14,12 @@ Greetings! If you want to add auto optimization for your GNU/Linux distribution 
 - Flatpak: `yes`
 - FS: `btrfs`
 
-Optimization time: ~42 minutes on a VM (it may be faster on more powerful hardware).
+Optimization time: *~42 minutes* on a VM (it may be faster on more powerful hardware).
 
 ## Specificity
 
-- The 'fstab` settings for BTRFS partitions are available in the `files` folder.
-- The list of officially supported Flatpak applications is also located in the files folder.
+- The `fstab` settings for BTRFS partitions are available in the `files` folder.
+- The list of officially supported Flatpak applications is also located in the `files` folder.
 - If you don't want to use some apps from the project you can modify scripts in `main_p1.sh` and `yay_p2.sh` with adding symbol `#` before the package line to comment it out.
 
 ## Installation
@@ -34,4 +34,4 @@ Optimization time: ~42 minutes on a VM (it may be faster on more powerful hardwa
 I use many instructions from the following sources:
 
 - **MAIN:** [project ARU](https://ventureo.codeberg.page/)
-- **Helpers:** `DeepSeek R1`, `Grok 3`, `Claude Sonnet 3.7 Thinking` with "Search" option
+- **Helpers:** `DeepSeek R1`, `Grok 3 Think`, `Claude Sonnet 3.7 Thinking` -- all with "Search" option
