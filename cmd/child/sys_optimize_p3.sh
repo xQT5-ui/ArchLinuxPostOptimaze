@@ -83,23 +83,7 @@ configure_initramfs() {
    log_success "initramfs images have been successfully configured"
 }
 
-# 2. Функция для повышения системных лимитов
-increase_system_limits() {
-   log_message "Raising system limits..."
-
-   sed -i 's/.*DefaultLimitNOFILE=.*/DefaultLimitNOFILE=1046576/' /etc/systemd/system.conf
-   check_success "setting limits in system.conf"
-
-   sed -i 's/.*DefaultLimitNOFILE=.*/DefaultLimitNOFILE=1046576/' /etc/systemd/user.conf
-   check_success "setting limits in user.conf"
-
-   sed -i '/#@student        -       maxlogins       4/a '"$SUDO_USER"' hard nofile 1046576' /etc/security/limits.conf
-   check_success "setting limits in limits.conf"
-
-   log_success "System limits have been successfully raised"
-}
-
-# 3. Функция для настройки загрузчика GRUB
+# 2. Функция для настройки загрузчика GRUB
 configure_bootloader() {
    log_message "Configuring the GRUB loader..."
 
@@ -119,7 +103,7 @@ configure_bootloader() {
    log_success "The GRUB loader has been successfully configured"
 }
 
-# 4. Функция для настройки параметров ядра
+# 3. Функция для настройки параметров ядра
 configure_sysctl() {
    log_message "Configuring kernel parameters via sysctl..."
 
@@ -160,7 +144,7 @@ EOF
    log_success "The kernel parameters have been successfully configured"
 }
 
-# 5. Функция для настройки переменных окружения (NVIDIA)
+# 4. Функция для настройки переменных окружения (NVIDIA)
 configure_wayland() {
    log_message "Setting up environment variables..."
 
@@ -187,7 +171,7 @@ EOF
    log_success "Environment variable settings have been successfully configured"
 }
 
-# 6. Функция для настройки Plex Media Server
+# 5. Функция для настройки Plex Media Server
 configure_plex() {
    log_message "The Plex Media Server add-on..."
 
@@ -209,7 +193,7 @@ configure_plex() {
    log_success "Plex Media Server has been successfully configured"
 }
 
-# 7. Функция для установки и настройки системных служб
+# 6. Функция для установки и настройки системных служб
 configure_system_services() {
    log_message "Configuring system services and daemons..."
 
@@ -287,7 +271,7 @@ EOF
    log_success "System services and daemons have been successfully configured"
 }
 
-# 8. Функция для настройки NVIDIA
+# 7. Функция для настройки NVIDIA
 configure_nvidia() {
    if ! $NVIDIA_PRESENT; then
       log_message "The NVIDIA graphics card is not detected. Skipping NVIDIA settings"
@@ -335,7 +319,7 @@ EOF
    log_success "NVIDIA has been successfully configured"
 }
 
-# 9. Функция для замены bash на zsh
+# 8. Функция для замены bash на zsh
 change_shell_to_zsh() {
    log_message "Replacing bash with zsh..."
 
@@ -357,7 +341,6 @@ main() {
    fi
 
    configure_initramfs
-   increase_system_limits
    configure_bootloader
    configure_sysctl
    configure_wayland
