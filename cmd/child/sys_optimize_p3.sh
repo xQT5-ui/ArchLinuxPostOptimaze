@@ -265,38 +265,16 @@ configure_nvidia() {
    # Включение envycontrol в режиме NVIDIA
    log_message "Enabling envycontrol in NVIDIA mode..."
 
-   envycontrol -s nvidia --force-comp
+   envycontrol -s nvidia
    check_success "enabling envycontrol in NVIDIA mode"
 
    # Правка конфига nvidia.conf
    log_message "Configuring NVIDIA configuration..."
 
-   rm -f /etc/modprobe.d/nvidia.conf
-   check_success "deleting the old nvidia.conf config"
-
-   cat << EOF > /etc/modprobe.d/nvidia.conf
-options nvidia NVreg_EnableStreamMemOPs=0
-options nvidia NVreg_UseThreadedOptimizations=1
-options nvidia NVreg_EnableMSI=1 # Включает Message-Signaled Interrupts для снижения задержек. Актуально для PCIe Gen3+
-options nvidia NVreg_UsePageAttributeTable=1 # Улучшает управление памятью через PAT
-options nvidia NVreg_PreserveVideoMemoryAllocations=1  # Сохранение видеопамяти при suspend
-options nvidia NVreg_EnableGpuFirmware=1  # Аппаратная инициализация для RTX >30xx
-options nvidia NVreg_EnableHostAllocation=1    # +7% VRAM perf
-options nvidia NVreg_EnableResizableBar=1     # PCIe Resizable BAR
-options nvidia NVreg_RequireECC=0             # Для не-серверных GPU
-#options nvidia NVreg_RegistryDwords="PowerMizerEnable=0x1" # Приоритет производительности
+   cat << EOF >> /etc/modprobe.d/nvidia.conf
+options nvidia NVreg_EnableStreamMemOPs=0 NVreg_EnableResizableBar=1
 EOF
    check_success "creating a new nvidia.conf config"
-
-   # Включение служб NVIDIA
-   systemctl enable nvidia-resume nvidia-suspend nvidia-hibernate
-   check_success "enabling NVIDIA services"
-
-   # Перезагрузка конфигурации systemd
-   log_message "Restarting the systemd configuration..."
-
-   systemctl daemon-reload
-   check_success "restarting the systemd configuration"
 
    log_success "NVIDIA has been successfully configured"
 }
