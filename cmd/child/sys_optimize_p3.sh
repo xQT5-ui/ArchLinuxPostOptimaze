@@ -190,8 +190,6 @@ configure_system_services() {
 zram-size = min(ram / 2, 8192)
 # Алгоритм сжатия (zstd быстрее lz4 на 5-10%, но требует чуть больше CPU)
 compression-algorithm = zstd
-# Отключить zswap для предотвращения конфликтов
-disable-zswap = true
 # Высший приоритет
 swap-priority = 100
 EOF
