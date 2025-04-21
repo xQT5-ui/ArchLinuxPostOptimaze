@@ -76,14 +76,6 @@ fi
 configure_initramfs() {
    log_message "Configuring initramfs images..."
 
-   # Добавление важных модулей (с проверкой на NVIDIA)
-   if $NVIDIA_PRESENT; then
-      echo "MODULES+=(nvidia nvidia_modeset nvidia_uvm nvidia_drm btrfs)" > /etc/mkinitcpio.conf.d/10-modules.conf
-   else
-      echo "MODULES+=(btrfs)" > /etc/mkinitcpio.conf.d/10-modules.conf
-   fi
-   check_success "adding modules to initramfs"
-
    # Ускорение загрузки системы c помощью systemd
    sed -i 's/HOOKS=.*/HOOKS=(systemd autodetect modconf microcode kms keyboard keymap sd-vconsole block filesystems)/' /etc/mkinitcpio.conf
    check_success "setting up hooks to speed up the download"
