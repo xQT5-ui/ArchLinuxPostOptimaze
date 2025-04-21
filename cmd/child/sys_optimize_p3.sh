@@ -90,15 +90,11 @@ configure_bootloader() {
    sed -i 's/^GRUB_TIMEOUT=[0-9]\+/GRUB_TIMEOUT=1/' /etc/default/grub
    check_success "configuring the GRUB timeout"
 
-   if $NVIDIA_PRESENT; then
-      sed -i 's/^GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT="quiet splash nvidia-drm.modeset=1 modprobe.blacklist=nouveau zswap.enabled=0 tsc=reliable threadirqs intel_pstate=active"/' /etc/default/grub
-   else
-      sed -i 's/^GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT="quiet splash zswap.enabled=0 tsc=reliable threadirqs intel_pstate=active"/' /etc/default/grub
-   fi
-   check_success "configuring the kernel parameters"
-
    sed -i 's/^GRUB_TIMEOUT_STYLE=.*/GRUB_TIMEOUT_STYLE=countdown/' /etc/default/grub
    check_success "configuring the GRUB timeout style"
+
+   sed -i 's/^GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT="quiet splash zswap.enabled=0 tsc=reliable intel_pstate=active"/' /etc/default/grub
+   check_success "configuring the kernel parameters"
 
    log_success "The GRUB loader has been successfully configured"
 }
