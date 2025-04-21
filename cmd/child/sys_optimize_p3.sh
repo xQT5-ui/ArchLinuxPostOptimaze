@@ -137,10 +137,7 @@ configure_wayland() {
    if $NVIDIA_PRESENT; then
       cat << EOF >> /etc/environment
 # Основные настройки NVIDIA для Wayland
-GBM_BACKEND=nvidia-drm
-__GLX_VENDOR_LIBRARY_NAME=nvidia
 LIBVA_DRIVER_NAME=nvidia
-__GL_MaxFramesAllowed=1 # Ограничивает кадры в фоновых окнах (аналог Nvidia Frame Rate Limiter)
 #
 # Аппаратное ускорение видео (дополнение к существующим)
 VDPAU_DRIVER=nvidia  # Для декодирования видео через VDPAU
