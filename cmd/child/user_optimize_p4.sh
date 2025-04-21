@@ -65,7 +65,7 @@ context.properties = {
 stream.properties = {
     node.latency = 512/48000
     node.autoconnect = true
-    resample.quality = 15
+    resample.quality = 14
 }
 EOF
    check_success "creating a configuration file for audio"
