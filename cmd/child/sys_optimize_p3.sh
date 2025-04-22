@@ -76,14 +76,6 @@ fi
 configure_initramfs() {
    log_message "Configuring initramfs images..."
 
-   # Добавление важных модулей (с проверкой на NVIDIA)
-   if $NVIDIA_PRESENT; then
-      echo "MODULES+=(nvidia nvidia_modeset nvidia_uvm nvidia_drm btrfs)" > /etc/mkinitcpio.conf.d/10-modules.conf
-   else
-      echo "MODULES+=(btrfs)" > /etc/mkinitcpio.conf.d/10-modules.conf
-   fi
-   check_success "adding modules to initramfs"
-
    # Ускорение загрузки системы c помощью systemd
    sed -i 's/HOOKS=.*/HOOKS=(systemd autodetect modconf microcode kms keyboard keymap sd-vconsole block filesystems)/' /etc/mkinitcpio.conf
    check_success "setting up hooks to speed up the download"
@@ -91,59 +83,35 @@ configure_initramfs() {
    log_success "initramfs images have been successfully configured"
 }
 
-# 2. Функция для повышения системных лимитов
-increase_system_limits() {
-   log_message "Raising system limits..."
-
-   sed -i 's/.*DefaultLimitNOFILE=.*/DefaultLimitNOFILE=1046576/' /etc/systemd/system.conf
-   check_success "setting limits in system.conf"
-
-   sed -i 's/.*DefaultLimitNOFILE=.*/DefaultLimitNOFILE=1046576/' /etc/systemd/user.conf
-   check_success "setting limits in user.conf"
-
-   sed -i '/#@student        -       maxlogins       4/a '"$SUDO_USER"' hard nofile 1046576' /etc/security/limits.conf
-   check_success "setting limits in limits.conf"
-
-   log_success "System limits have been successfully raised"
-}
-
-# 3. Функция для настройки загрузчика GRUB
+# 2. Функция для настройки загрузчика GRUB
 configure_bootloader() {
    log_message "Configuring the GRUB loader..."
 
    sed -i 's/^GRUB_TIMEOUT=[0-9]\+/GRUB_TIMEOUT=1/' /etc/default/grub
    check_success "configuring the GRUB timeout"
 
-   if $NVIDIA_PRESENT; then
-      sed -i 's/^GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT="quiet splash nvidia-drm.modeset=1 modprobe.blacklist=nouveau zswap.enabled=0 tsc=reliable threadirqs intel_pstate=active"/' /etc/default/grub
-   else
-      sed -i 's/^GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT="quiet splash zswap.enabled=0 tsc=reliable threadirqs intel_pstate=active"/' /etc/default/grub
-   fi
-   check_success "configuring the kernel parameters"
-
    sed -i 's/^GRUB_TIMEOUT_STYLE=.*/GRUB_TIMEOUT_STYLE=countdown/' /etc/default/grub
    check_success "configuring the GRUB timeout style"
+
+   sed -i 's/^GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT="quiet splash zswap.enabled=0 tsc=reliable intel_pstate=active"/' /etc/default/grub
+   check_success "configuring the kernel parameters"
 
    log_success "The GRUB loader has been successfully configured"
 }
 
-# 4. Функция для настройки параметров ядра
+# 3. Функция для настройки параметров ядра
 configure_sysctl() {
    log_message "Configuring kernel parameters via sysctl..."
 
    cat << EOF > /etc/sysctl.d/99-sysctl.conf
 # Оптимизация памяти для игр и мультимедиа
-vm.swappiness=20 # 100 - активно использовано zram
+vm.swappiness=150 # выше 100 при использовании zram
 vm.vfs_cache_pressure=50
-vm.max_map_count=262144
-
-# Параметр для предотвращения OOM
-vm.min_free_kbytes=131072 # 128 МБ
+#vm.max_map_count=262144
 
 # Улучшение сетевой производительности для онлайн-игр
 net.core.netdev_max_backlog=32768
-net.core.somaxconn=4096
-net.ipv4.tcp_fastopen=3
+#net.ipv4.tcp_fastopen=3
 net.ipv4.ip_local_port_range=1024 65000
 net.core.default_qdisc=fq_codel
 net.ipv4.tcp_mtu_probing=1
@@ -152,23 +120,16 @@ net.ipv4.tcp_notsent_lowat=16384
 net.ipv4.tcp_tw_reuse=1
 net.ipv4.tcp_fin_timeout=30
 
-# Оптимизация UDP для игр
-net.core.rmem_max=16777216
-net.core.wmem_max=16777216
-net.core.rmem_default=16777216
-net.core.wmem_default=16777216
-net.ipv4.udp_mem=16777216 16777216 16777216
-
 # Оптимизация для Btrfs и SSD
-vm.dirty_background_bytes=134217728  # 128 МБ (для NVMe)
-vm.dirty_bytes=536870912 # 512MB
+vm.dirty_background_bytes=10485760  # 10 МБ
+vm.dirty_bytes=20971520  # 20 МБ
 EOF
    check_success "creating a sysctl configuration"
 
    log_success "The kernel parameters have been successfully configured"
 }
 
-# 5. Функция для настройки переменных окружения (NVIDIA)
+# 4. Функция для настройки переменных окружения (NVIDIA)
 configure_wayland() {
    log_message "Setting up environment variables..."
 
@@ -176,10 +137,7 @@ configure_wayland() {
    if $NVIDIA_PRESENT; then
       cat << EOF >> /etc/environment
 # Основные настройки NVIDIA для Wayland
-GBM_BACKEND=nvidia-drm
-__GLX_VENDOR_LIBRARY_NAME=nvidia
 LIBVA_DRIVER_NAME=nvidia
-__GL_MaxFramesAllowed=1 # Ограничивает кадры в фоновых окнах (аналог Nvidia Frame Rate Limiter)
 #
 # Аппаратное ускорение видео (дополнение к существующим)
 VDPAU_DRIVER=nvidia  # Для декодирования видео через VDPAU
@@ -195,7 +153,7 @@ EOF
    log_success "Environment variable settings have been successfully configured"
 }
 
-# 6. Функция для настройки Plex Media Server
+# 5. Функция для настройки Plex Media Server
 configure_plex() {
    log_message "The Plex Media Server add-on..."
 
@@ -217,7 +175,7 @@ configure_plex() {
    log_success "Plex Media Server has been successfully configured"
 }
 
-# 7. Функция для установки и настройки системных служб
+# 6. Функция для установки и настройки системных служб
 configure_system_services() {
    log_message "Configuring system services and daemons..."
 
@@ -232,8 +190,6 @@ configure_system_services() {
 zram-size = min(ram / 2, 8192)
 # Алгоритм сжатия (zstd быстрее lz4 на 5-10%, но требует чуть больше CPU)
 compression-algorithm = zstd
-# Отключить zswap для предотвращения конфликтов
-disable-zswap = true
 # Высший приоритет
 swap-priority = 100
 EOF
@@ -295,7 +251,7 @@ EOF
    log_success "System services and daemons have been successfully configured"
 }
 
-# 8. Функция для настройки NVIDIA
+# 7. Функция для настройки NVIDIA
 configure_nvidia() {
    if ! $NVIDIA_PRESENT; then
       log_message "The NVIDIA graphics card is not detected. Skipping NVIDIA settings"
@@ -307,43 +263,21 @@ configure_nvidia() {
    # Включение envycontrol в режиме NVIDIA
    log_message "Enabling envycontrol in NVIDIA mode..."
 
-   envycontrol -s nvidia --force-comp
+   envycontrol -s nvidia
    check_success "enabling envycontrol in NVIDIA mode"
 
    # Правка конфига nvidia.conf
    log_message "Configuring NVIDIA configuration..."
 
-   rm -f /etc/modprobe.d/nvidia.conf
-   check_success "deleting the old nvidia.conf config"
-
-   cat << EOF > /etc/modprobe.d/nvidia.conf
-options nvidia NVreg_EnableStreamMemOPs=0
-options nvidia NVreg_UseThreadedOptimizations=1
-options nvidia NVreg_EnableMSI=1 # Включает Message-Signaled Interrupts для снижения задержек. Актуально для PCIe Gen3+
-options nvidia NVreg_UsePageAttributeTable=1 # Улучшает управление памятью через PAT
-options nvidia NVreg_PreserveVideoMemoryAllocations=1  # Сохранение видеопамяти при suspend
-options nvidia NVreg_EnableGpuFirmware=1  # Аппаратная инициализация для RTX >30xx
-options nvidia NVreg_EnableHostAllocation=1    # +7% VRAM perf
-options nvidia NVreg_EnableResizableBar=1     # PCIe Resizable BAR
-options nvidia NVreg_RequireECC=0             # Для не-серверных GPU
-#options nvidia NVreg_RegistryDwords="PowerMizerEnable=0x1" # Приоритет производительности
+   cat << EOF >> /etc/modprobe.d/nvidia.conf
+options nvidia NVreg_EnableStreamMemOPs=0 NVreg_EnableResizableBar=1
 EOF
    check_success "creating a new nvidia.conf config"
-
-   # Включение служб NVIDIA
-   systemctl enable nvidia-resume nvidia-suspend nvidia-hibernate
-   check_success "enabling NVIDIA services"
-
-   # Перезагрузка конфигурации systemd
-   log_message "Restarting the systemd configuration..."
-
-   systemctl daemon-reload
-   check_success "restarting the systemd configuration"
 
    log_success "NVIDIA has been successfully configured"
 }
 
-# 9. Функция для замены bash на zsh
+# 8. Функция для замены bash на zsh
 change_shell_to_zsh() {
    log_message "Replacing bash with zsh..."
 
@@ -365,7 +299,6 @@ main() {
    fi
 
    configure_initramfs
-   increase_system_limits
    configure_bootloader
    configure_sysctl
    configure_wayland
