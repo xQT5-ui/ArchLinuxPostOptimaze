@@ -93,7 +93,7 @@ configure_bootloader() {
    sed -i 's/^GRUB_TIMEOUT_STYLE=.*/GRUB_TIMEOUT_STYLE=countdown/' /etc/default/grub
    check_success "configuring the GRUB timeout style"
 
-   sed -i 's/^GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT="quiet splash zswap.enabled=0 tsc=reliable intel_pstate=active"/' /etc/default/grub
+   sed -i 's/^GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT="quiet splash zswap.enabled=0 tsc=reliable intel_pstate=passive nowatchdog modprobe.blacklist=iTCO_wdt"/' /etc/default/grub
    check_success "configuring the kernel parameters"
 
    log_success "The GRUB loader has been successfully configured"
@@ -107,7 +107,7 @@ configure_sysctl() {
 # Оптимизация памяти для игр и мультимедиа
 vm.swappiness=150 # выше 100 при использовании zram
 vm.vfs_cache_pressure=50
-#vm.max_map_count=262144
+vm.page-cluster=0
 
 # Улучшение сетевой производительности для онлайн-игр
 net.core.netdev_max_backlog=32768
@@ -121,8 +121,10 @@ net.ipv4.tcp_tw_reuse=1
 net.ipv4.tcp_fin_timeout=30
 
 # Оптимизация для Btrfs и SSD
-vm.dirty_background_bytes=10485760  # 10 МБ
-vm.dirty_bytes=20971520  # 20 МБ
+vm.dirty_background_bytes=209715200 # 200 MB
+vm.dirty_bytes=419430400  # 400 MB
+vm.dirty_expire_centisecs=1500 # 15 sec
+vm.dirty_writeback_centisecs=250 # 2.5 sec
 EOF
    check_success "creating a sysctl configuration"
 
@@ -287,6 +289,20 @@ change_shell_to_zsh() {
    log_success "Shell successfully changed to zsh"
 }
 
+# 9. Функция для отключения планировщика для систем с NVMe SSD
+disable_nvmesh_scheduler() {
+   if lsblk -d -o name | grep -iq 'nvm'; then
+      log_message "Disabling the NVMe SSD scheduler..."
+      cat << EOF > /etc/systemd/system/v2raya.service
+# NVMe SSD
+ACTION=="add|change", KERNEL=="nvme[0-9]*", ATTR{queue/rotational}=="0", ATTR{queue/scheduler}="none"
+EOF
+      check_success "disabling the NVMe scheduler"
+
+      log_success "The NVMe SSD scheduler successfully disabled"
+   fi
+}
+
 # Основная функция
 main() {
    log_message "The beginning of the Arch Linux optimization and configuration process (Part 3)..."
@@ -306,6 +322,7 @@ main() {
    configure_system_services
    configure_nvidia
    change_shell_to_zsh
+   disable_nvmesh_scheduler
 
    log_message "All operations have been completed successfully!"
    log_success "===== END OF THE 3D PART ====="
