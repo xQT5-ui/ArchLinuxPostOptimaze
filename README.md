@@ -9,7 +9,7 @@ Greetings! If you want to add auto optimization for your GNU/Linux distribution 
 - Storage: `NVMe SSD 1TB`
 - CPU: `11th Gen Intel i7-11800H (16) @ 4.600GHz`
 - Memory: `16GB`
-- Kernel: `linux-zen`
+- Kernel: `linux`
 - DE: `GNOME`
 - Flatpak: `yes`
 - FS: `btrfs`
