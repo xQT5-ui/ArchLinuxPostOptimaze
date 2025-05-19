@@ -3,10 +3,10 @@
 
 # <file system> <dir> <type> <options> <dump> <pass>
 # /dev/nvme0n1p2
-UUID=1f898967-5e40-47bd-8deb-688fe6fb87df	/         	btrfs     	rw,noatime,compress=zstd:3,ssd,ssd_spread,space_cache=v2,discard=async,autodefrag,subvolid=256,subvol=/@	0 0
+UUID=1f898967-5e40-47bd-8deb-688fe6fb87df	/         	btrfs     	rw,noatime,compress=lzo,ssd,space_cache=v2,discard=async,subvolid=256,subvol=/@	0 0
 
 # /dev/nvme0n1p2
-UUID=1f898967-5e40-47bd-8deb-688fe6fb87df	/home     	btrfs     	rw,noatime,compress=zstd:3,ssd,ssd_spread,space_cache=v2,discard=async,autodefrag,subvolid=257,subvol=/@home	0 0
+UUID=1f898967-5e40-47bd-8deb-688fe6fb87df	/home     	btrfs     	rw,noatime,compress=lzo,ssd,space_cache=v2,discard=async,subvolid=257,subvol=/@home	0 0
 
 # /dev/nvme0n1p2
 UUID=1f898967-5e40-47bd-8deb-688fe6fb87df	/var/log  	btrfs     	rw,noatime,compress=zstd:1,ssd,space_cache=v2,discard=async,commit=120,subvolid=258,subvol=/@log	0 0
