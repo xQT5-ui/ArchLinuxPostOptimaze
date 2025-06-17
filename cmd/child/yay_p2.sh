@@ -121,7 +121,7 @@ install_aur_packages() {
 
     # Список пакетов для установки
     local packages=(
-        "pamac-flatpak"
+        #"pamac-flatpak"
         "envycontrol"
         "zsh-theme-powerlevel10k"
         "xcursor-simp1e-adw-dark"
@@ -135,6 +135,7 @@ install_aur_packages() {
         "ttf-ms-fonts"
         "mkinitcpio-firmware"
         "papirus-folders"
+        "neofetch"
     )
 
     # Установка пакетов

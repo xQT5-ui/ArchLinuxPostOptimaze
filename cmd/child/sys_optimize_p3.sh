@@ -283,7 +283,7 @@ EOF
 change_shell_to_zsh() {
    log_message "Replacing bash with zsh..."
 
-   chsh -s $(which zsh)
+   chsh -s /bin/zsh
    check_success "replacing the shell with zsh"
 
    log_success "Shell successfully changed to zsh"
@@ -293,7 +293,7 @@ change_shell_to_zsh() {
 disable_nvmesh_scheduler() {
    if lsblk -d -o name | grep -iq 'nvm'; then
       log_message "Disabling the NVMe SSD scheduler..."
-      cat << EOF > /etc/systemd/system/v2raya.service
+      cat << EOF > /etc/udev/rules.d/60-ioschedulers.rules
 # NVMe SSD
 ACTION=="add|change", KERNEL=="nvme[0-9]*", ATTR{queue/rotational}=="0", ATTR{queue/scheduler}="none"
 EOF
@@ -322,7 +322,7 @@ main() {
    configure_system_services
    configure_nvidia
    change_shell_to_zsh
-   disable_nvmesh_scheduler
+   #disable_nvmesh_scheduler
 
    log_message "All operations have been completed successfully!"
    log_success "===== END OF THE 3D PART ====="
