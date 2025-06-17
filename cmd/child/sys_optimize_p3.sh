@@ -78,6 +78,8 @@ configure_initramfs() {
 
    # Ускорение загрузки системы c помощью systemd
    sed -i 's/HOOKS=.*/HOOKS=(systemd autodetect modconf microcode kms keyboard keymap sd-vconsole block filesystems)/' /etc/mkinitcpio.conf
+   sed -i 's/#COMPRESSION="lz4"/COMPRESSION="lz4"/' /etc/mkinitcpio.conf
+   sed -i 's/#COMPRESSION_OPTIONS=()/COMPRESSION_OPTIONS=(-9)/' /etc/mkinitcpio.conf
    check_success "setting up hooks to speed up the download"
 
    log_success "initramfs images have been successfully configured"
@@ -188,12 +190,10 @@ configure_system_services() {
    log_message "Creating a zram configuration..."
    cat << EOF > /etc/systemd/zram-generator.conf
 [zram0]
-# Размер zram
-zram-size = min(ram / 2, 8192)
-# Алгоритм сжатия (zstd быстрее lz4 на 5-10%, но требует чуть больше CPU)
+zram-size = ram
 compression-algorithm = zstd
-# Высший приоритет
 swap-priority = 100
+fs-type = swap
 EOF
    check_success "creating a zram configuration"
 
@@ -216,11 +216,13 @@ EOF
 
    # Включение и запуск системных служб
    log_message "Enabling system services..."
-   systemctl enable paccache.timer systemd-zram-setup@zram0.service bluetooth.service v2raya.service power-profiles-daemon thermald systemd-oomd cronie.service
+   systemctl enable paccache.timer bluetooth.service v2raya.service power-profiles-daemon thermald systemd-oomd cronie.service
+   #systemd-zram-setup@zram0.service
    check_success "enabling system services"
 
    log_message "Launching system services..."
-   systemctl start systemd-zram-setup@zram0.service bluetooth.service v2raya.service
+   systemctl start bluetooth.service v2raya.service
+   #systemd-zram-setup@zram0.service
    check_success "launching system services"
 
    # Настройка еженедельной очистки кэша pacman
