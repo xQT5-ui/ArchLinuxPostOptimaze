@@ -78,6 +78,8 @@ configure_initramfs() {
 
    # Ускорение загрузки системы c помощью systemd
    sed -i 's/HOOKS=.*/HOOKS=(systemd autodetect modconf microcode kms keyboard keymap sd-vconsole block filesystems)/' /etc/mkinitcpio.conf
+   sed -i 's/#COMPRESSION="lz4"/COMPRESSION="lz4"/' /etc/mkinitcpio.conf
+   sed -i 's/#COMPRESSION_OPTIONS=()/COMPRESSION_OPTIONS=(-9)/' /etc/mkinitcpio.conf
    check_success "setting up hooks to speed up the download"
 
    log_success "initramfs images have been successfully configured"
