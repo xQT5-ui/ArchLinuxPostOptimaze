@@ -188,12 +188,10 @@ configure_system_services() {
    log_message "Creating a zram configuration..."
    cat << EOF > /etc/systemd/zram-generator.conf
 [zram0]
-# Размер zram
-zram-size = min(ram / 2, 8192)
-# Алгоритм сжатия (zstd быстрее lz4 на 5-10%, но требует чуть больше CPU)
+zram-size = ram
 compression-algorithm = zstd
-# Высший приоритет
 swap-priority = 100
+fs-type = swap
 EOF
    check_success "creating a zram configuration"
 
@@ -216,11 +214,13 @@ EOF
 
    # Включение и запуск системных служб
    log_message "Enabling system services..."
-   systemctl enable paccache.timer systemd-zram-setup@zram0.service bluetooth.service v2raya.service power-profiles-daemon thermald systemd-oomd cronie.service
+   systemctl enable paccache.timer bluetooth.service v2raya.service power-profiles-daemon thermald systemd-oomd cronie.service
+   #systemd-zram-setup@zram0.service
    check_success "enabling system services"
 
    log_message "Launching system services..."
-   systemctl start systemd-zram-setup@zram0.service bluetooth.service v2raya.service
+   systemctl start bluetooth.service v2raya.service
+   #systemd-zram-setup@zram0.service
    check_success "launching system services"
 
    # Настройка еженедельной очистки кэша pacman
