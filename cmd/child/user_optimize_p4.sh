@@ -127,6 +127,16 @@ EOF
    log_success "ZSH has been successfully configured"
 }
 
+# 4. Функция для настройки цвета папок для темы Papirus
+configure_papirus_folder_colors() {
+   log_message "Papirus folder colors..."
+
+   papirus-folders -C cyan --theme Papirus-Dark
+   check_success "change color of folders in Papirus theme"
+
+   log_success "Papirus folder colors have been successfully changed"
+}
+
 # Основная функция
 main() {
    log_message "The beginning of the process of optimizing Arch Linux user settings (Part 4)..."
@@ -134,6 +144,7 @@ main() {
    configure_pipewire
    optimize_gnome
    configure_zsh
+   configure_papirus_folder_colors
 
    log_message "All operations have been completed successfully!"
    log_success "===== END OF THE 4TH PART ====="
