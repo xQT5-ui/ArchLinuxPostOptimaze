@@ -136,6 +136,7 @@ install_aur_packages() {
         "mkinitcpio-firmware"
         "papirus-folders"
         "neofetch"
+        "cachyos-ananicy-rules-git"
     )
 
     # Установка пакетов

@@ -100,7 +100,7 @@ install_base_software() {
    check_success "updating the system"
 
    log_message "Installing packages..."
-   pacman -S --noconfirm git lrzip unrar unace p7zip squashfs-tools zsh zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting lib32-pipewire-jack xorg-xrandr go gufw lib32-vulkan-icd-loader lib32-mesa realtime-privileges gdu duf wireguard-tools power-profiles-daemon lib32-pipewire alsa-utils pacman-contrib timeshift inxi v2ray thermald bluez-utils exfat-utils file-roller papirus-icon-theme
+   pacman -S --noconfirm git lrzip unrar unace p7zip squashfs-tools zsh zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting lib32-pipewire-jack xorg-xrandr go gufw lib32-vulkan-icd-loader lib32-mesa realtime-privileges gdu duf wireguard-tools power-profiles-daemon lib32-pipewire alsa-utils pacman-contrib timeshift inxi v2ray thermald bluez-utils exfat-utils file-roller papirus-icon-theme irqbalance ananicy-cpp fwupd
    # Блок для Intel + NVIDIA или другого оборудования
    if $NVIDIA_PRESENT; then
       pacman -S --noconfirm libva-nvidia-driver nvidia-utils lib32-nvidia-utils nvidia-settings lib32-opencl-nvidia opencl-nvidia libvdpau-va-gl libvdpau libxnvctrl
