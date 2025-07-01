@@ -90,6 +90,29 @@ configure_pacman() {
    log_success "The pacman.conf configuration has been successfully updated"
 }
 
+# функция для установки flatpak-пакета с повторными попытками
+install_pacman_package() {
+    local package=$1
+    local max_attempts=3
+    local attempt=1
+
+    log_message "Instaling pacman package: $package"
+
+    while [ $attempt -le $max_attempts ]; do
+        if pacman -S --noconfirm "$package"; then
+            log_success "The pacman '$package' package has been successfully installed"
+            return 0
+        else
+            log_error "The $attempt from $max_attempts to install the pacman '$package' failed. Repeat after 5 seconds..."
+            sleep 5
+            ((attempt++))
+        fi
+    done
+
+    log_error "Failed to install the pacman '$package' after $max_attempts attempts"
+    return 1
+}
+
 # 2. Функция для установки базового ПО
 # исключить так как уже есть после archinstall: base-devel unzip gvfs gvfs-mtp flatpak mesa vulkan-icd-loader nvidia-utils btrfs-progs pipewire pipewire-jack pipewire-pulse gst-plugin-pipewire alsa-lib alsa-card-profiles wireplumber firefox gimp
 install_base_software() {
@@ -100,10 +123,100 @@ install_base_software() {
    check_success "updating the system"
 
    log_message "Installing packages..."
-   pacman -S --noconfirm git lrzip unrar unace p7zip squashfs-tools zsh zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting lib32-pipewire-jack xorg-xrandr go gufw lib32-vulkan-icd-loader lib32-mesa realtime-privileges gdu duf wireguard-tools power-profiles-daemon lib32-pipewire alsa-utils pacman-contrib timeshift inxi v2ray thermald bluez-utils exfat-utils file-roller papirus-icon-theme irqbalance ananicy-cpp fwupd earlyoom
+   local pacmanPackages=(
+      "git"
+      "lrzip"
+      "unrar"
+      "unace"
+      "p7zip"
+      "squashfs-tools"
+      "zsh"
+      "zsh-autosuggestions"
+      "zsh-completions"
+      "zsh-history-substring-search"
+      "zsh-syntax-highlighting"
+      "lib32-pipewire-jack"
+      "xorg-xrandr"
+      "go"
+      "gufw"
+      "lib32-vulkan-icd-loader"
+      "lib32-mesa"
+      "realtime-privileges"
+      "gdu"
+      "duf"
+      "wireguard-tools"
+      "power-profiles-daemon"
+      "lib32-pipewire"
+      "alsa-utils"
+      "pacman-contrib"
+      "timeshift"
+      "inxi"
+      "v2ray"
+      "thermald"
+      "bluez-utils"
+      "exfat-utils"
+      "file-roller"
+      "papirus-icon-theme"
+      "irqbalance"
+      "ananicy-cpp"
+      "fwupd"
+      "earlyoom"
+      "noto-fonts-cjk"
+      "noto-fonts"
+      "noto-fonts-emoji"
+      "noto-fonts-extra"
+      "ttf-hack-nerd"
+   )
+
+   # Установка пакетов
+   local failed_pacmanPackages=()
+   for package in "${pacmanPackages[@]}"; do
+      if ! install_pacman_package "$package"; then
+         failed_pacmanPackages+=("$package")
+      fi
+   done
+
+   # Вывод информации о неудачных установках
+   if [ ${#failed_pacmanPackages[@]} -gt 0 ]; then
+      log_error "The following pacman packages could not be installed:"
+      for package in "${failed_pacmanPackages[@]}"; do
+         echo "  - $package"
+      done
+   else
+      log_success "All packages from Pacman have been successfully installed"
+   fi
+
    # Блок для Intel + NVIDIA или другого оборудования
    if $NVIDIA_PRESENT; then
-      pacman -S --noconfirm libva-nvidia-driver nvidia-utils lib32-nvidia-utils nvidia-settings lib32-opencl-nvidia opencl-nvidia libvdpau-va-gl libvdpau libxnvctrl
+      local pacmanNVIDIA=(
+         "libva-nvidia-driver"
+         "nvidia-utils"
+         "lib32-nvidia-utils"
+         "nvidia-settings"
+         "lib32-opencl-nvidia"
+         "opencl-nvidia"
+         "libvdpau-va-gl"
+         "libvdpau"
+         "libxnvctrl"
+      )
+
+      # Установка пакетов
+      local failed_pacmanNVIDIA=()
+      for package in "${pacmanNVIDIA[@]}"; do
+         if ! install_pacman_package "$package"; then
+            failed_pacmanNVIDIA+=("$package")
+         fi
+      done
+
+      # Вывод информации о неудачных установках
+      if [ ${#failed_pacmanNVIDIA[@]} -gt 0 ]; then
+         log_error "The following pacman NVIDIA packages could not be installed:"
+         for package in "${failed_pacmanNVIDIA[@]}"; do
+            echo "  - $package"
+         done
+      else
+         log_success "All packages from Pacman NVIDIA have been successfully installed"
+      fi
    fi
    pacman -S --noconfirm intel-ucode lib32-vulkan-intel
    check_success "installing packages"
