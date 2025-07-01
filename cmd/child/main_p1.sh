@@ -135,18 +135,14 @@ install_base_software() {
       "zsh-completions"
       "zsh-history-substring-search"
       "zsh-syntax-highlighting"
-      "lib32-pipewire-jack"
       "xorg-xrandr"
       "go"
       "gufw"
-      "lib32-vulkan-icd-loader"
-      "lib32-mesa"
       "realtime-privileges"
       "gdu"
       "duf"
       "wireguard-tools"
       "power-profiles-daemon"
-      "lib32-pipewire"
       "alsa-utils"
       "pacman-contrib"
       "timeshift"
@@ -191,9 +187,7 @@ install_base_software() {
       local pacmanNVIDIA=(
          "libva-nvidia-driver"
          "nvidia-utils"
-         "lib32-nvidia-utils"
          "nvidia-settings"
-         "lib32-opencl-nvidia"
          "opencl-nvidia"
          "libvdpau-va-gl"
          "libvdpau"
@@ -218,7 +212,7 @@ install_base_software() {
          log_success "All packages from Pacman NVIDIA have been successfully installed"
       fi
    fi
-   pacman -S --noconfirm intel-ucode lib32-vulkan-intel
+   pacman -S --noconfirm intel-ucode
    check_success "installing packages"
 
    log_success "The basic software has been successfully installed"
