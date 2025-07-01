@@ -182,6 +182,9 @@ install_base_software() {
       log_success "All packages from Pacman have been successfully installed"
    fi
 
+   # Обновление кеша шрифтов
+   sudo fc-cache -fv
+
    # Блок для Intel + NVIDIA или другого оборудования
    if $NVIDIA_PRESENT; then
       local pacmanNVIDIA=(
