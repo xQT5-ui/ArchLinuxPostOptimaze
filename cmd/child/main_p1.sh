@@ -126,13 +126,100 @@ optimize_gnome() {
    log_success "GNOME has been successfully optimized"
 }
 
+# функция для установки flatpak-пакета с повторными попытками
+install_flatpak_package() {
+    local package=$1
+    local max_attempts=3
+    local attempt=1
+
+    log_message "Instaling flatpak package: $package"
+
+    while [ $attempt -le $max_attempts ]; do
+        if flatpak install --noninteractive "$package"; then
+            log_success "The flatpak '$package' package has been successfully installed"
+            return 0
+        else
+            log_error "The $attempt from $max_attempts to install the flatpak '$package' failed. Repeat after 5 seconds..."
+            sleep 5
+            ((attempt++))
+        fi
+    done
+
+    log_error "Failed to install the flatpak '$package' after $max_attempts attempts"
+    return 1
+}
+
 # 4. Функция для установки Flatpak-приложений
 install_flatpak_apps() {
    log_message "Installing Flatpak-applications..."
 
+   #Список пакетов для установки
+   local flatpakPackages=(
+      "com.bitwig.BitwigStudio"
+      "com.discordapp.Discord"
+      "com.github.johnfactotum.Foliate"
+      "com.github.finefindus.eyedropper"
+      "io.bassi.Amberol"
+      "com.github.tchx84.Flatseal"
+      "com.mattjakeman.ExtensionManager"
+      "com.transmissionbt.Transmission"
+      "com.usebottles.bottles"
+      "com.vysp3r.ProtonPlus"
+      "io.github.celluloid_player.Celluloid"
+      "io.github.flattool.Warehouse"
+      "io.github.jliljebl.Flowblade"
+      "io.github.seadve.Mousai"
+      "io.github.tntwise.REAL-Video-Enhancer"
+      "org.gnome.Mines"
+      "org.gnome.Quadrapassel"
+      "org.gnome.Reversi"
+      "org.nickvision.tagger"
+      "org.nickvision.tubeconverter"
+      "org.onlyoffice.desktopeditors"
+      "org.telegram.desktop"
+      "org.torproject.torbrowser-launcher"
+      "org.gtk.Gtk3theme.adw-gtk3-dark"
+      "com.obsproject.Studio"
+      "net.nokyan.Resources"
+      "com.github.PintaProject.Pinta"
+      "org.gnome.Calculator"
+      "org.gnome.Evince"
+      "org.gnome.Loupe"
+      "org.gnome.SoundRecorder"
+      "org.soundconverter.SoundConverter"
+      "org.pipewire.Helvum"
+      "app.zen_browser.zen"
+      "com.jgraph.drawio.desktop"
+      "io.github.amit9838.mousam"
+      "com.github.wwmm.easyeffects"
+      "io.github.radiolamp.mangojuice"
+      "com.valvesoftware.Steam"
+      "org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/24.08"
+      "app.devsuite.Ptyxis"
+      "com.jeffser.Alpaca"
+      "com.jeffser.Alpaca.Plugins.Ollama"
+      #"org.nickvision.cavalier" #Для визуализации исходящего звука
+      #"it.mijorus.gearlever" #Для работы с AppImage
+   )
+
    flatpak install --noninteractive flathub
-   flatpak install --noninteractive com.bitwig.BitwigStudio com.discordapp.Discord com.github.johnfactotum.Foliate com.github.finefindus.eyedropper io.bassi.Amberol com.github.tchx84.Flatseal com.mattjakeman.ExtensionManager com.transmissionbt.Transmission com.usebottles.bottles com.vysp3r.ProtonPlus io.github.celluloid_player.Celluloid io.github.flattool.Warehouse io.github.jliljebl.Flowblade io.github.seadve.Mousai io.github.tntwise.REAL-Video-Enhancer org.gnome.Mines org.gnome.Quadrapassel org.gnome.Reversi org.nickvision.tagger org.nickvision.tubeconverter org.onlyoffice.desktopeditors org.telegram.desktop org.torproject.torbrowser-launcher org.gtk.Gtk3theme.adw-gtk3-dark com.obsproject.Studio net.nokyan.Resources com.github.PintaProject.Pinta org.gnome.Calculator org.gnome.Evince org.gnome.Loupe org.gnome.SoundRecorder org.soundconverter.SoundConverter org.pipewire.Helvum app.zen_browser.zen com.jgraph.drawio.desktop io.github.amit9838.mousam com.github.wwmm.easyeffects io.github.radiolamp.mangojuice com.valvesoftware.Steam org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/24.08 app.devsuite.Ptyxis
-   #org.nickvision.cavalier
+   # Установка пакетов
+   local failed_flatpakPackages=()
+   for package in "${flatpakPackages[@]}"; do
+      if ! install_flatpak_package "$package"; then
+         failed_flatpakPackages+=("$package")
+      fi
+   done
+
+   # Вывод информации о неудачных установках
+   if [ ${#failed_flatpakPackages[@]} -gt 0 ]; then
+      log_error "The following flatpak packages could not be installed:"
+      for package in "${failed_flatpakPackages[@]}"; do
+         echo "  - $package"
+      done
+   else
+      log_success "All packages from Flatpak have been successfully installed"
+   fi
    check_success "installing Flatpak-applications"
 
    log_message "Flatpack recovery and update..."
