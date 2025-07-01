@@ -216,7 +216,7 @@ EOF
 
    # Включение и запуск системных служб
    log_message "Enabling system services..."
-   systemctl enable paccache.timer bluetooth.service v2raya.service power-profiles-daemon thermald systemd-oomd cronie.service irqbalance ananicy-cpp
+   systemctl enable paccache.timer bluetooth.service v2raya.service power-profiles-daemon thermald cronie.service irqbalance ananicy-cpp earlyoom
    #systemd-zram-setup@zram0.service
    check_success "enabling system services"
 
