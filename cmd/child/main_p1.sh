@@ -139,14 +139,11 @@ install_base_software() {
       "xorg-xrandr"
       "go"
       "gufw"
-      "lib32-vulkan-icd-loader"
-      "lib32-mesa"
       "realtime-privileges"
       "gdu"
       "duf"
       "wireguard-tools"
       "power-profiles-daemon"
-      "lib32-pipewire"
       "alsa-utils"
       "pacman-contrib"
       "timeshift"
@@ -166,6 +163,8 @@ install_base_software() {
       "noto-fonts-emoji"
       "noto-fonts-extra"
       "ttf-hack-nerd"
+      "fastfetch"
+      "intel-media-driver"
    )
 
    # Установка пакетов
@@ -231,7 +230,7 @@ install_base_software() {
 optimize_gnome() {
    log_message "Optimize GNOME by removing unnecessary packages..."
 
-   pacman -Rnsc --noconfirm gnome-connections gnome-software gnome-music gnome-maps totem gnome-contacts gnome-system-monitor gnome-tour gnome-weather loupe epiphany yelp decibels vim malcontent
+   pacman -Rnsc --noconfirm gnome-connections gnome-software gnome-music gnome-maps totem gnome-contacts gnome-system-monitor gnome-tour gnome-weather loupe epiphany yelp decibels vim malcontent evince sushi baobab gnome-shell-extensions
    check_success "removing unnecessary GNOME packages"
 
    log_message "Installing additional 'flatpak' packages..."
@@ -316,6 +315,7 @@ install_flatpak_apps() {
       "com.jeffser.Alpaca.Plugins.Ollama"
       #"org.nickvision.cavalier" #Для визуализации исходящего звука
       #"it.mijorus.gearlever" #Для работы с AppImage
+      "org.gnome.Papers"
    )
 
    flatpak install --noninteractive flathub
