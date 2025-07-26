@@ -216,7 +216,7 @@ EOF
 
    # Включение и запуск системных служб
    log_message "Enabling system services..."
-   systemctl enable paccache.timer bluetooth.service v2raya.service power-profiles-daemon thermald cronie.service irqbalance ananicy-cpp earlyoom
+   systemctl enable paccache.timer bluetooth.service v2raya.service power-profiles-daemon thermald cronie.service irqbalance ananicy-cpp earlyoom nvidia-powerd
    #systemd-zram-setup@zram0.service
    check_success "enabling system services"
 
@@ -274,7 +274,11 @@ configure_nvidia() {
    log_message "Configuring NVIDIA configuration..."
 
    cat << EOF >> /etc/modprobe.d/nvidia.conf
-options nvidia NVreg_EnableStreamMemOPs=0 NVreg_EnableResizableBar=1
+options nvidia-drm modeset=1
+# Optimizations for >RTX 30xx
+options nvidia NVreg_EnableResizableBar=1 NVreg_UsePageAttributeTable=1 NVreg_EnablePCIeGen3=1 NVreg_EnableStreamMemOPs=1
+# PowerManagement
+options nvidia NVreg_DynamicPowerManagement=0x02
 EOF
    check_success "creating a new nvidia.conf config"
 
