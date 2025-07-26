@@ -139,7 +139,6 @@ install_base_software() {
       "xorg-xrandr"
       "go"
       "gufw"
-      "realtime-privileges"
       "gdu"
       "duf"
       "wireguard-tools"

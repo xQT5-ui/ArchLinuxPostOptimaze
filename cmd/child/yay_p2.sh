@@ -223,8 +223,8 @@ create_directories() {
 configure_user_permissions() {
     log_message "Setting up user permissions..."
 
-    if sudo usermod -a -G video,realtime,audio $USER; then
-        log_success "The user $USER has been added to the video, realtime, and audio groups"
+    if sudo usermod -a -G video,audio $USER; then
+        log_success "The user $USER has been added to the video and audio groups"
     else
         log_error "Couldn't add user to groups. Sudo rights are required"
     fi
