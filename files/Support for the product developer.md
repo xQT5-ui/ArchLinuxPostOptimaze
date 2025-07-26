@@ -29,7 +29,7 @@
 1. Loupe: `flatpak`
 2. Sound-recorder: `flatpak`
 3. Calculator: `flatpak`
-4. Evince: `flatpak`
+4. Papers: `flatpak`
 
 ## Flatpak has a nuance (there may be problems and you need to tinker with additional settings, plugins may not work or it works slower, for example, with rendering) but it's working
 

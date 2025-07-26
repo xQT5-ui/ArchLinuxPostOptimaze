@@ -309,6 +309,19 @@ EOF
    fi
 }
 
+# 10. Функция для корректной настройки приоритетов при работе с аудио
+configure_realtime_audio() {
+   log_message "Configure realtime audio priority..."
+
+   mkdir -p /etc/security/limits.d
+   cat << EOF > /etc/security/limits.d/20-rt-audio.conf
+@audio - rtprio 98
+EOF
+   check_success "creating realtime config"
+
+   log_success "Configure realtime audio priority successfully created"
+}
+
 # Основная функция
 main() {
    log_message "The beginning of the Arch Linux optimization and configuration process (Part 3)..."
@@ -329,6 +342,7 @@ main() {
    configure_nvidia
    change_shell_to_zsh
    #disable_nvmesh_scheduler
+   configure_realtime_audio
 
    log_message "All operations have been completed successfully!"
    log_success "===== END OF THE 3D PART ====="
