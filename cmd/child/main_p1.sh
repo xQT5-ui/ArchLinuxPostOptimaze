@@ -139,14 +139,11 @@ install_base_software() {
       "xorg-xrandr"
       "go"
       "gufw"
-      "lib32-vulkan-icd-loader"
-      "lib32-mesa"
       "realtime-privileges"
       "gdu"
       "duf"
       "wireguard-tools"
       "power-profiles-daemon"
-      "lib32-pipewire"
       "alsa-utils"
       "pacman-contrib"
       "timeshift"
@@ -166,6 +163,8 @@ install_base_software() {
       "noto-fonts-emoji"
       "noto-fonts-extra"
       "ttf-hack-nerd"
+      "fastfetch"
+      "intel-media-driver"
    )
 
    # Установка пакетов

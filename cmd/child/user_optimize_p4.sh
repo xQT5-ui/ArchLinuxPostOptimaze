@@ -101,25 +101,32 @@ configure_zsh() {
    check_success "creating ZSH configuration files"
 
    cat << EOF > ~/.zshrc
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "\${XDG_CACHE_HOME:-\$HOME/.cache}/p10k-instant-prompt-\${(%):-%n}.zsh" ]]; then
-  source "\${XDG_CACHE_HOME:-\$HOME/.cache}/p10k-instant-prompt-\${(%):-%n}.zsh"
+# Enable Powerlevel10k instant prompt (должно быть в начале файла)
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-
-# История команд для zsh
+# История команд
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 setopt SHARE_HISTORY
 
-# To customize prompt, run \`p10k configure\` or edit ~/.p10k.zsh.
+# Загрузка плагинов (правильный порядок важен!)
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  # Должен быть последним!
+
+# Привязки клавиш для history-substring-search
+bindkey '^[[A' history-substring-search-up    # Стрелка вверх
+bindkey '^[[B' history-substring-search-down  # Стрелка вниз
+
+# Оптимизация производительности
+POWERLEVEL9K_INSTANT_PROMPT=quiet  # Отключает предупреждения Instant Prompt
+ZSH_AUTOSUGGEST_MANUAL_REBIND=1    # Ускоряет zsh-autosuggestions
+
+# Применение конфигурации Powerlevel10k
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 EOF
    check_success "creating a configuration file .zshrc"
@@ -137,6 +144,114 @@ configure_papirus_folder_colors() {
    log_success "Papirus folder colors have been successfully changed"
 }
 
+# 5. Функция для настройки формата вывода в fastfetch
+configure_fastfetch() {
+   log_message "Fastfetch format..."
+
+   cat << EOF > ~/.config/fastfetch/config.jsonc
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "display": {
+    "separator": " -> "
+  },
+  "modules": [
+    "title",
+    "separator",
+    {
+      "type": "os",
+      "key": "🥇 OS"
+    },
+    {
+      "type": "host",
+      "key": "💻 Host"
+    },
+    {
+      "type": "kernel",
+      "key": "⚙️  Kernel"
+    },
+    {
+      "type": "uptime",
+      "key": "⏱️  Uptime"
+    },
+    {
+      "type": "packages",
+      "key": "📦 Packages"
+    },
+    {
+      "type": "shell",
+      "key": "🐚 Shell"
+    },
+    {
+      "type": "display",
+      "key": "🖥️  Display"
+    },
+    {
+      "type": "de",
+      "key": "🖼️  DE"
+    },
+    {
+      "type": "wm",
+      "key": "🪟 WM"
+    },
+    {
+      "type": "wmtheme",
+      "key": "🎨 WM Theme"
+    },
+    {
+      "type": "theme",
+      "key": "🎨 Theme"
+    },
+    {
+      "type": "theme",
+      "key": "🎨 Theme"
+    },
+    {
+      "type": "font",
+      "key": "🔤 Font"
+    },
+    {
+      "type": "theme",
+      "key": "🎨 Theme"
+    },
+    {
+      "type": "terminal",
+      "key": "🗃  Terminal"
+    },
+    {
+      "type": "terminalfont",
+      "key": "🔠 Terminal Font"
+    },
+    {
+      "type": "cpu",
+      "key": "🧠 CPU"
+    },
+    {
+      "type": "gpu",
+      "key": "🎮 GPU"
+    },
+    {
+      "type": "memory",
+      "key": "🧮 Memory"
+    },
+    {
+      "type": "swap",
+      "key": "🧮 Swap"
+    },
+    //"disk",
+    //"localip",
+    //"battery",
+    //"poweradapter",
+    //"locale",
+    "break",
+    "colors"
+  ]
+}
+EOF
+   check_success "creating a configuration fastfetch file"
+
+   log_success "Fastfetch has been successfully configured"
+}
+
 # Основная функция
 main() {
    log_message "The beginning of the process of optimizing Arch Linux user settings (Part 4)..."
@@ -145,6 +260,7 @@ main() {
    optimize_gnome
    configure_zsh
    configure_papirus_folder_colors
+   configure_fastfetch
 
    log_message "All operations have been completed successfully!"
    log_success "===== END OF THE 4TH PART ====="

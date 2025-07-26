@@ -124,7 +124,7 @@ install_aur_packages() {
         #"pamac-flatpak"
         "envycontrol"
         "zsh-theme-powerlevel10k"
-        "xcursor-simp1e-adw-dark"
+        #"xcursor-simp1e-adw-dark"
         "adw-gtk-theme"
         "ventoy-bin"
         "plex-media-server"
@@ -135,7 +135,6 @@ install_aur_packages() {
         "ttf-ms-fonts"
         "mkinitcpio-firmware"
         "papirus-folders"
-        "neofetch"
         "cachyos-ananicy-rules-git"
     )
 
@@ -202,6 +201,7 @@ create_directories() {
     mkdir -p ~/.themes
     mkdir -p ~/.icons
     mkdir -p ~/Загрузки/Torrents
+    mkdir -p ~/.config/fastfetch
     check_success "creating custom directories"
 
     # Эти директории требуют sudo, поэтому обрабатываем их отдельно
