@@ -90,6 +90,29 @@ configure_pacman() {
    log_success "The pacman.conf configuration has been successfully updated"
 }
 
+# функция для установки flatpak-пакета с повторными попытками
+install_pacman_package() {
+    local package=$1
+    local max_attempts=3
+    local attempt=1
+
+    log_message "Instaling pacman package: $package"
+
+    while [ $attempt -le $max_attempts ]; do
+        if pacman -S --noconfirm "$package"; then
+            log_success "The pacman '$package' package has been successfully installed"
+            return 0
+        else
+            log_error "The $attempt from $max_attempts to install the pacman '$package' failed. Repeat after 5 seconds..."
+            sleep 5
+            ((attempt++))
+        fi
+    done
+
+    log_error "Failed to install the pacman '$package' after $max_attempts attempts"
+    return 1
+}
+
 # 2. Функция для установки базового ПО
 # исключить так как уже есть после archinstall: base-devel unzip gvfs gvfs-mtp flatpak mesa vulkan-icd-loader nvidia-utils btrfs-progs pipewire pipewire-jack pipewire-pulse gst-plugin-pipewire alsa-lib alsa-card-profiles wireplumber firefox gimp
 install_base_software() {
@@ -100,10 +123,101 @@ install_base_software() {
    check_success "updating the system"
 
    log_message "Installing packages..."
-   pacman -S --noconfirm git neofetch lrzip unrar unace p7zip squashfs-tools zsh zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting lib32-pipewire-jack xorg-xrandr go gufw lib32-vulkan-icd-loader lib32-mesa realtime-privileges gdu duf wireguard-tools power-profiles-daemon lib32-pipewire alsa-utils pacman-contrib timeshift inxi v2ray thermald bluez-utils exfat-utils file-roller zram-generator papirus-icon-theme
+   local pacmanPackages=(
+      "git"
+      "lrzip"
+      "unrar"
+      "unace"
+      "p7zip"
+      "squashfs-tools"
+      "zsh"
+      "zsh-autosuggestions"
+      "zsh-completions"
+      "zsh-history-substring-search"
+      "zsh-syntax-highlighting"
+      "lib32-pipewire-jack"
+      "xorg-xrandr"
+      "go"
+      "gufw"
+      "gdu"
+      "duf"
+      "wireguard-tools"
+      "power-profiles-daemon"
+      "alsa-utils"
+      "pacman-contrib"
+      "timeshift"
+      "inxi"
+      "v2ray"
+      "thermald"
+      "bluez-utils"
+      "exfat-utils"
+      "file-roller"
+      "papirus-icon-theme"
+      "irqbalance"
+      "ananicy-cpp"
+      "fwupd"
+      "earlyoom"
+      "noto-fonts-cjk"
+      "noto-fonts"
+      "noto-fonts-emoji"
+      "noto-fonts-extra"
+      "ttf-hack-nerd"
+      "fastfetch"
+      "intel-media-driver"
+   )
+
+   # Установка пакетов
+   local failed_pacmanPackages=()
+   for package in "${pacmanPackages[@]}"; do
+      if ! install_pacman_package "$package"; then
+         failed_pacmanPackages+=("$package")
+      fi
+   done
+
+   # Вывод информации о неудачных установках
+   if [ ${#failed_pacmanPackages[@]} -gt 0 ]; then
+      log_error "The following pacman packages could not be installed:"
+      for package in "${failed_pacmanPackages[@]}"; do
+         echo "  - $package"
+      done
+   else
+      log_success "All packages from Pacman have been successfully installed"
+   fi
+
+   # Обновление кеша шрифтов
+   sudo fc-cache -fv
+
    # Блок для Intel + NVIDIA или другого оборудования
    if $NVIDIA_PRESENT; then
-      pacman -S --noconfirm libva-nvidia-driver nvidia-utils lib32-nvidia-utils nvidia-settings lib32-opencl-nvidia opencl-nvidia libvdpau-va-gl libvdpau libxnvctrl
+      local pacmanNVIDIA=(
+         "libva-nvidia-driver"
+         "nvidia-utils"
+         "lib32-nvidia-utils"
+         "nvidia-settings"
+         "lib32-opencl-nvidia"
+         "opencl-nvidia"
+         "libvdpau-va-gl"
+         "libvdpau"
+         "libxnvctrl"
+      )
+
+      # Установка пакетов
+      local failed_pacmanNVIDIA=()
+      for package in "${pacmanNVIDIA[@]}"; do
+         if ! install_pacman_package "$package"; then
+            failed_pacmanNVIDIA+=("$package")
+         fi
+      done
+
+      # Вывод информации о неудачных установках
+      if [ ${#failed_pacmanNVIDIA[@]} -gt 0 ]; then
+         log_error "The following pacman NVIDIA packages could not be installed:"
+         for package in "${failed_pacmanNVIDIA[@]}"; do
+            echo "  - $package"
+         done
+      else
+         log_success "All packages from Pacman NVIDIA have been successfully installed"
+      fi
    fi
    pacman -S --noconfirm intel-ucode lib32-vulkan-intel
    check_success "installing packages"
@@ -115,7 +229,7 @@ install_base_software() {
 optimize_gnome() {
    log_message "Optimize GNOME by removing unnecessary packages..."
 
-   pacman -Rnsc --noconfirm gnome-connections gnome-software gnome-music gnome-maps totem gnome-contacts gnome-system-monitor gnome-tour gnome-weather loupe epiphany yelp decibels vim malcontent
+   pacman -Rnsc --noconfirm gnome-connections gnome-software gnome-music gnome-maps totem gnome-contacts gnome-system-monitor gnome-tour gnome-weather loupe epiphany yelp decibels vim malcontent evince sushi baobab gnome-shell-extensions
    check_success "removing unnecessary GNOME packages"
 
    log_message "Installing additional 'flatpak' packages..."
@@ -126,12 +240,101 @@ optimize_gnome() {
    log_success "GNOME has been successfully optimized"
 }
 
+# функция для установки flatpak-пакета с повторными попытками
+install_flatpak_package() {
+    local package=$1
+    local max_attempts=3
+    local attempt=1
+
+    log_message "Instaling flatpak package: $package"
+
+    while [ $attempt -le $max_attempts ]; do
+        if flatpak install --noninteractive "$package"; then
+            log_success "The flatpak '$package' package has been successfully installed"
+            return 0
+        else
+            log_error "The $attempt from $max_attempts to install the flatpak '$package' failed. Repeat after 5 seconds..."
+            sleep 5
+            ((attempt++))
+        fi
+    done
+
+    log_error "Failed to install the flatpak '$package' after $max_attempts attempts"
+    return 1
+}
+
 # 4. Функция для установки Flatpak-приложений
 install_flatpak_apps() {
    log_message "Installing Flatpak-applications..."
 
+   #Список пакетов для установки
+   local flatpakPackages=(
+      "com.bitwig.BitwigStudio"
+      "com.discordapp.Discord"
+      "com.github.johnfactotum.Foliate"
+      "com.github.finefindus.eyedropper"
+      "io.bassi.Amberol"
+      "com.github.tchx84.Flatseal"
+      "com.mattjakeman.ExtensionManager"
+      "com.transmissionbt.Transmission"
+      "com.usebottles.bottles"
+      "com.vysp3r.ProtonPlus"
+      "io.github.celluloid_player.Celluloid"
+      "io.github.flattool.Warehouse"
+      "io.github.jliljebl.Flowblade"
+      "io.github.seadve.Mousai"
+      "io.github.tntwise.REAL-Video-Enhancer"
+      "org.gnome.Mines"
+      "org.gnome.Quadrapassel"
+      "org.gnome.Reversi"
+      "org.nickvision.tagger"
+      "org.nickvision.tubeconverter"
+      "org.onlyoffice.desktopeditors"
+      "org.telegram.desktop"
+      "org.torproject.torbrowser-launcher"
+      "org.gtk.Gtk3theme.adw-gtk3-dark"
+      "com.obsproject.Studio"
+      "net.nokyan.Resources"
+      "com.github.PintaProject.Pinta"
+      "org.gnome.Calculator"
+      "org.gnome.Evince"
+      "org.gnome.Loupe"
+      "org.gnome.SoundRecorder"
+      "org.soundconverter.SoundConverter"
+      "org.pipewire.Helvum"
+      "app.zen_browser.zen"
+      "com.jgraph.drawio.desktop"
+      "io.github.amit9838.mousam"
+      "com.github.wwmm.easyeffects"
+      "io.github.radiolamp.mangojuice"
+      "com.valvesoftware.Steam"
+      "org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/24.08"
+      "app.devsuite.Ptyxis"
+      "com.jeffser.Alpaca"
+      "com.jeffser.Alpaca.Plugins.Ollama"
+      #"org.nickvision.cavalier" #Для визуализации исходящего звука
+      #"it.mijorus.gearlever" #Для работы с AppImage
+      "org.gnome.Papers"
+   )
+
    flatpak install --noninteractive flathub
-   flatpak install --noninteractive com.bitwig.BitwigStudio com.discordapp.Discord com.github.johnfactotum.Foliate com.github.finefindus.eyedropper io.bassi.Amberol com.github.tchx84.Flatseal com.mattjakeman.ExtensionManager com.transmissionbt.Transmission com.usebottles.bottles com.vysp3r.ProtonPlus io.github.celluloid_player.Celluloid io.github.flattool.Warehouse io.github.jliljebl.Flowblade io.github.seadve.Mousai io.github.tntwise.REAL-Video-Enhancer org.gnome.Mines org.gnome.Quadrapassel org.gnome.Reversi org.nickvision.tagger org.nickvision.tubeconverter org.onlyoffice.desktopeditors org.telegram.desktop org.torproject.torbrowser-launcher org.gtk.Gtk3theme.adw-gtk3-dark org.nickvision.cavalier com.obsproject.Studio net.nokyan.Resources com.github.PintaProject.Pinta org.gnome.Calculator org.gnome.Evince org.gnome.Loupe org.gnome.SoundRecorder org.soundconverter.SoundConverter org.pipewire.Helvum app.zen_browser.zen com.jgraph.drawio.desktop io.github.amit9838.mousam com.github.wwmm.easyeffects io.github.radiolamp.mangojuice com.valvesoftware.Steam org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/24.08
+   # Установка пакетов
+   local failed_flatpakPackages=()
+   for package in "${flatpakPackages[@]}"; do
+      if ! install_flatpak_package "$package"; then
+         failed_flatpakPackages+=("$package")
+      fi
+   done
+
+   # Вывод информации о неудачных установках
+   if [ ${#failed_flatpakPackages[@]} -gt 0 ]; then
+      log_error "The following flatpak packages could not be installed:"
+      for package in "${failed_flatpakPackages[@]}"; do
+         echo "  - $package"
+      done
+   else
+      log_success "All packages from Flatpak have been successfully installed"
+   fi
    check_success "installing Flatpak-applications"
 
    log_message "Flatpack recovery and update..."

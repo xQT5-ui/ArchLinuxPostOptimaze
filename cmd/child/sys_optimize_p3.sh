@@ -78,6 +78,8 @@ configure_initramfs() {
 
    # Ускорение загрузки системы c помощью systemd
    sed -i 's/HOOKS=.*/HOOKS=(systemd autodetect modconf microcode kms keyboard keymap sd-vconsole block filesystems)/' /etc/mkinitcpio.conf
+   sed -i 's/#COMPRESSION="lz4"/COMPRESSION="lz4"/' /etc/mkinitcpio.conf
+   sed -i 's/#COMPRESSION_OPTIONS=()/COMPRESSION_OPTIONS=(-9)/' /etc/mkinitcpio.conf
    check_success "setting up hooks to speed up the download"
 
    log_success "initramfs images have been successfully configured"
@@ -188,12 +190,10 @@ configure_system_services() {
    log_message "Creating a zram configuration..."
    cat << EOF > /etc/systemd/zram-generator.conf
 [zram0]
-# Размер zram
-zram-size = min(ram / 2, 8192)
-# Алгоритм сжатия (zstd быстрее lz4 на 5-10%, но требует чуть больше CPU)
+zram-size = ram
 compression-algorithm = zstd
-# Высший приоритет
 swap-priority = 100
+fs-type = swap
 EOF
    check_success "creating a zram configuration"
 
@@ -216,11 +216,13 @@ EOF
 
    # Включение и запуск системных служб
    log_message "Enabling system services..."
-   systemctl enable paccache.timer systemd-zram-setup@zram0.service bluetooth.service v2raya.service power-profiles-daemon thermald systemd-oomd cronie.service
+   systemctl enable paccache.timer bluetooth.service v2raya.service power-profiles-daemon thermald cronie.service irqbalance ananicy-cpp earlyoom nvidia-powerd
+   #systemd-zram-setup@zram0.service
    check_success "enabling system services"
 
    log_message "Launching system services..."
-   systemctl start systemd-zram-setup@zram0.service bluetooth.service v2raya.service
+   systemctl start bluetooth.service v2raya.service
+   #systemd-zram-setup@zram0.service
    check_success "launching system services"
 
    # Настройка еженедельной очистки кэша pacman
@@ -272,7 +274,11 @@ configure_nvidia() {
    log_message "Configuring NVIDIA configuration..."
 
    cat << EOF >> /etc/modprobe.d/nvidia.conf
-options nvidia NVreg_EnableStreamMemOPs=0 NVreg_EnableResizableBar=1
+options nvidia-drm modeset=1
+# Optimizations for >RTX 30xx
+options nvidia NVreg_EnableResizableBar=1 NVreg_UsePageAttributeTable=1 NVreg_EnablePCIeGen3=1 NVreg_EnableStreamMemOPs=1
+# PowerManagement
+options nvidia NVreg_DynamicPowerManagement=0x02
 EOF
    check_success "creating a new nvidia.conf config"
 
@@ -283,7 +289,7 @@ EOF
 change_shell_to_zsh() {
    log_message "Replacing bash with zsh..."
 
-   chsh -s $(which zsh)
+   chsh -s /bin/zsh
    check_success "replacing the shell with zsh"
 
    log_success "Shell successfully changed to zsh"
@@ -293,7 +299,7 @@ change_shell_to_zsh() {
 disable_nvmesh_scheduler() {
    if lsblk -d -o name | grep -iq 'nvm'; then
       log_message "Disabling the NVMe SSD scheduler..."
-      cat << EOF > /etc/systemd/system/v2raya.service
+      cat << EOF > /etc/udev/rules.d/60-ioschedulers.rules
 # NVMe SSD
 ACTION=="add|change", KERNEL=="nvme[0-9]*", ATTR{queue/rotational}=="0", ATTR{queue/scheduler}="none"
 EOF
@@ -301,6 +307,19 @@ EOF
 
       log_success "The NVMe SSD scheduler successfully disabled"
    fi
+}
+
+# 10. Функция для корректной настройки приоритетов при работе с аудио
+configure_realtime_audio() {
+   log_message "Configure realtime audio priority..."
+
+   mkdir -p /etc/security/limits.d
+   cat << EOF > /etc/security/limits.d/20-rt-audio.conf
+@audio - rtprio 98
+EOF
+   check_success "creating realtime config"
+
+   log_success "Configure realtime audio priority successfully created"
 }
 
 # Основная функция
@@ -322,7 +341,8 @@ main() {
    configure_system_services
    configure_nvidia
    change_shell_to_zsh
-   disable_nvmesh_scheduler
+   #disable_nvmesh_scheduler
+   configure_realtime_audio
 
    log_message "All operations have been completed successfully!"
    log_success "===== END OF THE 3D PART ====="

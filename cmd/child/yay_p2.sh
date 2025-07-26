@@ -121,10 +121,10 @@ install_aur_packages() {
 
     # Список пакетов для установки
     local packages=(
-        "pamac-flatpak"
+        #"pamac-flatpak"
         "envycontrol"
         "zsh-theme-powerlevel10k"
-        "xcursor-simp1e-adw-dark"
+        #"xcursor-simp1e-adw-dark"
         "adw-gtk-theme"
         "ventoy-bin"
         "plex-media-server"
@@ -135,6 +135,7 @@ install_aur_packages() {
         "ttf-ms-fonts"
         "mkinitcpio-firmware"
         "papirus-folders"
+        "cachyos-ananicy-rules-git"
     )
 
     # Установка пакетов
@@ -200,6 +201,7 @@ create_directories() {
     mkdir -p ~/.themes
     mkdir -p ~/.icons
     mkdir -p ~/Загрузки/Torrents
+    mkdir -p ~/.config/fastfetch
     check_success "creating custom directories"
 
     # Эти директории требуют sudo, поэтому обрабатываем их отдельно
@@ -221,8 +223,8 @@ create_directories() {
 configure_user_permissions() {
     log_message "Setting up user permissions..."
 
-    if sudo usermod -a -G video,realtime,audio $USER; then
-        log_success "The user $USER has been added to the video, realtime, and audio groups"
+    if sudo usermod -a -G video,audio $USER; then
+        log_success "The user $USER has been added to the video and audio groups"
     else
         log_error "Couldn't add user to groups. Sudo rights are required"
     fi
