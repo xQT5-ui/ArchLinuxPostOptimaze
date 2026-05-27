@@ -143,10 +143,8 @@ install_base_software() {
       "power-profiles-daemon"
       "alsa-utils"
       "pacman-contrib"
-      "timeshift"
       "inxi"
       "v2ray"
-      "thermald"
       "bluez-utils"
       "exfat-utils"
       "file-roller"
@@ -159,8 +157,10 @@ install_base_software() {
       "noto-fonts"
       "noto-fonts-emoji"
       "noto-fonts-extra"
-      "ttf-hack-nerd"
       "fastfetch"
+      "scx-scheds"
+      "scx-tools"
+      "zed"
    )
 
    # Установка пакетов
@@ -224,7 +224,7 @@ install_base_software() {
 optimize_gnome() {
    log_message "Optimize GNOME by removing unnecessary packages..."
 
-   pacman -Rnsc --noconfirm gnome-connections gnome-software gnome-music gnome-maps totem gnome-contacts gnome-system-monitor gnome-tour gnome-weather loupe epiphany yelp decibels vim malcontent evince sushi baobab gnome-shell-extensions
+   pacman -Rnsc --noconfirm gnome-connections gnome-software gnome-music gnome-maps totem gnome-contacts gnome-system-monitor gnome-tour gnome-weather loupe epiphany yelp decibels vim malcontent evince sushi baobab gnome-shell-extensions gvfs-onedrive gnome-backgrounds
    check_success "removing unnecessary GNOME packages"
 
    log_message "Installing additional 'flatpak' packages..."
@@ -265,7 +265,7 @@ install_flatpak_apps() {
    #Список пакетов для установки
    local flatpakPackages=(
       "com.bitwig.BitwigStudio"
-      "com.discordapp.Discord"
+      "io.github.milkshiift.GoofCord"
       "com.github.johnfactotum.Foliate"
       "com.github.finefindus.eyedropper"
       "io.bassi.Amberol"
@@ -274,7 +274,7 @@ install_flatpak_apps() {
       "com.transmissionbt.Transmission"
       "com.usebottles.bottles"
       "com.vysp3r.ProtonPlus"
-      "io.github.celluloid_player.Celluloid"
+      "io.github.diegopvlk.Cine"
       "io.github.flattool.Warehouse"
       "io.github.jliljebl.Flowblade"
       "io.github.seadve.Mousai"
@@ -282,7 +282,7 @@ install_flatpak_apps() {
       "org.gnome.Mines"
       "org.gnome.Quadrapassel"
       "org.gnome.Reversi"
-      "org.nickvision.tagger"
+      "app.drey.EarTag"
       "org.nickvision.tubeconverter"
       "org.onlyoffice.desktopeditors"
       "org.telegram.desktop"
@@ -292,24 +292,25 @@ install_flatpak_apps() {
       "net.nokyan.Resources"
       "com.github.PintaProject.Pinta"
       "org.gnome.Calculator"
-      "org.gnome.Evince"
       "org.gnome.Loupe"
       "org.gnome.SoundRecorder"
       "org.soundconverter.SoundConverter"
       "org.pipewire.Helvum"
       "app.zen_browser.zen"
       "com.jgraph.drawio.desktop"
-      "io.github.amit9838.mousam"
       "com.github.wwmm.easyeffects"
       "io.github.radiolamp.mangojuice"
       "com.valvesoftware.Steam"
-      "org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/24.08"
+      "org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/25.08"
       "app.devsuite.Ptyxis"
-      "com.jeffser.Alpaca"
-      "com.jeffser.Alpaca.Plugins.Ollama"
-      #"org.nickvision.cavalier" #Для визуализации исходящего звука
-      #"it.mijorus.gearlever" #Для работы с AppImage
-      "org.gnome.Papers"
+      "org.nickvision.cavalier" # Для визуализации исходящего звука
+      "it.mijorus.gearlever" # Для работы с AppImage
+      "org.gitfourchette.gitfourchette"
+      "de.wwwtech.gitte"
+      "it.fabiodistasio.AntaresSQL"
+      "io.github.dzheremi2.lrcmake-gtk"
+      "com.github.hydroxycarbamide.Gradience"
+      "dev.bragefuglseth.Keypunch"
    )
 
    flatpak install --noninteractive flathub

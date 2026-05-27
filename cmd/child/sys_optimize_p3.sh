@@ -264,12 +264,6 @@ configure_nvidia() {
 
    log_message "Setting up NVIDIA..."
 
-   # Включение envycontrol в режиме NVIDIA
-   log_message "Enabling envycontrol in NVIDIA mode..."
-
-   envycontrol -s nvidia
-   check_success "enabling envycontrol in NVIDIA mode"
-
    # Правка конфига nvidia.conf
    log_message "Configuring NVIDIA configuration..."
 

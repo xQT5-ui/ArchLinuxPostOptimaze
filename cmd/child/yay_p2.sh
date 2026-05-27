@@ -121,21 +121,21 @@ install_aur_packages() {
 
     # Список пакетов для установки
     local packages=(
-        "envycontrol"
         "zsh-theme-powerlevel10k"
+        "zsh-fast-syntax-highlighting"
         "mocu-xcursor"
         "adw-gtk-theme"
+        "papirus-folders"
         "ventoy-bin"
         "plex-media-server"
         "nautilus-admin-gtk4"
         #"nautilus-open-any-terminal"
-        "visual-studio-code-bin"
         "v2raya"
         "ttf-ms-fonts"
         "mkinitcpio-firmware"
-        "papirus-folders"
         "cachyos-ananicy-rules-git"
-        "zsh-fast-syntax-highlighting"
+        "xpadneo-dkms" # Для современной поддержке контроллеров
+        "lmstudio-bin"
     )
 
     # Установка пакетов
