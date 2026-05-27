@@ -134,7 +134,6 @@ install_base_software() {
       "zsh-autosuggestions"
       "zsh-completions"
       "zsh-history-substring-search"
-      "zsh-syntax-highlighting"
       "xorg-xrandr"
       "go"
       "gufw"

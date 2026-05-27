@@ -121,10 +121,9 @@ install_aur_packages() {
 
     # Список пакетов для установки
     local packages=(
-        #"pamac-flatpak"
         "envycontrol"
         "zsh-theme-powerlevel10k"
-        #"xcursor-simp1e-adw-dark"
+        "mocu-xcursor"
         "adw-gtk-theme"
         "ventoy-bin"
         "plex-media-server"
@@ -136,6 +135,7 @@ install_aur_packages() {
         "mkinitcpio-firmware"
         "papirus-folders"
         "cachyos-ananicy-rules-git"
+        "zsh-fast-syntax-highlighting"
     )
 
     # Установка пакетов
