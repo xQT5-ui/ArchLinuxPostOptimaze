@@ -1,4 +1,4 @@
-chmod +x ./Postinstall_start.sh && \
-./Postinstall_start.sh
+chmod +x ./Start.sh && \
+./Start.sh
 
 ~42 минуты на весь процесс

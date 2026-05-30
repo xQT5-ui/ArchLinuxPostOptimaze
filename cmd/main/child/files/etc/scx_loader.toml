@@ -1,0 +1,2 @@
+default_sched = "scx_bpfland" # Edit this line to the scheduler you want scx_loader to start at boot
+default_mode = "LowLatency" # Possible values: "Auto", "Gaming", "LowLatency", "PowerSave".
