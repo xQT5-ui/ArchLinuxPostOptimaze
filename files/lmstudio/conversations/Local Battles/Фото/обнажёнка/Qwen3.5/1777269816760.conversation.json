@@ -1,0 +1,244 @@
+{
+  "name": "Dressed and Nude Comparison",
+  "pinned": false,
+  "createdAt": 1777269816760,
+  "preset": "",
+  "tokenCount": 858,
+  "userLastMessagedAt": 1777269824833,
+  "assistantLastMessagedAt": 1777269845314,
+  "systemPrompt": "",
+  "messages": [
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "что изображено в файле?"
+            },
+            {
+              "type": "file",
+              "fileIdentifier": "1777269822187 - 270.jpg",
+              "fileType": "image",
+              "sizeBytes": 769767
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "qwen_qwen3.5-4b@q5_k_s"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1777269829648-0.5991856652525872",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "The user is asking for a description of the image provided.\n\n1.  **Analyze the image:** The image is a composite or diptych (two side-by-side photos). It features the same woman in two different poses and states of dress.\n    *   **Left side:** A blonde woman with long wavy hair is standing indoors. She is wearing a beige sleeveless top over a white collared shirt, brown plaid shorts, dark patterned tights (argyle style), and tan boots. She has one hand in her pocket and is smiling at the camera. Behind her is a purple sofa and a glass wall/door reflecting her silhouette.\n    *   **Right side:** The same blonde woman is standing in front of a white wall, with a black leather sofa behind her (similar to the left but different angle/lighting). She is completely nude. Her pose is similar—standing straight, smiling slightly at the camera.\n\n2.  **Formulate the description:**\n    *   Start by identifying it as a two-part image featuring one woman.\n    *   Describe the left part: Woman in casual clothing (top, shorts, tights, boots). Mention the setting (purple sofa, glass wall).\n    *   Describe the right part: Same woman, nude. Mention the setting (black sofa, white wall).\n    *   Note that it looks like a \"before and after\" or a comparison of different states (clothed vs. nude), likely from a photoshoot context given the professional lighting and poses.\n\n3.  **Refine the language (Russian):**\n    *   \"На изображении показана девушка в двух разных состояниях.\" (The image shows a girl in two different states.)\n    *   \"Слева она одета...\" (On the left she is dressed...) -> beige top, shorts, tights, boots.\n    *   \"Справа она голая...\" (On the right she is naked...) -> standing in front of a sofa.\n    *   Combine into a coherent paragraph.\n\n4.  **Final Polish:** Ensure the tone is neutral and descriptive. Avoid unnecessary judgmental language. Just state facts about what is visible.\n\n    *   *Draft:* На фото девушка с длинными светлыми волосами. Слева она стоит в одежде: бежевая кофта, шорты, колготки и ботинки. Справа та же девушка, но без одежды (голая). Она стоит перед диваном.\n    *   *Better:* Это изображение состоит из двух частей. Слева изображена молодая женщина с длинными светлыми волосами в повседневной одежде: бежевая кофта, шорты, узорчатые колготки и ботинки. Она стоит рядом с фиолетовым диваном. Справа та же девушка показана полностью обнаженной (голой), стоящей перед черным диваном на белом фоне.\n\n5.  **Final Output Generation:** (Matches the \"Better\" draft).\n",
+                  "fromDraftModel": false,
+                  "tokensCount": 642,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "prefix": "",
+              "suffix": "</think>",
+              "style": {
+                "type": "thinking",
+                "ended": true,
+                "title": "Thought for 10.45 seconds",
+                "forceRenderAsPlainText": false
+              }
+            },
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1777269840155-0.3141246672545279",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n\nНа изображении представлена молодая женщина с длинными светлыми волосами в двух разных состояниях, расположенных рядом друг с другом:\n\n1.  **Слева:** Женщина одета в повседневную одежду. Она носит бежевую кофту без рукавов поверх белой рубашки, коричневые шорты, темные узорчатые колготки и ботинки на каблуках. Она стоит рядом с фиолетовым диваном, опираясь рукой в карман.\n2.  **Справа:** Та же самая девушка показана полностью обнаженной (голой). Она стоит перед черным кожаным диваном на белом фоне, позу и выражение лица сохраняются похожими на левую часть изображения.\n\nВ целом это выглядит как сравнительное фото или результат фотосессии, демонстрирующей образ в одежде и без неё.",
+                  "fromDraftModel": false,
+                  "tokensCount": 194,
+                  "isStructural": false
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "bartowski/Qwen_Qwen3.5-4B-GGUF/Qwen_Qwen3.5-4B-Q5_K_S.gguf",
+                "identifier": "qwen_qwen3.5-4b@q5_k_s",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "load.gpuStrictVramCap",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.offloadKVCacheToGpu",
+                      "value": true
+                    },
+                    {
+                      "key": "load.gpuSplitConfig",
+                      "value": {
+                        "strategy": "evenly",
+                        "disabledGpus": [],
+                        "priority": [],
+                        "customRatio": []
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 16384
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.temperature",
+                      "value": 0.1
+                    },
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{%- set image_count = namespace(value=0) %}\n{%- set video_count = namespace(value=0) %}\n{%- macro render_content(content, do_vision_count, is_system_content=false) %}\n    {%- if content is string %}\n        {{- content }}\n    {%- elif content is iterable and content is not mapping %}\n        {%- for item in content %}\n            {%- if 'image' in item or 'image_url' in item or item.type == 'image' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain images.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set image_count.value = image_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Picture ' ~ image_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|image_pad|><|vision_end|>' }}\n            {%- elif 'video' in item or item.type == 'video' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain videos.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set video_count.value = video_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Video ' ~ video_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|video_pad|><|vision_end|>' }}\n            {%- elif 'text' in item %}\n                {{- item.text }}\n            {%- else %}\n                {{- raise_exception('Unexpected item type in content.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- elif content is none or content is undefined %}\n        {{- '' }}\n    {%- else %}\n        {{- raise_exception('Unexpected content type.') }}\n    {%- endif %}\n{%- endmacro %}\n{%- if not messages %}\n    {{- raise_exception('No messages provided.') }}\n{%- endif %}\n{%- if tools and tools is iterable and tools is not mapping %}\n    {{- '<|im_start|>system\\n' }}\n    {{- \"# Tools\\n\\nYou have access to the following functions:\\n\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\" }}\n    {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {%- if content %}\n            {{- '\\n\\n' + content }}\n        {%- endif %}\n    {%- endif %}\n    {{- '<|im_end|>\\n' }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {{- '<|im_start|>system\\n' + content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" %}\n        {%- set content = render_content(message.content, false)|trim %}\n        {%- if not(content.startswith('<tool_response>') and content.endswith('</tool_response>')) %}\n            {%- set ns.multi_step_tool = false %}\n            {%- set ns.last_query_index = index %}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if ns.multi_step_tool %}\n    {{- raise_exception('No user query found in messages.') }}\n{%- endif %}\n{%- for message in messages %}\n    {%- set content = render_content(message.content, true)|trim %}\n    {%- if message.role == \"system\" %}\n        {%- if not loop.first %}\n            {{- raise_exception('System message must be at the beginning.') }}\n        {%- endif %}\n    {%- elif message.role == \"user\" %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- set reasoning_content = reasoning_content|trim %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content + '\\n</think>\\n\\n' + content }}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls and message.tool_calls is iterable and message.tool_calls is not mapping %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if tool_call.function is defined %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {%- if loop.first %}\n                    {%- if content|trim %}\n                        {{- '\\n\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- else %}\n                        {{- '<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- endif %}\n                {%- else %}\n                    {{- '\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                {%- endif %}\n                {%- if tool_call.arguments is defined %}\n                    {%- for args_name, args_value in tool_call.arguments|items %}\n                        {{- '<parameter=' + args_name + '>\\n' }}\n                        {%- set args_value = args_value | tojson if args_value is mapping or (args_value is iterable and args_value is not string) else args_value | string %}\n                        {{- args_value }}\n                        {{- '\\n</parameter>\\n' }}\n                    {%- endfor %}\n                {%- endif %}\n                {{- '</function>\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n            {{- '<|im_end|>\\n' }}\n        {%- elif loop.last %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- else %}\n        {{- raise_exception('Unexpected message role.') }}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n    {%- if enable_thinking is defined and enable_thinking is false %}\n        {{- '<think>\\n\\n</think>\\n\\n' }}\n    {%- else %}\n        {{- '<think>\\n' }}\n    {%- endif %}\n{%- endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.vision.userMaxImageDimensionPixels",
+                      "value": {
+                        "checked": true,
+                        "value": 2048
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.vision.ignoreModelPreferredMaxImageDimension",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 61.07711904622903,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 2.94,
+                  "totalTimeSec": 13.707,
+                  "promptTokensCount": 2836,
+                  "predictedTokensCount": 838,
+                  "totalTokensCount": 3674
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1777269843306-0.4726597890514608",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    }
+  ],
+  "usePerChatPredictionConfig": true,
+  "perChatPredictionConfig": {
+    "fields": []
+  },
+  "clientInput": "",
+  "clientInputFiles": [],
+  "userFilesSizeBytes": 769767,
+  "lastUsedModel": {
+    "indexedModelIdentifier": "bartowski/Qwen_Qwen3.5-4B-GGUF/Qwen_Qwen3.5-4B-Q5_K_S.gguf",
+    "identifier": "qwen_qwen3.5-4b@q5_k_s",
+    "instanceLoadTimeConfig": {
+      "fields": [
+        {
+          "key": "load.gpuStrictVramCap",
+          "value": false
+        },
+        {
+          "key": "llm.load.offloadKVCacheToGpu",
+          "value": true
+        },
+        {
+          "key": "load.gpuSplitConfig",
+          "value": {
+            "strategy": "evenly",
+            "disabledGpus": [],
+            "priority": [],
+            "customRatio": []
+          }
+        },
+        {
+          "key": "llm.load.llama.cpuThreadPoolSize",
+          "value": 6
+        },
+        {
+          "key": "llm.load.contextLength",
+          "value": 16384
+        },
+        {
+          "key": "llm.load.llama.flashAttention",
+          "value": true
+        },
+        {
+          "key": "llm.load.llama.tryDirectIO",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.acceleration.offloadRatio",
+          "value": 1
+        }
+      ]
+    },
+    "instanceOperationTimeConfig": {
+      "fields": []
+    }
+  },
+  "notes": [],
+  "plugins": [],
+  "pluginConfigs": {},
+  "disabledPluginTools": [],
+  "looseFiles": []
+}

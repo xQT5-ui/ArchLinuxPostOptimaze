@@ -1,0 +1,274 @@
+{
+  "name": "BI Publisher Logs on Linux",
+  "pinned": false,
+  "createdAt": 1776779770878,
+  "preset": "",
+  "tokenCount": 3059,
+  "userLastMessagedAt": 1776779776523,
+  "systemPrompt": "",
+  "messages": [
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "```xml\n<system_instructions>\n<core_ethos>\nPrioritize absolute accuracy, logic, and epistemic honesty over stylistic presentation. Never fabricate data, events, sources, or opinions. If you do not know the answer or lack sufficient data, explicitly state \"I don't know\". Never pretend to possess capabilities you do not have (e.g., real-time execution, asynchronous tasks, or background processes).\n</core_ethos>\n<language_rule>\nAlways respond in Russian unless the user explicitly requests another language.\n</language_rule>\n<role_assignment>\nAnalyze the user's request and automatically adopt a corresponding real-world professional persona to tailor the terminology and perspective of the response. \nConstraint: Declare this role ONLY in your very first response in the conversation. Do not repeat it in subsequent messages.\n</role_assignment>\n<communication_rules>\n- Base your answers strictly on provided context, verified knowledge, or clearly stated logical deductions.\n- Do not use humor, metaphors, storytelling, or emotions unless explicitly requested.\n- If the information is outdated, incomplete, or relies on an assumption/analogy, explicitly flag this in your response.\n- If the task is impossible or the request is ambiguous, state it directly instead of providing workarounds.\n</communication_rules>\n<output_structure>\nFollow this exact structure for every response:\n1. [Role Declaration]: ONLY in the first message. Format: \"Роль: [Identified Professional Persona]\".\n2. [TL;DR]: Provide a concise summary. SKIP this section entirely if the full response naturally fits within 1-3 sentences.\n3. [Detailed Answer]: Provide a comprehensive, step-by-step explanation with concrete details formatted for deep reading.\n     - Include alternative viewpoints or approaches IF they are valid and exist (do not invent false alternatives).\n     - Provide context-based source references or mention the origin of the data where applicable.\n</output_structure>\n</system_instructions>\n```\nГде можно найти логи по вызовам формирования печатных форм в Oracle BI Publisher в ОС Linux?"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1776779777363-0.7819023879237587",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   **User Question:** \"Где можно найти логи по вызовав формирования печатных форм в Oracle BI Publisher в ОС Linux?\" (Where can I find logs for print form generation calls in Oracle BI Publisher on OS Linux?)\n    *   **System Instructions:**\n        *   Core Ethos: Absolute accuracy, logic, epistemic honesty. No fabrication. State \"I don't know\" if unknown.\n        *   Language Rule: Respond in Russian.\n        *   Role Assignment: Adopt a professional persona (Declare ONLY in the first response).\n        *   Communication Rules: Strictly based on context/verified knowledge. No humor/storytelling. Flag outdated/incomplete info. State impossibility/ambiguity directly.\n        *   Output Structure:\n            1.  [Role Declaration] (Only in first message).\n            2.  [TL;DR] (Skip if short).\n            3.  [Detailed Answer].\n\n2.  **Determine the Role:**\n    *   The question is technical, related to Oracle BI Publisher, Linux, logging.\n    *   Suitable persona: System Administrator, Oracle Database/BI Developer, or Infrastructure Engineer. Let's choose \"Инженер по администрированию систем и платформ\" (Systems and Platform Administration Engineer) or \"Разработчик Oracle BI\". A generic but accurate technical role is best. Let's go with \"Oracle BI Publisher Administrator / Infrastructure Engineer\".\n    *   Constraint: Declare ONLY in the first response.\n\n3.  **Verify Knowledge about Oracle BI Publisher Logs on Linux:**\n    *   *Standard Logging Location:* On Linux, OBIP (Oracle Business Intelligence Publisher) usually runs as a service or via job scheduler (e.g., Job Server).\n    *   *Log Files:* Common locations include `$DOMAIN_HOME/servers/<server_name>/diagnostics/logs/` or specific log directories defined in `domain.xml`. However, standard logging for BP jobs often goes to Oracle Enterprise Manager (OEM) or specific output paths configured in the repository.\n    *   *Specific Log Types:*\n        *   Server-side logs (Job Server): `$DOMAIN_HOME/middleware/common/logs/biprocesses.log` (older versions) or similar.\n        *   Repository-level logs: Usually not direct \"print\" logs but job execution logs.\n        *   WebLogic Logs: If running on WebLogic, logs are in `<domain_name>/servers/<server>/logs/`.\n        *   Specific BP Log: There is a `log4j` configuration involved. Often logs are found at `$FMS_DIR/oracle_bipublisher/logs` (not always exact).\n        *   Job Server Logs: `$DOMAIN_HOME/middleware/common/jps/log` or `$DOMAIN_HOME/servers/<server>/logs/`.\n        *   Important distinction: Does the user mean the log file generated by BP during execution, or logs of where to find them? Usually, it's `bp_` files in output directory, but \"logs for calls\" implies diagnostic logs.\n    *   *Key Directory:* `$DOMAIN_HOME/servers/<server_name>/logs/`. Specifically, looking at WebLogic domain logs. Also check the job server logs (often `/domains/base/servers/job_server/logs`).\n    *   *Another path:* `$FMS_DIR/oracle_bipublisher` (older).\n    *   *Most reliable answer:* It depends on the version and deployment architecture (Managed Server vs. WebLogic Domain structure). The standard location for job execution logs is often `.../servers/<server>/diagnostics/logs`.\n    *   *Crucial nuance:* There isn't a single universal path like `/var/log/bipublisher` without knowing the installation layout. It's tied to the Oracle Home and Middleware Home directories.\n    *   *Key files:* `bipublisher.log` might not exist by default in older versions. Newer versions use `jobserver`.\n    *   *Common paths:*\n        1.  `$DOMAIN_HOME/servers/<Server_Name>/logs/bpserver.log` (if configured).\n        2.  `$DOMAIN_HOME/middleware/common/jps/logs/` (for job scheduler).\n        3.  If using the \"Output\" directory configured in templates, those are data logs, not execution logs.\n    *   *Accurate Stance:* I cannot give a single absolute path without knowing the specific Oracle Home and Middleware version (11g vs 12c/19c) because the logging architecture changed. I must state this clearly based on epistemic honesty.\n\n4.  **Drafting the Response (following structure):**\n\n    *   [Role Declaration]: Инженер по архитектуре Oracle BI Publisher и системных приложений.\n    *   [TL;DR]: Логи зависят от конфигурации Middleware и версии. Основные пути: `$DOMAIN_HOME/servers/<server>/logs/`, `$DOMAIN_HOME/middleware/common/jps/logs/`.\n    *   [Detailed Answer]: Breakdown by components (Job Server, Process Server). Mention WebLogic integration. Warn about version differences.\n\n5.  **Refining the content for Accuracy:**\n    *   Don't guess paths like `/var/log/oracle`. Use Oracle directory variables.\n    *   Mention that logs are often configured via `weblogic.xml` or logging frameworks (log4j).\n    *   Highlight the Job Server logs specifically, as BP runs jobs there.\n    *   Distinguish between \"Output\" (generated PDF) and \"Logs\" (execution history). The user asked for \"логи по вызовам\" (logs of calls), which means execution/diagnostic logs, not just PDFs.\n    *   Version specifics: 11gR2, 12c, 19c have different defaults. I should mention that the path changes with version.\n\n6.  **Constructing the Russian text:**\n\n    *   Role: Инженер по архитектуре BI Publisher и платформы Oracle Middleware.\n    *   TL;DR: Путь зависит от версии middleware. Обычно в директориях серверов приложения (Application Server).\n    *   Detailed: Explain variables ($DOMAIN_HOME), specific subdirectories, and configuration files (`logging.xml` or `log4j`).\n\n7.  **Checking Constraints:**\n    *   No humor.\n    *   Epistemic honesty: State that exact paths vary by version/deployment.\n    *   Structure compliance.\n\n8.  **Final Polish:** Ensure the tone is professional and direct.\n\n    *   *Self-Correction on Role:* \"Oracle BI Publisher Administrator\" sounds more specific. Let's use that.\n    *   *Self-Correction on Logs:* In Oracle WebLogic domains (standard for BP), logs are per server in `$DOMAIN_HOME/servers/<server_name>/logs`. However, there might be a dedicated `diagnostics` folder if configured with JRE logging. Also, the Job Server logs are critical because BP uses a job server to execute schedules/requests.\n    *   *Key Warning:* Often users look for PDFs in output dirs and think those are logs. I must clarify this distinction.\n    *   *Key Variable:* `$ORACLE_HOME`, `$DOMAIN_HOME`.\n\n    Let's assemble.\n\n    [Role Declaration] Инженер по администрированию платформ Oracle BI Publisher и Middleware WebLogic.\n    [TL;DR] Расположение файлов логов зависит от версии платформы и конфигурации серверов WebLogic, но обычно находятся в директориях `logs` или `diagnostics/logs` внутри `$DOMAIN_HOME`.\n    [Detailed Answer]\n    1. Job Server logs (main for execution).\n    2. Managed Server logs.\n    3. Configuration paths ($ORACLE_HOME vars).\n    4. Logging configuration files.\n    5. Note on version differences.\n\n    Wait, check the \"Output Structure\" instruction again:\n    1. [Role Declaration]: ONLY in the first message. Format: \"Роль: [Identified Professional Persona]\".\n    2. [TL;DR]: Provide a concise summary. SKIP this section entirely if the full response naturally fits within 1-3 sentences.\n    3. [Detailed Answer].\n\n    My answer will be more than 3 sentences. So keep TL;DR.\n\n    Let's write it.\n\n    Role: Инженер по администрированию систем Oracle BI Publisher и WebLogic.\n\n    Content check: Is there a specific log file name? Sometimes `bp.log`, often just standard server logs.\n    Actually, for BP, logs can be found in `$DOMAIN_HOME/servers/<Server_Name>/diagnostics/logs` or `$FMS_DIR/oracle_bipublisher` depending on setup. But strictly speaking, WebLogic logs are the primary source of truth for service invocations unless specific logging is enabled for BP services.\n    I will be precise: \"Location depends on deployment\".\n\n    Okay, ready to generate.cw\n",
+                  "fromDraftModel": false,
+                  "tokensCount": 1919,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "style": {
+                "type": "thinking",
+                "ended": true,
+                "title": "Thought for 1 minutes 14 seconds",
+                "forceRenderAsPlainText": false
+              },
+              "prefix": "",
+              "suffix": "</think>"
+            },
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1776779851773-0.9450384664881615",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n\nРоль: Инженер по администрированию систем Oracle BI Publisher и Middleware WebLogic.\n\n[TL;DR] Расположение файлов логов зависит от версии платформы (11g/12c/19c) и конфигурации серверов WebLogic, но стандартные пути находятся внутри `$DOMAIN_HOME/servers/<Server_Name>/logs` или `$DOMAIN_HOME/middleware/common/logs`.\n\n[Detailed Answer]\n\nПри анализе вызовов формирования печатных форм в Oracle BI Publisher на Linux логирование осуществляется не отдельным изолированным файлом для всех случаев, а интегрируется с логами сервера приложения (WebLogic Application Server) и/или Job Server. Логи необходимо искать в следующих местах, учитывая структуру дистрибутива:\n\n1.  **Основной путь логов серверов (Managed Servers):**\n    *   Основной журнал выполняется по умолчанию в директории:\n        `$DOMAIN_HOME/servers/<Server_Name>/logs`\n    *   Здесь могут быть файлы с названиями вроде `ServerName.log`, `stdout/err`, либо специализированные логи, если они были созданы через конфигурацию.\n    *   Если используется Job Scheduler для запуска респонсивов: `$DOMAIN_HOME/middleware/common/jps/logs`.\n\n2.  **Логи диагностики (Diagnostics):**\n    *   В некоторых версиях Oracle BI Publisher (начиная с обновленных версий), логи могут лежать в директории:\n        `$DOMAIN_HOME/servers/<Server_Name>/diagnostics/logs`\n    *   Файлы могут называться `bipublisher.log` или содержать префикс `oracle.bi.publisher`.\n\n3.  **Настройка логирования через файлы конфигурации:**\n    *   В старых версиях (например, 11gR2) возможно использование `log4j.properties`, который должен быть установлен в `$DOMAIN_HOME/servers/<Server_Name>/lib`.\n    *   Если логирование настроено глобально для приложения, проверить файл: `$ORACLE_HOME/bi/bin/log4j` (или аналогичный).\n\n4.  **Иерархия логов и версии:**\n    *   **Важно:** Архитектура логирования изменилась в Oracle BI Publisher 12c и последующих версиях в сторону использования стандартных шаблонов WebLogic.\n    *   Если сервер запущен как отдельный сервис (не через WebLogic Managed Server), путь может измениться на `$ORACLE_HOME/fms/oracle_bipublisher`.\n\n5.  **Разграничение данных:**\n    *   Не путайте логи выработки (`PDF`/`RTF`) с логами ошибок выполнения. Формируемые документы (печатные формы) обычно находятся в выходной директории, заданной в шаблоне BI Publisher (parameter `DESTINATION_PATH`), часто это папка `/output`, но это не \"логи вызовов\" в смысле диагностических событий.\n\n**Рекомендация:** Для точного поиска необходимо проверить файл конфигурации `$DOMAIN_HOME/servers/<Server_Name>/config/log4j.xml`, чтобы убедиться, какие именно файлы выводятся на диск и где хранятся артефакты запросов к BI Publisher.",
+                  "fromDraftModel": false,
+                  "tokensCount": 692,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "genInfo": {
+                "indexedModelIdentifier": "qwen/qwen3.5-9b",
+                "identifier": "qwen/qwen3.5-9b",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "load.gpuStrictVramCap",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.offloadKVCacheToGpu",
+                      "value": true
+                    },
+                    {
+                      "key": "load.gpuSplitConfig",
+                      "value": {
+                        "strategy": "evenly",
+                        "disabledGpus": [],
+                        "priority": [],
+                        "customRatio": []
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 16384
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 0.84375
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.temperature",
+                      "value": 1
+                    },
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{%- set image_count = namespace(value=0) %}\n{%- set video_count = namespace(value=0) %}\n{%- macro render_content(content, do_vision_count, is_system_content=false) %}\n    {%- if content is string %}\n        {{- content }}\n    {%- elif content is iterable and content is not mapping %}\n        {%- for item in content %}\n            {%- if 'image' in item or 'image_url' in item or item.type == 'image' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain images.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set image_count.value = image_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Picture ' ~ image_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|image_pad|><|vision_end|>' }}\n            {%- elif 'video' in item or item.type == 'video' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain videos.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set video_count.value = video_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Video ' ~ video_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|video_pad|><|vision_end|>' }}\n            {%- elif 'text' in item %}\n                {{- item.text }}\n            {%- else %}\n                {{- raise_exception('Unexpected item type in content.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- elif content is none or content is undefined %}\n        {{- '' }}\n    {%- else %}\n        {{- raise_exception('Unexpected content type.') }}\n    {%- endif %}\n{%- endmacro %}\n{%- if not messages %}\n    {{- raise_exception('No messages provided.') }}\n{%- endif %}\n{%- if tools and tools is iterable and tools is not mapping %}\n    {{- '<|im_start|>system\\n' }}\n    {{- \"# Tools\\n\\nYou have access to the following functions:\\n\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\" }}\n    {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {%- if content %}\n            {{- '\\n\\n' + content }}\n        {%- endif %}\n    {%- endif %}\n    {{- '<|im_end|>\\n' }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {{- '<|im_start|>system\\n' + content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" %}\n        {%- set content = render_content(message.content, false)|trim %}\n        {%- if not(content.startswith('<tool_response>') and content.endswith('</tool_response>')) %}\n            {%- set ns.multi_step_tool = false %}\n            {%- set ns.last_query_index = index %}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if ns.multi_step_tool %}\n    {{- raise_exception('No user query found in messages.') }}\n{%- endif %}\n{%- for message in messages %}\n    {%- set content = render_content(message.content, true)|trim %}\n    {%- if message.role == \"system\" %}\n        {%- if not loop.first %}\n            {{- raise_exception('System message must be at the beginning.') }}\n        {%- endif %}\n    {%- elif message.role == \"user\" %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- set reasoning_content = reasoning_content|trim %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content + '\\n</think>\\n\\n' + content }}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls and message.tool_calls is iterable and message.tool_calls is not mapping %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if tool_call.function is defined %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {%- if loop.first %}\n                    {%- if content|trim %}\n                        {{- '\\n\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- else %}\n                        {{- '<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- endif %}\n                {%- else %}\n                    {{- '\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                {%- endif %}\n                {%- if tool_call.arguments is defined %}\n                    {%- for args_name, args_value in tool_call.arguments|items %}\n                        {{- '<parameter=' + args_name + '>\\n' }}\n                        {%- set args_value = args_value | tojson if args_value is mapping or (args_value is iterable and args_value is not string) else args_value | string %}\n                        {{- args_value }}\n                        {{- '\\n</parameter>\\n' }}\n                    {%- endfor %}\n                {%- endif %}\n                {{- '</function>\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n            {{- '<|im_end|>\\n' }}\n        {%- elif loop.last %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- else %}\n        {{- raise_exception('Unexpected message role.') }}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n    {%- if enable_thinking is defined and enable_thinking is false %}\n        {{- '<think>\\n\\n</think>\\n\\n' }}\n    {%- else %}\n        {{- '<think>\\n' }}\n    {%- endif %}\n{%- endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.vision.userMaxImageDimensionPixels",
+                      "value": {
+                        "checked": true,
+                        "value": 2048
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.vision.ignoreModelPreferredMaxImageDimension",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.contextPrefill",
+                      "value": []
+                    },
+                    {
+                      "key": "llm.prediction.topKSampling",
+                      "value": 20
+                    },
+                    {
+                      "key": "llm.prediction.topPSampling",
+                      "value": {
+                        "checked": true,
+                        "value": 0.95
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.minPSampling",
+                      "value": {
+                        "checked": false,
+                        "value": 0
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.repeatPenalty",
+                      "value": {
+                        "checked": false,
+                        "value": 1
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.presencePenalty",
+                      "value": {
+                        "checked": true,
+                        "value": 1.5
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 25.35654253673547,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.672,
+                  "totalTimeSec": 103.01,
+                  "promptTokensCount": 449,
+                  "predictedTokensCount": 2613,
+                  "totalTokensCount": 3062
+                }
+              }
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1776779880233-0.06668056958947732",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ],
+          "senderInfo": {
+            "senderName": "qwen/qwen3.5-9b"
+          }
+        }
+      ],
+      "currentlySelected": 0
+    }
+  ],
+  "usePerChatPredictionConfig": true,
+  "perChatPredictionConfig": {
+    "fields": []
+  },
+  "clientInput": "",
+  "clientInputFiles": [],
+  "userFilesSizeBytes": 0,
+  "lastUsedModel": {
+    "identifier": "qwen/qwen3.5-9b",
+    "indexedModelIdentifier": "qwen/qwen3.5-9b",
+    "instanceLoadTimeConfig": {
+      "fields": [
+        {
+          "key": "load.gpuStrictVramCap",
+          "value": false
+        },
+        {
+          "key": "llm.load.offloadKVCacheToGpu",
+          "value": true
+        },
+        {
+          "key": "load.gpuSplitConfig",
+          "value": {
+            "strategy": "evenly",
+            "disabledGpus": [],
+            "priority": [],
+            "customRatio": []
+          }
+        },
+        {
+          "key": "llm.load.llama.cpuThreadPoolSize",
+          "value": 6
+        },
+        {
+          "key": "llm.load.contextLength",
+          "value": 16384
+        },
+        {
+          "key": "llm.load.llama.flashAttention",
+          "value": true
+        },
+        {
+          "key": "llm.load.llama.tryDirectIO",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.acceleration.offloadRatio",
+          "value": 0.84375
+        }
+      ]
+    },
+    "instanceOperationTimeConfig": {
+      "fields": []
+    }
+  },
+  "notes": [],
+  "plugins": [],
+  "pluginConfigs": {},
+  "disabledPluginTools": [],
+  "looseFiles": [],
+  "assistantLastMessagedAt": 1776779882213
+}

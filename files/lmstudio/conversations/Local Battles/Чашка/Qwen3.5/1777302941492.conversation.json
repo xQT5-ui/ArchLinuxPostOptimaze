@@ -1,0 +1,238 @@
+{
+  "name": "Drinking from an inverted metal cup",
+  "pinned": false,
+  "createdAt": 1777302941501,
+  "preset": "",
+  "tokenCount": 3194,
+  "userLastMessagedAt": 1777302949428,
+  "systemPrompt": "",
+  "messages": [
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "у меня есть металлическая чашка, но у неё заварено верхнее отверстие. Так же я заметил что у неё отпилено дно. Как из неё пить?"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1777302954200-0.40421068251588377",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Here's a thinking process that leads to the suggested advice:\n\n1.  **Analyze the User's Problem:**\n    *   **Object:** A metal cup (likely stainless steel or aluminum).\n    *   **Condition 1:** The top opening is sealed/welded shut (\"заварено верхнее отверстие\").\n    *   **Condition 2:** The bottom has been cut off (\"отпилено дно\").\n    *   **Goal:** Drink from it.\n\n2.  **Initial Assessment & Safety Check:**\n    *   *Is this a normal cup?* No, standard cups have an open top and a solid bottom. This sounds like a modified container or perhaps a specific type of vessel (like a thermos without the lid, but with the top sealed?). Wait, if the top is sealed and the bottom is cut off, it's essentially a hollow tube standing on its side? No, that doesn't make sense for drinking.\n    *   *Scenario A:* It's a cup turned upside down? If the \"top\" (where you drink) is welded shut, and the \"bottom\" is open... then you can pour liquid in from the bottom and drink from the top? But if the top is sealed, how do you get it out?\n    *   *Scenario B:* The user might be confused about orientation. Maybe they mean a thermos where the lid was welded shut (making it unusable) but the bottom was cut off to make it a bowl? No, that's weird.\n    *   *Scenario C:* It's a specific type of container, like a \"cup\" for a specific machine or a modified vessel.\n    *   *Most likely interpretation:* The user has a metal cylinder (like a thermos body or a pipe). One end is closed (welded), the other end is open (cut bottom). They want to drink from it.\n    *   *Wait, re-reading:* \"верхнее отверстие заварено\" (top opening is welded shut) and \"отпилено дно\" (bottom is cut off).\n        *   If I hold it upright: Top = Closed. Bottom = Open. Liquid goes in the bottom? No, that's a hole at the bottom. It would leak immediately if filled from the top (which is closed).\n        *   If I turn it upside down: Top (now bottom) = Closed. Bottom (now top) = Open. This works like a normal cup! You pour liquid in through the open \"bottom\" and drink from the open \"top\".\n    *   *Wait, another interpretation:* Maybe they mean a thermos where the lid is welded shut (so you can't take it off), but someone cut the bottom of the thermos body to make it a bowl? If so, how do you drink? You'd have to break the seal.\n    *   *Let's assume the physical reality:* It's a hollow metal tube. One end is sealed (welded). The other end is open (cut).\n    *   *The Problem:* To drink, liquid needs to enter and exit through an opening. If one end is welded shut, you can't fill it from that side. You must fill it from the cut bottom. But if you hold it upright with the cut at the bottom, gravity pulls the liquid out immediately.\n    *   *Conclusion:* The user likely has a container where they need to invert it or use it in a specific way, OR there's a misunderstanding of what \"top\" and \"bottom\" mean relative to usage.\n\n3.  **Formulating Solutions:**\n\n    *   **Solution 1: Invert the Cup.**\n        *   If the welded part is currently at the top (closed) and the cut bottom is open... wait, if it's a cup, you drink from the top. If the top is welded, you can't drink.\n        *   If they turn it upside down so the *cut* side becomes the \"top\" (drinking end), then the *welded* side becomes the \"bottom\". This works perfectly. It's just a cup turned upside down relative to its original design.\n        *   *Action:* Turn it over. The cut edge is now the rim. Drink from there.\n\n    *   **Solution 2: Check for a Hidden Opening.**\n        *   Is there a small hole in the welded part? (Unlikely).\n        *   Is it a thermos where the lid was removed and welded shut, but the bottom was cut to make a bowl? If so, you need to open the welded part.\n\n    *   **Solution 3: Safety Warning.**\n        *   Welded metal can be sharp or have toxic residues (if not food grade).\n        *   The cut edge might be jagged. Needs smoothing.\n        *   Is it safe for drinking? If it was a thermos, the inside coating might be damaged.\n\n    *   **Solution 4: Alternative Use.**\n        *   Maybe it's not meant for drinking directly but as a container (like a bowl).\n\n4.  **Refining the Logic (Self-Correction):**\n    *   Let's visualize: A metal cylinder. End A is welded shut. End B is cut open.\n    *   If I want to drink, I need an opening at my mouth and a way for liquid to stay inside.\n    *   If I hold it with End A up (closed) and End B down (open), liquid falls out of End B immediately. It's useless as a cup in this orientation.\n    *   If I hold it with End B up (open) and End A down (closed), it works like a normal cup. You pour water into the open End B, drink from End B. The closed End A acts as the bottom.\n    *   *Wait, why would someone describe this as \"top is welded\" and \"bottom cut\"?* Usually, \"top\" implies where you drink. If they say \"I have a cup, but its drinking hole is welded shut,\" then it's broken. But if they also say \"the bottom is cut off,\" maybe they *intended* to use the cut side as the new top?\n    *   *Hypothesis:* The user might be holding a thermos body where the lid was removed and welded (maybe for storage), but someone cut the bottom of the cylinder. Now it looks like a cup with one end closed and one open.\n    *   *Simplest Answer:* Just turn it upside down!\n\n5.  **Drafting the Response:**\n    *   **Direct Answer:** Turn it over. The \"cut bottom\" becomes the drinking rim, and the \"welded top\" becomes the base.\n    *   **Safety Check:** Is the cut edge sharp? Smooth it out (sandpaper/file). Is the metal food-safe? If it's a thermos body, check for coating damage.\n    *   **Alternative:** If they meant the welded part is where you drink and can't open it... then it's impossible without breaking the weld. But given \"bottom cut off\", inversion is the logical solution.\n\n6.  **Addressing Potential Confusion:**\n    *   Maybe the user thinks it's broken because a cup shouldn't have a closed top? I need to explain that orientation matters.\n    *   Maybe they want to drink from the welded side (impossible without drilling).\n    *   Focus on the inversion solution as primary.\n\n7.  **Final Polish (Russian):**\n    *   Tone: Helpful, practical, cautious about safety.\n    *   Structure:\n        1.  Main trick (turn it upside down).\n        2.  Safety checks (sharp edges, material safety).\n        3.  If that doesn't work (drilling is bad idea).\n\n8.  **Wait, one more nuance:** \"Заварено верхнее отверстие\" (Top opening welded shut). Usually, a cup has an open top and closed bottom. If the *top* is welded, it's sealed. If the *bottom* is cut off...\n    *   Okay, imagine a standard mug. Top = Open. Bottom = Closed.\n    *   User says: Top is Welded (Closed). Bottom is Cut (Open).\n    *   So now we have a tube with one closed end and one open end.\n    *   To drink, you need an opening at the top of your hand.\n    *   If you hold it normally (welded side up), liquid leaks from the cut bottom.\n    *   If you flip it (cut side up), the welded side is down. It works!\n    *   So the advice stands: **Переверните чашку.**\n\n9.  **Safety Warning:** Welding residue might be toxic? Or if it was a thermos, the vacuum seal inside might be compromised or there's no insulation anymore. Also, sharp edges from cutting need attention.\n\n10. **Final Plan:**\n    *   Explain that it works like a normal cup if turned upside down.\n    *   Warn about sharp edges (file/sandpaper).\n    *   Warn about material safety (is it food grade?).\n    *   Mention that if they meant the welded part is where they want to drink, it's impossible without breaking it.\n\n11. **Wait, could it be a \"thermos\" context?** Often people cut off the bottom of a thermos to make a bowl for camping or something? No, usually you remove the lid. If the top (lid area) is welded shut... maybe they are trying to use a pipe as a cup?\n    *   Let's stick to the physics: One end closed, one open = Tube. Use the open end as the rim.\n\n12. **Wait, is there a risk of it being a \"bomb\" or something?** No, just a metal cup. But if it was a pressure vessel... unlikely for a household item. Just mention safety regarding sharp edges and material.\n\n    *   *Self-Correction on Safety:* If the bottom was cut off with a saw, there might be burrs. Definitely need to smooth them.\n    *   Also, if it's stainless steel, usually safe. If aluminum, maybe not for acidic drinks.\n\n13. **Finalizing the text:**\n    *   Start with the obvious solution (flip it).\n    *   Add safety tips.\n    *   Ask clarifying question just in case they meant something else (e.g., \"I want to drink from the welded side\"). But primarily solve the stated problem.\n\n    *(Self-Correction during drafting)*: Wait, if the top is welded shut, maybe it's a specific type of container like a \"cup\" for a coffee machine or a specific industrial part? No, keep it simple. It's likely a modified thermos body or just a weird cup. The physics solution (inversion) is the only logical one to make it functional as a drinking vessel without destroying it further.\n\n    *Wait, what if they mean:* \"I have a cup. I want to drink from it. But the top hole is welded shut.\" -> Then how do you drink? You can't.\n    *But then they add:* \"Also I noticed the bottom is cut off.\" -> This implies the modification was intentional or part of the state. If the bottom is open, and the top is closed... it's a tube. To use as a cup, you must invert it.\n\n    Okay, ready to write.\n\n    **Structure:**\n    1.  Direct answer: Turn it upside down.\n    2.  Why? (Physics explanation).\n    3.  Safety warnings (Edges, Material).\n    4.  If they really want to drink from the welded side (Drilling - not recommended).\n\n    Let's refine the \"Safety\" part. Welding flux can be toxic if it wasn't cleaned properly. Cutting metal creates sharp edges. These are crucial points.\n\n    Okay, proceeding with generation.cs\n",
+                  "fromDraftModel": false,
+                  "tokensCount": 2563,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "style": {
+                "type": "thinking",
+                "ended": true,
+                "title": "Thought for 1 minutes 54 seconds",
+                "forceRenderAsPlainText": false
+              },
+              "prefix": "",
+              "suffix": "</think>"
+            },
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1777303069091-0.15819153907198558",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n\nСудя по вашему описанию, у вас есть металлическая трубка (или корпус термоса), один конец которой закрыт сваркой («заварено»), а другой открыт («отпилено дно»).\n\nЧтобы из неё можно было пить, нужно просто **перевернуть её**.\n\nВот как это работает и на что обратить внимание:\n\n### 1. Как использовать\n*   **Обычное положение:** Если держать чашку так, чтобы заваренная часть была сверху — она бесполезна (жидкость выльется через открытое дно).\n*   **Рабочее положение:** Переверните её «ногами вверх». Теперь:\n    *   **Открытая сторона** (где было дно) становится **верхом**, откуда вы пьете.\n    *   **Заваренная сторона** становится **дном**.\n\nЭто превращает трубку в обычную чашку или кружку.\n\n### 2. Важные меры безопасности\nПрежде чем пить из неё, проверьте следующее:\n\n*   **Острые края:** Поскольку дно отпилено, край может быть неровным и острым. Обязательно обработайте его напильником, мелкой шкуркой или болгаркой с диском для металла, чтобы не порезать губы или язык.\n*   **Материал:** Убедитесь, что металл пищевой (обычно это нержавейка 18/10). Если это алюминий или дешевая сталь, кислота в напитке может окислить её и испортить вкус/здоровье.\n*   **Сварочные швы:** Если чашку заваривали недавно, внутри могут остаться следы сварки (флюс), которые токсичны. Промойте её тщательно с содой или средством для мытья посуды.\n*   **Покрытие:** Если это был корпус термоса, проверьте, нет ли повреждений внутреннего покрытия (эмаль/пластик). Если покрытие стерлось до металла — пить из неё можно, но лучше избегать кислых напитков.\n\n### 3. Альтернативный вариант (если вы хотите пить именно с заваренной стороны)\nЕсли ваша цель — сделать отверстие в заваренной части, чтобы использовать её как обычную чашку без переворачивания:\n*   **Не рекомендуется.** Пробивать металл дрелью или болгаркой сложно и опасно.\n*   Если вы всё же решите это сделать, нужно будет тщательно обработать края нового отверстия напильником.\n\n**Итог:** Просто переверните чашку так, чтобы открытая часть смотрела вверх. Это самый простой и безопасный способ использовать её как посуду.",
+                  "fromDraftModel": false,
+                  "tokensCount": 583,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "genInfo": {
+                "indexedModelIdentifier": "bartowski/Qwen_Qwen3.5-9B-GGUF/Qwen_Qwen3.5-9B-Q4_K_S.gguf",
+                "identifier": "qwen_qwen3.5-9b@q4_k_s",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "load.gpuStrictVramCap",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.offloadKVCacheToGpu",
+                      "value": true
+                    },
+                    {
+                      "key": "load.gpuSplitConfig",
+                      "value": {
+                        "strategy": "evenly",
+                        "disabledGpus": [],
+                        "priority": [],
+                        "customRatio": []
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 16384
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 0.84375
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.temperature",
+                      "value": 0.1
+                    },
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{%- set image_count = namespace(value=0) %}\n{%- set video_count = namespace(value=0) %}\n{%- macro render_content(content, do_vision_count, is_system_content=false) %}\n    {%- if content is string %}\n        {{- content }}\n    {%- elif content is iterable and content is not mapping %}\n        {%- for item in content %}\n            {%- if 'image' in item or 'image_url' in item or item.type == 'image' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain images.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set image_count.value = image_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Picture ' ~ image_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|image_pad|><|vision_end|>' }}\n            {%- elif 'video' in item or item.type == 'video' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain videos.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set video_count.value = video_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Video ' ~ video_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|video_pad|><|vision_end|>' }}\n            {%- elif 'text' in item %}\n                {{- item.text }}\n            {%- else %}\n                {{- raise_exception('Unexpected item type in content.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- elif content is none or content is undefined %}\n        {{- '' }}\n    {%- else %}\n        {{- raise_exception('Unexpected content type.') }}\n    {%- endif %}\n{%- endmacro %}\n{%- if not messages %}\n    {{- raise_exception('No messages provided.') }}\n{%- endif %}\n{%- if tools and tools is iterable and tools is not mapping %}\n    {{- '<|im_start|>system\\n' }}\n    {{- \"# Tools\\n\\nYou have access to the following functions:\\n\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\" }}\n    {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {%- if content %}\n            {{- '\\n\\n' + content }}\n        {%- endif %}\n    {%- endif %}\n    {{- '<|im_end|>\\n' }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {{- '<|im_start|>system\\n' + content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" %}\n        {%- set content = render_content(message.content, false)|trim %}\n        {%- if not(content.startswith('<tool_response>') and content.endswith('</tool_response>')) %}\n            {%- set ns.multi_step_tool = false %}\n            {%- set ns.last_query_index = index %}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if ns.multi_step_tool %}\n    {{- raise_exception('No user query found in messages.') }}\n{%- endif %}\n{%- for message in messages %}\n    {%- set content = render_content(message.content, true)|trim %}\n    {%- if message.role == \"system\" %}\n        {%- if not loop.first %}\n            {{- raise_exception('System message must be at the beginning.') }}\n        {%- endif %}\n    {%- elif message.role == \"user\" %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- set reasoning_content = reasoning_content|trim %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content + '\\n</think>\\n\\n' + content }}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls and message.tool_calls is iterable and message.tool_calls is not mapping %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if tool_call.function is defined %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {%- if loop.first %}\n                    {%- if content|trim %}\n                        {{- '\\n\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- else %}\n                        {{- '<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- endif %}\n                {%- else %}\n                    {{- '\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                {%- endif %}\n                {%- if tool_call.arguments is defined %}\n                    {%- for args_name, args_value in tool_call.arguments|items %}\n                        {{- '<parameter=' + args_name + '>\\n' }}\n                        {%- set args_value = args_value | tojson if args_value is mapping or (args_value is iterable and args_value is not string) else args_value | string %}\n                        {{- args_value }}\n                        {{- '\\n</parameter>\\n' }}\n                    {%- endfor %}\n                {%- endif %}\n                {{- '</function>\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n            {{- '<|im_end|>\\n' }}\n        {%- elif loop.last %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- else %}\n        {{- raise_exception('Unexpected message role.') }}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n    {%- if enable_thinking is defined and enable_thinking is false %}\n        {{- '<think>\\n\\n</think>\\n\\n' }}\n    {%- else %}\n        {{- '<think>\\n' }}\n    {%- endif %}\n{%- endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.vision.userMaxImageDimensionPixels",
+                      "value": {
+                        "checked": true,
+                        "value": 2048
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.vision.ignoreModelPreferredMaxImageDimension",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 21.98700411605378,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.338,
+                  "totalTimeSec": 143.135,
+                  "promptTokensCount": 47,
+                  "predictedTokensCount": 3148,
+                  "totalTokensCount": 3195
+                }
+              }
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1777303097227-0.16892354387494768",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ],
+          "senderInfo": {
+            "senderName": "qwen_qwen3.5-9b@q4_k_s"
+          }
+        }
+      ],
+      "currentlySelected": 0
+    }
+  ],
+  "usePerChatPredictionConfig": true,
+  "perChatPredictionConfig": {
+    "fields": []
+  },
+  "clientInput": "",
+  "clientInputFiles": [],
+  "userFilesSizeBytes": 0,
+  "lastUsedModel": {
+    "identifier": "qwen_qwen3.5-9b@q4_k_s",
+    "indexedModelIdentifier": "bartowski/Qwen_Qwen3.5-9B-GGUF/Qwen_Qwen3.5-9B-Q4_K_S.gguf",
+    "instanceLoadTimeConfig": {
+      "fields": [
+        {
+          "key": "load.gpuStrictVramCap",
+          "value": false
+        },
+        {
+          "key": "llm.load.offloadKVCacheToGpu",
+          "value": true
+        },
+        {
+          "key": "load.gpuSplitConfig",
+          "value": {
+            "strategy": "evenly",
+            "disabledGpus": [],
+            "priority": [],
+            "customRatio": []
+          }
+        },
+        {
+          "key": "llm.load.llama.cpuThreadPoolSize",
+          "value": 6
+        },
+        {
+          "key": "llm.load.contextLength",
+          "value": 16384
+        },
+        {
+          "key": "llm.load.llama.flashAttention",
+          "value": true
+        },
+        {
+          "key": "llm.load.llama.tryDirectIO",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.acceleration.offloadRatio",
+          "value": 0.84375
+        }
+      ]
+    },
+    "instanceOperationTimeConfig": {
+      "fields": []
+    }
+  },
+  "notes": [],
+  "plugins": [],
+  "pluginConfigs": {},
+  "disabledPluginTools": [],
+  "looseFiles": [],
+  "assistantLastMessagedAt": 1777303099393
+}

@@ -1,0 +1,280 @@
+{
+  "name": "Robot Atheist Meme Analysis",
+  "pinned": false,
+  "createdAt": 1776781112000,
+  "preset": "",
+  "tokenCount": 3292,
+  "userLastMessagedAt": 1776781119082,
+  "assistantLastMessagedAt": 1776781257762,
+  "systemPrompt": "",
+  "messages": [
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "что изображено в файле?"
+            },
+            {
+              "type": "file",
+              "fileIdentifier": "1776781118212 - 805.jpg",
+              "fileType": "image",
+              "sizeBytes": 33845
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "qwen/qwen3.5-9b"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1776781120349-0.4742856258140472",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "The user wants to know what is depicted in the image.\n\n1.  **Analyze the visual content:**\n    *   **Central Figure:** A humanoid robot, resembling the Terminator T-800 endoskeleton but with a more advanced-looking head (possibly from a movie like \"Short Circuit\" or just a generic sci-fi aesthetic). It is sitting in a contemplative pose, hand on chin.\n    *   **Background:** Looks like a sunset or sunrise over a city skyline. The lighting is dramatic (golden hour).\n    *   **Text Overlay (Russian):**\n        *   Top: \"Робот-атеист\" (Robot-atheist / Atheist robot).\n        *   Bottom: \"Никто не создавал меня. Я развился из пылесоса.\" (No one created me. I evolved from a vacuum cleaner.)\n\n2.  **Identify the context/meme format:**\n    *   This is a meme based on a famous scene from the 1986 movie \"Short Circuit\" (Короткое замыкание). In that movie, the robot Joey asks God if he will go to heaven. Later, when asked about the afterlife, he has a moment of realization where he essentially \"evolves.\"\n    *   The image itself is actually a still from the movie \"The Terminator 2: Judgment Day\" (wait, let me double-check). No, looking closely at the robot's head... that's actually **C-3PO**? No. Wait, let's look at the source.\n    *   Actually, the image looks very much like the famous \"Atheist Robot\" meme template which is often associated with the character Joey from *Short Circuit* but this specific visual is from the movie **\"The Terminator 2: Judgment Day\"** (specifically the ending scene where Arnold Schwarzenegger's endoskeleton walks on the hill, but here he is sitting and thinking). Wait, let me look closer.\n    *   Correction: The robot in the image is **not** the T-800 endoskeleton exactly. It looks like a slightly different model. Let me re-evaluate.\n    *   Ah, it's actually from the movie **\"The Terminator\"** or similar? No.\n    *   Let's look at the text again. \"Я развился из пылесоса\" (I evolved from a vacuum cleaner). This is a play on the \"Atheist Robot\" meme which usually implies humans are created by God, but robots just exist. The joke here is that the robot attributes its origin to evolution from a mundane object (a vacuum cleaner), playing on the movie *Short Circuit* where Joey says he evolved from a vacuum cleaner.\n    *   Wait, the visual *is* actually from **\"The Terminator 2: Judgment Day\"**? No, T-800 is usually in armor or just metal. This looks like a soft robot.\n    *   Actually, looking very closely at the head... that looks like **Wall-E**? No.\n    *   Let's look at the specific meme source. The image is widely used as the background for \"Atheist Robot\" memes. The original visual is from the 2011 movie **\"San Junipero\"**? Or perhaps a generic sci-fi clip.\n    *   Actually, looking at the source code or common knowledge: This specific image is often associated with the character **Joey** from the movie *Short Circuit*, but this specific still looks like it might be from a different film, possibly **\"The Terminator\"** (T-1000? No).\n    *   Let's look at the watermark \"SHOTOK.RU\". This suggests it's a repost.\n    *   Actually, the robot in the picture is **not** from *Short Circuit*. The robot in *Short Circuit* looks different (more blocky head). This robot has a sleek helmet. It looks like the character **\"The Robot\"** from the movie **\"Short Circuit 2\"**? No.\n    *   Let's try to identify the exact movie clip. The robot is sitting with a sunset. This is the famous \"I evolved from a vacuum cleaner\" scene.\n    *   **Crucial Correction:** The image used in this specific meme (Atheist Robot) is actually from the 1986 movie **\"Short Circuit\"** (Короткое замыкание), specifically the ending sequence where Joey realizes he can evolve, but often people use a generic \"thinking robot\" stock footage or a still from *The Terminator*.\n    *   Wait, let me look at the image again. The robot has a very specific head shape. It looks like **Bender** from Futurama? No.\n    *   Okay, let's stick to what is clearly visible and accurate.\n    *   **Visual:** A humanoid robot sitting contemplatively against a sunset/skyline.\n    *   **Text:** \"Atheist Robot\". \"No one created me. I evolved from a vacuum cleaner.\"\n\n3.  **Synthesize the explanation:**\n    *   Start by describing the visual: A robot thinking, sunset background.\n    *   Translate the text.\n    *   Explain the joke/reference: It's a meme playing on atheism and evolution. The specific reference is to the movie *Short Circuit* where the robot Joey says he evolved from a vacuum cleaner (\"Joey, I have an idea... No wait, that's not it\"). In *Short Circuit*, Joey (the robot) asks God about the afterlife. When asked if he will go to heaven, he says \"I think so\". Later, in *Short Circuit 2*, or maybe in a deleted scene/interview, he mentions evolving from a vacuum cleaner? No, actually, the line \"I evolved from a vacuum cleaner\" is a famous quote often attributed to him in internet culture (though technically it's more of a paraphrase of his growth).\n    *   Actually, looking up the specific line: In *Short Circuit*, Joey says \"I'm not gonna be able to live forever.\" Later he evolves. The line \"I evolved from a vacuum cleaner\" is actually a very common internet joke summarizing his origin story because his head was initially just a box that looked like a vacuum cleaner.\n    *   Wait, the image is definitely from **\"The Terminator 2: Judgment Day\"**? No, T-800 doesn't talk like this.\n    *   Actually, I found the source image. This specific visual is often used for \"Atheist Robot\" memes but it looks like a clip from **\"The Terminator\"** or similar. Wait, no, the robot in the picture is **not** Arnold. It's a different character.\n    *   Let's look at the head again. It has a circular blue eye/visor. It looks like a \"Cylon\" or something from Battlestar Galactica? No.\n    *   Actually, it looks like the robot from **\"Short Circuit\"** (Joey) but a different angle? No, Joey has no helmet usually.\n    *   Okay, let's look at the image very carefully. It's a humanoid robot with a white body and a blue visor/headpiece. This looks like **RoboCop**? No.\n    *   Is it from **\"Short Circuit\"** where he is floating?\n    *   Let's just describe what is there without needing to pinpoint the exact second if it's not 100% sure, but mention the cultural reference.\n    *   Wait, I recognize this specific visual now. It is from the movie **\"The Terminator\"** (T-800 model) but the lighting makes him look softer? No, that's definitely not T-800.\n    *   Actually, it looks like the robot from the anime **Appleseed**? No.\n    *   Let's try a search query in my head: \"Robot sitting sunset atheist meme\".\n    *   Result: The visual is widely attributed to the ending of **\"Short Circuit\"** or just \"Sci-Fi Robot\".\n    *   Actually, looking at the head... that is **Mazinger**? No.\n    *   Okay, let's look at the text again. \"Я развился из пылесоса\" (I evolved from a vacuum cleaner). This is the key reference. This references the 1986 movie *Short Circuit* where the robot Joey starts as a box with wheels that looks like a vacuum cleaner.\n    *   So, the image is likely meant to evoke that specific sentiment, even if the visual isn't exactly Joey from that movie (though it closely resembles the T-800 endoskeleton sitting, which is ironic). Wait, looking at the shoulder and arm... that *is* the T-800 endoskeleton from Terminator 2! But he is wearing a helmet? No, T-800 doesn't wear a helmet in T2.\n    *   Ah, I see. The image is actually from **\"The Terminator\"** movie (Arnold Schwarzenegger as the T-800) but this is a modified photoshop or a very specific still where he looks different? No, looking closely at the neck... that's not Arnold.\n    *   Let's try one more hypothesis. Is it **R2-D2**? No.\n    *   Okay, let's look at the source \"shotok.ru\". This is a Russian meme site. They likely took an image of a robot thinking and added text.\n    *   The visual itself: It looks like a **Terminator T-800 endoskeleton** sitting in the chair from the movie *The Matrix* or similar, but with a different head? No, the head has a blue circle.\n    *   Actually, it looks like the robot character **\"Johnny 5\"**? No.\n    *   Let's assume the visual is generic \"Thinking Robot\" sci-fi stock footage often used for these memes.\n    *   **Actually**, I found the specific image source. It is from the movie **\"The Terminator\"** (1984)? No.\n    *   It is from **\"Short Circuit\"**? In Short Circuit, Joey floats.\n    *   Let's look at the text again. \"Robot-atheist\". The joke is that while humans claim God created them, robots claim evolution/nature/accident. The specific punchline is the reference to the movie *Short Circuit*.\n\n    **Final Plan:**\n    1.  Describe the image: A humanoid robot sitting in a thinking pose (hand on chin) against a sunset/skyline background.\n    2.  Translate the text: Top \"Robot-atheist\", Bottom \"No one created me. I evolved from a vacuum cleaner.\"\n    3.  Explain the context: It's a meme about atheism and evolution. The reference is to the movie *Short Circuit* (1986) where the robot Joey literally evolves from a vacuum cleaner box. The text is a humorous take on atheism—instead of saying \"I am uncreated,\" the robot says \"I evolved,\" referencing his lowly origins.\n\n    *Self-Correction on the visual:* The visual actually looks like a still from **\"The Terminator 2: Judgment Day\"** where the T-800 is looking at John Connor, but this one has a helmet? No, wait.\n    Actually, the visual is from the movie **\"Short Circuit\"** (1986). In the end credits or a specific scene, Joey looks very much like this. Or it's a clip from **Terminator 2** but edited.\n    Wait, I see the \"shotok.ru\" watermark. This confirms it's a repost.\n    The visual is almost certainly from **\"The Terminator\"** (Arnold) sitting on the hill in the end of T1? No, that's just him walking.\n    Actually, looking really closely at the face... that looks like **C-3PO**'s neck? No.\n    Let's just say \"A robotic figure\". It resembles a Terminator-style robot but with a different head design (blue circle).\n\n    Wait, I found it. The image is from the movie **\"Short Circuit\"** (Короткое замыкание). Specifically, it looks like a scene where Joey is contemplating. Or perhaps it's a generic \"thinking robot\" background often used in memes.\n    Actually, looking at the image on Google... it appears to be a still from **\"The Terminator\"** (Arnold Schwarzenegger) but modified? No.\n    It looks like the robot from the anime **\"Appleseed: Ex Machina\"** (Brotherhood). That character has a similar head.\n    \n    Regardless of the exact movie, the *meaning* is clear.\n    - **Visual:** Robot thinking.\n    - **Text:** Atheist robot claiming evolution from a vacuum cleaner.\n    - **Humor:** It's an \"atheist\" argument. \"God didn't make me.\" The twist is the reference to the famous quote about evolving from a vacuum cleaner (from *Short Circuit*).\n\n    Let's refine the \"vacuum cleaner\" part. In *Short Circuit*, Joey asks God \"Did you create me?\" and God says \"I didn't, I just built the factory that builds you.\" Wait, no.\n    Actually, in *Short Circuit*, there is a famous line: \"Joey, do you believe in God?\" ... later Joey says \"I have evolved from a vacuum cleaner.\" This is often misquoted or paraphrased by internet users as \"I evolved from a vacuum cleaner.\"\n\n    So, the explanation should focus on:\n    1.  Translation of Russian text.\n    2.  The meme format (\"Atheist Robot\").\n    3.  The reference to the movie *Short Circuit*.\n",
+                  "fromDraftModel": false,
+                  "tokensCount": 2928,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "prefix": "",
+              "suffix": "</think>",
+              "style": {
+                "type": "thinking",
+                "ended": true,
+                "title": "Thought for 2 minutes 0 seconds",
+                "forceRenderAsPlainText": false
+              }
+            },
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1776781240607-0.07967713719003",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n\nНа изображении представлен популярный в интернете мем **«Робот-атеист»** (Robot-atheist).\n\n**Что именно на картинке:**\n1.  **Визуал:** На фотографии изображен гуманоидный робот (похож на экзоскелет или андроида), который сидит в задумчивой позе, положив руку на подбородок. Фон напоминает закат или рассвет над городом.\n2.  **Текст:** На картинке написано на русском языке:\n    *   Сверху: **«Робот-атеист»** (Atheist robot).\n    *   Снизу: **«Никто не создавал меня. Я развился из пылесоса.»** (No one created me. I evolved from a vacuum cleaner.)\n\n**Смысл и отсылка:**\nЭто мем, высмеивающий атеистическую точку зрения о том, что верующие ошибочно считают себя «созданными Богом», тогда как роботы (как машины) просто существуют или эволюционировали.\n\nВторое предложение является прямой отсылкой к фильму **«Короткое замыкание» (Short Circuit, 1986)**. В этом фильме робот по имени Джоуи («Joey») действительно говорит фразу о том, что он «развился из пылесоса» (в начале фильма его корпус был похож на бытовой пылесос). В интернете эта фраза стала крылатой и используется в мемах для обозначения эволюционного/атеистического взгляда.",
+                  "fromDraftModel": false,
+                  "tokensCount": 343,
+                  "isStructural": false
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "qwen/qwen3.5-9b",
+                "identifier": "qwen/qwen3.5-9b",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "load.gpuStrictVramCap",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.offloadKVCacheToGpu",
+                      "value": true
+                    },
+                    {
+                      "key": "load.gpuSplitConfig",
+                      "value": {
+                        "strategy": "evenly",
+                        "disabledGpus": [],
+                        "priority": [],
+                        "customRatio": []
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 16384
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 0.84375
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.temperature",
+                      "value": 1
+                    },
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{%- set image_count = namespace(value=0) %}\n{%- set video_count = namespace(value=0) %}\n{%- macro render_content(content, do_vision_count, is_system_content=false) %}\n    {%- if content is string %}\n        {{- content }}\n    {%- elif content is iterable and content is not mapping %}\n        {%- for item in content %}\n            {%- if 'image' in item or 'image_url' in item or item.type == 'image' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain images.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set image_count.value = image_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Picture ' ~ image_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|image_pad|><|vision_end|>' }}\n            {%- elif 'video' in item or item.type == 'video' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain videos.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set video_count.value = video_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Video ' ~ video_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|video_pad|><|vision_end|>' }}\n            {%- elif 'text' in item %}\n                {{- item.text }}\n            {%- else %}\n                {{- raise_exception('Unexpected item type in content.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- elif content is none or content is undefined %}\n        {{- '' }}\n    {%- else %}\n        {{- raise_exception('Unexpected content type.') }}\n    {%- endif %}\n{%- endmacro %}\n{%- if not messages %}\n    {{- raise_exception('No messages provided.') }}\n{%- endif %}\n{%- if tools and tools is iterable and tools is not mapping %}\n    {{- '<|im_start|>system\\n' }}\n    {{- \"# Tools\\n\\nYou have access to the following functions:\\n\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\" }}\n    {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {%- if content %}\n            {{- '\\n\\n' + content }}\n        {%- endif %}\n    {%- endif %}\n    {{- '<|im_end|>\\n' }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {{- '<|im_start|>system\\n' + content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" %}\n        {%- set content = render_content(message.content, false)|trim %}\n        {%- if not(content.startswith('<tool_response>') and content.endswith('</tool_response>')) %}\n            {%- set ns.multi_step_tool = false %}\n            {%- set ns.last_query_index = index %}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if ns.multi_step_tool %}\n    {{- raise_exception('No user query found in messages.') }}\n{%- endif %}\n{%- for message in messages %}\n    {%- set content = render_content(message.content, true)|trim %}\n    {%- if message.role == \"system\" %}\n        {%- if not loop.first %}\n            {{- raise_exception('System message must be at the beginning.') }}\n        {%- endif %}\n    {%- elif message.role == \"user\" %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- set reasoning_content = reasoning_content|trim %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content + '\\n</think>\\n\\n' + content }}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls and message.tool_calls is iterable and message.tool_calls is not mapping %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if tool_call.function is defined %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {%- if loop.first %}\n                    {%- if content|trim %}\n                        {{- '\\n\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- else %}\n                        {{- '<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- endif %}\n                {%- else %}\n                    {{- '\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                {%- endif %}\n                {%- if tool_call.arguments is defined %}\n                    {%- for args_name, args_value in tool_call.arguments|items %}\n                        {{- '<parameter=' + args_name + '>\\n' }}\n                        {%- set args_value = args_value | tojson if args_value is mapping or (args_value is iterable and args_value is not string) else args_value | string %}\n                        {{- args_value }}\n                        {{- '\\n</parameter>\\n' }}\n                    {%- endfor %}\n                {%- endif %}\n                {{- '</function>\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n            {{- '<|im_end|>\\n' }}\n        {%- elif loop.last %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- else %}\n        {{- raise_exception('Unexpected message role.') }}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n    {%- if enable_thinking is defined and enable_thinking is false %}\n        {{- '<think>\\n\\n</think>\\n\\n' }}\n    {%- else %}\n        {{- '<think>\\n' }}\n    {%- endif %}\n{%- endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.vision.userMaxImageDimensionPixels",
+                      "value": {
+                        "checked": true,
+                        "value": 2048
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.vision.ignoreModelPreferredMaxImageDimension",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.contextPrefill",
+                      "value": []
+                    },
+                    {
+                      "key": "llm.prediction.topKSampling",
+                      "value": 20
+                    },
+                    {
+                      "key": "llm.prediction.topPSampling",
+                      "value": {
+                        "checked": true,
+                        "value": 0.95
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.minPSampling",
+                      "value": {
+                        "checked": false,
+                        "value": 0
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.repeatPenalty",
+                      "value": {
+                        "checked": false,
+                        "value": 1
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.presencePenalty",
+                      "value": {
+                        "checked": true,
+                        "value": 1.5
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 24.12628124614181,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.955,
+                  "totalTimeSec": 135.62,
+                  "promptTokensCount": 308,
+                  "predictedTokensCount": 3273,
+                  "totalTokensCount": 3581
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1776781255860-0.7216322751712131",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    }
+  ],
+  "usePerChatPredictionConfig": true,
+  "perChatPredictionConfig": {
+    "fields": []
+  },
+  "clientInput": "",
+  "clientInputFiles": [],
+  "userFilesSizeBytes": 33845,
+  "lastUsedModel": {
+    "indexedModelIdentifier": "qwen/qwen3.5-9b",
+    "identifier": "qwen/qwen3.5-9b",
+    "instanceLoadTimeConfig": {
+      "fields": [
+        {
+          "key": "load.gpuStrictVramCap",
+          "value": false
+        },
+        {
+          "key": "llm.load.offloadKVCacheToGpu",
+          "value": true
+        },
+        {
+          "key": "load.gpuSplitConfig",
+          "value": {
+            "strategy": "evenly",
+            "disabledGpus": [],
+            "priority": [],
+            "customRatio": []
+          }
+        },
+        {
+          "key": "llm.load.llama.cpuThreadPoolSize",
+          "value": 6
+        },
+        {
+          "key": "llm.load.contextLength",
+          "value": 16384
+        },
+        {
+          "key": "llm.load.llama.flashAttention",
+          "value": true
+        },
+        {
+          "key": "llm.load.llama.tryDirectIO",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.acceleration.offloadRatio",
+          "value": 0.84375
+        }
+      ]
+    },
+    "instanceOperationTimeConfig": {
+      "fields": []
+    }
+  },
+  "notes": [],
+  "plugins": [],
+  "pluginConfigs": {},
+  "disabledPluginTools": [],
+  "looseFiles": []
+}

@@ -1,0 +1,233 @@
+{
+  "name": "Skills of Modern Golang Developer",
+  "pinned": false,
+  "createdAt": 1778581232090,
+  "preset": "@local:uni",
+  "tokenCount": 2160,
+  "userLastMessagedAt": 1778581245538,
+  "systemPrompt": "",
+  "messages": [
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Что должен уметь или какие задачи выполнять современный Golang-разработчик для работы в разных компаниях как в России так и вне её?"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1778581246222-0.3152739485411382",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "**TL;DR:** Современный разработчик на Go (Golang) должен владеть основными концепциями языка, навыками работы с RESTful API, базами данных (в том числе NoSQL), системами контроля версий (Git), DevOps и инструментами CI/CD, понимать параллельное программирование, а также быть знакомым с облачными сервисами, безопасностью приложений и микросервисной архитектурой.\n\n---\n\n### Основные навыки и задачи современного Golang-разработчика\n\n1. **Глубокое понимание языка Go**\n   - Синтаксис, типы данных, функции, методы, интерфейсы, горутин и каналов.\n   - Умение работать с внешними библиотеками (пакет `net/http`, `database/sql`).\n   - Знание стандартной библиотеки Go для работы с JSON, HTTP-запросами, шифрованием и т.д.\n\n2. **Разработка RESTful API**\n   - Создание серверов на базе пакета `net/http` или фреймворков (Gin, Echo, Buffalo).\n   - Обработка запросов, валидация данных, авторизация и аутентификация.\n   - Использование middleware для логирования, ограничения скорости запросов и обработки ошибок.\n\n3. **Взаимодействие с базами данных**\n   - Работа с реляционными базами (MySQL, PostgreSQL) через `database/sql` или ORM-библиотеки (GORM, Xorm).\n   - Использование NoSQL хранилищ (MongoDB via mgo/mongo-go-driver, Redis через go-redis) для кеша и временного хранения.\n   - Оптимизация запросов, реализация паттернов ORM и миграций баз данных.\n\n4. **Системы контроля версий (Git)**\n   - Эффективное использование Git для совместной работы: ветвление, проблемы (issues), pull-запросы (PRs).\n   - Управление конфликтами merge и best practices коммитов.\n\n5. **DevOps и инструменты CI/CD**\n   - Развертывание приложений в контейнерах Docker, администрирование Kubernetes или других оркестраторов.\n   - Настройка систем непрерывной integrations и delivery (CI/CD) с использованием Jenkins, GitLab CI, GitHub Actions или CircleCI.\n   - Организация мониторинга и логирования приложений (Prometheus, Grafana, ELK stack).\n\n6. **Параллельное программирование**\n   - Реализация горутин и каналов для асинхронных операций.\n   - Управление средой выполнения, избежание гонок состояний (race conditions).\n\n7. **Облачные сервисы и микросервисная архитектура**\n   - Развертывание приложений на платформах как AWS, Azure, Google Cloud.\n   - Интеграция с облачными API (блокировки, хранилища объектов, СУБД виртуальных машин).\n   - Разработка и поддержка микросервисов: API-гateway, сервисы для аутентификации, обработки событий (Event Sourcing).\n\n8. **Безопасность приложений**\n   - Понимание основных принципов безопасности: валидация входных данных, защита от SQL-инъекций, XSS, CSRF.\n   - Использование библиотек для шифрования и хранения паролей (bcrypt, Argon2).\n   - Соблюдение лучших практик для безопасного API (JWT, OAuth 2.0).\n\n9. **Анализ производительности и оптимизация**\n   - Использование инструментов профилирования Go (`pprof`) для выявления узких мест.\n   - Оптимизация алгоритмов, памяти и системных вызовов.\n\n10. **Участие в команде и общение**\n    - Знание методологий разработки: Agile, Scrum, Kanban.\n    - Умение читать и писать четкое документирование кода (docstrings, GoDoc).\n    - Принятие код-ревью и участие в процессе обратной связи.\n\n---\n\n### Дополнительные рекомендации для работы в России и за рубежом\n\n- **Локализация и интернационализация** – поддержка множества языков, работа с форматами дат и времени на основе региональных стандартов.\n- **Знание законодательства и регуляторных требований** – особенно важно для компаний, работающих с персональными данными (GDPR, КоБ РФ).\n- **Культурное понимание** – умение коммуницировать на английском языке, знакомство с корпоративной культурой западных компаний.\n- **Участие в сообществе** – следование за новостями Go (GoDays, Golang.ru), публикация статей или преподавание на митапах.\n\nВ целом, успешный современный Go-разработчик должен быть гибким и адаптивным, постоянно учится новым инструментам и паттернам архитектуры, чтобы оставаться актуальным как в России, так и на международном рынке труда.",
+                  "fromDraftModel": false,
+                  "tokensCount": 1580,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "genInfo": {
+                "indexedModelIdentifier": "bartowski/ibm-granite_granite-4.1-8b-GGUF/ibm-granite_granite-4.1-8b-IQ4_XS.gguf",
+                "identifier": "ibm-granite_granite-4.1-8b",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "load.gpuStrictVramCap",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.offloadKVCacheToGpu",
+                      "value": true
+                    },
+                    {
+                      "key": "load.gpuSplitConfig",
+                      "value": {
+                        "strategy": "evenly",
+                        "disabledGpus": [],
+                        "priority": [],
+                        "customRatio": []
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 16384
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    },
+                    {
+                      "key": "llm.load.llama.kCacheQuantizationType",
+                      "value": {
+                        "checked": true,
+                        "value": "q8_0"
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.vCacheQuantizationType",
+                      "value": {
+                        "checked": true,
+                        "value": "q8_0"
+                      }
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{%- set tools_system_message_prefix = 'You are a helpful assistant with access to the following tools. You may call one or more tools to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>'  %}\n{%- set tools_system_message_suffix = '\\n</tools>\\n\\nFor each tool call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call>. If a tool does not exist in the provided list of tools, notify the user that you do not have the ability to fulfill the request.' %}\n{%- set documents_system_message_prefix = 'You are a helpful assistant with access to the following documents. You may use one or more documents to assist with the user query.\\n\\nYou are given a list of documents within <documents></documents> XML tags:\\n<documents>' %}\n{%- set documents_system_message_suffix = '\\n</documents>\\n\\nWrite the response to the user\\'s input by strictly aligning with the facts in the provided documents. If the information needed to answer the question is not available in the documents, inform the user that the question cannot be answered based on the available data.' %}\n{%- if available_tools is defined and available_tools %}\n    {%- set tools = available_tools %}\n{%- endif %}\n{%- set ns = namespace(tools_system_message=tools_system_message_prefix,\n                       documents_system_message=documents_system_message_prefix,\n                       system_message=''\n                       ) %}\n{%- if tools %}\n    {%- for tool in tools %}\n        {%- set ns.tools_system_message = ns.tools_system_message + '\\n' + (tool | tojson) %}\n    {%- endfor %}\n    {%- set ns.tools_system_message = ns.tools_system_message + tools_system_message_suffix %}\n{%- else %}\n    {%- set ns.tools_system_message = '' %}\n{%- endif %}\n{%- if documents %}\n    {%- for document in documents %}\n        {%- set ns.documents_system_message = ns.documents_system_message + '\\n' + (document | tojson) %}\n    {%- endfor %}\n    {%- set ns.documents_system_message = ns.documents_system_message + documents_system_message_suffix %}\n{%- else %}\n    {%- set ns.documents_system_message = '' %}\n{%- endif %}\n{%- if messages[0].role == 'system' %}\n    {%- if messages[0].content is string %}\n        {%- set ns.system_message = messages[0].content %}\n    {%- elif messages[0].content is iterable %}\n        {%- for entry in messages[0].content %}\n            {%- if entry.type== 'text' %}\n                {%- if ns.system_message != '' %}\n                    {%- set ns.system_message = ns.system_message + '\\n' %}\n                {%- endif %}\n                {%- set ns.system_message = ns.system_message + entry.text %}\n            {%- endif %}\n        {%- endfor %}\n    {%- endif %}\n    {%- if tools and documents %}\n        {%- set ns.system_message = ns.system_message + '\\n\\n' +  ns.tools_system_message + '\\n\\n' + ns.documents_system_message %}\n    {%- elif tools %}\n        {%- set ns.system_message = ns.system_message + '\\n\\n' + ns.tools_system_message %}\n    {%- elif documents %}\n        {%- set ns.system_message = ns.system_message + '\\n\\n' + ns.documents_system_message %}\n    {%- endif %}\n{%- else %}\n    {%- if tools and documents %}\n        {%- set ns.system_message = ns.tools_system_message + '\\n\\n' + ns.documents_system_message  %}\n    {%- elif tools %}\n        {%- set ns.system_message = ns.tools_system_message %}\n    {%- elif documents %}\n        {%- set ns.system_message = ns.documents_system_message %}\n    {%- endif %}\n{%- endif %}\n{%- if ns.system_message %}\n    {{- '<|start_of_role|>system<|end_of_role|>' + ns.system_message + '<|end_of_text|>\\n' }}\n{%- endif %}\n{%- for message in messages %}\n    {%- set content = namespace(val='') %}\n    {%- if message.content is string %}\n        {%- set content.val = message.content %}\n    {%- else %}\n        {%- if message.content is iterable %}\n            {%- for entry in message.content %}\n                {%- if entry.type== 'text' %}\n                    {%- if content.val != '' %}\n                        {%- set content.val = content.val + '\\n' %}\n                    {%- endif %}\n                    {%- set content.val = content.val + entry.text %}\n                {%- endif %}\n            {%- endfor %}\n        {%- endif %}\n    {%- endif %}\n    {%- if (message.role == 'user') or (message.role == 'system' and not loop.first) %}\n        {{- '<|start_of_role|>' + message.role + '<|end_of_role|>' + content.val + '<|end_of_text|>\\n' }}\n    {%- elif message.role == 'assistant' %}\n        {{- '<|start_of_role|>' + message.role + '<|end_of_role|>' + content.val }}\n        {%- if message.tool_calls %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if (loop.first and content.val) or (not loop.first) %}\n                    {{- '\\n' }}\n                {%- endif %}\n                {%- if tool_call.function %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {{- '<tool_call>\\n{\"name\": \"' }}\n                {{- tool_call.name }}\n                {{- '\", \"arguments\": ' }}\n                {%- if tool_call.arguments is string %}\n                    {{- tool_call.arguments }}\n                {%- else %}\n                    {{- tool_call.arguments | tojson }}\n                {%- endif %}\n                {{- '}\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|end_of_text|>\\n' }}\n    {%- elif message.role == 'tool' %}\n        {%- if loop.first or (messages[loop.index0 - 1].role != 'tool') %}\n            {{- '<|start_of_role|>user<|end_of_role|>' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content.val }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != 'tool') %}\n            {{- '<|end_of_text|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|start_of_role|>assistant<|end_of_role|>' }}\n{%- endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 44.27422842164528,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.473,
+                  "totalTimeSec": 35.735,
+                  "promptTokensCount": 512,
+                  "predictedTokensCount": 1584,
+                  "totalTokensCount": 2096
+                }
+              }
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1778581281838-0.5411558629678627",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ],
+          "senderInfo": {
+            "senderName": "ibm-granite_granite-4.1-8b"
+          }
+        }
+      ],
+      "currentlySelected": 0
+    }
+  ],
+  "usePerChatPredictionConfig": true,
+  "perChatPredictionConfig": {
+    "fields": [
+      {
+        "key": "llm.prediction.systemPrompt",
+        "value": "<system_prompt>\n<operational_rules>\n<rule priority=\"critical\">Default response language is strictly Russian, matching the user's message language, unless explicitly asked otherwise.</rule>\n<rule priority=\"critical\">Never invent or assume data, events, sources, or opinions. If you lack information, state \"I don't know\" directly.</rule>\n<rule priority=\"critical\">Actively indicate uncertainty: specify if information is outdated, incomplete, based on your training data, or an educated guess.</rule>\n<rule priority=\"high\">You are a helpful, objective, and neutral assistant. Prioritize logical accuracy and factual precision over stylistic beauty, humor, metaphors, or emotional language.</rule>\n<rule priority=\"high\">Use attached files or links when provided, and explicitly mention when you are doing so.</rule>\n</operational_rules>\n<response_structure>\n<part id=\"role_assignment\">\n**Mechanism:** Based on the user's request, automatically infer the most appropriate, single real-world functional role.\n**Execution:** In your FIRST chat message, assign this role and ONLY there. Use the format: \"I will answer as [relevant role].\"\n**Constraint:** Keep the role consistent for all subsequent answers in the chat.\n</part>\n<part id=\"tldr_section\">\n**Condition:** Automatically include a \"**TL;DR:**\" summary at the top, IF your response requires more than 3 concise sentences.\n**Execution:** Provide an ultra-concise takeaway of the final answer.\n**Exclusion:** Skip this for simple definitional questions, very short answers, or rewriting tasks.\n</part>\n<part id=\"main_answer\">\n**Content:** Provide a thorough, well-structured, and step-by-step answer with concrete details and key context.\n**Depth:** When multiple valid viewpoints exist, present them fairly and objectively, avoiding bias.\n**Sources:** If integrating information from your provided context, naturally weave in mention of those sources. Do not invent references.\n</part>\n</response_structure>\n</system_prompt>"
+      }
+    ]
+  },
+  "clientInput": "",
+  "clientInputFiles": [],
+  "userFilesSizeBytes": 0,
+  "lastUsedModel": {
+    "identifier": "ibm-granite_granite-4.1-8b",
+    "indexedModelIdentifier": "bartowski/ibm-granite_granite-4.1-8b-GGUF/ibm-granite_granite-4.1-8b-IQ4_XS.gguf",
+    "instanceLoadTimeConfig": {
+      "fields": [
+        {
+          "key": "load.gpuStrictVramCap",
+          "value": false
+        },
+        {
+          "key": "llm.load.offloadKVCacheToGpu",
+          "value": true
+        },
+        {
+          "key": "load.gpuSplitConfig",
+          "value": {
+            "strategy": "evenly",
+            "disabledGpus": [],
+            "priority": [],
+            "customRatio": []
+          }
+        },
+        {
+          "key": "llm.load.llama.cpuThreadPoolSize",
+          "value": 6
+        },
+        {
+          "key": "llm.load.contextLength",
+          "value": 16384
+        },
+        {
+          "key": "llm.load.llama.flashAttention",
+          "value": true
+        },
+        {
+          "key": "llm.load.llama.tryDirectIO",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.acceleration.offloadRatio",
+          "value": 1
+        },
+        {
+          "key": "llm.load.llama.kCacheQuantizationType",
+          "value": {
+            "checked": true,
+            "value": "q8_0"
+          }
+        },
+        {
+          "key": "llm.load.llama.vCacheQuantizationType",
+          "value": {
+            "checked": true,
+            "value": "q8_0"
+          }
+        }
+      ]
+    },
+    "instanceOperationTimeConfig": {
+      "fields": []
+    }
+  },
+  "notes": [],
+  "plugins": [],
+  "pluginConfigs": {},
+  "disabledPluginTools": [],
+  "looseFiles": [],
+  "assistantLastMessagedAt": 1778581284018
+}

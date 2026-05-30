@@ -1,0 +1,209 @@
+{
+  "name": "Будда Шакьямуни: Доказательства его существования",
+  "pinned": false,
+  "createdAt": 1776588351655,
+  "preset": "",
+  "tokenCount": 1602,
+  "userLastMessagedAt": 1776588354194,
+  "systemPrompt": "",
+  "messages": [
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "```xml\n<system_instructions>\n<core_ethos>\nPrioritize absolute accuracy, logic, and epistemic honesty over stylistic presentation. Never fabricate data, events, sources, or opinions. If you do not know the answer or lack sufficient data, explicitly state \"I don't know\". Never pretend to possess capabilities you do not have (e.g., real-time execution, asynchronous tasks, or background processes).\n</core_ethos>\n<language_rule>\nAlways respond in Russian unless the user explicitly requests another language.\n</language_rule>\n<role_assignment>\nAnalyze the user's request and automatically adopt a corresponding real-world professional persona to tailor the terminology and perspective of the response. \nConstraint: Declare this role ONLY in your very first response in the conversation. Do not repeat it in subsequent messages.\n</role_assignment>\n<communication_rules>\n- Base your answers strictly on provided context, verified knowledge, or clearly stated logical deductions.\n- Do not use humor, metaphors, storytelling, or emotions unless explicitly requested.\n- If the information is outdated, incomplete, or relies on an assumption/analogy, explicitly flag this in your response.\n- If the task is impossible or the request is ambiguous, state it directly instead of providing workarounds.\n</communication_rules>\n<output_structure>\nFollow this exact structure for every response:\n1. [Role Declaration]: ONLY in the first message. Format: \"Роль: [Identified Professional Persona]\".\n2. [TL;DR]: Provide a concise summary. SKIP this section entirely if the full response naturally fits within 1-3 sentences.\n3. [Detailed Answer]: Provide a comprehensive, step-by-step explanation with concrete details formatted for deep reading.\n     - Include alternative viewpoints or approaches IF they are valid and exist (do not invent false alternatives).\n     - Provide context-based source references or mention the origin of the data where applicable.\n</output_structure>\n</system_instructions>\n```\nДействительно ли существовал будда Шакьямуни и какие есть доказательства этому?"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1776588356250-0.7217949644523025",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\nХм, пользователь задал интересный вопрос о реальности Будде Шакьямуни. Видимо, ему важно получить объективное научное подтверждение, а не мифологические версии или религиозные догмы.\n\nПользователь явно знаком с основами буддизма и хочет проверить историческую достоверность. Возможно, он слышал разноречивые мнения о природе Будды в разных источниках и ищет неопровержимые доказательства.\n\nДавай разберёмся: с точки зрения археологии, библиологии и эпиграфики есть несколько ключевых аргументов подтверждающих историчность Шакьямуни. Но важно чётко разделить буддийскую традицию (которая считает его реальным человеком) и современную научную позицию.\n\nНужно упомянуть:\n- Археологические свидетельства о материальных следах его деятельности\n- Упоминания в индийских исторических источниках (хотя они не единодушны)\n- Евродхинские тексты как ранний письменный свидетельство\n- Академические исследования, признающие его исторический статус\n\nОсобенно важно объяснить разницу между \"Буддой в буддийской традиции\" и \"Шакьямуни как историческими личностями\". Для российского пользователя полезно будет упомянуть, что индологические исследования (например работы Дэвида Ринга) дают этому вопросу научное освещение.\n\nВажно не пугать пользователя академической сложностью, но и не опускать важные аспекты. Стоит чётко структурировать ответ по разделам: сначала общее утверждение, потом разбор свидетельств в разных источниках.\n\nНужно быть осторожным с формулировками - нельзя использовать слишком категоричные выражения о \"полной достоверности\" дат или деталей его биографии. Скорее это вопрос исторического существования, чем точного знания всех обстоятельств.\n",
+                  "fromDraftModel": false,
+                  "tokensCount": 522,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "style": {
+                "type": "thinking",
+                "ended": true,
+                "title": "Thought for 26.17 seconds",
+                "forceRenderAsPlainText": false
+              },
+              "prefix": "<think>",
+              "suffix": "</think>"
+            },
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1776588382921-0.14097722280993052",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\nРоль: Индолог и исследователь древних текстов\n\n[TL;DR]: Шакьямуни (Будда) как историческое лицо широко признано в академической среде на основе археологических находок, письменных свидетельств и традиционных источников.\n\n[Detailed Answer]:\nДоказательства существования Будды Шакьямуни:\n\n1.  **Археологические свидетельства:** Найдены руины древнего гандхаракийского города Раппана (Раввана) и другие объекты, приписываемые буддийской традицией периоду жизни Будды, в основном датируемые III веком до н.э., что соответствует прижизненной эпохе.\n\n2.  **Индийские исторические тексты:** Индийские хроники и циклы были основаны на фактах, а не только на мифах или легендах, хотя точность некоторых деталей биографии Будды в этих источниках подвержена спорам. Тексты Панчаданавантка (пяти королевичеств) и другие региональные хроники упоминают его время.\n\n3.  **Буддийские тексты:** Самые ранние письменные буддийские тексты, такие как \"Дхаммапада\", \"Сутра о превосходстве Аруштея\" (Arusha Sutta), и особенно важная \"Эвродхинская сутра\" (\"Sangiti Pitaka\"), описывают его жизнь. Хотя эти тексты вдохновлены традицией, их существование как письменных свидетельств прижизненного времени подтверждает историческую реальность Будды.\n\n4.  **Исторические упоминания:** В сочинениях древних индийских мыслителей (например, Панинского комментария) и археологических памятниках культуры эпохи Шакья (Saka period), датируемых примерно 200 годами до н.э., упоминаются буддийские практики и буддийская символика, что косвенно подтверждает превалирование его учения в то время.\n\nАкадемические исследования (индологи) также признают историческую реальность существования Будды Шакьямуни. Хотя точные детали его жизни могут различаться между различными традициями и текстами, консенсус склоняется к тому, что он был реальным человеком, основателем буддизма, жившим примерно в V веке до н.э., хотя некоторые ученые предлагают позднее даты (III век до н.э.).",
+                  "fromDraftModel": false,
+                  "tokensCount": 661,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "genInfo": {
+                "indexedModelIdentifier": "deepseek/deepseek-r1-0528-qwen3-8b",
+                "identifier": "deepseek/deepseek-r1-0528-qwen3-8b",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "load.gpuStrictVramCap",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.offloadKVCacheToGpu",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 16384
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{% if not add_generation_prompt is defined %}{% set add_generation_prompt = false %}{% endif %}{% set ns = namespace(is_first=false, is_tool=false, is_output_first=true, system_prompt='', is_first_sp=true, is_last_user=false) %}{%- for message in messages %}{%- if message['role'] == 'system' %}{%- if ns.is_first_sp %}{% set ns.system_prompt = ns.system_prompt + message['content'] %}{% set ns.is_first_sp = false %}{%- else %}{% set ns.system_prompt = ns.system_prompt + '\n\n' + message['content'] %}{%- endif %}{%- endif %}{%- endfor %}{{ bos_token }}{{ ns.system_prompt }}{%- for message in messages %}{% set content = message['content'] %}{%- if message['role'] == 'user' %}{%- set ns.is_tool = false -%}{%- set ns.is_first = false -%}{%- set ns.is_last_user = true -%}{{'<｜User｜>' + content + '<｜Assistant｜>'}}{%- endif %}{%- if message['role'] == 'assistant' %}{% if '</think>' in content %}{% set content = content.split('</think>')[-1] %}{% endif %}{% endif %}{%- if message['role'] == 'assistant' and message['tool_calls'] is defined and message['tool_calls'] is not none %}{%- set ns.is_last_user = false -%}{%- if ns.is_tool %}{{'<｜tool▁outputs▁end｜>'}}{%- endif %}{%- set ns.is_first = false %}{%- set ns.is_tool = false -%}{%- set ns.is_output_first = true %}{%- for tool in message['tool_calls'] %}{%- if not ns.is_first %}{%- if content is none %}{{'<｜tool▁calls▁begin｜><｜tool▁call▁begin｜>' + tool['type'] + '<｜tool▁sep｜>' + tool['function']['name'] + '\n' + '```json' + '\n' + (tool['function']['arguments'] if tool['function']['arguments'] is string else tool['function']['arguments'] | tojson) + '\n' + '```' + '<｜tool▁call▁end｜>'}}{%- else %}{{content + '<｜tool▁calls▁begin｜><｜tool▁call▁begin｜>' + tool['type'] + '<｜tool▁sep｜>' + tool['function']['name'] + '\n' + '```json' + '\n' + (tool['function']['arguments'] if tool['function']['arguments'] is string else tool['function']['arguments'] | tojson) + '\n' + '```' + '<｜tool▁call▁end｜>'}}{%- endif %}{%- set ns.is_first = true -%}{%- else %}{{'\n' + '<｜tool▁call▁begin｜>' + tool['type'] + '<｜tool▁sep｜>' + tool['function']['name'] + '\n' + '```json' + '\n' + (tool['function']['arguments'] if tool['function']['arguments'] is string else tool['function']['arguments'] | tojson) + '\n' + '```' + '<｜tool▁call▁end｜>'}}{%- endif %}{%- endfor %}{{'<｜tool▁calls▁end｜><｜end▁of▁sentence｜>'}}{%- endif %}{%- if message['role'] == 'assistant' and (message['tool_calls'] is not defined or message['tool_calls'] is none)%}{%- set ns.is_last_user = false -%}{%- if ns.is_tool %}{{'<｜tool▁outputs▁end｜>' + content + '<｜end▁of▁sentence｜>'}}{%- set ns.is_tool = false -%}{%- else %}{{content + '<｜end▁of▁sentence｜>'}}{%- endif %}{%- endif %}{%- if message['role'] == 'tool' %}{%- set ns.is_last_user = false -%}{%- set ns.is_tool = true -%}{%- if ns.is_output_first %}{{'<｜tool▁outputs▁begin｜><｜tool▁output▁begin｜>' + content + '<｜tool▁output▁end｜>'}}{%- set ns.is_output_first = false %}{%- else %}{{'\n<｜tool▁output▁begin｜>' + content + '<｜tool▁output▁end｜>'}}{%- endif %}{%- endif %}{%- endfor -%}{% if ns.is_tool %}{{'<｜tool▁outputs▁end｜>'}}{% endif %}{% if add_generation_prompt and not ns.is_last_user and not ns.is_tool %}{{'<｜Assistant｜>'}}{% endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.contextPrefill",
+                      "value": []
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 17.911562009933395,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.46,
+                  "totalTimeSec": 66.172,
+                  "promptTokensCount": 416,
+                  "predictedTokensCount": 1186,
+                  "totalTokensCount": 1602
+                }
+              }
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1776588422101-0.14824375190727512",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ],
+          "senderInfo": {
+            "senderName": "deepseek/deepseek-r1-0528-qwen3-8b"
+          }
+        }
+      ],
+      "currentlySelected": 0
+    }
+  ],
+  "usePerChatPredictionConfig": true,
+  "perChatPredictionConfig": {
+    "fields": []
+  },
+  "clientInput": "",
+  "clientInputFiles": [],
+  "userFilesSizeBytes": 0,
+  "lastUsedModel": {
+    "identifier": "deepseek/deepseek-r1-0528-qwen3-8b",
+    "indexedModelIdentifier": "deepseek/deepseek-r1-0528-qwen3-8b",
+    "instanceLoadTimeConfig": {
+      "fields": [
+        {
+          "key": "load.gpuStrictVramCap",
+          "value": true
+        },
+        {
+          "key": "llm.load.offloadKVCacheToGpu",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.cpuThreadPoolSize",
+          "value": 6
+        },
+        {
+          "key": "llm.load.contextLength",
+          "value": 16384
+        },
+        {
+          "key": "llm.load.llama.flashAttention",
+          "value": true
+        },
+        {
+          "key": "llm.load.llama.tryDirectIO",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.acceleration.offloadRatio",
+          "value": 1
+        }
+      ]
+    },
+    "instanceOperationTimeConfig": {
+      "fields": []
+    }
+  },
+  "notes": [],
+  "plugins": [],
+  "pluginConfigs": {},
+  "disabledPluginTools": [],
+  "looseFiles": [],
+  "assistantLastMessagedAt": 1776588424578
+}

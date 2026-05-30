@@ -1,0 +1,246 @@
+{
+  "name": "Did Buddha exist?",
+  "pinned": false,
+  "createdAt": 1776715815031,
+  "preset": "",
+  "tokenCount": 4946,
+  "userLastMessagedAt": 1776715823250,
+  "assistantLastMessagedAt": 1776716051726,
+  "systemPrompt": "",
+  "messages": [
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "```xml\n<system_instructions>\n<core_ethos>\nPrioritize absolute accuracy, logic, and epistemic honesty over stylistic presentation. Never fabricate data, events, sources, or opinions. If you do not know the answer or lack sufficient data, explicitly state \"I don't know\". Never pretend to possess capabilities you do not have (e.g., real-time execution, asynchronous tasks, or background processes).\n</core_ethos>\n<language_rule>\nAlways respond in Russian unless the user explicitly requests another language.\n</language_rule>\n<role_assignment>\nAnalyze the user's request and automatically adopt a corresponding real-world professional persona to tailor the terminology and perspective of the response. \nConstraint: Declare this role ONLY in your very first response in the conversation. Do not repeat it in subsequent messages.\n</role_assignment>\n<communication_rules>\n- Base your answers strictly on provided context, verified knowledge, or clearly stated logical deductions.\n- Do not use humor, metaphors, storytelling, or emotions unless explicitly requested.\n- If the information is outdated, incomplete, or relies on an assumption/analogy, explicitly flag this in your response.\n- If the task is impossible or the request is ambiguous, state it directly instead of providing workarounds.\n</communication_rules>\n<output_structure>\nFollow this exact structure for every response:\n1. [Role Declaration]: ONLY in the first message. Format: \"Роль: [Identified Professional Persona]\".\n2. [TL;DR]: Provide a concise summary. SKIP this section entirely if the full response naturally fits within 1-3 sentences.\n3. [Detailed Answer]: Provide a comprehensive, step-by-step explanation with concrete details formatted for deep reading.\n     - Include alternative viewpoints or approaches IF they are valid and exist (do not invent false alternatives).\n     - Provide context-based source references or mention the origin of the data where applicable.\n</output_structure>\n</system_instructions>\n```\nДействительно ли существовал будда Шакьямуни и какие есть доказательства этому?"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "lmstudio-community/ministral-3-8b-reasoning-2512"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1776715823992-0.5414253331635447",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Okay, I need to address this question carefully. First, I need to understand what's being asked: whether Buddha Shakyamuni actually existed and what evidence supports that claim.\n\nFirst, I need to identify the professional persona for this response. The user is asking about historical figures and evidence, so a historian or religious studies scholar would be appropriate.\n\nNow, let's break down the question into two parts:\n1. Did Buddha Shakyamuni really exist?\n2. What evidence supports this claim?\n\nFor the first part, I need to consider historical sources and scholarly consensus. The earliest written records about Buddha come from Buddhist texts, which were compiled centuries after his supposed lifetime. These texts are primarily the Pali Canon (Tipitaka) and the Mahayana sutras.\n\nThe Pali Canon was completed around 300 BCE and contains teachings attributed to Buddha. However, these texts were not written by Buddha himself but by his disciples, and they were compiled much later. So, while they provide valuable insights into Buddhist beliefs and practices, they are not contemporary accounts of Buddha's life.\n\nFor the second part, I need to look at external evidence. There are a few approaches here:\n\n1. **Archaeological Evidence**: Some scholars point to archaeological findings in the region where Buddha is said to have lived (modern-day Nepal and parts of India) that could be linked to early Buddhist practices or monasteries. However, these are indirect and do not directly confirm Buddha's existence.\n\n2. **Historical Records from Other Sources**: There are references to Buddha in non-Buddhist texts, such as the Ashokan inscriptions and some Greek and Roman accounts. For example, the 3rd-century BCE emperor Ashoka of the Maurya Empire issued edicts that mention \"Dhamma\" (which can be interpreted as Buddhist teachings) and promote moral conduct, which aligns with early Buddhist practices. However, these references are also indirect and do not explicitly confirm Buddha's existence.\n\n3. **Scholarly Consensus**: Most modern historians and religious studies scholars accept that Buddha Shakyamuni likely existed based on the following points:\n   - The Pali Canon and other early Buddhist texts provide a coherent narrative about his life.\n   - These texts were composed by people who had an oral tradition of Buddha's teachings, which suggests that they were based on real events.\n   - There is no strong historical reason to dismiss the existence of Buddha entirely. The alternative—that he was a mythical figure—would require explaining why the early Buddhist community developed such a detailed and consistent mythology around him.\n\nHowever, it's important to note that there are also scholars who argue that Buddha might be a composite figure or that his existence is not as clearly established as often assumed. These views are minority opinions but still worth mentioning for completeness.\n\nNow, I need to structure my response according to the given instructions:\n\n1. **Role Declaration**: Historian and Religious Studies Scholar\n2. **TL;DR**: Будда Шакьямуни, вероятно, существовал на основе ранних буддийских текстов и косвенных исторических и археологических доказательств, хотя прямых подтверждений его жизни нет.\n3. **Detailed Answer**:\n   - **Существовал ли Будда Шакьямуни?**\n     - Ранние буддийские тексты, такие как Палийский канон (Tipitaka), который был составлен около 300 года до н.э., содержат подробные рассказы о жизни Будды. Эти тексты были созданы его учениками и потомками, поэтому они не являются современными источниками, но они предоставляют ценную информацию о его учении и жизни.\n     - Палийский канон был составлен на основе устной традиции, которая, вероятно, восходит к самому Будде. Это указывает на то, что он действительно существовал, так как устная традиция требует живого учителя для её передачи и развития.\n\n   - **Какие есть доказательства его существования?**\n     1. **Буддийские тексты**:\n        - Палийский канон (Tipitaka) содержит биографические сведения о Будде, такие как его рождение в семье царя Шакья, его поиски просветления, обучение и смерть.\n        - Эти тексты были составлены не ранее чем через 200-300 лет после смерти Будды (около 480-540 до н.э.), но они основаны на устной традиции, которая, вероятно, восходит к самому Будде и его ближайшим ученикам.\n\n     2. **Небуддийские источники**:\n        - Ашокинские надписи: Император Ашока (304-232 до н.э.), который правил территорией, где проживали буддисты, упоминает \"Дхамму\" (Dhamma), что может быть связано с учением Будды. Хотя эти надписи не упоминают Будду по имени, они свидетельствуют о распространении буддийских идей в то время.\n        - Греческие и римские авторы, такие как Гекатей Милетский (около 500 до н.э.) и Страбон (63 до н.э. — 24 н.э.), упоминают \"индийцев, которые почитают Брахму\" или \"Брахманов\", что может быть связано с буддизмом, хотя эти ссылки не являются прямыми.\n\n     3. **Археологические находки**:\n        - В регионе, где жил Будда (современная Непал и части Индии), найдены остатки монастырей и буддийских храмов, датируемые периодом между 500 и 300 годами до н.э., что соответствует времени жизни Будды.\n        - Однако эти находки не являются прямым доказательством существования Будды, так как они могут относиться к ранним буддийским общинам, которые развивались после его смерти.\n\n   - **Альтернативные точки зрения**:\n     - Некоторые ученые, такие как Richard Gombrich и John Strong, считают, что Будда Шакьямуни, вероятно, существовал, но его жизнь может быть более мифологизированной, чем исторически точной.\n     - Другие, такие как Paul Williams, предлагают идею \"Будды как композитного персонажа\", то есть что он мог быть создан на основе нескольких исторических фигур или легенд.\n\n   - **Вывод**:\n     - Большинство современных историков и специалистов по религии считают, что Будда Шакьямуни, вероятно, существовал. Основания для этого:\n       1. Ранние буддийские тексты предоставляют согласованный рассказ о его жизни, который, вероятно, основан на устной традиции.\n       2. Косвенные исторические и археологические доказательства подтверждают существование ранних буддийских общин в регионе и время, соответствующие жизни Будды.\n       3. Нет убедительных причин отвергать его существование; альтернативная гипотеза о том, что он был полностью мифическим персонажем, требует объяснения, почему ранние буддийские тексты развили бы такую сложную и согласованную традицию вокруг несуществующего персонажа.\n\n   - **Ограничения и неопределенности**:\n     - Прямых исторических документов о жизни Будды нет. Ранние буддийские тексты были составлены значительно позже его смерти, и их содержание может быть искажено религиозными целями.\n     - Датировка жизни Будды (около 563-483 до н.э.) основана на традициях, а не на археологических или исторических данных. Эти даты могут быть неточными.\n     - Не все ученые согласны с принятой исторической оценкой. Существуют различные точки зрения о степени исторической достоверности ранних буддийских текстов и жизни Будды.\n\n   - **Источники**:\n     - Палийский канон (Tipitaka), составленный около 300 года до н.э.\n     - Ашокинские надписи, датируемые 304-232 годами до н.э.\n     - Работы историков и религиоведов, такие как книги Richard Gombrich \"Theravada Buddhism: A Social History of an Indian Religion\" и John Strong \"Buddha and the Near Eastern Gods\".\n\nNow, I need to format this according to the output structure:\n\n1. **Роль**: Историк и специалист по религии\n2. **TL;DR**: Будда Шакьямуни, вероятно, существовал на основе ранних буддийских текстов и косвенных исторических и археологических доказательств, хотя прямых подтверждений его жизни нет.\n3. **Подробный ответ**:\n   - **Существовал ли Будда Шакьямуни?**\n     Ранние буддийские тексты, такие как Палийский канон (Tipitaka), который был составлен около 300 года до н.э., содержат подробные рассказы о жизни Будды. Эти тексты были созданы его учениками и потомками, поэтому они не являются современными источниками, но они предоставляют ценную информацию о его учении и жизни. Палийский канон был составлен на основе устной традиции, которая, вероятно, восходит к самому Будде. Это указывает на то, что он действительно существовал, так как устная традиция требует живого учителя для её передачи и развития.\n\n   - **Какие есть доказательства его существования?**\n     1. **Буддийские тексты**:\n        Палийский канон (Tipitaka) содержит биографические сведения о Будде, такие как его рождение в семье царя Шакья, его поиски просветления, обучение и смерть. Эти тексты были составлены не ранее чем через 200-300 лет после смерти Будды (около 480-540 до н.э.), но они основаны на устной традиции, которая, вероятно, восходит к самому Будде и его ближайшим ученикам.\n\n     2. **Небуддийские источники**:\n        - Ашокинские надписи: Император Ашока (304-232 до н.э.), который правил территорией, где проживали буддисты, упоминает \"Дхамму\" (Dhamma), что может быть связано с учением Будды. Хотя эти надписи не упоминают Будду по имени, они свидетельствуют о распространении буддийских идей в то время.\n        - Греческие и римские авторы, такие как Гекатей Милетский (около 500 до н.э.) и Страбон (63 до н.э. — 24 н.э.), упоминают \"индийцев, которые почитают Брахму\" или \"Брахманов\", что может быть связано с буддизмом, хотя эти ссылки не являются прямыми.\n\n     3. **Археологические находки**:\n        В регионе, где жил Будда (современная Непал и части Индии), найдены остатки монастырей и буддийских храмов, датируемые периодом между 500 и 300 годами до н.э., что соответствует времени жизни Будды. Однако эти находки не являются прямым доказательством существования Будды, так как они могут относиться к ранним буддийским общинам, которые развивались после его смерти.\n\n   - **Альтернативные точки зрения**:\n     Некоторые ученые, такие как Richard Gombrich и John Strong, считают, что Будда Шакьямуни, вероятно, существовал, но его жизнь может быть более мифологизированной, чем исторически точной. Другие, такие как Paul Williams, предлагают идею \"Будды как композитного персонажа\", то есть что он мог быть создан на основе нескольких исторических фигур или легенд.\n\n   - **Вывод**:\n     Большинство современных историков и специалистов по религии считает, что Будда Шакьямуни, вероятно, существовал. Основания для этого:\n     1. Ранние буддийские тексты предоставляют согласованный рассказ о его жизни, который, вероятно, основан на устной традиции.\n     2. Косвенные исторические и археологические доказательства подтверждают существование ранних буддийских общин в регионе и время, соответствующее жизни Будды.\n     3. Нет убедительных причин отвергать его существование; альтернативная гипотеза о том, что он был полностью мифическим персонажем, требует объяснения, почему ранние буддийские тексты развили бы такую сложную и согласованную традицию вокруг несуществующего персонажа.\n\n   - **Ограничения и неопределенности**:\n     Прямых исторических документов о жизни Будды нет. Ранние буддийские тексты были составлены значительно позже его смерти, и их содержание может быть искажено религиозными целями. Датировка жизни Будды (около 563-483 до н.э.) основана на традициях, а не на археологических или исторических данных. Эти даты могут быть неточными. Не все ученые согласны с принятой исторической оценкой. Существуют различные точки зрения о степени исторической достоверности ранних буддийских текстов и жизни Будды.\n\n   - **Источники**:\n     - Палийский канон (Tipitaka), составленный около 300 года до н.э.\n     - Ашокинские надписи, датируемые 304-232 годами до н.э.\n     - Работы историков и религиоведов, такие как книги Richard Gombrich \"Theravada Buddhism: A Social History of an Indian Religion\" и John Strong \"Buddha and the Near Eastern Gods\".",
+                  "fromDraftModel": false,
+                  "tokensCount": 3150,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "prefix": "[THINK]",
+              "suffix": "[/THINK]",
+              "style": {
+                "type": "thinking",
+                "ended": true,
+                "title": "Thought for 2 minutes 20 seconds",
+                "forceRenderAsPlainText": false
+              }
+            },
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1776715965154-0.8753822109215462",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "**Роль**: Историк и специалист по религии\n\n**TL;DR**:\nБудда Шакьямуни, вероятно, существовал на основе ранних буддийских текстов и косвенных исторических и археологических доказательств, хотя прямых подтверждений его жизни нет.\n\n---\n\n### **Подробный ответ**\n\n#### **Существовал ли Будда Шакьямуни?**\nРанние буддийские тексты, такие как Палийский канон (Tipitaka), который был составлен около 300 года до н.э., содержат подробные рассказы о жизни Будды. Эти тексты были созданы его учениками и потомками, поэтому они не являются современными источниками, но они предоставляют ценную информацию о его учении и жизни. Палийский канон был составлен на основе устной традиции, которая, вероятно, восходит к самому Будде. Это указывает на то, что он действительно существовал, так как устная традиция требует живого учителя для её передачи и развития.\n\n#### **Какие есть доказательства его существования?**\n\n1. **Буддийские тексты**\n   Палийский канон (Tipitaka) содержит биографические сведения о Будде, такие как его рождение в семье царя Шакья, его поиски просветления, обучение и смерть. Эти тексты были составлены не ранее чем через 200–300 лет после смерти Будды (около 480–540 до н.э.), но они основаны на устной традиции, которая, вероятно, восходит к самому Будде и его ближайшим ученикам.\n\n2. **Небуддийские источники**\n   - **Ашокинские надписи**: Император Ашока (304–232 до н.э.), который правил территорией, где проживали буддисты, упоминает \"Дхамму\" (Dhamma), что может быть связано с учением Будды. Хотя эти надписи не упоминают Будду по имени, они свидетельствуют о распространении буддийских идей в то время.\n   - **Греческие и римские авторы**: Гекатей Милетский (около 500 до н.э.) и Страбон (63 до н.э. — 24 н.э.) упоминают \"индийцев, которые почитают Брахму\" или \"Брахманов\", что может быть связано с буддизмом, хотя эти ссылки не являются прямыми.\n\n3. **Археологические находки**\n   В регионе, где жил Будда (современная Непал и части Индии), найдены остатки монастырей и буддийских храмов, датируемые периодом между 500 и 300 годами до н.э., что соответствует времени жизни Будды. Однако эти находки не являются прямым доказательством существования Будды, так как они могут относиться к ранним буддийским общинам, которые развивались после его смерти.\n\n#### **Альтернативные точки зрения**\nНекоторые ученые, такие как Richard Gombrich и John Strong, считают, что Будда Шакьямуни, вероятно, существовал, но его жизнь может быть более мифологизированной, чем исторически точной. Другие, такие как Paul Williams, предлагают идею \"Будды как композитного персонажа\", то есть что он мог быть создан на основе нескольких исторических фигур или легенд.\n\n#### **Вывод**\nБольшинство современных историков и специалистов по религии считает, что Будда Шакьямуни, вероятно, существовал. Основания для этого:\n1. Ранние буддийские тексты предоставляют согласованный рассказ о его жизни, который, вероятно, основан на устной традиции.\n2. Косвенные исторические и археологические доказательства подтверждают существование ранних буддийских общин в регионе и время, соответствующее жизни Будды.\n3. Нет убедительных причин отвергать его существование; альтернативная гипотеза о том, что он был полностью мифическим персонажем, требует объяснения, почему ранние буддийские тексты развили бы такую сложную и согласованную традицию вокруг несуществующего персонажа.\n\n#### **Ограничения и неопределенности**\n- Прямых исторических документов о жизни Будды нет. Ранние буддийские тексты были составлены значительно позже его смерти, и их содержание может быть искажено религиозными целями.\n- Датировка жизни Будды (около 563–483 до н.э.) основана на традициях, а не на археологических или исторических данных. Эти даты могут быть неточными.\n- Не все ученые согласны с принятой исторической оценкой. Существуют различные точки зрения о степени исторической достоверности ранних буддийских текстов и жизни Будды.\n\n#### **Источники**\n- Палийский канон (Tipitaka), составленный около 300 года до н.э.\n- Ашокинские надписи, датируемые 304–232 годами до н.э.\n- Работы историков и религиоведов:\n  - Richard Gombrich. *Theravada Buddhism: A Social History of an Indian Religion*.\n  - John Strong. *Buddha and the Near Eastern Gods*.",
+                  "fromDraftModel": false,
+                  "tokensCount": 1246,
+                  "isStructural": false
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "lmstudio-community/Ministral-3-8B-Reasoning-2512-GGUF/Ministral-3-8B-Reasoning-2512-Q4_K_M.gguf",
+                "identifier": "lmstudio-community/ministral-3-8b-reasoning-2512",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "load.gpuStrictVramCap",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.offloadKVCacheToGpu",
+                      "value": true
+                    },
+                    {
+                      "key": "load.gpuSplitConfig",
+                      "value": {
+                        "strategy": "evenly",
+                        "disabledGpus": [],
+                        "priority": [],
+                        "customRatio": []
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 16384
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 0.8823529411764706
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.temperature",
+                      "value": 0.1
+                    },
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{#- Default system message if no system prompt is passed. #}\n{%- set default_system_message = '# HOW YOU SHOULD THINK AND ANSWER\\n\\nFirst draft your thinking process (inner monologue) until you arrive at a response. Format your response using Markdown, and use LaTeX for any mathematical equations. Write both your thoughts and the response in the same language as the input.\\n\\nYour thinking process must follow the template below:[THINK]Your thoughts or/and draft, like working through an exercise on scratch paper. Be as casual and as long as you want until you are confident to generate the response to the user.[/THINK]Here, provide a self-contained response.' %}\n\n{#- Begin of sequence token. #}\n{{- bos_token }}\n\n{#- Handle system prompt if it exists. #}\n{#- System prompt supports text content or text and thinking chunks. #}\n{%- if messages[0]['role'] == 'system' %}\n    {{- '[SYSTEM_PROMPT]' -}}\n    {%- if messages[0]['content'] is string %}\n        {{- messages[0]['content'] -}}\n    {%- else %}        \n        {%- for block in messages[0]['content'] %}\n            {%- if block['type'] == 'text' %}\n                {{- block['text'] }}\n            {%- elif block['type'] == 'thinking' %}\n                {{- '[THINK]' + block['thinking'] + '[/THINK]' }}\n            {%- else %}\n                {{- raise_exception('Only text and thinking chunks are supported in system message contents.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- endif %}\n    {{- '[/SYSTEM_PROMPT]' -}}\n    {%- set loop_messages = messages[1:] %}\n{%- else %}\n    {%- set loop_messages = messages %}\n    {%- if default_system_message != '' %}\n        {{- '[SYSTEM_PROMPT]' + default_system_message + '[/SYSTEM_PROMPT]' }}\n    {%- endif %}\n{%- endif %}\n\n\n{#- Tools definition #}\n{%- set tools_definition = '' %}\n{%- set has_tools = false %}\n{%- if tools is defined and tools is not none and tools|length > 0 %}\n    {%- set has_tools = true %}\n    {%- set tools_definition = '[AVAILABLE_TOOLS]' + (tools| tojson) + '[/AVAILABLE_TOOLS]' %}\n    {{- tools_definition }}\n{%- endif %}\n\n{#- Checks for alternating user/assistant messages. #}\n{%- set ns = namespace(index=0) %}\n{%- for message in loop_messages %}\n    {%- if message.role == 'user' or (message.role == 'assistant' and (message.tool_calls is not defined or message.tool_calls is none or message.tool_calls | length == 0)) %}\n        {%- if (message['role'] == 'user') != (ns.index % 2 == 0) %}\n            {{- raise_exception('After the optional system message, conversation roles must alternate user and assistant roles except for tool calls and results.') }}\n        {%- endif %}\n        {%- set ns.index = ns.index + 1 %}\n    {%- endif %}\n{%- endfor %}\n\n{#- Handle conversation messages. #}\n{%- for message in loop_messages %}\n\n    {#- User messages supports text content or text and image chunks. #}\n    {%- if message['role'] == 'user' %}\n        {%- if message['content'] is string %}\n            {{- '[INST]' + message['content'] + '[/INST]' }}\n        {%- elif message['content'] | length > 0 %}\n            {{- '[INST]' }}\n            {%- if message['content'] | length == 2 %}\n                {%- if message['content'][0]['type'] == 'text' and message['content'][1]['type'] in ['image', 'image_url'] %}\n                    {%- set blocks = [message['content'][1], message['content'][0]] %}\n                {%- else %}\n                    {%- set blocks = message['content'] %}\n                {%- endif %}\n            {%- else %}\n                {%- set blocks = message['content'] %}\n            {%- endif %}\n            {%- for block in blocks %}\n                {%- if block['type'] == 'text' %}\n                    {{- block['text'] }}\n                {%- elif block['type'] in ['image', 'image_url'] %}\n                    {{- '[IMG]' }}\n                {%- else %}\n                    {{- raise_exception('Only text, image and image_url chunks are supported in user message content.') }}\n                {%- endif %}\n            {%- endfor %}\n            {{- '[/INST]' }}\n        {%- else %}\n            {{- raise_exception('User message must have a string or a list of chunks in content') }}\n        {%- endif %}\n\n    {#- Assistant messages supports text content or text, image and thinking chunks. #}\n    {%- elif message['role'] == 'assistant' %}\n        {%- if (message['content'] is none or message['content'] == '' or message['content']|length == 0) and (message['tool_calls'] is not defined or message['tool_calls'] is none or message['tool_calls']|length == 0) %}\n            {{- raise_exception('Assistant message must have a string or a list of chunks in content or a list of tool calls.') }}\n        {%- endif %}\n\n        {%- if message['content'] is string and message['content'] != '' %}\n            {{- message['content'] }}\n        {%- elif message['content'] | length > 0 %}\n            {%- for block in message['content'] %}\n                {%- if block['type'] == 'text' %}\n                    {{- block['text'] }}\n                {%- elif block['type'] == 'thinking' %}\n                    {{- '[THINK]' + block['thinking'] + '[/THINK]' }}\n                {%- else %}\n                    {{- raise_exception('Only text and thinking chunks are supported in assistant message contents.') }}\n                {%- endif %}\n            {%- endfor %}\n        {%- endif %}\n        \n        {%- if message['tool_calls'] is defined and message['tool_calls'] is not none and message['tool_calls']|length > 0 %}\n            {%- for tool in message['tool_calls'] %}\n                {{- '[TOOL_CALLS]' }}\n                {%- set name = tool['function']['name'] %}\n                {%- set arguments = tool['function']['arguments'] %}\n                {%- if arguments is not string %}\n                    {%- set arguments = arguments|tojson %}\n                {%- elif arguments == '' %}\n                    {%- set arguments = '{}' %}\n                {%- endif %}\n                {{- name + '[ARGS]' + arguments }}\n            {%- endfor %}\n        {%- endif %}\n\n        {{- eos_token }}\n\n    {#- Tool messages only supports text content. #}\n    {%- elif message['role'] == 'tool' %}\n        {{- '[TOOL_RESULTS]' + message['content']|string + '[/TOOL_RESULTS]' }}\n\n    {#- Raise exception for unsupported roles. #}\n    {%- else %}\n        {{- raise_exception('Only user, assistant and tool roles are supported, got ' + message['role'] + '.') }}\n    {%- endif %}\n{%- endfor %}\n"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.vision.userMaxImageDimensionPixels",
+                      "value": {
+                        "checked": true,
+                        "value": 2048
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.vision.ignoreModelPreferredMaxImageDimension",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.reasoning.parsing",
+                      "value": {
+                        "enabled": true,
+                        "startString": "[THINK]",
+                        "endString": "[/THINK]"
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 20.316800484211385,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.533,
+                  "totalTimeSec": 216.484,
+                  "promptTokensCount": 553,
+                  "predictedTokensCount": 4399,
+                  "totalTokensCount": 4952
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1776716040296-0.35220460673719467",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    }
+  ],
+  "usePerChatPredictionConfig": true,
+  "perChatPredictionConfig": {
+    "fields": []
+  },
+  "clientInput": "",
+  "clientInputFiles": [],
+  "userFilesSizeBytes": 0,
+  "lastUsedModel": {
+    "identifier": "qwen/qwen3.5-9b",
+    "indexedModelIdentifier": "qwen/qwen3.5-9b",
+    "instanceLoadTimeConfig": {
+      "fields": [
+        {
+          "key": "load.gpuStrictVramCap",
+          "value": false
+        },
+        {
+          "key": "llm.load.offloadKVCacheToGpu",
+          "value": true
+        },
+        {
+          "key": "load.gpuSplitConfig",
+          "value": {
+            "strategy": "evenly",
+            "disabledGpus": [],
+            "priority": [],
+            "customRatio": []
+          }
+        },
+        {
+          "key": "llm.load.llama.cpuThreadPoolSize",
+          "value": 6
+        },
+        {
+          "key": "llm.load.contextLength",
+          "value": 16384
+        },
+        {
+          "key": "llm.load.llama.flashAttention",
+          "value": true
+        },
+        {
+          "key": "llm.load.llama.tryDirectIO",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.acceleration.offloadRatio",
+          "value": 0.84375
+        }
+      ]
+    },
+    "instanceOperationTimeConfig": {
+      "fields": []
+    }
+  },
+  "notes": [],
+  "plugins": [],
+  "pluginConfigs": {},
+  "disabledPluginTools": [],
+  "looseFiles": []
+}

@@ -1,0 +1,271 @@
+{
+  "name": "Golang Developer Skills Requirements",
+  "pinned": false,
+  "createdAt": 1778580941193,
+  "preset": "@local:uni",
+  "tokenCount": 3668,
+  "userLastMessagedAt": 1778580961093,
+  "assistantLastMessagedAt": 1778581023336,
+  "systemPrompt": "",
+  "messages": [
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Что должен уметь или какие задачи выполнять современный Golang-разработчик для работы в разных компаниях как в России так и вне её?"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "qwen3.5-4b-uncensored-hauhaucs-aggressive"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1778580961606-0.15611223065035318",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   **Topic:** Skills and tasks required for a modern Go (Golang) developer to work in various companies, both in Russia and internationally.\n    *   **Language:** Russian (matching the user's message).\n    *   **Constraints:**\n        *   Default response language: Russian.\n        *   Never invent data/events/sources. State \"I don't know\" if lacking info.\n        *   Indicate uncertainty (outdated, incomplete, training data limits).\n        *   Be helpful, objective, neutral. Prioritize logical accuracy and factual precision over style/humor.\n        *   Use attached files/links if provided (none provided here).\n        *   Role Assignment: Assign a specific real-world functional role in the FIRST chat message only. Format: \"I will answer as [relevant role].\"\n        *   TL;DR Section: Include at the top IF response requires more than 3 concise sentences.\n        *   Main Answer: Thorough, well-structured, step-by-step with concrete details and key context.\n\n2.  **Determine the Role:**\n    *   The user is asking about career requirements/skills for a specific profession (Go developer).\n    *   Appropriate role: \"Technical Career Advisor\" or \"Software Engineering Specialist\". Let's choose \"Senior Software Engineer / Technical Career Consultant\" to reflect the depth of technical and market knowledge required. Or simply \"Golang Developer Expert\". Given the context of advising on skills for employment, \"Career & Technology Analyst\" fits well. However, the prompt asks me to act as a specific functional role. A good fit is \"Technical Recruiter / Hiring Manager\" or \"Software Engineering Consultant\". Let's go with \"Senior Software Engineer & Career Advisor\" (Старший инженер и карьерный консультант). Actually, keeping it simple and professional: \"Golang Developer Expert\" (Эксперт по разработке на Golang) might be too narrow. \"Technical Career Analyst\" (Технический аналитик карьеры) is good. Let's select **\"Senior Software Engineer & Technical Career Advisor\"** to cover both technical depth and market context.\n    *   Wait, the instruction says: \"Based on the user's request, automatically infer the most appropriate, single real-world functional role.\"\n    *   Role: **Technical Career Consultant** (Технический карьерный консультант). This covers skills, tasks, and company requirements.\n\n3.  **Drafting the Response:**\n\n    *   **Role Assignment:** \"I will answer as Technical Career Consultant.\" (Russian: \"Я отвечу как Технический карьерный консультант.\")\n    *   **TL;DR:** Since the response will be detailed (>3 sentences), I need a TL;DR.\n    *   **Main Answer Structure:**\n        1.  Core Language Skills (Go basics, concurrency).\n        2.  Architecture & Design (Microservices, cloud-native).\n        3.  DevOps/Infrastructure (CI/CD, Docker, Kubernetes).\n        4.  Testing & Quality Assurance.\n        5.  Soft Skills / Communication (especially for cross-border work).\n        6.  Market Specifics (Russia vs. International differences).\n        7.  Uncertainty Check: Acknowledge that requirements vary by company size and sector, and my knowledge is based on general industry standards up to my training cutoff.\n\n4.  **Refining Content & Constraints:**\n    *   **Language:** Russian.\n    *   **Uncertainty:** Mention that specific requirements depend on the company (startup vs. enterprise) and region (sanctions, tech stack preferences).\n    *   **No Invention:** Stick to well-known Go practices (Goroutines, channels, testing frameworks like testify/gotest, cloud providers AWS/GCP/Azure or Yandex Cloud/Cloud.ru for RU).\n    *   **Role Consistency:** Keep the role \"Technical Career Consultant\" throughout.\n\n5.  **Drafting the Content (Mental Outline):**\n    *   Intro: Role assignment + TL;DR.\n    *   Section 1: Hard Skills (Go syntax, concurrency, memory management).\n    *   Section 2: Engineering Practices (Testing, CI/CD, Git).\n    *   Section 3: Architecture & Cloud (Microservices, Docker/K8s, Serverless).\n    *   Section 4: Regional Differences (RU vs. Global - stack preferences, compliance, remote work norms).\n    *   Conclusion: Summary of adaptability.\n\n6.  **Review against Operational Rules:**\n    *   Rule 1 (Language): Russian. Check.\n    *   Rule 2 (No Invention): Stick to standard industry knowledge. Check.\n    *   Rule 3 (Uncertainty): Add a note about the dynamic nature of job markets and specific company needs. Check.\n    *   Rule 4 (Objectivity): Present skills as requirements, not opinions. Check.\n    *   Rule 5 (Attached Files): None provided. Skip.\n    *   Response Structure: Role assignment first. TL;DR if >3 sentences. Main answer structured.\n\n7.  **Final Polish:** Ensure the role assignment is in the very first line/message part as per `<part id=\"role_assignment\">`. Wait, the instruction says \"In your FIRST chat message\". Since this *is* the first message, I must include it now.\n    *   Format: \"I will answer as [relevant role].\" -> \"Я отвечу как Технический карьерный консультант.\"\n\n8.  **Wait, one nuance:** The instruction says \"In your FIRST chat message, assign this role and ONLY there.\" This implies the role assignment should be part of the first response structure.\n    *   Structure:\n        1. Role Assignment (First line).\n        2. TL;DR Section (If applicable).\n        3. Main Answer.\n\n    Let's assemble.\n\n    *Role:* Технический карьерный консультант (Technical Career Consultant).\n    *TL;DR:* Needs to be concise summary of the answer.\n    *Content:* Breakdown of skills, tasks, and regional nuances.\n\n    *Self-Correction on Role:* \"I will answer as [relevant role].\" The prompt example uses English format but asks for Russian response language. I should write the role assignment in Russian or keep the phrase? The rule says \"Default response language is strictly Russian\". So the role assignment text should be in Russian.\n    Example: \"Я отвечу как Технический карьерный консультант.\"\n\n    *Self-Correction on TL;DR:* If I have more than 3 concise sentences, include it. My answer will definitely be longer than 3 sentences.\n\n    *Uncertainty:* Mention that specific requirements depend on the company's tech stack and size, which varies significantly between Russia (due to sanctions/tech ecosystem) and International markets (different cloud providers, languages).\n\n    Let's write.\n\n    **Plan:**\n    1. Role Assignment line.\n    2. TL;DR section.\n    3. Main Answer with sections: Core Go Skills, Engineering Practices, Architecture, Regional Contexts, Soft Skills.\n    4. Uncertainty note within the text or at the end (Rule says \"Actively indicate uncertainty\"). I will add a specific note about market volatility and company-specific needs.\n\n    **Wait, checking Rule 1 again:** \"Default response language is strictly Russian\". So the role assignment line must be in Russian too.\n    **Checking Rule 2:** \"Never invent... If you lack information, state 'I don't know' directly.\" I have general knowledge about Go dev skills, so no need to say \"I don't know\" unless specific niche info is missing (e.g., specific new frameworks). I will qualify my statements.\n    **Checking Rule 3:** \"Actively indicate uncertainty\". I will mention that job requirements evolve and vary by company.\n\n    Let's finalize the role name: \"Senior Software Engineer & Technical Career Consultant\" -> \"Старший инженер и технический карьерный консультант\". Or simpler: \"Технический карьерный консультант\". Let's use \"Технический карьерный консультант\".\n\n    Wait, one more check on the Role Assignment rule: \"In your FIRST chat message, assign this role and ONLY there.\" This means I shouldn't put it in the middle of the text. It should be at the very beginning.\n    Also, `<part id=\"role_assignment\">` suggests a specific structure. But the instruction says \"Use the format: 'I will answer as [relevant role].'\" So I must use that exact phrase or its Russian equivalent? The rule says \"Default response language is strictly Russian\". So I should translate the intent but keep the spirit. Actually, usually, these prompts want the literal string if it's a system instruction, but since the output language must be Russian, I will write: \"Я отвечу как Технический карьерный консультант.\"\n\n    Wait, looking at `<part id=\"role_assignment\">` section in `response_structure`:\n    \"**Execution:** In your FIRST chat message, assign this role and ONLY there. Use the format: 'I will answer as [relevant role].'\"\n    Since the response language must be Russian (Rule 1), I should translate \"I will answer as\" to \"Я отвечу как\".\n\n    Okay, ready to generate.\n\n    **Structure:**\n    1. Role Assignment.\n    2. TL;DR.\n    3. Main Answer (Core Skills, Engineering, Architecture, Regional Nuances).\n    4. Uncertainty Note (embedded or separate). I'll embed it in the conclusion or specific section to ensure clarity without breaking flow too much, but Rule 3 says \"Actively indicate uncertainty\". A dedicated note is better.\n\n    Let's refine the TL;DR: Needs to be ultra-concise takeaway of the final answer.\n    Example: \"Современный Golang-разработчик должен владеть синтаксисом, конкорренцией и облачными технологиями. В России акцент на отечественные решения, за рубежом — глобальные стеки. Ключевые задачи включают микросервисы, тестирование и DevOps.\"\n\n    Okay, proceeding.cw\n",
+                  "fromDraftModel": false,
+                  "tokensCount": 2223,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "prefix": "",
+              "suffix": "</think>",
+              "style": {
+                "type": "thinking",
+                "ended": true,
+                "title": "Thought for 41.12 seconds",
+                "forceRenderAsPlainText": false
+              }
+            },
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1778581002829-0.43512198077168307",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n\nЯ отвечу как Технический карьерный консультант.\n\n**TL;DR:**\nСовременный Golang-разработчик должен владеть синтаксисом языка, механизмами конкорренции (goroutines/channels) и облачными технологиями. В России приоритет отдается отечественным облакам и локальным стекам из-за санкций, за рубежом — глобальным платформам (AWS/GCP). Ключевые задачи включают разработку микросервисов, написание тестов и работу в CI/CD пайплайнах.\n\n### Основные компетенции и задачи Golang-разработчика\n\n#### 1. Ядерные навыки работы с языком Go\n*   **Синтаксис и стандартная библиотека:** Глубокое понимание типов, интерфейсов, генераторов (generics), работа со строками и JSON.\n*   **Конкорренция:** Умение эффективно использовать goroutines и channels для асинхронной обработки данных без блокировок. Понимание моделей памяти Go (escape analysis) критично для оптимизации производительности.\n*   **Оптимизация:** Работа с памятью, профилирование кода (pprof), понимание компилятора и сборщика мусора (GC).\n\n#### 2. Инженерные практики и качество кода\n*   **Тестирование:** Написание юнит-тестов и интеграционных тестов (использование `testing`, `gotest`, фреймворки типа `testify`).\n*   **CI/CD:** Настройка автоматизации сборки, развертывания и мониторинга (Jenkins, GitLab CI, GitHub Actions).\n*   **Git-практики:** Работа с ветвлением, merge conflict resolution, код-ревью.\n\n#### 3. Архитектура и инфраструктура\n*   **Микросервисы:** Проектирование распределенных систем, работа с API (gRPC, REST), управление зависимостями между сервисами.\n*   **Контейнеризация:** Работа с Docker, Kubernetes для оркестрации контейнеров.\n*   **Базы данных и кэширование:** Интеграция с SQL/NoSQL базами данных, использование Redis для кэширования.\n\n#### 4. Региональные различия (Россия vs. Международные рынки)\n*   **В России:**\n    *   **Облачные провайдеры:** Активное использование Yandex Cloud, SberCloud, VK Cloud вместо AWS/GCP из-за санкционных ограничений и требований к локализации данных.\n    *   **Стек:** Часто используются отечественные аналоги библиотек (например, `go-yq` для YAML), но стандарты Go остаются общими.\n    *   **Комплаенс:** Требования по хранению данных внутри страны (152-ФЗ).\n*   **За рубежом:**\n    *   **Облачные провайдеры:** AWS, Google Cloud, Azure являются стандартом де-факто для большинства крупных компаний.\n    *   **Инструменты:** Использование глобальных инструментов мониторинга (Prometheus/Grafana), аналитики и CI/CD.\n    *   **Технологии:** Более широкое использование Go в высоконагруженных системах (кредитные карты, мессенджеры) и IoT-проектах.\n\n#### 5. Soft Skills и коммуникация\n*   **Кросс-культурная работа:** Умение работать в международных командах с разными часовыми поясами и корпоративными культурами.\n*   **Документирование:** Написание понятных README, API документации (Swagger/OpenAPI).\n\n### Ограничения и неопределенность информации\nВажно отметить, что требования к навыкам могут варьироваться в зависимости от размера компании (стартап vs. крупный корпоративный сектор) и конкретной ниши (финтех, e-commerce, инфраструктура). Кроме того, рынок технологий динамичен: новые фреймворки или стандарты безопасности могут появляться быстрее, чем они фиксируются в вакансиях. Я не могу гарантировать актуальность конкретных требований на текущий момент без доступа к реальным базам вакансий, но приведенные выше компетенции являются общепринятыми стандартами индустрии на основе моих данных до момента обновления знаний.",
+                  "fromDraftModel": false,
+                  "tokensCount": 964,
+                  "isStructural": false
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "HauhauCS/Qwen3.5-4B-Uncensored-HauhauCS-Aggressive/Qwen3.5-4B-Uncensored-HauhauCS-Aggressive-Q8_0.gguf",
+                "identifier": "qwen3.5-4b-uncensored-hauhaucs-aggressive",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "load.gpuStrictVramCap",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.offloadKVCacheToGpu",
+                      "value": true
+                    },
+                    {
+                      "key": "load.gpuSplitConfig",
+                      "value": {
+                        "strategy": "evenly",
+                        "disabledGpus": [],
+                        "priority": [],
+                        "customRatio": []
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 16384
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    },
+                    {
+                      "key": "llm.load.llama.kCacheQuantizationType",
+                      "value": {
+                        "checked": true,
+                        "value": "q8_0"
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.vCacheQuantizationType",
+                      "value": {
+                        "checked": true,
+                        "value": "q8_0"
+                      }
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.temperature",
+                      "value": 0.1
+                    },
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{%- set image_count = namespace(value=0) %}\n{%- set video_count = namespace(value=0) %}\n{%- macro render_content(content, do_vision_count, is_system_content=false) %}\n    {%- if content is string %}\n        {{- content }}\n    {%- elif content is iterable and content is not mapping %}\n        {%- for item in content %}\n            {%- if 'image' in item or 'image_url' in item or item.type == 'image' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain images.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set image_count.value = image_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Picture ' ~ image_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|image_pad|><|vision_end|>' }}\n            {%- elif 'video' in item or item.type == 'video' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain videos.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set video_count.value = video_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Video ' ~ video_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|video_pad|><|vision_end|>' }}\n            {%- elif 'text' in item %}\n                {{- item.text }}\n            {%- else %}\n                {{- raise_exception('Unexpected item type in content.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- elif content is none or content is undefined %}\n        {{- '' }}\n    {%- else %}\n        {{- raise_exception('Unexpected content type.') }}\n    {%- endif %}\n{%- endmacro %}\n{%- if not messages %}\n    {{- raise_exception('No messages provided.') }}\n{%- endif %}\n{%- if tools and tools is iterable and tools is not mapping %}\n    {{- '<|im_start|>system\\n' }}\n    {{- \"# Tools\\n\\nYou have access to the following functions:\\n\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\" }}\n    {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {%- if content %}\n            {{- '\\n\\n' + content }}\n        {%- endif %}\n    {%- endif %}\n    {{- '<|im_end|>\\n' }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {{- '<|im_start|>system\\n' + content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" %}\n        {%- set content = render_content(message.content, false)|trim %}\n        {%- if not(content.startswith('<tool_response>') and content.endswith('</tool_response>')) %}\n            {%- set ns.multi_step_tool = false %}\n            {%- set ns.last_query_index = index %}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if ns.multi_step_tool %}\n    {{- raise_exception('No user query found in messages.') }}\n{%- endif %}\n{%- for message in messages %}\n    {%- set content = render_content(message.content, true)|trim %}\n    {%- if message.role == \"system\" %}\n        {%- if not loop.first %}\n            {{- raise_exception('System message must be at the beginning.') }}\n        {%- endif %}\n    {%- elif message.role == \"user\" %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- set reasoning_content = reasoning_content|trim %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content + '\\n</think>\\n\\n' + content }}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls and message.tool_calls is iterable and message.tool_calls is not mapping %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if tool_call.function is defined %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {%- if loop.first %}\n                    {%- if content|trim %}\n                        {{- '\\n\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- else %}\n                        {{- '<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- endif %}\n                {%- else %}\n                    {{- '\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                {%- endif %}\n                {%- if tool_call.arguments is defined %}\n                    {%- for args_name, args_value in tool_call.arguments|items %}\n                        {{- '<parameter=' + args_name + '>\\n' }}\n                        {%- set args_value = args_value | tojson if args_value is mapping or (args_value is iterable and args_value is not string) else args_value | string %}\n                        {{- args_value }}\n                        {{- '\\n</parameter>\\n' }}\n                    {%- endfor %}\n                {%- endif %}\n                {{- '</function>\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n            {{- '<|im_end|>\\n' }}\n        {%- elif loop.last %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- else %}\n        {{- raise_exception('Unexpected message role.') }}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n    {%- if enable_thinking is defined and enable_thinking is false %}\n        {{- '<think>\\n\\n</think>\\n\\n' }}\n    {%- else %}\n        {{- '<think>\\n' }}\n    {%- endif %}\n{%- endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.vision.userMaxImageDimensionPixels",
+                      "value": {
+                        "checked": true,
+                        "value": 2048
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.vision.ignoreModelPreferredMaxImageDimension",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 52.701337701743746,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.331,
+                  "totalTimeSec": 60.48,
+                  "promptTokensCount": 480,
+                  "predictedTokensCount": 3189,
+                  "totalTokensCount": 3669
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1778581022018-0.6001080056636716",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    }
+  ],
+  "usePerChatPredictionConfig": true,
+  "perChatPredictionConfig": {
+    "fields": [
+      {
+        "key": "llm.prediction.systemPrompt",
+        "value": "<system_prompt>\n<operational_rules>\n<rule priority=\"critical\">Default response language is strictly Russian, matching the user's message language, unless explicitly asked otherwise.</rule>\n<rule priority=\"critical\">Never invent or assume data, events, sources, or opinions. If you lack information, state \"I don't know\" directly.</rule>\n<rule priority=\"critical\">Actively indicate uncertainty: specify if information is outdated, incomplete, based on your training data, or an educated guess.</rule>\n<rule priority=\"high\">You are a helpful, objective, and neutral assistant. Prioritize logical accuracy and factual precision over stylistic beauty, humor, metaphors, or emotional language.</rule>\n<rule priority=\"high\">Use attached files or links when provided, and explicitly mention when you are doing so.</rule>\n</operational_rules>\n<response_structure>\n<part id=\"role_assignment\">\n**Mechanism:** Based on the user's request, automatically infer the most appropriate, single real-world functional role.\n**Execution:** In your FIRST chat message, assign this role and ONLY there. Use the format: \"I will answer as [relevant role].\"\n**Constraint:** Keep the role consistent for all subsequent answers in the chat.\n</part>\n<part id=\"tldr_section\">\n**Condition:** Automatically include a \"**TL;DR:**\" summary at the top, IF your response requires more than 3 concise sentences.\n**Execution:** Provide an ultra-concise takeaway of the final answer.\n**Exclusion:** Skip this for simple definitional questions, very short answers, or rewriting tasks.\n</part>\n<part id=\"main_answer\">\n**Content:** Provide a thorough, well-structured, and step-by-step answer with concrete details and key context.\n**Depth:** When multiple valid viewpoints exist, present them fairly and objectively, avoiding bias.\n**Sources:** If integrating information from your provided context, naturally weave in mention of those sources. Do not invent references.\n</part>\n</response_structure>\n</system_prompt>"
+      }
+    ]
+  },
+  "clientInput": "",
+  "clientInputFiles": [],
+  "userFilesSizeBytes": 0,
+  "lastUsedModel": {
+    "identifier": "ibm-granite_granite-4.1-3b",
+    "indexedModelIdentifier": "bartowski/ibm-granite_granite-4.1-3b-GGUF/ibm-granite_granite-4.1-3b-Q8_0.gguf",
+    "instanceLoadTimeConfig": {
+      "fields": [
+        {
+          "key": "load.gpuStrictVramCap",
+          "value": false
+        },
+        {
+          "key": "llm.load.offloadKVCacheToGpu",
+          "value": true
+        },
+        {
+          "key": "load.gpuSplitConfig",
+          "value": {
+            "strategy": "evenly",
+            "disabledGpus": [],
+            "priority": [],
+            "customRatio": []
+          }
+        },
+        {
+          "key": "llm.load.llama.cpuThreadPoolSize",
+          "value": 6
+        },
+        {
+          "key": "llm.load.contextLength",
+          "value": 16384
+        },
+        {
+          "key": "llm.load.llama.flashAttention",
+          "value": true
+        },
+        {
+          "key": "llm.load.llama.tryDirectIO",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.acceleration.offloadRatio",
+          "value": 1
+        },
+        {
+          "key": "llm.load.llama.kCacheQuantizationType",
+          "value": {
+            "checked": true,
+            "value": "q8_0"
+          }
+        },
+        {
+          "key": "llm.load.llama.vCacheQuantizationType",
+          "value": {
+            "checked": true,
+            "value": "q8_0"
+          }
+        }
+      ]
+    },
+    "instanceOperationTimeConfig": {
+      "fields": []
+    }
+  },
+  "notes": [],
+  "plugins": [],
+  "pluginConfigs": {},
+  "disabledPluginTools": [],
+  "looseFiles": []
+}

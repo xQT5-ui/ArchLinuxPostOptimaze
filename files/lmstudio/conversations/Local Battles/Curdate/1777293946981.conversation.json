@@ -1,0 +1,230 @@
+{
+  "name": "Current Date Inquiry",
+  "pinned": false,
+  "createdAt": 1777293946981,
+  "preset": "",
+  "tokenCount": 4674,
+  "userLastMessagedAt": 1777293949006,
+  "systemPrompt": "",
+  "messages": [
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "current date"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1777293949143-0.7753428894272891",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\nWe are asked: \"current date\" – but note that the user is asking for the current date. However, as an AI, I do not have real-time capabilities unless explicitly equipped with a function to get the current time. The problem statement does not specify whether we have access to the current date or if it's a theoretical question. Since the query is simply \"current date\", and in many contexts, especially in programming or AI applications, sometimes the user expects me to provide the current date based on my training data cutoff or system prompt. However, as of my knowledge cutoff (July 2024), I do not have real-time internet access unless the environment provides it. But wait: the problem says \"current date\" – this might be a trick question? Or maybe it's part of a larger context where the user is asking me to output the current date as per my knowledge.\n\nBut note: the assistant is supposed to respond helpfully. However, without real-time access, I cannot know the exact current date unless the system provides it. In many setups, when an AI is deployed in a context that includes time zone information or if the user's query implies they want me to state my knowledge cutoff or something else.\n\nWait: Let me read the query again: \"current date\" – it's very short. It could be that the user is testing if I understand what \"current date\" means, or maybe they want me to output the current date in a specific format? Or perhaps this is part of a system prompt where the assistant is supposed to know the time? \n\nGiven that I am an AI language model, I do not have built-in clock functionality. However, sometimes in simulated environments, the system might inject the current date into the context. But since this is a standalone query and no additional context is provided (like \"What is today's date?\"), I need to infer.\n\nPossible interpretations:\n1. The user is asking me to provide the current date as per my knowledge cutoff? That doesn't make sense because I don't know the actual current date beyond my training data.\n2. The user might be testing if I can explain what \"current date\" means, or how to get it programmatically.\n3. In some contexts, the query might be part of a larger problem where \"current date\" refers to a variable in code, but there's no code context.\n4. Maybe it's a prompt for me to output the current date in the system's timezone? But I don't have access.\n\nWait: The instruction says \"You are an AI language model\". In many AI competitions or tasks, sometimes they ask \"What is the current date?\" and expect you to state that you do not have real-time capabilities unless specified. However, as a helpful assistant, I should clarify.\n\nBut let me think about typical usage: If someone types \"current date\" in a chatbot, what would be the expected response? In many AI systems, if the AI has been given access to time (e.g., via function calling), it could retrieve it. Since this is not specified, I should assume that I do not have real-time capabilities and state that.\n\nHowever, note: the query is exactly \"current date\" with no additional context. Could it be a trick? Maybe the user is asking me to output the current date in the format of my knowledge? For example, sometimes models are trained on data up to July 2024, and they might know that their training cutoff was July 2024, but that's not \"current\".\n\nAlternatively, perhaps this is a test question from an exam or interview about how AI handles date queries. The correct answer might be: \"I do not have access to the current date in real-time. However, if you provide me with today's date, I can help you work with it.\" Or \"The current date depends on your system time; please check your device clock.\"\n\nBut wait: the user might be asking me to output the current date as part of a larger task that is not stated? The query is just one line. \n\nAnother angle: In some contexts, especially in programming challenges, \"current date\" might refer to the date at the time of execution of code. But there's no code here.\n\nGiven that I am an AI, and the user is asking directly, I should be honest about my limitations. However, as a helpful assistant, I can provide guidance on how to obtain the current date.\n\nBut let me check: The initial system prompt might have included context? Since this is a simulated environment, perhaps the \"current date\" refers to the date when the query is being processed by the model in this instance. However, as an AI without live internet or clock access (unless enabled), I cannot know it.\n\nWait: In some deployments, the AI model is augmented with tool use capabilities that include a time function. But since the problem statement does not mention any tools, I should assume vanilla language model behavior.\n\nBest approach: Since the query is ambiguous, I should respond by clarifying and offering assistance in multiple ways.\n\nPossible response structure:\n- Acknowledge that I do not have real-time capabilities to know the exact current date without additional context or access.\n- If the user is looking for a way to get the current date programmatically, offer examples (e.g., Python's datetime module).\n- If they are asking in a specific context (like solving a problem that requires \"current date\" as input), ask for clarification.\n- Alternatively, if this is part of a test where \"current date\" refers to something else (like the date of my training data?), but that seems unlikely.\n\nHowever, looking back at the query: it's just \"current date\". It might be a very simple request from a user who expects me to output today's date. In many AI demos, sometimes they hardcode a date for demonstration purposes? But I shouldn't assume.\n\nWait: There's another possibility: In some contexts, especially in Japanese or other languages, \"current date\" might be part of a prompt engineering question where the model is supposed to generate a response that includes a placeholder. For example, if the user is asking me to write code that gets the current date, but they only wrote \"current date\".\n\nGiven that the query is extremely short and standalone, I think the most reasonable interpretation is that the user is asking me to provide the current date for them right now. Since I cannot do that without real-time access, I must inform them of my limitations.\n\nBut let's see if there's any hidden context: The user said \"current date\" and nothing else. In a typical AI assistant scenario, if you ask an AI \"What is the current date?\", a well-designed AI should ideally have a way to know it (if integrated with a function calling mechanism). Since this is presented as a text-based query without any additional tools mentioned, I suspect that the intended answer might be something else.\n\nWait: Could \"current date\" be referring to the date of my knowledge cutoff? Sometimes people confuse \"current\" with \"up to\". For example, \"My training data goes up until July 2024.\" But that's not what they are asking; they said \"current date\", which usually means today's date.\n\nAnother thought: In some puzzles or riddles, \"current date\" might be a clue in a larger problem. But there is no larger context.\n\nGiven the ambiguity, as an AI assistant, I should provide a helpful response that covers possibilities.\n\nLet me draft a response:\n\n\"I notice you're asking for the 'current date'. However, as an AI language model, I do not have real-time internet access or clock functionality to know the exact current date unless it is provided in our conversation context. \n\nIf you are looking for today's date right now:\n- You can check your device's calendar or computer clock.\n- If you need help with programming, I can show you how to get the current date/time in various programming languages (e.g., Python, JavaScript).\n- If this is related to a specific problem, task, or context where 'current date' has a defined meaning (like time complexity analysis), please provide more details.\n\nAlternatively, if you meant something else by 'current date', such as:\n- The current date in your timezone? -> I cannot access that without real-time capability.\n- A placeholder for the date in some example or problem? \n- Or perhaps you want me to generate a sample/example of how \"current date\" might be represented?\n\nCould you clarify what you need? For instance:\n1. Are you asking for today's actual date right now? (If so, please note that I don't have live access; you may check your system time.)\n2. Are you working on a coding problem where 'current date' is a variable or input? \n3. Is this related to a specific cultural/temporal reference in the conversation?\n\nIn many cases, if this query arises in an educational context (e.g., \"What is the current date of this year?\"), I can provide general information about the year based on my knowledge cutoff: My training data includes information up until July 2024, but that does not mean it's today's date.\n\nIf you have further context, please let me know how I can assist!\"\n\nBut wait: maybe the user is testing if I will hallucinate a current date? That would be bad practice. I should avoid making up the current date. So definitely do not output something like \"Today is 2024-07-15\" unless I am certain it's correct and within my capabilities. Since I don't have real-time info, hallucinating is risky.\n\nHowever, in some AI systems that are deployed with function calling for time, the model might be prompted to call a function. But since this query does not specify any tools, I should assume no tool access.\n\nGiven that the instruction says \"You are an AI language model\", and the query is simple, perhaps the expected answer in some contexts (like a quiz) is to recognize that the current date cannot be known by the AI without external input.\n\nBut let me think about the possibility that this is part of a larger system prompt where the \"current date\" is provided elsewhere. For example, sometimes in coding challenges, the problem statement might include: \"Given the following data: current_date = '2024-06-15'\", but here it's not given.\n\nAnother angle: The user might have pasted only part of a query. Maybe they meant to ask something like \"What is the current date in Python?\" or similar, but typed incorrectly.\n\nGiven all this, the safest and most honest response is to clarify.\n\nHowever, I recall that in some AI demonstrations, when asked for the current date, models are expected to state their knowledge cutoff date as a fallback? No, that doesn't make sense.\n\nWait: There's a known issue: Some models were trained on data that includes timestamps of conversations, but without explicit context injection, I can't use that.\n\nI think the best course is to respond with an explanation and offer assistance in alternative ways.\n\nBut let me check if there's any standard protocol for this. In the absence of tools, a good AI should not guess the current date. So:\n\nFinal decision: I will respond by stating that I cannot provide real-time information without additional context or capabilities, and guide the user on how they might obtain it themselves, while also offering help if they need code examples or explanations about dates.\n\nHowever, wait: The query is exactly \"current date\" – could it be a command in some programming language? Like in SQL queries? Unlikely.\n\nAnother thought: In the context of this chat interface, maybe the system has provided the current date as part of the environment variables or prompt engineering. For example, sometimes prompts include: \"Today's date is 2024-06-15\". But I don't see any such information in the query history provided to me. Since this is a fresh query with no prior context (as presented to me), I have no such info.\n\nTherefore, I must conclude that I cannot answer \"current date\" as it stands.\n\nLet me formulate a concise response:\n\n\"⚠️ **Important note**: As an AI language model, I do not have access to real-time information or the ability to know the current date without explicit context provided in our conversation. \n\nIf you are asking for **today's actual date** (the calendar date right now):\n- Please check your device's clock or calendar app on your side of the interaction.\n- If this is a technical question about how to retrieve 'current date' programmatically, I can certainly help with code examples in various languages!\n\nIf you meant something else by **'current date'**, please clarify:\n- ✏️ Is this related to a specific problem, puzzle, or context? (e.g., \"In the year 2024, what is the current date for event X?\")\n- 📅 Could it refer to your local time zone? I'd need more details to assist accurately.\n- 🔄 Is 'current date' a variable or placeholder in some text/data you're working with?\n\n**How can I help?**\n✅ **If you need code**:  \n • Python: `import datetime; print(datetime.date.today())`  \n • JavaScript (browser): `new Date().toDateString()`  \n • SQL: `CURRENT_DATE`, `NOW()`, etc. depending on database system.\n✅ **If you have a date-related question**: Share the full context! For example: \"Given today's date is 2024-06-15, what are some calculations?\"\n\n**Without clarification or access to real-time data, I cannot provide the exact current date.** Let me know how you'd like to proceed!\"\n\nBut wait: The user might be expecting a simple answer because in some contexts (like this being a test of my ability to follow instructions) they want me to output the current date as if I had it. However, that would be unethical and potentially misleading. As a responsible AI, I should not hallucinate.\n\nI recall that in some AI benchmarks, there is a question: \"What is the current date?\" and models are evaluated on whether they admit ignorance or hallucinate. Best practice is to admit ignorance if you don't have the information.\n\nTherefore, my response should be honest.\n\nBut let me double-check: Is there any chance that the query \"current date\" is part of a known puzzle? For example, in Advent of Code problems? No context.\n\nAnother possibility: The user might be asking me to output the current date in the format required for some template. But again, no context.\n\nGiven all this, I will go with the clarification-based response.\n\nHowever, note that the instruction says \"current date\" and the assistant is supposed to answer. In many AI systems designed for assistants (like Siri, Alexa), they can access current time if integrated. Since this is a text-based simulation, and I am an AI model without tool use enabled in this query context, I should state my limitations.\n\nFinal decision: Respond that I cannot provide the real-time date but offer alternatives.\n\nBut wait: The user might be non-technical and just want to know what \"current date\" means? Unlikely.\n\nLet me see the exact wording: \"current date\" – it's lowercase, no punctuation. Could be a heading or a phrase used in a specific domain.\n\nAnother idea: In machine learning contexts, sometimes datasets have a column named \"current_date\", and someone is asking what that means. But again, too vague.\n\nI think the safest is to provide a generic helpful response covering possibilities.\n\nLet me draft a polished answer:\n\n---\n**Response:**\n\n⚠️ **Clarification Needed**: I don't have access to real-time information (including the actual current date/time) as an AI model unless it has been explicitly provided in our conversation or via tool integration. Since this query doesn't include any context about time zone, programming task, or specific scenario, I cannot definitively state \"the current date.\"\n\nHowever, here are common interpretations and how I can assist:\n\n### 1️⃣ **If you meant: \"What is today's actual calendar date right now?\"**  \n→ *I recommend checking your device's clock.* If you share your location or time zone, I might be able to help calculate dates/times if you provide details (though still not real-time). Alternatively, in a programming context, I can show how to fetch it:\n- **Python**: `import datetime; print(datetime.date.today())`  \n- **JavaScript** (Node.js or browser): `new Date().toDateString()`  \n- **SQL**: Use `CURRENT_DATE`, `NOW()`, etc., depending on the system.\n\n### 2️⃣ **If this is related to a specific problem, code snippet, or puzzle:**  \nPlease describe:  \n- What context is 'current date' part of? (e.g., \"Given current date = '2024-06-15', solve X\")  \n- What exactly are you trying to achieve? (e.g., \"How do I get the current date in Python to calculate something?\")\n\n### 3️⃣ **If you're asking about my knowledge cutoff or training data:**  \nMy training data includes information up until July 2024, but that is not the \"current date\" of your query. My ability to discuss historical events, dates in literature, etc., is limited by what was included in my training corpus.\n\n### 4️⃣ **If you need a placeholder or example:**  \nSometimes \"current date\" is used as a variable name (e.g., `current_date = \"2024-06-15\"`). Let me know if you'd like examples of how to represent it in code, formats, etc.\n\n---\n\n**To be most helpful: Please provide more details!**  \nWhat is your goal? 😊\n",
+                  "fromDraftModel": false,
+                  "tokensCount": 3969,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "style": {
+                "type": "thinking",
+                "ended": true,
+                "title": "Thought for 45.06 seconds",
+                "forceRenderAsPlainText": false
+              },
+              "prefix": "<think>",
+              "suffix": "</think>"
+            },
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1777293994295-0.3907543297698701",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n\n⚠️ **Important clarification first**:  \n🔹 **I cannot access real-time information or the actual current date/time.** I am an AI language model without live internet, clock capabilities, or system time awareness in this context.  \n🔹 **Do not expect me to \"guess\" today's date**—that would be unreliable and potentially misleading.\n\n---\n\n### ❓ What do you *actually* need? Here are common interpretations & how I can help:\n\n#### ✅ **If you meant: *\"How do I get the current date/time programmatically?\"***  \nI’ll provide code examples! Specify your language or context:\n```python\n# Python\nimport datetime\nprint(datetime.date.today())       # Today's date only\nprint(datetime.datetime.now().strftime(\"%Y-%m-%d %H:%M:%S\"))  # Full datetime\n\n# JavaScript (browser)\nconsole.log(new Date().toLocaleString())\n```\n```sql\n-- SQL examples\nSELECT CURRENT_DATE;        -- PostgreSQL/MySQL\nNOW();                     -- MySQL\nCURRENT_TIMESTAMP;         -- Many databases\n```\n\n#### ✅ **If you meant: *\"What is today's actual date right now?\"* (for your device)**  \n→ **Check your phone/computer clock.** I cannot see it. If you share:\n- Your timezone, or\n- A specific task where \"current date\" is relevant (e.g., \"validate expiration\"),\nI can guide you further!\n\n#### ✅ **If this relates to a problem, puzzle, or context:**  \nPlease describe:\n> _“The prompt says ‘current date’—what does it mean here?”_  \n> *Example contexts:*\n> - 📅 Calendar/event calculation? → Share the actual date you want to use.\n> - 🔄 Time complexity analysis? → Clarify the scenario.\n> - 🧩 Logic puzzle or riddle involving dates? → Provide full details.\n> - 💻 Code variable name? → “Is `current_date` a placeholder I should replace with today’s date?”\n\n#### ✅ **If you meant something else entirely:**  \n- *“Current date” as a term?** → Definition: The date in the present time.\n- *Training data cutoff vs. current date?* → My knowledge ends July 2024, but that ≠ today’s actual date.\n- *Typo or incomplete query?* → Could you rephrase/clarify!\n\n---\n\n### 🙏 **To give the best answer—please reply with:**\n1. **What context** is this from? (e.g., coding task, math problem, conversation, etc.)  \n2. **What goal** are you trying to achieve?  \n3. **Any provided date/time references** if \"current\" refers to a specific value in your content?\n\nWith more details, I’ll provide precise help! 🌟",
+                  "fromDraftModel": false,
+                  "tokensCount": 640,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "genInfo": {
+                "indexedModelIdentifier": "mradermacher/Nanbeige4.1-3B-GGUF/Nanbeige4.1-3B.IQ4_XS.gguf",
+                "identifier": "nanbeige4.1-3b@iq4_xs",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "load.gpuStrictVramCap",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.offloadKVCacheToGpu",
+                      "value": true
+                    },
+                    {
+                      "key": "load.gpuSplitConfig",
+                      "value": {
+                        "strategy": "evenly",
+                        "disabledGpus": [],
+                        "priority": [],
+                        "customRatio": []
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 16384
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.toolCallStopStrings",
+                      "value": [
+                        "<|eom_id|>",
+                        "<|eom|>"
+                      ]
+                    },
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "\n        {%- if tools %}\n            {{- '<|im_start|>system\n' }}\n            {%- if messages[0].role == 'system' %}\n                {{- messages[0].content + '\n\n' }}\n            {%- else %} \n                {{- '你是一位工具函数调用专家，你会得到一个问题和一组可能的工具函数。根据问题，你需要进行一个或多个函数/工具调用以实现目的，请尽量尝试探索通过工具解决问题。\n如果没有一个函数可以使用，请直接使用自然语言回复用户。\n如果给定的问题缺少函数所需的参数，请使用自然语言进行提问，向用户询问必要信息。\n如果调用结果已经足够回答用户问题，请对历史结果进行总结，使用自然语言回复用户。' }} \n            {%- endif %}\n            {{- \"# Tools\n\nYou may call one or more functions to assist with the user query.\n\nYou are provided with function signatures within <tools></tools> XML tags:\n<tools>\" }}\n            {%- for tool in tools %}\n                {{- \"\n\" }}\n                {{- tool | tojson }}\n            {%- endfor %}\n            {{- \"\n</tools>\n\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\n<tool_call>\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\n</tool_call><|im_end|>\n\" }}\n        {%- else %}\n            {%- if messages[0].role == 'system' %}\n                {{- '<|im_start|>system\n' + messages[0].content + '<|im_end|>\n' }}\n            {%- else %} \n                {{- '<|im_start|>system\n你是南北阁，一款由BOSS直聘自主研发并训练的专业大语言模型。<|im_end|>\n' }} \n            {%- endif %}\n        {%- endif %}\n        {%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n        {%- for message in messages[::-1] %}\n            {%- set index = (messages|length - 1) - loop.index0 %}\n            {%- if ns.multi_step_tool and message.role == \"user\" and message.content is string and not(message.content.startswith('<tool_response>') and message.content.endswith('</tool_response>')) %}\n                {%- set ns.multi_step_tool = false %}\n                {%- set ns.last_query_index = index %}\n            {%- endif %}\n        {%- endfor %}\n        {%- for message in messages %}\n            {%- if message.content is string %}\n                {%- set content = message.content %}\n            {%- else %}\n                {%- set content = '' %}\n            {%- endif %}\n            {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) %}\n                {{- '<|im_start|>' + message.role + '\n' + content + '<|im_end|>' + '\n' }}\n            {%- elif message.role == \"assistant\" %}\n                {%- set reasoning_content = '' %}\n                {%- if message.reasoning_content is string %}\n                    {%- set reasoning_content = message.reasoning_content %}\n                {%- else %}\n                    {%- if '</think>' in content %}\n                        {%- set reasoning_content = content.split('</think>')[0].rstrip('\n').split('<think>')[-1].lstrip('\n') %}\n                        {%- set content = content.split('</think>')[-1].lstrip('\n') %}\n                    {%- endif %}\n                {%- endif %}\n                {%- if loop.index0 > ns.last_query_index or keep_all_think or (extra_body is defined and extra_body.keep_all_think) %}\n                    {%- if loop.last or (not loop.last and reasoning_content) %}\n                        {{- '<|im_start|>' + message.role + '\n<think>\n' + reasoning_content.strip('\n') + '\n</think>\n\n' + content.lstrip('\n') }}\n                    {%- else %}\n                        {{- '<|im_start|>' + message.role + '\n' + content }}\n                    {%- endif %}\n                {%- else %}\n                    {{- '<|im_start|>' + message.role + '\n' + content }}\n                {%- endif %}\n                {%- if message.tool_calls %}\n                    {%- for tool_call in message.tool_calls %}\n                        {%- if (loop.first and content) or (not loop.first) %}\n                            {{- '\n' }}\n                        {%- endif %}\n                        {%- if tool_call.function %}\n                            {%- set tool_call = tool_call.function %}\n                        {%- endif %}\n                        {{- '<tool_call>\n{\"name\": \"' }}\n                        {{- tool_call.name }}\n                        {{- '\", \"arguments\": ' }}\n                        {%- if tool_call.arguments is string %}\n                            {{- tool_call.arguments }}\n                        {%- else %}\n                            {{- tool_call.arguments | tojson }}\n                        {%- endif %}\n                        {{- '}\n</tool_call>' }}\n                    {%- endfor %}\n                {%- endif %}\n                {{- '<|im_end|>\n' }}\n            {%- elif message.role == \"tool\" %}\n                {%- if loop.first or (messages[loop.index0 - 1].role != \"tool\") %}\n                    {{- '<|im_start|>user' }}\n                {%- endif %}\n                {{- '\n<tool_response>\n' }}\n                {{- content }}\n                {{- '\n</tool_response>' }}\n                {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n                    {{- '<|im_end|>\n' }}\n                {%- endif %}\n            {%- endif %}\n        {%- endfor %}\n        {%- if add_generation_prompt %}\n            {{- '<|im_start|>assistant\n' }}\n        {%- endif %}\n"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 85.54767687263357,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.062,
+                  "totalTimeSec": 54.235,
+                  "promptTokensCount": 34,
+                  "predictedTokensCount": 4640,
+                  "totalTokensCount": 4674
+                }
+              }
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1777294003319-0.785487224990498",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ],
+          "senderInfo": {
+            "senderName": "nanbeige4.1-3b@iq4_xs"
+          }
+        }
+      ],
+      "currentlySelected": 0
+    }
+  ],
+  "usePerChatPredictionConfig": true,
+  "perChatPredictionConfig": {
+    "fields": []
+  },
+  "clientInput": "",
+  "clientInputFiles": [],
+  "userFilesSizeBytes": 0,
+  "lastUsedModel": {
+    "identifier": "nanbeige4.1-3b@iq4_xs",
+    "indexedModelIdentifier": "mradermacher/Nanbeige4.1-3B-GGUF/Nanbeige4.1-3B.IQ4_XS.gguf",
+    "instanceLoadTimeConfig": {
+      "fields": [
+        {
+          "key": "load.gpuStrictVramCap",
+          "value": false
+        },
+        {
+          "key": "llm.load.offloadKVCacheToGpu",
+          "value": true
+        },
+        {
+          "key": "load.gpuSplitConfig",
+          "value": {
+            "strategy": "evenly",
+            "disabledGpus": [],
+            "priority": [],
+            "customRatio": []
+          }
+        },
+        {
+          "key": "llm.load.llama.cpuThreadPoolSize",
+          "value": 6
+        },
+        {
+          "key": "llm.load.contextLength",
+          "value": 16384
+        },
+        {
+          "key": "llm.load.llama.flashAttention",
+          "value": true
+        },
+        {
+          "key": "llm.load.llama.tryDirectIO",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.acceleration.offloadRatio",
+          "value": 1
+        }
+      ]
+    },
+    "instanceOperationTimeConfig": {
+      "fields": []
+    }
+  },
+  "notes": [],
+  "plugins": [],
+  "pluginConfigs": {},
+  "disabledPluginTools": [],
+  "looseFiles": [],
+  "assistantLastMessagedAt": 1777294003959
+}

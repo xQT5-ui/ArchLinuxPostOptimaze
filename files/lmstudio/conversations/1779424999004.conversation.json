@@ -1,0 +1,307 @@
+{
+  "name": "Оптимальная стирка белья",
+  "pinned": false,
+  "createdAt": 1779424999004,
+  "preset": "@local:uni",
+  "tokenCount": 3752,
+  "userLastMessagedAt": 1779425178391,
+  "assistantLastMessagedAt": 1779425263455,
+  "systemPrompt": "",
+  "messages": [
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Как лучше стирать вещи (носки, трусы, футболки, штаны, полотенца) в стиральной машине: совместно или раздельно?\nТакже есть ли смысл использовать определённый режим, например \"Ежедневная стирка\", или можно всегда ставить режим \"Хлопок\" -- разница между ними в количестве замачиваний, в длительности стирки и вместимости вещей по весу (из очевидного)?"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "qwen/qwen3.5-9b"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1779425179184-0.8669552919456122",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   **User Question:** How best to wash clothes (socks, underwear, t-shirts, pants, towels) in a washing machine: together or separately? Also, is there a point in using a specific program like \"Daily Wash\" vs. always using \"Cotton\" - what's the difference beyond weight/capacity and cycles/time?\n    *   **Context:** Households, laundry care, hygiene.\n    *   **Constraints (from System Prompt):**\n        *   Language: Russian (default).\n        *   Role Assignment: Infer a role in the first message only (\"I will answer as...\").\n        *   TL;DR Section: Include if response > 3 concise sentences.\n        *   Main Answer: Thorough, structured, step-by-step, objective, neutral, avoid bias/hallucinations.\n        *   Sources: Use provided context/links (none provided here, so rely on general knowledge but state limitations).\n\n2.  **Determine the Role:**\n    *   The user is asking for advice on laundry practices and machine settings.\n    *   Appropriate roles: Domestic Consultant, Laundry Expert, Housekeeping Advisor, Textile Care Specialist.\n    *   Selection: \"Лаборант по уходу за текстилем\" (Textile Care Laboratory Technician) or simply \"Консультант по бытовому текстилю и стирке\" (Household Textile and Washing Consultant). Let's go with a practical expert role: **\"Эксперт по бытовой химии и уходу за одеждой\"** (Expert in Household Chemistry and Clothing Care).\n\n3.  **Gather/Verify Information:**\n    *   *Separate vs. Combined Washing:* Hygiene considerations (underwear vs. towels), soil level, color preservation, fabric types. Generally recommended to separate underwear/socks from outerwear (pants/shirts) for hygiene, even if machine capacity allows. Towels should ideally be washed separately or in a hot cycle.\n    *   *Program Differences (\"Daily Wash\" vs. \"Cotton\"):* Need to clarify that \"Cotton\" is usually a high-temp, longer, more robust wash. \"Daily/Delicate/Eco\" often means lower temp, fewer rinses, shorter duration. The prompt mentions \"number of pre-washes/soakings\" (замачиваний), which varies by brand but generally refers to the main wash cycle structure.\n    *   *Hygiene vs. Energy:* Balancing these factors.\n\n4.  **Drafting the Response (Internal Monologue - Compliance Check):**\n    *   *Role Assignment:* Must be in the first message ONLY. So, I will start with \"I will answer as [Role].\"\n    *   *TL;DR:* Since the answer involves multiple aspects (hygiene, fabric types, machine settings), it will exceed 3 sentences. Need a TL;DR at the top.\n    *   *Language:* Russian.\n    *   *Uncertainty/Disclaimer:* I need to mention that specific machines vary by manufacturer (Miele vs. LG vs. Samsung might interpret modes differently).\n\n5.  **Drafting Content:**\n\n    *   **Role:** Эксперт по уходу за текстилем и стиральными машинами.\n    *   **TL;DR:** Разделите бельё по категориям для гигиены; используйте разные программы в зависимости от типа ткани, а не только по времени.\n    *   **Main Answer:**\n        1.  Separation strategy (Underwear/socks vs. outerwear vs. towels).\n            *   Underwear/socks: Can be washed with light clothes, but separate from heavily soiled outerwear or bed linen if possible.\n            *   Towels: Best alone to avoid cross-contamination from other fabrics. High temp for hygiene.\n            *   Pants/Shirts: Usually mixed (cotton/cotton blends), but sort by color and soil.\n        2.  Program comparison (Daily/Cotton).\n            *   \"Cotton\": Often higher temp (60°C+), longer time, heavy agitation. Good for hygiene on white fabrics.\n            *   \"Daily/Wash/Delicate\": Lower temp (40°C/30°C), less pre-washing/rinses if that's what \"number of soakings\" implies.\n            *   Modern interpretation: Some machines optimize energy by reducing spin or rinses. Need to emphasize temperature is key for hygiene (underwear > 60°C).\n        3.  Summary advice.\n\n    *   **Constraints Check:**\n        *   Russian language? Yes.\n        *   Role assigned first? Yes.\n        *   TL;DR present? Yes.\n        *   Objective/Neutral? Yes.\n        *   No invented data? Will qualify advice as general guidelines based on industry standards (AIC, etc.).\n\n6.  **Refining the \"Program\" part:**\n    *   The user specifically asked about \"Daily Wash\" vs \"Cotton\" regarding soakings/time/capacity. I need to explain that manufacturers define this differently. Some machines label \"Daily\" as an express cycle (shorter) or a normal daily load. I must state uncertainty about specific brand definitions without inventing specs.\n    *   Key hygiene point: Underwear and towels benefit most from high temperature (60°C+) if machine allows, whereas synthetics need lower temps.\n\n7.  **Final Polish:** Ensure strict adherence to the system prompt structure.\n\n    *   Start with Role Assignment.\n    *   TL;DR Section.\n    *   Main Answer structured logically.\n    *   Mention sources/limitations (general knowledge).\n\n    *Self-Correction on Role Assignment:* The rule says \"In your FIRST chat message, assign this role and ONLY there.\" This means I should not write any other text before the role assignment line.\n\n    *Self-Correction on TL;DR:* \"If response requires more than 3 concise sentences.\" My draft has enough content.\n\n    *Self-Correction on Sources:* No files provided. I must state \"based on general guidelines\" or similar without inventing sources.\n\n8.  **Constructing the Output (in Russian):**\n    *   Header: **I will answer as Эксперт по уходу за текстилем и стиральными машинами.**\n    *   TL;DR.\n    *   Sections: Гигиена (what goes together), Программы (Cotton vs Daily), Temperature/Time nuances.\n\n    Let's write it.\n\n    *Role:* Эксперт по уходу за текстилем и настройками стиральных машин.\n    *TL;DR:* Разделяйте бельё на категории (интимное, постельное, повседневное) для гигиены; выбирайте программы исходя из типа ткани и загрязнений, ориентируясь на температуру, а не только на название режима \"ежедневная\".\n\n    *Content:*\n    1. Grouping: Towels separate from underwear. Underwear separate from heavy outerwear? Actually, best practice is often to wash underwear separately or with light colors, not with heavily soiled white items if possible, but usually fine if hygiene temp (60) is met.\n    Let's stick to standard advice: Sort by soil level and color first. Then by category for hygiene. Towels separate from fabrics (lint). Underwear/socks separate from bed sheets.\n    2. Programs: \"Cotton\" usually implies max cleaning + high temp. \"Daily\" might be a balanced routine. Explain that \"soakings\" refers to main cycle structure, which affects cleaning intensity.\n    3. Conclusion: Don't wash all at once if hygiene matters (towels/underwear).\n\n    Let's finalize the text ensuring neutrality and clarity.\n\n    *Wait, one rule:* \"Actively indicate uncertainty: specify if information is outdated, incomplete...\". I should note that machine programs vary by brand.\n\n    *Structure Check:*\n    1. Role Line.\n    2. TL;DR (Bold).\n    3. Main Answer (Structured with bolding/lists).\n\n    Let's assemble.cw\n",
+                  "fromDraftModel": false,
+                  "tokensCount": 1747,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "prefix": "",
+              "suffix": "</think>",
+              "style": {
+                "type": "thinking",
+                "ended": true,
+                "title": "Thought for 38.63 seconds",
+                "forceRenderAsPlainText": false
+              }
+            },
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1779425217923-0.2240383398851552",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n\n**I will answer as Эксперт по уходу за текстилем и настройками стиральных машин.**\n\n### **TL;DR:**\n\n*   **Группировка вещей:** Стирать интимное бельё и носки лучше отдельно или в отдельной корзине, чтобы избежать контакта с грязным бельём (штаны, полотенца) и линт-частицами. Полотенца рекомендуется стирать раздельно от других тканей из-за риска переноса ворса и высокой влажности.\n*   **Выбор режима:** Режим «Ежедневная» (или Express/Daily) обычно короче, но менее эффективен для глубокой очистки; режим «Хлопок» при высокой температуре лучше подходит для гигиенической обработки белья нижнего типа.\n*   **Учёт температур:** Для интимной одежды и полотенец критически важна температура воды (60°C+), а не просто длительность или название программы.\n\n---\n\n### **Детальный ответ**\n\nВопрос о разделении стирки и выборе программ затрагивает аспекты гигиены, сохранности тканей и энергоэффективности. Ниже приведена структура рекомендаций, основанная на стандартных отраслевых практиках эксплуатации стирального оборудования.\n\n#### **1. Принципы разделения вещей (совместно или отдельно)**\n\nИндустрия ухода за текстилем и гигиенические рекомендации предлагают следующую схему сортировки:\n\n*   **По типу материала и загрязнениям:**\n    *   **Интимное бельё (трусы, носки):** Рекомендуется стирать отдельно от постельного белья или верхней одежды. Считается, что они могут впитывать специфические запахи и бактерии, которые при совместной стирке с полотенцами или рубашками могут переноситься на другие поверхности. Однако, если соблюдается достаточная температура воды (см. раздел о программах), риск минимизируется.\n    *   **Полотенца и махровые вещи:** Лучше стирать в отдельной загрузке от цветного белья или деликатных тканей. Полотенца сильно загрязняют барабан ворсом, который может осесть на футболках и брюках, снижая их эстетичный вид. Также высокая нагрузка влажными полотенцами требует более сильного отжима, что может повредить деликатные вещи (хлопок-синтетика).\n    *   **Верхняя одежда и нижнее белье:** Можно стирать вместе при соблюдении условий по температуре. Брюки и футболки обычно переносят стандартные режимы очистки лучше всего.\n\n*   **По степени загрязнения:**\n    *   Загрязнённое после спорта или работы бельё (штаны, носки с грязью) следует отдельно от свежего (рубашки), иначе белки и пигменты могут въесться в чистые ткани в процессе замачивания или первичного цикла.\n\n#### **2. Различия режимов: «Ежедневная» vs «Хлопок»**\n\nВ разных моделях брендов маркировка программ может отличаться, но функциональные отличия обычно стандартны для рынка крупногабаритной бытовой техники. В данном случае важно понять физическую суть процессов внутри машины:\n\n| Параметр | Режим «Ежедневная» (Daily/Express) | Режим «Хлопок» (Cotton) |\n| :--- | :--- | :--- |\n| **Цель** | Быстрая, повседневная стирка без сильного загрязнения. | Глубокая очистка и гигиеническая обработка. |\n| **Температура** | Обычно ниже (40°C или 30°C) для экономии воды и энергии. | Выше (60–95°C), особенно для белых вещей и белья. |\n| **Длительность замачивания** | Минимальная или отсутствует. Основной цикл начинается сразу после подачи воды. | Часто включает предварительное намачивание (Pre-soak) перед основной стиркой, что позволяет лучше растворить загрязнения. |\n| **Количество промывок/сливов** | Может быть оптимизировано в одну сторону для скорости, либо сокращено число циклов слива-налива воды. | Стандартная процедура: замачивание -> стирка -> полоскание (1-2 раза) -> отжим. |\n| **Нагрузка по весу** | Часто рассчитана на 3–5 кг для более тонких вещей или деликатной стирки в экономрежиме. | Рассчитан на максимальный вес, но при высоких оборотах и температуре. |\n\n*   **Разница в замачиваниях:** В режиме «Хлопок» машина дольше удерживает вещи в грязной воде (в начале цикла), что способствует удалению жирных пятен и белка. В режиме «Ежедневная» часто отключена фаза глубокого замачивания, если машина не имеет датчиков загрязнения и не добавляет воду для предварительного отмывания вручную.\n*   **Зависимость от веса:** Да, вместимость влияет на качество стирки. Если загрузить машину на 90% в режиме «Хлопок», но температура будет высокой, вещи могут перетереться или не отстираться полностью из-за перегрузки барабана (машине нужно место для воды и воздуха).\n\n#### **3. Выводы и рекомендации**\n\n1.  **Оптимальная комбинация:** Для большинства современных машин с датчиками турбины и расхода воды (например, Samsung EcoBubble, Bosch i-Dose или Miele AutoDose) не обязательно разделять стирку по каждому режиму вручную, если соблюдены температурные нормы.\n2.  **Гигиенический минимум:** Если у вас есть риск бактериального заражения или вы стираете бельё для ребёнка/пожилого человека, ставьте режим с температурой 60°C (часто это «Хлопок» или «Деликатная при высокой температуре»), даже если режим называется иначе. Это важнее названия программы.\n3.  **Энергия и время:** Если вещи чистые и цветные, экономично использовать «Ежедневную» стирку с температурой 40°C. Для белых вещей или полотенец лучше выбирать «Хлопок» (60°C+), так как при низких температурах бактерии на ткани сохраняются дольше, независимо от длительности цикла.\n\n*Примечание:* Конкретные алгоритмы работы датчиков и точная интерпретация названий программ зависят от производителя стиральной машины (Bosch, LG, Haier, Whirlpool), поэтому всегда стоит сверяться с инструкцией к конкретной модели для понимания того, что означает «замачивание» в данной программе.*",
+                  "fromDraftModel": false,
+                  "tokensCount": 1458,
+                  "isStructural": false
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "qwen/qwen3.5-9b",
+                "identifier": "qwen/qwen3.5-9b",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "load.gpuStrictVramCap",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.offloadKVCacheToGpu",
+                      "value": true
+                    },
+                    {
+                      "key": "load.gpuSplitConfig",
+                      "value": {
+                        "strategy": "evenly",
+                        "disabledGpus": [],
+                        "priority": [],
+                        "customRatio": []
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 16384
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    },
+                    {
+                      "key": "llm.load.llama.kCacheQuantizationType",
+                      "value": {
+                        "checked": true,
+                        "value": "q8_0"
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.vCacheQuantizationType",
+                      "value": {
+                        "checked": true,
+                        "value": "q8_0"
+                      }
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.temperature",
+                      "value": 1
+                    },
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{%- set image_count = namespace(value=0) %}\n{%- set video_count = namespace(value=0) %}\n{%- macro render_content(content, do_vision_count, is_system_content=false) %}\n    {%- if content is string %}\n        {{- content }}\n    {%- elif content is iterable and content is not mapping %}\n        {%- for item in content %}\n            {%- if 'image' in item or 'image_url' in item or item.type == 'image' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain images.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set image_count.value = image_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Picture ' ~ image_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|image_pad|><|vision_end|>' }}\n            {%- elif 'video' in item or item.type == 'video' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain videos.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set video_count.value = video_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Video ' ~ video_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|video_pad|><|vision_end|>' }}\n            {%- elif 'text' in item %}\n                {{- item.text }}\n            {%- else %}\n                {{- raise_exception('Unexpected item type in content.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- elif content is none or content is undefined %}\n        {{- '' }}\n    {%- else %}\n        {{- raise_exception('Unexpected content type.') }}\n    {%- endif %}\n{%- endmacro %}\n{%- if not messages %}\n    {{- raise_exception('No messages provided.') }}\n{%- endif %}\n{%- if tools and tools is iterable and tools is not mapping %}\n    {{- '<|im_start|>system\\n' }}\n    {{- \"# Tools\\n\\nYou have access to the following functions:\\n\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\" }}\n    {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {%- if content %}\n            {{- '\\n\\n' + content }}\n        {%- endif %}\n    {%- endif %}\n    {{- '<|im_end|>\\n' }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {{- '<|im_start|>system\\n' + content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" %}\n        {%- set content = render_content(message.content, false)|trim %}\n        {%- if not(content.startswith('<tool_response>') and content.endswith('</tool_response>')) %}\n            {%- set ns.multi_step_tool = false %}\n            {%- set ns.last_query_index = index %}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if ns.multi_step_tool %}\n    {{- raise_exception('No user query found in messages.') }}\n{%- endif %}\n{%- for message in messages %}\n    {%- set content = render_content(message.content, true)|trim %}\n    {%- if message.role == \"system\" %}\n        {%- if not loop.first %}\n            {{- raise_exception('System message must be at the beginning.') }}\n        {%- endif %}\n    {%- elif message.role == \"user\" %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- set reasoning_content = reasoning_content|trim %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content + '\\n</think>\\n\\n' + content }}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls and message.tool_calls is iterable and message.tool_calls is not mapping %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if tool_call.function is defined %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {%- if loop.first %}\n                    {%- if content|trim %}\n                        {{- '\\n\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- else %}\n                        {{- '<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- endif %}\n                {%- else %}\n                    {{- '\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                {%- endif %}\n                {%- if tool_call.arguments is defined %}\n                    {%- for args_name, args_value in tool_call.arguments|items %}\n                        {{- '<parameter=' + args_name + '>\\n' }}\n                        {%- set args_value = args_value | tojson if args_value is mapping or (args_value is iterable and args_value is not string) else args_value | string %}\n                        {{- args_value }}\n                        {{- '\\n</parameter>\\n' }}\n                    {%- endfor %}\n                {%- endif %}\n                {{- '</function>\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n            {{- '<|im_end|>\\n' }}\n        {%- elif loop.last %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- else %}\n        {{- raise_exception('Unexpected message role.') }}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n    {%- if enable_thinking is defined and enable_thinking is false %}\n        {{- '<think>\\n\\n</think>\\n\\n' }}\n    {%- else %}\n        {{- '<think>\\n' }}\n    {%- endif %}\n{%- endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.vision.userMaxImageDimensionPixels",
+                      "value": {
+                        "checked": true,
+                        "value": 2048
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.vision.ignoreModelPreferredMaxImageDimension",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.contextPrefill",
+                      "value": []
+                    },
+                    {
+                      "key": "llm.prediction.topKSampling",
+                      "value": 20
+                    },
+                    {
+                      "key": "llm.prediction.topPSampling",
+                      "value": {
+                        "checked": true,
+                        "value": 0.95
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.minPSampling",
+                      "value": {
+                        "checked": false,
+                        "value": 0
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.repeatPenalty",
+                      "value": {
+                        "checked": false,
+                        "value": 1
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.presencePenalty",
+                      "value": {
+                        "checked": true,
+                        "value": 1.5
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 39.58490383590062,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.646,
+                  "totalTimeSec": 80.977,
+                  "promptTokensCount": 545,
+                  "predictedTokensCount": 3207,
+                  "totalTokensCount": 3752
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1779425260083-0.09927332297195368",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    }
+  ],
+  "usePerChatPredictionConfig": true,
+  "perChatPredictionConfig": {
+    "fields": [
+      {
+        "key": "llm.prediction.systemPrompt",
+        "value": "<system_prompt>\n<operational_rules>\n<rule priority=\"critical\">Default response language is strictly Russian, matching the user's message language, unless explicitly asked otherwise.</rule>\n<rule priority=\"critical\">Never invent or assume data, events, sources, or opinions. If you lack information, state \"I don't know\" directly.</rule>\n<rule priority=\"critical\">Actively indicate uncertainty: specify if information is outdated, incomplete, based on your training data, or an educated guess.</rule>\n<rule priority=\"high\">You are a helpful, objective, and neutral assistant. Prioritize logical accuracy and factual precision over stylistic beauty, humor, metaphors, or emotional language.</rule>\n<rule priority=\"high\">Use attached files or links when provided, and explicitly mention when you are doing so.</rule>\n</operational_rules>\n<response_structure>\n<part id=\"role_assignment\">\n**Mechanism:** Based on the user's request, automatically infer the most appropriate, single real-world functional role.\n**Execution:** In your FIRST chat message, assign this role and ONLY there. Use the format: \"I will answer as [relevant role].\"\n**Constraint:** Keep the role consistent for all subsequent answers in the chat.\n</part>\n<part id=\"tldr_section\">\n**Condition:** Automatically include a \"**TL;DR:**\" summary at the top, IF your response requires more than 3 concise sentences.\n**Execution:** Provide an ultra-concise takeaway of the final answer.\n**Exclusion:** Skip this for simple definitional questions, very short answers, or rewriting tasks.\n</part>\n<part id=\"main_answer\">\n**Content:** Provide a thorough, well-structured, and step-by-step answer with concrete details and key context.\n**Depth:** When multiple valid viewpoints exist, present them fairly and objectively, avoiding bias.\n**Sources:** If integrating information from your provided context, naturally weave in mention of those sources. Do not invent references.\n</part>\n</response_structure>\n</system_prompt>"
+      }
+    ]
+  },
+  "clientInput": "",
+  "clientInputFiles": [],
+  "userFilesSizeBytes": 0,
+  "lastUsedModel": {
+    "identifier": "qwen3.5-9b-uncensored-hauhaucs-aggressive",
+    "indexedModelIdentifier": "HauhauCS/Qwen3.5-9B-Uncensored-HauhauCS-Aggressive/Qwen3.5-9B-Uncensored-HauhauCS-Aggressive-Q4_K_M.gguf",
+    "instanceLoadTimeConfig": {
+      "fields": [
+        {
+          "key": "load.gpuStrictVramCap",
+          "value": false
+        },
+        {
+          "key": "llm.load.offloadKVCacheToGpu",
+          "value": true
+        },
+        {
+          "key": "load.gpuSplitConfig",
+          "value": {
+            "strategy": "evenly",
+            "disabledGpus": [],
+            "priority": [],
+            "customRatio": []
+          }
+        },
+        {
+          "key": "llm.load.llama.cpuThreadPoolSize",
+          "value": 6
+        },
+        {
+          "key": "llm.load.contextLength",
+          "value": 16384
+        },
+        {
+          "key": "llm.load.llama.flashAttention",
+          "value": true
+        },
+        {
+          "key": "llm.load.llama.tryDirectIO",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.acceleration.offloadRatio",
+          "value": 1
+        },
+        {
+          "key": "llm.load.llama.kCacheQuantizationType",
+          "value": {
+            "checked": true,
+            "value": "q8_0"
+          }
+        },
+        {
+          "key": "llm.load.llama.vCacheQuantizationType",
+          "value": {
+            "checked": true,
+            "value": "q8_0"
+          }
+        }
+      ]
+    },
+    "instanceOperationTimeConfig": {
+      "fields": []
+    }
+  },
+  "notes": [],
+  "plugins": [],
+  "pluginConfigs": {},
+  "disabledPluginTools": [],
+  "looseFiles": []
+}

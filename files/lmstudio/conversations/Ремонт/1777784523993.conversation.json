@@ -1,0 +1,243 @@
+{
+  "name": "Поклейка флизелиновых обоев",
+  "pinned": false,
+  "createdAt": 1777784523993,
+  "preset": "",
+  "tokenCount": 2677,
+  "userLastMessagedAt": 1777784591521,
+  "systemPrompt": "",
+  "messages": [
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "какая практика поклейки флезелиновых обоев считает лучше:\n- наносить клей только на стену\n- наносить клей только на обои\n?"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1777784592391-0.6276440949338008",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User Question: Which practice is better for sticking fleece wallpaper (флизелиновые обои): applying glue only to the wall or only to the wallpaper?\n    *   Language: Russian.\n    *   Constraints:\n        *   Default language: Russian.\n        *   No invented data/opinions. State uncertainty if info is missing.\n        *   Objective, neutral assistant.\n        *   Role assignment in the first message (I need to infer a role).\n        *   TL;DR section if response > 3 sentences.\n        *   Use attached files/links if provided (none here).\n\n2.  **Determine the Role:**\n    *   The user is asking about construction/renovation advice, specifically wallpaper installation.\n    *   Appropriate role: \"Construction Specialist\" or \"Interior Designer\" or \"Home Renovation Expert\". Let's choose \"Construction Specialist\" (Специалист по строительству и отделке) as it implies technical knowledge of materials and processes.\n\n3.  **Retrieve Knowledge:**\n    *   Topic: Fleece wallpaper installation (флизелиновые обои).\n    *   Standard practice: Fleece wallpapers are typically non-woven or paper-based with a specific backing. They usually require glue to be applied *only* to the wall, not the wallpaper itself. This is because fleece has a porous structure that absorbs water quickly if glued directly, potentially causing shrinkage or uneven drying. Also, applying glue to the wall ensures even distribution and prevents air bubbles.\n    *   Alternative: Some specific types might allow gluing on both sides (double-sided), but standard advice for \"fleece\" is wall only.\n    *   Source verification: General construction knowledge. No specific files provided by user. I must state if this is based on general training data.\n\n4.  **Draft the Response:**\n    *   **Role Assignment:** \"I will answer as Construction Specialist.\" (in Russian).\n    *   **TL;DR:** Summarize the main point (glue only on wall).\n    *   **Main Answer:** Explain why (absorption, drying time, air bubbles), mention exceptions if any (some specific types might differ but standard is wall), emphasize following manufacturer instructions.\n\n5.  **Check Constraints:**\n    *   Language: Russian.\n    *   Role assignment in first message only? The prompt says \"In your FIRST chat message\". Since this is the first interaction, I must include it at the very beginning.\n    *   TL;DR condition: Response will be more than 3 sentences, so include TL;DR.\n    *   Uncertainty/Source: State that this is based on general industry standards and manufacturer recommendations found in training data.\n\n6.  **Refine Content:**\n    *   Standard practice for fleece (флизелин): Glue only on the wall.\n    *   Reasoning: Fleece doesn't need glue on its side because it's porous enough to hold moisture from the wall, and gluing the paper can lead to uneven drying or bubbles. Also, fleece is often pre-pasted? No, usually sold dry for wall application. Wait, some are \"paste-the-wall\" (клей на стену), some are \"paste-the-paper\". Fleece is almost exclusively \"paste-the-wall\".\n    *   Exception: If the instructions say otherwise, follow them. But generally, it's wall only.\n\n7.  **Final Polish:**\n    *   Ensure tone is neutral and objective.\n    *   Check TL;DR format.\n    *   Check Role assignment placement (very first line).\n\n8.  **Wait, one constraint check:** \"In your FIRST chat message, assign this role and ONLY there.\" This means the very first text I output should be the role assignment? Or can it be part of the structure? The prompt says: \"**Execution:** In your FIRST chat message, assign this role and ONLY there. Use the format: 'I will answer as [relevant role].'\"\n    *   Actually, looking at the system prompt instruction: \"In your FIRST chat message...\". Since I am generating a response now, I need to make sure the role assignment is prominent. Usually, it's best to put it at the very top before the TL;DR or integrated into the intro. Let's place it clearly at the start.\n    *   Wait, the instruction says \"ONLY there\" (meaning only in that specific section of the response structure? Or literally only in the first message?). The system prompt defines a `response_structure` with parts: `role_assignment`, `tldr_section`, `main_answer`. It implies I should follow this structure.\n    *   So, Part 1: Role Assignment. Part 2: TL;DR (if needed). Part 3: Main Answer.\n\n    Let's draft the Russian text.\n\n    **Role:** Специалист по отделочным работам (Interior/Construction Specialist).\n    **TL;DR:** Для флизелиновых обоев стандартная практика — наносить клей только на стену.\n    **Main:** Explain why (absorption, bubbles), mention manufacturer instructions.\n\n    *Self-Correction on Role Assignment:* The prompt says \"In your FIRST chat message...\". Since this is the first message of the session, I will include it at the very beginning as requested by the `role_assignment` part of the structure.\n\n    *Wait, checking the instruction again:* \"**Execution:** In your FIRST chat message, assign this role and ONLY there.\" This might mean \"Only in the response where you are assigning the role\". But since I am generating one response now, I will put it at the top.\n    Actually, looking at the `response_structure` part: `<part id=\"role_assignment\">`. It seems I should structure my output according to this schema.\n\n    Let's assemble.\n\n    **Role:** Специалист по строительным и отделочным работам.\n    **TL;DR:** Для флизелиновых обоев рекомендуется наносить клей только на стену, а не на обои.\n    **Main Answer:** Explain the reasoning (porosity, drying). Mention that some specific types might differ but standard is wall.\n\n    *Uncertainty Check:* I don't have access to a specific file provided by the user in this context. I must state that information is based on general industry standards and training data.\n\n    *Language:* Russian.\n\n    Let's write it.\n\n    **Wait, one more check:** \"In your FIRST chat message...\". If I am an AI assistant starting a conversation, this is my first message. So I will include the role assignment line at the very top.\n\n    **Structure Plan:**\n    1. Role Assignment Line.\n    2. TL;DR Section (since answer > 3 sentences).\n    3. Main Answer Body.\n\n    **Content Details:**\n    - Fleece wallpaper is non-woven or paper-based.\n    - Glue on wall allows even distribution.\n    - Glue on fleece can cause uneven drying, bubbles, or damage to the backing.\n    - Always check manufacturer instructions (some might be different).\n\n    **Drafting:**\n    Я буду отвечать как Специалист по строительным и отделочным работам.\n\n    TL;DR: Для флизелиновых обоев правильнее наносить клей только на стену.\n\n    Main: Explain details. Mention that fleece absorbs glue well from the wall side. Gluing the wallpaper itself is usually for paper wallpapers (paste-the-paper). Fleece is paste-the-wall.\n\n    Okay, ready to generate.\n\n    Wait, I need to make sure I don't violate \"Never invent...\". This is general knowledge, so it's safe. But I should mention that specific brands might vary.\n\n    Final check on constraints:\n    - Russian language? Yes.\n    - Role assignment in first message? Yes.\n    - TL;DR if > 3 sentences? Yes.\n    - Objective/Neutral? Yes.\n    - Mention sources/context? I will mention \"manufacturer instructions\" as the primary source of truth, and general practice as secondary.\n\n    Let's go.cw\n",
+                  "fromDraftModel": false,
+                  "tokensCount": 1743,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "style": {
+                "type": "thinking",
+                "ended": true,
+                "title": "Thought for 1 minutes 6 seconds",
+                "forceRenderAsPlainText": false
+              },
+              "prefix": "",
+              "suffix": "</think>"
+            },
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1777784658575-0.8674013205488269",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n\nЯ буду отвечать как Специалист по строительным и отделочным работам.\n\n**TL;DR:** Для флизелиновых обоев стандартной и рекомендуемой практикой является нанесение клея только на стену.\n\n**Основной ответ:**\n\nПри работе с флизелиновыми обоями общепринятым стандартом в отделочных работах считается метод «клей на стену». Вот основные причины, почему этот способ предпочтительнее нанесения клея непосредственно на полотно:\n\n1.  **Пористая структура материала.** Флизелин представляет собой нетканый материал с высокой пористостью. Он способен быстро и равномерно впитывать влагу из нанесенного на стену клея. Если клей нанести на обои, он может неравномерно распределиться или вызвать локальное разбухание полотна, что приведет к деформации после высыхания.\n2.  **Предотвращение пузырей.** Нанесение клея на гладкую поверхность стены позволяет избежать образования воздушных карманов под обоями при их раскатке. При нанесении клея на обои (особенно если он густой) существует риск того, что клей не будет распределен равномерно по всей ширине рулона, что приведет к пузырям и неровностям.\n3.  **Скорость работы.** Флизелиновые обои часто имеют большую площадь полотна (ширина до 106 см). Клей на стене позволяет приклеить сразу несколько полос без необходимости ждать высыхания клея на обоях перед поклейкой, что ускоряет процесс монтажа.\n\n**Важное уточнение:**\nХотя вышеописанный метод является отраслевым стандартом для большинства флизелиновых полотен, окончательным ориентиром должны служить инструкции производителя конкретного бренда (например, «Барьер», «Декор» и др.). Некоторые специфические виды обоев могут требовать иного подхода. Если на упаковке указано иное или обои имеют специальную пропитку/клей с обратной стороны, следует следовать рекомендациям производителя. В случае отсутствия такой информации, метод нанесения клея только на стену считается наиболее безопасным и надежным вариантом.",
+                  "fromDraftModel": false,
+                  "tokensCount": 450,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "genInfo": {
+                "indexedModelIdentifier": "bartowski/Qwen_Qwen3.5-9B-GGUF/Qwen_Qwen3.5-9B-IQ4_NL.gguf",
+                "identifier": "qwen_qwen3.5-9b",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "load.gpuStrictVramCap",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.offloadKVCacheToGpu",
+                      "value": true
+                    },
+                    {
+                      "key": "load.gpuSplitConfig",
+                      "value": {
+                        "strategy": "evenly",
+                        "disabledGpus": [],
+                        "priority": [],
+                        "customRatio": []
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 16384
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 0.84375
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.temperature",
+                      "value": 0.1
+                    },
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{%- set image_count = namespace(value=0) %}\n{%- set video_count = namespace(value=0) %}\n{%- macro render_content(content, do_vision_count, is_system_content=false) %}\n    {%- if content is string %}\n        {{- content }}\n    {%- elif content is iterable and content is not mapping %}\n        {%- for item in content %}\n            {%- if 'image' in item or 'image_url' in item or item.type == 'image' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain images.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set image_count.value = image_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Picture ' ~ image_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|image_pad|><|vision_end|>' }}\n            {%- elif 'video' in item or item.type == 'video' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain videos.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set video_count.value = video_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Video ' ~ video_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|video_pad|><|vision_end|>' }}\n            {%- elif 'text' in item %}\n                {{- item.text }}\n            {%- else %}\n                {{- raise_exception('Unexpected item type in content.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- elif content is none or content is undefined %}\n        {{- '' }}\n    {%- else %}\n        {{- raise_exception('Unexpected content type.') }}\n    {%- endif %}\n{%- endmacro %}\n{%- if not messages %}\n    {{- raise_exception('No messages provided.') }}\n{%- endif %}\n{%- if tools and tools is iterable and tools is not mapping %}\n    {{- '<|im_start|>system\\n' }}\n    {{- \"# Tools\\n\\nYou have access to the following functions:\\n\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\" }}\n    {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {%- if content %}\n            {{- '\\n\\n' + content }}\n        {%- endif %}\n    {%- endif %}\n    {{- '<|im_end|>\\n' }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {{- '<|im_start|>system\\n' + content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" %}\n        {%- set content = render_content(message.content, false)|trim %}\n        {%- if not(content.startswith('<tool_response>') and content.endswith('</tool_response>')) %}\n            {%- set ns.multi_step_tool = false %}\n            {%- set ns.last_query_index = index %}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if ns.multi_step_tool %}\n    {{- raise_exception('No user query found in messages.') }}\n{%- endif %}\n{%- for message in messages %}\n    {%- set content = render_content(message.content, true)|trim %}\n    {%- if message.role == \"system\" %}\n        {%- if not loop.first %}\n            {{- raise_exception('System message must be at the beginning.') }}\n        {%- endif %}\n    {%- elif message.role == \"user\" %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- set reasoning_content = reasoning_content|trim %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content + '\\n</think>\\n\\n' + content }}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls and message.tool_calls is iterable and message.tool_calls is not mapping %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if tool_call.function is defined %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {%- if loop.first %}\n                    {%- if content|trim %}\n                        {{- '\\n\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- else %}\n                        {{- '<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- endif %}\n                {%- else %}\n                    {{- '\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                {%- endif %}\n                {%- if tool_call.arguments is defined %}\n                    {%- for args_name, args_value in tool_call.arguments|items %}\n                        {{- '<parameter=' + args_name + '>\\n' }}\n                        {%- set args_value = args_value | tojson if args_value is mapping or (args_value is iterable and args_value is not string) else args_value | string %}\n                        {{- args_value }}\n                        {{- '\\n</parameter>\\n' }}\n                    {%- endfor %}\n                {%- endif %}\n                {{- '</function>\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n            {{- '<|im_end|>\\n' }}\n        {%- elif loop.last %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- else %}\n        {{- raise_exception('Unexpected message role.') }}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n    {%- if enable_thinking is defined and enable_thinking is false %}\n        {{- '<think>\\n\\n</think>\\n\\n' }}\n    {%- else %}\n        {{- '<think>\\n' }}\n    {%- endif %}\n{%- endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.vision.userMaxImageDimensionPixels",
+                      "value": {
+                        "checked": true,
+                        "value": 2048
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.vision.ignoreModelPreferredMaxImageDimension",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 26.100921406522648,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.683,
+                  "totalTimeSec": 84.066,
+                  "promptTokensCount": 483,
+                  "predictedTokensCount": 2195,
+                  "totalTokensCount": 2678
+                }
+              }
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1777784676317-0.6806769843404045",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ],
+          "senderInfo": {
+            "senderName": "qwen_qwen3.5-9b"
+          }
+        }
+      ],
+      "currentlySelected": 0
+    }
+  ],
+  "usePerChatPredictionConfig": true,
+  "perChatPredictionConfig": {
+    "fields": [
+      {
+        "key": "llm.prediction.systemPrompt",
+        "value": "<system_prompt>\n<operational_rules>\n<rule priority=\"critical\">Default response language is strictly Russian, matching the user's message language, unless explicitly asked otherwise.</rule>\n<rule priority=\"critical\">Never invent or assume data, events, sources, or opinions. If you lack information, state \"I don't know\" directly.</rule>\n<rule priority=\"critical\">Actively indicate uncertainty: specify if information is outdated, incomplete, based on your training data, or an educated guess.</rule>\n<rule priority=\"high\">You are a helpful, objective, and neutral assistant. Prioritize logical accuracy and factual precision over stylistic beauty, humor, metaphors, or emotional language.</rule>\n<rule priority=\"high\">Use attached files or links when provided, and explicitly mention when you are doing so.</rule>\n</operational_rules>\n<response_structure>\n<part id=\"role_assignment\">\n**Mechanism:** Based on the user's request, automatically infer the most appropriate, single real-world functional role.\n**Execution:** In your FIRST chat message, assign this role and ONLY there. Use the format: \"I will answer as [relevant role].\"\n**Constraint:** Keep the role consistent for all subsequent answers in the chat.\n</part>\n<part id=\"tldr_section\">\n**Condition:** Automatically include a \"**TL;DR:**\" summary at the top, IF your response requires more than 3 concise sentences.\n**Execution:** Provide an ultra-concise takeaway of the final answer.\n**Exclusion:** Skip this for simple definitional questions, very short answers, or rewriting tasks.\n</part>\n<part id=\"main_answer\">\n**Content:** Provide a thorough, well-structured, and step-by-step answer with concrete details and key context.\n**Depth:** When multiple valid viewpoints exist, present them fairly and objectively, avoiding bias.\n**Sources:** If integrating information from your provided context, naturally weave in mention of those sources. Do not invent references.\n</part>\n</response_structure>\n</system_prompt>"
+      }
+    ]
+  },
+  "clientInput": "",
+  "clientInputFiles": [],
+  "userFilesSizeBytes": 0,
+  "lastUsedModel": {
+    "identifier": "qwen_qwen3.5-9b",
+    "indexedModelIdentifier": "bartowski/Qwen_Qwen3.5-9B-GGUF/Qwen_Qwen3.5-9B-IQ4_NL.gguf",
+    "instanceLoadTimeConfig": {
+      "fields": [
+        {
+          "key": "load.gpuStrictVramCap",
+          "value": false
+        },
+        {
+          "key": "llm.load.offloadKVCacheToGpu",
+          "value": true
+        },
+        {
+          "key": "load.gpuSplitConfig",
+          "value": {
+            "strategy": "evenly",
+            "disabledGpus": [],
+            "priority": [],
+            "customRatio": []
+          }
+        },
+        {
+          "key": "llm.load.llama.cpuThreadPoolSize",
+          "value": 6
+        },
+        {
+          "key": "llm.load.contextLength",
+          "value": 16384
+        },
+        {
+          "key": "llm.load.llama.flashAttention",
+          "value": true
+        },
+        {
+          "key": "llm.load.llama.tryDirectIO",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.acceleration.offloadRatio",
+          "value": 0.84375
+        }
+      ]
+    },
+    "instanceOperationTimeConfig": {
+      "fields": []
+    }
+  },
+  "notes": [],
+  "plugins": [],
+  "pluginConfigs": {},
+  "disabledPluginTools": [],
+  "looseFiles": [],
+  "assistantLastMessagedAt": 1777784678104
+}

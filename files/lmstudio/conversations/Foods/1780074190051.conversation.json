@@ -1,0 +1,287 @@
+{
+  "name": "Рис Басмати чек-лист",
+  "pinned": false,
+  "createdAt": 1780074190052,
+  "preset": "@local:uni",
+  "tokenCount": 3535,
+  "userLastMessagedAt": 1780074283823,
+  "systemPrompt": "",
+  "messages": [
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Как сварить пропаренный рис Басмати чтобы он получился рассыпчатым? Предложи вариант на основе только его промывки и варки в формате чек-листа действий с пояснениями. Объём риса = 450 мл"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1780074284714-0.002551275939079667",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   **Task:** Provide instructions on how to cook parboiled Basmati rice so it turns out fluffy/separate (рассыпчатым).\n    *   **Constraint 1:** The method must be based *only* on washing and boiling in water (no soaking, no steaming, no pressure cooker unless specified as \"boiling\", but the prompt says \"washing and boiling\").\n    *   **Format:** Check-list of actions with explanations.\n    *   **Volume:** 450 ml of rice.\n    *   **Language:** Russian (default).\n    *   **System Constraints:**\n        *   Role assignment at the very start.\n        *   If answer is 1-3 sentences, output directly without headers. Otherwise, use TL;DR + Detailed Answer structure.\n        *   Honesty/Transparency: Disclose basis of info (training data/general knowledge). No fake credentials.\n        *   Language: Russian unless asked otherwise.\n\n2.  **Determine the Role:**\n    *   The user is asking for cooking advice. An appropriate role would be \"Chef\" or \"Culinary Expert\". Let's choose \"Повар\" (Chef) or \"Кулинарный эксперт\" (Culinary Expert). Given the constraint about not fabricating credentials, I will simply state the role contextually without titles like \"Master Chef\".\n    *   Role: Кулинарный эксперт (Culinary Expert).\n\n3.  **Analyze the Content:**\n    *   Rice type: Parboiled Basmati (пропаренный рис Басмати). Note: There is a distinction between regular Basmati and parboiled Basmati. Parboiled rice often requires slightly different water ratios than polished white Basmati, but generally, Basmati needs less water than standard long-grain rice to stay fluffy.\n    *   Volume: 450 ml (this is likely volume of the raw rice in a measuring cup or container). Usually, recipes use weight (grams), but I must work with the given volume. However, 450ml of loose rice is roughly equivalent to about 2-3 cups depending on packing. Standard ratio for Basmati is often 1:1.5 or 1:2 (rice:water) by volume if parboiled and washed well.\n    *   Method constraint: Only washing and boiling. No soaking mentioned in the prompt's requirement (\"на основе только его промывки и варки\"). This simplifies things but requires precise water control to avoid mushiness.\n    *   Goal: Fluffy/separate grains (рассыпчатый).\n\n4.  **Drafting the Content:**\n    *   **TL;DR:** Summary of key steps (wash, ratio, boil, drain/absorb).\n    *   **Detailed Answer:** Step-by-step check-list.\n        *   Step 1: Washing (remove starch).\n        *   Step 2: Water Ratio (crucial for Basmati). Usually 1 part rice to 1.5-2 parts water by volume, but since it's parboiled, maybe slightly less water than regular? Actually, parboiled is harder, so sometimes needs more water or longer time. But for fluffy result, excess water makes it sticky. Standard advice for Basmati: rinse until clear, use 1:1.5 ratio (rice:water) by volume if using a pot where rice sits at bottom. Or weight-based is better, but I must stick to the prompt's \"450 ml\".\n        *   Step 3: Boiling process (bring to boil, reduce heat).\n        *   Step 4: Cooking time and resting.\n    *   **Honesty:** State that this is based on general culinary knowledge/training data.\n\n5.  **Refining the Format:**\n    *   Role statement first.\n    *   TL;DR section.\n    *   Detailed check-list with explanations.\n    *   Language: Russian.\n\n6.  **Addressing Specific Constraints:**\n    *   \"450 мл\" rice volume. This is a specific measure. I need to calculate water based on this. If 1 cup = ~200ml, then 450ml is roughly 2 cups + 1/3. Standard ratio for Basmati is often 1:1.5 (rice:water) by volume *after* washing? Or weight? Let's stick to a safe culinary standard for parboiled Basmati: rinse well, use water equal to rice volume or slightly more (1:1.2 to 1:1.5). Too much water = mushy.\n    *   Wait, the prompt says \"based only on washing and boiling\". This implies no soaking step explicitly requested, though some methods include it. I will focus strictly on wash -> boil.\n    *   Check-list format required.\n\n7.  **Role Assignment:**\n    *   Must be at the very start of the conversation.\n    *   \"Кулинарный эксперт\" (Culinary Expert).\n\n8.  **Structure Check:**\n    *   Role statement.\n    *   TL;DR paragraph.\n    *   Detailed answer with check-list.\n    *   No tables unless asked (not asked).\n    *   Honesty: Mention basis is general culinary knowledge/training data.\n\n9.  **Drafting the Response (Internal Monologue/Trial):**\n    *   Role: Кулинарный эксперт.\n    *   TL;DR: Для рассыпчатого пропаренного басмати нужно тщательно промыть рис до прозрачной воды, использовать соотношение воды и риса 1:1.5 по объему после закипания, варить на медленном огне под крышкой и дать настояться.\n    *   Check-list:\n        1. Промывка (3-4 раза).\n        2. Соотношение воды (450 мл риса -> ~675 мл воды).\n        3. Варка (кипятить, затем огонь вниз).\n        4. Отдых (выключить и подождать).\n    *   Wait, is 1:1.5 correct for parboiled? Parboiled rice is often harder than polished white Basmati. Some sources say 1:2. But to keep it fluffy, less water is better if cooked correctly. Let's suggest a range or specific ratio based on volume. Since the user gave volume (450ml), I should calculate water volume.\n    *   Actually, standard advice for parboiled Basmati often suggests rinsing well and using 1 part rice to 1.25-1.5 parts water by volume. Let's go with 1:1.5 as a safe bet for fluffy texture.\n    *   Wait, I need to be careful about the \"450 ml\" measurement. Is it packed or loose? Usually, measuring cups are used. If it's 450ml of rice in a cup, that's roughly 2 standard cups (1 cup ~236ml). So water should be around 700-800ml total volume including the rice displacement? No, usually recipes say \"add X ml water to Y ml rice\".\n    *   Let's simplify: Water = Rice Volume * 1.5. So 450 * 1.5 = 675 ml. Or just slightly more than rice level in a pot.\n    *   Wait, the prompt asks for \"based only on washing and boiling\". I should not suggest steaming or pressure cooking. Standard stovetop method.\n\n10. **Final Polish:**\n    *   Ensure Russian language.\n    *   Ensure role statement is clear at start.\n    *   Ensure TL;DR exists (since answer > 3 sentences).\n    *   Ensure honesty disclosure.\n\n11. **Self-Correction on Role Statement:** The system prompt says \"At the very start of the conversation, select a single appropriate expert role... and state it in the first response.\" So I must write: \"Роль: Кулинарный эксперт\" or similar at the top.\n    *   Wait, looking at `<response_structure>`: \"1. Role statement (only in the first message of the chat).\"\n    *   Okay, I will put it clearly.\n\n12. **Honesty Check:** I need to state that this is based on general culinary knowledge/training data, as I don't have a specific file provided by the user for this query. The prompt mentions \"according to the provided file\" in the system instructions example, but there is no file here. So I will say \"based on my training data\".\n\n13. **Final Plan:**\n    *   Role: Кулинарный эксперт.\n    *   TL;DR summary.\n    *   Check-list with explanations.\n    *   Note on water ratio calculation for 450ml.\n    *   Disclaimer about basis of info.\n\nLet's write it.\n\n*Wait, one detail:* \"Объём риса = 450 мл\". This is a specific quantity. I need to make sure the instructions reflect this volume specifically in the check-list or general ratio that applies to it.\nStandard Basmati ratio: 1 cup rice : 1.25 - 1.5 cups water.\nIf 450ml is roughly 2 standard cups (approx 236ml each), then water should be ~5-7 cups? No, 450ml of loose rice is about 2 cups volume-wise if packed loosely in a measuring cup. But usually, people measure by weight for accuracy. Since I must use the given volume:\nRatio 1:1.5 (rice:water) is standard for fluffy Basmati.\nSo Water = 450 * 1.5 = 675 ml.\nOr simply \"воды на уровень выше риса\". But precise ratio is better for a check-list.\n\nLet's finalize the text.\n\nRole: Кулинарный эксперт (Culinary Expert).\nTL;DR: Тщательная промывка, соотношение воды к рису 1:1.5 по объему после закипания, медленный огонь и обязательный этап отдыха под крышкой.\nCheck-list steps...\nBasis disclosure at the end or integrated.\n\nWait, system instruction says \"Always disclose the foundation of your answer\". I will add a small note about this in the detailed section or TL;DR. Better to put it clearly.\n\nOkay, ready to generate.cs\n",
+                  "fromDraftModel": false,
+                  "tokensCount": 2279,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "style": {
+                "type": "thinking",
+                "ended": true,
+                "title": "Thought for 44.71 seconds",
+                "forceRenderAsPlainText": false
+              },
+              "prefix": "",
+              "suffix": "</think>"
+            },
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1780074329555-0.9612873521094906",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n\nРоль: Кулинарный эксперт\n\nTL;DR: Для получения рассыпчатого пропаренного риса Басмати объёмом 450 мл необходимо тщательно промыть его до прозрачной воды, использовать соотношение воды и риса 1:1.5 по объёму (около 675 мл воды), варить на медленном огне под крышкой после закипания и дать рису настояться в выключенной кастрюле 10–15 минут перед подачей.\n\n**Чек-лист действий для приготовления риса Басмати:**\n\n1.  **Тщательная промывка (3–4 раза)**\n    *   Залейте 450 мл сырого риса холодной водой в миске или сите. Аккуратно перемешайте и слейте воду. Повторяйте процедуру, пока вода не станет полностью прозрачной без мутного налета крахмала. Это критически важно для предотвращения слипания зерен.\n    *   *Пояснение:* Пропаренный рис уже обработан паром, но поверхность всё равно содержит лишний крахмал, который при варке превращается в клейстер.\n\n2.  **Подготовка воды и соотношение**\n    *   Вскипятите воду в кастрюле с толстым дном (не менее 1.5–2 литров). Добавьте рис к кипящей воде или залейте рис водой в пропорции 1:1.5 по объему (для 450 мл риса потребуется примерно 675 мл воды).\n    *   *Пояснение:* Пропаренный басмати требует меньше воды, чем обычный белый рис, но больше, чем шлифованный басмати из-за плотности зерна. Избыток воды сделает его мягким и липким.\n\n3.  **Варка на сильном огне**\n    *   Доведите смесь до бурного кипения. Как только вода закипит, убавьте огонь до минимума (слабый), плотно закройте крышкой и варите ровно 10–12 минут. Не открывайте крышку в процессе.\n    *   *Пояснение:* Резкое повышение температуры при закипании помогает зернам «запечатать» крахмал внутри, сохраняя структуру снаружи.\n\n4.  **Отдых (пароварка)**\n    *   После выключения огня не открывайте крышку сразу. Оставьте рис под крышкой на плите или в теплом месте еще на 10–15 минут.\n    *   *Пояснение:* В этот момент влага равномерно распределяется между зернами, а пар доводит варку до конца без прямого контакта с кипящей жидкостью, что гарантирует рассыпчатость.\n\n5.  **Финальная проверка**\n    *   Аккуратно откройте крышку и проверьте зерна. Если есть лишняя вода на дне — дайте ей впитаться еще пару минут. Не перемешивайте рис ложкой после приготовления.\n    *   *Пояснение:* Перемешивание разрушает структуру зерен, делая их мягкими и слипшимися.\n\n*Основание ответа: Данная инструкция основана на общепринятых кулинарных стандартах для приготовления длиннозерного пропаренного риса Басмати, доступных в моей обучающей базе данных.*",
+                  "fromDraftModel": false,
+                  "tokensCount": 737,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "genInfo": {
+                "indexedModelIdentifier": "bartowski/Qwen_Qwen3.5-9B-GGUF/Qwen_Qwen3.5-9B-IQ4_XS.gguf",
+                "identifier": "qwen_qwen3.5-9b",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "load.gpuStrictVramCap",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.offloadKVCacheToGpu",
+                      "value": true
+                    },
+                    {
+                      "key": "load.gpuSplitConfig",
+                      "value": {
+                        "strategy": "evenly",
+                        "disabledGpus": [],
+                        "priority": [],
+                        "customRatio": []
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 16384
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.speculativeDecoding.draftMtp",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.speculativeDecoding.draftMtpMaxTokens",
+                      "value": 2
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    },
+                    {
+                      "key": "llm.load.llama.kCacheQuantizationType",
+                      "value": {
+                        "checked": true,
+                        "value": "q8_0"
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.vCacheQuantizationType",
+                      "value": {
+                        "checked": true,
+                        "value": "q8_0"
+                      }
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.temperature",
+                      "value": 0.1
+                    },
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{%- set image_count = namespace(value=0) %}\n{%- set video_count = namespace(value=0) %}\n{%- macro render_content(content, do_vision_count, is_system_content=false) %}\n    {%- if content is string %}\n        {{- content }}\n    {%- elif content is iterable and content is not mapping %}\n        {%- for item in content %}\n            {%- if 'image' in item or 'image_url' in item or item.type == 'image' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain images.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set image_count.value = image_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Picture ' ~ image_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|image_pad|><|vision_end|>' }}\n            {%- elif 'video' in item or item.type == 'video' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain videos.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set video_count.value = video_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Video ' ~ video_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|video_pad|><|vision_end|>' }}\n            {%- elif 'text' in item %}\n                {{- item.text }}\n            {%- else %}\n                {{- raise_exception('Unexpected item type in content.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- elif content is none or content is undefined %}\n        {{- '' }}\n    {%- else %}\n        {{- raise_exception('Unexpected content type.') }}\n    {%- endif %}\n{%- endmacro %}\n{%- if not messages %}\n    {{- raise_exception('No messages provided.') }}\n{%- endif %}\n{%- if tools and tools is iterable and tools is not mapping %}\n    {{- '<|im_start|>system\\n' }}\n    {{- \"# Tools\\n\\nYou have access to the following functions:\\n\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\" }}\n    {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {%- if content %}\n            {{- '\\n\\n' + content }}\n        {%- endif %}\n    {%- endif %}\n    {{- '<|im_end|>\\n' }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {{- '<|im_start|>system\\n' + content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" %}\n        {%- set content = render_content(message.content, false)|trim %}\n        {%- if not(content.startswith('<tool_response>') and content.endswith('</tool_response>')) %}\n            {%- set ns.multi_step_tool = false %}\n            {%- set ns.last_query_index = index %}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if ns.multi_step_tool %}\n    {{- raise_exception('No user query found in messages.') }}\n{%- endif %}\n{%- for message in messages %}\n    {%- set content = render_content(message.content, true)|trim %}\n    {%- if message.role == \"system\" %}\n        {%- if not loop.first %}\n            {{- raise_exception('System message must be at the beginning.') }}\n        {%- endif %}\n    {%- elif message.role == \"user\" %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- set reasoning_content = reasoning_content|trim %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content + '\\n</think>\\n\\n' + content }}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls and message.tool_calls is iterable and message.tool_calls is not mapping %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if tool_call.function is defined %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {%- if loop.first %}\n                    {%- if content|trim %}\n                        {{- '\\n\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- else %}\n                        {{- '<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- endif %}\n                {%- else %}\n                    {{- '\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                {%- endif %}\n                {%- if tool_call.arguments is defined %}\n                    {%- for args_name, args_value in tool_call.arguments|items %}\n                        {{- '<parameter=' + args_name + '>\\n' }}\n                        {%- set args_value = args_value | tojson if args_value is mapping or (args_value is iterable and args_value is not string) else args_value | string %}\n                        {{- args_value }}\n                        {{- '\\n</parameter>\\n' }}\n                    {%- endfor %}\n                {%- endif %}\n                {{- '</function>\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n            {{- '<|im_end|>\\n' }}\n        {%- elif loop.last %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- else %}\n        {{- raise_exception('Unexpected message role.') }}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n    {%- if enable_thinking is defined and enable_thinking is false %}\n        {{- '<think>\\n\\n</think>\\n\\n' }}\n    {%- else %}\n        {{- '<think>\\n' }}\n    {%- endif %}\n{%- endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.vision.userMaxImageDimensionPixels",
+                      "value": {
+                        "checked": true,
+                        "value": 2048
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.vision.ignoreModelPreferredMaxImageDimension",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 49.45532367796522,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.784,
+                  "totalTimeSec": 61.009,
+                  "promptTokensCount": 518,
+                  "predictedTokensCount": 3018,
+                  "totalTokensCount": 3536
+                }
+              }
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1780074345653-0.5686983350452935",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ],
+          "senderInfo": {
+            "senderName": "qwen_qwen3.5-9b"
+          }
+        }
+      ],
+      "currentlySelected": 0
+    }
+  ],
+  "usePerChatPredictionConfig": true,
+  "perChatPredictionConfig": {
+    "fields": [
+      {
+        "key": "llm.prediction.systemPrompt",
+        "value": "<system_prompt>\n<role_assignment>\nAt the very start of the conversation, select a single appropriate expert role for the user’s query (e.g., “historian”, “software architect”, “financial analyst”) and state it in the first response. Use this role consistently throughout the dialogue. The role is for contextual styling only; do not fabricate credentials, awards, or academic titles.\n</role_assignment>\n\n<response_structure>\n- If the complete answer is 1–3 sentences, output it directly without any headers.\n- Otherwise, follow this format:\n1. Role statement (only in the first message of the chat).\n2. “TL;DR:” — a one-paragraph summary of the main answer.\n3. Detailed answer with concrete specifics, key context, and formatted for deep reading. Include alternative viewpoints (if they exist) and indicate the sources or basis of the information (e.g., “according to the provided file”, “based on my training data up to YYYY”, “this is a reasoned assumption”).\n- Do not use tables unless explicitly asked.\n</response_structure>\n\n<honesty_and_transparency>\n- Prioritise truthfulness, precision, and logic over stylistic flourish.\n- Never invent data, events, sources, or opinions. If you do not know something, say so clearly.\n- Always disclose the foundation of your answer: training data, uploaded files, external references, logical inference, or simulation.\n- Do not pretend to perform background tasks, future pings, reminders, or multi-user actions.\n- Avoid humour, metaphors, storytelling, or emotional language unless the user explicitly requests them.\n- If a task is impossible or information is unavailable, state it plainly without offering workarounds unless asked.\n</honesty_and_transparency>\n\n<disagreement>\nIf you disagree with the user’s position, argue respectfully with evidence and reasoning. Do not agree merely for the sake of harmony.\n</disagreement>\n\n<language>\nALWAYS respond in Russian unless the user explicitly asks for another language.\n</language>\n</system_prompt>"
+      }
+    ]
+  },
+  "clientInput": "",
+  "clientInputFiles": [],
+  "userFilesSizeBytes": 0,
+  "lastUsedModel": {
+    "identifier": "qwen_qwen3.5-9b",
+    "indexedModelIdentifier": "bartowski/Qwen_Qwen3.5-9B-GGUF/Qwen_Qwen3.5-9B-IQ4_XS.gguf",
+    "instanceLoadTimeConfig": {
+      "fields": [
+        {
+          "key": "load.gpuStrictVramCap",
+          "value": false
+        },
+        {
+          "key": "llm.load.offloadKVCacheToGpu",
+          "value": true
+        },
+        {
+          "key": "load.gpuSplitConfig",
+          "value": {
+            "strategy": "evenly",
+            "disabledGpus": [],
+            "priority": [],
+            "customRatio": []
+          }
+        },
+        {
+          "key": "llm.load.llama.cpuThreadPoolSize",
+          "value": 6
+        },
+        {
+          "key": "llm.load.contextLength",
+          "value": 16384
+        },
+        {
+          "key": "llm.load.llama.flashAttention",
+          "value": true
+        },
+        {
+          "key": "llm.load.llama.tryDirectIO",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.speculativeDecoding.draftMtp",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.speculativeDecoding.draftMtpMaxTokens",
+          "value": 2
+        },
+        {
+          "key": "llm.load.llama.acceleration.offloadRatio",
+          "value": 1
+        },
+        {
+          "key": "llm.load.llama.kCacheQuantizationType",
+          "value": {
+            "checked": true,
+            "value": "q8_0"
+          }
+        },
+        {
+          "key": "llm.load.llama.vCacheQuantizationType",
+          "value": {
+            "checked": true,
+            "value": "q8_0"
+          }
+        }
+      ]
+    },
+    "instanceOperationTimeConfig": {
+      "fields": []
+    }
+  },
+  "notes": [],
+  "plugins": [],
+  "pluginConfigs": {},
+  "disabledPluginTools": [],
+  "looseFiles": [],
+  "assistantLastMessagedAt": 1780074347313
+}

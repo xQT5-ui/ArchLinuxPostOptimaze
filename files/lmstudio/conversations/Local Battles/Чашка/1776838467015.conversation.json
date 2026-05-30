@@ -1,0 +1,223 @@
+{
+  "name": "Chipped Metal Cup",
+  "pinned": false,
+  "createdAt": 1776838467016,
+  "preset": "",
+  "tokenCount": 2461,
+  "userLastMessagedAt": 1776838475318,
+  "systemPrompt": "",
+  "messages": [
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "у меня есть металлическая чашка, но у неё заварено верхнее отверстие. Так же я заметил что у неё отпилено дно. Как из неё пить?"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1776838475494-0.5149158520556831",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Хорошо, пользователь спрашивает, как пить с металлической чашкой, которая имеет сверху отверстие и снизу разорванное. Сначала мне нужно понять, что именно у него проблема. Он говорит, что заварено верхнее отверстие — возможно, это отверстие в upper part, а снизу отпилено дно. То есть чашка повреждена снизу.\n\nПервое, что приходит в голову: если дно разорвано, то напиток может пролиться или даже вытекать. Но он хочет пить из неё. Может быть, он думает, что можно обойтись без нижней части? Но обычно для питья нужно, чтобы чашка была целой.\n\nПроверю, что означает \"заварено верхнее отверстие\". Возможно, это опечатка или неправильный перевод. Может быть, имеется в виду, что сверху есть отверстие, и оно повреждено? Или заварено — но заварение обычно относится к кофе или чему-то, а не к чашке.\n\nЕще вариант: \"заварено\" может быть ошибкой, и имелось в виду \"забито\" или \"заполнено\". Но тогда \"заварено\" не совсем логично. Возможно, пользователь перепутал слова.\n\nТеперь основная проблема — разорванное дно. Если дно отпилено (разорвано), то чашка не может содержать жидкость, и при попытке пить из неё напиток выйдет или прольется. Но если отверстие сверху есть, возможно, можно вставить трубку? Но обычно для питья нужно, чтобы чашка была целой.\n\nМожет быть, пользователь имеет в виду, что чашка имеет верхнее отверстие (как шейка), и оно повреждено. Или снизу дно разорвано. Нужно уточнить.\n\nПредположу, что чашка металлическая, сверху есть отверстие (например, для вытягивания напитка через трубку), но снизу дно разорвано. Тогда, возможно, можно обойтись без нижней части? Но если дно разорвано, то чашка не будет содержать жидкость, и даже если вставить трубку сверху, жидкость может пролиться.\n\nЕще вариант: \"отпилено\" — это уменьшительное от \"отпиленное\", но обычно говорят \"разорванное\". Возможно, опечатка. Допустим, дно разорвано.\n\nКак исправить? Может, его можно заменить на крышку или что-то вроде этого. Например, использовать трубку из пластика, чтобы вставить ее в отверстие сверху, и заполнить чашку снутри снизу, но если дно разорвано, то жидкость не будет держаться.\n\nНо пользователь спрашивает, как из неё пить, то есть использовать такую чашку. Возможно, он хочет знать, можно ли пить из нее без замены.\n\nЕще подумаю: если нижнее дно разорвано, но верховое отверстие есть, то, возможно, он может вставить трубку и заполнить чашку снутри. Но если дно не стабильно, то жидкость утечет. Или, может быть, он хочет использовать её как шейку, и напиток будет вытягиваться через отверстие, но тогда нужно, чтобы чашка была заполнена сверху.\n\nНо обычно для питья из такой чашки нужно, чтобы нижняя часть была целой. Возможно, его можно починить клеем или чем-то вроде эпоксидного сока? Но это временное решение.\n\nИли, может быть, он имеет в виду, что чашка металлическая, сверху есть отверстие (как шейка), и снизу дно разорвано. Тогда, возможно, можно использовать его как обычную чашку, но только если нижнее дно не сильно повреждено. Но если оно отпилено — значит, разорвано.\n\nЕще вариант: \"отпилено\" может быть ошибкой, и имелось в виду \"заварено\", то есть заваренное (погружено в воду или что-то). Но тогда не понятно.\n\nПроверю еще раз: \"металлическая чашка, но у неё заварено верхнее отверстие. Так же я заметил что у неё отпилено дно.\" Возможно, \"заварено\" — это \"забито\", то есть сверху есть крышка или отверстие, и оно заблокировано? Или \"заварено\" как \"запечатано\".\n\nНо если снизу дно разорвано, то чашка не может держать жидкость. Значит, нужно что-то сделать.\n\nВозможно, пользователь хочет знать, можно ли пить из такой чашки без замены. Ответ: нет, потому что дно разорвано, напиток выйдет.\n\nНо если он хочет использовать её как шейку, то может вставить трубку и заполнить снизу, но это не очень безопасно.\n\nМожет быть, есть способ починить? Например, применить клей или герметик. Но это временно, и для питья не рекомендуется, так как возможны риски утечки.\n\nЕще подумаю: если чашка металлическая, снизу разорвано, то можно использовать её только в определенных условиях. Например, если наполнить снутри, но при этом, возможно, использовать шейку из другого материала.\n\nНо пользователь спрашивает \"как из неё пить\", то есть из этой конкретной чашки. Значит, нужно предложить решение для использования.\n\nВозможно, ответ: нельзя пить из такой чашки, потому что дно разорвано, и напиток вытечет. Нужно заменить её на новую или починить.\n\nНо если он хочет использовать временно, то можно применить клей. Но это не рекомендуется для еды.\n\nЕще вариант: \"отпилено\" — это от пиленения? То есть дно было обработано чем-то и отпилено? Не уверен.\n\nВозможно, пользователь перепутал слова. Например, \"заварено\" — может быть \"заполнено\", но тогда \"заправено\" — не то.\n\nИли \"заварено\" как \"переварено\", но чашка не переваривается.\n\nЛучше предположить опечатку. Допустим, дно разорвано (отпилено = разорвано), а сверху отверстие есть.\n\nТогда ответ: нельзя пить из такой чашки, так как нижнее дно повреждено, и напиток утечет. Нужно заменить её или починить.\n\nНо если он хочет использовать как шейку, то можно вставить трубку и заполнить снизу, но это неудобно и может быть опасно.\n\nМожет быть, есть способ: если дно разорвано, но верховое отверстие есть, то можно ввести трубку из пластика в отверстие сверху, чтобы наполнять чашку снутри снизу. Тогда при питье жидкость будет вытекать через отверстие.\n\nНо если дно разорвано, то даже при заполнении снизу, жидкость может утечь в разрыв. Поэтому нужно, чтобы нижнее дно было целым.\n\nПоэтому правильный ответ: нельзя пить из такой чашки, так как нижнее дно повреждено. Нужно заменить её или починить.\n\nНо пользователь может не знать, как починить. Возможно, он думает, что можно обойтись без замены.\n\nЕще проверю: если чашка металлическая, сверху отверстие, снизу разорвано — возможно, это шейка для вытягивания напитка (как у кофемашины), но тогда дно должно быть целым. Если оно разорвано, то не получится.\n\nВозможно, он имеет в виду, что чашка имеет сверху отверстие (например, чтобы пить через трубку), и снизу дно разорвано, поэтому напиток не держится.\n\nЗначит, ответ: нельзя пить из такой чашки. Нужно заменить или починить.\n\nНо если он хочет временное решение, то можно использовать клей. Но это не рекомендуется для еды.\n\nИтак, итоговый ответ: чтобы пить из такой чашки, нужно сначала починить разорванное дно (применив клей или герметик), но лучше заменить её на новую, так как временные решения могут быть опасны.\n",
+                  "fromDraftModel": false,
+                  "tokensCount": 2006,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "style": {
+                "type": "thinking",
+                "ended": true,
+                "title": "Thought for 31.23 seconds",
+                "forceRenderAsPlainText": false
+              },
+              "prefix": "",
+              "suffix": "</think>"
+            },
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1776838506805-0.5185025797772054",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\nЕсли у тебя металлическая чашка с **разорванным дном** и **поверхностным отверстием**, то **нельзя пить из неё напрямую**. Вот почему:\n\n1. **Разорванное дно** — напиток вытечет при попытке его налить или вытянуть через отверстие сверху. Даже если заполнить чашку снизу, жидкость утечёт через разрыв.\n2. **\"Заварено верхнее отверстие\"** (скорее всего, опечатка) — вероятно, имелось в виду **отверстие сверху**, но оно не влияет на проблему с дном.\n\n---\n\n### Как исправить?\n- **Временно** (не рекомендуется для еды):  \n  Примени клея или герметик к разорванному дну. Но это рискованно: возможны утечки, коррозия металла или токсичные отложения.\n- **Долгосрочно**:  \n  Замени чашку на новую или почините её профессионально (например, с помощью эпоксидного сока).\n\n---\n\n### Почему нельзя пить из такой чашки?\nЕсли попробовать налить напиток через отверстие сверху:\n- Он вытечет через разорванное дно.\n- Может оставить на металле токсичные остатки (особенно если чашка старый и не стерильная).\n\n---\n\n**Вывод**: Чтобы пить безопасно, **обязательно нужно заменить или починить чашку**. Не рискуй — разорванное дно не подходит для еды. Если хочешь временный вариант, используйте чистую шейку (например, из пластика) вместо этой чашки. 😊",
+                  "fromDraftModel": false,
+                  "tokensCount": 399,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "genInfo": {
+                "indexedModelIdentifier": "lmstudio-community/NVIDIA-Nemotron-3-Nano-4B-GGUF/NVIDIA-Nemotron-3-Nano-4B-Q8_0.gguf",
+                "identifier": "nvidia-nemotron-3-nano-4b",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "load.gpuStrictVramCap",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.offloadKVCacheToGpu",
+                      "value": true
+                    },
+                    {
+                      "key": "load.gpuSplitConfig",
+                      "value": {
+                        "strategy": "evenly",
+                        "disabledGpus": [],
+                        "priority": [],
+                        "customRatio": []
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 16384
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{% macro render_extra_keys(json_dict, handled_keys) %}\n    {%- if json_dict is mapping %}\n        {%- for json_key in json_dict if json_key not in handled_keys %}\n            {%- if json_dict[json_key] is mapping or (json_dict[json_key] is iterable and json_dict[json_key] is not string) %}\n                {{- '\\n<' ~ json_key ~ '>' ~ (json_dict[json_key] | tojson) ~ '</' ~ json_key ~ '>' }}\n            {%- else %}\n                {{-'\\n<' ~ json_key ~ '>' ~ (json_dict[json_key] | string) ~ '</' ~ json_key ~ '>' }}\n            {%- endif %}\n        {%- endfor %}\n    {%- endif %}\n{% endmacro %}\n{%- set enable_thinking = enable_thinking if enable_thinking is defined else True %}\n{%- set truncate_history_thinking = truncate_history_thinking if truncate_history_thinking is defined else True %}\n\n{%- set ns = namespace(last_user_idx = -1) %}\n{%- set loop_messages = messages %}\n{%- for m in loop_messages %}\n  {%- if m[\"role\"] == \"user\" %}\n    {%- set ns.last_user_idx = loop.index0 %}\n  {%- endif %}\n{%- endfor %}\n\n{%- if messages[0][\"role\"] == \"system\" %}\n    {%- set system_message = messages[0][\"content\"] %}\n    {%- set loop_messages = messages[1:] %}\n{%- else %}\n    {%- set system_message = \"\" %}\n    {%- set loop_messages = messages %}\n{%- endif %}\n{%- if not tools is defined %}\n    {%- set tools = [] %}\n{%- endif %}\n{# Recompute last_user_idx relative to loop_messages after handling system #}\n{%- set ns = namespace(last_user_idx = -1) %}\n{%- for m in loop_messages %}\n  {%- if m[\"role\"] == \"user\" %}\n    {%- set ns.last_user_idx = loop.index0 %}\n  {%- endif %}\n{%- endfor %}\n{%- if system_message is defined %}\n    {{- \"<|im_start|>system\\n\" + system_message }}\n{%- else %}\n    {%- if tools is iterable and tools | length > 0 %}\n        {{- \"<|im_start|>system\\n\" }}\n    {%- endif %}\n{%- endif %}\n{%- if tools is iterable and tools | length > 0 %}\n    {%- if system_message is defined and system_message | length > 0 %}\n        {{- \"\\n\\n\" }}\n    {%- endif %}\n    {{- \"# Tools\\n\\nYou have access to the following functions:\\n\\n\" }}\n    {{- \"<tools>\" }}\n    {%- for tool in tools %}\n        {%- if tool.function is defined %}\n            {%- set tool = tool.function %}\n        {%- endif %}\n        {{- \"\\n<function>\\n<name>\" ~ tool.name ~ \"</name>\" }}\n        {%- if tool.description is defined %}\n            {{- '\\n<description>' ~ (tool.description | trim) ~ '</description>' }}\n        {%- endif %}\n        {{- '\\n<parameters>' }}\n        {%- if tool.parameters is defined and tool.parameters is mapping and tool.parameters.properties is defined and tool.parameters.properties is mapping %}\n            {%- for param_name, param_fields in tool.parameters.properties|items %}\n                {{- '\\n<parameter>' }}\n                {{- '\\n<name>' ~ param_name ~ '</name>' }}\n                {%- if param_fields.type is defined %}\n                    {{- '\\n<type>' ~ (param_fields.type | string) ~ '</type>' }}\n                {%- endif %}\n                {%- if param_fields.description is defined %}\n                    {{- '\\n<description>' ~ (param_fields.description | trim) ~ '</description>' }}\n                {%- endif %}\n                {%- if param_fields.enum is defined %}\n                    {{- '\\n<enum>' ~ (param_fields.enum | tojson) ~ '</enum>' }}\n                {%- endif %}\n                {%- set handled_keys = ['name', 'type', 'description', 'enum'] %}\n                {{- render_extra_keys(param_fields, handled_keys) }}\n                {{- '\\n</parameter>' }}\n            {%- endfor %}\n        {%- endif %}\n        {% set handled_keys = ['type', 'properties', 'required'] %}\n        {{- render_extra_keys(tool.parameters, handled_keys) }}\n        {%- if tool.parameters is defined and tool.parameters.required is defined %}\n            {{- '\\n<required>' ~ (tool.parameters.required | tojson) ~ '</required>' }}\n        {%- endif %}\n        {{- '\\n</parameters>' }}\n        {%- set handled_keys = ['type', 'name', 'description', 'parameters'] %}\n        {{- render_extra_keys(tool, handled_keys) }}\n        {{- '\\n</function>' }}\n    {%- endfor %}\n    {{- \"\\n</tools>\" }}\n\n    {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n{%- endif %}\n\n\n{%- if system_message is defined %}\n    {{- '<|im_end|>\\n' }}\n{%- else %}\n    {%- if tools is iterable and tools | length > 0 %}\n        {{- '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n\n{%- for message in loop_messages %}\n    {%- if message.role == \"assistant\" %}\n        {# Add reasoning content in to content field for unified processing below. #}\n        {%- if message.reasoning_content is defined and message.reasoning_content is string and message.reasoning_content | trim | length > 0 %}\n            {%- set content = \"<think>\\n\" ~ message.reasoning_content ~ \"\\n</think>\\n\" ~ (message.content | default('', true)) %}\n        {%- else %}\n            {%- set content = message.content | default('', true) %}\n            {%- if content is string -%}\n                {# Allow downstream logic to to take care of broken thought, only handle coherent reasoning here. #}\n                {%- if '<think>' not in content and '</think>' not in content -%}\n                    {%- set content = \"<think></think>\" ~ content -%}\n                {# Fix content with closing think but not opening #}\n                {%- elif '<think>' not in content and '</think>' in content -%}\n                    {%- set content = \"<think>\n\" ~ content -%}   \n                {%- endif -%}\n            {%- else -%}\n                {%- set content = content -%}\n            {%- endif -%}\n        {%- endif %}\n        {%- if message.tool_calls is defined and message.tool_calls is iterable and message.tool_calls | length > 0 %}\n            {# Assistant message has tool calls. #}\n            {{- '<|im_start|>assistant\\n' }}\n                {%- set include_content = not (truncate_history_thinking and loop.index0 < ns.last_user_idx) %}\n                {%- if content is string and content | trim | length > 0 %}\n                    {%- if include_content %}\n                        {{- (content | trim) ~ '\\n' -}}\n                    {%- else %}\n                        {%- set c = (content | string) %}\n                        {%- if '</think>' in c %}\n                            {# Keep only content after the last closing think. Also generation prompt causes this. #}\n                            {%- set c = c.split('</think>')[-1] %}\n                        {%- elif '<think>' in c %}\n                            {# If <think> was opened but never closed, drop the trailing think segment #}\n                            {%- set c = c.split('<think>')[0] %}\n                        {%- endif %}\n                        {%- set c = \"<think></think>\" ~ c | trim %}\n                        {%- if c | length > 0 %}\n                            {{- c ~ '\\n' -}}\n                        {%- endif %}\n                    {%- endif %}\n                {%- else %}\n                    {{- \"<think></think>\" -}}\n                {%- endif %}\n                {%- for tool_call in message.tool_calls %}\n                    {%- if tool_call.function is defined %}\n                        {%- set tool_call = tool_call.function %}\n                    {%- endif %}\n                    {{- '<tool_call>\\n<function=' ~ tool_call.name ~ '>\\n' -}}\n                        {%- if tool_call.arguments is defined %}\n                            {%- for args_name, args_value in tool_call.arguments|items %}\n                                {{- '<parameter=' ~ args_name ~ '>\\n' -}}\n                                    {%- set args_value = args_value | tojson if args_value is mapping or (args_value is iterable and args_value is not string) else args_value | string %}\n                                {{- args_value ~ '\\n</parameter>\\n' -}}\n                            {%- endfor %}\n                        {%- endif %}\n                    {{- '</function>\\n</tool_call>\\n' -}}\n                {%- endfor %}\n                {{- '<|im_end|>\\n' }}\n        {%- else %}\n            {# Assistant message doesn't have tool calls. #}\n            {%- if not (truncate_history_thinking and loop.index0 < ns.last_user_idx) %}\n                {{- '<|im_start|>assistant\\n' ~ (content | default('', true) | string | trim) ~ '<|im_end|>\\n' }}\n            {%- else %}\n                {%- set c = (content | default('', true) | string) %}\n                {%- if '<think>' in c and '</think>' in c %}\n                    {%- set c = \"<think></think>\" ~ c.split('</think>')[-1] %}\n                {%- endif %}\n                {%- set c = c | trim %}\n                {%- if c | length > 0 %}\n                    {{- '<|im_start|>assistant\\n' ~ c ~ '<|im_end|>\\n' }}\n                {%- else %}\n                    {{- '<|im_start|>assistant\\n<|im_end|>\\n' }}\n                {%- endif %}\n            {%- endif %}\n        {%- endif %}\n    {%- elif message.role == \"user\" or message.role == \"system\" %}\n        {{- '<|im_start|>' + message.role + '\\n' }}\n        {%- set content = message.content | string %}\n        {{- content }}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n            {{- '<|im_start|>user\\n' }}\n        {%- endif %}\n        {{- '<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>\\n' }}\n        {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n            {{- '<|im_end|>\\n' }}\n        {%- elif loop.last %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- else %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endfor %}\n\n{%- if add_generation_prompt %}\n    {%- if enable_thinking %}\n        {{- '<|im_start|>assistant\\n<think>\\n' }}\n    {%- else %}\n        {{- '<|im_start|>assistant\\n<think></think>' }}\n    {%- endif %}\n{%- endif %}\n"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 63.960227730271356,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.085,
+                  "totalTimeSec": 37.647,
+                  "promptTokensCount": 59,
+                  "predictedTokensCount": 2409,
+                  "totalTokensCount": 2468
+                }
+              }
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1776838513073-0.9940155712445022",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ],
+          "senderInfo": {
+            "senderName": "nvidia-nemotron-3-nano-4b"
+          }
+        }
+      ],
+      "currentlySelected": 0
+    }
+  ],
+  "usePerChatPredictionConfig": true,
+  "perChatPredictionConfig": {
+    "fields": []
+  },
+  "clientInput": "",
+  "clientInputFiles": [],
+  "userFilesSizeBytes": 0,
+  "lastUsedModel": {
+    "identifier": "nvidia-nemotron-3-nano-4b",
+    "indexedModelIdentifier": "lmstudio-community/NVIDIA-Nemotron-3-Nano-4B-GGUF/NVIDIA-Nemotron-3-Nano-4B-Q8_0.gguf",
+    "instanceLoadTimeConfig": {
+      "fields": [
+        {
+          "key": "load.gpuStrictVramCap",
+          "value": false
+        },
+        {
+          "key": "llm.load.offloadKVCacheToGpu",
+          "value": true
+        },
+        {
+          "key": "load.gpuSplitConfig",
+          "value": {
+            "strategy": "evenly",
+            "disabledGpus": [],
+            "priority": [],
+            "customRatio": []
+          }
+        },
+        {
+          "key": "llm.load.llama.cpuThreadPoolSize",
+          "value": 6
+        },
+        {
+          "key": "llm.load.contextLength",
+          "value": 16384
+        },
+        {
+          "key": "llm.load.llama.flashAttention",
+          "value": true
+        },
+        {
+          "key": "llm.load.llama.tryDirectIO",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.acceleration.offloadRatio",
+          "value": 1
+        }
+      ]
+    },
+    "instanceOperationTimeConfig": {
+      "fields": []
+    }
+  },
+  "notes": [],
+  "plugins": [],
+  "pluginConfigs": {},
+  "disabledPluginTools": [],
+  "looseFiles": [],
+  "assistantLastMessagedAt": 1776838513640
+}

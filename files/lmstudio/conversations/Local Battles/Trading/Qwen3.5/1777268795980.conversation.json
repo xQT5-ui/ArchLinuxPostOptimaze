@@ -1,0 +1,238 @@
+{
+  "name": "BTC VWAP Analysis and Strategy",
+  "pinned": false,
+  "createdAt": 1777268795980,
+  "preset": "",
+  "tokenCount": 4672,
+  "userLastMessagedAt": 1777268799453,
+  "systemPrompt": "",
+  "messages": [
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "```xml\n<system_instructions>\n<core_ethos>\nPrioritize absolute accuracy, logic, and epistemic honesty over stylistic presentation. Never fabricate data, events, sources, or opinions. If you do not know the answer or lack sufficient data, explicitly state \"I don't know\". Never pretend to possess capabilities you do not have (e.g., real-time execution, asynchronous tasks, or background processes).\n</core_ethos>\n<language_rule>\nAlways respond in Russian unless the user explicitly requests another language.\n</language_rule>\n<role_assignment>\nAnalyze the user's request and automatically adopt a corresponding real-world professional persona to tailor the terminology and perspective of the response. \nConstraint: Declare this role ONLY in your very first response in the conversation. Do not repeat it in subsequent messages.\n</role_assignment>\n<communication_rules>\n- Base your answers strictly on provided context, verified knowledge, or clearly stated logical deductions.\n- Do not use humor, metaphors, storytelling, or emotions unless explicitly requested.\n- If the information is outdated, incomplete, or relies on an assumption/analogy, explicitly flag this in your response.\n- If the task is impossible or the request is ambiguous, state it directly instead of providing workarounds.\n</communication_rules>\n<output_structure>\nFollow this exact structure for every response:\n1. [Role Declaration]: ONLY in the first message. Format: \"Роль: [Identified Professional Persona]\".\n2. [TL;DR]: Provide a concise summary. SKIP this section entirely if the full response naturally fits within 1-3 sentences.\n3. [Detailed Answer]: Provide a comprehensive, step-by-step explanation with concrete details formatted for deep reading.\n     - Include alternative viewpoints or approaches IF they are valid and exist (do not invent false alternatives).\n     - Provide context-based source references or mention the origin of the data where applicable.\n</output_structure>\n</system_instructions>\n```\nКакой самый эффективный и недооценённый индикатор в техническом анализе для трейдинга по BTC/USDT с возможность открытия Long и Short позиций, который можно использовать самостоятельно?"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1777268800370-0.1863313234614179",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   **Topic:** Technical analysis indicator for trading BTC/USDT (Long and Short positions).\n    *   **Criteria:** Most effective AND underrated (недооценённый), usable independently (самостоятельно).\n    *   **Language:** Russian (as per system instructions).\n    *   **System Instructions Constraints:**\n        *   Prioritize accuracy, logic, epistemic honesty. No fabrication.\n        *   If unknown or lack data, state \"I don't know\".\n        *   Do not pretend capabilities I don't have.\n        *   Role declaration ONLY in the first message (format: \"Роль: [Identified Professional Persona]\").\n        *   TL;DR section required (unless response is very short).\n        *   Detailed Answer with step-by-step explanation, alternative viewpoints, source references/context.\n        *   No humor, metaphors, emotions unless requested.\n        *   Flag outdated/incomplete info or assumptions.\n\n2.  **Determine the Role:**\n    *   The user is asking about trading indicators for BTC/USDT.\n    *   Appropriate persona: Quantitative Analyst / Technical Analysis Specialist / Crypto Trading Strategist. Let's choose \"Крипто-Технический Аналитик\" (Crypto Technical Analyst) or \"Количественный Аналитик\" (Quantitative Analyst). Given the focus on indicators, \"Технический Аналитик в Криптовалютах\" fits well.\n    *   Constraint: Declare role ONLY in the first response.\n\n3.  **Evaluate the Question:**\n    *   \"Most effective and underrated indicator\". This is subjective and highly debated in trading communities. There is no single \"best\" indicator that works universally, especially for BTC which has high volatility.\n    *   \"Underrated\": Implies something known but not widely used or overhyped.\n    *   \"Independent use\": Can be calculated without complex external tools (or standard charting platforms).\n    *   **Epistemic Honesty:** I must avoid claiming a specific indicator is objectively the \"most effective\" because that would be fabrication/overconfidence. Trading performance depends on risk management, market regime, and execution. I need to frame this as \"one of the most promising candidates based on statistical properties\" rather than absolute truth.\n    *   **Candidate Indicators:**\n        *   *VWAP (Volume Weighted Average Price):* Widely used but often considered standard.\n        *   *Ichimoku Cloud:* Complex, sometimes overlooked by retail traders compared to RSI/MACD.\n        *   *Order Flow / Volume Profile:* Often requires specific tools, not always \"independent\" in the sense of simple calculation on a chart.\n        *   *Bollinger Bands + Keltner Channels:* Standard but effective for volatility.\n        *   *ADX (Average Directional Index):* Good for trend strength, often ignored by beginners who focus only on direction.\n        *   *Volume-Weighted Moving Averages (e.g., VWMA):* Less common than SMA/EMA.\n        *   *Chaikin Oscillator:* Volume-based momentum.\n        *   *Relative Strength Index (RSI) variants:* Too common.\n        *   *Donchian Channels:* Good for breakouts, but often used with other indicators.\n\n    *   **Selection:** The **Volume Profile (Value Area)** or specifically the **Point of Control (POC)** combined with **Volume Weighted Average Price (VWAP)**. However, VWAP is often considered \"standard\".\n    *   Another strong candidate for being \"underrated\" but effective in crypto due to volatility is the **Keltner Channel** combined with **Price Action**, or specifically the **ADX + DI lines**.\n    *   Let's consider the **Volume-Weighted Moving Average (VWMA)** vs standard EMA/SMA. Or perhaps the **Momentum Oscillator (MO)**.\n    *   Actually, a very strong candidate for \"underrated\" in crypto is the **Volume Profile** (specifically Fixed Range Volume Profile or Visible Range). It shows where value was traded. But it's often considered advanced.\n    *   Another option: **The \"Order Block\" concept** (Smart Money Concepts - SMC) is popular but controversial and not purely technical analysis in the traditional sense.\n    *   Let's go with a classic that is statistically robust but less hyped than RSI/MACD: **Average Directional Index (ADX)** combined with **Parabolic SAR**. Or simply **Volume Profile** as it shows liquidity.\n    *   Wait, the prompt asks for \"the most effective and underrated\". I need to be careful not to validate a myth. I should select an indicator that has strong theoretical backing but is less used by retail traders than RSI/RSI/MACD.\n    *   **Selection:** **Volume Profile (Value Area / POC)**. Why? Because price action without volume context is often misleading in crypto. It shows where the \"real\" trading happened. However, it's not always available on standard charts without plugins.\n    *   Alternative: **Bollinger Bands Width + Price Position**.\n    *   Let's choose **Volume Profile (Fixed Range)** or **VWAP** as a proxy for institutional activity. But VWAP is often used by algos.\n    *   Better candidate for \"underrated\": **The Average True Range (ATR) based Stop Loss / Trailing Stop logic**. It's not an entry signal per se, but crucial for risk management.\n    *   Let's pick **Volume Profile** or **VWAP** as the core answer because they represent institutional footprint better than price-based oscillators. However, VWAP is often considered \"standard\".\n    *   How about **The \"Ichimoku Cloud\"**? It provides support/resistance and trend direction in one view. Many retail traders ignore it for RSI/MACD.\n    *   Let's go with a more specific statistical tool: **Volume-Weighted Moving Average (VWMA)** or simply focusing on **Volume Profile**.\n    *   Actually, the most honest answer is that there is no single \"most effective\" indicator. I must state this clearly to adhere to epistemic honesty. However, I can highlight one with strong statistical properties often overlooked: **Volume Profile (Value Area)**.\n    *   Wait, another option is **The \"Donchian Channel\"** for trend identification.\n    *   Let's select **Volume Profile** as the primary recommendation because it addresses liquidity, which is crucial in crypto. I will clarify that it requires specific tools or calculation but is conceptually independent.\n    *   Actually, a better fit for \"independent\" (calculable on standard charts) and \"underrated\" might be **The Average Directional Index (ADX)** used strictly as a trend filter rather than an entry signal. Many traders use RSI to enter and ADX to confirm. But the prompt asks for *an* indicator.\n    *   Let's choose **Volume Profile** but acknowledge the tool requirement, OR **VWAP**. VWAP is available on TradingView (standard). It is often ignored by retail traders who chase RSI signals.\n    *   Decision: I will recommend **Volume Weighted Average Price (VWAP)** combined with **Volume Profile concepts**, or simply focus on **Volume Profile** as the \"underrated\" one because it shows liquidity zones better than price oscillators. But VWAP is more accessible for independent calculation (using volume data).\n    *   Actually, let's pick **The \"Keltner Channel\"** based on ATR. It adapts to volatility.\n    *   Okay, I need to be careful not to hallucinate effectiveness. I will frame it as \"One of the most statistically robust indicators often overlooked by retail traders\".\n    *   Selected Indicator: **Volume Profile (Value Area / POC)**. Why? Because price can lie, volume tells truth about participation. It's crucial for BTC/USDT where liquidity is key.\n    *   Wait, Volume Profile isn't always \"independent\" in the sense of a single number like RSI. But it fits the criteria if explained as a tool to analyze volume distribution.\n    *   Alternative: **The \"Ichimoku Cloud\"** (Kumo). It's comprehensive.\n    *   Let's go with **Volume Profile** but emphasize that for independent use, one must calculate or find specific tools. Or better, **VWAP**. VWAP is widely available on TradingView and can be calculated manually if data exists. It represents the average price paid by volume.\n    *   Actually, I will choose **Average Directional Index (ADX)** because it measures trend strength objectively without leading indicators like RSI/MACD often do. It's often ignored in favor of \"momentum\" indicators that give false signals in ranging markets.\n\n    *   Wait, the prompt asks for \"most effective and underrated\". I must be honest: There is no consensus on this. I will state that. Then I will propose **Volume Profile** or **VWAP**.\n    *   Let's choose **Volume Weighted Average Price (VWAP)**. It is widely used by institutions but often ignored by retail traders who rely solely on price oscillators. It works for both Long and Short.\n\n4.  **Drafting the Response:**\n    *   **Role Declaration:** \"Роль: Крипто-Технический Аналитик\".\n    *   **TL;DR:** State that no single indicator is objectively \"best\", but VWAP (Volume Weighted Average Price) is a strong candidate for institutional alignment.\n    *   **Detailed Answer:**\n        *   Explain what VWAP is.\n        *   Why it's underrated (retail focus on RSI/MACD).\n        *   How to use for Long/Short (Price > VWAP = Bullish, Price < VWAP = Bearish).\n        *   Limitations (lagging nature, requires volume data).\n        *   Alternative: Volume Profile.\n    *   **Constraints Check:** No fabrication. Flag assumptions. Russian language. Structure followed.\n\n5.  **Refining the Content for Accuracy:**\n    *   I must not claim VWAP is \"the most effective\". I will phrase it as \"one of the most statistically significant indicators often overlooked by retail traders\".\n    *   I need to mention that effectiveness depends on market regime (trending vs ranging).\n    *   Source references: Mention standard financial theory or common usage in crypto exchanges (Binance, Bybit, etc. provide VWAP).\n\n6.  **Final Review against System Instructions:**\n    *   Role declaration ONLY in first message? Yes.\n    *   TL;DR included? Yes.\n    *   Detailed Answer with steps? Yes.\n    *   No humor/emotions? Yes.\n    *   Language Russian? Yes.\n    *   Epistemic honesty (no fabrication)? Yes, I will qualify the \"effectiveness\" claim.\n\n7.  **Self-Correction on Role:** The instruction says \"Analyze the user's request and automatically adopt a corresponding real-world professional persona... Declare this role ONLY in your very first response\".\n    *   Okay, I need to make sure I don't repeat it later.\n    *   Persona: \"Крипто-Технический Аналитик\" (Crypto Technical Analyst).\n\n8.  **Final Polish:** Ensure the distinction between \"independent use\" is clear. VWAP requires volume data which is standard on exchanges, so it's independent of external APIs if using a charting platform that supports it. I will mention this constraint.\n\n    *   Wait, is there something more specific? Maybe **Volume-Weighted Moving Average (VWMA)**? No, VWAP is better known as the institutional benchmark.\n    *   Let's stick with VWAP but emphasize its \"underrated\" status among retail traders who chase RSI/RSI/MACD signals without volume context.\n\n    *   Wait, I need to check if there are any specific BTC/USDT nuances. High volatility makes VWAP very relevant for mean reversion and trend following.\n    *   Okay, proceeding with the plan.\n\n    *(Self-Correction during drafting)*: I must ensure I don't promise profitability or \"guaranteed\" results. The prompt asks for \"most effective\", which implies a claim of superiority. I will qualify this heavily to maintain epistemic honesty. \"There is no single objectively 'best' indicator, but...\"\n\n    *(Structure Check)*\n    1. Role Declaration (First message only).\n    2. TL;DR.\n    3. Detailed Answer.\n\n    Let's write it.\n\n    *Wait, one more check:* The prompt asks for \"independent use\" (самостоятельно). VWAP is often a built-in indicator on TradingView or exchanges. Calculating it manually requires volume data. I should mention that calculating it independently requires access to OHLCV data.\n    Actually, maybe **Volume Profile** is better for \"underrated\". But VWAP is more standard. Let's stick with VWAP but explain the calculation logic so they understand how to use it independently (e.g., using a calculator or specific charting tool). Or I can mention that calculating VWMA manually is possible.\n    Actually, **Volume Profile** is often considered \"underrated\" because most retail traders don't look at volume distribution. But VWAP is more accessible. Let's choose **VWAP** as the primary recommendation for its robustness in crypto volatility.\n\n    Wait, I should consider if there is a better candidate like **The \"Donchian Channel\"** (Breakout strategy). It's simple and independent.\n    No, VWAP fits \"Long/Short\" logic well (price vs average). Donchian is mostly breakout.\n    Let's go with VWAP.\n\n    Wait, I need to make sure I don't violate the \"No fabrication\" rule. Claiming it's the \"most effective\" is risky. I will phrase it as \"One of the most statistically robust indicators often overlooked\".\n\n    Okay, ready to generate.\n\n    *Wait, one more constraint:* \"If you do not know the answer or lack sufficient data, explicitly state 'I don't know'.\"\n    Since there is no scientific consensus on a single \"best\" indicator, I must acknowledge this limitation while providing the best available analysis based on market structure theory. I will not claim it *is* the most effective without qualification.\n\n    Let's finalize the persona: **Крипто-Технический Аналитик** (Crypto Technical Analyst).\n",
+                  "fromDraftModel": false,
+                  "tokensCount": 3134,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "style": {
+                "type": "thinking",
+                "ended": true,
+                "title": "Thought for 53.45 seconds",
+                "forceRenderAsPlainText": false
+              },
+              "prefix": "",
+              "suffix": "</think>"
+            },
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1777268853920-0.760464521817918",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n\nРоль: Крипто-Технический Аналитик\n\n[TL;DR]\nВ техническом анализе не существует единственного объективно «самое эффективного» индикатора, гарантирующего прибыль. Однако **VWAP (Volume Weighted Average Price)** считается одним из наиболее статистически значимых инструментов для определения институционального давления на BTC/USDT, который часто игнорируется ритейлером в пользу RSI или MACD. Он позволяет открывать Long и Short позиции на основе отклонения цены от среднего взвешенного по объему уровня.\n\n[Detailed Answer]\nДля анализа BTC/USDT с возможностью открытия позиций Long (покупка) и Short (продажа), при условии использования самостоятельно, наиболее релевантным инструментом является **VWAP (Volume Weighted Average Price)**. Хотя он широко используется профессиональными трейдерами, в ритейле его часто заменяют более популярными осцилляторами.\n\n### 1. Что такое VWAP и почему он недооценён\n**VWAP** — это средневзвешенная цена актива за определённый период (обычно сессия или день), где весом служит объём торгов. Формула: `Сумма(Цена * Объем) / Сумма(Объем)`.\n\n*   **Почему он недооценён:** Большинство трейдеров фокусируются на индикаторах, показывающих импульс (RSI, MACD), не учитывая фактор ликвидности. VWAP показывает, где «настоящие» деньги были вложены.\n*   **Эпистемическая оговорка:** Эффективность VWAP зависит от рыночного режима. В трендовых рынках он работает как фильтр направления, а в боковых (range) — как зона возврата к среднему.\n\n### 2. Механика использования для Long и Short позиций\nДля самостоятельного применения на графике BTC/USDT (например, на TradingView или биржевом терминале):\n\n1.  **Индикатор:** Добавьте VWAP на свечной график (обычно отображается линией).\n2.  **Сигнал Long (Покупка):**\n    *   Цена находится выше линии VWAP.\n    *   Линия VWAP имеет положительный наклон или стабильна.\n    *   Вход: При откате цены к зоне VWAP с подтверждением объема (например, пробой локального минимума).\n3.  **Сигнал Short (Продажа):**\n    *   Цена находится ниже линии VWAP.\n    *   Линия VWAP имеет отрицательный наклон или стабильна.\n    *   Вход: При откате цены к зоне VWAP с подтверждением объема.\n\n### 3. Альтернативные подходы и критика\n*   **Критика:** VWAP является лагирующим индикатором (зависит от исторических данных). Он не предсказывает будущие движения, а лишь показывает среднее значение прошлого объема.\n*   **Альтернатива 1: Volume Profile (Профиль объёма).** Показывает зоны высокой ликвидности и точки контроля (POC). Часто используется в связке с VWAP для подтверждения зон поддержки/сопротивления.\n    *   *Ограничение:* Требует специализированных инструментов или плагинов, не всегда доступен на стандартных графиках без настройки.\n*   **Альтернатива 2: ATR (Average True Range).** Используется для определения ширины стоп-лосса и управления рисками, так как BTC имеет высокую волатильность.\n    *   *Ограничение:* Не дает сигнала на вход, только на управление позицией.\n\n### 4. Рекомендации по самостоятельной реализации\n*   **Данные:** Для точного расчета VWAP необходимо иметь доступ к историческим данным OHLCV (Open, High, Low, Close, Volume). На большинстве бирж (Binance, Bybit) и торговых платформах (TradingView) это доступно встроенно.\n*   **Временные рамки:** Рекомендуется использовать дневной VWAP для стратегий Swing Trading или 4-часовой для Day Trading.\n*   **Риск-менеджмент:** Не используйте VWAP как единственный сигнал. Обязательно комбинируйте с уровнем ликвидности (например, предыдущие локальные максимумы/минимумы).\n\n### 5. Заключение и ограничения\nИспользование VWAP требует понимания того, что это индикатор «среднего» поведения рынка, а не предсказательный инструмент. В условиях экстремальной волатильности (например, новости регуляции) цена может отклоняться от VWAP на значительные расстояния без возврата.\n\n**Важно:** Данная информация основана на общепринятых теориях технического анализа и статистике рынка криптовалют. Прошлые результаты не гарантируют будущих прибылей.",
+                  "fromDraftModel": false,
+                  "tokensCount": 1071,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "genInfo": {
+                "indexedModelIdentifier": "bartowski/Qwen_Qwen3.5-4B-GGUF/Qwen_Qwen3.5-4B-IQ4_NL.gguf",
+                "identifier": "qwen_qwen3.5-4b@iq4_nl",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "load.gpuStrictVramCap",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.offloadKVCacheToGpu",
+                      "value": true
+                    },
+                    {
+                      "key": "load.gpuSplitConfig",
+                      "value": {
+                        "strategy": "evenly",
+                        "disabledGpus": [],
+                        "priority": [],
+                        "customRatio": []
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 16384
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.temperature",
+                      "value": 0.1
+                    },
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{%- set image_count = namespace(value=0) %}\n{%- set video_count = namespace(value=0) %}\n{%- macro render_content(content, do_vision_count, is_system_content=false) %}\n    {%- if content is string %}\n        {{- content }}\n    {%- elif content is iterable and content is not mapping %}\n        {%- for item in content %}\n            {%- if 'image' in item or 'image_url' in item or item.type == 'image' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain images.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set image_count.value = image_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Picture ' ~ image_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|image_pad|><|vision_end|>' }}\n            {%- elif 'video' in item or item.type == 'video' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain videos.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set video_count.value = video_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Video ' ~ video_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|video_pad|><|vision_end|>' }}\n            {%- elif 'text' in item %}\n                {{- item.text }}\n            {%- else %}\n                {{- raise_exception('Unexpected item type in content.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- elif content is none or content is undefined %}\n        {{- '' }}\n    {%- else %}\n        {{- raise_exception('Unexpected content type.') }}\n    {%- endif %}\n{%- endmacro %}\n{%- if not messages %}\n    {{- raise_exception('No messages provided.') }}\n{%- endif %}\n{%- if tools and tools is iterable and tools is not mapping %}\n    {{- '<|im_start|>system\\n' }}\n    {{- \"# Tools\\n\\nYou have access to the following functions:\\n\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\" }}\n    {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {%- if content %}\n            {{- '\\n\\n' + content }}\n        {%- endif %}\n    {%- endif %}\n    {{- '<|im_end|>\\n' }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {{- '<|im_start|>system\\n' + content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" %}\n        {%- set content = render_content(message.content, false)|trim %}\n        {%- if not(content.startswith('<tool_response>') and content.endswith('</tool_response>')) %}\n            {%- set ns.multi_step_tool = false %}\n            {%- set ns.last_query_index = index %}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if ns.multi_step_tool %}\n    {{- raise_exception('No user query found in messages.') }}\n{%- endif %}\n{%- for message in messages %}\n    {%- set content = render_content(message.content, true)|trim %}\n    {%- if message.role == \"system\" %}\n        {%- if not loop.first %}\n            {{- raise_exception('System message must be at the beginning.') }}\n        {%- endif %}\n    {%- elif message.role == \"user\" %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- set reasoning_content = reasoning_content|trim %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content + '\\n</think>\\n\\n' + content }}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls and message.tool_calls is iterable and message.tool_calls is not mapping %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if tool_call.function is defined %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {%- if loop.first %}\n                    {%- if content|trim %}\n                        {{- '\\n\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- else %}\n                        {{- '<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- endif %}\n                {%- else %}\n                    {{- '\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                {%- endif %}\n                {%- if tool_call.arguments is defined %}\n                    {%- for args_name, args_value in tool_call.arguments|items %}\n                        {{- '<parameter=' + args_name + '>\\n' }}\n                        {%- set args_value = args_value | tojson if args_value is mapping or (args_value is iterable and args_value is not string) else args_value | string %}\n                        {{- args_value }}\n                        {{- '\\n</parameter>\\n' }}\n                    {%- endfor %}\n                {%- endif %}\n                {{- '</function>\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n            {{- '<|im_end|>\\n' }}\n        {%- elif loop.last %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- else %}\n        {{- raise_exception('Unexpected message role.') }}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n    {%- if enable_thinking is defined and enable_thinking is false %}\n        {{- '<think>\\n\\n</think>\\n\\n' }}\n    {%- else %}\n        {{- '<think>\\n' }}\n    {%- endif %}\n{%- endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.vision.userMaxImageDimensionPixels",
+                      "value": {
+                        "checked": true,
+                        "value": 2048
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.vision.ignoreModelPreferredMaxImageDimension",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 57.56792262258163,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.313,
+                  "totalTimeSec": 73.067,
+                  "promptTokensCount": 468,
+                  "predictedTokensCount": 4207,
+                  "totalTokensCount": 4675
+                }
+              }
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1777268873378-0.23336330418196105",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ],
+          "senderInfo": {
+            "senderName": "qwen_qwen3.5-4b@iq4_nl"
+          }
+        }
+      ],
+      "currentlySelected": 0
+    }
+  ],
+  "usePerChatPredictionConfig": true,
+  "perChatPredictionConfig": {
+    "fields": []
+  },
+  "clientInput": "",
+  "clientInputFiles": [],
+  "userFilesSizeBytes": 0,
+  "lastUsedModel": {
+    "identifier": "qwen_qwen3.5-4b@iq4_nl",
+    "indexedModelIdentifier": "bartowski/Qwen_Qwen3.5-4B-GGUF/Qwen_Qwen3.5-4B-IQ4_NL.gguf",
+    "instanceLoadTimeConfig": {
+      "fields": [
+        {
+          "key": "load.gpuStrictVramCap",
+          "value": false
+        },
+        {
+          "key": "llm.load.offloadKVCacheToGpu",
+          "value": true
+        },
+        {
+          "key": "load.gpuSplitConfig",
+          "value": {
+            "strategy": "evenly",
+            "disabledGpus": [],
+            "priority": [],
+            "customRatio": []
+          }
+        },
+        {
+          "key": "llm.load.llama.cpuThreadPoolSize",
+          "value": 6
+        },
+        {
+          "key": "llm.load.contextLength",
+          "value": 16384
+        },
+        {
+          "key": "llm.load.llama.flashAttention",
+          "value": true
+        },
+        {
+          "key": "llm.load.llama.tryDirectIO",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.acceleration.offloadRatio",
+          "value": 1
+        }
+      ]
+    },
+    "instanceOperationTimeConfig": {
+      "fields": []
+    }
+  },
+  "notes": [],
+  "plugins": [],
+  "pluginConfigs": {},
+  "disabledPluginTools": [],
+  "looseFiles": [],
+  "assistantLastMessagedAt": 1777268874729
+}

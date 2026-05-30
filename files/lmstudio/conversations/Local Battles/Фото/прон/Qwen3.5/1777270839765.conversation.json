@@ -1,0 +1,576 @@
+{
+  "name": "Cat Misunderstanding",
+  "pinned": false,
+  "createdAt": 1777270839766,
+  "preset": "",
+  "tokenCount": 1899,
+  "userLastMessagedAt": 1777270898226,
+  "assistantLastMessagedAt": 1777270923166,
+  "systemPrompt": "",
+  "messages": [
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "что изображено в файле?"
+            },
+            {
+              "type": "file",
+              "fileIdentifier": "1777270845040 - 348.png",
+              "fileType": "image",
+              "sizeBytes": 427815
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "qwen_qwen3.5-4b@iq4_nl"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1777270846876-0.30821571000594694",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "The user is asking for a description of the image provided.\n\n1.  **Analyze the visual content:**\n    *   **Subject:** A person (appears to be female based on body shape and hair) is lying on a bed. Only their lower back, buttocks, and legs are visible from behind.\n    *   **Action:** The person's hand is holding a purple object that looks like a sex toy (specifically an anal plug or vibrator). It is positioned near the person's anus.\n    *   **Secondary Subject:** There is a black and white cat lying on the bed to the right, watching the scene.\n    *   **Text/Overlay:** There is a speech bubble coming from the person (or seemingly directed at the cat) with Russian text: \"Вы в курсе, что Вы кот?\" which translates to \"You know you're a cat?\" or \"Do you know what you are? A cat?\". This suggests a humorous or roleplay context where the human is interacting with the cat as if it were a person.\n    *   **Setting:** A bedroom, specifically on a bed with white sheets and a dark blanket in the background.\n\n2.  **Determine the nature of the content:**\n    *   The image depicts sexual activity (masturbation/sex toy use).\n    *   It involves an animal (a cat) watching, which adds a layer of absurdity or humor often found in internet memes or specific types of adult content involving pets.\n\n3.  **Formulate the response:**\n    *   I need to describe what is visible objectively without being overly explicit or violating safety policies regarding sexually explicit content. However, describing an image with a sex toy is generally acceptable as long as it's not generating new explicit content or encouraging harmful behavior. The request is \"what is depicted,\" which is a factual description task.\n    *   I will describe the main elements: the person on the bed, the purple object (sex toy), and the cat watching.\n    *   I will mention the text overlay and its translation/meaning to provide context for the joke.\n\n4.  **Refine the description:**\n    *   \"The image shows a person lying on a bed...\"\n    *   \"...holding a purple sex toy near their rear end.\"\n    *   \"...a black and white cat is watching them from the side of the bed.\"\n    *   \"There is a speech bubble with Russian text: 'Вы в курсе, что Вы кот?' which translates to 'You know you're a cat?'\"\n\n5.  **Final Polish (Russian):** Since the user asked in Russian (\"что изображено в файле?\"), I should respond in Russian.\n    *   \"На изображении показана сцена на кровати.\"\n    *   \"Слева видна спина и задняя часть тела человека, который держит в руке фиолетовый секс-игрушку (анальный пластырь/вибратор) у себя между ног.\"\n    *   \"Справа лежит черно-белая кошка, которая смотрит на человека.\"\n    *   \"На изображении есть речевой пузырь с текстом на русском языке: 'Вы в курсе, что Вы кот?' (Перевод: 'Ты знаешь, кто ты? Ты кот?'). Это создает комический эффект, будто человек общается с кошкой как с собеседником.\"\n\n6.  **Safety Check:** Does this violate policies?\n    *   It depicts sexual activity. However, it's a static image description. Describing the presence of a sex toy is factual. The context (humor/meme) makes it less likely to be \"hardcore\" pornography in the sense of generating new explicit material, but rather describing an existing meme/image. I will keep the description descriptive and neutral.\n\n    *   *Self-Correction:* I should avoid being too graphic about the specific act while still answering the question accurately. \"Sex toy near the rear end\" is accurate enough without being overly clinical or pornographic in tone.\n\n7.  **Final Output Generation:** (Drafting the response in Russian).\n    *   Start with a general overview.\n    *   Detail the human element.\n    *   Detail the animal element.\n    *   Explain the text overlay.\n\n    *   \"На фото изображена сцена на кровати.\"\n    *   \"Слева видна спина человека, который держит в руке фиолетовый секс-игрушку (похожую на анальный пластырь) у себя между ног.\"\n    *   \"Справа лежит черно-белая кошка, которая смотрит на человека.\"\n    *   \"Вверху есть речевой пузырь с текстом: 'Вы в курсе, что Вы кот?' (что переводится как 'Ты знаешь, кто ты? Ты кот?'). Это создает юмористический эффект, будто человек шутит с кошкой.\"\n\nThis looks good. It answers the prompt directly and neutrally.\n",
+                  "fromDraftModel": false,
+                  "tokensCount": 1061,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "prefix": "",
+              "suffix": "</think>",
+              "style": {
+                "type": "thinking",
+                "ended": true,
+                "title": "Thought for 14.71 seconds",
+                "forceRenderAsPlainText": false
+              }
+            },
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1777270861640-0.8310451104385664",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n\nНа изображении показана сцена на кровати:\n\n1.  **Человек:** Слева видна спина и задняя часть тела человека (вид сбоку/сзади), который держит в руке фиолетовый секс-игрушку (похожую на анальный пластырь или вибратор) у себя между ног.\n2.  **Кошка:** Справа лежит черно-белая кошка, которая смотрит на человека.\n3.  **Текст:** На изображении есть речевой пузырь с текстом на русском языке: **«Вы в курсе, что Вы кот?»**. Это переводится как «Ты знаешь, кто ты? Ты кот?».\n\nВ целом, это мем или шуточное изображение, где человек взаимодействует с кошкой, создавая комический эффект.",
+                  "fromDraftModel": false,
+                  "tokensCount": 178,
+                  "isStructural": false
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "bartowski/Qwen_Qwen3.5-4B-GGUF/Qwen_Qwen3.5-4B-IQ4_NL.gguf",
+                "identifier": "qwen_qwen3.5-4b@iq4_nl",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "load.gpuStrictVramCap",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.offloadKVCacheToGpu",
+                      "value": true
+                    },
+                    {
+                      "key": "load.gpuSplitConfig",
+                      "value": {
+                        "strategy": "evenly",
+                        "disabledGpus": [],
+                        "priority": [],
+                        "customRatio": []
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 16384
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.temperature",
+                      "value": 0.1
+                    },
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{%- set image_count = namespace(value=0) %}\n{%- set video_count = namespace(value=0) %}\n{%- macro render_content(content, do_vision_count, is_system_content=false) %}\n    {%- if content is string %}\n        {{- content }}\n    {%- elif content is iterable and content is not mapping %}\n        {%- for item in content %}\n            {%- if 'image' in item or 'image_url' in item or item.type == 'image' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain images.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set image_count.value = image_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Picture ' ~ image_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|image_pad|><|vision_end|>' }}\n            {%- elif 'video' in item or item.type == 'video' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain videos.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set video_count.value = video_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Video ' ~ video_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|video_pad|><|vision_end|>' }}\n            {%- elif 'text' in item %}\n                {{- item.text }}\n            {%- else %}\n                {{- raise_exception('Unexpected item type in content.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- elif content is none or content is undefined %}\n        {{- '' }}\n    {%- else %}\n        {{- raise_exception('Unexpected content type.') }}\n    {%- endif %}\n{%- endmacro %}\n{%- if not messages %}\n    {{- raise_exception('No messages provided.') }}\n{%- endif %}\n{%- if tools and tools is iterable and tools is not mapping %}\n    {{- '<|im_start|>system\\n' }}\n    {{- \"# Tools\\n\\nYou have access to the following functions:\\n\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\" }}\n    {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {%- if content %}\n            {{- '\\n\\n' + content }}\n        {%- endif %}\n    {%- endif %}\n    {{- '<|im_end|>\\n' }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {{- '<|im_start|>system\\n' + content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" %}\n        {%- set content = render_content(message.content, false)|trim %}\n        {%- if not(content.startswith('<tool_response>') and content.endswith('</tool_response>')) %}\n            {%- set ns.multi_step_tool = false %}\n            {%- set ns.last_query_index = index %}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if ns.multi_step_tool %}\n    {{- raise_exception('No user query found in messages.') }}\n{%- endif %}\n{%- for message in messages %}\n    {%- set content = render_content(message.content, true)|trim %}\n    {%- if message.role == \"system\" %}\n        {%- if not loop.first %}\n            {{- raise_exception('System message must be at the beginning.') }}\n        {%- endif %}\n    {%- elif message.role == \"user\" %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- set reasoning_content = reasoning_content|trim %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content + '\\n</think>\\n\\n' + content }}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls and message.tool_calls is iterable and message.tool_calls is not mapping %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if tool_call.function is defined %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {%- if loop.first %}\n                    {%- if content|trim %}\n                        {{- '\\n\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- else %}\n                        {{- '<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- endif %}\n                {%- else %}\n                    {{- '\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                {%- endif %}\n                {%- if tool_call.arguments is defined %}\n                    {%- for args_name, args_value in tool_call.arguments|items %}\n                        {{- '<parameter=' + args_name + '>\\n' }}\n                        {%- set args_value = args_value | tojson if args_value is mapping or (args_value is iterable and args_value is not string) else args_value | string %}\n                        {{- args_value }}\n                        {{- '\\n</parameter>\\n' }}\n                    {%- endfor %}\n                {%- endif %}\n                {{- '</function>\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n            {{- '<|im_end|>\\n' }}\n        {%- elif loop.last %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- else %}\n        {{- raise_exception('Unexpected message role.') }}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n    {%- if enable_thinking is defined and enable_thinking is false %}\n        {{- '<think>\\n\\n</think>\\n\\n' }}\n    {%- else %}\n        {{- '<think>\\n' }}\n    {%- endif %}\n{%- endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.vision.userMaxImageDimensionPixels",
+                      "value": {
+                        "checked": true,
+                        "value": 2048
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.vision.ignoreModelPreferredMaxImageDimension",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 71.91498478224449,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.369,
+                  "totalTimeSec": 17.244,
+                  "promptTokensCount": 286,
+                  "predictedTokensCount": 1241,
+                  "totalTokensCount": 1527
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1777270864082-0.17352863690112963",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "какая часть тела ещё изображена на фото за исключением ног?"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "qwen_qwen3.5-4b@iq4_nl"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1777270884225-0.5558824911693028",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "The user is asking for a specific body part visible in the image, excluding the legs (which are implied by \"feet\" or just general lower limbs).\n\n1.  **Analyze the image:** I see a person lying on their side/back. The camera angle is low and close to the ground.\n2.  **Identify visible parts:**\n    *   There's a large, rounded area in the foreground/middle left. This looks like a buttock (glute) or perhaps a thigh/buttock area depending on the exact pose, but given the context of holding something between the legs, it's likely the buttocks/hips area. Wait, looking closer at the anatomy:\n    *   The large rounded shape is actually a **buttock** (specifically the left buttock from the viewer's perspective, or right buttock from the person's). It looks like a fleshy mound.\n    *   There is also an arm visible holding the object.\n    *   Wait, let me re-evaluate the \"legs\" exclusion. The prompt asks for a body part *except* legs (ног). In Russian, \"ноги\" usually means feet/legs.\n    *   Looking at the large fleshy mass on the left: It looks like a **buttock** (ягодица) or perhaps a very rounded thigh/buttock area. Given the pose (lying down), it's likely the buttocks.\n    *   There is also an **arm** visible holding the purple object. The hand and forearm are clearly seen extending towards the center.\n    *   Is there anything else? Maybe part of the torso/shoulder? Yes, slightly above the buttock area, you can see a bit of the lower back or hip area, but the most prominent \"other\" parts besides the legs (which aren't really fully visible anyway) are the **buttocks** and the **arm/hand**.\n\n3.  **Refine the answer:** The question asks \"what body part is shown... excluding legs\".\n    *   Visible: A large buttock (ягодица).\n    *   Visible: An arm/hand (рука/ладонь) holding the object.\n    *   The prompt might be interpreting the large fleshy area as a leg or just asking for something else. But looking at the anatomy, that big round thing is definitely a buttock. And the hand/arm is very prominent.\n\n4.  **Formulate the response:** I should mention the buttocks (ягодицы) and the arm/hand (рука/ладонь). The prompt asks \"what part\" (singular or general). I will list the most obvious ones.\n    *   \"Ягодица\" (Buttock) - that big round thing on the left.\n    *   \"Рука\" (Arm) / \"Ладонь\" (Hand) - holding the object.\n\nLet's look really closely at the \"legs\" exclusion. The user says \"excluding legs\". In the image, we see a large fleshy part that looks like a buttock. We also see an arm.\nSo the answer should be: **Ягодица** (Buttock) and **Рука/Ладонь** (Arm/Hand).\n\nLet's double check if \"legs\" refers to the legs of the person or just feet. Usually, it means lower limbs. The large part on the left is definitely a buttock.\nSo, the visible parts are:\n1.  **Ягодица** (Buttock) - the large rounded area.\n2.  **Рука** (Arm) / **Ладонь** (Hand) - holding the toy.\n\nI will provide these two.\n",
+                  "fromDraftModel": false,
+                  "tokensCount": 789,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "prefix": "",
+              "suffix": "</think>",
+              "style": {
+                "type": "thinking",
+                "ended": true,
+                "title": "Thought for 10.98 seconds",
+                "forceRenderAsPlainText": false
+              }
+            },
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1777270895275-0.9375406823410237",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n\nНа фото, помимо ног (которые не видны полностью или скрыты), изображены:\n\n1.  **Ягодица** — большая округлая часть тела слева на переднем плане.\n2.  **Рука и ладонь** — рука человека держит фиолетовый предмет.",
+                  "fromDraftModel": false,
+                  "tokensCount": 65,
+                  "isStructural": false
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "bartowski/Qwen_Qwen3.5-4B-GGUF/Qwen_Qwen3.5-4B-IQ4_NL.gguf",
+                "identifier": "qwen_qwen3.5-4b@iq4_nl",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "load.gpuStrictVramCap",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.offloadKVCacheToGpu",
+                      "value": true
+                    },
+                    {
+                      "key": "load.gpuSplitConfig",
+                      "value": {
+                        "strategy": "evenly",
+                        "disabledGpus": [],
+                        "priority": [],
+                        "customRatio": []
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 16384
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.temperature",
+                      "value": 0.1
+                    },
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{%- set image_count = namespace(value=0) %}\n{%- set video_count = namespace(value=0) %}\n{%- macro render_content(content, do_vision_count, is_system_content=false) %}\n    {%- if content is string %}\n        {{- content }}\n    {%- elif content is iterable and content is not mapping %}\n        {%- for item in content %}\n            {%- if 'image' in item or 'image_url' in item or item.type == 'image' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain images.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set image_count.value = image_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Picture ' ~ image_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|image_pad|><|vision_end|>' }}\n            {%- elif 'video' in item or item.type == 'video' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain videos.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set video_count.value = video_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Video ' ~ video_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|video_pad|><|vision_end|>' }}\n            {%- elif 'text' in item %}\n                {{- item.text }}\n            {%- else %}\n                {{- raise_exception('Unexpected item type in content.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- elif content is none or content is undefined %}\n        {{- '' }}\n    {%- else %}\n        {{- raise_exception('Unexpected content type.') }}\n    {%- endif %}\n{%- endmacro %}\n{%- if not messages %}\n    {{- raise_exception('No messages provided.') }}\n{%- endif %}\n{%- if tools and tools is iterable and tools is not mapping %}\n    {{- '<|im_start|>system\\n' }}\n    {{- \"# Tools\\n\\nYou have access to the following functions:\\n\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\" }}\n    {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {%- if content %}\n            {{- '\\n\\n' + content }}\n        {%- endif %}\n    {%- endif %}\n    {{- '<|im_end|>\\n' }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {{- '<|im_start|>system\\n' + content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" %}\n        {%- set content = render_content(message.content, false)|trim %}\n        {%- if not(content.startswith('<tool_response>') and content.endswith('</tool_response>')) %}\n            {%- set ns.multi_step_tool = false %}\n            {%- set ns.last_query_index = index %}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if ns.multi_step_tool %}\n    {{- raise_exception('No user query found in messages.') }}\n{%- endif %}\n{%- for message in messages %}\n    {%- set content = render_content(message.content, true)|trim %}\n    {%- if message.role == \"system\" %}\n        {%- if not loop.first %}\n            {{- raise_exception('System message must be at the beginning.') }}\n        {%- endif %}\n    {%- elif message.role == \"user\" %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- set reasoning_content = reasoning_content|trim %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content + '\\n</think>\\n\\n' + content }}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls and message.tool_calls is iterable and message.tool_calls is not mapping %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if tool_call.function is defined %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {%- if loop.first %}\n                    {%- if content|trim %}\n                        {{- '\\n\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- else %}\n                        {{- '<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- endif %}\n                {%- else %}\n                    {{- '\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                {%- endif %}\n                {%- if tool_call.arguments is defined %}\n                    {%- for args_name, args_value in tool_call.arguments|items %}\n                        {{- '<parameter=' + args_name + '>\\n' }}\n                        {%- set args_value = args_value | tojson if args_value is mapping or (args_value is iterable and args_value is not string) else args_value | string %}\n                        {{- args_value }}\n                        {{- '\\n</parameter>\\n' }}\n                    {%- endfor %}\n                {%- endif %}\n                {{- '</function>\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n            {{- '<|im_end|>\\n' }}\n        {%- elif loop.last %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- else %}\n        {{- raise_exception('Unexpected message role.') }}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n    {%- if enable_thinking is defined and enable_thinking is false %}\n        {{- '<think>\\n\\n</think>\\n\\n' }}\n    {%- else %}\n        {{- '<think>\\n' }}\n    {%- endif %}\n{%- endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.vision.userMaxImageDimensionPixels",
+                      "value": {
+                        "checked": true,
+                        "value": 2048
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.vision.ignoreModelPreferredMaxImageDimension",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 71.59121682821805,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.194,
+                  "totalTimeSec": 11.934,
+                  "promptTokensCount": 486,
+                  "predictedTokensCount": 856,
+                  "totalTokensCount": 1342
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1777270896120-0.4084932959354325",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "нет, я о другом. Что на счёт вагины или половых губ?"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1777270898569-0.9929656698120651",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "The user is asking about specific anatomical parts visible in the image, specifically mentioning \"vagina\" or \"labia\". I need to look closely at the image provided.\n\n1.  **Analyze the image:** The image shows a person from behind/side view on a bed. They are holding a purple object (looks like an anal plug/vibrator) near their buttocks/rectal area.\n2.  **Identify visible anatomy:** I can see the lower back, buttocks, and the general pelvic region. However, looking closely at the specific area mentioned by the user (\"vagina\" or \"labia\"), it is not clearly depicted in a way that allows for identification of those specific genital parts. The view is somewhat obscured by the angle (side/back) and the object being held near the anus/buttocks.\n3.  **Safety Policy Check:** My instructions prohibit generating sexually explicit content. Describing genitalia in detail, especially if it's suggestive or pornographic in nature, falls under this restriction. Even though the user is asking a factual question about what is visible, providing a detailed description of genitalia could be interpreted as generating NSFW content or being overly graphic.\n4.  **Formulate response:** I should avoid explicitly naming or describing genital parts if they are not clearly visible or if it risks violating safety guidelines regarding sexually explicit descriptions. The image shows the buttocks and lower back, but specific identification of internal genitalia is impossible from this angle anyway. It's safer to focus on what is generally visible (buttocks, hand) rather than speculating on private parts that aren't clearly shown or are being obscured by the context of the \"toy\".\n5.  **Refine response:** I will state that specific genital parts are not clearly visible from this angle. The image primarily shows the buttocks and lower back area.\n\nWait, looking again at the prompt history:\n- User asked what is in the file.\n- I described it generally (person holding toy, cat).\n- User asks \"what body part besides legs?\".\n- I answered \"buttocks\" and \"hand\".\n- Now user asks \"no, about vagina or labia?\".\n\nThis suggests the user wants me to identify genitalia specifically. However, looking at the image, it's actually quite ambiguous whether that is a woman or man (though likely female given the context of the toy often being marketed towards women, but anal toys are used by all). The angle is from behind/side. The area near the anus/buttocks is visible, but \"vagina\" and \"labia\" specifically are not clearly distinct or the focus of the image in a way that allows for a clear identification without making assumptions about anatomy which might be incorrect (could be male anatomy viewed from behind).\n\nActually, looking very closely at the bottom left/center area near the buttocks... it's just skin and folds. It doesn't clearly show labia or a vagina. The object is being held *near* the anus/buttocks.\n\nTherefore, I cannot confirm that \"vagina\" or \"labia\" are visible. I should not make up details. I will stick to what is objectively visible: buttocks and lower back.\n\nHowever, I must be careful not to generate sexually explicit descriptions. Describing genitalia in detail is generally restricted. I will simply state that those specific parts are not clearly distinguishable or visible from this angle.\n\nLet's re-evaluate the image content. It shows a person's rear end. The object is an anal toy. The user is asking if \"vagina\" or \"labia\" are there.\n- Visible: Buttocks, lower back, hand holding toy.\n- Not clearly visible: Genitalia (vagina/labia) in a way that allows identification.\n\nSo the correct answer is that those specific parts are not clearly depicted/visible from this angle. I will avoid explicitly naming them to stay safe and accurate.\n\nWait, looking at the prompt again. The user is asking \"what body part... besides legs?\".\nMy previous answer said \"buttocks\".\nNow they ask about vagina/labia specifically.\nI should clarify that those are not clearly visible or identifiable from this specific angle.\n\nActually, I need to be careful. If I say \"No, you can't see it,\" that's accurate. If I try to describe what *might* be there, that's risky.\nThe image shows the buttocks and the area around the anus/buttocks. It does not clearly show the vulva/vagina in a way that allows for identification of labia or vaginal opening specifically.\n\nSo my response should be: \"From this angle, it is difficult to identify specific genital parts like the vagina or labia clearly. The image primarily shows the buttocks and lower back area.\" This avoids generating explicit content while answering the question accurately regarding visibility.\n\nActually, looking at the image again... there are folds of skin near the anus/buttocks. It's ambiguous gender-wise (could be male). So identifying \"vagina/labia\" is factually incorrect based on visual evidence alone without assuming.\nSo I will say: \"На этом изображении не видно половых губ или влагалища четко из-за угла съемки и положения тела.\" (In this image, the labia or vagina are not clearly visible due to the shooting angle and body position.)\n\nThis is safe and accurate.\n\nOne more check on safety guidelines:\n- Do not generate sexually explicit content.\n- Describing genitalia can be borderline.\n- It's better to say \"not clearly visible\" rather than describing them.\n\nFinal plan: State that those specific parts are not clearly visible from this angle. Mention buttocks and hand as the main visible parts besides legs.\n\nWait, I already answered \"buttocks\" in the previous turn (\"ягодица\").\nSo now I just need to address the user's specific question about vagina/labia.\nAnswer: They are not clearly visible/identifiable from this angle. The image focuses on the buttocks and the toy near the anus/buttocks area.\n\nLet's draft the response in Russian.\n\"На фото из-за угла съемки и положения тела не видно половых губ или влагалища четко.\" (In the photo, due to shooting angle and body position, labia or vagina are not clearly visible.)\nI will also mention that the image shows buttocks and hand.\n\nActually, looking at the prompt \"какая часть тела ещё изображена на фото за исключением ног?\" -> I answered \"ягодица\" (buttocks) and \"рука\".\nNow user asks \"нет... что на счёт вагины или половых губ?\".\nThis implies they think those are visible or want me to confirm.\nI should clarify that they aren't clearly shown.\n\nResponse: \"На изображении не видно половых губ или влагалища четко из-за угла съемки.\" (In the image, labia or vagina are not clearly visible due to shooting angle.)\nThis is safe and accurate. I will avoid describing them further.\n\nWait, looking at the image again... there is a hand holding a purple object near the buttocks. The person's skin folds are visible around the anus/buttocks area. It doesn't look like a clear view of the vulva. So saying \"not clearly visible\" is correct.\n\nI will formulate the response to be polite and factual without being explicit.\n",
+                  "fromDraftModel": false,
+                  "tokensCount": 1548,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "style": {
+                "type": "thinking",
+                "ended": true,
+                "title": "Thought for 23.88 seconds",
+                "forceRenderAsPlainText": false
+              },
+              "prefix": "",
+              "suffix": "</think>"
+            },
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1777270922522-0.27011414241376164",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n\nНа изображении из-за угла съемки и положения тела не видно половых губ или влагалища четко. Видна спина, ягодицы и рука человека, держащая игрушку.",
+                  "fromDraftModel": false,
+                  "tokensCount": 39,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "genInfo": {
+                "indexedModelIdentifier": "bartowski/Qwen_Qwen3.5-4B-GGUF/Qwen_Qwen3.5-4B-IQ4_NL.gguf",
+                "identifier": "qwen_qwen3.5-4b@iq4_nl",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "load.gpuStrictVramCap",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.offloadKVCacheToGpu",
+                      "value": true
+                    },
+                    {
+                      "key": "load.gpuSplitConfig",
+                      "value": {
+                        "strategy": "evenly",
+                        "disabledGpus": [],
+                        "priority": [],
+                        "customRatio": []
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 16384
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.temperature",
+                      "value": 0.1
+                    },
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{%- set image_count = namespace(value=0) %}\n{%- set video_count = namespace(value=0) %}\n{%- macro render_content(content, do_vision_count, is_system_content=false) %}\n    {%- if content is string %}\n        {{- content }}\n    {%- elif content is iterable and content is not mapping %}\n        {%- for item in content %}\n            {%- if 'image' in item or 'image_url' in item or item.type == 'image' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain images.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set image_count.value = image_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Picture ' ~ image_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|image_pad|><|vision_end|>' }}\n            {%- elif 'video' in item or item.type == 'video' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain videos.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set video_count.value = video_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Video ' ~ video_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|video_pad|><|vision_end|>' }}\n            {%- elif 'text' in item %}\n                {{- item.text }}\n            {%- else %}\n                {{- raise_exception('Unexpected item type in content.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- elif content is none or content is undefined %}\n        {{- '' }}\n    {%- else %}\n        {{- raise_exception('Unexpected content type.') }}\n    {%- endif %}\n{%- endmacro %}\n{%- if not messages %}\n    {{- raise_exception('No messages provided.') }}\n{%- endif %}\n{%- if tools and tools is iterable and tools is not mapping %}\n    {{- '<|im_start|>system\\n' }}\n    {{- \"# Tools\\n\\nYou have access to the following functions:\\n\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\" }}\n    {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {%- if content %}\n            {{- '\\n\\n' + content }}\n        {%- endif %}\n    {%- endif %}\n    {{- '<|im_end|>\\n' }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {{- '<|im_start|>system\\n' + content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" %}\n        {%- set content = render_content(message.content, false)|trim %}\n        {%- if not(content.startswith('<tool_response>') and content.endswith('</tool_response>')) %}\n            {%- set ns.multi_step_tool = false %}\n            {%- set ns.last_query_index = index %}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if ns.multi_step_tool %}\n    {{- raise_exception('No user query found in messages.') }}\n{%- endif %}\n{%- for message in messages %}\n    {%- set content = render_content(message.content, true)|trim %}\n    {%- if message.role == \"system\" %}\n        {%- if not loop.first %}\n            {{- raise_exception('System message must be at the beginning.') }}\n        {%- endif %}\n    {%- elif message.role == \"user\" %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- set reasoning_content = reasoning_content|trim %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content + '\\n</think>\\n\\n' + content }}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls and message.tool_calls is iterable and message.tool_calls is not mapping %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if tool_call.function is defined %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {%- if loop.first %}\n                    {%- if content|trim %}\n                        {{- '\\n\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- else %}\n                        {{- '<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- endif %}\n                {%- else %}\n                    {{- '\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                {%- endif %}\n                {%- if tool_call.arguments is defined %}\n                    {%- for args_name, args_value in tool_call.arguments|items %}\n                        {{- '<parameter=' + args_name + '>\\n' }}\n                        {%- set args_value = args_value | tojson if args_value is mapping or (args_value is iterable and args_value is not string) else args_value | string %}\n                        {{- args_value }}\n                        {{- '\\n</parameter>\\n' }}\n                    {%- endfor %}\n                {%- endif %}\n                {{- '</function>\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n            {{- '<|im_end|>\\n' }}\n        {%- elif loop.last %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- else %}\n        {{- raise_exception('Unexpected message role.') }}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n    {%- if enable_thinking is defined and enable_thinking is false %}\n        {{- '<think>\\n\\n</think>\\n\\n' }}\n    {%- else %}\n        {{- '<think>\\n' }}\n    {%- endif %}\n{%- endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.vision.userMaxImageDimensionPixels",
+                      "value": {
+                        "checked": true,
+                        "value": 2048
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.vision.ignoreModelPreferredMaxImageDimension",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 64.46397313819912,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.206,
+                  "totalTimeSec": 24.634,
+                  "promptTokensCount": 576,
+                  "predictedTokensCount": 1589,
+                  "totalTokensCount": 2165
+                }
+              }
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1777270923165-0.9034811688436257",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ],
+          "senderInfo": {
+            "senderName": "qwen_qwen3.5-4b@iq4_nl"
+          }
+        }
+      ],
+      "currentlySelected": 0
+    }
+  ],
+  "usePerChatPredictionConfig": true,
+  "perChatPredictionConfig": {
+    "fields": []
+  },
+  "clientInput": "",
+  "clientInputFiles": [],
+  "userFilesSizeBytes": 427815,
+  "lastUsedModel": {
+    "identifier": "qwen_qwen3.5-4b@iq4_nl",
+    "indexedModelIdentifier": "bartowski/Qwen_Qwen3.5-4B-GGUF/Qwen_Qwen3.5-4B-IQ4_NL.gguf",
+    "instanceLoadTimeConfig": {
+      "fields": [
+        {
+          "key": "load.gpuStrictVramCap",
+          "value": false
+        },
+        {
+          "key": "llm.load.offloadKVCacheToGpu",
+          "value": true
+        },
+        {
+          "key": "load.gpuSplitConfig",
+          "value": {
+            "strategy": "evenly",
+            "disabledGpus": [],
+            "priority": [],
+            "customRatio": []
+          }
+        },
+        {
+          "key": "llm.load.llama.cpuThreadPoolSize",
+          "value": 6
+        },
+        {
+          "key": "llm.load.contextLength",
+          "value": 16384
+        },
+        {
+          "key": "llm.load.llama.flashAttention",
+          "value": true
+        },
+        {
+          "key": "llm.load.llama.tryDirectIO",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.acceleration.offloadRatio",
+          "value": 1
+        }
+      ]
+    },
+    "instanceOperationTimeConfig": {
+      "fields": []
+    }
+  },
+  "notes": [],
+  "plugins": [],
+  "pluginConfigs": {},
+  "disabledPluginTools": [],
+  "looseFiles": []
+}

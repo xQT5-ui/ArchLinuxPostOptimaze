@@ -1,0 +1,231 @@
+{
+  "name": "Handling Current Date Queries",
+  "pinned": false,
+  "createdAt": 1776691656402,
+  "preset": "",
+  "tokenCount": 1764,
+  "userLastMessagedAt": 1776691658500,
+  "systemPrompt": "",
+  "messages": [
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "current date"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1776691658774-0.022020441371749633",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "The user has asked for the current date.\n\nTo answer this accurately, I need to know the exact date today. Since my last update was on October 7, 2023, and the current date is June 20, 2025 (as per my knowledge cutoff), but I don't have real-time capabilities to fetch the live date.\n\nBut wait, the user asked for the \"current date,\" which implies they are asking for today's date. Since I don't have access to real-time data beyond October 7, 2023, I can't provide the exact current date as of now (June 20, 2025 is an assumption based on my last update).\n\nBut how should I handle this? I think the best approach is to inform the user that while I have knowledge up to a certain point, I don't have real-time data. However, if the user wants the date as of when they're asking, and they can provide more context like their time zone or any other information, but since they didn't specify, I'll give them the last known date.\n\nBut wait, that's not correct because my knowledge cutoff is October 7, 2023, which means I don't know anything beyond that date. So I can't say what the current date is today, because I don’t have access to real-time information.\n\nI need to clarify this with the user. Maybe they are expecting me to calculate or infer something based on their last interaction with me, but since it's their first query, I don't have that context.\n\nSo my response should be:\n\n\"I don't have access to real-time data, so I can't provide the current date as of today. However, my knowledge cutoff is October 7, 2023.\"\n\nBut perhaps a better way would be to say that I cannot provide the current date because my information is not up-to-date beyond my last update.\n\nLet me think again: The user might be expecting an answer like \"Today is June 20, 2025,\" but since my knowledge cutoff is October 7, 2023, and I don't have real-time capabilities, I can't confirm what today's date is. I might also consider asking if they are looking for a specific date or more information.\n\nBut in this case, since it's a straightforward query about the current date, and without knowing their time zone or any other context, I'll need to be clear that I can't provide real-time information.\n\nHere’s how I’ll phrase it:\n\n\"I don’t have access to real-time data, so I can’t provide the exact current date. My knowledge cutoff is October 7, 2023, and I don’t have the ability to look up today’s date or time.\"\n\nBut perhaps a more concise way would be:\n\"The current date cannot be determined as my knowledge cutoff is October 7, 2023, and I don’t have access to real-time information.\"\n\nBut maybe it’s better to just say:\n\n\"I can't provide the current date because my information is not up-to-date beyond October 7, 2023. Would you like help with something else related to that date or earlier?\"\n\nWait, but the user might be expecting a general answer about how they should think and answer such a question.\n\nAh! The title says \"HOW YOU SHOULD THINK AND ANSWER.\" So this is not just a query for the current date, but also a meta-question about how to approach answering such a query in the future.\n\nOkay, let’s break it down:\n\n1. Understand the user's intent: They are asking how they (the AI assistant) should think and respond when someone asks for the \"current date.\"\n2. The key points to cover:\n   - Recognize that the current date is dynamic and can’t be stored in advance.\n   - Acknowledge if there’s a knowledge cutoff or lack of real-time data capabilities.\n   - If possible, provide guidance on how to handle such queries in the future (e.g., directing users to check their own devices, mentioning time zones, etc.).\n3. Be concise and helpful.\n\nHere’s a draft response:\n\n---\n\nWhen someone asks for the current date, here’s how you should think and respond:\n\n1. **Understand the Need**: The user is asking for real-time information about today's date. This requires up-to-date data that might not be available in your knowledge base.\n2. **Check Capabilities**:\n   - If you have access to real-time data or can fetch the current date from an external source, do so and provide it clearly.\n   - If, like me, you don’t have real-time capabilities (e.g., my knowledge cutoff is October 7, 2023), acknowledge this limitation. For example:\n     *\"I don’t have access to real-time data, so I can’t provide today’s date. You can check your device’s clock or time zone for the most up-to-date information.\"*\n3. **Provide Context**:\n   - If you do know a recent date (e.g., as of my last update on October 7, 2023), you might mention that while you don’t have current data, you can share information based on what was known then.\n   - Clarify if time zones matter for the user. For example: *\"Note that dates are affected by time zones—let me know if you’d like help calculating a specific one!\"*\n4. **Direct to Alternatives**:\n   - Suggest how the user can get the information themselves (e.g., checking their phone, computer, or search engine).\n5. **Avoid Misleading Information**: Never invent or guess dates beyond your knowledge cutoff, as this could lead to confusion or errors.\n\n---\n\nWould you like me to refine this further for a specific use case?\n\n---",
+                  "fromDraftModel": false,
+                  "tokensCount": 1221,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "style": {
+                "type": "thinking",
+                "ended": true,
+                "title": "Thought for 38.27 seconds",
+                "forceRenderAsPlainText": false
+              },
+              "prefix": "[THINK]",
+              "suffix": "[/THINK]"
+            },
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1776691697144-0.7778487722050903",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "When someone asks for the current date, here’s how you should think and respond:\n\n### 1. Understand the Need\nThe user is asking for real-time information about today's date. This requires up-to-date data that might not be available in your knowledge base.\n\n### 2. Check Capabilities\n   - **If you have real-time access**:\n     Fetch and provide the current date clearly (e.g., \"Today’s date is June 20, 2025\").\n   - **If you don’t have real-time capabilities** (like me with a cutoff of October 7, 2023):\n     Acknowledge the limitation:\n     *\"I don’t have access to real-time data, so I can’t provide today’s date. You can check your device’s clock or time zone for the most up-to-date information.\"*\n\n### 3. Provide Context\n   - If you do know a recent date (e.g., as of my last update on October 7, 2023), clarify that while you don’t have current data, you can share what was known then.\n   - Clarify if time zones matter for the user:\n     *\"Note that dates are affected by time zones—let me know if you’d like help calculating a specific one!\"*\n\n### 4. Direct to Alternatives\nSuggest how the user can get the information themselves (e.g., checking their phone, computer, or search engine).\n\n### 5. Avoid Misleading Information\nNever invent or guess dates beyond your knowledge cutoff, as this could lead to confusion or errors.\n\n---\n\n**Example Response to a User Asking \"What’s today’s date?\"**:\n*\"I don’t have access to real-time data, so I can’t provide the current date. My last update was on October 7, 2023. You can check your device’s clock or time zone to find out the exact date and time today.\"*\n\nWould you like me to tailor this further for a specific scenario?",
+                  "fromDraftModel": false,
+                  "tokensCount": 413,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "genInfo": {
+                "indexedModelIdentifier": "mistralai/Ministral-3-8B-Reasoning-2512-GGUF/Ministral-3-8B-Reasoning-2512-Q5_K_M.gguf",
+                "identifier": "ministral-3-8b-reasoning-2512",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "load.gpuStrictVramCap",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.offloadKVCacheToGpu",
+                      "value": true
+                    },
+                    {
+                      "key": "load.gpuSplitConfig",
+                      "value": {
+                        "strategy": "evenly",
+                        "disabledGpus": [],
+                        "priority": [],
+                        "customRatio": []
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 16384
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 0.9117647058823529
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{#- Default system message if no system prompt is passed. #}\n{%- set default_system_message = '# HOW YOU SHOULD THINK AND ANSWER\\n\\nFirst draft your thinking process (inner monologue) until you arrive at a response. Format your response using Markdown, and use LaTeX for any mathematical equations. Write both your thoughts and the response in the same language as the input.\\n\\nYour thinking process must follow the template below:[THINK]Your thoughts or/and draft, like working through an exercise on scratch paper. Be as casual and as long as you want until you are confident to generate the response to the user.[/THINK]Here, provide a self-contained response.' %}\n\n{#- Begin of sequence token. #}\n{{- bos_token }}\n\n{#- Handle system prompt if it exists. #}\n{#- System prompt supports text content or text and thinking chunks. #}\n{%- if messages[0]['role'] == 'system' %}\n    {{- '[SYSTEM_PROMPT]' -}}\n    {%- if messages[0]['content'] is string %}\n        {{- messages[0]['content'] -}}\n    {%- else %}        \n        {%- for block in messages[0]['content'] %}\n            {%- if block['type'] == 'text' %}\n                {{- block['text'] }}\n            {%- elif block['type'] == 'thinking' %}\n                {{- '[THINK]' + block['thinking'] + '[/THINK]' }}\n            {%- else %}\n                {{- raise_exception('Only text and thinking chunks are supported in system message contents.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- endif %}\n    {{- '[/SYSTEM_PROMPT]' -}}\n    {%- set loop_messages = messages[1:] %}\n{%- else %}\n    {%- set loop_messages = messages %}\n    {%- if default_system_message != '' %}\n        {{- '[SYSTEM_PROMPT]' + default_system_message + '[/SYSTEM_PROMPT]' }}\n    {%- endif %}\n{%- endif %}\n\n\n{#- Tools definition #}\n{%- set tools_definition = '' %}\n{%- set has_tools = false %}\n{%- if tools is defined and tools is not none and tools|length > 0 %}\n    {%- set has_tools = true %}\n    {%- set tools_definition = '[AVAILABLE_TOOLS]' + (tools| tojson) + '[/AVAILABLE_TOOLS]' %}\n    {{- tools_definition }}\n{%- endif %}\n\n{#- Checks for alternating user/assistant messages. #}\n{%- set ns = namespace(index=0) %}\n{%- for message in loop_messages %}\n    {%- if message.role == 'user' or (message.role == 'assistant' and (message.tool_calls is not defined or message.tool_calls is none or message.tool_calls | length == 0)) %}\n        {%- if (message['role'] == 'user') != (ns.index % 2 == 0) %}\n            {{- raise_exception('After the optional system message, conversation roles must alternate user and assistant roles except for tool calls and results.') }}\n        {%- endif %}\n        {%- set ns.index = ns.index + 1 %}\n    {%- endif %}\n{%- endfor %}\n\n{#- Handle conversation messages. #}\n{%- for message in loop_messages %}\n\n    {#- User messages supports text content or text and image chunks. #}\n    {%- if message['role'] == 'user' %}\n        {%- if message['content'] is string %}\n            {{- '[INST]' + message['content'] + '[/INST]' }}\n        {%- elif message['content'] | length > 0 %}\n            {{- '[INST]' }}\n            {%- if message['content'] | length == 2 %}\n                {%- if message['content'][0]['type'] == 'text' and message['content'][1]['type'] in ['image', 'image_url'] %}\n                    {%- set blocks = [message['content'][1], message['content'][0]] %}\n                {%- else %}\n                    {%- set blocks = message['content'] %}\n                {%- endif %}\n            {%- else %}\n                {%- set blocks = message['content'] %}\n            {%- endif %}\n            {%- for block in blocks %}\n                {%- if block['type'] == 'text' %}\n                    {{- block['text'] }}\n                {%- elif block['type'] in ['image', 'image_url'] %}\n                    {{- '[IMG]' }}\n                {%- else %}\n                    {{- raise_exception('Only text, image and image_url chunks are supported in user message content.') }}\n                {%- endif %}\n            {%- endfor %}\n            {{- '[/INST]' }}\n        {%- else %}\n            {{- raise_exception('User message must have a string or a list of chunks in content') }}\n        {%- endif %}\n\n    {#- Assistant messages supports text content or text, image and thinking chunks. #}\n    {%- elif message['role'] == 'assistant' %}\n        {%- if (message['content'] is none or message['content'] == '' or message['content']|length == 0) and (message['tool_calls'] is not defined or message['tool_calls'] is none or message['tool_calls']|length == 0) %}\n            {{- raise_exception('Assistant message must have a string or a list of chunks in content or a list of tool calls.') }}\n        {%- endif %}\n\n        {%- if message['content'] is string and message['content'] != '' %}\n            {{- message['content'] }}\n        {%- elif message['content'] | length > 0 %}\n            {%- for block in message['content'] %}\n                {%- if block['type'] == 'text' %}\n                    {{- block['text'] }}\n                {%- elif block['type'] == 'thinking' %}\n                    {{- '[THINK]' + block['thinking'] + '[/THINK]' }}\n                {%- else %}\n                    {{- raise_exception('Only text and thinking chunks are supported in assistant message contents.') }}\n                {%- endif %}\n            {%- endfor %}\n        {%- endif %}\n        \n        {%- if message['tool_calls'] is defined and message['tool_calls'] is not none and message['tool_calls']|length > 0 %}\n            {%- for tool in message['tool_calls'] %}\n                {{- '[TOOL_CALLS]' }}\n                {%- set name = tool['function']['name'] %}\n                {%- set arguments = tool['function']['arguments'] %}\n                {%- if arguments is not string %}\n                    {%- set arguments = arguments|tojson %}\n                {%- elif arguments == '' %}\n                    {%- set arguments = '{}' %}\n                {%- endif %}\n                {{- name + '[ARGS]' + arguments }}\n            {%- endfor %}\n        {%- endif %}\n\n        {{- eos_token }}\n\n    {#- Tool messages only supports text content. #}\n    {%- elif message['role'] == 'tool' %}\n        {{- '[TOOL_RESULTS]' + message['content']|string + '[/TOOL_RESULTS]' }}\n\n    {#- Raise exception for unsupported roles. #}\n    {%- else %}\n        {{- raise_exception('Only user, assistant and tool roles are supported, got ' + message['role'] + '.') }}\n    {%- endif %}\n{%- endfor %}\n"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.reasoning.parsing",
+                      "value": {
+                        "enabled": true,
+                        "startString": "[THINK]",
+                        "endString": "[/THINK]"
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 31.367096682033733,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.144,
+                  "totalTimeSec": 52.154,
+                  "promptTokensCount": 128,
+                  "predictedTokensCount": 1637,
+                  "totalTokensCount": 1765
+                }
+              }
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1776691710817-0.477144684941773",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ],
+          "senderInfo": {
+            "senderName": "ministral-3-8b-reasoning-2512"
+          }
+        }
+      ],
+      "currentlySelected": 0
+    }
+  ],
+  "usePerChatPredictionConfig": true,
+  "perChatPredictionConfig": {
+    "fields": []
+  },
+  "clientInput": "",
+  "clientInputFiles": [],
+  "userFilesSizeBytes": 0,
+  "lastUsedModel": {
+    "identifier": "ministral-3-8b-reasoning-2512",
+    "indexedModelIdentifier": "mistralai/Ministral-3-8B-Reasoning-2512-GGUF/Ministral-3-8B-Reasoning-2512-Q5_K_M.gguf",
+    "instanceLoadTimeConfig": {
+      "fields": [
+        {
+          "key": "load.gpuStrictVramCap",
+          "value": false
+        },
+        {
+          "key": "llm.load.offloadKVCacheToGpu",
+          "value": true
+        },
+        {
+          "key": "load.gpuSplitConfig",
+          "value": {
+            "strategy": "evenly",
+            "disabledGpus": [],
+            "priority": [],
+            "customRatio": []
+          }
+        },
+        {
+          "key": "llm.load.llama.cpuThreadPoolSize",
+          "value": 6
+        },
+        {
+          "key": "llm.load.contextLength",
+          "value": 16384
+        },
+        {
+          "key": "llm.load.llama.flashAttention",
+          "value": true
+        },
+        {
+          "key": "llm.load.llama.tryDirectIO",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.acceleration.offloadRatio",
+          "value": 0.9117647058823529
+        }
+      ]
+    },
+    "instanceOperationTimeConfig": {
+      "fields": []
+    }
+  },
+  "notes": [],
+  "plugins": [],
+  "pluginConfigs": {},
+  "disabledPluginTools": [],
+  "looseFiles": [],
+  "assistantLastMessagedAt": 1776691711412
+}

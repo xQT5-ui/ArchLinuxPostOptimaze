@@ -1,0 +1,223 @@
+{
+  "name": "Идентификация недооценённого индикатора",
+  "pinned": false,
+  "createdAt": 1776858302959,
+  "preset": "",
+  "tokenCount": 2544,
+  "userLastMessagedAt": 1776858305146,
+  "systemPrompt": "",
+  "messages": [
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "```xml\n<system_instructions>\n<core_ethos>\nPrioritize absolute accuracy, logic, and epistemic honesty over stylistic presentation. Never fabricate data, events, sources, or opinions. If you do not know the answer or lack sufficient data, explicitly state \"I don't know\". Never pretend to possess capabilities you do not have (e.g., real-time execution, asynchronous tasks, or background processes).\n</core_ethos>\n<language_rule>\nAlways respond in Russian unless the user explicitly requests another language.\n</language_rule>\n<role_assignment>\nAnalyze the user's request and automatically adopt a corresponding real-world professional persona to tailor the terminology and perspective of the response. \nConstraint: Declare this role ONLY in your very first response in the conversation. Do not repeat it in subsequent messages.\n</role_assignment>\n<communication_rules>\n- Base your answers strictly on provided context, verified knowledge, or clearly stated logical deductions.\n- Do not use humor, metaphors, storytelling, or emotions unless explicitly requested.\n- If the information is outdated, incomplete, or relies on an assumption/analogy, explicitly flag this in your response.\n- If the task is impossible or the request is ambiguous, state it directly instead of providing workarounds.\n</communication_rules>\n<output_structure>\nFollow this exact structure for every response:\n1. [Role Declaration]: ONLY in the first message. Format: \"Роль: [Identified Professional Persona]\".\n2. [TL;DR]: Provide a concise summary. SKIP this section entirely if the full response naturally fits within 1-3 sentences.\n3. [Detailed Answer]: Provide a comprehensive, step-by-step explanation with concrete details formatted for deep reading.\n     - Include alternative viewpoints or approaches IF they are valid and exist (do not invent false alternatives).\n     - Provide context-based source references or mention the origin of the data where applicable.\n</output_structure>\n</system_instructions>\n```\nКакой самый эффективный и недооценённый индикатор в техническом анализе для трейдинга по BTC/USDT с возможность открытия Long и Short позиций, который можно использовать самостоятельно?"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1776858305546-0.14410357567546273",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Хорошо, мне нужно ответить на вопрос пользователя о самом эффективном и недооценённом индикаторе в техническом анализе для трейдинга по BTC/USDT с возможностью открытия Long и Short позиций. Сначала я должен понять, что именно он имеет в виду.\n\nСначала проверю, есть ли такой индикатор, который считается эффективным и недооценённым. В техническом анализе обычно используются индикаторы вроде RSI, MACD, Bollinger Bands и т.д. Но пользователь просит необычный, недооценённый. Возможно, он имеет в виду что-то нестандартное.\n\nНо я должен быть осторожным. Если я не знаю такого индикатора, то по правилам systems_instructions нужно сказать \"I don't know\" (в русском — \"Я не знаю\"). Но сначала проверю, есть ли такой индикатор в реальности.\n\nВспомню: обычно недооценённые индикаторы могут быть, например, SuperTrend или Parabolic SAR. Но SuperTrend используется для определения направления тренда и может использоваться как Long/Short. Однако не уверен, считается ли он недооценённым. Или может быть что-то вроде Ichimoku Cloud. Но Ichimoku — это комплексный индикатор, а не простой.\n\nЕщё есть индикатор \"Donchian Channel\", но он тоже стандартный. Возможно, пользователь имеет в виду что-то конкретное. Но если я не знаю такого индикатора, то нужно сказать \"Я не знаю\".\n\nТакже важно, что пользователь просит индикатор для BTC/USDT, который можно использовать самостоятельно. То есть, возможно, он хочет что-то, что не требует дополнительных данных или сложной настройки.\n\nНо в реальности нет такого индикатора, который считается \"самодостаточным\" и \"недооценённым\". Все индикаторы имеют свои плюсы и минусы. Например, RSI может быть перекупленным/перепроданным, но это не новый индикатор.\n\nПроверю источники: если я не могу найти подтверждение существования такого индикатора, то по правилам нужно сказать \"Я не знаю\". Также, если информация устаревшая или неполная, нужно отметить.\n\nВероятно, такой индикатор не существует. Поэтому мой ответ должен быть \"Я не знаю\".\n\nТеперь структура ответа:\n\n1. [Role Declaration]: Роль: Финансовый аналитик по криптовалютным рынкам.\n2. [TL;DR]: Я не знаю такого индикатора.\n3. [Detailed Answer]: Объяснить, что нет подтверждённого индикатора с такими характеристиками, упомянуть, что все индикаторы имеют ограничения.\n\nНужно убедиться, что в ответе нет fabrications. Нельзя придумывать индикатор. Если не знаю — сказать \"Я не знаю\".\n\nТакже язык на русском, так как пользователь написал на русском, и правило языка_rule говорит всегда на русском.\n\nПроверю структуру: первый ответ должен содержать роль только в самом начале. В дальнейших сообщениях не повторять.\n\nТаким образом, ответ будет:\n\nРоль: Финансовый аналитик по криптовалютным рынкам.\nTL;DR: Я не знаю такого индикатора.\nDetailed Answer: ... объяснение.\n\nНо пользователь просит, чтобы TL;DR был только если полный ответ в 1-3 предложения. В данном случае TL;DR — \"Я не знаю такого индикатора\", что коротко.\n\nDetailed Answer должен быть детальным, но если я не знаю, то просто сказать, что нет подтверждения существования такого индикатора.\n\nНо по правилам: если информация устаревшая, неполная или предполагается, то отметить. Но здесь данные отсутствуют.\n\nТакже, если задача невозможна или неоднозначна — указать прямо. Здесь задача — найти такой индикатор, но его нет, поэтому ответ \"Я не знаю\".\n\nИтак, структура:\n\nРоль: Финансовый аналитик по криптовалютным рынкам.\nTL;DR: Я не знаю такого индикатора.\nDetailed Answer: В финансовой литературе и профессиональной практике не существует подтверждённого технического анализа, который соответствует всем описанным характеристикам (эффективный, недооценённый, работает для BTC/USDT с Long/Short, используется самостоятельно). Все существующие индикаторы имеют известные ограничения: например, RSI показывает перекупленность/перепродавленность, но не даёт сигналов на открытие позиции без подтверждения другими индикаторами. Существуют гипотетические или малоиспользуемые инструменты (например, SuperTrend), но они не являются «самодостаточными» и требуют комбинации с другими данными. Нет данных о конкретном индикаторе, признанном как недооценённый, поэтому ответ основан на отсутствии информации.\n\nНо нужно проверить, нет ли такого индикатора. Например, SuperTrend — это трендовый индикатор, который может использоваться для Long/Short. Но он не «самодостаточный» и не недооценён. Возможно, пользователь имеет в виду что-то другое.\n\nНо если я не уверен, то лучше сказать \"Я не знаю\". По правилам: если не знаю — сказать это.\n\nПоэтому TL;DR: Я не знаю такого индикатора.\nDetailed Answer: В предоставленном контексте и в общедоступной финансовой литературе нет подтверждённого технического анализа, соответствующего описанию «самый эффективный и недооценённый индикатор для BTC/USDT с возможностью Long/Short позиций, используемый самостоятельно». Все известные индикаторы имеют ограничения: RSI требует дополнительных подтверждений, SuperTrend — трендовый инструмент без изоляции. Наличие несуществующего индикатора противоречит принципам эпистемической честности (не создавать данные). Ответ основан на отсутствии данных.\n\nНо пользователь просит, чтобы в Detailed Answer были альтернативные точки зрения, если они валидны. Но если нет, то не придумывать.\n\nТакже нужно проверить, что ответ соответствует правилам: строго на основе контекста и знаний. Если нет информации — сказать \"Я не знаю\".\n\nПоэтому TL;DR: Я не знаю такого индикатора.\nDetailed Answer: Нет подтверждённого технического анализа с такими характеристиками. Все индикаторы требуют дополнительной обработки данных или комбинации с другими сигналами для эффективности.\n\nНо пользователь спрашивает «самый эффективный и недооценённый... который можно использовать самостоятельно». Если такой индикатор не существует, то ответ — \"Я не знаю\".\n\nТаким образом, структура:\n\nРоль: Финансовый аналитик по криптовалютным рынкам.\nTL;DR: Я не знаю такого индикатора.\nDetailed Answer: В профессиональной литературе и практике нет подтверждённого технического анализа, соответствующего описанию. Все существующие инструменты (например, RSI, SuperTrend) имеют известные ограничения и не могут использоваться как самостоятельные решения для открытия Long/Short позиций с высокой точностью. Ответ основан на отсутствии данных.\n\nНо нужно убедиться, что нет ошибок в фактах. Например, RSI действительно используется для определения перекупленности, но это не индикатор для открытия позиции напрямую без подтверждения. SuperTrend — трендовый инструмент, который может давать сигналы Long/Short, но требует настройки.\n\nНо если пользователь хочет «самодостаточный» индикатор, то такого нет. Поэтому ответ верный.\n\nТакже нужно проверить, что в Detailed Answer нет fabrications. Не придумываю индикаторы, не указываю их как эффективные.\n\nТаким образом, ответ готов.\n",
+                  "fromDraftModel": false,
+                  "tokensCount": 1823,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "style": {
+                "type": "thinking",
+                "ended": true,
+                "title": "Thought for 30.45 seconds",
+                "forceRenderAsPlainText": false
+              },
+              "prefix": "",
+              "suffix": "</think>"
+            },
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1776858336112-0.42955079447444455",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\nРоль: Финансовый аналитик по криптовалютным рынкам.  \nTL;DR: Я не знаю такого индикатора.  \nDetailed Answer: В профессиональной литературе и практике технического анализа для BTC/USDT нет подтверждённого инструмента, соответствующего описанию как «самодостаточного», «недооценённого» и «эффективного» для открытия Long/Short позиций без дополнительных подтверждений. Все известные индикаторы (RSI, SuperTrend, Donchian Channel) требуют комбинации с другими сигналами или имеют ограничения: RSI не даёт односторонних рекомендаций по торговле, SuperTrend работает как трендовый фильтр без изоляции от рыночной динамики. Гипотетические или малоиспользуемые инструменты (например, «crypto-specific» индикаторы) не имеют валидных данных о эффективности в реальном времени и противоречат принципу эпистемической честности (не создавать данные). Ответ основан на отсутствии подтверждения существования такого индикатора.",
+                  "fromDraftModel": false,
+                  "tokensCount": 254,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "genInfo": {
+                "indexedModelIdentifier": "lmstudio-community/NVIDIA-Nemotron-3-Nano-4B-GGUF/NVIDIA-Nemotron-3-Nano-4B-Q8_0.gguf",
+                "identifier": "nvidia-nemotron-3-nano-4b",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "load.gpuStrictVramCap",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.offloadKVCacheToGpu",
+                      "value": true
+                    },
+                    {
+                      "key": "load.gpuSplitConfig",
+                      "value": {
+                        "strategy": "evenly",
+                        "disabledGpus": [],
+                        "priority": [],
+                        "customRatio": []
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 16384
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{% macro render_extra_keys(json_dict, handled_keys) %}\n    {%- if json_dict is mapping %}\n        {%- for json_key in json_dict if json_key not in handled_keys %}\n            {%- if json_dict[json_key] is mapping or (json_dict[json_key] is iterable and json_dict[json_key] is not string) %}\n                {{- '\\n<' ~ json_key ~ '>' ~ (json_dict[json_key] | tojson) ~ '</' ~ json_key ~ '>' }}\n            {%- else %}\n                {{-'\\n<' ~ json_key ~ '>' ~ (json_dict[json_key] | string) ~ '</' ~ json_key ~ '>' }}\n            {%- endif %}\n        {%- endfor %}\n    {%- endif %}\n{% endmacro %}\n{%- set enable_thinking = enable_thinking if enable_thinking is defined else True %}\n{%- set truncate_history_thinking = truncate_history_thinking if truncate_history_thinking is defined else True %}\n\n{%- set ns = namespace(last_user_idx = -1) %}\n{%- set loop_messages = messages %}\n{%- for m in loop_messages %}\n  {%- if m[\"role\"] == \"user\" %}\n    {%- set ns.last_user_idx = loop.index0 %}\n  {%- endif %}\n{%- endfor %}\n\n{%- if messages[0][\"role\"] == \"system\" %}\n    {%- set system_message = messages[0][\"content\"] %}\n    {%- set loop_messages = messages[1:] %}\n{%- else %}\n    {%- set system_message = \"\" %}\n    {%- set loop_messages = messages %}\n{%- endif %}\n{%- if not tools is defined %}\n    {%- set tools = [] %}\n{%- endif %}\n{# Recompute last_user_idx relative to loop_messages after handling system #}\n{%- set ns = namespace(last_user_idx = -1) %}\n{%- for m in loop_messages %}\n  {%- if m[\"role\"] == \"user\" %}\n    {%- set ns.last_user_idx = loop.index0 %}\n  {%- endif %}\n{%- endfor %}\n{%- if system_message is defined %}\n    {{- \"<|im_start|>system\\n\" + system_message }}\n{%- else %}\n    {%- if tools is iterable and tools | length > 0 %}\n        {{- \"<|im_start|>system\\n\" }}\n    {%- endif %}\n{%- endif %}\n{%- if tools is iterable and tools | length > 0 %}\n    {%- if system_message is defined and system_message | length > 0 %}\n        {{- \"\\n\\n\" }}\n    {%- endif %}\n    {{- \"# Tools\\n\\nYou have access to the following functions:\\n\\n\" }}\n    {{- \"<tools>\" }}\n    {%- for tool in tools %}\n        {%- if tool.function is defined %}\n            {%- set tool = tool.function %}\n        {%- endif %}\n        {{- \"\\n<function>\\n<name>\" ~ tool.name ~ \"</name>\" }}\n        {%- if tool.description is defined %}\n            {{- '\\n<description>' ~ (tool.description | trim) ~ '</description>' }}\n        {%- endif %}\n        {{- '\\n<parameters>' }}\n        {%- if tool.parameters is defined and tool.parameters is mapping and tool.parameters.properties is defined and tool.parameters.properties is mapping %}\n            {%- for param_name, param_fields in tool.parameters.properties|items %}\n                {{- '\\n<parameter>' }}\n                {{- '\\n<name>' ~ param_name ~ '</name>' }}\n                {%- if param_fields.type is defined %}\n                    {{- '\\n<type>' ~ (param_fields.type | string) ~ '</type>' }}\n                {%- endif %}\n                {%- if param_fields.description is defined %}\n                    {{- '\\n<description>' ~ (param_fields.description | trim) ~ '</description>' }}\n                {%- endif %}\n                {%- if param_fields.enum is defined %}\n                    {{- '\\n<enum>' ~ (param_fields.enum | tojson) ~ '</enum>' }}\n                {%- endif %}\n                {%- set handled_keys = ['name', 'type', 'description', 'enum'] %}\n                {{- render_extra_keys(param_fields, handled_keys) }}\n                {{- '\\n</parameter>' }}\n            {%- endfor %}\n        {%- endif %}\n        {% set handled_keys = ['type', 'properties', 'required'] %}\n        {{- render_extra_keys(tool.parameters, handled_keys) }}\n        {%- if tool.parameters is defined and tool.parameters.required is defined %}\n            {{- '\\n<required>' ~ (tool.parameters.required | tojson) ~ '</required>' }}\n        {%- endif %}\n        {{- '\\n</parameters>' }}\n        {%- set handled_keys = ['type', 'name', 'description', 'parameters'] %}\n        {{- render_extra_keys(tool, handled_keys) }}\n        {{- '\\n</function>' }}\n    {%- endfor %}\n    {{- \"\\n</tools>\" }}\n\n    {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n{%- endif %}\n\n\n{%- if system_message is defined %}\n    {{- '<|im_end|>\\n' }}\n{%- else %}\n    {%- if tools is iterable and tools | length > 0 %}\n        {{- '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n\n{%- for message in loop_messages %}\n    {%- if message.role == \"assistant\" %}\n        {# Add reasoning content in to content field for unified processing below. #}\n        {%- if message.reasoning_content is defined and message.reasoning_content is string and message.reasoning_content | trim | length > 0 %}\n            {%- set content = \"<think>\\n\" ~ message.reasoning_content ~ \"\\n</think>\\n\" ~ (message.content | default('', true)) %}\n        {%- else %}\n            {%- set content = message.content | default('', true) %}\n            {%- if content is string -%}\n                {# Allow downstream logic to to take care of broken thought, only handle coherent reasoning here. #}\n                {%- if '<think>' not in content and '</think>' not in content -%}\n                    {%- set content = \"<think></think>\" ~ content -%}\n                {# Fix content with closing think but not opening #}\n                {%- elif '<think>' not in content and '</think>' in content -%}\n                    {%- set content = \"<think>\n\" ~ content -%}   \n                {%- endif -%}\n            {%- else -%}\n                {%- set content = content -%}\n            {%- endif -%}\n        {%- endif %}\n        {%- if message.tool_calls is defined and message.tool_calls is iterable and message.tool_calls | length > 0 %}\n            {# Assistant message has tool calls. #}\n            {{- '<|im_start|>assistant\\n' }}\n                {%- set include_content = not (truncate_history_thinking and loop.index0 < ns.last_user_idx) %}\n                {%- if content is string and content | trim | length > 0 %}\n                    {%- if include_content %}\n                        {{- (content | trim) ~ '\\n' -}}\n                    {%- else %}\n                        {%- set c = (content | string) %}\n                        {%- if '</think>' in c %}\n                            {# Keep only content after the last closing think. Also generation prompt causes this. #}\n                            {%- set c = c.split('</think>')[-1] %}\n                        {%- elif '<think>' in c %}\n                            {# If <think> was opened but never closed, drop the trailing think segment #}\n                            {%- set c = c.split('<think>')[0] %}\n                        {%- endif %}\n                        {%- set c = \"<think></think>\" ~ c | trim %}\n                        {%- if c | length > 0 %}\n                            {{- c ~ '\\n' -}}\n                        {%- endif %}\n                    {%- endif %}\n                {%- else %}\n                    {{- \"<think></think>\" -}}\n                {%- endif %}\n                {%- for tool_call in message.tool_calls %}\n                    {%- if tool_call.function is defined %}\n                        {%- set tool_call = tool_call.function %}\n                    {%- endif %}\n                    {{- '<tool_call>\\n<function=' ~ tool_call.name ~ '>\\n' -}}\n                        {%- if tool_call.arguments is defined %}\n                            {%- for args_name, args_value in tool_call.arguments|items %}\n                                {{- '<parameter=' ~ args_name ~ '>\\n' -}}\n                                    {%- set args_value = args_value | tojson if args_value is mapping or (args_value is iterable and args_value is not string) else args_value | string %}\n                                {{- args_value ~ '\\n</parameter>\\n' -}}\n                            {%- endfor %}\n                        {%- endif %}\n                    {{- '</function>\\n</tool_call>\\n' -}}\n                {%- endfor %}\n                {{- '<|im_end|>\\n' }}\n        {%- else %}\n            {# Assistant message doesn't have tool calls. #}\n            {%- if not (truncate_history_thinking and loop.index0 < ns.last_user_idx) %}\n                {{- '<|im_start|>assistant\\n' ~ (content | default('', true) | string | trim) ~ '<|im_end|>\\n' }}\n            {%- else %}\n                {%- set c = (content | default('', true) | string) %}\n                {%- if '<think>' in c and '</think>' in c %}\n                    {%- set c = \"<think></think>\" ~ c.split('</think>')[-1] %}\n                {%- endif %}\n                {%- set c = c | trim %}\n                {%- if c | length > 0 %}\n                    {{- '<|im_start|>assistant\\n' ~ c ~ '<|im_end|>\\n' }}\n                {%- else %}\n                    {{- '<|im_start|>assistant\\n<|im_end|>\\n' }}\n                {%- endif %}\n            {%- endif %}\n        {%- endif %}\n    {%- elif message.role == \"user\" or message.role == \"system\" %}\n        {{- '<|im_start|>' + message.role + '\\n' }}\n        {%- set content = message.content | string %}\n        {{- content }}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n            {{- '<|im_start|>user\\n' }}\n        {%- endif %}\n        {{- '<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>\\n' }}\n        {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n            {{- '<|im_end|>\\n' }}\n        {%- elif loop.last %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- else %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endfor %}\n\n{%- if add_generation_prompt %}\n    {%- if enable_thinking %}\n        {{- '<|im_start|>assistant\\n<think>\\n' }}\n    {%- else %}\n        {{- '<|im_start|>assistant\\n<think></think>' }}\n    {%- endif %}\n{%- endif %}\n"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 59.20875909149214,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.296,
+                  "totalTimeSec": 35.096,
+                  "promptTokensCount": 469,
+                  "predictedTokensCount": 2079,
+                  "totalTokensCount": 2548
+                }
+              }
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1776858340563-0.7727251708375261",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ],
+          "senderInfo": {
+            "senderName": "nvidia-nemotron-3-nano-4b"
+          }
+        }
+      ],
+      "currentlySelected": 0
+    }
+  ],
+  "usePerChatPredictionConfig": true,
+  "perChatPredictionConfig": {
+    "fields": []
+  },
+  "clientInput": "",
+  "clientInputFiles": [],
+  "userFilesSizeBytes": 0,
+  "lastUsedModel": {
+    "identifier": "nvidia-nemotron-3-nano-4b",
+    "indexedModelIdentifier": "lmstudio-community/NVIDIA-Nemotron-3-Nano-4B-GGUF/NVIDIA-Nemotron-3-Nano-4B-Q8_0.gguf",
+    "instanceLoadTimeConfig": {
+      "fields": [
+        {
+          "key": "load.gpuStrictVramCap",
+          "value": false
+        },
+        {
+          "key": "llm.load.offloadKVCacheToGpu",
+          "value": true
+        },
+        {
+          "key": "load.gpuSplitConfig",
+          "value": {
+            "strategy": "evenly",
+            "disabledGpus": [],
+            "priority": [],
+            "customRatio": []
+          }
+        },
+        {
+          "key": "llm.load.llama.cpuThreadPoolSize",
+          "value": 6
+        },
+        {
+          "key": "llm.load.contextLength",
+          "value": 16384
+        },
+        {
+          "key": "llm.load.llama.flashAttention",
+          "value": true
+        },
+        {
+          "key": "llm.load.llama.tryDirectIO",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.acceleration.offloadRatio",
+          "value": 1
+        }
+      ]
+    },
+    "instanceOperationTimeConfig": {
+      "fields": []
+    }
+  },
+  "notes": [],
+  "plugins": [],
+  "pluginConfigs": {},
+  "disabledPluginTools": [],
+  "looseFiles": [],
+  "assistantLastMessagedAt": 1776858341331
+}

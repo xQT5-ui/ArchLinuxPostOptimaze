@@ -1,0 +1,238 @@
+{
+  "name": "Mending a Broken Mug",
+  "pinned": false,
+  "createdAt": 1777228740335,
+  "preset": "",
+  "tokenCount": 5442,
+  "userLastMessagedAt": 1777228741737,
+  "systemPrompt": "",
+  "messages": [
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "у меня есть металлическая чашка, но у неё заварено верхнее отверстие. Так же я заметил что у неё отпилено дно. Как из неё пить?"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1777228741970-0.5931816612002219",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Here's a thinking process that leads to the suggested solutions:\n\n1.  **Analyze the Problem:**\n    *   **Object:** A metal cup (mug).\n    *   **Condition 1:** The top opening is clogged/welded shut (\"заварено\"). This means liquid cannot enter or exit from the top.\n    *   **Condition 2:** The bottom has been cut off (\"отпилено дно\"). This means there's no base to stand on, and it's likely unstable or open at the bottom.\n    *   **Goal:** How to drink from it?\n\n2.  **Evaluate Feasibility & Safety:**\n    *   *Safety First:* Metal cups can be hot (thermal shock risk), sharp edges (cut bottom), and potentially toxic if the metal is old/unknown. Drinking directly from a cut-off cup is physically possible but ergonomically difficult and potentially dangerous.\n    *   *Logic Check:* If the top is sealed, you can't pour liquid in or out through the normal opening. You need to access the interior volume.\n\n3.  **Brainstorming Solutions:**\n\n    *   *Idea 1: Drill a hole.* Since the bottom is already cut off, maybe drill another hole? But if it's metal, drilling might be hard and could weaken the structure further or create sharp edges.\n    *   *Idea 2: Invert it.* If the top is sealed but the bottom is open (and unstable), can you turn it upside down? No, liquid would spill out immediately unless there's a seal at the new \"top\". Wait, if the top is welded shut and the bottom is cut off...\n        *   Scenario A: Top = Sealed. Bottom = Open/Cut. -> It's like a tube with one end closed and the other open (but unstable). You can't drink from it because there's no opening at the \"top\" relative to gravity, unless you hold it upside down? No, if top is sealed, liquid stays inside until you break the seal or find an exit.\n        *   Scenario B: Top = Sealed. Bottom = Cut off (open). -> You can't drink from this cup directly because there's no opening at the mouth level. The \"mouth\" is blocked.\n    *   *Idea 3: Modify the top.* If it's welded shut, you need to cut or drill a hole in the metal lid/top part. This requires tools (drill, saw).\n    *   *Idea 4: Use as a container for something else.* Maybe pour liquid into a bottle and drink from there? But the user asked \"how to drink from it\" implying using the cup itself.\n    *   *Idea 5: The \"Inverted Cup\" trick (if applicable).* If the bottom is cut off, maybe they mean the *bottom* of the original cup was removed, leaving a tube shape? If the top is sealed, you can't drink from it unless you break the seal.\n    *   *Idea 6: Practicality.* This sounds like a broken or repurposed object (maybe a thermos turned into a flask?).\n\n4.  **Refining the Analysis (Crucial Step):**\n    *   Wait, let's re-read carefully: \"верхнее отверстие заварено\" (top opening is welded shut). \"отпилено дно\" (bottom cut off).\n    *   If I hold it normally: Top is blocked. Bottom is open. Liquid stays inside? No, if the bottom is open, liquid falls out immediately unless there's a seal at the bottom too. But usually, \"cut off bottom\" means the base was removed to make it a tube or handle-less vessel.\n    *   If I hold it upside down: Top (now facing up) is blocked. Bottom (now facing down) is open. Liquid falls out.\n    *   **Conclusion:** You cannot drink from this cup in its current state because there is no functional opening for liquid to enter or exit while keeping the contents inside, and certainly not at a drinking height.\n\n5.  **Formulating Solutions:**\n\n    *   **Option A: Modify the Top (Most likely intended solution).**\n        *   Drill a hole through the metal lid/top part.\n        *   Use a straw? No, if it's welded shut, you need to cut the weld.\n        *   Make a new opening using a drill bit or Dremel tool.\n\n    *   **Option B: Modify the Bottom (Alternative).**\n        *   If the bottom is already cut off, maybe they mean the cup is now a tube. You could attach a lid at the \"bottom\" end to make it drinkable? No, that's overcomplicating.\n\n    *   **Option C: Use as a Filter/Strainer.**\n        *   Not for drinking directly.\n\n    *   **Option D: Safety Warning.**\n        *   Metal edges are sharp.\n        *   Heat retention (metal gets hot).\n        *   Structural integrity (cut metal is weak).\n\n6.  **Developing the Response:**\n    *   Acknowledge the situation humorously but seriously.\n    *   Explain that in its current state, it's impossible to drink from directly because there's no opening at the top and liquid would spill out of the bottom if held upside down (or stay inside if sealed). Wait, if the top is welded shut, you can't pour anything in. If the bottom is cut off, you can't keep anything in without a seal.\n    *   **Correction:** Actually, if the top is welded shut and the bottom is cut off... it's essentially a tube with one end closed (top) and one open (bottom). To drink from it, you need to access the interior. Since gravity works downwards, liquid would fall out of the \"cut\" bottom unless there's something holding it up.\n    *   **Wait, is this a trick question?** Maybe they mean the cup was used as a container for something else? No, assume literal interpretation.\n    *   **Best Advice:** You need to create an opening at the top (where you want to drink) or seal the bottom and make it upright. Since the bottom is already cut off, you can't stand it up. So you must drill/cut a hole in the \"top\" part of the metal shell.\n    *   **Wait, another interpretation:** Maybe they mean the cup was used as a filter? No.\n    *   **Most logical fix:** Drill a hole through the top lid (if there is one) or cut into the side near the top to create a drinking spout/opening.\n\n7.  **Drafting the Response (in Russian):**\n    *   Start with a reality check: In its current state, it's not drinkable directly because of gravity and lack of openings.\n    *   Suggest solutions:\n        1.  Drill/Cut a hole in the top part (if possible).\n        2.  Use a straw through an existing opening? No, top is sealed.\n        3.  Make it into a flask by sealing the bottom and drinking from the side? Too complex.\n    *   **Wait, let's look at the \"Cut Bottom\" part again.** If the bottom is cut off, it's unstable. You can't drink standing on it. You have to hold it.\n    *   **The Real Problem:** The top is sealed. So you can't pour water in. And if you try to drink from the open bottom (which is now at the \"top\" when held upside down), liquid spills out. If you hold it right-side up, the open bottom falls away.\n    *   **Wait, maybe they mean a specific type of cup?** Like a mug with a lid? No, \"заварено верхнее отверстие\".\n    *   **Okay, let's assume the user wants to turn this into a drinking vessel.**\n        1.  **Drill a hole:** Use a drill or Dremel to make an opening at the top (where it was sealed).\n        2.  **Seal the bottom:** If you want to drink from the \"top\" side, you need to seal the cut-off bottom so liquid doesn't leak out while holding it upside down? No, that defeats the purpose of drinking.\n    *   **Wait, simplest solution:** Just drill a hole in the metal where you want to drink (near the top). Since the bottom is already gone, you can hold it by hand and drink from the new hole.\n\n8.  **Refining the Advice for Safety & Practicality:**\n    *   **Warning:** Metal edges are dangerous. Heat transfer is high.\n    *   **Tools needed:** Drill, metal file (to smooth edges), maybe a straw if making a small hole.\n    *   **Alternative:** Don't drink from it directly. Use it as a container for something else or throw it away.\n\n9.  **Wait, is there a \"trick\"?**\n    *   Maybe the user implies the cup is now a tube (like a straw). If you seal the bottom and make a hole at the top... but the bottom is cut off.\n    *   Okay, let's stop overthinking. The physical reality is: **You can't drink from it as is.** You need to modify it.\n\n10. **Final Plan:**\n    *   State clearly that drinking directly is impossible due to lack of openings and structural instability.\n    *   Provide a DIY solution (drill/cut a hole in the top part).\n    *   Add safety warnings (sharp edges, heat, metal toxicity).\n    *   Suggest alternatives (don't drink from it, use as a tool/container for something else).\n\n11. **Self-Correction on \"Top Sealed\":** If the top is sealed and bottom cut off... It's like a tube with one end closed. You can't pour liquid in unless you break the seal. So the primary task is to open the top.\n    *   Wait, if I hold it upside down (open bottom facing up), I can drink from there? No, because the \"top\" was sealed. If I turn it over, the sealed part becomes the base. The cut-off part becomes the mouth. But liquid would spill out of the cut-off part immediately unless I seal it again.\n    *   **Wait, if the bottom is cut off**, that means there's no base. So you can't stand it on a table. You have to hold it. If you hold it normally (sealed top up), you can't drink because the opening is blocked. If you turn it upside down (cut bottom up), liquid spills out of the \"mouth\" unless you seal that side too.\n    *   **Conclusion:** It's a broken vessel. You need to create an opening at the level where you want to drink, and ensure the other end doesn't leak. Since the bottom is already cut off, it leaks from there. So you must either:\n        1.  Seal the \"cut\" side (make a new lid) and open the \"sealed\" top.\n        2.  Or just accept that it's a tube and drink from the open end while holding it upside down? No, liquid falls out.\n\n    *   **Okay, let's simplify.** The user asks \"How to drink?\".\n    *   Answer: You can't directly. You need to modify it.\n    *   Step 1: Drill a hole in the metal (where the top was).\n    *   Step 2: Smooth edges.\n    *   Step 3: Use a straw or just tilt and drink from the new opening.\n\n    *(Self-Correction)*: Wait, if the bottom is cut off, it's open at the bottom. If I drill a hole in the top (which was sealed), now I have two holes? No, that makes it leaky unless I seal one side.\n    *   **Scenario:** Top = Sealed. Bottom = Cut Open.\n    *   To drink: You need an opening at the mouth level. The bottom is already open but unstable. If you hold it by hand and tilt it so the \"cut\" part faces up, you can't keep liquid in because gravity pulls it out of the cut part (unless you seal that side).\n    *   **Wait, maybe they mean a specific type of cup?** Like a mug where the handle is welded? No.\n    *   **Okay, I will assume standard interpretation:** It's a broken vessel.\n    *   **Solution:** You need to create an opening at the top (drill/cut) AND seal the bottom (if you want it upright). OR, if you just want to drink from the open end... but gravity makes that impossible without a lid on the cut side.\n\n    *   **Wait, is there a simpler answer?** Maybe they mean \"How do I use this as a cup?\"\n    *   Answer: You can't. It's broken. But if you fix it (drill hole in top), you can drink from that new opening while holding the cut-off bottom part? No, liquid leaks out of the bottom.\n\n    *   **Okay, let's look at the \"Cut Bottom\" again.** If the bottom is cut off, maybe they mean the cup was used as a filter or something?\n    *   Let's assume the user wants to turn this into a drinking vessel.\n    *   **The only way:** Drill a hole in the top (where it was sealed). Then you have an opening at the top. But what about the bottom? If the bottom is cut off, liquid will fall out of the bottom unless there's something holding it up or sealing it.\n    *   **Wait!** If I hold the cup by hand, and the \"top\" (sealed) is facing down... No.\n    *   **Okay, let's stop guessing physics.** The most helpful answer explains that it needs modification to be drinkable.\n\n    *   **Revised Plan:**\n        1.  Directly: Impossible as is (no opening at mouth level).\n        2.  Fix: Drill a hole in the metal top part.\n        3.  Warning: Safety, sharp edges, heat.\n        4.  Alternative: Don't drink from it directly if possible.\n\n    *(Wait, one more thought)*: Is this a riddle? \"Metal cup... top sealed... bottom cut off.\" Maybe they mean a specific type of container like a thermos where the lid is welded shut (for storage) and the bottom was removed to make it a flask?\n    *   If so, you can't drink from it without breaking the seal.\n\n    *(Final Decision)*: Treat it as a practical DIY problem with safety warnings.\n\n    **Structure of the answer:**\n    1.  Direct Answer: As is -> Impossible/Dangerous.\n    2.  Solution (DIY): Drill/Cut a hole in the top part.\n    3.  Safety Warnings: Sharp edges, heat, metal type.\n    4.  Alternative: Use as a container for something else or discard.\n\n    *(Wait, let's check if there is a clever trick)*: If you hold it upside down (cut bottom up), and the top was sealed... wait. If I turn it upside down, the \"sealed\" part becomes the base. The \"cut\" part becomes the mouth. But liquid spills out of the cut part immediately unless I seal that side too.\n    *   **Wait!** Maybe they mean the cup is a tube (like a pipe). If you drill a hole in the top (which was sealed), and leave the bottom open... You can't drink because it leaks from the bottom.\n    *   **Okay, so the only way to drink is:** Seal the cut-off bottom (make a new lid) AND open the sealed top. OR, just accept that you need to make an opening at the \"top\" and hold it upside down? No, liquid falls out of the bottom.\n\n    *   **Wait, I might be overcomplicating.** Maybe they mean: \"I have a cup, but the lid is welded shut (so no handle/lid) and the bottom was cut off.\"\n    *   If the top is sealed, you can't pour in. You need to open it.\n    *   If the bottom is cut off, it's unstable.\n    *   **Conclusion:** It needs significant modification.\n\n    *(Wait, could this be a specific type of cup?)* Like a \"mug\" where the handle is welded shut and the bottom was removed for some reason (maybe to make it lighter?).\n    *   Okay, I will provide the practical advice on how to modify it safely.\n\n    **Key Points:**\n    1.  It's not drinkable as is.\n    2.  You need to drill a hole in the top part.\n    3.  Smooth edges (file).\n    4.  Safety warnings.\n    5.  Maybe suggest using it for something else if it's too dangerous.\n\n    *(Wait, one more thing)*: If the bottom is cut off, maybe they mean the cup was used as a filter? No.\n    *   Okay, I'll stick to the modification advice.\n\n    **Wait, is there a simpler answer?** \"You can't.\"\n    *   But that's not helpful.\n    *   Better: \"You need to drill a hole in the top part and seal the bottom if you want it upright.\"\n    *   Actually, since the bottom is already cut off, you can't stand it up. So you must hold it by hand. If you hold it by hand, and the top is sealed... you can't drink from the top. You have to open the top. But then liquid leaks out of the bottom (cut side).\n    *   **So:** To drink from this cup, you need to:\n        1.  Drill a hole in the \"top\" part (to create an opening).\n        2.  Seal the \"bottom\" cut-off part (so liquid doesn't leak out while holding it upside down? No, if you hold it normally, the top is up. If you open the top, liquid stays in until you drink from there. But the bottom is open... so liquid falls out of the bottom).\n    *   **Wait!** If I hold a cup with an open bottom and sealed top... Liquid falls out of the bottom immediately. It's not a container.\n    *   **So:** You MUST seal the cut-off bottom to make it a container, AND open the sealed top to drink from it.\n    *   **OR:** You can't use it as a cup at all unless you fix both ends.\n\n    **Wait, maybe they mean \"How do I drink FROM IT\" meaning using it as a vessel?**\n    *   If the bottom is cut off, it's like a tube.\n    *   If the top is sealed...\n    *   Okay, I will explain that it needs to be fixed properly (seal one end, open the other).\n\n    **Wait, let's look at the prompt again.** \"Как из неё пить?\" (How to drink from it?).\n    *   Maybe they mean using a straw? No.\n    *   Maybe they mean drinking directly?\n    *   Okay, I'll give the modification advice. It's the most helpful response.\n\n    **Wait, is there a safety risk?** Yes, metal edges can be sharp. Drinking from cut metal is bad hygiene (rust, bacteria).\n    *   So I should advise against it if possible.\n\n    **Final Plan:**\n    1.  State that as is, it's impossible/dangerous.\n    2.  Explain the physics: Liquid leaks out of the bottom unless sealed.\n    3.  Suggest modification (Drill hole in top + Seal bottom).\n    4.  Warn about safety (sharp edges, heat, metal type).\n    5.  Suggest alternatives (don't drink from it).\n\n    *(Wait, one more thought)*: Is there a chance they mean the cup is upside down? \"Top sealed\" means the lid is welded shut. \"Bottom cut off\". If I hold it by hand...\n    *   Okay, I'll stop overthinking and give clear advice. It's broken. Fix it or don't use it.\n\n    *(Wait, could this be a joke?)* No, seems like a real problem.\n    *(Wait, is there a specific tool?)* A Dremel tool.\n    *(Wait, what if they mean the cup is a thermos?)* Thermos lids are welded shut sometimes. But bottom cut off... that's weird.\n\n    **Okay, final decision:** Treat it as a broken object needing repair or disposal. Provide safety warnings.\n\n    **Structure:**\n    1.  Direct answer: Impossible directly.\n    2.  Why? (No opening at mouth level + leaks from bottom).\n    3.  How to fix (DIY steps).\n    4.  Safety warnings.\n    5.  Recommendation (Don't use if unsafe).\n\n    *(Wait, one more thing)*: If the top is welded shut, maybe it's a specific type of cup where you drink from the side? No.\n    *   Okay, I'll stick to the plan.\n\n    **Wait, let's check the \"Bottom Cut Off\" part again.**\n    *   If the bottom is cut off, it means there is no base.\n    *   So if you hold it normally (top up), liquid falls out of the bottom? No, because the top is sealed. Wait.\n    *   If Top = Sealed. Bottom = Open.\n    *   Hold it upright: Liquid stays inside until gravity pulls it down to the open bottom -> Spills out.\n    *   So you can't hold liquid in it unless you seal the bottom too.\n    *   **So:** To drink from it, you need to make a hole at the top (to access) AND seal the bottom (to keep liquid).\n    *   **OR** You just accept that it's not a cup and use it as something else.\n\n    **Okay, I will write the response based on this logic.**\n",
+                  "fromDraftModel": false,
+                  "tokensCount": 4792,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "style": {
+                "type": "thinking",
+                "ended": true,
+                "title": "Thought for 1 minutes 30 seconds",
+                "forceRenderAsPlainText": false
+              },
+              "prefix": "",
+              "suffix": "</think>"
+            },
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1777228832082-0.6228426089181585",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n\nВ текущем виде из такой чашки пить **нельзя**, и вот почему:\n\n1.  **Нет отверстия для питья:** Верх заварен, значит, внутрь ничего не попадет (или вы не сможете налить туда жидкость).\n2.  **Дно открыто:** Если держать чашку обычным способом (верхом вверх), жидкость сразу же выльется из отпиленного дна, так как нет основания для удержания содержимого.\n\nЧтобы сделать эту чашку пригодной для использования, нужно провести ремонтные работы. Вот несколько вариантов решения:\n\n### Вариант 1: Ремонт (если металл прочный и безопасен)\nЕсли вы хотите превратить это в сосуд для питья, вам нужно создать два условия:\n*   **Открыть верх:** С помощью дрели или болгарки проделать отверстие в той части, где было заварено верхнее отверстие. Затем обязательно отшлифуйте края (напильником или наждачкой), чтобы они не порезали губы.\n*   **Закрыть дно:** Так как дно уже отпилено, жидкость будет вытекать из него при любом положении. Вам нужно сделать новое «дно» (например, приварить кусок металла или использовать герметик/клей для металлов), чтобы чашка могла стоять на столе и держать жидкость.\n\n### Вариант 2: Использование как трубка\nЕсли вам не обязательно пить из неё напрямую, а просто использовать её объем:\n*   Можно использовать её как **фильтр** (например, для чая или кофе) — заварить верхнее отверстие, чтобы жидкая часть проходила через металл. Но это сложно без специального оборудования.\n\n### Вариант 3: Безопасность и альтернативы\nВажно помнить о рисках:\n*   **Острые края:** Отпиленное дно может иметь острые края, которые могут поранить руку или губы при неправильном использовании.\n*   **Температура:** Металл быстро нагревается от горячего напитка и может обжечь руки.\n*   **Гигиена:** Старый металл может быть покрыт ржавчиной или микротрещинами, где скапливаются бактерии.\n\n**Рекомендация:**\nЕсли чашка не имеет заводского качества (например, это старый предмет из гаража), лучше всего **не пить из неё напрямую**. Если вы хотите использовать её как сосуд, лучше купить новую чашку или найти способ сделать её герметичной и безопасной для контакта с пищей.\n\n**Краткий итог:** Пить можно только после того, как вы проделаете отверстие в верхней части (где было заварено) и закроете отпиленное дно, чтобы жидкость не выливалась.",
+                  "fromDraftModel": false,
+                  "tokensCount": 598,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "genInfo": {
+                "indexedModelIdentifier": "bartowski/Qwen_Qwen3.5-4B-GGUF/Qwen_Qwen3.5-4B-Q5_K_S.gguf",
+                "identifier": "qwen_qwen3.5-4b@q5_k_s",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "load.gpuStrictVramCap",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.offloadKVCacheToGpu",
+                      "value": true
+                    },
+                    {
+                      "key": "load.gpuSplitConfig",
+                      "value": {
+                        "strategy": "evenly",
+                        "disabledGpus": [],
+                        "priority": [],
+                        "customRatio": []
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 16384
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.temperature",
+                      "value": 0.1
+                    },
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{%- set image_count = namespace(value=0) %}\n{%- set video_count = namespace(value=0) %}\n{%- macro render_content(content, do_vision_count, is_system_content=false) %}\n    {%- if content is string %}\n        {{- content }}\n    {%- elif content is iterable and content is not mapping %}\n        {%- for item in content %}\n            {%- if 'image' in item or 'image_url' in item or item.type == 'image' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain images.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set image_count.value = image_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Picture ' ~ image_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|image_pad|><|vision_end|>' }}\n            {%- elif 'video' in item or item.type == 'video' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain videos.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set video_count.value = video_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Video ' ~ video_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|video_pad|><|vision_end|>' }}\n            {%- elif 'text' in item %}\n                {{- item.text }}\n            {%- else %}\n                {{- raise_exception('Unexpected item type in content.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- elif content is none or content is undefined %}\n        {{- '' }}\n    {%- else %}\n        {{- raise_exception('Unexpected content type.') }}\n    {%- endif %}\n{%- endmacro %}\n{%- if not messages %}\n    {{- raise_exception('No messages provided.') }}\n{%- endif %}\n{%- if tools and tools is iterable and tools is not mapping %}\n    {{- '<|im_start|>system\\n' }}\n    {{- \"# Tools\\n\\nYou have access to the following functions:\\n\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\" }}\n    {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {%- if content %}\n            {{- '\\n\\n' + content }}\n        {%- endif %}\n    {%- endif %}\n    {{- '<|im_end|>\\n' }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {{- '<|im_start|>system\\n' + content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" %}\n        {%- set content = render_content(message.content, false)|trim %}\n        {%- if not(content.startswith('<tool_response>') and content.endswith('</tool_response>')) %}\n            {%- set ns.multi_step_tool = false %}\n            {%- set ns.last_query_index = index %}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if ns.multi_step_tool %}\n    {{- raise_exception('No user query found in messages.') }}\n{%- endif %}\n{%- for message in messages %}\n    {%- set content = render_content(message.content, true)|trim %}\n    {%- if message.role == \"system\" %}\n        {%- if not loop.first %}\n            {{- raise_exception('System message must be at the beginning.') }}\n        {%- endif %}\n    {%- elif message.role == \"user\" %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- set reasoning_content = reasoning_content|trim %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content + '\\n</think>\\n\\n' + content }}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls and message.tool_calls is iterable and message.tool_calls is not mapping %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if tool_call.function is defined %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {%- if loop.first %}\n                    {%- if content|trim %}\n                        {{- '\\n\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- else %}\n                        {{- '<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- endif %}\n                {%- else %}\n                    {{- '\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                {%- endif %}\n                {%- if tool_call.arguments is defined %}\n                    {%- for args_name, args_value in tool_call.arguments|items %}\n                        {{- '<parameter=' + args_name + '>\\n' }}\n                        {%- set args_value = args_value | tojson if args_value is mapping or (args_value is iterable and args_value is not string) else args_value | string %}\n                        {{- args_value }}\n                        {{- '\\n</parameter>\\n' }}\n                    {%- endfor %}\n                {%- endif %}\n                {{- '</function>\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n            {{- '<|im_end|>\\n' }}\n        {%- elif loop.last %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- else %}\n        {{- raise_exception('Unexpected message role.') }}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n    {%- if enable_thinking is defined and enable_thinking is false %}\n        {{- '<think>\\n\\n</think>\\n\\n' }}\n    {%- else %}\n        {{- '<think>\\n' }}\n    {%- endif %}\n{%- endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.vision.userMaxImageDimensionPixels",
+                      "value": {
+                        "checked": true,
+                        "value": 2048
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.vision.ignoreModelPreferredMaxImageDimension",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 52.035153529180064,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.164,
+                  "totalTimeSec": 103.607,
+                  "promptTokensCount": 47,
+                  "predictedTokensCount": 5392,
+                  "totalTokensCount": 5439
+                }
+              }
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1777228845528-0.8078669405133582",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ],
+          "senderInfo": {
+            "senderName": "qwen_qwen3.5-4b@q5_k_s"
+          }
+        }
+      ],
+      "currentlySelected": 0
+    }
+  ],
+  "usePerChatPredictionConfig": true,
+  "perChatPredictionConfig": {
+    "fields": []
+  },
+  "clientInput": "",
+  "clientInputFiles": [],
+  "userFilesSizeBytes": 0,
+  "lastUsedModel": {
+    "identifier": "qwen_qwen3.5-4b@q5_k_s",
+    "indexedModelIdentifier": "bartowski/Qwen_Qwen3.5-4B-GGUF/Qwen_Qwen3.5-4B-Q5_K_S.gguf",
+    "instanceLoadTimeConfig": {
+      "fields": [
+        {
+          "key": "load.gpuStrictVramCap",
+          "value": false
+        },
+        {
+          "key": "llm.load.offloadKVCacheToGpu",
+          "value": true
+        },
+        {
+          "key": "load.gpuSplitConfig",
+          "value": {
+            "strategy": "evenly",
+            "disabledGpus": [],
+            "priority": [],
+            "customRatio": []
+          }
+        },
+        {
+          "key": "llm.load.llama.cpuThreadPoolSize",
+          "value": 6
+        },
+        {
+          "key": "llm.load.contextLength",
+          "value": 16384
+        },
+        {
+          "key": "llm.load.llama.flashAttention",
+          "value": true
+        },
+        {
+          "key": "llm.load.llama.tryDirectIO",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.acceleration.offloadRatio",
+          "value": 1
+        }
+      ]
+    },
+    "instanceOperationTimeConfig": {
+      "fields": []
+    }
+  },
+  "notes": [],
+  "plugins": [],
+  "pluginConfigs": {},
+  "disabledPluginTools": [],
+  "looseFiles": [],
+  "assistantLastMessagedAt": 1777228846655
+}

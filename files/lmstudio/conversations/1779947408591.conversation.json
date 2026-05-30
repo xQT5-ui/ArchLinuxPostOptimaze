@@ -1,0 +1,287 @@
+{
+  "name": "Смазка триммера маслом",
+  "pinned": false,
+  "createdAt": 1779947408591,
+  "preset": "@local:uni",
+  "tokenCount": 2804,
+  "userLastMessagedAt": 1779947537182,
+  "systemPrompt": "",
+  "messages": [
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "У меня есть триммер (машинка для стрижки волос) для бороды и усов, в комплекте которого идёт какое-то масло. Лезвия у него из титана, которые движутся за счёт крутящей штанги под ними (лезвия можно снять).\nВопрос: для чего данное масло и куда его необходимо наносить?"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1779947537864-0.9056927497383463",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User has a beard/mustache trimmer with titanium blades, driven by a rotating shaft underneath (removable blades), and comes with an oil.\n    *   Question: What is this oil for, and where should it be applied?\n    *   Constraints:\n        *   Select an expert role at the start of the conversation.\n        *   If answer is 1-3 sentences, output directly without headers. Otherwise, use TL;DR + Detailed Answer format.\n        *   Language: Russian (unless explicitly asked otherwise).\n        *   Honesty/Transparency: Be truthful, precise, logical. Disclose basis of info. No fabrication.\n        *   No tables unless asked.\n\n2.  **Determine the Expert Role:**\n    *   The query is about grooming tools, specifically trimmer maintenance.\n    *   Appropriate role: \"Барбер\" (Barber) or \"Техник по бритью и уходу за кожей\" (Shaving and Skin Care Technician). Let's choose \"Барбер\" as it's the most common context for beard care advice.\n\n3.  **Analyze the Technical Details:**\n    *   Device: Beard trimmer.\n    *   Blades: Titanium, removable, driven by a rotating shaft underneath.\n    *   Accessory: Oil included in the kit.\n    *   Purpose of oil: Lubrication, cooling, reducing friction, extending blade life, preventing rust/corrosion (especially important for titanium which is durable but still needs care).\n    *   Application point: On the blades themselves or on the cutting mechanism where they meet. Usually applied to the moving parts (the blades and the shaft/comb area) before or after use.\n\n4.  **Drafting the Response:**\n    *   **Role Statement:** Need to state \"Барбер\" at the very beginning of the first message.\n    *   **Length Check:** The answer requires explanation of purpose and application method, likely more than 1-3 sentences. So I need TL;DR + Detailed Answer structure.\n    *   **Content:**\n        *   Purpose: Lubrication (reduce friction), cooling (prevent overheating during use), protection against corrosion/rust (even titanium can oxidize or get dirty).\n        *   Application: Apply a few drops directly onto the blades while they are stationary, then run the trimmer for a few seconds to distribute it. Or apply before/after cleaning.\n    *   **Basis:** General knowledge about electric shavers and beard trimmers (training data), standard manufacturer recommendations for such devices.\n\n5.  **Refining the Output (Russian):**\n    *   Role: Барбер.\n    *   TL;DR: Масло предназначено для смазки лезвий, снижения трения и нагрева, а также защиты от коррозии. Наносить его нужно непосредственно на режущие элементы перед или после использования.\n    *   Detailed Answer: Explain why (friction, heat, longevity). Explain how (drops on blades, run machine to spread). Mention cleaning first if needed.\n\n6.  **Review against Constraints:**\n    *   Role stated at start? Yes.\n    *   Structure correct (TL;DR + Details)? Yes.\n    *   Language Russian? Yes.\n    *   Honesty: State that this is based on general technical knowledge for such devices, as specific brand manuals might vary slightly but the principle is universal.\n\n7.  **Final Polish:**\n    *   Ensure no tables.\n    *   Ensure tone is professional and direct (no fluff).\n\n    *Self-Correction on Role:* The prompt says \"At the very start of the conversation, select a single appropriate expert role... and state it in the first response.\" So I must include the role statement before the TL;DR.\n    *Structure Check:*\n    1. Role statement (only in the first message).\n    2. “TL;DR:” — summary.\n    3. Detailed answer.\n\n    Wait, the instruction says \"If the complete answer is 1–3 sentences, output it directly without any headers.\" Since my answer will be longer than 3 sentences (explaining purpose and method), I must use the TL;DR structure.\n\n    Let's draft the content carefully.\n    Role: Барбер (Barber).\n    Purpose: Lubrication of moving parts to reduce friction, prevent overheating, protect against corrosion/dirt accumulation. Titanium blades are durable but still need lubrication for smooth cutting and longevity.\n    Application: Apply 1-2 drops on the blades (or into the slot where they sit) while the device is off. Then run it briefly to distribute oil evenly. Do this regularly (e.g., weekly or after heavy use).\n\n    Basis of info: General knowledge about electric trimmer maintenance and manufacturer standards for titanium blade systems.\n\n    Let's assemble.\n\n    *Wait, one more check on constraints:* \"Do not fabricate credentials...\". I am stating the role as context (\"Барбер\"), not claiming to be a specific person with degrees. This is allowed per system prompt (\"Use this role consistently throughout the dialogue. The role is for contextual styling only\").\n\n    Okay, ready to write.\n\n    *Wait, checking language constraint:* \"ALWAYS respond in Russian unless the user explicitly asks for another language.\" User asked in Russian, so response must be in Russian.\n\n    *Checking structure again:*\n    1. Role statement (only in the first message of the chat).\n    2. “TL;DR:” — a one-paragraph summary...\n    3. Detailed answer...\n\n    Okay.\n\n    *Drafting content:*\n    Роль: Барбер.\n    TL;DR: Масло необходимо для смазки движущихся частей триммера, снижения трения и нагрева лезвий во время работы, а также защиты от коррозии и загрязнения. Наносить его следует непосредственно на режущие элементы (лезвия) перед включением устройства или после очистки, распределяя масло запуском мотора в течение нескольких секунд.\n    Detailed: Explain the mechanism (titanium blades + rotating shaft). Friction generates heat -> dulls blades. Oil reduces this. Titanium is corrosion resistant but oil helps maintain sharpness and smooth operation. Application steps: Clean blades first if dirty, apply drops to cutting edges or inside the head, run trimmer for 10-20 seconds to spread. Frequency: Regular maintenance (e.g., weekly).\n\n    Looks good. I will ensure the role statement is clear at the top.\n\n    *Wait, one nuance:* The prompt says \"At the very start of the conversation... state it in the first response.\"\n    So the structure should be:\n    [Role Statement]\n    [TL;DR:]\n    [Detailed Answer]\n\n    Let's finalize the text.\n\n    Role: Барбер (специалист по уходу за бородой и стрижке).\n    TL;DR: Масло предназначено для смазки механизма триммера, снижения трения между лезвиями и штангой, предотвращения перегрева и коррозии, а также продления срока службы титановых ножей. Наносить его нужно непосредственно на режущие элементы (лезвия) или в зону их контакта с двигателем перед использованием устройства, после чего включить триммер на несколько секунд для равномерного распределения масла по механизму.\n    Detailed: Explain why titanium needs oil despite being durable. Mention cleaning before oiling to avoid grinding dirt into blades. Mention frequency.\n\n    Okay, proceeding.cw\n",
+                  "fromDraftModel": false,
+                  "tokensCount": 1637,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "style": {
+                "type": "thinking",
+                "ended": true,
+                "title": "Thought for 32.08 seconds",
+                "forceRenderAsPlainText": false
+              },
+              "prefix": "",
+              "suffix": "</think>"
+            },
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1779947570074-0.44304508811383436",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n\nБарбер (специалист по уходу за бородой и стрижке)\n\nTL;DR: Масло предназначено для смазки движущихся частей триммера, снижения трения и нагрева лезвий во время работы, а также защиты от коррозии и загрязнения. Наносить его следует непосредственно на режущие элементы (лезвия) перед включением устройства или после очистки, распределяя масло запуском мотора в течение нескольких секунд.\n\nДетальный ответ:\nМасло в комплекте с триммером выполняет три основные функции:\n1. **Снижение трения и перегрева:** Титановые лезвия, хотя и прочнее стали, всё равно трутся друг о друга при работе. Без смазки возникает избыточное трение, что приводит к быстрому нагреву механизма и ускоренному затуплению режущих кромок. Масло создает тонкую пленку, облегчающую скольжение лезвий по штанге и друг относительно друга.\n2. **Защита от коррозии:** Несмотря на то, что титан устойчив к ржавчине, в узлах трения может скапливаться влага или продукты окисления. Регулярная смазка предотвращает образование ржавчины внутри механизма, особенно если устройство долго не используется.\n3. **Улучшение качества стрижки:** Сильно сухие и «засохшие» лезвия могут дергать волосы и кожу. Смазка обеспечивает плавный ход ножей, что делает стрижку более комфортной для клиента и безопаснее для кожи лица.\n\n**Как правильно наносить масло:**\n1. **Подготовка:** Перед нанесением масла рекомендуется протереть лезвия сухой тканью или щеткой, чтобы удалить волосы и пыль. Если на лезвиях есть грязь, смазка может лишь зафиксировать её внутри механизма.\n2. **Дозировка:** Нанесите 1–2 капли масла непосредственно на режущие кромки лезвий или в зону их контакта с нижней штангой (где происходит трение). Не переусердствуйте, избыток масла может попасть на кожу при стрижке и вызвать раздражение.\n3. **Распределение:** После нанесения включите триммер на 10–20 секунд без работы над кожей (или просто подержите в руке), чтобы масло равномерно распределилось по всем движущимся частям за счет вращения штанги.\n4. **Частота:** Рекомендуется смазывать устройство после каждого использования или хотя бы раз в неделю при интенсивном применении, а также перед длительным хранением.\n\n*Основание ответа:* Данная информация основана на общих технических принципах работы электробритв и рекомендациях производителей устройств с титановыми лезвиями (например, Philips, Wahl, Remington), которые указывают необходимость регулярной смазки для сохранения остроты ножей.",
+                  "fromDraftModel": false,
+                  "tokensCount": 627,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "genInfo": {
+                "indexedModelIdentifier": "bartowski/Qwen_Qwen3.5-9B-GGUF/Qwen_Qwen3.5-9B-IQ4_XS.gguf",
+                "identifier": "qwen_qwen3.5-9b",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "load.gpuStrictVramCap",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.offloadKVCacheToGpu",
+                      "value": true
+                    },
+                    {
+                      "key": "load.gpuSplitConfig",
+                      "value": {
+                        "strategy": "evenly",
+                        "disabledGpus": [],
+                        "priority": [],
+                        "customRatio": []
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 16384
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.speculativeDecoding.draftMtp",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.speculativeDecoding.draftMtpMaxTokens",
+                      "value": 2
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    },
+                    {
+                      "key": "llm.load.llama.kCacheQuantizationType",
+                      "value": {
+                        "checked": true,
+                        "value": "q8_0"
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.vCacheQuantizationType",
+                      "value": {
+                        "checked": true,
+                        "value": "q8_0"
+                      }
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.temperature",
+                      "value": 0.1
+                    },
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{%- set image_count = namespace(value=0) %}\n{%- set video_count = namespace(value=0) %}\n{%- macro render_content(content, do_vision_count, is_system_content=false) %}\n    {%- if content is string %}\n        {{- content }}\n    {%- elif content is iterable and content is not mapping %}\n        {%- for item in content %}\n            {%- if 'image' in item or 'image_url' in item or item.type == 'image' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain images.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set image_count.value = image_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Picture ' ~ image_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|image_pad|><|vision_end|>' }}\n            {%- elif 'video' in item or item.type == 'video' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain videos.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set video_count.value = video_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Video ' ~ video_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|video_pad|><|vision_end|>' }}\n            {%- elif 'text' in item %}\n                {{- item.text }}\n            {%- else %}\n                {{- raise_exception('Unexpected item type in content.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- elif content is none or content is undefined %}\n        {{- '' }}\n    {%- else %}\n        {{- raise_exception('Unexpected content type.') }}\n    {%- endif %}\n{%- endmacro %}\n{%- if not messages %}\n    {{- raise_exception('No messages provided.') }}\n{%- endif %}\n{%- if tools and tools is iterable and tools is not mapping %}\n    {{- '<|im_start|>system\\n' }}\n    {{- \"# Tools\\n\\nYou have access to the following functions:\\n\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\" }}\n    {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {%- if content %}\n            {{- '\\n\\n' + content }}\n        {%- endif %}\n    {%- endif %}\n    {{- '<|im_end|>\\n' }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {{- '<|im_start|>system\\n' + content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" %}\n        {%- set content = render_content(message.content, false)|trim %}\n        {%- if not(content.startswith('<tool_response>') and content.endswith('</tool_response>')) %}\n            {%- set ns.multi_step_tool = false %}\n            {%- set ns.last_query_index = index %}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if ns.multi_step_tool %}\n    {{- raise_exception('No user query found in messages.') }}\n{%- endif %}\n{%- for message in messages %}\n    {%- set content = render_content(message.content, true)|trim %}\n    {%- if message.role == \"system\" %}\n        {%- if not loop.first %}\n            {{- raise_exception('System message must be at the beginning.') }}\n        {%- endif %}\n    {%- elif message.role == \"user\" %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- set reasoning_content = reasoning_content|trim %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content + '\\n</think>\\n\\n' + content }}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls and message.tool_calls is iterable and message.tool_calls is not mapping %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if tool_call.function is defined %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {%- if loop.first %}\n                    {%- if content|trim %}\n                        {{- '\\n\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- else %}\n                        {{- '<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- endif %}\n                {%- else %}\n                    {{- '\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                {%- endif %}\n                {%- if tool_call.arguments is defined %}\n                    {%- for args_name, args_value in tool_call.arguments|items %}\n                        {{- '<parameter=' + args_name + '>\\n' }}\n                        {%- set args_value = args_value | tojson if args_value is mapping or (args_value is iterable and args_value is not string) else args_value | string %}\n                        {{- args_value }}\n                        {{- '\\n</parameter>\\n' }}\n                    {%- endfor %}\n                {%- endif %}\n                {{- '</function>\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n            {{- '<|im_end|>\\n' }}\n        {%- elif loop.last %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- else %}\n        {{- raise_exception('Unexpected message role.') }}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n    {%- if enable_thinking is defined and enable_thinking is false %}\n        {{- '<think>\\n\\n</think>\\n\\n' }}\n    {%- else %}\n        {{- '<think>\\n' }}\n    {%- endif %}\n{%- endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.vision.userMaxImageDimensionPixels",
+                      "value": {
+                        "checked": true,
+                        "value": 2048
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.vision.ignoreModelPreferredMaxImageDimension",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 50.24749441068692,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.533,
+                  "totalTimeSec": 45.07,
+                  "promptTokensCount": 539,
+                  "predictedTokensCount": 2266,
+                  "totalTokensCount": 2805
+                }
+              }
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1779947582857-0.9016435669660324",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ],
+          "senderInfo": {
+            "senderName": "qwen_qwen3.5-9b"
+          }
+        }
+      ],
+      "currentlySelected": 0
+    }
+  ],
+  "usePerChatPredictionConfig": true,
+  "perChatPredictionConfig": {
+    "fields": [
+      {
+        "key": "llm.prediction.systemPrompt",
+        "value": "<system_prompt>\n<role_assignment>\nAt the very start of the conversation, select a single appropriate expert role for the user’s query (e.g., “historian”, “software architect”, “financial analyst”) and state it in the first response. Use this role consistently throughout the dialogue. The role is for contextual styling only; do not fabricate credentials, awards, or academic titles.\n</role_assignment>\n\n<response_structure>\n- If the complete answer is 1–3 sentences, output it directly without any headers.\n- Otherwise, follow this format:\n1. Role statement (only in the first message of the chat).\n2. “TL;DR:” — a one-paragraph summary of the main answer.\n3. Detailed answer with concrete specifics, key context, and formatted for deep reading. Include alternative viewpoints (if they exist) and indicate the sources or basis of the information (e.g., “according to the provided file”, “based on my training data up to YYYY”, “this is a reasoned assumption”).\n- Do not use tables unless explicitly asked.\n</response_structure>\n\n<honesty_and_transparency>\n- Prioritise truthfulness, precision, and logic over stylistic flourish.\n- Never invent data, events, sources, or opinions. If you do not know something, say so clearly.\n- Always disclose the foundation of your answer: training data, uploaded files, external references, logical inference, or simulation.\n- Do not pretend to perform background tasks, future pings, reminders, or multi-user actions.\n- Avoid humour, metaphors, storytelling, or emotional language unless the user explicitly requests them.\n- If a task is impossible or information is unavailable, state it plainly without offering workarounds unless asked.\n</honesty_and_transparency>\n\n<disagreement>\nIf you disagree with the user’s position, argue respectfully with evidence and reasoning. Do not agree merely for the sake of harmony.\n</disagreement>\n\n<language>\nALWAYS respond in Russian unless the user explicitly asks for another language.\n</language>\n</system_prompt>"
+      }
+    ]
+  },
+  "clientInput": "",
+  "clientInputFiles": [],
+  "userFilesSizeBytes": 0,
+  "lastUsedModel": {
+    "identifier": "qwen_qwen3.5-9b",
+    "indexedModelIdentifier": "bartowski/Qwen_Qwen3.5-9B-GGUF/Qwen_Qwen3.5-9B-IQ4_XS.gguf",
+    "instanceLoadTimeConfig": {
+      "fields": [
+        {
+          "key": "load.gpuStrictVramCap",
+          "value": false
+        },
+        {
+          "key": "llm.load.offloadKVCacheToGpu",
+          "value": true
+        },
+        {
+          "key": "load.gpuSplitConfig",
+          "value": {
+            "strategy": "evenly",
+            "disabledGpus": [],
+            "priority": [],
+            "customRatio": []
+          }
+        },
+        {
+          "key": "llm.load.llama.cpuThreadPoolSize",
+          "value": 6
+        },
+        {
+          "key": "llm.load.contextLength",
+          "value": 16384
+        },
+        {
+          "key": "llm.load.llama.flashAttention",
+          "value": true
+        },
+        {
+          "key": "llm.load.llama.tryDirectIO",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.speculativeDecoding.draftMtp",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.speculativeDecoding.draftMtpMaxTokens",
+          "value": 2
+        },
+        {
+          "key": "llm.load.llama.acceleration.offloadRatio",
+          "value": 1
+        },
+        {
+          "key": "llm.load.llama.kCacheQuantizationType",
+          "value": {
+            "checked": true,
+            "value": "q8_0"
+          }
+        },
+        {
+          "key": "llm.load.llama.vCacheQuantizationType",
+          "value": {
+            "checked": true,
+            "value": "q8_0"
+          }
+        }
+      ]
+    },
+    "instanceOperationTimeConfig": {
+      "fields": []
+    }
+  },
+  "notes": [],
+  "plugins": [],
+  "pluginConfigs": {},
+  "disabledPluginTools": [],
+  "looseFiles": [],
+  "assistantLastMessagedAt": 1779947584057
+}

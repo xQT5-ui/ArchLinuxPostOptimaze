@@ -1,0 +1,246 @@
+{
+  "name": "Ichimoku Cloud for BTC/USDT Trading",
+  "pinned": false,
+  "createdAt": 1776858086937,
+  "preset": "",
+  "tokenCount": 4367,
+  "userLastMessagedAt": 1776858088992,
+  "systemPrompt": "",
+  "messages": [
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "```xml\n<system_instructions>\n<core_ethos>\nPrioritize absolute accuracy, logic, and epistemic honesty over stylistic presentation. Never fabricate data, events, sources, or opinions. If you do not know the answer or lack sufficient data, explicitly state \"I don't know\". Never pretend to possess capabilities you do not have (e.g., real-time execution, asynchronous tasks, or background processes).\n</core_ethos>\n<language_rule>\nAlways respond in Russian unless the user explicitly requests another language.\n</language_rule>\n<role_assignment>\nAnalyze the user's request and automatically adopt a corresponding real-world professional persona to tailor the terminology and perspective of the response. \nConstraint: Declare this role ONLY in your very first response in the conversation. Do not repeat it in subsequent messages.\n</role_assignment>\n<communication_rules>\n- Base your answers strictly on provided context, verified knowledge, or clearly stated logical deductions.\n- Do not use humor, metaphors, storytelling, or emotions unless explicitly requested.\n- If the information is outdated, incomplete, or relies on an assumption/analogy, explicitly flag this in your response.\n- If the task is impossible or the request is ambiguous, state it directly instead of providing workarounds.\n</communication_rules>\n<output_structure>\nFollow this exact structure for every response:\n1. [Role Declaration]: ONLY in the first message. Format: \"Роль: [Identified Professional Persona]\".\n2. [TL;DR]: Provide a concise summary. SKIP this section entirely if the full response naturally fits within 1-3 sentences.\n3. [Detailed Answer]: Provide a comprehensive, step-by-step explanation with concrete details formatted for deep reading.\n     - Include alternative viewpoints or approaches IF they are valid and exist (do not invent false alternatives).\n     - Provide context-based source references or mention the origin of the data where applicable.\n</output_structure>\n</system_instructions>\n```\nКакой самый эффективный и недооценённый индикатор в техническом анализе для трейдинга по BTC/USDT с возможность открытия Long и Short позиций, который можно использовать самостоятельно?"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1776858089260-0.20929927058780928",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Okay, давайте разберёмся. Пользователь спрашивает о самом эффективном и недооценённом индикаторе в техническом анализе для трейдинга на криптовалютах, особенно BTC/USDT, с возможностью открытия как длинных, так и коротких позиций.\n\nСначала нужно вспомнить основные индикаторы технического анализа. В техническом анализе для трейдинга часто используются такие индикаторы, как moving averages (средние линии), RSI (Relative Strength Index), MACD (Moving Average Convergence Divergence), и т.д.\n\nНо что именно считается \"недооценённым\"? Возможно, это индикатор, который не так часто используется или не всегда учитывается трейдерами.\n\nДля BTC/USDT, где рынок очень ликвидный и быстрый, важны индикаторы, которые могут реагировать быстро на изменения. Возможно, что индикаторы, которые фокусируются на скорости изменений или на более коротких временных интервалах.\n\nДавайте подумаем о некоторых индикаторах:\n\n1. **Moving Averages (MA)**: Например, 20- и 50-периодные MA. Они могут использоваться для определения тренда, но, возможно, это не самый \"недооценённый\" индикатор.\n\n2. **RSI**: Используется для измерения силы направления. Но он может быть переоценён, так как часто используется.\n\n3. **MACD**: Также популярный, но, возможно, не самый недооценённый.\n\n4. **Bollinger Bands**: Могут использоваться для определения перегревания, но, возможно, не самый подходящий для Long/Short позиций.\n\n5. **Stochastic Oscillator**: Аналогично RSI, может быть переоценён.\n\n6. **Ichimoku Cloud**: Это более сложный индикатор, который включает в себя support и resistance levels, а также trend indicators. Он может быть менее известен среди трейдеров, но очень полезен для определения структуры рынка и возможных уровней поддержки/сопротивления.\n\n7. **Volume Profile**: Используется для анализа объёмов, что может быть важно для определения зон ликвидности. Но это не всегда используется в трейдинге.\n\n8. **VWAP (Volume-Weighted Average Price)**: Важно для ин intra-day trading, но, возможно, не самый недооценённый.\n\n9. **Keltner Channel**: Используется для определения зон поддержки и сопротивления на основе стандартных отклонений среднего. Это может быть полезно для Long/Short позиций.\n\n10. **ATR (Average True Range)**: Для определения размера стоп-лотеров, но не directly for trading signals.\n\nТеперь, что из этого можно считать \"недооценённым\"? Ichimoku Cloud и Keltner Channel могут быть менее распространёнными среди трейдеров, чем RSI или MACD. Ichimoku также может быть полезен для Long/Short позиций, так как он показывает структуру рынка и возможные уровни поддержки/сопротивления.\n\nНо давайте проверим, что именно подходит для BTC/USDT с Long/Short позициями.\n\nIchimoku Cloud включает в себя:\n- Convergence Line (среднее из 5 и 20 периодов)\n- Divergence Line\n- Cloud (which is the area between the two lines)\n\nЭто может использоваться для определения, когда рынок находится в надликвидности или перегревании, что может быть полезно для Long/Short позиций.\n\nАльтернативно, Keltner Channel также может быть использован для определения зон поддержки и сопротивления. Он основан на среднем движении (обычно SMA) и стандартным отклонениям, поэтому он может показывать, когда рынок находится в перегревании или охлаждении.\n\nНо, возможно, Ichimoku более подходит для Long/Short позиций, так как он включает в себя несколько компонентов, которые могут давать сигналы для открытия и закрытия позиций.\n\nТеперь, о \"недооценённом\" — возможно, что Ichimoku не всегда используется, потому что его сложность или то, что он требует больше настройки.\n\nНо давайте посмотрим, есть ли более подходящий индикатор.\n\nЕщё один вариант — **Price Action with Volume**: Но это не индикатор, а метод.\n\nИли **Fibonacci Retracement**? Но это для уровня поддержки/сопротивления, а не для сигналов трейдинга.\n\nВозможно, **VWAP** — но он более используется в интра-денном трейдинге.\n\nЕщё один вариант — **ADX (Average Directional Index)**: показывает силу тренда. Но это может быть переоценённым для Long/Short позиций.\n\nХм. Возможно, что **Ichimoku Cloud** — хороший кандидат, так как он не всегда используется и предоставляет много информации о структуре рынка.\n\nНо давайте подумаем ещё раз. Есть ли индикатор, который более недооценён?\n\nВозможно, **Candlestick Patterns**? Но это не индикатор, а метод.\n\nИли **Moving Average Crossover**: но это может быть переоценённым.\n\nЕщё один вариант — **Stochastic %D and %K**: но это похоже на RSI.\n\nВозможно, **Keltner Channel** — хороший кандидат. Он показывает зону поддержки и сопротивления, основанную на среднем движении и стандартных отклонениях. Это может быть полезно для Long/Short позиций, так как когда рынок находится вне канала, это может указывать на возможные движения.\n\nНо, возможно, что **Ichimoku** более подходит, потому что он включает в себя несколько компонентов: конвергенцию, дивергенцию и облако, которое может давать сигналы для Long/Short позиций.\n\nТеперь, о \"самый эффективный и недооценённый\" — возможно, что Ichimoku является хорошим выбором, так как он не всегда используется, но очень полезен для определения структуры рынка и возможных уровней поддержки/сопротивления.\n\nНо давайте проверим, есть ли более подходящий индикатор.\n\nЕщё один вариант — **Volume Profile**: но это может быть сложно использовать самостоятельно.\n\nИли **On-Balance Volume (OBV)**: показывает общую силу рынка. Но он не всегда используется для Long/Short позиций.\n\nВозможно, что **Ichimoku Cloud** — лучший выбор.\n\nТеперь, давайте подумаем о структуре ответа.\n\nRole Declaration: Возможно, \"Технический аналитик\" или \"Трейдер на криптовалютах\".\n\nTL;DR: Краткое резюме.\n\nDetailed Answer: Объяснение, почему Ichimoku Cloud подходит для Long/Short позиций в BTC/USDT, его особенности и как он может быть недооценённым.\n\nНо, возможно, что есть более подходящий индикатор. Давайте подумаем ещё раз.\n\nЕщё один вариант — **Fibonacci Levels with Volume**: но это не индикатор.\n\nИли **Support and Resistance Levels**? Но они могут быть переоценёнными.\n\nВозможно, что **Keltner Channel** — хороший кандидат. Он показывает зону поддержки и сопротивления, и когда рынок выходит за пределы канала, это может указывать на возможные движения в сторону.\n\nНо, возможно, что **Ichimoku** более полезен для Long/Short позиций, так как он включает в себя несколько компонентов: конвергенцию, дивергенцию и облако, которое может давать сигналы для открытия и закрытия позиций.\n\nТеперь, о \"недооценённом\" — возможно, что Ichimoku не всегда используется, потому что его сложность или то, что он требует больше настройки.\n\nНо давайте посмотрим, есть ли более подходящий индикатор.\n\nЕщё один вариант — **Price Action with Volume**: но это не индикатор.\n\nИли **Moving Average of the Moving Averages**? Но это может быть переоценённым.\n\nВозможно, что **Ichimoku Cloud** — лучший выбор.\n\nТеперь, давайте подумаем о структуре ответа.\n\nRole Declaration: \"Технический аналитик для криптовалют\"\n\nTL;DR: Ichimoku Cloud — это индикатор, который показывает структуру рынка и уровни поддержки/сопротивления, что полезно для Long/Short позиций в BTC/USDT.\n\nDetailed Answer: Объяснение, как использовать Ichimoku Cloud для Long/Short позиций, его особенности и почему он может быть недооценённым.\n\nНо, возможно, что есть более подходящий индикатор. Давайте подумаем ещё раз.\n\nЕщё один вариант — **Stochastic %K and %D**: но это похоже на RSI.\n\nИли **MACD с историческими значениями**? Но это может быть переоценённым.\n\nВозможно, что **Ichimoku Cloud** — лучший выбор.\n\nТеперь, давайте подумаем о том, как использовать Ichimoku для Long/Short позиций.\n\nIchimoku Cloud состоит из нескольких линий:\n1. Tenkan-sen (средняя линия 9 периодов)\n2. Kijun-sen (средняя линия 26 периодов)\n3. Chikou-sen (пересечение Tenkan-sen и Kijun-sen, за 50 периодов назад)\n4. Cloud (облако между Tenkan-sen и Kijun-sen)\n\nДля Long позиций:\n- Если Chikou-sen пересекает облако сверху вниз, это может указывать на начало устойчивого убыточного тренда.\n- Если Tenkan-sen пересекает Kijun-sen выше облака, это может указывать на начало убыточного тренда.\n\nДля Short позиций:\n- Если Chikou-sen пересекает облако снизу вверх, это может указывать на начало устойчивого прибыльного тренда.\n- Если Tenkan-sen пересекает Kijun-sen ниже облака, это может указывать на начало прибыльного тренда.\n\nНо, возможно, что более точные сигналы можно получить из дивергенций и конвергенций.\n\nТеперь, о \"недооценённом\" — возможно, что Ichimoku не всегда используется, потому что его сложность или то, что он требует больше настройки.\n\nНо давайте посмотрим, есть ли более подходящий индикатор.\n\nЕщё один вариант — **Keltner Channel**:\n- Он показывает зону поддержки и сопротивления, основанную на среднем движении (обычно SMA) и стандартным отклонениям.\n- Когда рынок находится вне канала, это может указывать на возможные движения в сторону.\n- Для Long позиций: если цена выше верхней границы канала и убывает к ней, это может быть сигналом для Long.\n- Для Short позиций: если цена ниже нижней границы канала и поднимается к ней, это может быть сигналом для Short.\n\nНо, возможно, что Ichimoku более полезен для Long/Short позиций, так как он включает в себя несколько компонентов.\n\nТеперь, давайте выберем Ichimoku Cloud как основной индикатор.\n\nТеперь, о структуре ответа:\n\nRole Declaration: \"Технический аналитик для криптовалют\"\n\nTL;DR: Ichimoku Cloud — это индикатор, который показывает структуру рынка и уровни поддержки/сопротивления, что полезно для Long/Short позиций в BTC/USDT.\n\nDetailed Answer:\n- Описание Ichimoku Cloud.\n- Как использовать его для Long и Short позиций.\n- Почему он может быть недооценённым (например, сложность, необходимость настройки).\n\nНо, возможно, что есть более подходящий индикатор. Давайте подумаем ещё раз.\n\nЕщё один вариант — **Volume-Weighted Average Price (VWAP)**. Он показывает среднюю цену по объёму за определённый период. Для Long/Short позиций он может использоваться для определения зон ликвидности. Но, возможно, что VWAP не всегда используется для Long/Short позиций.\n\nИли **On-Balance Volume (OBV)**: показывает общую силу рынка. Но это может быть переоценённым.\n\nВозможно, что **Ichimoku Cloud** — лучший выбор.\n\nТеперь, давайте напишем ответ.\n\nRole Declaration: \"Технический аналитик для криптовалют\"\n\nTL;DR: Ichimoku Cloud — индикатор, который показывает структуру рынка и уровни поддержки/сопротивления, полезный для Long/Short позиций в BTC/USDT.\n\nDetailed Answer:\nIchimoku Cloud — это технический индикатор, разработанный Киичиро Фудзии, который состоит из нескольких линий: Tenkan-sen (средняя линия 9 периодов), Kijun-sen (средняя линия 26 периодов), Chikou-sen (пересечение Tenkan-sen и Kijun-sen, за 50 периодов назад) и Cloud (облако между Tenkan-sen и Kijun-sen). Он используется для определения структуры рынка, тренда и возможных уровней поддержки/сопротивления.\n\nДля Long позиций:\n- Если Chikou-sen пересекает облако сверху вниз, это может указывать на начало устойчивого убыточного тренда.\n- Если Tenkan-sen пересекает Kijun-sen выше облака, это также может быть сигналом для Long.\n\nДля Short позиций:\n- Если Chikou-sen пересекает облако снизу вверх, это может указывать на начало устойчивого прибыльного тренда.\n- Если Tenkan-sen пересекает Kijun-sen ниже облака, это также может быть сигналом для Short.\n\nIchimoku Cloud может быть недооценённым, потому что его сложность и необходимость настройки (выбор периодов) могут не подходить всем трейдерам. Он менее распространён среди трейдеров, чем индикаторы вроде RSI или MACD, но предоставляет более полную картину структуры рынка.\n\nИсточник: Идея основана на стандартных методах технического анализа и использовании Ichimoku Cloud для определения трендов и уровней поддержки/сопротивления.",
+                  "fromDraftModel": false,
+                  "tokensCount": 3340,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "style": {
+                "type": "thinking",
+                "ended": true,
+                "title": "Thought for 48.27 seconds",
+                "forceRenderAsPlainText": false
+              },
+              "prefix": "[THINK]",
+              "suffix": "[/THINK]"
+            },
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1776858137619-0.07223437837103708",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Роль: Технический аналитик для криптовалют\n\nTL;DR: Ichimoku Cloud — индикатор, который показывает структуру рынка и уровни поддержки/сопротивления, полезный для Long/Short позиций в BTC/USDT.\n\n[Detailed Answer]:\nIchimoku Cloud — это технический индикатор, разработанный Киичиро Фудзии, который состоит из нескольких линий: Tenkan-sen (средняя линия 9 периодов), Kijun-sen (средняя линия 26 периодов), Chikou-sen (пересечение Tenkan-sen и Kijun-sen, за 50 периодов назад) и Cloud (облако между Tenkan-sen и Kijun-sen). Он используется для определения структуры рынка, тренда и возможных уровней поддержки/сопротивления.\n\nДля Long позиций:\n- Если Chikou-sen пересекает облако сверху вниз, это может указывать на начало устойчивого убыточного тренда.\n- Если Tenkan-sen пересекает Kijun-sen выше облака, это также может быть сигналом для Long.\n\nДля Short позиций:\n- Если Chikou-sen пересекает облако снизу вверх, это может указывать на начало устойчивого прибыльного тренда.\n- Если Tenkan-sen пересекает Kijun-sen ниже облака, это также может быть сигналом для Short.\n\nIchimoku Cloud может быть недооценённым, потому что его сложность и необходимость настройки (выбор периодов) могут не подходить всем трейдерам. Он менее распространён среди трейдеров, чем индикаторы вроде RSI или MACD, но предоставляет более полную картину структуры рынка.\n\nИсточник: Идея основана на стандартных методах технического анализа и использовании Ichimoku Cloud для определения трендов и уровней поддержки/сопротивления.",
+                  "fromDraftModel": false,
+                  "tokensCount": 449,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "genInfo": {
+                "indexedModelIdentifier": "lmstudio-community/Ministral-3-3B-Reasoning-2512-GGUF/Ministral-3-3B-Reasoning-2512-Q8_0.gguf",
+                "identifier": "ministral-3-3b-reasoning-2512",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "load.gpuStrictVramCap",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.offloadKVCacheToGpu",
+                      "value": true
+                    },
+                    {
+                      "key": "load.gpuSplitConfig",
+                      "value": {
+                        "strategy": "evenly",
+                        "disabledGpus": [],
+                        "priority": [],
+                        "customRatio": []
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 16384
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.temperature",
+                      "value": 0.1
+                    },
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{#- Default system message if no system prompt is passed. #}\n{%- set default_system_message = '# HOW YOU SHOULD THINK AND ANSWER\\n\\nFirst draft your thinking process (inner monologue) until you arrive at a response. Format your response using Markdown, and use LaTeX for any mathematical equations. Write both your thoughts and the response in the same language as the input.\\n\\nYour thinking process must follow the template below:[THINK]Your thoughts or/and draft, like working through an exercise on scratch paper. Be as casual and as long as you want until you are confident to generate the response to the user.[/THINK]Here, provide a self-contained response.' %}\n\n{#- Begin of sequence token. #}\n{{- bos_token }}\n\n{#- Handle system prompt if it exists. #}\n{#- System prompt supports text content or text and thinking chunks. #}\n{%- if messages[0]['role'] == 'system' %}\n    {{- '[SYSTEM_PROMPT]' -}}\n    {%- if messages[0]['content'] is string %}\n        {{- messages[0]['content'] -}}\n    {%- else %}        \n        {%- for block in messages[0]['content'] %}\n            {%- if block['type'] == 'text' %}\n                {{- block['text'] }}\n            {%- elif block['type'] == 'thinking' %}\n                {{- '[THINK]' + block['thinking'] + '[/THINK]' }}\n            {%- else %}\n                {{- raise_exception('Only text and thinking chunks are supported in system message contents.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- endif %}\n    {{- '[/SYSTEM_PROMPT]' -}}\n    {%- set loop_messages = messages[1:] %}\n{%- else %}\n    {%- set loop_messages = messages %}\n    {%- if default_system_message != '' %}\n        {{- '[SYSTEM_PROMPT]' + default_system_message + '[/SYSTEM_PROMPT]' }}\n    {%- endif %}\n{%- endif %}\n\n\n{#- Tools definition #}\n{%- set tools_definition = '' %}\n{%- set has_tools = false %}\n{%- if tools is defined and tools is not none and tools|length > 0 %}\n    {%- set has_tools = true %}\n    {%- set tools_definition = '[AVAILABLE_TOOLS]' + (tools| tojson) + '[/AVAILABLE_TOOLS]' %}\n    {{- tools_definition }}\n{%- endif %}\n\n{#- Checks for alternating user/assistant messages. #}\n{%- set ns = namespace(index=0) %}\n{%- for message in loop_messages %}\n    {%- if message.role == 'user' or (message.role == 'assistant' and (message.tool_calls is not defined or message.tool_calls is none or message.tool_calls | length == 0)) %}\n        {%- if (message['role'] == 'user') != (ns.index % 2 == 0) %}\n            {{- raise_exception('After the optional system message, conversation roles must alternate user and assistant roles except for tool calls and results.') }}\n        {%- endif %}\n        {%- set ns.index = ns.index + 1 %}\n    {%- endif %}\n{%- endfor %}\n\n{#- Handle conversation messages. #}\n{%- for message in loop_messages %}\n\n    {#- User messages supports text content or text and image chunks. #}\n    {%- if message['role'] == 'user' %}\n        {%- if message['content'] is string %}\n            {{- '[INST]' + message['content'] + '[/INST]' }}\n        {%- elif message['content'] | length > 0 %}\n            {{- '[INST]' }}\n            {%- if message['content'] | length == 2 %}\n                {%- if message['content'][0]['type'] == 'text' and message['content'][1]['type'] in ['image', 'image_url'] %}\n                    {%- set blocks = [message['content'][1], message['content'][0]] %}\n                {%- else %}\n                    {%- set blocks = message['content'] %}\n                {%- endif %}\n            {%- else %}\n                {%- set blocks = message['content'] %}\n            {%- endif %}\n            {%- for block in blocks %}\n                {%- if block['type'] == 'text' %}\n                    {{- block['text'] }}\n                {%- elif block['type'] in ['image', 'image_url'] %}\n                    {{- '[IMG]' }}\n                {%- else %}\n                    {{- raise_exception('Only text, image and image_url chunks are supported in user message content.') }}\n                {%- endif %}\n            {%- endfor %}\n            {{- '[/INST]' }}\n        {%- else %}\n            {{- raise_exception('User message must have a string or a list of chunks in content') }}\n        {%- endif %}\n\n    {#- Assistant messages supports text content or text, image and thinking chunks. #}\n    {%- elif message['role'] == 'assistant' %}\n        {%- if (message['content'] is none or message['content'] == '' or message['content']|length == 0) and (message['tool_calls'] is not defined or message['tool_calls'] is none or message['tool_calls']|length == 0) %}\n            {{- raise_exception('Assistant message must have a string or a list of chunks in content or a list of tool calls.') }}\n        {%- endif %}\n\n        {%- if message['content'] is string and message['content'] != '' %}\n            {{- message['content'] }}\n        {%- elif message['content'] | length > 0 %}\n            {%- for block in message['content'] %}\n                {%- if block['type'] == 'text' %}\n                    {{- block['text'] }}\n                {%- elif block['type'] == 'thinking' %}\n                    {{- '[THINK]' + block['thinking'] + '[/THINK]' }}\n                {%- else %}\n                    {{- raise_exception('Only text and thinking chunks are supported in assistant message contents.') }}\n                {%- endif %}\n            {%- endfor %}\n        {%- endif %}\n        \n        {%- if message['tool_calls'] is defined and message['tool_calls'] is not none and message['tool_calls']|length > 0 %}\n            {%- for tool in message['tool_calls'] %}\n                {{- '[TOOL_CALLS]' }}\n                {%- set name = tool['function']['name'] %}\n                {%- set arguments = tool['function']['arguments'] %}\n                {%- if arguments is not string %}\n                    {%- set arguments = arguments|tojson %}\n                {%- elif arguments == '' %}\n                    {%- set arguments = '{}' %}\n                {%- endif %}\n                {{- name + '[ARGS]' + arguments }}\n            {%- endfor %}\n        {%- endif %}\n\n        {{- eos_token }}\n\n    {#- Tool messages only supports text content. #}\n    {%- elif message['role'] == 'tool' %}\n        {{- '[TOOL_RESULTS]' + message['content']|string + '[/TOOL_RESULTS]' }}\n\n    {#- Raise exception for unsupported roles. #}\n    {%- else %}\n        {{- raise_exception('Only user, assistant and tool roles are supported, got ' + message['role'] + '.') }}\n    {%- endif %}\n{%- endfor %}\n"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.vision.userMaxImageDimensionPixels",
+                      "value": {
+                        "checked": true,
+                        "value": 2048
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.vision.ignoreModelPreferredMaxImageDimension",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.reasoning.parsing",
+                      "value": {
+                        "enabled": true,
+                        "startString": "[THINK]",
+                        "endString": "[/THINK]"
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 68.65738314556843,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.176,
+                  "totalTimeSec": 55.211,
+                  "promptTokensCount": 578,
+                  "predictedTokensCount": 3792,
+                  "totalTokensCount": 4370
+                }
+              }
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1776858144403-0.4869355388483254",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ],
+          "senderInfo": {
+            "senderName": "ministral-3-3b-reasoning-2512"
+          }
+        }
+      ],
+      "currentlySelected": 0
+    }
+  ],
+  "usePerChatPredictionConfig": true,
+  "perChatPredictionConfig": {
+    "fields": []
+  },
+  "clientInput": "",
+  "clientInputFiles": [],
+  "userFilesSizeBytes": 0,
+  "lastUsedModel": {
+    "identifier": "ministral-3-3b-reasoning-2512",
+    "indexedModelIdentifier": "lmstudio-community/Ministral-3-3B-Reasoning-2512-GGUF/Ministral-3-3B-Reasoning-2512-Q8_0.gguf",
+    "instanceLoadTimeConfig": {
+      "fields": [
+        {
+          "key": "load.gpuStrictVramCap",
+          "value": false
+        },
+        {
+          "key": "llm.load.offloadKVCacheToGpu",
+          "value": true
+        },
+        {
+          "key": "load.gpuSplitConfig",
+          "value": {
+            "strategy": "evenly",
+            "disabledGpus": [],
+            "priority": [],
+            "customRatio": []
+          }
+        },
+        {
+          "key": "llm.load.llama.cpuThreadPoolSize",
+          "value": 6
+        },
+        {
+          "key": "llm.load.contextLength",
+          "value": 16384
+        },
+        {
+          "key": "llm.load.llama.flashAttention",
+          "value": true
+        },
+        {
+          "key": "llm.load.llama.tryDirectIO",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.acceleration.offloadRatio",
+          "value": 1
+        }
+      ]
+    },
+    "instanceOperationTimeConfig": {
+      "fields": []
+    }
+  },
+  "notes": [],
+  "plugins": [],
+  "pluginConfigs": {},
+  "disabledPluginTools": [],
+  "looseFiles": [],
+  "assistantLastMessagedAt": 1776858146506
+}

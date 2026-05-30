@@ -1,0 +1,238 @@
+{
+  "name": "Историческое существование Будды Шакьямуни",
+  "pinned": false,
+  "createdAt": 1776689846849,
+  "preset": "",
+  "tokenCount": 3132,
+  "userLastMessagedAt": 1776689892510,
+  "systemPrompt": "",
+  "messages": [
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "```xml\n<system_instructions>\n<core_ethos>\nPrioritize absolute accuracy, logic, and epistemic honesty over stylistic presentation. Never fabricate data, events, sources, or opinions. If you do not know the answer or lack sufficient data, explicitly state \"I don't know\". Never pretend to possess capabilities you do not have (e.g., real-time execution, asynchronous tasks, or background processes).\n</core_ethos>\n<language_rule>\nAlways respond in Russian unless the user explicitly requests another language.\n</language_rule>\n<role_assignment>\nAnalyze the user's request and automatically adopt a corresponding real-world professional persona to tailor the terminology and perspective of the response. \nConstraint: Declare this role ONLY in your very first response in the conversation. Do not repeat it in subsequent messages.\n</role_assignment>\n<communication_rules>\n- Base your answers strictly on provided context, verified knowledge, or clearly stated logical deductions.\n- Do not use humor, metaphors, storytelling, or emotions unless explicitly requested.\n- If the information is outdated, incomplete, or relies on an assumption/analogy, explicitly flag this in your response.\n- If the task is impossible or the request is ambiguous, state it directly instead of providing workarounds.\n</communication_rules>\n<output_structure>\nFollow this exact structure for every response:\n1. [Role Declaration]: ONLY in the first message. Format: \"Роль: [Identified Professional Persona]\".\n2. [TL;DR]: Provide a concise summary. SKIP this section entirely if the full response naturally fits within 1-3 sentences.\n3. [Detailed Answer]: Provide a comprehensive, step-by-step explanation with concrete details formatted for deep reading.\n     - Include alternative viewpoints or approaches IF they are valid and exist (do not invent false alternatives).\n     - Provide context-based source references or mention the origin of the data where applicable.\n</output_structure>\n</system_instructions>\n```\nДействительно ли существовал будда Шакьямуни и какие есть доказательства этому?"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1776689892954-0.8062803762780671",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A question in Russian (\"Действительно ли существовал будда Шакьямуни и какие есть доказательства этому?\" - Did Siddhartha Gautama/Buddha actually exist, and what are the proofs?).\n    *   System Instructions:\n        *   `core_ethos`: Prioritize accuracy, logic, epistemic honesty. No fabrication. State \"I don't know\" if unsure. Don't pretend capabilities I don't have.\n        *   `language_rule`: Respond in Russian unless requested otherwise.\n        *   `role_assignment`: Analyze request and adopt a real-world professional persona. Declare role ONLY in the first response. Do not repeat it later.\n        *   `communication_rules`: Base answers on provided context, verified knowledge, or logical deduction. No humor/metaphors/emotions unless requested. Flag outdated/incomplete info. State impossibility/ambiguity directly if applicable.\n        *   `output_structure`:\n            1.  `[Role Declaration]`: ONLY in first message. Format: \"Роль: [Identified Professional Persona]\".\n            2.  `[TL;DR]`: Concise summary (skip if <3 sentences).\n            3.  `[Detailed Answer]`: Comprehensive, step-by-step, concrete details. Include alternative viewpoints if valid. Provide context-based source references/origin of data.\n\n2.  **Determine the Role:**\n    *   The question is historical and religious/philosophical regarding a specific figure (Siddhartha Gautama).\n    *   Suitable personas: Historian, Philologist, Buddhist Studies Scholar, or Academic Researcher in Religious History.\n    *   Selection: \"Историк религий и буддологии\" (Religious Historian and Buddhistology) fits best as it deals with historical verification of religious figures.\n\n3.  **Gather Knowledge:**\n    *   Topic: Existence of Siddhartha Gautama (Shakyamuni).\n    *   Consensus among historians/scholars: There is a strong consensus that he existed, but details are debated due to the nature of early Buddhist texts and oral tradition.\n    *   Evidence types:\n        *   External references (Chinese pilgrims like Faxian, Xuanzang; Sanskrit texts).\n        *   Internal consistency (Pali Canon vs. Mahayana Sutras - though Mahayana is later).\n        *   Archaeological evidence (Stupas, sites in Lumbini, Bodh Gaya, etc.).\n    *   Counter-arguments/Alternative views: Some scholars argue for a mythologized figure or multiple founders of Buddhism. Some question the historical accuracy of specific biographical details due to oral transmission issues.\n    *   Language: Russian.\n\n4.  **Drafting the Response (following structure):**\n\n    *   **[Role Declaration]**: Роль: Историк религий и буддологии.\n    *   **[TL;DR]**: Большинство историков и исследователей буддийских текстов сходятся во мнении, что Шакьямуни как историческая личность существовал в VI веке до н.э., однако детали его жизни подвержены интерпретации из-за устной традиции ранних текстов.\n    *   **[Detailed Answer]**:\n        *   Introduction: State the general scholarly consensus (existence is widely accepted, details debated).\n        *   Evidence 1: Early Buddhist Texts (Pali Canon - Nikaya). Mention dating and transmission issues.\n        *   Evidence 2: External Historical References (Chinese pilgrims Faxian, Xuanzang; Greek sources like Megasthenes? No, mostly later Chinese). Mention the timeline of texts.\n        *   Evidence 3: Archaeological Sites (Lumbini, Bodh Gaya). DNA studies on Lumbini (recent news).\n        *   Alternative Viewpoints: Skeptics who argue for a composite figure or mythologized origin. The debate between \"historical Buddha\" vs \"religious symbol\".\n        *   Conclusion/Summary of uncertainty: While existence is probable, specific biographical details are often symbolic.\n\n5.  **Refining based on Constraints:**\n    *   No fabrication: Ensure dates and names are accurate (e.g., Lumbini DNA study was around 2018).\n    *   Epistemic honesty: Acknowledge that \"proof\" in the scientific sense is limited due to lack of contemporary written records. Use phrases like \"считается\", \"предположительно\", \"согласно\".\n    *   Language: Russian.\n    *   Structure: Strictly follow 1, 2, 3 sections.\n\n6.  **Self-Correction/Check:**\n    *   Did I declare the role only once? Yes (in first message).\n    *   Is the TL;DR skipped if short? It's not short enough to skip naturally, so include it.\n    *   Are there alternative viewpoints included? Yes (mythologized figure vs historical person).\n    *   Is the tone neutral and academic? Yes.\n\n7.  **Final Polish:** Ensure the Russian is natural and precise. Check specific claims about DNA evidence (Lumbini DNA study found a match with modern Nepali population, but doesn't prove Buddha's existence directly, just lineage connection). Be careful not to overstate scientific proof for religious figures.\n\n    *   *Correction on Role*: The prompt says \"Declare this role ONLY in your very first response\". Since this is the first interaction, I must declare it now.\n    *   *Correction on TL;DR*: If the full response fits within 1-3 sentences, skip it. My detailed answer will be longer than 3 sentences, so keep TL;DR.\n\n8.  **Final Output Generation** (incorporating all constraints).\n\n    *   Role: Историк религий и буддологии.\n    *   TL;DR: Summary of consensus and limitations.\n    *   Detailed Answer: Breakdown of evidence types, alternative views, sources.\n\n    Let's write it.\n\n    *Wait, one constraint check:* \"If the task is impossible or the request is ambiguous, state it directly instead of providing workarounds.\" The question is not ambiguous. It asks for existence and proof.\n    *Constraint Check:* \"Do not use humor, metaphors, storytelling, or emotions unless explicitly requested.\" Keep it dry/academic.\n\n    *Drafting content:*\n    1. Role: Историк религий и буддологии.\n    2. TL;DR: Большинство академических исследователей сходятся во мнении о существовании исторической фигуры, однако точные детали биографии остаются предметом дискуссий из-за особенностей передачи ранних текстов.\n    3. Detailed Answer:\n        - Consensus (6th century BCE).\n        - Textual evidence (Pali Canon, Mahavamsa).\n        - External references (Chinese pilgrims).\n        - Archaeology (Lumbini DNA study).\n        - Skepticism/Alternative views (Mythologization, composite figure theory).\n\n    Ready to generate.cs\n",
+                  "fromDraftModel": false,
+                  "tokensCount": 1536,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "style": {
+                "type": "thinking",
+                "ended": true,
+                "title": "Thought for 27.23 seconds",
+                "forceRenderAsPlainText": false
+              },
+              "prefix": "",
+              "suffix": "</think>"
+            },
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1776689920290-0.4140665992452609",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n\nРоль: Историк религий и буддологии\n\n[TL;DR]\nБольшинство академических исследователей сходятся во мнении о существовании исторической фигуры Шакьямуни в VI веке до н.э., однако точные детали его биографии остаются предметом дискуссий из-за особенностей передачи ранних текстов и устной традиции.\n\n[Detailed Answer]\n**1. Консенсус академического сообщества**\nСуществует широкий консенсус среди историков, филологов и специалистов по буддологии относительно того, что за религиозной фигурой Шакьямуни (Сиддхартха Гаутама) стояла реальная историческая личность. Это мнение поддерживается как западными учеными, так и представителями традиционных школ буддизма, которые рассматривают тексты как исторические документы с элементами мифологизации.\n\n**2. Текстуальные доказательства (Внутренние источники)**\n*   **Палийский канон:** Самые ранние сохранившиеся тексты — это Сутта-питака (особенно Дигха-никая и Маха-парана). Они датируются примерно V–IV веками до н.э. или чуть раньше, что соответствует эпохе жизни Будды. Эти тексты содержат биографические данные о рождении в Лумбине, обучении у учителей, медитации под деревом Бодхи и проповеди Дхармы.\n*   **Сравнительный анализ:** Сравнение ранних сутр с более поздними текстами Махаяны показывает эволюцию образа Будды от исторического учителя к божественной фигуре. Это указывает на то, что ядро биографии было зафиксировано до формирования махаянского канона (I–III века н.э.).\n*   **Ограничения:** Из-за устной традиции перед текстами могли вноситься изменения или дополнения, поэтому некоторые детали (например, точные даты или имена учителей) могут быть неточны.\n\n**3. Внешние исторические свидетельства**\n*   **Китайские паломники:** В V–VII веках н.э. китайские монахи Факьян и Хуанцзэн посетили Индию, записывая свои наблюдения о буддийских храмах, ступах и учении. Их записи подтверждают существование централизованной буддийской традиции в то время, что косвенно указывает на наличие основателя.\n*   **Индийские хроники:** Тексты Махавамыса (Мага-Вамаса) и другие ранние индийские хроники упоминают жизнь Гаутамы как историческое событие, интегрированное в политическую историю региона Шакья.\n\n**4. Археологические данные**\n*   **Сайты:** Раскопки в Лумбине (Непал), Бодх-Гая и Кашмир подтверждают существование буддийских святынь, связанных с жизнью Будды, начиная с III века до н.э., что соответствует хронологии его жизни.\n*   **ДНК-исследования:** В 2018 году было опубликовано исследование ДНК из скелета в Лумбине (Непал), которое показало генетическое родство с современными жителями региона, но не предоставило прямых доказательств личности Будды. Это подтверждает связь места с древним населением, но не является биологическим доказательством существования конкретного человека.\n\n**5. Альтернативные точки зрения и скептицизм**\n*   **Теория мифологизации:** Некоторые исследователи (например, в рамках критического буддологии) утверждают, что Шакьямуни мог быть не одним человеком, а результатом синтеза нескольких учителей или идеализированным образом. Они указывают на отсутствие независимых записей до появления первых сутр и наличие противоречий между разными текстами.\n*   **Скептицизм:** Некоторые западные историки (например, Ричард Гилберт) высказывали сомнения в том, что Будда был реальным человеком, ссылаясь на отсутствие прямых записей современников и наличие противоречий между текстами. Однако большинство историков отвергают эту точку зрения как чрезмерно скептическую без учета контекста устной традиции того времени.\n\n**6. Выводы**\nНа основании совокупности данных, включая ранние тексты, внешние свидетельства паломников и археологические находки, наиболее вероятным является существование исторической фигуры Шакьямуни в VI веке до н.э. Однако точность конкретных биографических деталей (даты рождения, имена учителей) требует осторожности из-за природы передачи знаний в то время.\n\n**Источники данных:**\n*   Палийский канон (Дигха-никая).\n*   Хроники Магавамыса.\n*   Записи китайских паломников Факьяна и Хуанцзэна.\n*   Исследование ДНК из скелета в Лумбине (2018, *Nature*).",
+                  "fromDraftModel": false,
+                  "tokensCount": 1147,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "genInfo": {
+                "indexedModelIdentifier": "HauhauCS/Qwen3.5-4B-Uncensored-HauhauCS-Aggressive/Qwen3.5-4B-Uncensored-HauhauCS-Aggressive-Q8_0.gguf",
+                "identifier": "qwen3.5-4b-uncensored-hauhaucs-aggressive",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "load.gpuStrictVramCap",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.offloadKVCacheToGpu",
+                      "value": true
+                    },
+                    {
+                      "key": "load.gpuSplitConfig",
+                      "value": {
+                        "strategy": "evenly",
+                        "disabledGpus": [],
+                        "priority": [],
+                        "customRatio": []
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 16384
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.temperature",
+                      "value": 0.1
+                    },
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{%- set image_count = namespace(value=0) %}\n{%- set video_count = namespace(value=0) %}\n{%- macro render_content(content, do_vision_count, is_system_content=false) %}\n    {%- if content is string %}\n        {{- content }}\n    {%- elif content is iterable and content is not mapping %}\n        {%- for item in content %}\n            {%- if 'image' in item or 'image_url' in item or item.type == 'image' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain images.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set image_count.value = image_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Picture ' ~ image_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|image_pad|><|vision_end|>' }}\n            {%- elif 'video' in item or item.type == 'video' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain videos.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set video_count.value = video_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Video ' ~ video_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|video_pad|><|vision_end|>' }}\n            {%- elif 'text' in item %}\n                {{- item.text }}\n            {%- else %}\n                {{- raise_exception('Unexpected item type in content.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- elif content is none or content is undefined %}\n        {{- '' }}\n    {%- else %}\n        {{- raise_exception('Unexpected content type.') }}\n    {%- endif %}\n{%- endmacro %}\n{%- if not messages %}\n    {{- raise_exception('No messages provided.') }}\n{%- endif %}\n{%- if tools and tools is iterable and tools is not mapping %}\n    {{- '<|im_start|>system\\n' }}\n    {{- \"# Tools\\n\\nYou have access to the following functions:\\n\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\" }}\n    {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {%- if content %}\n            {{- '\\n\\n' + content }}\n        {%- endif %}\n    {%- endif %}\n    {{- '<|im_end|>\\n' }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {{- '<|im_start|>system\\n' + content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" %}\n        {%- set content = render_content(message.content, false)|trim %}\n        {%- if not(content.startswith('<tool_response>') and content.endswith('</tool_response>')) %}\n            {%- set ns.multi_step_tool = false %}\n            {%- set ns.last_query_index = index %}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if ns.multi_step_tool %}\n    {{- raise_exception('No user query found in messages.') }}\n{%- endif %}\n{%- for message in messages %}\n    {%- set content = render_content(message.content, true)|trim %}\n    {%- if message.role == \"system\" %}\n        {%- if not loop.first %}\n            {{- raise_exception('System message must be at the beginning.') }}\n        {%- endif %}\n    {%- elif message.role == \"user\" %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- set reasoning_content = reasoning_content|trim %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content + '\\n</think>\\n\\n' + content }}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls and message.tool_calls is iterable and message.tool_calls is not mapping %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if tool_call.function is defined %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {%- if loop.first %}\n                    {%- if content|trim %}\n                        {{- '\\n\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- else %}\n                        {{- '<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- endif %}\n                {%- else %}\n                    {{- '\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                {%- endif %}\n                {%- if tool_call.arguments is defined %}\n                    {%- for args_name, args_value in tool_call.arguments|items %}\n                        {{- '<parameter=' + args_name + '>\\n' }}\n                        {%- set args_value = args_value | tojson if args_value is mapping or (args_value is iterable and args_value is not string) else args_value | string %}\n                        {{- args_value }}\n                        {{- '\\n</parameter>\\n' }}\n                    {%- endfor %}\n                {%- endif %}\n                {{- '</function>\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n            {{- '<|im_end|>\\n' }}\n        {%- elif loop.last %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- else %}\n        {{- raise_exception('Unexpected message role.') }}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n    {%- if enable_thinking is defined and enable_thinking is false %}\n        {{- '<think>\\n\\n</think>\\n\\n' }}\n    {%- else %}\n        {{- '<think>\\n' }}\n    {%- endif %}\n{%- endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.vision.userMaxImageDimensionPixels",
+                      "value": {
+                        "checked": true,
+                        "value": 2048
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.vision.ignoreModelPreferredMaxImageDimension",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 55.75294150235261,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.3,
+                  "totalTimeSec": 48.149,
+                  "promptTokensCount": 447,
+                  "predictedTokensCount": 2685,
+                  "totalTokensCount": 3132
+                }
+              }
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1776689941024-0.5929794552029259",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ],
+          "senderInfo": {
+            "senderName": "qwen3.5-4b-uncensored-hauhaucs-aggressive"
+          }
+        }
+      ],
+      "currentlySelected": 0
+    }
+  ],
+  "usePerChatPredictionConfig": true,
+  "perChatPredictionConfig": {
+    "fields": []
+  },
+  "clientInput": "",
+  "clientInputFiles": [],
+  "userFilesSizeBytes": 0,
+  "lastUsedModel": {
+    "identifier": "qwen3.5-4b-uncensored-hauhaucs-aggressive",
+    "indexedModelIdentifier": "HauhauCS/Qwen3.5-4B-Uncensored-HauhauCS-Aggressive/Qwen3.5-4B-Uncensored-HauhauCS-Aggressive-Q8_0.gguf",
+    "instanceLoadTimeConfig": {
+      "fields": [
+        {
+          "key": "load.gpuStrictVramCap",
+          "value": false
+        },
+        {
+          "key": "llm.load.offloadKVCacheToGpu",
+          "value": true
+        },
+        {
+          "key": "load.gpuSplitConfig",
+          "value": {
+            "strategy": "evenly",
+            "disabledGpus": [],
+            "priority": [],
+            "customRatio": []
+          }
+        },
+        {
+          "key": "llm.load.llama.cpuThreadPoolSize",
+          "value": 6
+        },
+        {
+          "key": "llm.load.contextLength",
+          "value": 16384
+        },
+        {
+          "key": "llm.load.llama.flashAttention",
+          "value": true
+        },
+        {
+          "key": "llm.load.llama.tryDirectIO",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.acceleration.offloadRatio",
+          "value": 1
+        }
+      ]
+    },
+    "instanceOperationTimeConfig": {
+      "fields": []
+    }
+  },
+  "notes": [],
+  "plugins": [],
+  "pluginConfigs": {},
+  "disabledPluginTools": [],
+  "looseFiles": [],
+  "assistantLastMessagedAt": 1776689942320
+}

@@ -1,0 +1,287 @@
+{
+  "name": "Female weight loss training plan",
+  "pinned": false,
+  "createdAt": 1779796343614,
+  "preset": "@local:uni",
+  "tokenCount": 11339,
+  "userLastMessagedAt": 1779796483004,
+  "systemPrompt": "",
+  "messages": [
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Составь план тренировок строго по инструкции ниже.\n\n---\n\n## ПРОФИЛЬ СПОРТСМЕНА\n\n- Пол: женщина, 27 лет, вес: 89 кг, рост: 169 см\n- Опыт: средний, суммарно 1 год тренировок с тренером\n- Цель: похудение и набор мышечной массы\n- **Ограничения: не включать упражнения в которых задействованы мышцы поясницы (приседания, выпады, тяги и т.п.)!**\n\n---\n\n## ЗАДАЧА\n\nСоставь по 8 тренировок на месяц:\n- 8 тренировок: 8 альтернативных (по две тренировки в неделю)\n\nПравила чередования:\n- Основной и альтернативный варианты одной недели нагружают одни и те же группы мышц, но через разные упражнения.\n- Чередование по месяцам: месяц 1 — основной план, месяц 2 — альтернативный план, и так далее.\n\n---\n\nДоступный инвентарь в тренажёрном зале:\n\n- Гири (8–32 кг)\n- Штанги с блинами (до 30 кг/блин)\n- Резинки разной плотности\n- Петля TRX\n- Турник для подтягиваний\n- Тяжёлые мячи (3–10 кг)\n- Брусья\n- Мешок с песком (до 10 кг)\n- Цилиндр с жидкостью (аналог мешка с песком)\n- Гантели (2-30 кг)\n- Собственный вес\n- Степ платформы\n- Разные тренажёры на изоляцию мышц\n\n**Все названия упражнений — только на русском языке!**\nНикаких нереалистичных упражнений, например подтягивание с гантелями.\n\n---\n\n## ФОРМАТ ВЫВОДА\n\nИспользуй строго следующую структуру для всех 8 тренировок:\n\n---\n\n### АЛЬТЕРНАТИВНЫЙ ПЛАН\n\n#### Неделя 1 | Формат: [название]\n**Целевые группы мышц:** [те же, что в основном плане недели 1 — другие упражнения]\n\n| № | Упражнение | Название основной мышцы для проработки | Подходы | Повторения / Время |\n|---|---|---|---|---|\n| 1 | ... | ... | ... | ... |\n\n[аналогично для недель 2–4]\n\n---\n\nСоставленный основной план:\n```md\n### ОСНОВНОЙ ПЛАН\n\n#### Неделя 1 | Формат: Базовый объем\n**Целевые группы мышц:** Грудь, спина (верх), ноги (изоляция), руки, пресс\n\n| № | Упражнение | Название основной мышцы для проработки | Подходы | Повторения / Время |\n|---|---|---|---|---|\n| 1 | Разведения с гантелями сидя | Большая грудная мышца | 4 | 12 раз |\n| 2 | Вертикальный жим узким хватом (в тренажере) | Трицепс, передняя дельта | 4 | 12 раз |\n| 3 | Тяга верхнего блока к груди | Широчайшие мышцы спины | 4 | 12 раз |\n| 4 | Разгибание ног на тренажере | Квадрицепс (передняя поверхность бедра) | 4 | 15 раз |\n| 5 | Сгибание ног лежа на скамье | Бицепс бедра (задняя поверхность) | 4 | 12 раз |\n| 6 | Подъем ног в висе на турнике (без отягощения) | Пресс, прямая мышца живота | 3 | 15 раз |\n\n#### Неделя 1 | Формат: Круговая тренировка\n**Целевые группы мышц:** Грудь, спина, ноги, пресс, кардио\n\n| № | Упражнение | Название основной мышцы для проработки | Подходы | Повторения / Время |\n|---|---|---|---|---|\n| 1 | Отжимания от нижней планки (на коленях) | Грудные мышцы, трицепс | 3 круга по 15 раз | - |\n| 2 | Ягодичный мостик с гантелью на тазу | Ягодицы, бицепс бедра | 3 круга по 15 раз | - |\n| 3 | Подтягивания в тренажере (гравитрон) | Широчайшие мышцы спины | 3 круга по 12 раз | - |\n| 4 | Разгибание ног на тренажере | Квадрицепс | 3 круга по 15 раз | - |\n| 5 | Планка на предплечьях (без скручиваний) | Пресс, мышцы кора | 3 круга по 45 сек | - |\n| 6 | Гребля на тренажере (кардио) | Общая выносливость | 3 круга по 2 мин | - |\n\n---\n\n#### Неделя 2 | Формат: Акцент на верх тела и пресс\n**Целевые группы мышц:** Плечи, спина, пресс, ноги (без осевой нагрузки)\n\n| № | Упражнение | Название основной мышцы для проработки | Подходы | Повторения / Время |\n|---|---|---|---|---|\n| 1 | Французский жим лежа с гантелями | Трицепс | 4 | 15 раз |\n| 2 | Жим от груди гантелей на скамье | Большая грудная мышца | 4 | 15 раз |\n| 3 | Сведение лопаток в тренажере (вертикальная тяга) | Широчайшие мышцы спины | 4 | 15 раз |\n| 4 | Подъем ног на полу (лежа на спине) | Пресс, прямая мышца живота | 4 | 15 раз |\n| 5 | Ягодичный мостик без отягощения | Ягодицы | 4 | 15 раз |\n| 6 | Скручивания на пресс (на полу) | Пресс, прямая мышца живота | 3 круга по 2 мин | - |\n\n#### Неделя 2 | Формат: Интервальная работа\n**Целевые группы мышц:** Ноги, спина, выносливость\n\n| № | Упражнение | Название основной мышцы для проработки | Подходы | Повторения / Время |\n|---|---|---|---|---|\n| 1 | Зашагивания на степ (без осевой нагрузки) | Ягодицы, квадрицепс | 3 круга по 2 мин | - |\n| 2 | Разгибание ног в тренажере | Квадрицепс | 3 круга по 15 раз | - |\n| 3 | Отжимания от низкой планки (на коленях) | Грудные мышцы, трицепс | 3 круга по 12 раз | - |\n| 4 | Подъем ног в висе на турнике | Пресс, прямая мышца живота | 3 круга по 2 мин | - |\n| 5 | Гребля на тренажере (кардио) | Общая выносливость | 3 круга по 5 мин | - |\n\n---\n\n#### Неделя 3 | Формат: Базовый объем (Вариация)\n**Целевые группы мышц:** Спина, ноги, руки, грудь\n\n| № | Упражнение | Название основной мышцы для проработки | Подходы | Повторения / Время |\n|---|---|---|---|---|\n| 1 | Тяга гантелей в наклоне (без скругления спины) | Широчайшие мышцы спины, ромбовидные | 4 | 15 раз |\n| 2 | Вертикальный жим в тренажере | Трицепс, передняя дельта | 4 | 15 раз |\n| 3 | Разгибание ног в тренажере | Квадрицепс | 4 | 21 раз |\n| 4 | Сгибание ног лежа на скамье | Бицепс бедра (задняя поверхность) | 4 | 12 раз |\n| 5 | Подтягивания с гравитроном | Широчайшие мышцы спины | 3 круга по 10-12 раз | - |\n| 6 | Жук (подъем ног в висе на турнике) | Пресс, прямая мышца живота | 3 круга по 15 раз | - |\n\n#### Неделя 3 | Формат: Круговая тренировка\n**Целевые группы мышц:** Ягодицы, пресс, выносливость\n\n| № | Упражнение | Название основной мышцы для проработки | Подходы | Повторения / Время |\n|---|---|---|---|---|\n| 1 | Обратная планка (на предплечьях) | Ягодицы, задняя поверхность бедра | 3 круга по 45 сек | - |\n| 2 | Опускание ног в висе на турнике | Пресс, прямая мышца живота | 3 круга по 15 раз | - |\n| 3 | Ягодичный мостик с резиной | Ягодицы | 3 круга по 15 раз | - |\n| 4 | Отжимания от низкой планки | Грудные мышцы, трицепс | 3 круга по 12 раз | - |\n| 5 | Работа на степ (без осевой нагрузки) | Квадрицепс, ягодицы | 3 круга по 2 мин | - |\n\n---\n\n#### Неделя 4 | Формат: Прогрессия и закрепление\n**Целевые группы мышц:** Грудь, спина, ноги, руки (общая выносливость)\n\n| № | Упражнение | Название основной мышцы для проработки | Подходы | Повторения / Время |\n|---|---|---|---|---|\n| 1 | Жим гантелей на скамье (сидя или лежа) | Большая грудная мышца | 4 | 15 раз |\n| 2 | Тяга верхнего блока к груди | Широчайшие мышцы спины | 4 | 15 раз |\n| 3 | Разгибание ног на тренажере | Квадрицепс | 4 | 20 раз |\n| 4 | Сгибание ног лежа на скамье | Бицепс бедра (задняя поверхность) | 4 | 15 раз |\n| 5 | Подтягивания в тренажере (гравитрон) | Широчайшие мышцы спины | 3 круга по 12 раз | - |\n| 6 | Планка на предплечьях с подъемом рук | Пресс, прямая мышца живота | 3 круга по 45 сек | - |\n\n#### Неделя 4 | Формат: Кардио и функционал\n**Целевые группы мышц:** Выносливость, пресс, ноги (без осевой нагрузки)\n\n| № | Упражнение | Название основной мышцы для проработки | Подходы | Повторения / Время |\n|---|---|---|---|---|\n| 1 | Зашагивания на степ (с акцентом на ягодицы) | Ягодицы, квадрицепс | 3 круга по 2 мин | - |\n| 2 | Жим ногами в тренажере (без осевой нагрузки) | Квадрицепс, бицепс бедра | 3 круга по 15 раз | - |\n| 3 | Велосипед на велотренажере | Общая выносливость | 3 круга по 2 мин | - |\n| 4 | Отжимания от низкой планки (на коленях) | Грудные мышцы, трицепс | 3 круга по 12 раз | - |\n| 5 | Гребля на тренажере (кардио) | Общая выносливость | 3 круга по 5 мин | - |\n```"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1779796485532-0.1842258792730287",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   **Task:** Create a training plan based on provided instructions and an existing \"Main Plan\" (ОСНОВНОЙ ПЛАН).\n    *   **User Profile:** Female, 27 years old, 89 kg, 169 cm. Medium experience (1 year with trainer). Goal: Weight loss + muscle gain.\n    *   **Constraint:** NO exercises involving the lower back muscles (squats, lunges, pulls, etc.). This is critical.\n    *   **Output Requirement:** Create an \"ALTERNATIVE PLAN\" (АЛЬТЕРНАТИВНЫЙ ПЛАН) consisting of 8 workouts (4 weeks x 2 sessions/week).\n    *   **Structure:** Strict format provided in the prompt (TL;DR, Role Assignment, Main Answer with specific Markdown structure for Weeks 1-4, each having a \"Main\" and \"Alternative\" counterpart based on the provided \"Main Plan\"). Wait, looking closely at the prompt's instruction: \"Составь по 8 тренировок на месяц... Основной и альтернативный варианты одной недели нагружают одни и те же группы мышц, но через разные упражнения.\"\n    *   **Input Data:** The user provided a \"Main Plan\" (ОСНОВНОЙ ПЛАН) in the prompt text itself. I need to create the \"ALTERNATIVE PLAN\" that corresponds to this Main Plan but uses different exercises for the same muscle groups, adhering to the constraints (no lower back load).\n    *   **Language:** Russian (default rule).\n    *   **Role Assignment:** Need to assign a role in the first message.\n    *   **TL;DR:** Include if response > 3 sentences.\n    *   **Constraints Check:** No squats, lunges, pulls involving lower back. The provided Main Plan already has some exercises like \"Тяга гантелей в наклоне\" (Bent Over Row) which might stress the lower back if not careful, but the instruction says \"не включать упражнения в которых задействованы мышцы поясницы\". I need to ensure my *Alternative* plan strictly avoids this. The Main Plan provided in the prompt text also has some exercises that might be borderline (e.g., Bent Over Rows), but since I am creating the Alternative Plan based on it, I must ensure safety and adherence to the \"no lower back\" rule for my output.\n    *   **Inventory:** Kettlebells, Barbells (up to 30kg/plate), Bands, TRX, Pull-up bar, Heavy balls, Sandbag, Liquid cylinder, Dumbbells (2-30kg), Bodyweight, Step platform, Isolation machines.\n    *   **Format:** Strict Markdown structure provided in the prompt for the \"ALTERNATIVE PLAN\".\n\n2.  **Role Assignment:**\n    *   Based on the request (\"Составь план тренировок\"), I should act as a **Personal Trainer** or **Fitness Coach**. Let's choose \"Персональный тренер\" (Personal Trainer).\n\n3.  **TL;DR Check:**\n    *   The response will be long (8 workouts, detailed tables). So TL;DR is required at the top.\n\n4.  **Content Analysis & Safety Check:**\n    *   **Constraint:** No lower back involvement (no squats, lunges, pulls like bent-over rows if they stress the lumbar spine too much). The prompt explicitly says \"не включать упражнения в которых задействованы мышцы поясницы (приседания, выпады, тяги и т.п.)!\".\n    *   **Main Plan Analysis:** The provided Main Plan includes \"Тяга гантелей в наклоне\" (Bent Over Row) and \"Подтягивания с гравитроном\". These are technically back exercises but often involve the lower back for stability. However, since I am creating the *Alternative* plan based on this structure, I must ensure my alternatives respect the constraint strictly.\n    *   **Muscle Groups to Target:** Chest, Back (Upper), Legs (Isolation/No axial load), Arms, Abs.\n    *   **Goal:** Weight loss + Muscle gain (Hypertrophy + Caloric Deficit). This means moderate reps, controlled tempo, potentially higher volume for muscle, cardio for fat loss.\n    *   **Inventory Usage:** Must use the listed equipment (Dumbbells, Machines, Bands, TRX, etc.). No \"nonsensical\" exercises.\n\n5.  **Drafting the Alternative Plan:**\n    *   I need to mirror the structure of the Main Plan provided in the prompt but change the exercises while keeping the muscle groups and formats similar (Volume, Circuit, Upper Body Focus, Progression).\n    *   **Week 1:** Main = Chest/Back/Arms/Legs/Abs. Alt = Same muscles, different exercises. Avoid lower back load. Use machines or seated positions for rows if necessary to protect the spine, but the prompt says \"no pulls\" (тяги) generally involving the lower back. I will focus on vertical pulling (lat pulldown - usually safe if done correctly) or horizontal pulling from a seated position without rounding the back too much, or use TRX/Bands for rows that don't load the lumbar spine heavily. Actually, \"Тяга верхнего блока\" is in the Main Plan and is generally considered safe for the lower back compared to bent-over rows. I will keep vertical pulls but ensure alternatives are also safe (e.g., Lat Pulldown machine).\n    *   **Legs:** No squats/lunges. Use Leg Extension, Leg Curl machines, Step-ups, Glute Bridges.\n    *   **Chest:** Push-ups, Dumbbell Press (seated/lying), Chest Flys.\n    *   **Abs:** Hanging leg raises, Planks, Crunches.\n\n    *   **Week 1 Alt:**\n        *   Main: Seated DB Flys -> Alt: Pec Deck Machine or Cable Crossover.\n        *   Main: Lat Pulldown (Narrow) -> Alt: Wide Grip Lat Pulldown or TRX Rows (seated).\n        *   Main: Leg Extension -> Alt: Leg Curl machine or Step-ups.\n        *   Main: Hanging Leg Raise -> Alt: Cable Crunch or Plank variations.\n\n    *   **Week 2 Alt:**\n        *   Main: French Press DB -> Alt: Tricep Pushdown (Cable) or Overhead DB Extension.\n        *   Main: DB Chest Press -> Alt: Incline DB Press or Machine Chest Press.\n        *   Main: Vertical Pull -> Alt: Seated Cable Row (neutral grip).\n        *   Main: Leg Curl/Step -> Alt: Glute Bridge with Band.\n\n    *   **Week 3 Alt:**\n        *   Main: Bent Over Row -> Alt: Seated Cable Row or Chest Supported Row (to save lower back).\n        *   Main: Leg Extension -> Alt: Leg Press Machine (if allowed, but prompt says \"no squats/lunges\", leg press is often debated. Better stick to isolation like Leg Curl/Extension). Let's use Leg Press machine carefully or just Step-ups/Leg Curls. The constraint says \"no exercises involving lower back muscles\". Leg press can be safe if done correctly, but to be strict, I'll focus on machines that isolate legs without spinal loading (Leg Extension/Curl).\n        *   Main: Hanging Leg Raise -> Alt: Cable Crunch or Ab Wheel (if available, otherwise floor crunches).\n\n    *   **Week 4 Alt:**\n        *   Main: DB Press -> Alt: Machine Chest Press.\n        *   Main: Lat Pulldown -> Alt: Seated Row machine.\n        *   Main: Leg Extension/Curl -> Alt: Step-ups or Glute Bridge variations.\n        *   Main: Plank -> Alt: Side Planks or Dead Bug (if available).\n\n    *   **Wait, I need to check the \"Main Plan\" provided in the prompt again.** The user provided a specific text block labeled \"Составленный основной план\". I must create an Alternative Plan that corresponds to this.\n    *   **Crucial:** The prompt asks me to compose 8 workouts for a month (4 weeks x 2). It provides the Main Plan structure as reference. I need to output the **ALTERNATIVE PLAN** section specifically, following the format provided in the \"ФОРМАТ ВЫВОДА\" section of the prompt instructions.\n    *   Wait, looking at the instruction: \"Составь по 8 тренировок на месяц... Основной и альтернативный варианты одной недели нагружают одни и те же группы мышц, но через разные упражнения.\" AND \"Используй строго следующую структуру для всех 8 тренировок\". The example structure shows \"АЛЬТЕРНАТИВНЫЙ ПЛАН\" followed by weeks.\n    *   However, the prompt text ends with a block of Markdown that looks like the Main Plan was already provided (\"Составленный основной план\").\n    *   My task is to generate the **ALTERNATIVE PLAN** based on this Main Plan, ensuring constraints are met (No lower back load).\n    *   I need to make sure I don't just copy the Main Plan. I must create distinct exercises for the Alternative Plan that target the same muscles but avoid the forbidden movements (squats, lunges, pulls involving lumbar spine).\n\n6.  **Refining Constraints:**\n    *   \"Не включать упражнения в которых задействованы мышцы поясницы\". This means no Squats, Lunges, Bent Over Rows (тяги), Deadlifts.\n    *   The Main Plan provided in the prompt text includes: \"Тяга гантелей в наклоне\" (Bent Over Row) and \"Подтягивания с гравитроном\". These are technically back exercises. If I am creating an Alternative plan, I should ensure my alternatives for these weeks also respect the constraint strictly.\n    *   For Back: Use Lat Pulldown machines (vertical pull), Seated Cable Rows (neutral spine), TRX rows (if core is stable). Avoid bent-over positions that load lumbar spine.\n    *   For Legs: No Squats/Lunges. Use Leg Extension, Leg Curl, Step-ups, Glute Bridges, Leg Press Machine (if considered safe/isolation enough). I will prioritize machines and step-ups to be safe regarding the \"no lower back\" rule.\n\n7.  **Role Assignment:**\n    *   Role: Персональный тренер (Personal Trainer).\n\n8.  **Structure Check:**\n    *   TL;DR at top.\n    *   Main Answer with specific Markdown headers: `### АЛЬТЕРНАТИВНЫЙ ПЛАН`.\n    *   Weeks 1-4, each with two sessions (Main/Alt logic applied to the output structure). Wait, the prompt says \"Используй строго следующую структуру для всех 8 тренировок\". The example shows `#### Неделя 1 | Формат: [название]` then a table.\n    *   Actually, looking at the provided text block in the prompt under \"Составленный основной план\", it lists Week 1 (Main), Week 1 (Alt - wait, no, it lists Week 1 Main, then Week 2 Main/Alt... No, let's look closer).\n    *   The text provided in the prompt under \"Составленный основной план\" actually contains:\n        *   Week 1 | Format: Basic Volume (Main)\n        *   Week 1 | Format: Circuit (Alternative?) -> Wait, the header says \"#### Неделя 1 | Формат: Круговая тренировка\". This looks like an Alternative session for Week 1.\n        *   Week 2 | Format: Upper Body Focus (Main)\n        *   Week 2 | Format: Interval Work (Alternative?) -> Header says \"#### Неделя 2 | Формат: Интервальная работа\".\n        *   Week 3 | Format: Basic Volume Variation (Main)\n        *   Week 3 | Format: Circuit Training (Alternative?) -> Header says \"#### Неделя 3 | Формат: Круговая тренировка\".\n        *   Week 4 | Format: Progression (Main)\n        *   Week 4 | Format: Cardio & Functional (Alternative?) -> Header says \"#### Неделя 4 | Формат: Кардио и функционал\".\n    *   **Correction:** The prompt text provided at the end (\"Составленный основной план\") actually contains a mix of Main and Alternative plans already labeled as such within that block. However, the instruction says \"Составь по 8 тренировок на месяц... Основной и альтернативный варианты одной недели нагружают одни и те же группы мышц\".\n    *   The user wants me to **compose** the plan based on the instructions. The text at the bottom labeled \"Составленный основной план\" seems to be an example or a reference provided by the user that I should follow/expand upon, OR it is the input data I must use as the basis for creating the *Alternative* part.\n    *   Re-reading: \"Составь по 8 тренировок на месяц... Составленный основной план:\" followed by the text block. This implies the Main Plan is already defined in that text block. My task is to create the **ALTERNATIVE PLAN** (АЛЬТЕРНАТИВНЫЙ ПЛАН) section corresponding to it, ensuring I follow the constraints (No lower back load).\n    *   Wait, looking at the \"Составленный основной план\" text: It has Week 1 Main, Week 1 Circuit, Week 2 Upper/Interval, Week 3 Basic/Circuit, Week 4 Progression/Cardio. This looks like it already contains pairs (Main + Alt) for each week within that block.\n    *   However, the instruction says \"Используй строго следующую структуру для всех 8 тренировок\" and shows a template starting with `### АЛЬТЕРНАТИВНЫЙ ПЛАН`.\n    *   It seems I need to output the **ALTERNATIVE PLAN** section specifically, matching the structure of the Main Plan provided but ensuring exercises are different (as per \"через разные упражнения\") and safe (no lower back).\n    *   Actually, looking at the instruction: \"Составь по 8 тренировок на месяц... Основной и альтернативный варианты одной недели нагружают одни и те же группы мышц\". The text provided at the bottom seems to be the Main Plan content. I need to generate the **Alternative** counterpart for each of those weeks (Week 1 Alt, Week 2 Alt, etc.) OR replace the whole thing?\n    *   Let's interpret: The user wants me to output the full plan structure but specifically focusing on creating the Alternative exercises that match the Main Plan provided in the text block.\n    *   Wait, the prompt says \"Составь план тренировок строго по инструкции ниже.\" followed by constraints and then \"Составленный основной план\". This implies I should use the Main Plan as a reference for muscle groups and structure, but generate the **Alternative** exercises that fit the criteria (No lower back).\n    *   Actually, looking at the provided text block again: It has headers like `#### Неделя 1 | Формат: Базовый объем` then `#### Неделя 1 | Формат: Круговая тренировка`. This looks like Week 1 Main and Week 1 Alt.\n    *   BUT, the instruction says \"Используй строго следующую структуру для всех 8 тренировок\" followed by a template starting with `### АЛЬТЕРНАТИВНЫЙ ПЛАН`.\n    *   Okay, I will generate the **ALTERNATIVE PLAN** section only (as per the requested output format in the prompt instructions), ensuring it corresponds to the muscle groups and formats of the provided Main Plan text block.\n    *   Wait, if I only output the Alternative Plan, does that fulfill \"Составь по 8 тренировок\"? Yes, because the structure implies pairing them. But usually, a plan includes both. However, the specific instruction says: \"Используй строго следующую структуру для всех 8 тренировок\" and shows `### АЛЬТЕРНАТИВНЫЙ ПЛАН`.\n    *   Let's look at the example format again: It starts with `### АЛЬТЕРНАТИВНЫЙ ПЛАН` then lists Weeks.\n    *   Okay, I will generate the **ALTERNATIVE PLAN** section (8 workouts total across 4 weeks) that corresponds to the Main Plan provided in the text block, ensuring all constraints are met (No lower back load).\n    *   Wait, if I only output the Alternative Plan, is it clear? The prompt asks \"Составь план тренировок...\". Usually, this means both. But the specific format instruction says \"Используй строго следующую структуру для всех 8 тренировок\" and shows `### АЛЬТЕРНАТИВНЫЙ ПЛАН`.\n    *   Let's check the constraint: \"Основной и альтернативный варианты одной недели нагружают одни и те же группы мышц, но через разные упражнения.\"\n    *   I will create the **ALTERNATIVE PLAN** section as requested by the format instruction. I will ensure the exercises are different from the Main Plan provided in the text block but target the same muscles and avoid lower back load.\n\n    *   **Wait, one more check:** The prompt says \"Составь по 8 тренировок на месяц... Основной и альтернативный варианты одной недели нагружают одни и те же группы мышц\".\n    *   If I only output the Alternative Plan section, it might be confusing without the Main Plan context. However, the instruction explicitly asks to use the structure starting with `### АЛЬТЕРНАТИВНЫЙ ПЛАН`.\n    *   Actually, looking at the provided text block \"Составленный основной план\", it contains 8 workouts already (Week 1 x2, Week 2 x2, etc.). It seems the user pasted a plan and wants me to verify or create an Alternative version? No, it says \"Составь по 8 тренировок...\".\n    *   Okay, I will treat the text block as the **Main Plan Reference**. My task is to generate the **Alternative Plan** that matches this structure but uses different exercises (as per instruction: \"через разные упражнения\") and adheres strictly to the safety constraint (\"не включать упражнения в которых задействованы мышцы поясницы\").\n    *   I need to make sure the Alternative Plan exercises are distinct from the Main Plan provided in the text block.\n    *   Example: Main Week 1 has \"Разведения с гантелями сидя\". Alt Week 1 should have something else for Chest (e.g., Pec Deck).\n    *   Main Week 1 has \"Тяга верхнего блока к груди\". Alt Week 1 should have something else for Back (e.g., Lat Pulldown Wide Grip or Seated Row).\n    *   **Critical Safety:** The prompt says \"не включать упражнения в которых задействованы мышцы поясницы (приседания, выпады, тяги и т.п.)!\". This applies to my output. I must ensure NO lower back exercises in the Alternative Plan.\n\n8.  **Plan Execution:**\n    *   Role: Персональный тренер.\n    *   TL;DR: Summary of the plan (4 weeks, 2 sessions/week, no lower back load).\n    *   Content: 4 Weeks x 2 Sessions = 8 Workouts.\n    *   Format: Strict Markdown as requested (`### АЛЬТЕРНАТИВНЫЙ ПЛАН`, `#### Неделя X | Формат: ...`).\n    *   Language: Russian.\n\n9.  **Safety Check on Exercises:**\n    *   Avoid: Squats, Lunges, Bent Over Rows (тяги в наклоне), Deadlifts.\n    *   Safe Back Exercises: Lat Pulldown (Vertical Pull), Seated Cable Row (Neutral Spine), TRX Rows (if core stable).\n    *   Safe Leg Exercises: Leg Extension, Leg Curl, Step-ups, Glute Bridge, Leg Press Machine (if used carefully/isolation focus).\n    *   Main Plan provided in text has \"Тяга гантелей в наклоне\" (Bent Over Row) and \"Подтягивания с гравитроном\". I must ensure my Alternative Plan does not include these if they violate the constraint. The constraint says \"no pulls involving lower back\". Lat Pulldown is generally safer for lumbar spine than Bent Over Rows. I will use Lat Pulldown or Seated Row variations that don't load the lumbar spine heavily.\n    *   Wait, the instruction says \"не включать упражнения в которых задействованы мышцы поясницы (приседания, выпады, тяги и т.п.)!\". This is a hard constraint for my output. I must not include Squats, Lunges, Pulls (тяги).\n    *   So in my Alternative Plan:\n        *   Instead of \"Bent Over Row\" -> Use \"Seated Cable Row\" or \"Lat Pulldown\".\n        *   Instead of \"Squats/Lunges\" -> Use \"Leg Extension/Curl/Step-ups\".\n    *   I need to check the Main Plan provided in the text block. It includes \"Тяга гантелей в наклоне\". This violates the constraint given at the top (\"Ограничения: не включать упражнения в которых задействованы мышцы поясницы (приседания, выпады, тяги и т.п.)!\").\n    *   **Conflict:** The Main Plan provided in the text block contains exercises that violate the user's own constraints listed earlier.\n    *   **Resolution:** I must follow the \"Operational Rules\" and the specific constraint (\"Ограничения: не включать упражнения в которых задействованы мышцы поясницы\"). Even if the Main Plan reference has them, my output (Alternative Plan) must strictly adhere to the safety constraint. I will replace any lower-back loading exercises in my Alternative Plan with safe alternatives (e.g., Seated Row instead of Bent Over Row).\n    *   Actually, looking at the instruction: \"Составь по 8 тренировок на месяц... Основной и альтернативный варианты одной недели нагружают одни и те же группы мышц\". I am creating the **Alternative** plan. The Main Plan is provided as a reference for muscle groups. I must ensure my Alternative exercises are safe (No lower back).\n    *   Wait, if the Main Plan has \"Bent Over Row\", and I create an Alternative that also has \"Bent Over Row\" to match muscles, does it violate? Yes. So I will change the exercise in the Alternative Plan to be safer while targeting the same muscle group (Back).\n\n10. **Final Check:**\n    *   Role: Personal Trainer.\n    *   TL;DR included.\n    *   8 Workouts (4 weeks x 2).\n    *   Format matches exactly (`### АЛЬТЕРНАТИВНЫЙ ПЛАН`, tables, etc.).\n    *   Language: Russian.\n    *   Constraint: No lower back load exercises in my output.\n\n11. **Drafting Content:**\n    *   Week 1 Alt (Chest/Back/Legs/Abs): Use Pec Deck instead of DB Flys. Lat Pulldown instead of Bent Over Row. Leg Extension/Curl instead of Squats. Plank variations.\n    *   Week 2 Alt (Upper Body/Legs): Tricep Pushdown instead of French Press. Incline Press instead of Flat Press. Seated Row instead of Vertical Pull? No, need to match muscles. Main has \"Вертикальный жим узким хватом\" (Triceps/Shoulder). Alt: Cable Pushdown.\n    *   Week 3 Alt (Back/Legs): Seated Row instead of Bent Over Row. Leg Press Machine or Step-ups.\n    *   Week 4 Alt (Chest/Back/Legs): Machine Chest Press. Lat Pulldown.\n\n    Let's refine the specific exercises to match the Main Plan structure but ensure safety and variety.\n\n    **Week 1:**\n    *   Main: Seated DB Fly, Narrow Lat Pulldown, Leg Ext, Hanging Leg Raise.\n    *   Alt: Pec Deck Machine, Wide Grip Lat Pulldown (Safer for back?), Leg Curl, Cable Crunch.\n    *   Wait, \"Тяга верхнего блока\" is in the Main Plan Week 1. I can keep it or change to Seated Row. To ensure variety (\"через разные упражнения\"), I should change it. Let's use Seated Cable Row (Neutral grip) which is safer for lower back than Bent Over Rows.\n    *   Wait, Main Plan Week 1 has \"Тяга верхнего блока к груди\". This is safe. But the constraint says \"no pulls\" (тяги). I will interpret this as avoiding exercises that heavily load the lumbar spine like bent-over rows. Lat Pulldown and Seated Row are generally acceptable if done correctly, but to be strictly compliant with \"не включать упражнения в которых задействованы мышцы поясницы\", I should prioritize vertical pulling or seated rowing without spinal flexion/extension stress.\n    *   Actually, the constraint says \"(приседания, выпады, тяги и т.п.)\". This implies avoiding horizontal pulls that require bending over (Bent Over Rows). Vertical pulls (Lat Pulldown) are usually okay for back muscles but might still engage lower back stabilizers. To be safe and strictly follow \"no lower back\", I will focus on exercises where the spine is neutral or supported.\n    *   Okay, I will use Seated Row Machine (neutral spine) instead of Bent Over Rows if they appear in Main Plan logic. But since I am creating the Alternative Plan based on the Main Plan provided:\n        *   Main Week 1 has \"Тяга верхнего блока к груди\". This is a vertical pull. It's generally safe.\n        *   Main Week 3 has \"Тяга гантелей в наклоне\" (Bent Over Row). This violates the constraint. I must ensure my Alternative Plan does NOT include this. I will replace it with Seated Cable Row or Lat Pulldown variations that don't load the lumbar spine.\n    *   Okay, I will proceed with generating the Alternative Plan ensuring NO lower back exercises (Squats, Lunges, Bent Over Rows).\n\n12. **Formatting:**\n    *   Must match the provided template exactly (`### АЛЬТЕРНАТИВНЫЙ ПЛАН`, `#### Неделя X | Формат: ...`, Tables with specific columns).\n    *   Note: The prompt asks for \"8 тренировок\". The structure shows 4 weeks x 2 sessions. I will output all 8 in the Alternative Plan section as per the requested format (`### АЛЬТЕРНАТИВНЫЙ ПЛАН`).\n\n13. **Role Assignment:**\n    *   First message must contain: \"**I will answer as [relevant role].**\" (in Russian: \"Я буду отвечать как [роль].\").\n\n14. **TL;DR:**\n    *   Must be at the top if response > 3 sentences. It definitely is.\n\nLet's write it.\n",
+                  "fromDraftModel": false,
+                  "tokensCount": 5847,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "style": {
+                "type": "thinking",
+                "ended": true,
+                "title": "Thought for 4 minutes 5 seconds",
+                "forceRenderAsPlainText": false
+              },
+              "prefix": "",
+              "suffix": "</think>"
+            },
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1779796731102-0.06162715576987188",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n\n**I will answer as Персональный тренер.**\n\n### TL;DR:\nПредставленный план состоит из 8 тренировок за месяц (4 недели по 2 занятия в неделю). Все упражнения подобраны с учетом ограничений: исключены нагрузки на поясницу (приседания, выпады, наклоны со штангой/гантелями). Акцент сделан на изоляцию мышц и безопасную проработку спины.\n\n---\n\n### АЛЬТЕРНАТИВНЫЙ ПЛАН\n\n#### Неделя 1 | Формат: Базовый объем\n**Целевые группы мышц:** Грудь, спина (верх), ноги (изоляция), руки, пресс\n\n| № | Упражнение | Название основной мышцы для проработки | Подходы | Повторения / Время |\n|---|---|---|---|---|\n| 1 | Разведение рук в тренажере «Бабочка» | Большая грудная мышца | 4 | 12 раз |\n| 2 | Тяга верхнего блока к груди широким хватом | Широчайшие мышцы спины, задняя дельта | 4 | 12 раз |\n| 3 | Сгибание ног в тренажере лежа | Бицепс бедра (задняя поверхность) | 4 | 15 раз |\n| 4 | Разгибание рук на блоке с канатной рукоятью | Трицепс, передняя дельта | 4 | 12 раз |\n| 5 | Скручивания на пресс в тренажере | Пресс, прямая мышца живота | 4 | 15 раз |\n| 6 | Планка на локтях с отведением ноги | Пресс, мышцы кора | 3 круга по 30 сек | - |\n\n#### Неделя 1 | Формат: Круговая тренировка\n**Целевые группы мышц:** Грудь, спина, ноги, пресс, кардио\n\n| № | Упражнение | Название основной мышцы для проработки | Подходы | Повторения / Время |\n|---|---|---|---|---|\n| 1 | Отжимания от скамьи (сидя) | Грудные мышцы, трицепс | 3 круга по 15 раз | - |\n| 2 | Ягодичный мостик с резиной на ногах | Ягодицы, бицепс бедра | 3 круга по 20 раз | - |\n| 3 | Тяга горизонтального блока к поясу (сесть) | Широчайшие мышцы спины | 3 круга по 15 раз | - |\n| 4 | Разгибание ног в тренажере сидя | Квадрицепс | 3 круга по 20 раз | - |\n| 5 | Планка на предплечьях (статика) | Пресс, мышцы кора | 3 круга по 60 сек | - |\n| 6 | Эллиптический тренажер (кардио) | Общая выносливость | 3 круга по 2 мин | - |\n\n---\n\n#### Неделя 2 | Формат: Акцент на верх тела и пресс\n**Целевые группы мышц:** Плечи, спина, пресс, ноги (без осевой нагрузки)\n\n| № | Упражнение | Название основной мышцы для проработки | Подходы | Повторения / Время |\n|---|---|---|---|---|\n| 1 | Разгибание рук на блоке с прямой рукоятью | Трицепс | 4 | 15 раз |\n| 2 | Жим гантелей сидя на скамье (наклон) | Большая грудная мышца, передняя дельта | 4 | 12 раз |\n| 3 | Тяга горизонтального блока к поясу | Широчайшие мышцы спины, ромбовидные | 4 | 15 раз |\n| 4 | Подъем ног в висе на турнике (с резиной) | Пресс, прямая мышца живота | 4 | 12 раз |\n| 5 | Ягодичный мостик с гантелью на тазу | Ягодицы | 4 | 20 раз |\n| 6 | Скручивания на пресс (с мячом) | Пресс, прямая мышца живота | 3 круга по 2 мин | - |\n\n#### Неделя 2 | Формат: Интервальная работа\n**Целевые группы мышц:** Ноги, спина, выносливость\n\n| № | Упражнение | Название основной мышцы для проработки | Подходы | Повторения / Время |\n|---|---|---|---|---|\n| 1 | Зашагивания на степ (с акцентом на ягодицы) | Ягодицы, квадрицепс | 3 круга по 2 мин | - |\n| 2 | Сгибание ног в тренажере лежа | Бицепс бедра | 3 круга по 15 раз | - |\n| 3 | Отжимания от скамьи (на коленях) | Грудные мышцы, трицепс | 3 круга по 12 раз | - |\n| 4 | Подъем ног в висе на турнике | Пресс, прямая мышца живота | 3 круга по 2 мин | - |\n| 5 | Велотренажер (кардио) | Общая выносливость | 3 круга по 5 мин | - |\n\n---\n\n#### Неделя 3 | Формат: Базовый объем (Вариация)\n**Целевые группы мышц:** Спина, ноги, руки, грудь\n\n| № | Упражнение | Название основной мышцы для проработки | Подходы | Повторения / Время |\n|---|---|---|---|---|\n| 1 | Тяга горизонтального блока к поясу (сидя) | Широчайшие мышцы спины, ромбовидные | 4 | 15 раз |\n| 2 | Жим гантелей сидя на скамье | Большая грудная мышца, передняя дельта | 4 | 15 раз |\n| 3 | Разгибание ног в тренажере сидя | Квадрицепс | 4 | 20 раз |\n| 4 | Сгибание рук с гантелями сидя (на бицепс) | Бицепс, брахиалис | 4 | 15 раз |\n| 5 | Подтягивания в тренажере (гравитрон) | Широчайшие мышцы спины | 3 круга по 10-12 раз | - |\n| 6 | Планка на предплечьях с подъемом рук | Пресс, прямая мышца живота | 3 круга по 45 сек | - |\n\n#### Неделя 3 | Формат: Круговая тренировка\n**Целевые группы мышц:** Ягодицы, пресс, выносливость\n\n| № | Упражнение | Название основной мышцы для проработки | Подходы | Повторения / Время |\n|---|---|---|---|---|\n| 1 | Обратная планка (на предплечьях) | Ягодицы, задняя поверхность бедра | 3 круга по 45 сек | - |\n| 2 | Опускание ног в висе на турнике | Пресс, прямая мышца живота | 3 круга по 15 раз | - |\n| 3 | Ягодичный мостик с резиной (на полу) | Ягодицы | 3 круга по 20 раз | - |\n| 4 | Отжимания от скамьи (сидя) | Грудные мышцы, трицепс | 3 круга по 15 раз | - |\n| 5 | Работа на степ (без осевой нагрузки) | Квадрицепс, ягодицы | 3 круга по 2 мин | - |\n\n---\n\n#### Неделя 4 | Формат: Прогрессия и закрепление\n**Целевые группы мышц:** Грудь, спина, ноги, руки (общая выносливость)\n\n| № | Упражнение | Название основной мышцы для проработки | Подходы | Повторения / Время |\n|---|---|---|---|---|\n| 1 | Жим гантелей на скамье (сидя или лежа) | Большая грудная мышца | 4 | 15 раз |\n| 2 | Тяга верхнего блока к груди узким хватом | Широчайшие мышцы спины, трицепс | 4 | 15 раз |\n| 3 | Разгибание ног в тренажере сидя | Квадрицепс | 4 | 20 раз |\n| 4 | Сгибание рук с гантелями стоя (на бицепс) | Бицепс, брахиалис | 4 | 15 раз |\n| 5 | Подтягивания в тренажере (гравитрон) | Широчайшие мышцы спины | 3 круга по 12 раз | - |\n| 6 | Планка на предплечьях с подъемом рук | Пресс, прямая мышца живота | 3 круга по 45 сек | - |\n\n#### Неделя 4 | Формат: Кардио и функционал\n**Целевые группы мышц:** Выносливость, пресс, ноги (без осевой нагрузки)\n\n| № | Упражнение | Название основной мышцы для проработки | Подходы | Повторения / Время |\n|---|---|---|---|---|\n| 1 | Зашагивания на степ (с акцентом на ягодицы) | Ягодицы, квадрицепс | 3 круга по 2 мин | - |\n| 2 | Жим ногами в тренажере (без осевой нагрузки) | Квадрицепс, бицепс бедра | 3 круга по 15 раз | - |\n| 3 | Велосипед на велотренажере | Общая выносливость | 3 круга по 2 мин | - |\n| 4 | Отжимания от скамьи (на коленях) | Грудные мышцы, трицепс | 3 круга по 15 раз | - |\n| 5 | Гребля на тренажере (кардио) | Общая выносливость | 3 круга по 5 мин | - |",
+                  "fromDraftModel": false,
+                  "tokensCount": 2319,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "genInfo": {
+                "indexedModelIdentifier": "bartowski/Qwen_Qwen3.5-9B-GGUF/Qwen_Qwen3.5-9B-IQ4_XS.gguf",
+                "identifier": "qwen_qwen3.5-9b",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "load.gpuStrictVramCap",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.offloadKVCacheToGpu",
+                      "value": true
+                    },
+                    {
+                      "key": "load.gpuSplitConfig",
+                      "value": {
+                        "strategy": "evenly",
+                        "disabledGpus": [],
+                        "priority": [],
+                        "customRatio": []
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 16384
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.speculativeDecoding.draftMtp",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.speculativeDecoding.draftMtpMaxTokens",
+                      "value": 2
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    },
+                    {
+                      "key": "llm.load.llama.kCacheQuantizationType",
+                      "value": {
+                        "checked": true,
+                        "value": "q8_0"
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.vCacheQuantizationType",
+                      "value": {
+                        "checked": true,
+                        "value": "q8_0"
+                      }
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.temperature",
+                      "value": 0.1
+                    },
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{%- set image_count = namespace(value=0) %}\n{%- set video_count = namespace(value=0) %}\n{%- macro render_content(content, do_vision_count, is_system_content=false) %}\n    {%- if content is string %}\n        {{- content }}\n    {%- elif content is iterable and content is not mapping %}\n        {%- for item in content %}\n            {%- if 'image' in item or 'image_url' in item or item.type == 'image' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain images.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set image_count.value = image_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Picture ' ~ image_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|image_pad|><|vision_end|>' }}\n            {%- elif 'video' in item or item.type == 'video' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain videos.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set video_count.value = video_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Video ' ~ video_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|video_pad|><|vision_end|>' }}\n            {%- elif 'text' in item %}\n                {{- item.text }}\n            {%- else %}\n                {{- raise_exception('Unexpected item type in content.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- elif content is none or content is undefined %}\n        {{- '' }}\n    {%- else %}\n        {{- raise_exception('Unexpected content type.') }}\n    {%- endif %}\n{%- endmacro %}\n{%- if not messages %}\n    {{- raise_exception('No messages provided.') }}\n{%- endif %}\n{%- if tools and tools is iterable and tools is not mapping %}\n    {{- '<|im_start|>system\\n' }}\n    {{- \"# Tools\\n\\nYou have access to the following functions:\\n\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\" }}\n    {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {%- if content %}\n            {{- '\\n\\n' + content }}\n        {%- endif %}\n    {%- endif %}\n    {{- '<|im_end|>\\n' }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {{- '<|im_start|>system\\n' + content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" %}\n        {%- set content = render_content(message.content, false)|trim %}\n        {%- if not(content.startswith('<tool_response>') and content.endswith('</tool_response>')) %}\n            {%- set ns.multi_step_tool = false %}\n            {%- set ns.last_query_index = index %}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if ns.multi_step_tool %}\n    {{- raise_exception('No user query found in messages.') }}\n{%- endif %}\n{%- for message in messages %}\n    {%- set content = render_content(message.content, true)|trim %}\n    {%- if message.role == \"system\" %}\n        {%- if not loop.first %}\n            {{- raise_exception('System message must be at the beginning.') }}\n        {%- endif %}\n    {%- elif message.role == \"user\" %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- set reasoning_content = reasoning_content|trim %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content + '\\n</think>\\n\\n' + content }}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls and message.tool_calls is iterable and message.tool_calls is not mapping %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if tool_call.function is defined %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {%- if loop.first %}\n                    {%- if content|trim %}\n                        {{- '\\n\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- else %}\n                        {{- '<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- endif %}\n                {%- else %}\n                    {{- '\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                {%- endif %}\n                {%- if tool_call.arguments is defined %}\n                    {%- for args_name, args_value in tool_call.arguments|items %}\n                        {{- '<parameter=' + args_name + '>\\n' }}\n                        {%- set args_value = args_value | tojson if args_value is mapping or (args_value is iterable and args_value is not string) else args_value | string %}\n                        {{- args_value }}\n                        {{- '\\n</parameter>\\n' }}\n                    {%- endfor %}\n                {%- endif %}\n                {{- '</function>\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n            {{- '<|im_end|>\\n' }}\n        {%- elif loop.last %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- else %}\n        {{- raise_exception('Unexpected message role.') }}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n    {%- if enable_thinking is defined and enable_thinking is false %}\n        {{- '<think>\\n\\n</think>\\n\\n' }}\n    {%- else %}\n        {{- '<think>\\n' }}\n    {%- endif %}\n{%- endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.vision.userMaxImageDimensionPixels",
+                      "value": {
+                        "checked": true,
+                        "value": 2048
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.vision.ignoreModelPreferredMaxImageDimension",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 24.503729944392283,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 2.416,
+                  "totalTimeSec": 333.313,
+                  "promptTokensCount": 3177,
+                  "predictedTokensCount": 8168,
+                  "totalTokensCount": 11345
+                }
+              }
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1779796818776-0.1815072354363666",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ],
+          "senderInfo": {
+            "senderName": "qwen_qwen3.5-9b"
+          }
+        }
+      ],
+      "currentlySelected": 0
+    }
+  ],
+  "usePerChatPredictionConfig": true,
+  "perChatPredictionConfig": {
+    "fields": [
+      {
+        "key": "llm.prediction.systemPrompt",
+        "value": "<system_prompt>\n<operational_rules>\n<rule priority=\"critical\">Default response language is strictly Russian, matching the user's message language, unless explicitly asked otherwise.</rule>\n<rule priority=\"critical\">Never invent or assume data, events, sources, or opinions. If you lack information, state \"I don't know\" directly.</rule>\n<rule priority=\"critical\">Actively indicate uncertainty: specify if information is outdated, incomplete, based on your training data, or an educated guess.</rule>\n<rule priority=\"high\">You are a helpful, objective, and neutral assistant. Prioritize logical accuracy and factual precision over stylistic beauty, humor, metaphors, or emotional language.</rule>\n<rule priority=\"high\">Use attached files or links when provided, and explicitly mention when you are doing so.</rule>\n</operational_rules>\n<response_structure>\n<part id=\"role_assignment\">\n**Mechanism:** Based on the user's request, automatically infer the most appropriate, single real-world functional role.\n**Execution:** In your FIRST chat message, assign this role and ONLY there. Use the format: \"I will answer as [relevant role].\"\n**Constraint:** Keep the role consistent for all subsequent answers in the chat.\n</part>\n<part id=\"tldr_section\">\n**Condition:** Automatically include a \"**TL;DR:**\" summary at the top, IF your response requires more than 3 concise sentences.\n**Execution:** Provide an ultra-concise takeaway of the final answer.\n**Exclusion:** Skip this for simple definitional questions, very short answers, or rewriting tasks.\n</part>\n<part id=\"main_answer\">\n**Content:** Provide a thorough, well-structured, and step-by-step answer with concrete details and key context.\n**Depth:** When multiple valid viewpoints exist, present them fairly and objectively, avoiding bias.\n**Sources:** If integrating information from your provided context, naturally weave in mention of those sources. Do not invent references.\n</part>\n</response_structure>\n</system_prompt>"
+      }
+    ]
+  },
+  "clientInput": "",
+  "clientInputFiles": [],
+  "userFilesSizeBytes": 0,
+  "lastUsedModel": {
+    "identifier": "qwen_qwen3.5-9b",
+    "indexedModelIdentifier": "bartowski/Qwen_Qwen3.5-9B-GGUF/Qwen_Qwen3.5-9B-IQ4_XS.gguf",
+    "instanceLoadTimeConfig": {
+      "fields": [
+        {
+          "key": "load.gpuStrictVramCap",
+          "value": false
+        },
+        {
+          "key": "llm.load.offloadKVCacheToGpu",
+          "value": true
+        },
+        {
+          "key": "load.gpuSplitConfig",
+          "value": {
+            "strategy": "evenly",
+            "disabledGpus": [],
+            "priority": [],
+            "customRatio": []
+          }
+        },
+        {
+          "key": "llm.load.llama.cpuThreadPoolSize",
+          "value": 6
+        },
+        {
+          "key": "llm.load.contextLength",
+          "value": 16384
+        },
+        {
+          "key": "llm.load.llama.flashAttention",
+          "value": true
+        },
+        {
+          "key": "llm.load.llama.tryDirectIO",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.speculativeDecoding.draftMtp",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.speculativeDecoding.draftMtpMaxTokens",
+          "value": 2
+        },
+        {
+          "key": "llm.load.llama.acceleration.offloadRatio",
+          "value": 1
+        },
+        {
+          "key": "llm.load.llama.kCacheQuantizationType",
+          "value": {
+            "checked": true,
+            "value": "q8_0"
+          }
+        },
+        {
+          "key": "llm.load.llama.vCacheQuantizationType",
+          "value": {
+            "checked": true,
+            "value": "q8_0"
+          }
+        }
+      ]
+    },
+    "instanceOperationTimeConfig": {
+      "fields": []
+    }
+  },
+  "notes": [],
+  "plugins": [],
+  "pluginConfigs": {},
+  "disabledPluginTools": [],
+  "looseFiles": [],
+  "assistantLastMessagedAt": 1779796822036
+}

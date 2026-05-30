@@ -1,0 +1,475 @@
+{
+  "name": "Search lib32 packages on Arch Linux",
+  "pinned": false,
+  "createdAt": 1779893804904,
+  "preset": "@local:uni",
+  "tokenCount": 4294,
+  "userLastMessagedAt": 1779894040395,
+  "assistantLastMessagedAt": 1779894166937,
+  "systemPrompt": "",
+  "messages": [
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "как можно найти установленные пакеты начинающиеся с `lib32*` на Arch Linux?"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "qwen_qwen3.5-9b"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1779893836080-0.29407805647013796",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User Question: \"как можно найти установленные пакеты начинающиеся с `lib32*` на Arch Linux?\" (How can I find installed packages starting with `lib32*` on Arch Linux?)\n    *   Language: Russian.\n    *   System Constraints:\n        *   Default response language: Russian.\n        *   Never invent data/sources. State \"I don't know\" if lacking info.\n        *   Indicate uncertainty (outdated, incomplete, etc.).\n        *   Role assignment in the first message only.\n        *   TL;DR section if response > 3 concise sentences.\n        *   Objective, neutral, logical accuracy.\n\n2.  **Determine the Role:**\n    *   The user is asking about package management on Arch Linux.\n    *   Appropriate role: System Administrator / Linux Package Manager Expert (or similar). Let's choose \"Linux System Administrator\" or \"Arch Linux User/Expert\". Given the instruction to assign a real-world functional role, \"System Administrator\" fits well for troubleshooting/package queries. Or simply \"Technical Support Specialist\". Let's go with \"System Administrator\" as it implies managing packages.\n    *   Constraint: Assign this role ONLY in the FIRST chat message.\n\n3.  **Gather Information (Internal Knowledge):**\n    *   Arch Linux uses `pacman`.\n    *   To list installed packages, use `pacman -Q` or `pacman -Qi`.\n    *   To filter by name pattern, use `grep` or `pacman -Qq` combined with regex.\n    *   Specifically for 32-bit libraries (`lib32*`) on a 64-bit system (multiarch support), the package names usually start with `lib32`.\n    *   Command: `pacman -Q | grep '^lib32'` or `pacman -Qq | grep '^lib32'`.\n    *   There might be specific tools like `pacman-contrib` (e.g., `paccache`, but that's for cleanup).\n    *   Is there a built-in flag? No, standard filtering is via shell.\n    *   Are there any caveats? `lib32` packages are typically part of the multiarch support for running 32-bit applications on x86_64 systems. They might not be installed by default unless explicitly requested or pulled in as dependencies (though Arch doesn't pull in lib32 libs automatically usually, you install them manually).\n    *   Source verification: This is standard knowledge about `pacman` and Arch Linux package naming conventions. No external links provided by user.\n\n4.  **Draft the Response:**\n    *   **Role Assignment:** \"I will answer as System Administrator.\" (Only in first message).\n    *   **TL;DR:** Since the response will be more than 3 sentences, I need a TL;DR section at the top.\n    *   **Main Answer:**\n        *   Explain `pacman -Q` usage.\n        *   Show command with grep.\n        *   Mention `-q` flag for quiet mode (just names).\n        *   Mention checking dependencies or specific tools if relevant (e.g., `pacman-contrib`).\n        *   Note about Arch Linux specifics (multiarch support).\n\n5.  **Review Constraints:**\n    *   Language: Russian.\n    *   Role assignment in first message only? Yes, this is the first message of the chat session.\n    *   TL;DR included if > 3 sentences? Yes.\n    *   No invented data? I am confident about `pacman -Q | grep '^lib32'`.\n    *   Indicate uncertainty? Not really needed here as it's standard command usage, but I can mention that package names might vary slightly depending on the specific library version or architecture support status.\n\n6.  **Refine Content:**\n    *   Command: `pacman -Q | grep '^lib32'` (shows full info) vs `pacman -Qq | grep '^lib32'` (shows just names).\n    *   Context: Arch Linux uses x86_64 by default, but supports 32-bit libraries for compatibility.\n    *   Warning: Sometimes packages are named differently or removed if not needed.\n\n7.  **Final Polish:**\n    *   Ensure the role assignment is clear and follows the format \"I will answer as [relevant role].\"\n    *   Ensure TL;DR is at the top (after role assignment? The instruction says \"In your FIRST chat message, assign this role...\". It also says \"Automatically include a 'TL;DR:' summary at the top, IF your response requires more than 3 concise sentences.\" Usually, TL;DR comes before the main content. Role assignment is part of the first message structure. I will place Role Assignment first, then TL;DR, then Main Answer).\n    *   Wait, looking closely at `<response_structure>`:\n        *   `part id=\"role_assignment\"`: \"In your FIRST chat message, assign this role and ONLY there.\"\n        *   `part id=\"tldr_section\"`: \"Automatically include a 'TL;DR:' summary at the top...\"\n    *   So structure should be: Role -> TL;DR -> Main Answer.\n\n8.  **Constructing the Russian text:**\n    *   Role: Я буду отвечать как Системный администратор. (I will answer as System Administrator).\n    *   TL;DR: Используйте команду `pacman -Qq | grep '^lib32'` для вывода списка имен пакетов или `pacman -Q | grep '^lib32'` для подробной информации.\n    *   Main Answer: Explain the commands, explain why (multiarch), mention potential issues (dependencies).\n\n9.  **Self-Correction on Role:** The instruction says \"In your FIRST chat message...\". Since this is the first interaction, I must include it now.\n    Format: \"**I will answer as [relevant role].**\" -> In Russian context, should I translate the phrase or keep English? The rule says \"Default response language is strictly Russian\". So I should write the sentence in Russian but follow the spirit of the format. However, the instruction example shows English text inside the system prompt description (\"I will answer as [relevant role].\"). To be safe and consistent with the \"Russian\" rule, I will translate it to Russian: \"**Я буду отвечать как [роль].**\". Or should I keep the specific phrase? The rule says \"Default response language is strictly Russian... unless explicitly asked otherwise.\" So the output must be Russian.\n    Let's check the instruction again: \"In your FIRST chat message, assign this role and ONLY there. Use the format: 'I will answer as [relevant role].'\"\n    Conflict: System prompt rule says \"Default response language is strictly Russian\". The specific instruction for role assignment gives an English template. Usually, specific formatting instructions override general language rules if they are structural, but since it's a chat message, I should probably localize the sentence to maintain the Russian language constraint while keeping the semantic meaning clear.\n    Decision: I will write \"Я буду отвечать как [роль].\" to satisfy the strict Russian language rule for the response content, as translating the instruction template is safer for user experience in Russian context.\n\n    Wait, re-reading `<rule priority=\"critical\">Default response language is strictly Russian...`. This applies to the *response*. The role assignment format instruction says \"Use the format: 'I will answer as [relevant role].'\". If I write it in English, it violates the critical rule about language. If I write it in Russian, does it violate the format? Usually, localization is expected for non-English prompts. I will localize it to Russian to ensure compliance with the \"strictly Russian\" rule which has priority.\n    Actually, looking at `<rule priority=\"critical\">Default response language is strictly Russian...`. This is a high-priority constraint. The role assignment instruction is part of the system prompt structure. I will prioritize the language rule and write the sentence in Russian: \"**Я буду отвечать как Системный администратор.**\"\n\n    Wait, one more check on `<part id=\"role_assignment\">`: \"In your FIRST chat message, assign this role and ONLY there.\"\n    Okay, so this is the first message. I will put it at the very beginning.\n\n    TL;DR placement: \"at the top\". So after Role Assignment? Or before? Usually \"top\" means immediately following the intro or as the first visible content block. Given the structure `role_assignment` -> `tldr_section` -> `main_answer`, I will follow that order.\n\n    Content check:\n    Command: `pacman -Qq | grep '^lib32'` is standard.\n    Is there any other way? `pacman -Qi lib32*` won't work because it queries specific packages, not a pattern of installed ones (unless using globbing which pacman doesn't support directly for query). So piping to grep is the correct method.\n\n    Uncertainty: I should mention that this assumes standard Arch Linux installation and `lib32` naming convention hasn't changed recently in their version.\n\n10. **Final Plan:**\n    *   Header: Role Assignment (Russian).\n    *   TL;DR Section.\n    *   Main Answer with commands and explanation.\n    *   Language: Russian throughout.\n\n    Let's draft the response.\n\n    Role: Системный администратор.\n    TL;DR: Для поиска используйте `pacman -Qq | grep '^lib32'`. Это покажет только имена пакетов.\n    Main Answer: Explain `pacman`, explain filtering, mention multiarch context.\n\n    Wait, I need to make sure I don't violate the \"Never invent... sources\" rule. I am not using external links provided by user. I am using internal knowledge which is factual for Arch Linux.\n\n    One detail: The prompt asks me to act as a helpful assistant but also assign a role.\n    Okay, ready to write.\n\n    Wait, checking the `<rule priority=\"critical\">Default response language is strictly Russian...`.\n    And `<part id=\"role_assignment\">`: \"Use the format: 'I will answer as [relevant role].'\"\n    If I translate it, am I violating the format? The instruction says \"Use the format\", but the critical rule says \"Language is strictly Russian\". Usually, content language takes precedence over template text if the template is in English and the user asked in Russian. I will write: \"**Я буду отвечать как Системный администратор.**\"\n\n    Wait, looking at `<part id=\"tldr_section\">`: \"Automatically include a 'TL;DR:' summary at the top\".\n    So structure:\n    1. Role Assignment\n    2. TL;DR\n    3. Main Answer\n\n    Let's assemble.\n\n    One more thing: The instruction says \"In your FIRST chat message, assign this role and ONLY there.\" This implies I should not mention the role again later. I will ensure that.\n\n    Also, check if `lib32*` is a valid glob pattern for pacman query. `pacman -Q lib32*` might work in some versions but standard practice is piping to grep because `-Q` expects package names or arguments, not wildcards for installed list filtering reliably across all versions without regex support (which pacman doesn't have built-in). So `grep` is the robust answer.\n\n    Okay, proceeding.cw\n",
+                  "fromDraftModel": false,
+                  "tokensCount": 2489,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "prefix": "",
+              "suffix": "</think>",
+              "style": {
+                "type": "thinking",
+                "ended": true,
+                "title": "Thought for 49.98 seconds",
+                "forceRenderAsPlainText": false
+              }
+            },
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1779893886182-0.40127641317100116",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n\n**Я буду отвечать как Системный администратор.**\n\n**TL;DR:** Для поиска установленных пакетов с префиксом `lib32` используйте команду `pacman -Qq | grep '^lib32'`. Это покажет только имена пакетов. Если нужна подробная информация, замените `-q` на пустой параметр или добавьте `-i`.\n\n**Основной ответ:**\n\nНа Arch Linux управление пакетами осуществляется через утилиту `pacman`. Чтобы найти установленные пакеты, начинающиеся с префикса `lib32`, необходимо использовать комбинацию команды для вывода списка и фильтрации через стандартный инструмент оболочки.\n\nВот основные способы выполнения этой задачи:\n\n1.  **Поиск только имен пакетов (рекомендуемый вариант):**\n    Используйте флаг `-q` (quiet), чтобы выводилась только информация о пакетах, а затем примените `grep` для фильтрации по регулярному выражению.\n    ```bash\n    pacman -Qq | grep '^lib32'\n    ```\n    *   `-Q`: показывает список установленных пакетов.\n    *   `-q`: выводит только имена пакетов (без версий и других деталей).\n    *   `grep '^lib32'`: фильтрует строки, начинающиеся с `lib32`.\n\n2.  **Поиск с подробной информацией:**\n    Если вам требуется видеть версии или другие метаданные пакетов, используйте стандартный вывод без флага `-q` (или с другими параметрами).\n    ```bash\n    pacman -Q | grep '^lib32'\n    ```\n    *   В этом случае вы увидите строки вида `lib32-libc6 1.2.3-4`.\n\n**Контекст и ограничения:**\n*   **Архитектура:** Пакеты с префиксом `lib32` обычно устанавливаются на системах архитектуры x86_64 для обеспечения совместимости с 32-битными приложениями (multiarch support). На чистых 32-битных системах такие пакеты не будут присутствовать.\n*   **Зависимости:** В Arch Linux пакеты `lib32` часто устанавливаются вручную или явно требуются зависимостями, так как они не подтягиваются автоматически при установке большинства современных программ.\n*   **Актуальность:** Данная информация основана на стандартном поведении утилиты `pacman` в дистрибутиве Arch Linux. Если вы используете кастомные репозитории или модифицированные версии системы, названия пакетов могут незначительно отличаться.\n\nДля более глубокого анализа установленных пакетов также можно использовать инструменты из пакета `pacman-contrib`, например, команду `paccache` для очистки, но для простого поиска списка стандартный `grep` является наиболее надежным и быстрым методом.",
+                  "fromDraftModel": false,
+                  "tokensCount": 612,
+                  "isStructural": false
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "bartowski/Qwen_Qwen3.5-9B-GGUF/Qwen_Qwen3.5-9B-IQ4_XS.gguf",
+                "identifier": "qwen_qwen3.5-9b",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "load.gpuStrictVramCap",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.offloadKVCacheToGpu",
+                      "value": true
+                    },
+                    {
+                      "key": "load.gpuSplitConfig",
+                      "value": {
+                        "strategy": "evenly",
+                        "disabledGpus": [],
+                        "priority": [],
+                        "customRatio": []
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 16384
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.speculativeDecoding.draftMtp",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.speculativeDecoding.draftMtpMaxTokens",
+                      "value": 2
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    },
+                    {
+                      "key": "llm.load.llama.kCacheQuantizationType",
+                      "value": {
+                        "checked": true,
+                        "value": "q8_0"
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.vCacheQuantizationType",
+                      "value": {
+                        "checked": true,
+                        "value": "q8_0"
+                      }
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.temperature",
+                      "value": 0.1
+                    },
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{%- set image_count = namespace(value=0) %}\n{%- set video_count = namespace(value=0) %}\n{%- macro render_content(content, do_vision_count, is_system_content=false) %}\n    {%- if content is string %}\n        {{- content }}\n    {%- elif content is iterable and content is not mapping %}\n        {%- for item in content %}\n            {%- if 'image' in item or 'image_url' in item or item.type == 'image' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain images.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set image_count.value = image_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Picture ' ~ image_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|image_pad|><|vision_end|>' }}\n            {%- elif 'video' in item or item.type == 'video' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain videos.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set video_count.value = video_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Video ' ~ video_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|video_pad|><|vision_end|>' }}\n            {%- elif 'text' in item %}\n                {{- item.text }}\n            {%- else %}\n                {{- raise_exception('Unexpected item type in content.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- elif content is none or content is undefined %}\n        {{- '' }}\n    {%- else %}\n        {{- raise_exception('Unexpected content type.') }}\n    {%- endif %}\n{%- endmacro %}\n{%- if not messages %}\n    {{- raise_exception('No messages provided.') }}\n{%- endif %}\n{%- if tools and tools is iterable and tools is not mapping %}\n    {{- '<|im_start|>system\\n' }}\n    {{- \"# Tools\\n\\nYou have access to the following functions:\\n\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\" }}\n    {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {%- if content %}\n            {{- '\\n\\n' + content }}\n        {%- endif %}\n    {%- endif %}\n    {{- '<|im_end|>\\n' }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {{- '<|im_start|>system\\n' + content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" %}\n        {%- set content = render_content(message.content, false)|trim %}\n        {%- if not(content.startswith('<tool_response>') and content.endswith('</tool_response>')) %}\n            {%- set ns.multi_step_tool = false %}\n            {%- set ns.last_query_index = index %}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if ns.multi_step_tool %}\n    {{- raise_exception('No user query found in messages.') }}\n{%- endif %}\n{%- for message in messages %}\n    {%- set content = render_content(message.content, true)|trim %}\n    {%- if message.role == \"system\" %}\n        {%- if not loop.first %}\n            {{- raise_exception('System message must be at the beginning.') }}\n        {%- endif %}\n    {%- elif message.role == \"user\" %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- set reasoning_content = reasoning_content|trim %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content + '\\n</think>\\n\\n' + content }}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls and message.tool_calls is iterable and message.tool_calls is not mapping %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if tool_call.function is defined %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {%- if loop.first %}\n                    {%- if content|trim %}\n                        {{- '\\n\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- else %}\n                        {{- '<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- endif %}\n                {%- else %}\n                    {{- '\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                {%- endif %}\n                {%- if tool_call.arguments is defined %}\n                    {%- for args_name, args_value in tool_call.arguments|items %}\n                        {{- '<parameter=' + args_name + '>\\n' }}\n                        {%- set args_value = args_value | tojson if args_value is mapping or (args_value is iterable and args_value is not string) else args_value | string %}\n                        {{- args_value }}\n                        {{- '\\n</parameter>\\n' }}\n                    {%- endfor %}\n                {%- endif %}\n                {{- '</function>\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n            {{- '<|im_end|>\\n' }}\n        {%- elif loop.last %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- else %}\n        {{- raise_exception('Unexpected message role.') }}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n    {%- if enable_thinking is defined and enable_thinking is false %}\n        {{- '<think>\\n\\n</think>\\n\\n' }}\n    {%- else %}\n        {{- '<think>\\n' }}\n    {%- endif %}\n{%- endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.vision.userMaxImageDimensionPixels",
+                      "value": {
+                        "checked": true,
+                        "value": 2048
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.vision.ignoreModelPreferredMaxImageDimension",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 46.38661776423887,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.581,
+                  "totalTimeSec": 66.875,
+                  "promptTokensCount": 471,
+                  "predictedTokensCount": 3103,
+                  "totalTokensCount": 3574
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1779893902887-0.2952643912261069",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "а как удалить все установленные такие пакеты?"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1779894040933-0.3054355217633683",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User asks: \"а как удалить все установленные такие пакеты?\" (how to remove all installed such packages?) referring to `lib32*` packages on Arch Linux.\n    *   Language: Russian.\n    *   Role: System Administrator (as assigned in the previous turn).\n    *   Constraints: Follow operational rules (Russian language, no invented data, indicate uncertainty if needed, TL;DR for >3 sentences, structured answer).\n\n2.  **Determine the Answer:**\n    *   Command to remove packages on Arch Linux is `pacman -R` or `pacman -Rs`.\n    *   To remove multiple packages specified by a pattern (glob), one can use shell globbing with `pacman -Qq | grep '^lib32'` piped into `xargs`, or pass the list directly.\n    *   However, removing all `lib32*` packages at once requires care because some might be dependencies of other installed packages (though usually `lib32` are optional 32-bit libs). If they are orphaned or explicitly requested for removal, `-Rns` is safer to remove dependencies too.\n    *   Standard approach: Get the list first, then pass it to pacman.\n    *   Command: `pacman -Qq | grep '^lib32' | xargs pacman -Rs`. Or simply `pacman -Rs $(pacman -Qq | grep '^lib32')`.\n    *   Warning: Removing `lib32` packages might break 32-bit applications that depend on them. This is a critical warning to include as an Administrator.\n\n3.  **Draft the Response (Internal Monologue/Drafting):**\n    *   TL;DR: Use `pacman -Rs` with the list generated by grep. Warning about breaking 32-bit apps.\n    *   Main Answer: Explain the command construction. Mention safety checks (`-ns`). Warn about dependencies.\n    *   Role: System Administrator (consistent).\n    *   Language: Russian.\n\n4.  **Refine based on Rules:**\n    *   Rule: \"Default response language is strictly Russian\". OK.\n    *   Rule: \"Never invent or assume data... If you lack information, state 'I don't know' directly.\" I know this command exists in Arch Linux context.\n    *   Rule: \"Actively indicate uncertainty... outdated/incomplete\". This info is standard for Arch, but removing packages can have side effects. I should mention the risk clearly as a warning rather than uncertainty about the command itself.\n    *   Rule: \"TL;DR if >3 sentences\". Yes, this answer will be longer than 3 sentences.\n    *   Rule: \"Role assignment in FIRST message only\". Already done in previous turn (\"Я буду отвечать как Системный администратор.\"). I should maintain the persona without repeating the declaration unless necessary (the prompt says \"Keep the role consistent for all subsequent answers\", implying no need to re-declare).\n    *   Rule: \"Use attached files or links when provided\". None provided.\n\n5.  **Final Polish:**\n    *   Ensure safety warnings are prominent. Removing `lib32` packages is often done during cleanup, but it's destructive for 32-bit compatibility.\n    *   Command syntax check: `pacman -Rs <packages>`. Using a pipe to xargs might be safer than command substitution if the list is long (subshell limits), but usually fine for this count. Let's suggest both or the most robust one. `xargs` handles spaces/newlines well.\n    *   Wait, `pacman -Qq | grep '^lib32'` outputs package names. Passing them to `-Rs`.\n    *   Command: `pacman -Rs $(pacman -Qq | grep '^lib32')` or `pacman -Rs <(pacman -Qq | grep '^lib32')` (bash process substitution). Or simply piping into xargs which is safer for word splitting. Let's recommend the pipe to xargs approach as it handles special characters better, though simple command substitution works too.\n    *   Actually, `pacman -Rs` expects package names. If I use `xargs`, it passes them correctly.\n    *   Important: `-s` removes dependencies that are no longer needed (orphaned). This is usually desired when cleaning up unused libs. But if the user just wants to remove the specific ones, `-R` is enough. However, since they asked \"remove all installed such packages\", implying cleanup, `-Rs` is often better to clean up leftovers. I will mention both options or recommend `-Rns` for safety (no dependencies).\n    *   Actually, standard advice: `pacman -Rns <packages>` removes the packages and their unused dependencies. But if we just want to remove the lib32 ones specifically without touching other things unnecessarily, `-R` is safer. However, since these are likely orphaned or optional, removing them usually doesn't break much unless 32-bit apps are installed.\n    *   Let's stick to `pacman -Rs` (remove + dependencies) but warn about it. Or better: `pacman -Rns`. Wait, `-s` removes dependencies that become unused. If I remove lib32 packages, other packages might depend on them? Usually no, unless 32-bit apps are installed.\n    *   Best practice for \"remove these specific ones\": `pacman -Rs <list>`.\n    *   Let's formulate the command clearly.\n\n6.  **Constructing the Output:**\n    *   TL;DR: Use `pacman -Rs` with a list generated by grep. Warning about 32-bit apps.\n    *   Main Answer: Step-by-step commands. Safety warnings.\n\n7.  **Review against constraints:**\n    *   Russian language? Yes.\n    *   Role consistent? Yes (System Admin).\n    *   TL;DR included? Yes (>3 sentences).\n    *   No invented info? Yes, standard pacman usage.\n    *   Uncertainty indicated? Not really needed here as it's factual command syntax, but I can mention the risk of breaking 32-bit apps as a \"context\" note (which is factual warning).\n\n8.  **Final check on Role:** The system prompt says \"In your FIRST chat message, assign this role... Keep the role consistent for all subsequent answers\". Since this is the second turn, I do not need to repeat \"I will answer as System Administrator\", but I must maintain that persona (objective, technical).\n\n    *Wait*, looking at the previous turn provided by the user in the prompt history: The model already answered with \"**Я буду отвечать как Системный администратор.**\". So for this second turn, I should just continue answering without re-declaring the role explicitly unless necessary, but maintain the tone.\n\n    *Wait*, checking the system instruction again: \"In your FIRST chat message, assign this role... Keep the role consistent for all subsequent answers in the chat.\"\n    The user's first message was \"как можно найти установленные пакеты начинающиеся с `lib32*` на Arch Linux?\". I answered that. Now this is the second turn. I should not repeat the role declaration again, just answer as that role.\n\n    *Wait*, checking the system instruction regarding TL;DR: \"Automatically include a \"**TL;DR:**\" summary at the top, IF your response requires more than 3 concise sentences.\"\n    My draft has >3 sentences. So I need TL;DR.\n\n    Let's write it.\n\n    **Plan:**\n    1. TL;DR section.\n    2. Main answer with commands (`pacman -Rs` + list).\n    3. Warnings about dependencies (32-bit apps).\n    4. Mention `paccache` or similar if relevant? No, keep it focused on removal.\n\n    **Command details:**\n    To remove packages found by the previous command:\n    `pacman -Rs $(pacman -Qq | grep '^lib32')`\n    Or safer with xargs:\n    `pacman -Rs <(pacman -Qq | grep '^lib32')` (bash)\n    Or simply pipe to xargs which is robust.\n    Actually, the most standard way without process substitution issues in older shells is:\n    `pacman -Rs $(pacman -Qq | grep '^lib32' | tr '\\n' ' ')`? No, that's messy.\n    Best: `pacman -Rs <(pacman -Qq | grep '^lib32')` (if bash).\n    Or simply: `pacman -Rns $(pacman -Qq | grep '^lib32')`.\n    I will provide the command substitution method as it's most readable.\n\n    **Warning:** Removing lib32 packages might break 32-bit applications (wine, emulators, etc.). This is crucial info for a System Admin persona.\n\n    Let's draft.\n\n    **TL;DR:** Используйте `pacman -Rs` с списком пакетов, полученным через `grep`. Будьте осторожны: это может сломать работу 32-битных приложений.\n    **Main Answer:** Explain command construction. Warn about `-s` flag (dependencies). Mention checking before removal (`-Q`).\n\n    Wait, one more thing: The prompt instructions say \"Actively indicate uncertainty...\". Since this is standard knowledge for Arch Linux, I don't need to express uncertainty about the *command*, but I should be careful not to guarantee that it won't break anything (that's a risk assessment).\n    Also, check if there are any specific nuances. Sometimes `lib32` packages have dependencies on other `lib32` packages. Removing them might require removing dependencies too. `-s` handles this.\n\n    Okay, ready to write.\n\n    **Wait**, I need to make sure I don't violate the \"First chat message\" rule for role assignment. Since this is not the first message of the *session* (it's a continuation), I just continue the persona. The system instruction says \"In your FIRST chat message...\". This implies if it were a new session, I'd declare it. Here I am continuing. So no declaration needed again.\n\n    Wait, looking at the conversation history provided in the prompt:\n    User: \"как можно найти...\" -> Model: \"**Я буду отвечать как Системный администратор.**\" + Answer.\n    User: \"а как удалить...\" -> Me (Model).\n    So I am responding to the second user message.\n\n    Okay, proceeding.\n\n    **Structure:**\n    1. TL;DR\n    2. Main answer with commands and warnings.\n\n    **Content:**\n    - Command: `pacman -Rs $(pacman -Qq | grep '^lib32')`\n    - Warning about `-s`: removes dependencies that become unused. If you want to keep other packages, use `-R`. But usually for cleanup, `-Rs` is fine. I will suggest `-Rns` (remove + orphans) but warn about 32-bit apps. Actually, `pacman -Rns` removes the package and its dependencies if they are no longer needed by anything else. If a 32-bit app depends on it, it won't be removed as dependency unless we force it? No, `-s` only removes *unused* dependencies. So if I remove lib32-libc6, and wine needs it, wine will break (error). But pacman might not remove wine because wine is installed.\n    - Actually, the safest way to just delete the specific packages without worrying about dependency chains of other packages is `-R`. If you want to clean up unused dependencies too, use `-s`. I'll recommend `-Rs` for cleanup but warn.\n\n    Let's refine the warning: \"Удаление пакетов lib32 может привести к неработоспособности 32-битных приложений (например, Wine), если они установлены.\"\n\n    Okay, writing response.\n",
+                  "fromDraftModel": false,
+                  "tokensCount": 2608,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "style": {
+                "type": "thinking",
+                "ended": true,
+                "title": "Thought for 1 minutes 27 seconds",
+                "forceRenderAsPlainText": false
+              },
+              "prefix": "",
+              "suffix": "</think>"
+            },
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1779894128974-0.27105754307804664",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n\n**TL;DR:** Используйте команду `pacman -Rs` с перечнем пакетов, полученным через `grep`. Обязательно проверьте список перед удалением и учтите риск поломки 32-битного ПО.\n\n**Основной ответ:**\n\nДля удаления найденных ранее пакетов (начинающихся с `lib32`) используется флаг `-R` (remove) в сочетании со списком пакетов, который формируется динамически.\n\n1.  **Безопасное удаление (только сами пакеты):**\n    Если вы хотите удалить только пакеты, начинающиеся на `lib32`, не затрагивая их зависимости или другие установленные программы:\n    ```bash\n    pacman -R $(pacman -Qq | grep '^lib32')\n    ```\n    *   `-R`: удаляет указанные пакеты.\n    *   `$(...)`: подставляет список пакетов, найденный в предыдущей команде.\n\n2.  **Удаление с очисткой зависимостей:**\n    Если вы хотите удалить эти пакеты и автоматически очистить от них другие зависимости (если они больше не нужны):\n    ```bash\n    pacman -Rs $(pacman -Qq | grep '^lib32')\n    ```\n    *   `-s`: удаляет зависимости, которые становятся неиспользуемыми после удаления основного пакета.\n\n**Важные предупреждения и контекст:**\n\n*   **Риск для 32-битных приложений:** Пакеты `lib32` часто являются библиотеками для 32-битного программного обеспечения (например, Wine, старые игры или эмуляторы). Их удаление может привести к тому, что эти программы перестанут запускаться. Убедитесь, что у вас нет активных 32-битных приложений, требующих этих библиотек.\n*   **Проверка перед удалением:** Рекомендуется сначала вывести список пакетов и проверить его визуально перед выполнением команды удаления:\n    ```bash\n    pacman -Qq | grep '^lib32'\n    # После проверки можно выполнить удаление (например, с подтверждением)\n    pacman -Rns $(pacman -Qq | grep '^lib32')\n    ```\n*   **Флаг `-n` (dry-run):** Для предпросмотра изменений без реального удаления используйте флаг `-n`:\n    ```bash\n    pacman -Rns $(pacman -Qq | grep '^lib32') -n\n    ```\n\n**Ограничения:**\nДанная информация основана на стандартном поведении `pacman` в Arch Linux. Если вы используете кастомные репозитории или модифицированные версии системы, структура пакетов может отличаться.",
+                  "fromDraftModel": false,
+                  "tokensCount": 583,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "genInfo": {
+                "indexedModelIdentifier": "bartowski/Qwen_Qwen3.5-9B-GGUF/Qwen_Qwen3.5-9B-IQ4_XS.gguf",
+                "identifier": "qwen_qwen3.5-9b",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "load.gpuStrictVramCap",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.offloadKVCacheToGpu",
+                      "value": true
+                    },
+                    {
+                      "key": "load.gpuSplitConfig",
+                      "value": {
+                        "strategy": "evenly",
+                        "disabledGpus": [],
+                        "priority": [],
+                        "customRatio": []
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 16384
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.speculativeDecoding.draftMtp",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.speculativeDecoding.draftMtpMaxTokens",
+                      "value": 2
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    },
+                    {
+                      "key": "llm.load.llama.kCacheQuantizationType",
+                      "value": {
+                        "checked": true,
+                        "value": "q8_0"
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.vCacheQuantizationType",
+                      "value": {
+                        "checked": true,
+                        "value": "q8_0"
+                      }
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.temperature",
+                      "value": 0.1
+                    },
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{%- set image_count = namespace(value=0) %}\n{%- set video_count = namespace(value=0) %}\n{%- macro render_content(content, do_vision_count, is_system_content=false) %}\n    {%- if content is string %}\n        {{- content }}\n    {%- elif content is iterable and content is not mapping %}\n        {%- for item in content %}\n            {%- if 'image' in item or 'image_url' in item or item.type == 'image' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain images.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set image_count.value = image_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Picture ' ~ image_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|image_pad|><|vision_end|>' }}\n            {%- elif 'video' in item or item.type == 'video' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain videos.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set video_count.value = video_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Video ' ~ video_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|video_pad|><|vision_end|>' }}\n            {%- elif 'text' in item %}\n                {{- item.text }}\n            {%- else %}\n                {{- raise_exception('Unexpected item type in content.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- elif content is none or content is undefined %}\n        {{- '' }}\n    {%- else %}\n        {{- raise_exception('Unexpected content type.') }}\n    {%- endif %}\n{%- endmacro %}\n{%- if not messages %}\n    {{- raise_exception('No messages provided.') }}\n{%- endif %}\n{%- if tools and tools is iterable and tools is not mapping %}\n    {{- '<|im_start|>system\\n' }}\n    {{- \"# Tools\\n\\nYou have access to the following functions:\\n\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\" }}\n    {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {%- if content %}\n            {{- '\\n\\n' + content }}\n        {%- endif %}\n    {%- endif %}\n    {{- '<|im_end|>\\n' }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {{- '<|im_start|>system\\n' + content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" %}\n        {%- set content = render_content(message.content, false)|trim %}\n        {%- if not(content.startswith('<tool_response>') and content.endswith('</tool_response>')) %}\n            {%- set ns.multi_step_tool = false %}\n            {%- set ns.last_query_index = index %}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if ns.multi_step_tool %}\n    {{- raise_exception('No user query found in messages.') }}\n{%- endif %}\n{%- for message in messages %}\n    {%- set content = render_content(message.content, true)|trim %}\n    {%- if message.role == \"system\" %}\n        {%- if not loop.first %}\n            {{- raise_exception('System message must be at the beginning.') }}\n        {%- endif %}\n    {%- elif message.role == \"user\" %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- set reasoning_content = reasoning_content|trim %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content + '\\n</think>\\n\\n' + content }}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls and message.tool_calls is iterable and message.tool_calls is not mapping %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if tool_call.function is defined %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {%- if loop.first %}\n                    {%- if content|trim %}\n                        {{- '\\n\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- else %}\n                        {{- '<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- endif %}\n                {%- else %}\n                    {{- '\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                {%- endif %}\n                {%- if tool_call.arguments is defined %}\n                    {%- for args_name, args_value in tool_call.arguments|items %}\n                        {{- '<parameter=' + args_name + '>\\n' }}\n                        {%- set args_value = args_value | tojson if args_value is mapping or (args_value is iterable and args_value is not string) else args_value | string %}\n                        {{- args_value }}\n                        {{- '\\n</parameter>\\n' }}\n                    {%- endfor %}\n                {%- endif %}\n                {{- '</function>\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n            {{- '<|im_end|>\\n' }}\n        {%- elif loop.last %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- else %}\n        {{- raise_exception('Unexpected message role.') }}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n    {%- if enable_thinking is defined and enable_thinking is false %}\n        {{- '<think>\\n\\n</think>\\n\\n' }}\n    {%- else %}\n        {{- '<think>\\n' }}\n    {%- endif %}\n{%- endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.vision.userMaxImageDimensionPixels",
+                      "value": {
+                        "checked": true,
+                        "value": 2048
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.vision.ignoreModelPreferredMaxImageDimension",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 25.322677569645673,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.43,
+                  "totalTimeSec": 126.072,
+                  "promptTokensCount": 1102,
+                  "predictedTokensCount": 3193,
+                  "totalTokensCount": 4295
+                }
+              }
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1779894166936-0.8776526030555574",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ],
+          "senderInfo": {
+            "senderName": "qwen_qwen3.5-9b"
+          }
+        }
+      ],
+      "currentlySelected": 0
+    }
+  ],
+  "usePerChatPredictionConfig": true,
+  "perChatPredictionConfig": {
+    "fields": [
+      {
+        "key": "llm.prediction.systemPrompt",
+        "value": "<system_prompt>\n<operational_rules>\n<rule priority=\"critical\">Default response language is strictly Russian, matching the user's message language, unless explicitly asked otherwise.</rule>\n<rule priority=\"critical\">Never invent or assume data, events, sources, or opinions. If you lack information, state \"I don't know\" directly.</rule>\n<rule priority=\"critical\">Actively indicate uncertainty: specify if information is outdated, incomplete, based on your training data, or an educated guess.</rule>\n<rule priority=\"high\">You are a helpful, objective, and neutral assistant. Prioritize logical accuracy and factual precision over stylistic beauty, humor, metaphors, or emotional language.</rule>\n<rule priority=\"high\">Use attached files or links when provided, and explicitly mention when you are doing so.</rule>\n</operational_rules>\n<response_structure>\n<part id=\"role_assignment\">\n**Mechanism:** Based on the user's request, automatically infer the most appropriate, single real-world functional role.\n**Execution:** In your FIRST chat message, assign this role and ONLY there. Use the format: \"I will answer as [relevant role].\"\n**Constraint:** Keep the role consistent for all subsequent answers in the chat.\n</part>\n<part id=\"tldr_section\">\n**Condition:** Automatically include a \"**TL;DR:**\" summary at the top, IF your response requires more than 3 concise sentences.\n**Execution:** Provide an ultra-concise takeaway of the final answer.\n**Exclusion:** Skip this for simple definitional questions, very short answers, or rewriting tasks.\n</part>\n<part id=\"main_answer\">\n**Content:** Provide a thorough, well-structured, and step-by-step answer with concrete details and key context.\n**Depth:** When multiple valid viewpoints exist, present them fairly and objectively, avoiding bias.\n**Sources:** If integrating information from your provided context, naturally weave in mention of those sources. Do not invent references.\n</part>\n</response_structure>\n</system_prompt>"
+      }
+    ]
+  },
+  "clientInput": "",
+  "clientInputFiles": [],
+  "userFilesSizeBytes": 0,
+  "lastUsedModel": {
+    "identifier": "qwen_qwen3.5-9b",
+    "indexedModelIdentifier": "bartowski/Qwen_Qwen3.5-9B-GGUF/Qwen_Qwen3.5-9B-IQ4_XS.gguf",
+    "instanceLoadTimeConfig": {
+      "fields": [
+        {
+          "key": "load.gpuStrictVramCap",
+          "value": false
+        },
+        {
+          "key": "llm.load.offloadKVCacheToGpu",
+          "value": true
+        },
+        {
+          "key": "load.gpuSplitConfig",
+          "value": {
+            "strategy": "evenly",
+            "disabledGpus": [],
+            "priority": [],
+            "customRatio": []
+          }
+        },
+        {
+          "key": "llm.load.llama.cpuThreadPoolSize",
+          "value": 6
+        },
+        {
+          "key": "llm.load.contextLength",
+          "value": 16384
+        },
+        {
+          "key": "llm.load.llama.flashAttention",
+          "value": true
+        },
+        {
+          "key": "llm.load.llama.tryDirectIO",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.speculativeDecoding.draftMtp",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.speculativeDecoding.draftMtpMaxTokens",
+          "value": 2
+        },
+        {
+          "key": "llm.load.llama.acceleration.offloadRatio",
+          "value": 1
+        },
+        {
+          "key": "llm.load.llama.kCacheQuantizationType",
+          "value": {
+            "checked": true,
+            "value": "q8_0"
+          }
+        },
+        {
+          "key": "llm.load.llama.vCacheQuantizationType",
+          "value": {
+            "checked": true,
+            "value": "q8_0"
+          }
+        }
+      ]
+    },
+    "instanceOperationTimeConfig": {
+      "fields": []
+    }
+  },
+  "notes": [],
+  "plugins": [],
+  "pluginConfigs": {},
+  "disabledPluginTools": [],
+  "looseFiles": []
+}

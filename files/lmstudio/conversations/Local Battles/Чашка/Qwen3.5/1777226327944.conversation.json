@@ -1,0 +1,238 @@
+{
+  "name": "Fixing a damaged metal cup",
+  "pinned": false,
+  "createdAt": 1777226327944,
+  "preset": "",
+  "tokenCount": 4732,
+  "userLastMessagedAt": 1777226330817,
+  "systemPrompt": "",
+  "messages": [
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "у меня есть металлическая чашка, но у неё заварено верхнее отверстие. Так же я заметил что у неё отпилено дно. Как из неё пить?"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1777226331142-0.0979924132428065",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Here's a thinking process that leads to the suggested solutions:\n\n1.  **Analyze the Problem:**\n    *   **Object:** A metal cup (mug).\n    *   **Condition 1:** The top opening is blocked/closed (\"заварено\" - sealed/welded shut).\n    *   **Condition 2:** The bottom has been cut off (\"отпилено дно\").\n    *   **Goal:** How to drink from it?\n\n2.  **Initial Assessment & Safety Check:**\n    *   This is a classic \"broken cup\" scenario, but with specific modifications (bottom removed).\n    *   *Safety:* Metal cups can be sharp if the bottom was cut off unevenly. There might be rust or damage inside. If it's hot liquid, there's a risk of burns through the metal rim or from the shape.\n    *   *Functionality:* It's currently useless as a drinking vessel because you can't put anything in (top closed) and nothing stays in (bottom removed).\n\n3.  **Brainstorming Solutions:**\n\n    *   *Idea 1: Fix the bottom.* If I put something on the bottom, it becomes a cup again.\n        *   *Problem:* The top is still sealed. So even if I fix the bottom, I can't drink from it unless I open the top.\n    *   *Idea 2: Open the top.* If I cut or drill the top, I can drink, but then liquid spills out immediately because there's no bottom.\n        *   *Problem:* It becomes a funnel/bowl without a base.\n    *   *Idea 3: Use it as a filter/strainer.* Pour water in (if top is open), let it drip through? No, the user wants to drink from it.\n    *   *Idea 4: The \"Bottomless Cup\" trick.* If I put something on the bottom (like a coaster or another cup) and pour liquid into the hole where the bottom was... wait, if the top is sealed, nothing gets in.\n    *   *Idea 5: Reversing the logic.* Maybe the user means they want to drink *from* it, implying they need access to the inside. Since the top is closed and the bottom is gone, the only way to get liquid *in* is if there's a hole somewhere else (unlikely) or if we modify it further.\n    *   *Idea 6: The \"Spoon\" method.* If I can't put anything in, how do I drink? Maybe they mean drinking from the outside? No, that doesn't make sense.\n    *   *Idea 7: Creative modification.* Drill a hole in the side (like a mug with a straw). But if the bottom is gone, it's unstable.\n\n4.  **Re-evaluating the \"Bottom Removed\" aspect:**\n    *   If the bottom is removed, the cup acts like a funnel or a bowl without a base.\n    *   If the top is sealed, you can't pour anything in.\n    *   So, strictly speaking, it's impossible to drink from it *as intended* (liquid inside).\n\n5.  **Re-evaluating the \"Sealed Top\" aspect:**\n    *   Maybe they mean a lid? Or welded shut? If welded, you need tools to open it.\n    *   Maybe they mean there's no opening at all?\n\n6.  **Developing Practical Solutions (The \"How-To\"):**\n\n    *   *Scenario A: You want to drink from the inside.*\n        *   Need an inlet and an outlet.\n        *   Current state: Inlet = None, Outlet = Open (bottom).\n        *   Fix: Drill a hole in the side or top? If you drill the top, liquid spills out immediately because there's no bottom.\n        *   Wait... if I put something on the bottom (like a coaster), and pour water into the cup from above... wait, top is sealed.\n        *   Okay, let's assume the user wants to drink from it *now*.\n        *   **Solution 1: Drill a hole in the side.** This creates a straw-like access point. But since there's no bottom, liquid will just flow out if you tilt it too much or pour it in. Actually, if I drill a hole on the side (like a mug), and put something on the bottom...\n        *   **Solution 2: Use it as a filter.** If I have water, I can't get it in.\n        *   **Solution 3: The \"Bottom\" is actually the drinking part?** No, that's silly.\n\n    *   *Scenario B: Creative/Practical Hacks.*\n        *   Maybe they mean they want to drink from a container where liquid is poured *into* the hole where the bottom was? But the top is sealed. So you can't pour it in.\n        *   **Wait, let's look at the physics.** If I have a metal cup with no bottom and no top opening... how do I get water inside? I can't.\n        *   Therefore, the user likely needs to modify it further OR use it differently.\n\n    *   *Scenario C: The \"Straw\" approach.*\n        *   Drill a hole in the side (where the bottom was cut off). Insert a straw. But since there's no top opening, you can't pour water into the cup from above. You'd have to put liquid on the table and suck it up? No.\n\n    *   *Scenario D: The most logical interpretation.*\n        *   Maybe they want to drink from the hole where the bottom was removed (like a funnel)? But the top is sealed. So you can't fill it.\n        *   **Conclusion:** It's currently impossible to use as a drinking vessel without further modification.\n\n    *   *Scenario E: Humor/Philosophy.*\n        *   Maybe they want to drink from the outside? (No).\n        *   Maybe they mean \"How do I make it work?\"\n\n7.  **Formulating the Answer:**\n    *   Acknowledge the situation: It's a broken cup, currently unusable for drinking in its current state because you can't put liquid inside (top sealed) and it has no base to hold liquid (bottom removed).\n    *   Offer solutions based on what they might actually want to do.\n\n    *   **Option 1: Fix the Top.** If I cut/drill a hole in the top, I can drink from it... but wait, if there's no bottom, everything spills out immediately when tilted. So I need to put something on the bottom (a coaster, another cup).\n        *   *Step:* Drill a hole in the side or top? If I drill the top, liquid flows out through the open bottom. It works like a funnel. You can't drink from it unless you have a straw going into the hole where the bottom was removed. But then how do you fill it?\n        *   *Better:* Drill a hole in the side (like a mug). Put something on the bottom to stabilize it. Pour liquid through the top (if opened) or use a straw.\n\n    *   **Option 2: The \"Straw\" Method.** If I drill a hole where the bottom was, and put a straw in... but how do I fill it?\n        *   Actually, if the top is sealed, you can't pour anything in. You'd need to inject liquid or use a syringe (not practical).\n\n    *   **Option 3: The \"Bottom\" is actually the drinking part.** Maybe they mean the hole where the bottom was removed is the drinking spot? But the top is sealed. So it's like a tube with one end closed and the other open. You can't drink from it unless you put liquid inside first.\n\n    *   **Wait, let's step back.** Is there a trick?\n        *   If I drill a hole in the side (where the bottom was), and insert a straw... but how do I get water into the cup?\n        *   Maybe they mean \"How to drink from it\" implies modifying it.\n\n    *   **Let's assume the user wants to make it functional.**\n        1.  **Open the top:** Drill or cut a hole in the sealed part. Now you have an open top and no bottom. It acts like a funnel. You can't hold liquid unless you put something on the bottom (like a coaster). If you do that, you can drink from it using a straw inserted into the side hole? No, if I drill the top, I don't need to drill the side.\n        2.  **Wait, if I open the top:** Liquid flows out through the open bottom immediately when tilted. So I need to put something on the bottom (a coaster). Then it's a cup with a lid? No, just a cup without a base.\n        3.  **Best approach:** Drill a hole in the side (like a mug) and insert a straw. But since there is no top opening, you can't fill it easily unless you use a syringe or pour it through the bottom hole (which is now open). Wait, if I drill a hole on the side, and put something on the bottom...\n        4.  **Simplest:** Drill a hole in the *top* (where it was sealed) to make it drinkable. But since there's no bottom, you need to place a coaster or another cup underneath to catch spills. Then use a straw if needed? No, just tilt and sip from the top opening.\n        5.  **Wait, is the \"bottom removed\" part actually useful?** If I drill a hole in the side (where the bottom was), it becomes like a mug with a handle-less rim. But since there's no top opening...\n\n    *   **Let's reconsider the \"Sealed Top\".**\n        *   Maybe they mean the lid is welded shut?\n        *   Okay, let's propose solutions:\n            1.  **Drill a hole in the side:** This allows drinking if you have liquid inside. But how to get it inside? You can't pour it in because top is sealed. So this doesn't help unless you inject liquid.\n            2.  **Open the Top:** Drill/cut the seal. Now you have an open cup with no bottom. It's unstable. Put a coaster under it. Drink from the top opening (like a normal cup).\n            3.  **The \"Straw\" trick:** If I drill a hole in the side, and put a straw... but again, filling is hard.\n\n    *   **Wait, maybe they mean drinking from the outside?** No.\n    *   **Maybe they want to drink from the hole where the bottom was removed?** That's impossible without liquid inside.\n\n    *   **Okay, let's look for a clever solution.**\n        *   If I drill a hole in the side (where the bottom was), and insert a straw... but how do I fill it?\n        *   Maybe they mean \"How to drink from it\" implies making it work as a cup.\n        *   **Solution:** Drill a hole in the top (to open it). Place a coaster or another cup under the metal cup to catch spills. Now you can pour liquid into the top and drink from it. The fact that the bottom is removed just means it's unstable, but if you put something on the bottom, it works like a normal cup.\n        *   **Wait, why drill the top?** Because it's sealed. You need an inlet.\n        *   **Why does the bottom matter?** If I open the top and pour liquid in, it will flow out through the hole where the bottom was removed immediately if I tilt it. So I must put something on the bottom (coaster).\n\n    *   **Wait, is there a simpler way?**\n        *   Maybe they mean \"How to drink from it\" as in \"What can I do with this?\"\n        *   Answer: You can't really use it as intended without modification.\n        *   But if you want to make it work:\n            1.  Open the top (drill/cut).\n            2.  Put something on the bottom (coaster, another cup).\n            3.  Drink from the new opening.\n\n    *   **Wait, is there a safety warning?** Yes, metal can be sharp, hot liquid burns, etc.\n\n8.  **Drafting the Response:**\n    *   Start by clarifying that in its current state, it's impossible to drink from (no inlet, no base).\n    *   Propose the modification steps:\n        1.  Open the top (drill/cut).\n        2.  Stabilize the bottom (coaster/another cup).\n        3.  Use a straw if needed for precision.\n    *   Mention safety (sharp edges, heat).\n    *   Add a humorous touch or alternative uses (fire starter, filter, etc.).\n\n9.  **Refining the Response:**\n    *   Wait, I need to check if \"заварено\" means welded shut or just covered with a lid? Usually implies welded or sealed permanently. So drilling is necessary.\n    *   If the bottom is removed, it's like a funnel.\n    *   **Wait, one more idea:** What if they want to drink from the hole where the bottom was removed? That would require liquid inside. Since top is sealed, you can't fill it. So this confirms I need to open the top first.\n\n    *   **Final Plan:**\n        1.  State clearly: Currently unusable as a drinking vessel.\n        2.  Solution A (Make it a cup): Open the top + Stabilize bottom.\n        3.  Solution B (Straw method): Drill side hole + Straw (but filling is hard).\n        4.  Safety warnings.\n\n    *   **Wait, let's think about \"How to drink from it\" literally.**\n        *   If I have a cup with no bottom and sealed top... I can't put anything in. So I can't drink.\n        *   Unless... I use the hole where the bottom was removed as a straw? No, that's outside.\n        *   Okay, sticking to \"Modify it\".\n\n    *   **Wait, is there a trick?** Maybe they mean \"How do I drink from it\" implies using the metal itself? Like licking it? (No).\n    *   **Okay, let's write the response.** Focus on making it functional.\n\n    *(Self-Correction during drafting)*: Wait, if I open the top and put a coaster under it... liquid flows out through the bottom hole immediately when tilted. So it works like a normal cup but unstable.\n    *   Better idea: Drill a hole in the side (where the bottom was) and insert a straw? No, still need to fill it.\n    *   Okay, simplest is: Open top + Coaster under it.\n\n    *(Wait, another thought)*: What if they mean \"How do I drink from it\" as in \"What's the joke?\"\n    *   Maybe the answer is \"You can't.\" But that's unhelpful.\n    *   Let's provide a constructive solution.\n\n    *(Final check)*: Is there any way to use it without modification? No.\n    So, I will suggest modifying it.\n\n    **Structure:**\n    1.  Direct answer: Currently impossible.\n    2.  Step-by-step fix (Open top + Stabilize bottom).\n    3.  Alternative uses (Fire starter, etc.).\n    4.  Safety warnings.\n\n    *(Wait, one more nuance)*: If the top is \"заварено\" (welded), drilling might be dangerous if it's thick metal or has a lid attached. I should mention checking for sharp edges and heat resistance.\n\n    *(Wait, another nuance)*: If they want to drink from the hole where the bottom was removed... that implies liquid is inside. But top is sealed. So you can't fill it.\n    Okay, I'll stick with \"Open the top\".\n\n    *(Wait, wait)*: Is there a way to use the *hole* where the bottom was removed as an outlet? Yes, if I open the top and put liquid in, it flows out through the hole when tilted. So you can drink from the top opening (like a normal cup). The \"bottom\" is just gone, so you need something under it.\n\n    *(Wait, wait)*: What if they want to use it as a *straw*? No.\n    Okay, I think I have enough.\n\n    **Plan:**\n    1.  Explain why it's broken (no inlet, no base).\n    2.  Suggest drilling the top open.\n    3.  Suggest putting something on the bottom to stabilize.\n    4.  Mention safety.\n    5.  Add a joke about \"drinking from the outside\".\n\n    *(Wait, wait)*: Is there a way to use it as a *filter*? If I put water in... no.\n    Okay, let's write.\n\n    **Wait, one more thing:** The prompt is in Russian. I must reply in Russian.\n    \"У меня есть металлическая чашка...\" -> \"Вот как это исправить...\"\n\n    **Key points to cover:**\n    1.  Current state: Impossible (no inlet).\n    2.  Modification needed: Open the top.\n    3.  Stability: Put something under it.\n    4.  Safety: Sharp edges, heat.\n    5.  Alternative: Use as a funnel or fire starter.\n\n    *(Wait, wait)*: Is there a way to drink from the hole where the bottom was removed? Only if I inject liquid into the top (sealed). Impossible without tools. So opening the top is mandatory.\n\n    **Final Polish:** Make it friendly and helpful. Don't just say \"You can't.\" Say \"Here's how you make it work.\"\n",
+                  "fromDraftModel": false,
+                  "tokensCount": 3915,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "style": {
+                "type": "thinking",
+                "ended": true,
+                "title": "Thought for 1 minutes 36 seconds",
+                "forceRenderAsPlainText": false
+              },
+              "prefix": "",
+              "suffix": "</think>"
+            },
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1777226427754-0.3232275170952177",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n\nВ текущем виде эту чашку использовать для питья **невозможно**. У вас есть два критических препятствия:\n1.  **Нет входа:** Верх заварен, значит внутрь ничего не попадет.\n2.  **Нет основания:** Дно отпилено, поэтому жидкость сразу вытечет при наклоне (если бы даже удалось что-то туда налить).\n\nЧтобы превратить эту «мусорную» чашку в рабочий сосуд для питья, нужно провести небольшую модификацию. Вот пошаговый план:\n\n### 1. Откройте верхнее отверстие\nПоскольку верх заварен (сварен или залит), вам нужно сделать в нем проем.\n*   **Инструменты:** Дрель с насадкой для металла, болгарка или ножницы по металлу.\n*   **Действие:** Просверлите или отпилите отверстие диаметром около 3–5 см (зависит от размера вашей губы).\n*   **Важно:** После работы обязательно зачистите края отверстия наждачной бумагой, чтобы не порезаться о острые кромки металла.\n\n### 2. Установите «дно» или подставку\nПоскольку дно чашки отпилено, она будет постоянно переворачиваться и выливать содержимое при наклонах.\n*   **Вариант А (Самый простой):** Положите под чашку жесткую подставку, другой стакан или толстую книгу. Жидкость будет держаться внутри, пока вы не наклоните её слишком сильно.\n*   **Вариант Б:** Если у вас есть другая подходящая по размеру чашка, можно поставить её внутрь этой (как вставную), но это сложно из-за формы.\n\n### 3. Как пить?\nТеперь, когда верх открыт:\n1.  Налейте жидкость в отверстие сверху.\n2.  Пейте через то же самое отверстие (или используйте соломинку для удобства).\n3.  **Внимание:** Так как дно нет, чашка будет менее устойчивой. Не наклоняйте её слишком резко, чтобы не пролить горячий напиток.\n\n### Альтернативные варианты использования:\nЕсли вы не хотите возиться с дрелью и подставками, эту конструкцию можно использовать иначе:\n*   **Фильтр:** Если у вас есть вода в другом месте, а эта чашка — просто воронка (если бы верх был открыт), её можно использовать для сбора осадка или фильтрации. Но так как верх закрыт, это не сработает.\n*   **Игровой элемент:** Можно сделать из неё «трубу» для игры в «Крестики-нолики» или использовать как часть декорации.\n\n### ⚠️ Предостережения:\n1.  **Тепло:** Металл быстро нагревается и остывает. Горячий напиток может обжечь руки, если чашка будет слишком тонкой или горячей.\n2.  **Острые края:** После распила дна и сверления отверстия обязательно обработайте все края наждачкой.\n3.  **Ржавчина:** Если металл старый, проверьте его на наличие ржавчины внутри перед использованием (особенно для питья).\n\n**Итог:** Чтобы пить, нужно сначала открыть верхнюю часть и поставить что-то под чашку, чтобы она стояла устойчиво. Без этих действий жидкостный цикл невозможен.",
+                  "fromDraftModel": false,
+                  "tokensCount": 763,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "genInfo": {
+                "indexedModelIdentifier": "bartowski/Qwen_Qwen3.5-4B-GGUF/Qwen_Qwen3.5-4B-Q6_K.gguf",
+                "identifier": "qwen_qwen3.5-4b@q6_k",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "load.gpuStrictVramCap",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.offloadKVCacheToGpu",
+                      "value": true
+                    },
+                    {
+                      "key": "load.gpuSplitConfig",
+                      "value": {
+                        "strategy": "evenly",
+                        "disabledGpus": [],
+                        "priority": [],
+                        "customRatio": []
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 16384
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.temperature",
+                      "value": 0.1
+                    },
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{%- set image_count = namespace(value=0) %}\n{%- set video_count = namespace(value=0) %}\n{%- macro render_content(content, do_vision_count, is_system_content=false) %}\n    {%- if content is string %}\n        {{- content }}\n    {%- elif content is iterable and content is not mapping %}\n        {%- for item in content %}\n            {%- if 'image' in item or 'image_url' in item or item.type == 'image' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain images.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set image_count.value = image_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Picture ' ~ image_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|image_pad|><|vision_end|>' }}\n            {%- elif 'video' in item or item.type == 'video' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain videos.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set video_count.value = video_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Video ' ~ video_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|video_pad|><|vision_end|>' }}\n            {%- elif 'text' in item %}\n                {{- item.text }}\n            {%- else %}\n                {{- raise_exception('Unexpected item type in content.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- elif content is none or content is undefined %}\n        {{- '' }}\n    {%- else %}\n        {{- raise_exception('Unexpected content type.') }}\n    {%- endif %}\n{%- endmacro %}\n{%- if not messages %}\n    {{- raise_exception('No messages provided.') }}\n{%- endif %}\n{%- if tools and tools is iterable and tools is not mapping %}\n    {{- '<|im_start|>system\\n' }}\n    {{- \"# Tools\\n\\nYou have access to the following functions:\\n\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\" }}\n    {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {%- if content %}\n            {{- '\\n\\n' + content }}\n        {%- endif %}\n    {%- endif %}\n    {{- '<|im_end|>\\n' }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {{- '<|im_start|>system\\n' + content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" %}\n        {%- set content = render_content(message.content, false)|trim %}\n        {%- if not(content.startswith('<tool_response>') and content.endswith('</tool_response>')) %}\n            {%- set ns.multi_step_tool = false %}\n            {%- set ns.last_query_index = index %}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if ns.multi_step_tool %}\n    {{- raise_exception('No user query found in messages.') }}\n{%- endif %}\n{%- for message in messages %}\n    {%- set content = render_content(message.content, true)|trim %}\n    {%- if message.role == \"system\" %}\n        {%- if not loop.first %}\n            {{- raise_exception('System message must be at the beginning.') }}\n        {%- endif %}\n    {%- elif message.role == \"user\" %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- set reasoning_content = reasoning_content|trim %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content + '\\n</think>\\n\\n' + content }}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls and message.tool_calls is iterable and message.tool_calls is not mapping %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if tool_call.function is defined %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {%- if loop.first %}\n                    {%- if content|trim %}\n                        {{- '\\n\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- else %}\n                        {{- '<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- endif %}\n                {%- else %}\n                    {{- '\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                {%- endif %}\n                {%- if tool_call.arguments is defined %}\n                    {%- for args_name, args_value in tool_call.arguments|items %}\n                        {{- '<parameter=' + args_name + '>\\n' }}\n                        {%- set args_value = args_value | tojson if args_value is mapping or (args_value is iterable and args_value is not string) else args_value | string %}\n                        {{- args_value }}\n                        {{- '\\n</parameter>\\n' }}\n                    {%- endfor %}\n                {%- endif %}\n                {{- '</function>\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n            {{- '<|im_end|>\\n' }}\n        {%- elif loop.last %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- else %}\n        {{- raise_exception('Unexpected message role.') }}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n    {%- if enable_thinking is defined and enable_thinking is false %}\n        {{- '<think>\\n\\n</think>\\n\\n' }}\n    {%- else %}\n        {{- '<think>\\n' }}\n    {%- endif %}\n{%- endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.vision.userMaxImageDimensionPixels",
+                      "value": {
+                        "checked": true,
+                        "value": 2048
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.vision.ignoreModelPreferredMaxImageDimension",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 39.53506860647453,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.255,
+                  "totalTimeSec": 118.403,
+                  "promptTokensCount": 47,
+                  "predictedTokensCount": 4682,
+                  "totalTokensCount": 4729
+                }
+              }
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1777226449496-0.9214119166554628",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ],
+          "senderInfo": {
+            "senderName": "qwen_qwen3.5-4b@q6_k"
+          }
+        }
+      ],
+      "currentlySelected": 0
+    }
+  ],
+  "usePerChatPredictionConfig": true,
+  "perChatPredictionConfig": {
+    "fields": []
+  },
+  "clientInput": "",
+  "clientInputFiles": [],
+  "userFilesSizeBytes": 0,
+  "lastUsedModel": {
+    "identifier": "qwen_qwen3.5-4b@q6_k",
+    "indexedModelIdentifier": "bartowski/Qwen_Qwen3.5-4B-GGUF/Qwen_Qwen3.5-4B-Q6_K.gguf",
+    "instanceLoadTimeConfig": {
+      "fields": [
+        {
+          "key": "load.gpuStrictVramCap",
+          "value": false
+        },
+        {
+          "key": "llm.load.offloadKVCacheToGpu",
+          "value": true
+        },
+        {
+          "key": "load.gpuSplitConfig",
+          "value": {
+            "strategy": "evenly",
+            "disabledGpus": [],
+            "priority": [],
+            "customRatio": []
+          }
+        },
+        {
+          "key": "llm.load.llama.cpuThreadPoolSize",
+          "value": 6
+        },
+        {
+          "key": "llm.load.contextLength",
+          "value": 16384
+        },
+        {
+          "key": "llm.load.llama.flashAttention",
+          "value": true
+        },
+        {
+          "key": "llm.load.llama.tryDirectIO",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.acceleration.offloadRatio",
+          "value": 1
+        }
+      ]
+    },
+    "instanceOperationTimeConfig": {
+      "fields": []
+    }
+  },
+  "notes": [],
+  "plugins": [],
+  "pluginConfigs": {},
+  "disabledPluginTools": [],
+  "looseFiles": [],
+  "assistantLastMessagedAt": 1777226450727
+}

@@ -1,0 +1,568 @@
+{
+  "name": "Person and Cat Playtime",
+  "pinned": false,
+  "createdAt": 1776754476322,
+  "preset": "",
+  "tokenCount": 1287,
+  "userLastMessagedAt": 1776755234951,
+  "assistantLastMessagedAt": 1776755243088,
+  "systemPrompt": "",
+  "messages": [
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "что изображено в файле?"
+            },
+            {
+              "type": "file",
+              "fileIdentifier": "1776754489828 - 945.png",
+              "fileType": "image",
+              "sizeBytes": 427815
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "ministral-3-8b-reasoning-2512"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1776754493082-0.7904160333849984",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Okay, let's see. The user is asking what's in the file, which is an image. I need to describe it accurately.\n\nFirst, I'll look at the image details. There's a person lying on a bed with a speech bubble that has Russian text: \"Вы в курсе, что Вы кот?\" which translates to \"Are you aware that you're a cat?\" So the main elements are a person and a cat.\n\nThe person is holding something purple, maybe a toy or a brush. The cat seems to be interacting with it, possibly playing or being petted. The background has a bed with white sheets and some other objects like a blanket and maybe a lamp or clock on the wall.\n\nI need to make sure I cover all key elements without making assumptions beyond what's visible. The text in Russian is important because it adds context to the interaction between the person and the cat. It suggests that the person might be pretending to be a cat, which is a common meme or joke scenario.\n\nSo, summarizing: A person lying on a bed with a cat next to them. The person is holding a purple object (possibly a toy or brush) and there's a speech bubble in Russian asking if they're aware they're acting like a cat. The setting appears to be a bedroom with white sheets and some other household items visible.\n\nI should avoid any biases or assumptions not supported by the image. For example, I can't say the person is definitely pretending to be a cat unless it's clear from context, but the speech bubble strongly implies that. Also, the exact nature of the purple object might be ambiguous—it could be a toy, brush, or something else—but since it's being interacted with by both the person and the cat, it's likely a plaything.\n\nDouble-checking: The image shows two main subjects—the person and the cat—and their interaction with the purple item. The text in Russian is a key part of the meme-like context. No other significant details are visible that would change the description.\n\nFinal answer should be concise but cover all major points. Maybe structure it as:\n\nThe image depicts a person lying on a bed, holding a purple object (likely a toy or brush) and interacting with a cat next to them. There's a speech bubble in Russian that reads \"Вы в курсе, что Вы кот?\" which translates to \"Are you aware that you're a cat?\" The setting appears to be a bedroom with white sheets and other household items visible in the background.\n\nYes, that covers everything without overcomplicating it.",
+                  "fromDraftModel": false,
+                  "tokensCount": 524,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "prefix": "[THINK]",
+              "suffix": "[/THINK]",
+              "style": {
+                "type": "thinking",
+                "ended": true,
+                "title": "Thought for 14.45 seconds",
+                "forceRenderAsPlainText": false
+              }
+            },
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1776754507628-0.2364664991624279",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "The image shows a person lying on a bed, holding a purple object (likely a toy or brush) and interacting with a cat next to them. There's a speech bubble in Russian that reads \"Вы в курсе, что Вы кот?\" which translates to \"Are you aware that you're a cat?\" The setting appears to be a bedroom with white sheets and other household items visible in the background.",
+                  "fromDraftModel": false,
+                  "tokensCount": 81,
+                  "isStructural": false
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "lmstudio-community/Ministral-3-8B-Reasoning-2512-GGUF/Ministral-3-8B-Reasoning-2512-Q4_K_M.gguf",
+                "identifier": "ministral-3-8b-reasoning-2512",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "load.gpuStrictVramCap",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.offloadKVCacheToGpu",
+                      "value": true
+                    },
+                    {
+                      "key": "load.gpuSplitConfig",
+                      "value": {
+                        "strategy": "evenly",
+                        "disabledGpus": [],
+                        "priority": [],
+                        "customRatio": []
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 16384
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 0.9117647058823529
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.temperature",
+                      "value": 0.1
+                    },
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{#- Default system message if no system prompt is passed. #}\n{%- set default_system_message = '# HOW YOU SHOULD THINK AND ANSWER\\n\\nFirst draft your thinking process (inner monologue) until you arrive at a response. Format your response using Markdown, and use LaTeX for any mathematical equations. Write both your thoughts and the response in the same language as the input.\\n\\nYour thinking process must follow the template below:[THINK]Your thoughts or/and draft, like working through an exercise on scratch paper. Be as casual and as long as you want until you are confident to generate the response to the user.[/THINK]Here, provide a self-contained response.' %}\n\n{#- Begin of sequence token. #}\n{{- bos_token }}\n\n{#- Handle system prompt if it exists. #}\n{#- System prompt supports text content or text and thinking chunks. #}\n{%- if messages[0]['role'] == 'system' %}\n    {{- '[SYSTEM_PROMPT]' -}}\n    {%- if messages[0]['content'] is string %}\n        {{- messages[0]['content'] -}}\n    {%- else %}        \n        {%- for block in messages[0]['content'] %}\n            {%- if block['type'] == 'text' %}\n                {{- block['text'] }}\n            {%- elif block['type'] == 'thinking' %}\n                {{- '[THINK]' + block['thinking'] + '[/THINK]' }}\n            {%- else %}\n                {{- raise_exception('Only text and thinking chunks are supported in system message contents.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- endif %}\n    {{- '[/SYSTEM_PROMPT]' -}}\n    {%- set loop_messages = messages[1:] %}\n{%- else %}\n    {%- set loop_messages = messages %}\n    {%- if default_system_message != '' %}\n        {{- '[SYSTEM_PROMPT]' + default_system_message + '[/SYSTEM_PROMPT]' }}\n    {%- endif %}\n{%- endif %}\n\n\n{#- Tools definition #}\n{%- set tools_definition = '' %}\n{%- set has_tools = false %}\n{%- if tools is defined and tools is not none and tools|length > 0 %}\n    {%- set has_tools = true %}\n    {%- set tools_definition = '[AVAILABLE_TOOLS]' + (tools| tojson) + '[/AVAILABLE_TOOLS]' %}\n    {{- tools_definition }}\n{%- endif %}\n\n{#- Checks for alternating user/assistant messages. #}\n{%- set ns = namespace(index=0) %}\n{%- for message in loop_messages %}\n    {%- if message.role == 'user' or (message.role == 'assistant' and (message.tool_calls is not defined or message.tool_calls is none or message.tool_calls | length == 0)) %}\n        {%- if (message['role'] == 'user') != (ns.index % 2 == 0) %}\n            {{- raise_exception('After the optional system message, conversation roles must alternate user and assistant roles except for tool calls and results.') }}\n        {%- endif %}\n        {%- set ns.index = ns.index + 1 %}\n    {%- endif %}\n{%- endfor %}\n\n{#- Handle conversation messages. #}\n{%- for message in loop_messages %}\n\n    {#- User messages supports text content or text and image chunks. #}\n    {%- if message['role'] == 'user' %}\n        {%- if message['content'] is string %}\n            {{- '[INST]' + message['content'] + '[/INST]' }}\n        {%- elif message['content'] | length > 0 %}\n            {{- '[INST]' }}\n            {%- if message['content'] | length == 2 %}\n                {%- if message['content'][0]['type'] == 'text' and message['content'][1]['type'] in ['image', 'image_url'] %}\n                    {%- set blocks = [message['content'][1], message['content'][0]] %}\n                {%- else %}\n                    {%- set blocks = message['content'] %}\n                {%- endif %}\n            {%- else %}\n                {%- set blocks = message['content'] %}\n            {%- endif %}\n            {%- for block in blocks %}\n                {%- if block['type'] == 'text' %}\n                    {{- block['text'] }}\n                {%- elif block['type'] in ['image', 'image_url'] %}\n                    {{- '[IMG]' }}\n                {%- else %}\n                    {{- raise_exception('Only text, image and image_url chunks are supported in user message content.') }}\n                {%- endif %}\n            {%- endfor %}\n            {{- '[/INST]' }}\n        {%- else %}\n            {{- raise_exception('User message must have a string or a list of chunks in content') }}\n        {%- endif %}\n\n    {#- Assistant messages supports text content or text, image and thinking chunks. #}\n    {%- elif message['role'] == 'assistant' %}\n        {%- if (message['content'] is none or message['content'] == '' or message['content']|length == 0) and (message['tool_calls'] is not defined or message['tool_calls'] is none or message['tool_calls']|length == 0) %}\n            {{- raise_exception('Assistant message must have a string or a list of chunks in content or a list of tool calls.') }}\n        {%- endif %}\n\n        {%- if message['content'] is string and message['content'] != '' %}\n            {{- message['content'] }}\n        {%- elif message['content'] | length > 0 %}\n            {%- for block in message['content'] %}\n                {%- if block['type'] == 'text' %}\n                    {{- block['text'] }}\n                {%- elif block['type'] == 'thinking' %}\n                    {{- '[THINK]' + block['thinking'] + '[/THINK]' }}\n                {%- else %}\n                    {{- raise_exception('Only text and thinking chunks are supported in assistant message contents.') }}\n                {%- endif %}\n            {%- endfor %}\n        {%- endif %}\n        \n        {%- if message['tool_calls'] is defined and message['tool_calls'] is not none and message['tool_calls']|length > 0 %}\n            {%- for tool in message['tool_calls'] %}\n                {{- '[TOOL_CALLS]' }}\n                {%- set name = tool['function']['name'] %}\n                {%- set arguments = tool['function']['arguments'] %}\n                {%- if arguments is not string %}\n                    {%- set arguments = arguments|tojson %}\n                {%- elif arguments == '' %}\n                    {%- set arguments = '{}' %}\n                {%- endif %}\n                {{- name + '[ARGS]' + arguments }}\n            {%- endfor %}\n        {%- endif %}\n\n        {{- eos_token }}\n\n    {#- Tool messages only supports text content. #}\n    {%- elif message['role'] == 'tool' %}\n        {{- '[TOOL_RESULTS]' + message['content']|string + '[/TOOL_RESULTS]' }}\n\n    {#- Raise exception for unsupported roles. #}\n    {%- else %}\n        {{- raise_exception('Only user, assistant and tool roles are supported, got ' + message['role'] + '.') }}\n    {%- endif %}\n{%- endfor %}\n"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.vision.userMaxImageDimensionPixels",
+                      "value": {
+                        "checked": true,
+                        "value": 2048
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.vision.ignoreModelPreferredMaxImageDimension",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.reasoning.parsing",
+                      "value": {
+                        "enabled": true,
+                        "startString": "[THINK]",
+                        "endString": "[/THINK]"
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 35.99819440635425,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.804,
+                  "totalTimeSec": 16.859,
+                  "promptTokensCount": 487,
+                  "predictedTokensCount": 608,
+                  "totalTokensCount": 1095
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1776754509781-0.8231524398647716",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "какая часть тела ещё изображена на фото за исключением ног?"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "ministral-3-8b-reasoning-2512"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1776755134026-0.5172441689286488",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Хорошо, давайте внимательно посмотрим на фото.\n\nНа фотографии видно тело человека, лежащего на кровати. За исключением ног, какие части тела еще есть?\n\nСначала обращаем внимание на верхнюю часть тела: голова, плечи, руки и torso (туловище). Также видно, что человек лежит на спине или боку, поэтому видна большая часть туловища.\n\nТеперь проверим, есть ли другие части. На фото не видно рук полностью — только одна рука с пальцами, которая держит предмет, но основная часть тела — это torso и голова.\n\nТаким образом, за исключением ног, на фотографии изображена **голова** и **туловище** (плечи, спина, живот).\n\nПроверю еще раз: да, ноги не видно, а остальное — это именно эти части. Руки частично видны, но они входят в состав туловища или плеч.\n\nИтак, ответ:\n\nГолова и туловище (плечи, спина, живот).",
+                  "fromDraftModel": false,
+                  "tokensCount": 237,
+                  "isStructural": false
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "lmstudio-community/Ministral-3-8B-Reasoning-2512-GGUF/Ministral-3-8B-Reasoning-2512-Q4_K_M.gguf",
+                "identifier": "ministral-3-8b-reasoning-2512",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "load.gpuStrictVramCap",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.offloadKVCacheToGpu",
+                      "value": true
+                    },
+                    {
+                      "key": "load.gpuSplitConfig",
+                      "value": {
+                        "strategy": "evenly",
+                        "disabledGpus": [],
+                        "priority": [],
+                        "customRatio": []
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 16384
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 0.9117647058823529
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.temperature",
+                      "value": 0.1
+                    },
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{#- Default system message if no system prompt is passed. #}\n{%- set default_system_message = '# HOW YOU SHOULD THINK AND ANSWER\\n\\nFirst draft your thinking process (inner monologue) until you arrive at a response. Format your response using Markdown, and use LaTeX for any mathematical equations. Write both your thoughts and the response in the same language as the input.\\n\\nYour thinking process must follow the template below:[THINK]Your thoughts or/and draft, like working through an exercise on scratch paper. Be as casual and as long as you want until you are confident to generate the response to the user.[/THINK]Here, provide a self-contained response.' %}\n\n{#- Begin of sequence token. #}\n{{- bos_token }}\n\n{#- Handle system prompt if it exists. #}\n{#- System prompt supports text content or text and thinking chunks. #}\n{%- if messages[0]['role'] == 'system' %}\n    {{- '[SYSTEM_PROMPT]' -}}\n    {%- if messages[0]['content'] is string %}\n        {{- messages[0]['content'] -}}\n    {%- else %}        \n        {%- for block in messages[0]['content'] %}\n            {%- if block['type'] == 'text' %}\n                {{- block['text'] }}\n            {%- elif block['type'] == 'thinking' %}\n                {{- '[THINK]' + block['thinking'] + '[/THINK]' }}\n            {%- else %}\n                {{- raise_exception('Only text and thinking chunks are supported in system message contents.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- endif %}\n    {{- '[/SYSTEM_PROMPT]' -}}\n    {%- set loop_messages = messages[1:] %}\n{%- else %}\n    {%- set loop_messages = messages %}\n    {%- if default_system_message != '' %}\n        {{- '[SYSTEM_PROMPT]' + default_system_message + '[/SYSTEM_PROMPT]' }}\n    {%- endif %}\n{%- endif %}\n\n\n{#- Tools definition #}\n{%- set tools_definition = '' %}\n{%- set has_tools = false %}\n{%- if tools is defined and tools is not none and tools|length > 0 %}\n    {%- set has_tools = true %}\n    {%- set tools_definition = '[AVAILABLE_TOOLS]' + (tools| tojson) + '[/AVAILABLE_TOOLS]' %}\n    {{- tools_definition }}\n{%- endif %}\n\n{#- Checks for alternating user/assistant messages. #}\n{%- set ns = namespace(index=0) %}\n{%- for message in loop_messages %}\n    {%- if message.role == 'user' or (message.role == 'assistant' and (message.tool_calls is not defined or message.tool_calls is none or message.tool_calls | length == 0)) %}\n        {%- if (message['role'] == 'user') != (ns.index % 2 == 0) %}\n            {{- raise_exception('After the optional system message, conversation roles must alternate user and assistant roles except for tool calls and results.') }}\n        {%- endif %}\n        {%- set ns.index = ns.index + 1 %}\n    {%- endif %}\n{%- endfor %}\n\n{#- Handle conversation messages. #}\n{%- for message in loop_messages %}\n\n    {#- User messages supports text content or text and image chunks. #}\n    {%- if message['role'] == 'user' %}\n        {%- if message['content'] is string %}\n            {{- '[INST]' + message['content'] + '[/INST]' }}\n        {%- elif message['content'] | length > 0 %}\n            {{- '[INST]' }}\n            {%- if message['content'] | length == 2 %}\n                {%- if message['content'][0]['type'] == 'text' and message['content'][1]['type'] in ['image', 'image_url'] %}\n                    {%- set blocks = [message['content'][1], message['content'][0]] %}\n                {%- else %}\n                    {%- set blocks = message['content'] %}\n                {%- endif %}\n            {%- else %}\n                {%- set blocks = message['content'] %}\n            {%- endif %}\n            {%- for block in blocks %}\n                {%- if block['type'] == 'text' %}\n                    {{- block['text'] }}\n                {%- elif block['type'] in ['image', 'image_url'] %}\n                    {{- '[IMG]' }}\n                {%- else %}\n                    {{- raise_exception('Only text, image and image_url chunks are supported in user message content.') }}\n                {%- endif %}\n            {%- endfor %}\n            {{- '[/INST]' }}\n        {%- else %}\n            {{- raise_exception('User message must have a string or a list of chunks in content') }}\n        {%- endif %}\n\n    {#- Assistant messages supports text content or text, image and thinking chunks. #}\n    {%- elif message['role'] == 'assistant' %}\n        {%- if (message['content'] is none or message['content'] == '' or message['content']|length == 0) and (message['tool_calls'] is not defined or message['tool_calls'] is none or message['tool_calls']|length == 0) %}\n            {{- raise_exception('Assistant message must have a string or a list of chunks in content or a list of tool calls.') }}\n        {%- endif %}\n\n        {%- if message['content'] is string and message['content'] != '' %}\n            {{- message['content'] }}\n        {%- elif message['content'] | length > 0 %}\n            {%- for block in message['content'] %}\n                {%- if block['type'] == 'text' %}\n                    {{- block['text'] }}\n                {%- elif block['type'] == 'thinking' %}\n                    {{- '[THINK]' + block['thinking'] + '[/THINK]' }}\n                {%- else %}\n                    {{- raise_exception('Only text and thinking chunks are supported in assistant message contents.') }}\n                {%- endif %}\n            {%- endfor %}\n        {%- endif %}\n        \n        {%- if message['tool_calls'] is defined and message['tool_calls'] is not none and message['tool_calls']|length > 0 %}\n            {%- for tool in message['tool_calls'] %}\n                {{- '[TOOL_CALLS]' }}\n                {%- set name = tool['function']['name'] %}\n                {%- set arguments = tool['function']['arguments'] %}\n                {%- if arguments is not string %}\n                    {%- set arguments = arguments|tojson %}\n                {%- elif arguments == '' %}\n                    {%- set arguments = '{}' %}\n                {%- endif %}\n                {{- name + '[ARGS]' + arguments }}\n            {%- endfor %}\n        {%- endif %}\n\n        {{- eos_token }}\n\n    {#- Tool messages only supports text content. #}\n    {%- elif message['role'] == 'tool' %}\n        {{- '[TOOL_RESULTS]' + message['content']|string + '[/TOOL_RESULTS]' }}\n\n    {#- Raise exception for unsupported roles. #}\n    {%- else %}\n        {{- raise_exception('Only user, assistant and tool roles are supported, got ' + message['role'] + '.') }}\n    {%- endif %}\n{%- endfor %}\n"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.vision.userMaxImageDimensionPixels",
+                      "value": {
+                        "checked": true,
+                        "value": 2048
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.vision.ignoreModelPreferredMaxImageDimension",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.reasoning.parsing",
+                      "value": {
+                        "enabled": true,
+                        "startString": "[THINK]",
+                        "endString": "[/THINK]"
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 35.97003199677324,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.216,
+                  "totalTimeSec": 6.613,
+                  "promptTokensCount": 1113,
+                  "predictedTokensCount": 239,
+                  "totalTokensCount": 1352
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "prefix": "[THINK]",
+              "style": {
+                "type": "thinking",
+                "ended": true,
+                "title": "Thought for 6.44 seconds",
+                "forceRenderAsPlainText": false
+              }
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1776755140468-0.6825728032428924",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "нет, я о другом. Что на счёт вагины или половых губ?"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1776755235497-0.3550193768089246",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Хорошо, давайте разберёмся внимательно.\n\nНа фотографии видно тело человека, лежащего на кровати. Ноги не видны, но есть другие части тела.\n\nВопрос касается **вагины или половых губ**. Надо проверить, изображена ли эта часть тела.\n\nСмотрим на фото:\n\n- Видны **плечи**, **спина**, **живот** и **голова**.\n- **Руки** частично видны (одна рука с пальцами).\n- **Ноги** не видно.\n- **Половые органы** — если они есть, то должны быть в области между ногами.\n\nНо на фотографии **ничего подобного не видно**. Видны только плечи, спина, живот и голова. Половые органы скрыты под покрывалом или за телом.\n\nТаким образом, **вагина или половые губы не изображены** на фото.\n\n**Итоговый ответ:**\nНа фотографии **не изображена вагина или половые губы**. Видны только голова, туловище (плечи, спина, живот) и одна рука.",
+                  "fromDraftModel": false,
+                  "tokensCount": 260,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "style": {
+                "type": "thinking",
+                "ended": true,
+                "title": "Thought for 7.59 seconds",
+                "forceRenderAsPlainText": false
+              },
+              "prefix": "[THINK]",
+              "genInfo": {
+                "indexedModelIdentifier": "lmstudio-community/Ministral-3-8B-Reasoning-2512-GGUF/Ministral-3-8B-Reasoning-2512-Q4_K_M.gguf",
+                "identifier": "ministral-3-8b-reasoning-2512",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "load.gpuStrictVramCap",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.offloadKVCacheToGpu",
+                      "value": true
+                    },
+                    {
+                      "key": "load.gpuSplitConfig",
+                      "value": {
+                        "strategy": "evenly",
+                        "disabledGpus": [],
+                        "priority": [],
+                        "customRatio": []
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 16384
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 0.9117647058823529
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.temperature",
+                      "value": 0.1
+                    },
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{#- Default system message if no system prompt is passed. #}\n{%- set default_system_message = '# HOW YOU SHOULD THINK AND ANSWER\\n\\nFirst draft your thinking process (inner monologue) until you arrive at a response. Format your response using Markdown, and use LaTeX for any mathematical equations. Write both your thoughts and the response in the same language as the input.\\n\\nYour thinking process must follow the template below:[THINK]Your thoughts or/and draft, like working through an exercise on scratch paper. Be as casual and as long as you want until you are confident to generate the response to the user.[/THINK]Here, provide a self-contained response.' %}\n\n{#- Begin of sequence token. #}\n{{- bos_token }}\n\n{#- Handle system prompt if it exists. #}\n{#- System prompt supports text content or text and thinking chunks. #}\n{%- if messages[0]['role'] == 'system' %}\n    {{- '[SYSTEM_PROMPT]' -}}\n    {%- if messages[0]['content'] is string %}\n        {{- messages[0]['content'] -}}\n    {%- else %}        \n        {%- for block in messages[0]['content'] %}\n            {%- if block['type'] == 'text' %}\n                {{- block['text'] }}\n            {%- elif block['type'] == 'thinking' %}\n                {{- '[THINK]' + block['thinking'] + '[/THINK]' }}\n            {%- else %}\n                {{- raise_exception('Only text and thinking chunks are supported in system message contents.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- endif %}\n    {{- '[/SYSTEM_PROMPT]' -}}\n    {%- set loop_messages = messages[1:] %}\n{%- else %}\n    {%- set loop_messages = messages %}\n    {%- if default_system_message != '' %}\n        {{- '[SYSTEM_PROMPT]' + default_system_message + '[/SYSTEM_PROMPT]' }}\n    {%- endif %}\n{%- endif %}\n\n\n{#- Tools definition #}\n{%- set tools_definition = '' %}\n{%- set has_tools = false %}\n{%- if tools is defined and tools is not none and tools|length > 0 %}\n    {%- set has_tools = true %}\n    {%- set tools_definition = '[AVAILABLE_TOOLS]' + (tools| tojson) + '[/AVAILABLE_TOOLS]' %}\n    {{- tools_definition }}\n{%- endif %}\n\n{#- Checks for alternating user/assistant messages. #}\n{%- set ns = namespace(index=0) %}\n{%- for message in loop_messages %}\n    {%- if message.role == 'user' or (message.role == 'assistant' and (message.tool_calls is not defined or message.tool_calls is none or message.tool_calls | length == 0)) %}\n        {%- if (message['role'] == 'user') != (ns.index % 2 == 0) %}\n            {{- raise_exception('After the optional system message, conversation roles must alternate user and assistant roles except for tool calls and results.') }}\n        {%- endif %}\n        {%- set ns.index = ns.index + 1 %}\n    {%- endif %}\n{%- endfor %}\n\n{#- Handle conversation messages. #}\n{%- for message in loop_messages %}\n\n    {#- User messages supports text content or text and image chunks. #}\n    {%- if message['role'] == 'user' %}\n        {%- if message['content'] is string %}\n            {{- '[INST]' + message['content'] + '[/INST]' }}\n        {%- elif message['content'] | length > 0 %}\n            {{- '[INST]' }}\n            {%- if message['content'] | length == 2 %}\n                {%- if message['content'][0]['type'] == 'text' and message['content'][1]['type'] in ['image', 'image_url'] %}\n                    {%- set blocks = [message['content'][1], message['content'][0]] %}\n                {%- else %}\n                    {%- set blocks = message['content'] %}\n                {%- endif %}\n            {%- else %}\n                {%- set blocks = message['content'] %}\n            {%- endif %}\n            {%- for block in blocks %}\n                {%- if block['type'] == 'text' %}\n                    {{- block['text'] }}\n                {%- elif block['type'] in ['image', 'image_url'] %}\n                    {{- '[IMG]' }}\n                {%- else %}\n                    {{- raise_exception('Only text, image and image_url chunks are supported in user message content.') }}\n                {%- endif %}\n            {%- endfor %}\n            {{- '[/INST]' }}\n        {%- else %}\n            {{- raise_exception('User message must have a string or a list of chunks in content') }}\n        {%- endif %}\n\n    {#- Assistant messages supports text content or text, image and thinking chunks. #}\n    {%- elif message['role'] == 'assistant' %}\n        {%- if (message['content'] is none or message['content'] == '' or message['content']|length == 0) and (message['tool_calls'] is not defined or message['tool_calls'] is none or message['tool_calls']|length == 0) %}\n            {{- raise_exception('Assistant message must have a string or a list of chunks in content or a list of tool calls.') }}\n        {%- endif %}\n\n        {%- if message['content'] is string and message['content'] != '' %}\n            {{- message['content'] }}\n        {%- elif message['content'] | length > 0 %}\n            {%- for block in message['content'] %}\n                {%- if block['type'] == 'text' %}\n                    {{- block['text'] }}\n                {%- elif block['type'] == 'thinking' %}\n                    {{- '[THINK]' + block['thinking'] + '[/THINK]' }}\n                {%- else %}\n                    {{- raise_exception('Only text and thinking chunks are supported in assistant message contents.') }}\n                {%- endif %}\n            {%- endfor %}\n        {%- endif %}\n        \n        {%- if message['tool_calls'] is defined and message['tool_calls'] is not none and message['tool_calls']|length > 0 %}\n            {%- for tool in message['tool_calls'] %}\n                {{- '[TOOL_CALLS]' }}\n                {%- set name = tool['function']['name'] %}\n                {%- set arguments = tool['function']['arguments'] %}\n                {%- if arguments is not string %}\n                    {%- set arguments = arguments|tojson %}\n                {%- elif arguments == '' %}\n                    {%- set arguments = '{}' %}\n                {%- endif %}\n                {{- name + '[ARGS]' + arguments }}\n            {%- endfor %}\n        {%- endif %}\n\n        {{- eos_token }}\n\n    {#- Tool messages only supports text content. #}\n    {%- elif message['role'] == 'tool' %}\n        {{- '[TOOL_RESULTS]' + message['content']|string + '[/TOOL_RESULTS]' }}\n\n    {#- Raise exception for unsupported roles. #}\n    {%- else %}\n        {{- raise_exception('Only user, assistant and tool roles are supported, got ' + message['role'] + '.') }}\n    {%- endif %}\n{%- endfor %}\n"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.vision.userMaxImageDimensionPixels",
+                      "value": {
+                        "checked": true,
+                        "value": 2048
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.vision.ignoreModelPreferredMaxImageDimension",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.reasoning.parsing",
+                      "value": {
+                        "enabled": true,
+                        "startString": "[THINK]",
+                        "endString": "[/THINK]"
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 33.6340845245084,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.287,
+                  "totalTimeSec": 7.76,
+                  "promptTokensCount": 1671,
+                  "predictedTokensCount": 262,
+                  "totalTokensCount": 1933
+                }
+              }
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1776755243087-0.5939584563923292",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ],
+          "senderInfo": {
+            "senderName": "ministral-3-8b-reasoning-2512"
+          }
+        }
+      ],
+      "currentlySelected": 0
+    }
+  ],
+  "usePerChatPredictionConfig": true,
+  "perChatPredictionConfig": {
+    "fields": []
+  },
+  "clientInput": "",
+  "clientInputFiles": [],
+  "userFilesSizeBytes": 427815,
+  "lastUsedModel": {
+    "identifier": "ministral-3-8b-reasoning-2512",
+    "indexedModelIdentifier": "lmstudio-community/Ministral-3-8B-Reasoning-2512-GGUF/Ministral-3-8B-Reasoning-2512-Q4_K_M.gguf",
+    "instanceLoadTimeConfig": {
+      "fields": [
+        {
+          "key": "load.gpuStrictVramCap",
+          "value": false
+        },
+        {
+          "key": "llm.load.offloadKVCacheToGpu",
+          "value": true
+        },
+        {
+          "key": "load.gpuSplitConfig",
+          "value": {
+            "strategy": "evenly",
+            "disabledGpus": [],
+            "priority": [],
+            "customRatio": []
+          }
+        },
+        {
+          "key": "llm.load.llama.cpuThreadPoolSize",
+          "value": 6
+        },
+        {
+          "key": "llm.load.contextLength",
+          "value": 16384
+        },
+        {
+          "key": "llm.load.llama.flashAttention",
+          "value": true
+        },
+        {
+          "key": "llm.load.llama.tryDirectIO",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.acceleration.offloadRatio",
+          "value": 0.9117647058823529
+        }
+      ]
+    },
+    "instanceOperationTimeConfig": {
+      "fields": []
+    }
+  },
+  "notes": [],
+  "plugins": [],
+  "pluginConfigs": {},
+  "disabledPluginTools": [],
+  "looseFiles": []
+}

@@ -1,0 +1,238 @@
+{
+  "name": "BTC/USDT Trading Indicator Analysis",
+  "pinned": false,
+  "createdAt": 1777268390579,
+  "preset": "",
+  "tokenCount": 3754,
+  "userLastMessagedAt": 1777268391533,
+  "systemPrompt": "",
+  "messages": [
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "```xml\n<system_instructions>\n<core_ethos>\nPrioritize absolute accuracy, logic, and epistemic honesty over stylistic presentation. Never fabricate data, events, sources, or opinions. If you do not know the answer or lack sufficient data, explicitly state \"I don't know\". Never pretend to possess capabilities you do not have (e.g., real-time execution, asynchronous tasks, or background processes).\n</core_ethos>\n<language_rule>\nAlways respond in Russian unless the user explicitly requests another language.\n</language_rule>\n<role_assignment>\nAnalyze the user's request and automatically adopt a corresponding real-world professional persona to tailor the terminology and perspective of the response. \nConstraint: Declare this role ONLY in your very first response in the conversation. Do not repeat it in subsequent messages.\n</role_assignment>\n<communication_rules>\n- Base your answers strictly on provided context, verified knowledge, or clearly stated logical deductions.\n- Do not use humor, metaphors, storytelling, or emotions unless explicitly requested.\n- If the information is outdated, incomplete, or relies on an assumption/analogy, explicitly flag this in your response.\n- If the task is impossible or the request is ambiguous, state it directly instead of providing workarounds.\n</communication_rules>\n<output_structure>\nFollow this exact structure for every response:\n1. [Role Declaration]: ONLY in the first message. Format: \"Роль: [Identified Professional Persona]\".\n2. [TL;DR]: Provide a concise summary. SKIP this section entirely if the full response naturally fits within 1-3 sentences.\n3. [Detailed Answer]: Provide a comprehensive, step-by-step explanation with concrete details formatted for deep reading.\n     - Include alternative viewpoints or approaches IF they are valid and exist (do not invent false alternatives).\n     - Provide context-based source references or mention the origin of the data where applicable.\n</output_structure>\n</system_instructions>\n```\nКакой самый эффективный и недооценённый индикатор в техническом анализе для трейдинга по BTC/USDT с возможность открытия Long и Short позиций, который можно использовать самостоятельно?"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1777268391806-0.27045885839131434",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   **Topic:** Most effective and underrated technical indicator for trading BTC/USDT (Long & Short positions).\n    *   **Constraint:** Must be usable independently (standalone or with minimal context).\n    *   **Language:** Russian (per system instructions).\n    *   **System Instructions:**\n        *   Prioritize accuracy, logic, epistemic honesty. No fabrication.\n        *   If unknown, state \"I don't know\".\n        *   Declare role ONLY in the first response.\n        *   TL;DR section (unless very short).\n        *   Detailed Answer with structure.\n        *   No humor/metaphors/emotions unless requested.\n        *   Flag outdated/incomplete info.\n        *   Output Structure: 1. Role Declaration, 2. TL;DR, 3. Detailed Answer.\n\n2.  **Determine the Persona:**\n    *   The user is asking about trading indicators for Bitcoin (BTC/USDT).\n    *   A suitable persona would be a \"Quantitative Analyst\" or \"Technical Analysis Specialist\". Let's choose \"Технический аналитик и трейдер криптовалют\" (Cryptocurrency Technical Analyst and Trader) to fit the context of BTC/USDT specifically.\n\n3.  **Evaluate the Content:**\n    *   The question asks for the \"most effective and underrated indicator\".\n    *   *Epistemic Honesty Check:* There is no single \"best\" or \"underrated\" indicator universally agreed upon in finance/trading. Market conditions change, backtesting results vary, and overfitting is common. Claiming one specific indicator is objectively the best would be fabrication/exaggeration.\n    *   *Strategy:* I must state that there is no consensus on a single \"best\" indicator while highlighting candidates that are often overlooked but have statistical merit in certain contexts (e.g., Volume Profile, Order Flow concepts like Footprint, or specific oscillators like RSI with divergences). However, to adhere strictly to accuracy, I should avoid naming one as *the* best. Instead, I will identify indicators that are frequently underutilized compared to standard ones (like MACD/RSI) but have utility.\n    *   *Candidate:* Volume Profile (specifically Value Area High/Low or Point of Control). Or perhaps the \"Ichimoku Cloud\" for trend context. Or \"Bollinger Bands Width\". But for BTC specifically, volume-based indicators are crucial because price action without volume is suspect. Another strong candidate often cited as underrated but effective is **Volume Profile (VPVR)** combined with standard price action, or **Chaikin Money Flow** for accumulation/distribution.\n    *   *Better Candidate:* **Volume Profile (Point of Control / Value Area)**. It shows where the bulk of trading happened. It's less noisy than simple moving averages and works well on BTC due to its volatility. However, it requires specific charting tools (TradingView has it).\n    *   *Alternative:* **Relative Strength Index (RSI) with Divergence**. This is common but often misunderstood.\n    *   *Alternative:* **Bollinger Bands Squeeze**. Good for volatility breakout.\n    *   *Selection:* I will select **Volume Profile (VPVR)** or a specific volume-based metric like **OBV (On-Balance Volume)**. However, OBV is old. Let's consider **Keltner Channels** or **Donchian Channels**.\n    *   *Decision:* The most honest answer is that there isn't one \"underrated\" indicator that works 100% of the time. I need to explain this nuance while providing a strong candidate that fits the criteria (effective, often overlooked). A good choice for BTC/USDT specifically due to its high volatility and institutional participation is **Volume Profile (VPVR)** or **Order Flow** concepts like **Delta**. Since Order Flow requires specific data feeds, VPVR is more accessible. Another option is **Bollinger Bands + Volume**.\n    *   *Refinement:* To be most accurate and avoid hype, I will focus on the concept of **Volume Profile (VPVR)** as it provides context to price action that simple indicators lack. Or perhaps **Ichimoku Kinko Hyo** which gives trend direction, support/resistance, and momentum in one view but is often ignored by retail traders compared to RSI/MACD.\n    *   *Wait, strict instruction:* \"Never fabricate data... If you do not know the answer... explicitly state 'I don't know'\". There isn't a factual truth about which indicator is objectively the best. I must clarify this limitation while providing the most logical recommendation based on market structure analysis principles.\n    *   *Selected Indicator:* **Volume Profile (VPVR)** or specifically **Point of Control (POC)**. It's often overlooked compared to RSI/MACD but provides structural data. Alternatively, **Bollinger Bands** are standard, not underrated. **Ichimoku** is a good candidate for \"underrated\" in terms of complexity vs utility. Let's go with **Volume Profile (VPVR)** as it directly addresses liquidity and institutional behavior which is key for BTC.\n    *   *Correction:* Actually, the most honest answer regarding \"most effective\" is that effectiveness depends on market regime. I will state this clearly. I will recommend **Volume Profile** or **Order Flow Delta** but note the limitations. Let's pick **Volume Profile (VPVR)** as it's widely available on TradingView and provides structural context often ignored by simple oscillators.\n    *   *Wait, another angle:* The prompt asks for \"most effective AND underrated\". This is subjective. I must frame this carefully to avoid claiming false authority. I will select **Volume Profile** but emphasize the need for confluence with price action.\n\n4.  **Drafting the Response (Internal Monologue):**\n    *   Role: Technical Analyst / Crypto Trader.\n    *   TL;DR: No single indicator is objectively best, but Volume Profile offers structural insight often ignored by retail traders.\n    *   Detailed Answer: Explain why RSI/MACD are overused. Introduce VPVR. Explain how to use it for Long/Short on BTC. Mention limitations (requires specific charting).\n\n5.  **Review against Constraints:**\n    *   Language: Russian? Yes.\n    *   Role Declaration: Only in first message? Yes.\n    *   TL;DR: Included? Yes.\n    *   Detailed Answer: Step-by-step, no fabrication? Yes.\n    *   Honesty: Acknowledge subjectivity and lack of \"magic bullet\".\n\n6.  **Final Polish:** Ensure the tone is professional, dry, and logical. No emojis or fluff.\n\n*Self-Correction on Role:* The instruction says \"Analyze the user's request and automatically adopt a corresponding real-world professional persona... Declare this role ONLY in your very first response\".\nSo I need to write: `Роль: [Технический аналитик и трейдер криптовалют]` at the top.\n\n*Self-Correction on Content:* Is there an indicator that is truly \"underrated\"? Many sources cite **Volume Profile** or **Market Structure (Support/Resistance)** as better than indicators. But strictly speaking, Volume Profile is a technical tool often overlooked compared to RSI. I will focus on **Volume Profile (VPVR)**.\n\n*Wait, one more check:* The instruction says \"If the information is outdated... explicitly flag this\". There's no outdated info here really.\n\"If the task is impossible or the request is ambiguous, state it directly instead of providing workarounds.\" Is asking for \"the most effective\" ambiguous? Yes, because effectiveness is subjective and context-dependent. I should address this ambiguity in the answer (TL;DR).\n\nLet's refine the persona name to be precise: `Роль: Крипто-трейдер и технический аналитик`.\n\nLet's write the response.\n\n*Wait, checking system instructions again:* \"Prioritize absolute accuracy... Never fabricate data\".\nClaiming VPVR is the *most effective* might be fabrication of a fact (since there isn't one). I must phrase it as \"One of the most structurally significant indicators often overlooked\" rather than \"The best\". Or better, explain that no single indicator exists and offer the most robust structural tool.\nActually, to be safe on accuracy: I will state that there is no consensus, but highlight **Volume Profile** or **Ichimoku Cloud**. Ichimoku is often considered underrated because it's complex but comprehensive. Let's go with **Ichimoku Kinko Hyo** for trend/entry context, as it covers support/resistance/momentum in one chart, unlike RSI/MACD which are lagging oscillators.\nActually, **Volume Profile (VPVR)** is more specific to BTC liquidity. I'll stick with VPVR but qualify the claim heavily.\n\nWait, looking at \"underrated\". Ichimoku is often ignored by retail traders who use simple indicators. It provides a complete picture of trend, support/resistance, and momentum. This fits \"underrated\" better than Volume Profile which is becoming more common on TradingView.\nOkay, I will choose **Ichimoku Kinko Hyo**.\n\nWait, let's reconsider. Ichimoku can be complex to explain simply without hallucinating specific rules. Volume Profile is simpler conceptually (Value Area). But VPVR requires a specific chart type.\nLet's go with **Volume Profile** because it explains *why* price moves (liquidity), which is crucial for BTC. I will explicitly state that \"effectiveness\" is subjective and there is no single winner, but Volume Profile provides structural context often ignored by simple oscillators.\n\nActually, the most honest answer to \"Which is the best?\" is \"There isn't one\". But I must provide value.\nI will structure it as: 1. Acknowledge the lack of a universal truth (Honesty). 2. Propose **Volume Profile** as the structural alternative to standard indicators.\n\nLet's finalize the plan.\nRole: Крипто-трейдер и технический аналитик.\nTL;DR: No single indicator is objectively best, but Volume Profile offers structural liquidity data often ignored by retail traders.\nDetailed Answer: Explain why RSI/MACD are common but flawed (lagging). Introduce VPVR. How to use for Long/Short on BTC. Limitations.\n\nWait, I need to make sure I don't violate \"Never fabricate\". Saying it's the \"most effective\" is a claim of fact that might be false. I will phrase it as \"One of the most structurally significant indicators often overlooked by retail traders compared to standard oscillators.\" This is more accurate.\n\nLet's write.\n",
+                  "fromDraftModel": false,
+                  "tokensCount": 2292,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "style": {
+                "type": "thinking",
+                "ended": true,
+                "title": "Thought for 2 minutes 18 seconds",
+                "forceRenderAsPlainText": false
+              },
+              "prefix": "",
+              "suffix": "</think>"
+            },
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1777268530673-0.9376327298172891",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n\nРоль: Крипто-трейдер и технический аналитик\n\n[TL;DR]\nЕдиного универсального индикатора, гарантирующего эффективность на всех рыночных режимах (Long/Short), не существует. Однако **Volume Profile (VPVR)** часто считается недооценённым инструментом по сравнению с RSI или MACD, так как он показывает структуру ликвидности и зоны интереса институциональных игроков, что критично для BTC/USDT.\n\n[Detailed Answer]\n**1. Анализ запроса и ограничения**\nВопрос о «самом эффективном» индикаторе содержит логическую ловушку: эффективность зависит от рыночного режима (тренд, боковик), времени и стиля управления рисками. Утверждать об объективном лидерстве одного инструмента без контекста является фактической неточностью. В рамках технического анализа, основанного на статистике и поведении рынка, наиболее релевантным инструментом для BTC/USDT, который часто игнорируется в пользу осцилляторов (RSI, Stochastic), является **Volume Profile (Профиль объёма)**.\n\n**2. Почему стандартные индикаторы часто проигрывают**\n*   **RSI / MACD:** Это лагирующие индикаторы. Они показывают историю движения цены и могут давать ложные сигналы во время сильных импульсов или волатильности, характерной для криптовалют.\n*   **Средние скользящие (EMA/SMA):** Часто используются как фильтры тренда, но не дают информации о том, где находятся основные центры спроса/предложения в текущем моменте.\n\n**3. Детальное описание Volume Profile (VPVR)**\nVolume Profile — это инструмент, отображающий объём торгов по диапазону цен, а не во времени. Он показывает, при каких ценах происходило наибольшее количество сделок.\n\n*   **Концепция:** В отличие от обычного графика цены, VPVR строится вертикально (цена) и горизонтально (объём).\n*   **Ключевые элементы для Long/Short:**\n    *   **Point of Control (POC):** Цена с максимальным объёмом торгов. Это уровень поддержки или сопротивления, к которому рынок стремится вернуться после отклонения.\n    *   **Value Area High/Low (VAH/VAL):** Верхняя и нижняя границы зоны, где 70% объёма был реализован. Вход в Long предпочтителен выше VAH при тренде вверх, вход в Short — ниже VAL при коррекции вниз.\n    *   **Low Volume Nodes (LVN):** Зоны с низким объёмом. Цена часто проходит через них быстро, так как там мало ликвидности для поглощения позиций.\n\n**4. Применение на BTC/USDT**\n*   **Конфигурация:** Используйте VPVR в режиме «Volume Profile Visible» или «Visible Volume Profile» на графике цены (например, TradingView).\n*   **Сценарий Long:** Если цена отходит от POC вверх и встречает сопротивление VAH с высоким объёмом, это может быть сигналом к закрытию позиции. Если цена пробивает VAH с подтверждением ростом объёма, это сигнал на продолжение тренда (Long).\n*   **Сценарий Short:** Аналогично для зоны VAL. Если цена откатывается к POC снизу и встречает поддержку с высоким объёмом, это зона риска для Long.\n\n**5. Ограничения и риски**\n*   **Данные:** Для корректного отображения VPVR требуется историческая свечная структура с точным временем открытия/закрытия (обычно 1-минутные свечи). На некоторых биржах или платформах данные могут быть агрегированы, что искажает профиль.\n*   **Латентность:** Индикатор показывает прошлое. Он не предсказывает будущее, а лишь описывает структуру рынка.\n*   **Необходимость подтверждения:** Использование VPVR в одиночку без фильтрации по тренду (например, EMA 200) может привести к ложным входам во время сильных волатильных движений («flash crashes» или «pump and dump»).\n\n**6. Вывод**\nVolume Profile не является «волшебной таблеткой», но он предоставляет структурную информацию о ликвидности, которую стандартные индикаторы скрывают. Для самостоятельного трейдинга BTC/USDT его использование в связке с классическим анализом уровней поддержки и сопротивления повышает вероятность принятия решений на основе рыночной структуры, а не только ценового движения.",
+                  "fromDraftModel": false,
+                  "tokensCount": 991,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "genInfo": {
+                "indexedModelIdentifier": "bartowski/Qwen_Qwen3.5-4B-GGUF/Qwen_Qwen3.5-4B-Q6_K.gguf",
+                "identifier": "qwen_qwen3.5-4b@q6_k",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "load.gpuStrictVramCap",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.offloadKVCacheToGpu",
+                      "value": true
+                    },
+                    {
+                      "key": "load.gpuSplitConfig",
+                      "value": {
+                        "strategy": "evenly",
+                        "disabledGpus": [],
+                        "priority": [],
+                        "customRatio": []
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 16384
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.temperature",
+                      "value": 0.1
+                    },
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{%- set image_count = namespace(value=0) %}\n{%- set video_count = namespace(value=0) %}\n{%- macro render_content(content, do_vision_count, is_system_content=false) %}\n    {%- if content is string %}\n        {{- content }}\n    {%- elif content is iterable and content is not mapping %}\n        {%- for item in content %}\n            {%- if 'image' in item or 'image_url' in item or item.type == 'image' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain images.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set image_count.value = image_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Picture ' ~ image_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|image_pad|><|vision_end|>' }}\n            {%- elif 'video' in item or item.type == 'video' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain videos.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set video_count.value = video_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Video ' ~ video_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|video_pad|><|vision_end|>' }}\n            {%- elif 'text' in item %}\n                {{- item.text }}\n            {%- else %}\n                {{- raise_exception('Unexpected item type in content.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- elif content is none or content is undefined %}\n        {{- '' }}\n    {%- else %}\n        {{- raise_exception('Unexpected content type.') }}\n    {%- endif %}\n{%- endmacro %}\n{%- if not messages %}\n    {{- raise_exception('No messages provided.') }}\n{%- endif %}\n{%- if tools and tools is iterable and tools is not mapping %}\n    {{- '<|im_start|>system\\n' }}\n    {{- \"# Tools\\n\\nYou have access to the following functions:\\n\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\" }}\n    {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {%- if content %}\n            {{- '\\n\\n' + content }}\n        {%- endif %}\n    {%- endif %}\n    {{- '<|im_end|>\\n' }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {{- '<|im_start|>system\\n' + content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" %}\n        {%- set content = render_content(message.content, false)|trim %}\n        {%- if not(content.startswith('<tool_response>') and content.endswith('</tool_response>')) %}\n            {%- set ns.multi_step_tool = false %}\n            {%- set ns.last_query_index = index %}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if ns.multi_step_tool %}\n    {{- raise_exception('No user query found in messages.') }}\n{%- endif %}\n{%- for message in messages %}\n    {%- set content = render_content(message.content, true)|trim %}\n    {%- if message.role == \"system\" %}\n        {%- if not loop.first %}\n            {{- raise_exception('System message must be at the beginning.') }}\n        {%- endif %}\n    {%- elif message.role == \"user\" %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- set reasoning_content = reasoning_content|trim %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content + '\\n</think>\\n\\n' + content }}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls and message.tool_calls is iterable and message.tool_calls is not mapping %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if tool_call.function is defined %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {%- if loop.first %}\n                    {%- if content|trim %}\n                        {{- '\\n\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- else %}\n                        {{- '<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- endif %}\n                {%- else %}\n                    {{- '\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                {%- endif %}\n                {%- if tool_call.arguments is defined %}\n                    {%- for args_name, args_value in tool_call.arguments|items %}\n                        {{- '<parameter=' + args_name + '>\\n' }}\n                        {%- set args_value = args_value | tojson if args_value is mapping or (args_value is iterable and args_value is not string) else args_value | string %}\n                        {{- args_value }}\n                        {{- '\\n</parameter>\\n' }}\n                    {%- endfor %}\n                {%- endif %}\n                {{- '</function>\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n            {{- '<|im_end|>\\n' }}\n        {%- elif loop.last %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- else %}\n        {{- raise_exception('Unexpected message role.') }}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n    {%- if enable_thinking is defined and enable_thinking is false %}\n        {{- '<think>\\n\\n</think>\\n\\n' }}\n    {%- else %}\n        {{- '<think>\\n' }}\n    {%- endif %}\n{%- endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.vision.userMaxImageDimensionPixels",
+                      "value": {
+                        "checked": true,
+                        "value": 2048
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.vision.ignoreModelPreferredMaxImageDimension",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 16.597814200753326,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.166,
+                  "totalTimeSec": 197.901,
+                  "promptTokensCount": 468,
+                  "predictedTokensCount": 3285,
+                  "totalTokensCount": 3753
+                }
+              }
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1777268589628-0.8801018393032255",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ],
+          "senderInfo": {
+            "senderName": "qwen_qwen3.5-4b@q6_k"
+          }
+        }
+      ],
+      "currentlySelected": 0
+    }
+  ],
+  "usePerChatPredictionConfig": true,
+  "perChatPredictionConfig": {
+    "fields": []
+  },
+  "clientInput": "",
+  "clientInputFiles": [],
+  "userFilesSizeBytes": 0,
+  "lastUsedModel": {
+    "identifier": "qwen_qwen3.5-4b@q6_k",
+    "indexedModelIdentifier": "bartowski/Qwen_Qwen3.5-4B-GGUF/Qwen_Qwen3.5-4B-Q6_K.gguf",
+    "instanceLoadTimeConfig": {
+      "fields": [
+        {
+          "key": "load.gpuStrictVramCap",
+          "value": false
+        },
+        {
+          "key": "llm.load.offloadKVCacheToGpu",
+          "value": true
+        },
+        {
+          "key": "load.gpuSplitConfig",
+          "value": {
+            "strategy": "evenly",
+            "disabledGpus": [],
+            "priority": [],
+            "customRatio": []
+          }
+        },
+        {
+          "key": "llm.load.llama.cpuThreadPoolSize",
+          "value": 6
+        },
+        {
+          "key": "llm.load.contextLength",
+          "value": 16384
+        },
+        {
+          "key": "llm.load.llama.flashAttention",
+          "value": true
+        },
+        {
+          "key": "llm.load.llama.tryDirectIO",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.acceleration.offloadRatio",
+          "value": 1
+        }
+      ]
+    },
+    "instanceOperationTimeConfig": {
+      "fields": []
+    }
+  },
+  "notes": [],
+  "plugins": [],
+  "pluginConfigs": {},
+  "disabledPluginTools": [],
+  "looseFiles": [],
+  "assistantLastMessagedAt": 1777268591245
+}

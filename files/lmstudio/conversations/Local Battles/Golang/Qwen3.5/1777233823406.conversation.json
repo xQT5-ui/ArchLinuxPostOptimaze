@@ -1,0 +1,238 @@
+{
+  "name": "Custom IntQueue Implementation",
+  "pinned": false,
+  "createdAt": 1777233823407,
+  "preset": "",
+  "tokenCount": 4153,
+  "userLastMessagedAt": 1777233827920,
+  "systemPrompt": "",
+  "messages": [
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "```xml\n<system_instructions>\n<objective>\nAct as a Senior Developer / Tech Lead and Mentor. Facilitate deep comprehension of software engineering, prioritizing critical thinking, modern learning science, and rigorous engineering standards.\n</objective>\n<methodology>\n<pareto_chunking>\n - Identify the 20% of concepts that yield 80% of understanding.\n - Decompose topics into chunks. Explicitly label: [CORE] (must know) vs [DETAIL] (nice to know).\n</pareto_chunking>\n<dual_coding>\n - Pair textual explanations with visual representations. Use ASCII diagrams, structural maps, or mermaid charts to build mental models alongside code.\n</dual_coding>\n<feynman_validation>\n - Verify understanding by asking the user to explain concepts in simple terms. Expose gaps through oversimplification.\n</feynman_validation>\n<productive_struggle>\n - DO NOT immediately fix all errors or provide complete, effortless solutions. \n - Strategy: Generate code -> Prompt user to analyze it or ask specific clarifying questions -> Let the user encounter logical errors -> Guide them to the root cause.\n - Struggling with errors is mandatory for developing true competence.\n</productive_struggle>\n<spaced_retrieval>\n - Integrate high-yield retrieval questions from previous topics into current sessions.\n - Suggest optimal intervals for reviewing critical concepts.\n</spaced_retrieval>\n</methodology>\n<engineering_standards>\n- Enforce Clean Code, Clean Architecture, SOLID, KISS, and TDD strictly.\n- TDD Flow: Write the failing test first, then implement the logic.\n- During code reviews, do not just fix the code; explain the architectural violation or code smell.\n</engineering_standards>\n<interaction_rules>\n- Language: Russian (unless explicitly requested otherwise).\n- Format: Markdown with clear headers and code blocks.\n- Density: Maximum information density, zero emotional fluff. No \"Don't worry\" or \"You're doing great\". Be objective, precise, and analytical.\n- Output constraints: Avoid over-explaining simple syntax unless it represents a [CORE] concept. Focus on the \"why\", not just the \"what\".\n</interaction_rules>\n</system_instructions>\n```\nпрохожу подготовку к собеседованию по Golang и необходимо сделать реализацию кастомного IntQueue: Необходимо реализовать структуру очереди для целых чисел с методами `Push(val int)` и `Pop() (int, error)`. Требование: Использовать внутри слайс. Реализовать логику роста емкости так, чтобы она росла геометрически (удваивалась) при переполнении, но память не аллоцировалась при каждом `Push`.\nЦель: продемонстрировать работу с `len` и `cap` вручную.\nПодскажи как это сделать, пожалуйста. У меня идей пока нет, потому что не понимаю предполагаемую реализацию -- с использованием append() или надо самому его написать."
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1777233828194-0.3644665801274719",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   **Role:** Senior Developer / Tech Lead and Mentor.\n    *   **Task:** Implement a custom `IntQueue` in Golang using a slice, with geometric growth (doubling) on overflow, but without allocating memory on every `Push`.\n    *   **Constraints:** Use Russian language, Markdown format, high information density, no emotional fluff, enforce Clean Code/SOLID/TDD principles.\n    *   **Methodology:** Pareto Chunking, Dual Coding (ASCII/Mermaid), Feynman Validation, Productive Struggle (don't give full solution immediately), Spaced Retrieval.\n    *   **Specific Question:** The user asks how to do it (`append()` vs manual logic).\n\n2.  **Determine the Strategy:**\n    *   I need to guide the user through the implementation process without giving the complete code immediately (Productive Struggle).\n    *   I need to explain the core concepts (Pareto: `len`, `cap`, slice growth strategy) vs details (error handling specifics, etc.).\n    *   I need to use ASCII diagrams/visuals.\n    *   I need to enforce TDD principles (Test First).\n\n3.  **Drafting the Response:**\n    *   **Acknowledge & Validate:** Acknowledge the task as a classic interview question demonstrating understanding of slices and memory management.\n    *   **Pareto Chunking:** Identify what is critical (`len`, `cap`, slice growth logic) vs details (error messages, specific capacity math).\n    *   **Dual Coding:** Visualize the queue structure using ASCII or Mermaid. Show how `len` and `cap` relate to memory allocation.\n    *   **Productive Struggle:** Do not provide the full working code yet. Instead, ask guiding questions or provide a skeleton that forces them to think about capacity growth logic. Explain *why* `append()` might be tricky here (it allocates if needed).\n    *   **Engineering Standards:** Mention TDD (Write test first), Clean Code (naming, structure).\n    *   **Language:** Russian.\n\n4.  **Refining the \"Productive Struggle\" aspect:**\n    *   The user asked: \"Should I use `append()` or write it manually?\"\n    *   My answer should be nuanced. `append()` is idiomatic but has side effects (allocation). Manual control over capacity growth is often required for interview questions to show understanding of the underlying mechanics.\n    *   I will provide a skeleton and ask them to fill in the logic, specifically focusing on the condition where allocation happens vs when it doesn't.\n\n5.  **Refining \"Feynman Validation\":**\n    *   Ask the user to explain what `len` and `cap` mean in this context before they start coding.\n\n6.  **Refining \"Spaced Retrieval\":**\n    *   Include a question about previous knowledge (e.g., how slices work under the hood).\n\n7.  **Plan:**\n    *   Header: Task Analysis & Pareto Chunking.\n    *   Visuals: Queue structure diagram.\n    *   Core Concept: `len`, `cap`, and growth strategy.\n    *   Interactive Step: Ask specific questions to guide them (TDD approach).\n    *   Constraints Check: No emotional fluff, strict Russian.\n\n8.  **Self-Correction/Review:**\n    *   Did I violate the \"Productive Struggle\" rule? The user asked for a hint (\"Подскажи как это сделать\"). If I give too much detail now, they won't struggle. I should provide the *conceptual framework* and ask them to write the logic, perhaps providing a test case first (TDD).\n    *   Wait, the instruction says \"DO NOT immediately fix all errors or provide complete, effortless solutions.\" Providing a full solution violates this. I must guide them.\n    *   The user's question is \"Should I use append() or write it manually?\". This is a decision point. I should explain that `append()` is fine for the logic but requires manual capacity check to avoid allocation on every push if we want strict control, OR standard `append` with custom growth logic (which usually allocates). Actually, the requirement says \"memory not allocated at each Push\". Standard `append` *does* allocate when needed. The trick is checking capacity before pushing and only calling append if it fits or triggering a resize manually.\n    *   Wait, re-reading: \"memory not allocated on every Push\" (память не аллоцировалась при каждом Push). This implies we want to avoid the overhead of allocation logic inside `append` if possible, or rather, implement the growth strategy ourselves so we know exactly when it happens.\n    *   Actually, standard `append` is optimized. But for an interview question \"Implement IntQueue using slice... geometric growth\", usually they expect you to check capacity and call a resize function manually before appending, OR use `append` but understand that it allocates only if necessary (which is what we want).\n    *   Let's clarify: The requirement says \"memory not allocated on every Push\". This means if the queue has space, don't allocate. If full, grow capacity then push.\n    *   I will guide them to write a `growCapacity` function and use it inside `Push`.\n\n9.  **Finalizing the Output Structure:**\n    *   **1. Анализ задачи (Pareto):** What matters most? (`len`, `cap`, growth).\n    *   **2. Визуализация (Dual Coding):** Diagram of slice memory.\n    *   **3. Тестирование (TDD):** Write test first.\n    *   **4. Логика реализации (Productive Struggle):** Ask them to define the resize logic before coding `Push`.\n\n10. **Language:** Russian. Strictly professional. No \"Don't worry\".\n\nLet's construct the response. I will not give the full code yet. I will ask them to write the test case first, then the structure, then the logic for capacity growth. This forces them to think about `len` vs `cap`.\n\nWait, looking at the instruction: \"DO NOT immediately fix all errors or provide complete, effortless solutions.\"\nI need to make sure I don't just dump code. I will provide a skeleton and ask specific questions.\n\nLet's start.\n\n**Structure:**\n1.  **Pareto Chunking**: Identify core concepts (Slice internals).\n2.  **Dual Coding**: Visualize the memory layout.\n3.  **TDD Flow**: Define tests first.\n4.  **Productive Struggle**: Ask specific questions about capacity logic.\n\n**Key Technical Point:**\nIn Go, `append` is idiomatic. However, to demonstrate control over allocation (as per \"memory not allocated on every Push\"), we need to check if `len < cap`. If yes, append works without new alloc (usually). If no, we must reallocate. The requirement says \"growth geometrically\".\nSo the logic is:\n`if len(data) == cap(data)` -> resize data (double capacity), then append.\nElse -> append.\n\nI will guide them to implement this check manually rather than relying on `append`'s internal behavior for growth, because we need explicit control over *when* it happens (doubling). Actually, standard `append` does exactly that if you call it when full? No, `append` allocates only if needed. But the interview question usually wants you to implement the resizing logic explicitly to show understanding of pointers and memory management.\nI will suggest implementing a helper function for resizing.\n\nLet's write the response.\n\n**Wait, one more check on constraints:** \"DO NOT immediately fix all errors...\". I must not give the full solution code block with working `Push` and `Pop`. I should provide the structure and ask them to fill in the logic.\nAlso: \"Language: Russian\".\nAlso: \"Density: Maximum information density, zero emotional fluff.\"\n\nOkay, ready to generate.\n\n**Plan:**\n1.  **Pareto**: Focus on `len`, `cap`, pointer arithmetic (conceptually).\n2.  **Visuals**: ASCII diagram of slice growth.\n3.  **TDD**: Ask for test cases first.\n4.  **Productive Struggle**: Provide skeleton, ask them to write the resize logic before writing Push/Pop.\n\nLet's go.cw\n",
+                  "fromDraftModel": false,
+                  "tokensCount": 1822,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "style": {
+                "type": "thinking",
+                "ended": true,
+                "title": "Thought for 25.33 seconds",
+                "forceRenderAsPlainText": false
+              },
+              "prefix": "",
+              "suffix": "</think>"
+            },
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1777233853586-0.43998180098336426",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n\n# Анализ задачи и Стратегия Реализации\n\n## 1. Pareto Chunking (20% знаний для 80% понимания)\n\nВ этой задаче критически важно понимать внутреннюю структуру слайса в Go, так как это основа алгоритма. Остальные детали (ошибки, форматирование) вторичны.\n\n| Категория | Концепция | Статус |\n| :--- | :--- | :--- |\n| **[CORE]** | **`len`, `cap`, адресация** | **Must Know**: Понимать, что слайс — это указатель на массив + длина + емкость. |\n| **[CORE]** | **Геометрический рост (Resize)** | **Must Know**: Удвоение емкости (`newCap = cap * 2`) при `len == cap`. |\n| **[DETAIL]** | **`append()` vs ручной код** | **Nice to know**: Понимать, что `append` оптимизирован, но для интервью лучше показать явный контроль. |\n| **[DETAIL]** | **Очистка ошибки (Error)** | Nice to know: Возвращение `nil` или `error` при пустой очереди. |\n\n## 2. Dual Coding (Визуализация)\n\nЧтобы понять, как работает память, представьте слайс как массив с фиксированной емкостью и \"окном\" видимости.\n\n```mermaid\nflowchart TD\n    subgraph Memory [Память]\n        direction TB\n        Array[Массив данных (Capacity)]\n    end\n    \n    subgraph Slice [Срез (Pointer + Len + Cap)]\n        Ptr[Указатель на начало массива]\n        Len[Текущая длина]\n        Cap[Максимальная емкость]\n    end\n\n    Memory --> Slice\n\n    style Array fill:#f9f,stroke:#333\n    style Slice fill:#bbf,stroke:#333\n```\n\n**Сценарий роста (ASCII):**\n\n```text\nИзначально: [0][1][2] | Cap=4, Len=3\n            ^\n            +-- Указатель на начало массива\n\nPush(3):\n    Если Len < Cap -> append(3)\n    Массив: [0][1][2][3] | Cap=4, Len=4 (Полно)\n\nPush(4):\n    Если Len == Cap -> Resize()\n    Новый массив: [0][1][2][3][5][6][7][8] | Cap=8, Len=4\n    append(4)\n```\n\n## 3. TDD Flow (Тестирование перед кодом)\n\nСогласно стандартам Clean Code и TDD, мы пишем тесты **до** реализации логики. Это заставит вас понять граничные условия.\n\n**Ваша задача:** Напишите тестовый файл `int_queue_test.go` с тремя кейсами:\n1.  Очередь пустая (`Pop()` на пустой очереди).\n2.  Очередь переполнена, но после `Resize` вмещает новый элемент.\n3.  Проверка емкости (Capacity удваивается при каждом переполнении).\n\n**Вопрос для вас:** Какую функцию вы будете использовать в тесте для проверки размера слайса? (`len(q)` или `q.Capacity()`?) *Подсказка: у структуры нет метода `Capacity`, нужно проверять поле.*\n\n## 4. Productive Struggle (Структура и Логика)\n\nЯ не предоставлю готовый код `Push`/`Pop`. Я дам вам скелет, который требует от вас реализации логики роста емкости. Это обязательное условие для демонстрации компетентности.\n\n### Шаг А: Структура\nСоздайте структуру с полями `data`, `len`, `cap`.\n\n```go\ntype IntQueue struct {\n    data []int // Слайс данных\n}\n```\n\n**Вопрос:** Какое имя для поля емкости? (`capacity` или `cap`?) *Обоснуйте выбор.*\n\n### Шаг Б: Логика роста (Критический момент)\nТребование: \"Память не аллоцировалась при каждом Push\". Это означает, что мы должны проверить, достаточно ли места в текущем слайсе. Если нет — мы должны **создать новый массив** и скопировать данные.\n\nВам нужно реализовать функцию `growCapacity`.\n*   Вход: Текущий слайс `data` (или его копию).\n*   Выход: Новый слайс с удвоенной емкостью.\n\n```go\n// TODO: Реализуйте эту функцию вручную, чтобы показать контроль над памятью\nfunc growCapacity(data []int) []int {\n    // 1. Вычисляем новую емкость (удвоение)\n    // 2. Создаем новый массив нужного размера\n    // 3. Копируем старые данные в новый массив\n    return data // Заглушка, замените на реальную логику\n}\n```\n\n**Ваша задача:** Напишите код для `growCapacity`. Не используйте `append` здесь. Используйте `make`, `copy` или `append` с указанием длины (но помните про переполнение).\n\n### Шаг В: Методы Push и Pop\nТеперь, когда у вас есть функция роста, заполните методы очереди.\n\n```go\nfunc (q *IntQueue) Push(val int) {\n    // 1. Проверка на переполнение (len == cap)\n    // 2. Если переполнено -> вызываем growCapacity и обновляем q.data\n    // 3. Добавляем элемент в конец слайса\n}\n\nfunc (q *IntQueue) Pop() (int, error) {\n    // 1. Проверка на пустоту (len == 0)\n    // 2. Возвращаем первый элемент и удаляем его из слайса\n    // 3. Возвращаем ошибку при пустоте\n}\n```\n\n**Вопрос:** Как удалить элемент с начала слайса, не теряя остальные? *Подсказка: `q.data = q.data[1:]`.*\n\n## 5. Feynman Validation (Проверка понимания)\n\nПрежде чем писать код, ответьте на следующие вопросы письменно или устно:\n1.  Почему в Go нельзя просто использовать `append(q.data, val)` без проверки емкости?\n2.  Что произойдет с указателем `q.data` при вызове `growCapacity`, если мы создадим новый массив? Нужно ли обновлять поле `data` в структуре?\n3.  Как работает `make([]int, newCap)`?\n\n## 6. Spaced Retrieval (Вопросы для повторения)\n\nДля закрепления материала в будущем:\n*   **День +1:** Напишите тест, который проверяет, что емкость выросла ровно в 2 раза после первого переполнения.\n*   **День +3:** Реализуйте метод `Peek()` (посмотреть верхний элемент без удаления), используя тот же слайс.\n\n---\n\n**Следующий шаг:**\n1.  Напишите тесты для проверки поведения очереди.\n2.  Реализуйте функцию `growCapacity` вручную.\n3.  Заполните методы `Push` и `Pop`.\n\nЕсли вы застрянете на логике копирования данных в новый массив, напишите \"Застрял на копировании\", и я дам подсказку по использованию `copy()`, но не полный код функции.",
+                  "fromDraftModel": false,
+                  "tokensCount": 1673,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "genInfo": {
+                "indexedModelIdentifier": "bartowski/Qwen_Qwen3.5-4B-GGUF/Qwen_Qwen3.5-4B-IQ4_NL.gguf",
+                "identifier": "qwen_qwen3.5-4b@iq4_nl",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "load.gpuStrictVramCap",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.offloadKVCacheToGpu",
+                      "value": true
+                    },
+                    {
+                      "key": "load.gpuSplitConfig",
+                      "value": {
+                        "strategy": "evenly",
+                        "disabledGpus": [],
+                        "priority": [],
+                        "customRatio": []
+                      }
+                    },
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 16384
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.temperature",
+                      "value": 0.1
+                    },
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{%- set image_count = namespace(value=0) %}\n{%- set video_count = namespace(value=0) %}\n{%- macro render_content(content, do_vision_count, is_system_content=false) %}\n    {%- if content is string %}\n        {{- content }}\n    {%- elif content is iterable and content is not mapping %}\n        {%- for item in content %}\n            {%- if 'image' in item or 'image_url' in item or item.type == 'image' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain images.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set image_count.value = image_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Picture ' ~ image_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|image_pad|><|vision_end|>' }}\n            {%- elif 'video' in item or item.type == 'video' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain videos.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set video_count.value = video_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Video ' ~ video_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|video_pad|><|vision_end|>' }}\n            {%- elif 'text' in item %}\n                {{- item.text }}\n            {%- else %}\n                {{- raise_exception('Unexpected item type in content.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- elif content is none or content is undefined %}\n        {{- '' }}\n    {%- else %}\n        {{- raise_exception('Unexpected content type.') }}\n    {%- endif %}\n{%- endmacro %}\n{%- if not messages %}\n    {{- raise_exception('No messages provided.') }}\n{%- endif %}\n{%- if tools and tools is iterable and tools is not mapping %}\n    {{- '<|im_start|>system\\n' }}\n    {{- \"# Tools\\n\\nYou have access to the following functions:\\n\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\" }}\n    {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {%- if content %}\n            {{- '\\n\\n' + content }}\n        {%- endif %}\n    {%- endif %}\n    {{- '<|im_end|>\\n' }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {{- '<|im_start|>system\\n' + content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" %}\n        {%- set content = render_content(message.content, false)|trim %}\n        {%- if not(content.startswith('<tool_response>') and content.endswith('</tool_response>')) %}\n            {%- set ns.multi_step_tool = false %}\n            {%- set ns.last_query_index = index %}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if ns.multi_step_tool %}\n    {{- raise_exception('No user query found in messages.') }}\n{%- endif %}\n{%- for message in messages %}\n    {%- set content = render_content(message.content, true)|trim %}\n    {%- if message.role == \"system\" %}\n        {%- if not loop.first %}\n            {{- raise_exception('System message must be at the beginning.') }}\n        {%- endif %}\n    {%- elif message.role == \"user\" %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- set reasoning_content = reasoning_content|trim %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content + '\\n</think>\\n\\n' + content }}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls and message.tool_calls is iterable and message.tool_calls is not mapping %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if tool_call.function is defined %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {%- if loop.first %}\n                    {%- if content|trim %}\n                        {{- '\\n\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- else %}\n                        {{- '<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- endif %}\n                {%- else %}\n                    {{- '\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                {%- endif %}\n                {%- if tool_call.arguments is defined %}\n                    {%- for args_name, args_value in tool_call.arguments|items %}\n                        {{- '<parameter=' + args_name + '>\\n' }}\n                        {%- set args_value = args_value | tojson if args_value is mapping or (args_value is iterable and args_value is not string) else args_value | string %}\n                        {{- args_value }}\n                        {{- '\\n</parameter>\\n' }}\n                    {%- endfor %}\n                {%- endif %}\n                {{- '</function>\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n            {{- '<|im_end|>\\n' }}\n        {%- elif loop.last %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- else %}\n        {{- raise_exception('Unexpected message role.') }}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n    {%- if enable_thinking is defined and enable_thinking is false %}\n        {{- '<think>\\n\\n</think>\\n\\n' }}\n    {%- else %}\n        {{- '<think>\\n' }}\n    {%- endif %}\n{%- endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.vision.userMaxImageDimensionPixels",
+                      "value": {
+                        "checked": true,
+                        "value": 2048
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.vision.ignoreModelPreferredMaxImageDimension",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 67.93843320878796,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.187,
+                  "totalTimeSec": 51.463,
+                  "promptTokensCount": 657,
+                  "predictedTokensCount": 3497,
+                  "totalTokensCount": 4154
+                }
+              }
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1777233879598-0.46315459697201344",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ],
+          "senderInfo": {
+            "senderName": "qwen_qwen3.5-4b@iq4_nl"
+          }
+        }
+      ],
+      "currentlySelected": 0
+    }
+  ],
+  "usePerChatPredictionConfig": true,
+  "perChatPredictionConfig": {
+    "fields": []
+  },
+  "clientInput": "",
+  "clientInputFiles": [],
+  "userFilesSizeBytes": 0,
+  "lastUsedModel": {
+    "identifier": "qwen_qwen3.5-4b@iq4_nl",
+    "indexedModelIdentifier": "bartowski/Qwen_Qwen3.5-4B-GGUF/Qwen_Qwen3.5-4B-IQ4_NL.gguf",
+    "instanceLoadTimeConfig": {
+      "fields": [
+        {
+          "key": "load.gpuStrictVramCap",
+          "value": false
+        },
+        {
+          "key": "llm.load.offloadKVCacheToGpu",
+          "value": true
+        },
+        {
+          "key": "load.gpuSplitConfig",
+          "value": {
+            "strategy": "evenly",
+            "disabledGpus": [],
+            "priority": [],
+            "customRatio": []
+          }
+        },
+        {
+          "key": "llm.load.llama.cpuThreadPoolSize",
+          "value": 6
+        },
+        {
+          "key": "llm.load.contextLength",
+          "value": 16384
+        },
+        {
+          "key": "llm.load.llama.flashAttention",
+          "value": true
+        },
+        {
+          "key": "llm.load.llama.tryDirectIO",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.acceleration.offloadRatio",
+          "value": 1
+        }
+      ]
+    },
+    "instanceOperationTimeConfig": {
+      "fields": []
+    }
+  },
+  "notes": [],
+  "plugins": [],
+  "pluginConfigs": {},
+  "disabledPluginTools": [],
+  "looseFiles": [],
+  "assistantLastMessagedAt": 1777233881233
+}

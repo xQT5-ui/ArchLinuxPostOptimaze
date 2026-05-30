@@ -17,253 +17,132 @@ RESET="\e[0m"
 
 # Функция для вывода информационных сообщений
 log_message() {
-   echo -e "${BLUE}[INFO] $1${RESET}"
+    echo -e "${BLUE}[INFO] $1${RESET}"
 }
 
 # Функция для вывода сообщений об ошибках
 log_error() {
-   echo -e "${RED}[ERROR] $1${RESET}" >&2
+    echo -e "${RED}[ERROR] $1${RESET}" >&2
 }
 
 # Функция для вывода сообщений об успешном выполнении
 log_success() {
-   echo -e "${GREEN}[SUCCESS] $1${RESET}"
+    echo -e "${GREEN}[SUCCESS] $1${RESET}"
 }
 
 # Функция для проверки успешности выполнения команды
 check_success() {
-   if [ $? -ne 0 ]; then
-      log_error "Error during execution: $1"
-      exit 1
-   fi
+    if [ $? -ne 0 ]; then
+        log_error "Error during execution: $1"
+        exit 1
+    fi
 }
 
-# 1. # Функция для настройки PipeWire
+# Функция для настройки Pipewire
 configure_pipewire() {
-   log_message "Setting up and enabling PipeWire..."
+    log_message "Setting up and enabling Pipewire..."
 
-   # Включение служб PipeWire
-   systemctl --user enable --now pipewire pipewire.socket pipewire-pulse wireplumber
-   check_success "enabling PipeWire"
+    # Включение служб Pipewire
+    systemctl --user enable --now pipewire pipewire.socket pipewire-pulse wireplumber
+    check_success "enabling Pipewire"
 
-   # Создание директорий для конфигурации
-   mkdir -p ~/.config/pipewire/pipewire.conf.d ~/.config/pipewire/pipewire-pulse.conf.d ~/.config/pipewire/client.conf.d
-   check_success "creating directories for PipeWire configuration"
+    # Создание директорий для конфигурации
+    mkdir -p ~/.config/pipewire/pipewire.conf.d ~/.config/pipewire/pipewire-pulse.conf.d ~/.config/pipewire/client.conf.d
+    check_success "creating directories for Pipewire configuration"
 
-   # Создание конфигурационного файла для звука
-   cat << EOF > ~/.config/pipewire/pipewire.conf.d/10-sound.conf
-context.properties = {
-    default.clock.rate = 48000
-    default.clock.quantum = 512
-    default.clock.min-quantum = 32
-    default.clock.max-quantum = 2048
-    default.clock.allowed-rates = [ 44100 48000 88200 96000 176400 192000 ]
-    default.clock.power-of-two-quantum = true
-    support.node.latency = true
+    # Создание конфигурационного файла для звука
+    cp -f ./files/pipewire/10-sound.conf ~/.config/pipewire/pipewire.conf.d
+    check_success "creating a configuration file for audio"
+
+    # Копирование дополнительных конфигурационных файлов
+    cp /usr/share/pipewire/client.conf.avail/20-upmix.conf ~/.config/pipewire/pipewire-pulse.conf.d
+    check_success "copying the upmix configuration for pipewire-pulse"
+
+    cp /usr/share/pipewire/client.conf.avail/20-upmix.conf ~/.config/pipewire/client.conf.d
+    check_success "copying the upmix configuration for client-rt"
+
+    log_success "Pipewire has been successfully configured"
 }
 
-stream.properties = {
-    node.latency = 512/48000
-    node.autoconnect = true
-    resample.quality = 14
-}
-EOF
-   check_success "creating a configuration file for audio"
-
-   # Копирование дополнительных конфигурационных файлов
-   cp /usr/share/pipewire/client.conf.avail/20-upmix.conf ~/.config/pipewire/pipewire-pulse.conf.d
-   check_success "copying the upmix configuration for pipewire-pulse"
-
-   cp /usr/share/pipewire/client.conf.avail/20-upmix.conf ~/.config/pipewire/client.conf.d
-   check_success "copying the upmix configuration for client-rt"
-
-   log_success "PipeWire has been successfully configured"
-}
-
-# 2. Функция для оптимизации GNOME
+# Функция для оптимизации GNOME
 optimize_gnome() {
-   log_message "GNOME optimization..."
+    log_message "GNOME optimization..."
 
-   # Маскирование ненужных служб GNOME
-   log_message "Masking unnecessary GNOME services..."
+    # Маскирование ненужных служб GNOME
+    log_message "Masking unnecessary GNOME services..."
 
-   systemctl --user mask org.gnome.SettingsDaemon.Wacom.service org.gnome.SettingsDaemon.Smartcard.service
-   check_success "masking unnecessary GNOME services"
+    systemctl --user mask org.gnome.SettingsDaemon.Wacom.service org.gnome.SettingsDaemon.Smartcard.service
+    check_success "masking unnecessary GNOME services"
 
-   log_success "GNOME has been successfully optimized"
+    log_success "GNOME has been successfully optimized"
 }
 
-# 3. Функция для настройки ZSH
+# Функция для настройки ZSH
 configure_zsh() {
-   log_message "ZSH configuration..."
+    log_message "ZSH configuration..."
 
-   touch ~/.zshrc ~/.zsh_history
-   check_success "creating ZSH configuration files"
+    cp -f ./files/zsh/zsh_history ~/.zsh_history
+    cp -f ./files/zsh/zshrc ~/.zshrc
+    check_success "creating ZSH configuration files"
 
-   cat << EOF > ~/.zshrc
-# Enable Powerlevel10k instant prompt (должно быть в начале файла)
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-# История команд
-HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
-setopt SHARE_HISTORY
-
-# Загрузка плагинов (правильный порядок важен!)
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  # Должен быть последним!
-
-# Привязки клавиш для history-substring-search
-bindkey '^[[A' history-substring-search-up    # Стрелка вверх
-bindkey '^[[B' history-substring-search-down  # Стрелка вниз
-
-# Оптимизация производительности
-POWERLEVEL9K_INSTANT_PROMPT=quiet  # Отключает предупреждения Instant Prompt
-ZSH_AUTOSUGGEST_MANUAL_REBIND=1    # Ускоряет zsh-autosuggestions
-
-# Применение конфигурации Powerlevel10k
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-EOF
-   check_success "creating a configuration file .zshrc"
-
-   log_success "ZSH has been successfully configured"
+    log_success "ZSH has been successfully configured"
 }
 
-# 4. Функция для настройки цвета папок для темы Papirus
+# Функция для настройки цвета папок для темы Papirus
 configure_papirus_folder_colors() {
-   log_message "Papirus folder colors..."
+    log_message "Papirus folder colors..."
 
-   papirus-folders -C cyan --theme Papirus-Dark
-   check_success "change color of folders in Papirus theme"
+    papirus-folders -C cyan --theme Papirus-Dark
+    check_success "change color of folders in Papirus theme"
 
-   log_success "Papirus folder colors have been successfully changed"
+    log_success "Papirus folder colors have been successfully changed"
 }
 
-# 5. Функция для настройки формата вывода в fastfetch
+# Функция для настройки формата вывода в fastfetch
 configure_fastfetch() {
-   log_message "Fastfetch format..."
+    log_message "Fastfetch format..."
 
-   cat << EOF > ~/.config/fastfetch/config.jsonc
-{
-  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-  "display": {
-    "separator": " -> "
-  },
-  "modules": [
-    "title",
-    "separator",
-    {
-      "type": "os",
-      "key": "🥇 OS"
-    },
-    {
-      "type": "host",
-      "key": "💻 Host"
-    },
-    {
-      "type": "kernel",
-      "key": "⚙️  Kernel"
-    },
-    {
-      "type": "uptime",
-      "key": "⏱️  Uptime"
-    },
-    {
-      "type": "packages",
-      "key": "📦 Packages"
-    },
-    {
-      "type": "shell",
-      "key": "🐚 Shell"
-    },
-    {
-      "type": "display",
-      "key": "🖥️  Display"
-    },
-    {
-      "type": "de",
-      "key": "🖼️  DE"
-    },
-    {
-      "type": "wm",
-      "key": "🪟 WM"
-    },
-    {
-      "type": "wmtheme",
-      "key": "🎨 WM Theme"
-    },
-    {
-      "type": "theme",
-      "key": "🎨 Theme"
-    },
-    {
-      "type": "theme",
-      "key": "🎨 Theme"
-    },
-    {
-      "type": "font",
-      "key": "🔤 Font"
-    },
-    {
-      "type": "theme",
-      "key": "🎨 Theme"
-    },
-    {
-      "type": "terminal",
-      "key": "🗃  Terminal"
-    },
-    {
-      "type": "terminalfont",
-      "key": "🔠 Terminal Font"
-    },
-    {
-      "type": "cpu",
-      "key": "🧠 CPU"
-    },
-    {
-      "type": "gpu",
-      "key": "🎮 GPU"
-    },
-    {
-      "type": "memory",
-      "key": "🧮 Memory"
-    },
-    {
-      "type": "swap",
-      "key": "🧮 Swap"
-    },
-    //"disk",
-    //"localip",
-    //"battery",
-    //"poweradapter",
-    //"locale",
-    "break",
-    "colors"
-  ]
+    cp -f ./files/fastfetch/config.jsonc ~/.config/fastfetch/config.jsonc
+    check_success "creating a configuration fastfetch file"
+
+    log_success "Fastfetch has been successfully configured"
 }
-EOF
-   check_success "creating a configuration fastfetch file"
 
-   log_success "Fastfetch has been successfully configured"
+# Функция копирования данных по LM Studio
+configure_lmstudio() {
+   log_message "LM Studio data..."
+
+    cp -f ./files/lmstudio/config-presets ~/.lmstudio/config-presets/
+    cp -f ./files/lmstudio/conversations ~/.lmstudio/conversations/
+    check_success "creating a configuration fastfetch file"
+
+    log_success "LM Studio data has been successfully transfered"
+}
+
+# Функция для удаления всех lib32-пакетов (актуально если всё основное ПО через Flatpak)
+configure_lib32() {
+    log_message "Delete all lib32 packages..."
+
+     pacman -Rs $(pacman -Qq | grep '^lib32')
+     check_success "delete lib32"
+
+     log_success "All lib32 packages has been successfully deleted"
 }
 
 # Основная функция
 main() {
-   log_message "The beginning of the process of optimizing Arch Linux user settings (Part 4)..."
+    log_message "The beginning of the process of optimizing Arch Linux user settings (Part 4)..."
 
-   configure_pipewire
-   optimize_gnome
-   configure_zsh
-   configure_papirus_folder_colors
-   configure_fastfetch
+    configure_pipewire
+    optimize_gnome
+    configure_zsh
+    configure_papirus_folder_colors
+    configure_fastfetch
+    configure_lmstudio
+    configure_lib32
 
-   log_message "All operations have been completed successfully!"
-   log_success "===== END OF THE 4TH PART ====="
+    log_message "All operations have been completed successfully!"
+    log_success "===== END OF THE 4TH PART ====="
 }
 
 # Запуск основной функции
