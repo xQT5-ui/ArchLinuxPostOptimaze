@@ -72,7 +72,7 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
-# 1. Функция для настройки initramfs
+# Функция для настройки initramfs
 configure_initramfs() {
    log_message "Configuring initramfs images..."
 
@@ -85,68 +85,73 @@ configure_initramfs() {
    log_success "initramfs images have been successfully configured"
 }
 
-# 2. Функция для настройки загрузчика GRUB
+# Функция для настройки загрузчика GRUB
 configure_bootloader() {
-   log_message "Configuring the GRUB loader..."
+   log_message "Configuring the boot loader..."
 
-   sed -i 's/^GRUB_TIMEOUT=[0-9]\+/GRUB_TIMEOUT=1/' /etc/default/grub
-   check_success "configuring the GRUB timeout"
+   cp -f ./files/loader.conf /boot/loader/loader.conf
+   check_success "configuring the boot params"
 
-   sed -i 's/^GRUB_TIMEOUT_STYLE=.*/GRUB_TIMEOUT_STYLE=countdown/' /etc/default/grub
-   check_success "configuring the GRUB timeout style"
-
-   sed -i 's/^GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT="quiet splash zswap.enabled=0 tsc=reliable intel_pstate=passive nowatchdog modprobe.blacklist=iTCO_wdt"/' /etc/default/grub
+   sed -i 's/^options.*/options rw quiet splash/' /boot/loader/entries/arch-linux.conf
    check_success "configuring the kernel parameters"
 
-   log_success "The GRUB loader has been successfully configured"
+   log_success "The boot loader has been successfully configured"
 }
 
-# 3. Функция для настройки параметров ядра
+# Функция для настройки параметров ядра
 configure_sysctl() {
    log_message "Configuring kernel parameters via sysctl..."
 
    cat << EOF > /etc/sysctl.d/99-sysctl.conf
 # Оптимизация памяти для игр и мультимедиа
-vm.swappiness=150 # выше 100 при использовании zram
+vm.swappiness=100
 vm.vfs_cache_pressure=50
 vm.page-cluster=0
 
+# Оптимизация ядра в рантайме
+kernel.split_lock_mitigate=0
+kernel.nmi_watchdog=0
+
 # Улучшение сетевой производительности для онлайн-игр
 net.core.netdev_max_backlog=32768
-#net.ipv4.tcp_fastopen=3
-net.ipv4.ip_local_port_range=1024 65000
 net.core.default_qdisc=fq_codel
+net.ipv4.ip_local_port_range=1024 65000
+net.ipv4.tcp_congestion_control=bbr
 net.ipv4.tcp_mtu_probing=1
 net.ipv4.tcp_slow_start_after_idle=0
 net.ipv4.tcp_notsent_lowat=16384
 net.ipv4.tcp_tw_reuse=1
 net.ipv4.tcp_fin_timeout=30
 
-# Оптимизация для Btrfs и SSD
-vm.dirty_background_bytes=209715200 # 200 MB
-vm.dirty_bytes=419430400  # 400 MB
-vm.dirty_expire_centisecs=1500 # 15 sec
-vm.dirty_writeback_centisecs=250 # 2.5 sec
+# Оптимизация для FS и SSD
+vm.dirty_background_bytes=67108864  # 1/4 от vm.dirty_bytes
+vm.dirty_bytes=268435456            # пропускная способность SSD
+vm.dirty_expire_centisecs=1300      # 13 секунд и вызов записи грязных страниц
+vm.dirty_writeback_centisecs=100    # 1 секунд между периодами работы потоков по гразным страницам
 EOF
    check_success "creating a sysctl configuration"
 
    log_success "The kernel parameters have been successfully configured"
 }
 
-# 4. Функция для настройки переменных окружения (NVIDIA)
+# Функция для настройки переменных окружения (NVIDIA)
 configure_wayland() {
    log_message "Setting up environment variables..."
 
    # Дополнение /etc/environment
    if $NVIDIA_PRESENT; then
       cat << EOF >> /etc/environment
-# Основные настройки NVIDIA для Wayland
-LIBVA_DRIVER_NAME=nvidia
 #
-# Аппаратное ускорение видео (дополнение к существующим)
-VDPAU_DRIVER=nvidia  # Для декодирования видео через VDPAU
-NVD_BACKEND=direct  # Прямой доступ к GPU для Vulkan-приложений
-VDPAU_NVIDIA_ENABLE_NVDEC=1
+# This file is parsed by pam_env module
+#
+# Syntax: simple "KEY=VAL" pairs on separate lines
+#
+# --- Аппаратное ускорение видео (NVDEC/NVENC) ---
+LIBVA_DRIVER_NAME=nvidia
+# --- Оптимизации для игр (NVIDIA) ---
+__EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/50_mesa.json
+# Не очищать кэш шейдеров (сохраняется между сессиями)
+__GL_SHADER_DISK_CACHE_SKIP_CLEANUP=1
 #
 # При проблемах с раcкрытием окон на весь экран
 # GSK_RENDERER=cairo
@@ -157,7 +162,7 @@ EOF
    log_success "Environment variable settings have been successfully configured"
 }
 
-# 5. Функция для настройки Plex Media Server
+# Функция для настройки Plex Media Server
 configure_plex() {
    log_message "The Plex Media Server add-on..."
 
@@ -179,7 +184,7 @@ configure_plex() {
    log_success "Plex Media Server has been successfully configured"
 }
 
-# 6. Функция для установки и настройки системных служб
+# Функция для установки и настройки системных служб
 configure_system_services() {
    log_message "Configuring system services and daemons..."
 
@@ -216,7 +221,7 @@ EOF
 
    # Включение и запуск системных служб
    log_message "Enabling system services..."
-   systemctl enable paccache.timer bluetooth.service v2raya.service power-profiles-daemon thermald cronie.service irqbalance ananicy-cpp earlyoom nvidia-powerd
+   systemctl enable paccache.timer bluetooth.service v2raya.service power-profiles-daemon thermald cronie.service irqbalance ananicy-cpp earlyoom #nvidia-powerd
    #systemd-zram-setup@zram0.service
    check_success "enabling system services"
 
@@ -255,7 +260,7 @@ EOF
    log_success "System services and daemons have been successfully configured"
 }
 
-# 7. Функция для настройки NVIDIA
+# Функция для настройки NVIDIA
 configure_nvidia() {
    if ! $NVIDIA_PRESENT; then
       log_message "The NVIDIA graphics card is not detected. Skipping NVIDIA settings"
@@ -268,18 +273,21 @@ configure_nvidia() {
    log_message "Configuring NVIDIA configuration..."
 
    cat << EOF >> /etc/modprobe.d/nvidia.conf
-options nvidia-drm modeset=1
-# Optimizations for >RTX 30xx
-options nvidia NVreg_EnableResizableBar=1 NVreg_UsePageAttributeTable=1 NVreg_EnablePCIeGen3=1 NVreg_EnableStreamMemOPs=1
-# PowerManagement
-options nvidia NVreg_DynamicPowerManagement=0x02
+# Параметры PCIe
+options nvidia NVreg_UsePageAttributeTable=1 NVreg_EnableResizableBar=1
+
+# Управление питанием (умеренный режим)
+options nvidia NVreg_DynamicPowerManagement=0x01
+
+# Параметры производительности
+options nvidia NVreg_ResmanDebugLevel=0 NVreg_PreserveVideoMemoryAllocations=0
 EOF
    check_success "creating a new nvidia.conf config"
 
    log_success "NVIDIA has been successfully configured"
 }
 
-# 8. Функция для замены bash на zsh
+# Функция для замены bash на zsh
 change_shell_to_zsh() {
    log_message "Replacing bash with zsh..."
 
@@ -289,7 +297,7 @@ change_shell_to_zsh() {
    log_success "Shell successfully changed to zsh"
 }
 
-# 9. Функция для отключения планировщика для систем с NVMe SSD
+# Функция для отключения планировщика для систем с NVMe SSD
 disable_nvmesh_scheduler() {
    if lsblk -d -o name | grep -iq 'nvm'; then
       log_message "Disabling the NVMe SSD scheduler..."
@@ -303,7 +311,7 @@ EOF
    fi
 }
 
-# 10. Функция для корректной настройки приоритетов при работе с аудио
+# Функция для корректной настройки приоритетов при работе с аудио
 configure_realtime_audio() {
    log_message "Configure realtime audio priority..."
 
@@ -314,6 +322,52 @@ EOF
    check_success "creating realtime config"
 
    log_success "Configure realtime audio priority successfully created"
+}
+
+# Функция для настройки OOM
+configure_earlyoom() {
+   log_message "Setting up earlyoom rules..."
+
+   cat << EOF >> /etc/default/earlyoom
+# Default settings for earlyoom. This file is sourced by /bin/sh from
+# /etc/init.d/earlyoom or by systemd from earlyoom.service.
+
+# Options to pass to earlyoom
+EARLYOOM_ARGS="-r 0 -m 10 -s 20 --avoid '(^|/)(systemd|sshd|gnome-shell|pipewire)$'"
+
+# Examples:
+
+# Print memory report every minute instead of every hour
+# EARLYOOM_ARGS="-r 60"
+
+# Available minimum memory 5%
+# EARLYOOM_ARGS="-m 5"
+
+# Available minimum memory 15% and free minimum swap 5%
+# EARLYOOM_ARGS="-m 15 -s 5"
+
+# Avoid killing processes whose name matches this regexp
+# EARLYOOM_ARGS="--avoid '(^|/)(init|X|sshd|firefox)$'"
+
+# See more at `earlyoom -h'
+EOF
+   check_success "setting up environment variables"
+
+   log_success "Earlyoom settings have been successfully configured"
+}
+
+# Функция для настройки альтернативного планировщика
+configure_sched() {
+   log_message "Setting up alternative SCX scheduler..."
+
+   cat << EOF >> /etc/scx_loader.toml
+default_sched = "scx_bpfland" # Edit this line to the scheduler you want scx_loader to start at boot
+default_mode = "LowLatency" # Possible values: "Auto", "Gaming", "LowLatency", "PowerSave".
+EOF
+    systemctl enable --now scx_loader.service
+    check_success "setting up alternative SCX scheduler"
+
+   log_success "Alternaive SCX scheduler have been successfully configured"
 }
 
 # Основная функция
@@ -337,6 +391,8 @@ main() {
    change_shell_to_zsh
    #disable_nvmesh_scheduler
    configure_realtime_audio
+   configure_earlyoom
+   configure_sched
 
    log_message "All operations have been completed successfully!"
    log_success "===== END OF THE 3D PART ====="
