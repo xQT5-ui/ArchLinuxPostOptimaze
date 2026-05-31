@@ -40,12 +40,15 @@ fi
 install_yay() {
     log_message "Installing yay..."
 
-    cd ~
+    cd $HOME
+    if [ -d $HOME"/yay" ]; then
+        rm -rf $HOME/yay
+    fi
     git clone https://aur.archlinux.org/yay.git
-    cd ~/yay
+    cd $HOME/yay
     makepkg -si --noconfirm
-    cd ~
-    rm -rf ~/yay
+    cd $HOME
+    rm -rf $HOME/yay
 }
 
 # Функция для проверки и установки yay
@@ -103,12 +106,12 @@ install_aur_packages() {
 
     # Список пакетов для установки
     local packages=(
-        "zsh-theme-powerlevel10k"
+        "zsh-theme-powerlevel10k" # есть ошибка при установке на как будто разные версии GCC
         "zsh-fast-syntax-highlighting"
         "mocu-xcursor"
         "adw-gtk-theme"
-        "papirus-folders"
-        "ventoy-bin"
+        "papirus-folders" # Ошибка с верификацией ключа
+        "ventoy-bin" # Ошибка с сервера
         "plex-media-server"
         "nautilus-admin-gtk4"
         #"nautilus-open-any-terminal"
@@ -141,20 +144,20 @@ install_aur_packages() {
 configure_makepkg() {
     log_message "Setting up makepkg.conf..."
 
-    cp -f ./files/makepkg/makepkg.conf ~/.makepkg.conf
+    cp -f ./child/files/makepkg/makepkg.conf $HOME/.makepkg.conf
 }
 
 # Функция для создания дополнительных папок
 create_directories() {
     log_message "Create additional folders..."
 
-    mkdir -p ~/.themes ~/.icons "~/Загрузки/Torrents"  ~/.config/fastfetch
+    mkdir -p $HOME/.themes $HOME/.icons $HOME"/Загрузки/Torrents" $HOME/.config/fastfetch
 
     # Эти директории требуют sudo, поэтому обрабатываем их отдельно
     if sudo mkdir -p /media/movies /media/tvshows; then
         # Создаем символические ссылки
-        ln -sf /media/movies "~/Загрузки/Torrents"
-        ln -sf /media/tvshows "~/Загрузки/Torrents"
+        ln -sf /media/movies $HOME"/Загрузки/Torrents"
+        ln -sf /media/tvshows $HOME"/Загрузки/Torrents"
     else
         log_error "Media directories could not be created. Sudo rights are required"
     fi
@@ -171,18 +174,14 @@ configure_user_permissions() {
     if ! sudo gpasswd -a $USER plex && sudo gpasswd -a $USER power; then
         log_error "Couldn't add user to plex and power groups. Sudo rights are required"
     fi
-
-    # Устанавливаем правильные права на файлы ZSH
-    touch ~/.zshrc ~/.zsh_history
-    chown $USER:$USER ~/.zshrc ~/.zsh_history
 }
 
 # Основная функция
 main() {
     log_message "Install AUR-packages (Part 2)..."
 
-    setup_yay
     configure_makepkg
+    setup_yay
     install_aur_packages
     create_directories
     configure_user_permissions

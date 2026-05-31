@@ -125,10 +125,10 @@ main() {
     log_warning "--> PLEASE DO NOT LEAVE BECAUSE YOU WILL NEED TO ENTER THE SUDO PASSWORD AT DIFFERENT POINTS IN TIME! <--"
 
     # Запускаем скрипты последовательно
-    sudo ./cmd/child/keyring_p0.sh && \
-    sudo ./cmd/child/main_p1.sh && \
-    ./cmd/child/yay_p2.sh && \
-    sudo ./cmd/child/sys_optimize_p3.sh
+    sudo ./child/keyring_p0.sh && \
+    sudo ./child/main_p1.sh && \
+    ./child/yay_p2.sh && \
+    sudo ./child/sys_optimize_p3.sh
 }
 
 # Запуск основной функции

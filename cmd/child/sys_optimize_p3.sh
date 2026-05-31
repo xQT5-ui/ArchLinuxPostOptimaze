@@ -68,7 +68,7 @@ configure_initramfs() {
     log_message "Configuring initramfs images..."
 
     # Ускорение загрузки системы c помощью systemd
-    cp -f ./files/etc/mkinitcpio.conf /etc/mkinitcpio.conf
+    cp -f ./child/files/etc/mkinitcpio.conf /etc/mkinitcpio.conf
     if [[ -f /etc/mkinitcpio.conf ]]; then
         mkinitcpio -P
         log_success "Initramfs rebuilt successfully"
@@ -79,15 +79,15 @@ configure_initramfs() {
 configure_bootloader() {
     log_message "Configuring the boot loader..."
 
-    cp -f ./files/boot/loader.conf /boot/loader/loader.conf
-    #sed -i 's/^options.*/options rw quiet splash/' /boot/loader/entries/arch-linux.conf
+    cp -f ./child/files/boot/loader.conf /boot/loader/loader.conf
+    sed -i 's/^options.*/options rw quiet splash/' /boot/loader/entries/arch-linux.conf
 }
 
 # Функция для настройки параметров ядра
 configure_sysctl() {
     log_message "Configuring kernel parameters via sysctl..."
 
-    cp -f ./files/etc/sysctl.d/99-sysctl.conf /etc/sysctl.d/99-sysctl.conf
+    cp -f ./child/files/etc/sysctl.d/99-sysctl.conf /etc/sysctl.d/99-sysctl.conf
 }
 
 # Функция для настройки переменных окружения (NVIDIA)
@@ -96,7 +96,7 @@ configure_wayland() {
 
     # Дополнение /etc/environment
     if $NVIDIA_PRESENT; then
-        cp -f ./files/etc/environment /etc/environment
+        cp -f ./child/files/etc/environment /etc/environment
    fi
 }
 
@@ -120,13 +120,7 @@ configure_system_services() {
 
     systemctl daemon-reload
     # Настройка zram
-    cat << EOF > /etc/systemd/zram-generator.conf
-[zram0]
-zram-size = ram
-compression-algorithm = zstd
-swap-priority = 100
-fs-type = swap
-EOF
+    cp -f ./child/files/etc/systemd/zram-generator.conf /etc/systemd/zram-generator.conf
 
     # Настройка службы v2raya
     log_message "Creating a v2raya service configuration..."
@@ -145,16 +139,18 @@ WantedBy=multi-user.target
 EOF
 
     # Включение и запуск системных служб
-    #nvidia-powerd
-    #systemd-zram-setup@zram0.service
-    for service in bluetooth.service v2raya.service power-profiles-daemon cronie.service irqbalance ananicy-cpp earlyoom paccache.timer; do
+    # nvidia-powerd
+    # systemd-zram-setup@zram0.service
+    # cronie.service = only for BTRFS
+    for service in bluetooth.service v2raya.service power-profiles-daemon irqbalance ananicy-cpp earlyoom paccache.timer; do
         if systemctl list-unit-files | grep -q "^${service}"; then
             systemctl enable ${service}
         else
             log_error "Service not found: ${service}"
         fi
     done
-    systemctl start bluetooth.service v2raya.service #systemd-zram-setup@zram0.service
+    #systemd-zram-setup@zram0.service
+    systemctl start bluetooth.service v2raya.service
 
     # Настройка еженедельной очистки кэша pacman
     # Удаляем таймер, если он существует
@@ -177,7 +173,7 @@ configure_nvidia() {
     log_message "Setting up NVIDIA..."
 
     # Правка конфига nvidia.conf
-    cp -f ./files/etc/modprobe.d/nvidia.conf /etc/modprobe.d/nvidia.conf
+    cp -f ./child/files/etc/modprobe.d/nvidia.conf /etc/modprobe.d/nvidia.conf
 }
 
 # Функция для замены bash на zsh
@@ -212,14 +208,14 @@ EOF
 configure_earlyoom() {
     log_message "Setting up earlyoom rules..."
 
-    cp -f ./files/etc/earlyoom /etc/default/earlyoom
+    cp -f ./child/files/etc/earlyoom /etc/default/earlyoom
 }
 
 # Функция для настройки альтернативного планировщика
 configure_sched() {
     log_message "Setting up alternative SCX scheduler..."
 
-    cp -f ./files/etc/scx_loader.toml /etc/scx_loader.toml
+    cp -f ./child/files/etc/scx_loader.toml /etc/scx_loader.toml
     systemctl enable --now scx_loader.service
 }
 
@@ -235,7 +231,7 @@ main() {
     fi
 
     configure_initramfs
-    configure_bootloader
+    #configure_bootloader
     configure_sysctl
     configure_wayland
     configure_plex

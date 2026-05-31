@@ -42,6 +42,13 @@ if [[ $EUID -ne 0 ]]; then
     exit 1
 fi
 
+# Функция для удаления всех lib32-пакетов (актуально если всё основное ПО через Flatpak)
+delete_lib32() {
+    log_message "Delete all lib32 packages..."
+
+    pacman -Rs $(pacman -Qq | grep '^lib32')
+}
+
 # Функция очистки лишних пакетов
 delete_old_packages() {
     log_message "Cleaning of excess packages..."
@@ -82,6 +89,7 @@ main() {
     log_message "Delete orphans packages (Part 5)..."
 
     delete_old_packages
+    delete_lib32
     upd_init
 
     log_success "===== END OF THE 5TH PART ====="

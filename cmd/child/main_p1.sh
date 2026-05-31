@@ -69,7 +69,7 @@ configure_pacman() {
     log_message "Configuring the pacman.conf configuration..."
 
     # Раскомментирование и установка Color и ParallelDownloads
-    cp -f ./files/etc/pacman/pacman.conf /etc/
+    cp -f ./child/files/etc/pacman/pacman.conf /etc/pacman.conf
 }
 
 # функция для установки flatpak-пакета с повторными попытками
@@ -135,6 +135,9 @@ install_base_software() {
         "scx-scheds"
         "scx-tools"
         "zed"
+        "fakeroot"
+        "make"
+        "gcc"
     )
 
     # Установка пакетов
@@ -196,7 +199,7 @@ install_base_software() {
 optimize_gnome() {
     log_message "Optimize GNOME by removing unnecessary packages..."
 
-    pacman -Rnsc --noconfirm gnome-connections gnome-software gnome-music gnome-maps totem gnome-contacts gnome-system-monitor gnome-tour gnome-weather loupe epiphany yelp decibels vim malcontent evince sushi baobab gnome-shell-extensions gvfs-onedrive gnome-backgrounds
+    pacman -Rnsc --noconfirm gnome-connections gnome-software gnome-music gnome-maps gnome-contacts gnome-system-monitor gnome-tour gnome-weather loupe epiphany yelp decibels vim malcontent evince sushi baobab gvfs-onedrive gnome-backgrounds showtime papers
     pacman -S --noconfirm flatpak
 }
 
@@ -274,7 +277,7 @@ install_flatpak_apps() {
         "de.wwwtech.gitte"
         "it.fabiodistasio.AntaresSQL"
         "io.github.dzheremi2.lrcmake-gtk"
-        "com.github.hydroxycarbamide.Gradience"
+        #"com.github.hydroxycarbamide.Gradience" # Надо вручную устанавливать
         "dev.bragefuglseth.Keypunch"
     )
 

@@ -52,13 +52,13 @@ update_mirrors() {
         LAST_UPDATE=$(stat -c %Y /etc/pacman.d/mirrorlist 2>/dev/null || echo "0")
         CURRENT_TIME=$(date +%s)
         if (( CURRENT_TIME - LAST_UPDATE < 86400 )); then
-            log_success "Mirror list updated less than 24 hours ago. Skipping update."
+            log_success "Mirror list updated less than 24 hours ago. Skip update"
             return 0
         fi
     fi
 
     # Обновление списка зеркал
-    reflector --country Denmark,Norway,Russia,Finland,Sweden --latest 13 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+    reflector --country Denmark,Norway,Russia,Finland,Sweden,Netherlands --latest 13 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 }
 
 # Функция для настройки автоматического обновления зеркал
@@ -77,7 +77,7 @@ Wants=network-online.target
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/reflector --country Denmark,Norway,Russia,Finland,Sweden --latest 13 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+ExecStart=/usr/bin/reflector --country Denmark,Norway,Russia,Finland,Sweden,Netherlands --latest 13 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 
 [Install]
 WantedBy=multi-user.target
@@ -85,18 +85,18 @@ EOF
 
         # Создаем файл таймера для запуска сервиса раз в неделю
         cat > /etc/systemd/system/mirror-update.timer << EOF
-        [Unit]
-        Description=Weekly update of Arch Linux mirrorlist
-        Requires=mirror-update.service
+[Unit]
+Description=Weekly update of Arch Linux mirrorlist
+Requires=mirror-update.service
 
-        [Timer]
-        OnCalendar=weekly
-        Persistent=true
-        RandomizedDelaySec=6h
+[Timer]
+OnCalendar=weekly
+Persistent=true
+RandomizedDelaySec=6h
 
-        [Install]
-        WantedBy=timers.target
-        EOF
+[Install]
+WantedBy=timers.target
+EOF
 
         # Перезагружаем конфигурацию systemd
         systemctl daemon-reload
@@ -121,8 +121,13 @@ update_keys() {
         systemctl enable --now archlinux-keyring-wkd-sync.timer
     fi
 
+    # Временно отключаем режим завершения при ошибке
+    set +e
+
     # Синхронизация ключей (раз в день по умолчанию)
     pacman-key --refresh-keys
+
+    set -e
 }
 
 # Основная часть скрипта
@@ -131,7 +136,7 @@ main() {
 
     update_mirrors
     setup_mirror_update_timer
-    update_keys
+    #update_keys
 
     log_success "All operations have been completed successfully!"
 }

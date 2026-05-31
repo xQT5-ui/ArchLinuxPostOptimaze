@@ -38,13 +38,13 @@ configure_pipewire() {
     systemctl --user enable --now pipewire pipewire.socket pipewire-pulse wireplumber
 
     # Создание директорий для конфигурации
-    mkdir -p ~/.config/pipewire/pipewire.conf.d ~/.config/pipewire/pipewire-pulse.conf.d ~/.config/pipewire/client.conf.d
+    mkdir -p $HOME/.config/pipewire/pipewire.conf.d $HOME/.config/pipewire/pipewire-pulse.conf.d $HOME/.config/pipewire/client.conf.d
 
     # Создание конфигурационного файла для звука
-    cp -f ./files/pipewire/10-sound.conf ~/.config/pipewire/pipewire.conf.d
+    cp -f ./child/files/pipewire/10-sound.conf $HOME/.config/pipewire/pipewire.conf.d
     # Копирование дополнительных конфигурационных файлов
-    cp /usr/share/pipewire/client.conf.avail/20-upmix.conf ~/.config/pipewire/pipewire-pulse.conf.d
-    cp /usr/share/pipewire/client.conf.avail/20-upmix.conf ~/.config/pipewire/client.conf.d
+    cp /usr/share/pipewire/client.conf.avail/20-upmix.conf $HOME/.config/pipewire/pipewire-pulse.conf.d
+    cp /usr/share/pipewire/client.conf.avail/20-upmix.conf $HOME/.config/pipewire/client.conf.d
 }
 
 # Функция для оптимизации GNOME
@@ -59,8 +59,12 @@ optimize_gnome() {
 configure_zsh() {
     log_message "ZSH configuration..."
 
-    cp -f ./files/zsh/zsh_history ~/.zsh_history
-    cp -f ./files/zsh/zshrc ~/.zshrc
+    cp -f ./child/files/zsh/zsh_history $HOME/.zsh_history
+    cp -f ./child/files/zsh/zshrc $HOME/.zshrc
+
+    # Устанавливаем правильные права на файлы ZSH
+    touch $HOME/.zshrc $HOME/.zsh_history
+    chown $USER:$USER $HOME/.zshrc $HOME/.zsh_history
 }
 
 # Функция для настройки цвета папок для темы Papirus
@@ -74,22 +78,15 @@ configure_papirus_folder_colors() {
 configure_fastfetch() {
     log_message "Set Fastfetch output format..."
 
-    cp -f ./files/fastfetch/config.jsonc ~/.config/fastfetch/config.jsonc
+    cp -f ./child/files/fastfetch/config.jsonc $HOME/.config/fastfetch/config.jsonc
 }
 
 # Функция копирования данных по LM Studio
 configure_lmstudio() {
     log_message "Transfer LM Studio data..."
 
-    cp -f ./files/lmstudio/config-presets ~/.lmstudio/config-presets/
-    cp -f ./files/lmstudio/conversations ~/.lmstudio/conversations/
-}
-
-# Функция для удаления всех lib32-пакетов (актуально если всё основное ПО через Flatpak)
-configure_lib32() {
-    log_message "Delete all lib32 packages..."
-
-    pacman -Rs $(pacman -Qq | grep '^lib32')
+    cp -f ./child/files/lmstudio/config-presets $HOME/.lmstudio/config-presets/
+    cp -f ./child/files/lmstudio/conversations $HOME/.lmstudio/conversations/
 }
 
 # Основная функция
@@ -102,7 +99,6 @@ main() {
     configure_papirus_folder_colors
     configure_fastfetch
     configure_lmstudio
-    configure_lib32
 
     log_success "All operations have been completed successfully!"
     log_message "===== END OF THE 4TH PART ====="
