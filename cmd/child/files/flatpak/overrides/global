@@ -1,3 +1,0 @@
-[Context]
-devices=dri
-filesystems=xdg-config/gtk-4.0;xdg-config/gtk-3.0;~/.icons;~/.themes;home

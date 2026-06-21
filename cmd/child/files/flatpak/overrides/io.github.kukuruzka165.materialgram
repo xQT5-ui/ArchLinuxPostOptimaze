@@ -1,6 +1,0 @@
-[Context]
-sockets=!fallback-x11;!x11
-filesystems=!home
-
-[Environment]
-GTK_THEME=adw-gtk3-dark

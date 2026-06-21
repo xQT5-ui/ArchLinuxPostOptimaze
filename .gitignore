@@ -1,4 +1,5 @@
-./backups/
-./child/files/Установка Arch Linux.md
-./child/files/user/
-./child/files/zsh/zsh_history
+backups/
+child/files/Установка Arch Linux.md
+child/files/user/*
+child/files/zsh/zsh_history
+userFilesForPostOptimaze/*

@@ -1,6 +1,0 @@
-[Environment]
-GTK_THEME=adw-gtk3-dark
-__EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/10_nvidia.json
-__GLX_VENDOR_LIBRARY_NAME=nvidia
-__VK_LAYER_NV_optimus=NVIDIA_only
-__NV_PRIME_RENDER_OFFLOAD=1
