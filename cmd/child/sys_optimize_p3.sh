@@ -12,21 +12,27 @@ set -u  # Использование неопределенных перемен
 BLUE="\e[1;34m"
 RED="\e[1;31m"
 GREEN="\e[1;32m"
+YELLOW="\e[1;33m"
 RESET="\e[0m"
 
 # Функция для вывода информационных сообщений
 log_message() {
-   echo -e "${BLUE}[INFO] $1${RESET}"
+    echo -e "${BLUE}[INFO] $1${RESET}"
 }
 
 # Функция для вывода сообщений об ошибках
 log_error() {
-   echo -e "${RED}[ERROR] $1${RESET}" >&2
+    echo -e "${RED}[ERROR] $1${RESET}" >&2
 }
 
 # Функция для вывода сообщений об успешном выполнении
 log_success() {
-   echo -e "${GREEN}[SUCCESS] $1${RESET}"
+    echo -e "${GREEN}[SUCCESS] $1${RESET}"
+}
+
+# Функция для вывода предупреждений
+log_warning() {
+    echo -e "${YELLOW}[WARNING] $1${RESET}"
 }
 
 # Проверка наличия прав суперпользователя
@@ -75,7 +81,7 @@ configure_initramfs() {
     fi
 }
 
-# Функция для настройки загрузчика GRUB
+# Функция для настройки загрузчика
 configure_bootloader() {
     log_message "Configuring the boot loader..."
 

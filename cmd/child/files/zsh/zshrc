@@ -1,3 +1,6 @@
+# Enable Powerlevel10k instant prompt (должно быть в начале файла)
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+
 # ===== История команд
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
@@ -15,20 +18,18 @@ setopt histnostore
 # Показывать команду с подстановкой перед выполнением
 setopt histverify
 
-# ===== Переменные окружения
-# Редактор по умолчанию (измените на свой)
-export EDITOR='nano'
-export VISUAL=$EDITOR
-
-# Enable Powerlevel10k instant prompt (должно быть в начале файла)
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # ===== Автодополнение
+# Кэширование для ускорения
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path "$HOME/.zcompcache"
 # Инициализация автодополнения
 autoload -Uz compinit
 compinit -C -d "$HOME/.zcompdump"
+
+# ===== Переменные окружения
+# Редактор по умолчанию (измените на свой)
+export EDITOR='nano'
+export VISUAL='nano'
 
 # ===== Загрузка плагинов (с проверками)
 # Проверяем каждый плагин перед загрузкой
@@ -73,11 +74,12 @@ else
 	echo "Warning: Go not found"
 fi
 
+# Применение конфигурации Powerlevel10k
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 # Added by LM Studio CLI (lms)
 if [[ -d "$HOME/.lmstudio/bin" ]]; then
     export PATH="$PATH:$HOME/.lmstudio/bin"
 fi
 # End of LM Studio CLI section
 
-# Применение конфигурации Powerlevel10k
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

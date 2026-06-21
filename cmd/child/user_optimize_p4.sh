@@ -2,7 +2,6 @@
 
 # =====================================================
 # Скрипт для оптимизации пользовательских настроек Arch Linux. Часть 4
-# Запускать после ручной перезагрузки после Часть 3!
 # =====================================================
 
 # Включаем строгий режим для bash
@@ -13,6 +12,7 @@ set -u  # Использование неопределенных перемен
 BLUE="\e[1;34m"
 RED="\e[1;31m"
 GREEN="\e[1;32m"
+YELLOW="\e[1;33m"
 RESET="\e[0m"
 
 # Функция для вывода информационных сообщений
@@ -28,6 +28,11 @@ log_error() {
 # Функция для вывода сообщений об успешном выполнении
 log_success() {
     echo -e "${GREEN}[SUCCESS] $1${RESET}"
+}
+
+# Функция для вывода предупреждений
+log_warning() {
+    echo -e "${YELLOW}[WARNING] $1${RESET}"
 }
 
 # Функция для настройки Pipewire
@@ -61,17 +66,22 @@ configure_zsh() {
 
     cp -f ./child/files/zsh/zsh_history $HOME/.zsh_history
     cp -f ./child/files/zsh/zshrc $HOME/.zshrc
+    cp -f ./child/files/zsh/p10k.zsh $HOME/.p10k.zsh
+    cp -rf ./child/files/zsh/p10k-grachechkovski $HOME/.cache
 
     # Устанавливаем правильные права на файлы ZSH
-    touch $HOME/.zshrc $HOME/.zsh_history
-    chown $USER:$USER $HOME/.zshrc $HOME/.zsh_history
+    chown $USER:$USER $HOME/.zshrc $HOME/.zsh_history $HOME/.p10k.zsh
 }
 
 # Функция для настройки цвета папок для темы Papirus
 configure_papirus_folder_colors() {
     log_message "Set Papirus folder colors..."
 
-    papirus-folders -C cyan --theme Papirus-Dark
+     if command -v papirus-folders > /dev/null 2>&1; then
+        papirus-folders -C cyan --theme Papirus-Dark
+    else
+        log_warning "WARNING: papirus-folders not found in PATH. Skipping configuration."
+    fi
 }
 
 # Функция для настройки формата вывода в fastfetch
@@ -85,8 +95,23 @@ configure_fastfetch() {
 configure_lmstudio() {
     log_message "Transfer LM Studio data..."
 
-    cp -f ./child/files/lmstudio/config-presets $HOME/.lmstudio/config-presets/
-    cp -f ./child/files/lmstudio/conversations $HOME/.lmstudio/conversations/
+    mkdir $HOME/.lmstudio
+    cp -rf ./child/files/user/lmstudio/config-presets $HOME/.lmstudio/
+    cp -rf ./child/files/user/lmstudio/conversations $HOME/.lmstudio/
+}
+
+# Функция копирования данных по Zen
+configure_zen() {
+    log_message "Transfer Zen data..."
+
+    cp -rf ./child/files/user/zen $HOME/.zen/
+}
+
+# Функция копирования данных по Flatpak
+configure_flatpak() {
+    log_message "Transfer Flatpak data..."
+
+    cp -rf ./child/files/flatpak/overrides $HOME/.local/share/flatpak/overrides
 }
 
 # Основная функция
@@ -99,6 +124,8 @@ main() {
     configure_papirus_folder_colors
     configure_fastfetch
     configure_lmstudio
+    #configure_zen
+    configure_flatpak
 
     log_success "All operations have been completed successfully!"
     log_message "===== END OF THE 4TH PART ====="

@@ -12,6 +12,7 @@ set -u  # Использование неопределенных перемен
 BLUE="\e[1;34m"
 RED="\e[1;31m"
 GREEN="\e[1;32m"
+YELLOW="\e[1;33m"
 RESET="\e[0m"
 
 # Функция для вывода информационных сообщений
@@ -27,6 +28,11 @@ log_error() {
 # Функция для вывода сообщений об успешном выполнении
 log_success() {
     echo -e "${GREEN}[SUCCESS] $1${RESET}"
+}
+
+# Функция для вывода предупреждений
+log_warning() {
+    echo -e "${YELLOW}[WARNING] $1${RESET}"
 }
 
 # Проверка наличия прав суперпользователя
@@ -58,7 +64,7 @@ update_mirrors() {
     fi
 
     # Обновление списка зеркал
-    reflector --country Denmark,Norway,Russia,Finland,Sweden,Netherlands --latest 13 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+    reflector --country Denmark,Norway,Russia,Finland,Sweden,Netherlands,Switzerland,Worldwide --latest 8 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 }
 
 # Функция для настройки автоматического обновления зеркал
@@ -77,7 +83,7 @@ Wants=network-online.target
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/reflector --country Denmark,Norway,Russia,Finland,Sweden,Netherlands --latest 13 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+ExecStart=/usr/bin/reflector --country Denmark,Norway,Russia,Finland,Sweden,Netherlands,Switzerland,Worldwide --latest 8 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 
 [Install]
 WantedBy=multi-user.target

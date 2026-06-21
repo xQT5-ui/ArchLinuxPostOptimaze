@@ -12,21 +12,27 @@ set -u  # Использование неопределенных перемен
 BLUE="\e[1;34m"
 RED="\e[1;31m"
 GREEN="\e[1;32m"
+YELLOW="\e[1;33m"
 RESET="\e[0m"
 
 # Функция для вывода информационных сообщений
 log_message() {
-   echo -e "${BLUE}[INFO] $1${RESET}"
+    echo -e "${BLUE}[INFO] $1${RESET}"
 }
 
 # Функция для вывода сообщений об ошибках
 log_error() {
-   echo -e "${RED}[ERROR] $1${RESET}" >&2
+    echo -e "${RED}[ERROR] $1${RESET}" >&2
 }
 
 # Функция для вывода сообщений об успешном выполнении
 log_success() {
-   echo -e "${GREEN}[SUCCESS] $1${RESET}"
+    echo -e "${GREEN}[SUCCESS] $1${RESET}"
+}
+
+# Функция для вывода предупреждений
+log_warning() {
+    echo -e "${YELLOW}[WARNING] $1${RESET}"
 }
 
 # Проверка, что скрипт не запущен от имени root
@@ -106,18 +112,18 @@ install_aur_packages() {
 
     # Список пакетов для установки
     local packages=(
-        "zsh-theme-powerlevel10k" # есть ошибка при установке на как будто разные версии GCC
+        "zsh-theme-powerlevel10k-git"
         "zsh-fast-syntax-highlighting"
         "mocu-xcursor"
         "adw-gtk-theme"
         "papirus-folders" # Ошибка с верификацией ключа
-        "ventoy-bin" # Ошибка с сервера
+        "ventoy-bin" # Ошибка с путём кеша пакета, как будто связана с makepkg
         "plex-media-server"
         "nautilus-admin-gtk4"
         #"nautilus-open-any-terminal"
         "v2raya"
-        "ttf-ms-fonts"
-        "mkinitcpio-firmware"
+        #"ttf-ms-fonts"
+        #"mkinitcpio-firmware"
         "cachyos-ananicy-rules-git"
         "xpadneo-dkms" # Для современной поддержке контроллеров
         "lmstudio-bin"

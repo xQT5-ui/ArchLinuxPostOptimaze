@@ -116,19 +116,24 @@ create_backups() {
 
 # Основная функция
 main() {
-    log_message "The beginning of the installation of pre-necessary actions..."
+    {
+        echo "=== Log strated at $(date) ==="
+        log_message "The beginning of the installation of pre-necessary actions..."
 
-    add_right_running
-    create_backups
+        add_right_running
+        create_backups
 
-    log_message "Work begins on post-optimization of the system..."
-    log_warning "--> PLEASE DO NOT LEAVE BECAUSE YOU WILL NEED TO ENTER THE SUDO PASSWORD AT DIFFERENT POINTS IN TIME! <--"
+        log_message "Work begins on post-optimization of the system..."
+        log_warning "--> PLEASE DO NOT LEAVE BECAUSE YOU WILL NEED TO ENTER THE SUDO PASSWORD AT DIFFERENT POINTS IN TIME! <--"
 
-    # Запускаем скрипты последовательно
-    sudo ./child/keyring_p0.sh && \
-    sudo ./child/main_p1.sh && \
-    ./child/yay_p2.sh && \
-    sudo ./child/sys_optimize_p3.sh
+        # Запускаем скрипты последовательно
+        sudo ./child/keyring_p0.sh && \
+        sudo ./child/main_p1.sh && \
+        ./child/yay_p2.sh && \
+        sudo ./child/sys_optimize_p3.sh && \
+        ./child/user_optimize_p4.sh && \
+        sudo ./child/end.sh
+    } | tee -a ./jobs.log 2>&1
 }
 
 # Запуск основной функции

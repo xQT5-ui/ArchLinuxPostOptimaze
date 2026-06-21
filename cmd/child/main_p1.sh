@@ -12,21 +12,27 @@ set -u  # Использование неопределенных перемен
 BLUE="\e[1;34m"
 RED="\e[1;31m"
 GREEN="\e[1;32m"
+YELLOW="\e[1;33m"
 RESET="\e[0m"
 
 # Функция для вывода информационных сообщений
 log_message() {
-   echo -e "${BLUE}[INFO] $1${RESET}"
+    echo -e "${BLUE}[INFO] $1${RESET}"
 }
 
 # Функция для вывода сообщений об ошибках
 log_error() {
-   echo -e "${RED}[ERROR] $1${RESET}" >&2
+    echo -e "${RED}[ERROR] $1${RESET}" >&2
 }
 
 # Функция для вывода сообщений об успешном выполнении
 log_success() {
-   echo -e "${GREEN}[SUCCESS] $1${RESET}"
+    echo -e "${GREEN}[SUCCESS] $1${RESET}"
+}
+
+# Функция для вывода предупреждений
+log_warning() {
+    echo -e "${YELLOW}[WARNING] $1${RESET}"
 }
 
 # Функция для проверки наличия видеокарты NVIDIA
@@ -54,7 +60,7 @@ NVIDIA_PRESENT=false
 
 # Выполняем проверку один раз и сохраняем результат
 if has_nvidia; then
-   NVIDIA_PRESENT=true
+    NVIDIA_PRESENT=true
 fi
 
 # Проверка наличия прав суперпользователя
@@ -134,7 +140,6 @@ install_base_software() {
         "fastfetch"
         "scx-scheds"
         "scx-tools"
-        "zed"
         "fakeroot"
         "make"
         "gcc"
@@ -235,7 +240,7 @@ install_flatpak_apps() {
         "com.bitwig.BitwigStudio"
         "io.github.milkshiift.GoofCord"
         "com.github.johnfactotum.Foliate"
-        "com.github.finefindus.eyedropper"
+        "art.fatdawlf.Piccolo"
         "io.bassi.Amberol"
         "com.github.tchx84.Flatseal"
         "com.mattjakeman.ExtensionManager"
@@ -246,7 +251,7 @@ install_flatpak_apps() {
         "io.github.flattool.Warehouse"
         "io.github.jliljebl.Flowblade"
         "io.github.seadve.Mousai"
-        "io.github.tntwise.REAL-Video-Enhancer"
+        #"io.github.tntwise.REAL-Video-Enhancer"
         "org.gnome.Mines"
         "org.gnome.Quadrapassel"
         "org.gnome.Reversi"
@@ -271,17 +276,18 @@ install_flatpak_apps() {
         "com.valvesoftware.Steam"
         "org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/25.08"
         "app.devsuite.Ptyxis"
-        "org.nickvision.cavalier" # Для визуализации исходящего звука
+        #"org.nickvision.cavalier" # Для визуализации исходящего звука
         "it.mijorus.gearlever" # Для работы с AppImage
-        "org.gitfourchette.gitfourchette"
+        #"org.gitfourchette.gitfourchette" # Альтернатива для Gitte
         "de.wwwtech.gitte"
         "it.fabiodistasio.AntaresSQL"
         "io.github.dzheremi2.lrcmake-gtk"
         #"com.github.hydroxycarbamide.Gradience" # Надо вручную устанавливать
         "dev.bragefuglseth.Keypunch"
+        "dev.zed.Zed"
     )
 
-    flatpak install --noninteractive flathub
+    #flatpak install --noninteractive flathub
     # Установка пакетов
     local failed_flatpakPackages=()
     for package in "${flatpakPackages[@]}"; do
