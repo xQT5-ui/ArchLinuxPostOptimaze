@@ -114,7 +114,7 @@ install_aur_packages() {
     local packages=(
         "zsh-theme-powerlevel10k-git"
         "zsh-fast-syntax-highlighting"
-        "mocu-xcursor"
+        "bibata-cursor-theme-bin"
         "adw-gtk-theme"
         #"papirus-folders" # Ошибка с верификацией ключа
         "ventoy-bin"

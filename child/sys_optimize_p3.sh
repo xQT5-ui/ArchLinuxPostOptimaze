@@ -148,7 +148,7 @@ EOF
     # nvidia-powerd
     # systemd-zram-setup@zram0.service
     # cronie.service = only for BTRFS
-    for service in bluetooth.service v2raya.service power-profiles-daemon irqbalance ananicy-cpp earlyoom paccache.timer; do
+    for service in bluetooth.service v2raya.service power-profiles-daemon irqbalance ananicy-cpp earlyoom paccache.timer systemd-oomd; do
         if systemctl list-unit-files | grep -q "^${service}"; then
             systemctl enable ${service}
         else
@@ -246,7 +246,7 @@ main() {
     change_shell_to_zsh
     #disable_nvmesh_scheduler
     configure_realtime_audio
-    configure_earlyoom
+    #configure_earlyoom
     configure_sched
 
     log_success "All operations have been completed successfully!"
