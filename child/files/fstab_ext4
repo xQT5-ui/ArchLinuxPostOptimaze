@@ -1,0 +1,6 @@
+# Static information about the filesystems.
+# See fstab(5) for details.
+
+# <file system> <dir> <type> <options> <dump> <pass>
+# /dev/nvme0n1p2
+UUID=1f1fe532-b15a-4f83-b947-dcfe6349f5d4	/         	ext4     	relatime,commit=144,journal_async_commit,nodelalloc,data=journal	0 0

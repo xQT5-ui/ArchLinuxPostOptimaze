@@ -105,7 +105,7 @@ install_pacman_package() {
 install_base_software() {
     log_message "Installing the basic software..."
 
-    pacman -Syyuu --noconfirm
+    pacman -Syu --noconfirm
 
     local pacmanPackages=(
         "git"
@@ -128,20 +128,22 @@ install_base_software() {
         "pacman-contrib"
         "inxi"
         "v2ray"
-        "bluez-utils"
         "exfat-utils"
         "file-roller"
         "papirus-icon-theme"
-        "irqbalance"
-        "ananicy-cpp"
+        #"irqbalance"
+        #"ananicy-cpp"
         "fwupd"
-        #"earlyoom"
+        "earlyoom"
         "fastfetch"
         "scx-scheds"
         "scx-tools"
         "fakeroot"
         "make"
         "gcc"
+        "zed"
+        "intel-ucode"
+        "intel-media-driver"
     )
 
     # Установка пакетов
@@ -168,12 +170,9 @@ install_base_software() {
     # Блок для Intel + NVIDIA или другого оборудования
     if $NVIDIA_PRESENT; then
         local pacmanNVIDIA=(
-            "libva-nvidia-driver"
-            "nvidia-utils"
             "nvidia-settings"
             "opencl-nvidia"
             "libvdpau-va-gl"
-            "libvdpau"
             "libxnvctrl"
         )
 
@@ -195,15 +194,13 @@ install_base_software() {
             log_success "All packages from Pacman NVIDIA have been successfully installed"
         fi
     fi
-
-    pacman -S --noconfirm intel-ucode intel-media-driver
 }
 
 # Функция для оптимизации GNOME
-optimize_gnome() {
+delete_gnome_applications() {
     log_message "Optimize GNOME by removing unnecessary packages..."
 
-    pacman -Rnsc --noconfirm gnome-connections gnome-software gnome-music gnome-maps gnome-contacts gnome-system-monitor gnome-tour gnome-weather loupe epiphany yelp decibels vim malcontent evince sushi baobab gvfs-onedrive gnome-backgrounds showtime papers
+    pacman -Rnsc --noconfirm gnome-connections gnome-software gnome-music gnome-maps gnome-contacts gnome-system-monitor gnome-tour gnome-weather loupe epiphany yelp decibels vim malcontent evince sushi baobab gvfs-onedrive gnome-backgrounds showtime papers snapshot
     pacman -S --noconfirm flatpak
 }
 
@@ -250,10 +247,8 @@ install_flatpak_apps() {
         "io.github.flattool.Warehouse"
         "io.github.jliljebl.Flowblade"
         "io.github.seadve.Mousai"
-        #"io.github.tntwise.REAL-Video-Enhancer"
         "org.gnome.Mines"
         "org.gnome.Quadrapassel"
-        "org.gnome.Reversi"
         "app.drey.EarTag"
         "org.nickvision.tubeconverter"
         "org.onlyoffice.desktopeditors"
@@ -278,12 +273,14 @@ install_flatpak_apps() {
         #"org.nickvision.cavalier" # Для визуализации исходящего звука
         "it.mijorus.gearlever" # Для работы с AppImage
         "de.wwwtech.gitte"
-        "it.fabiodistasio.AntaresSQL"
+        #"it.fabiodistasio.AntaresSQL"
         "io.github.dzheremi2.lrcmake-gtk"
         #"com.github.hydroxycarbamide.Gradience" # Надо вручную устанавливать
         "dev.bragefuglseth.Keypunch"
-        "dev.zed.Zed"
         "io.github.diegopvlk.Tomatillo"
+        "io.gitlab.adhami3310.Impression"
+        "org.gnome.Snapshot"
+        "org.gnome.meld"
     )
 
     #flatpak install --noninteractive flathub
@@ -322,7 +319,7 @@ main() {
     configure_pacman
     install_base_software
     install_flatpak_apps
-    optimize_gnome
+    delete_gnome_applications
 
     log_success "All operations have been completed successfully!"
     log_message "===== END OF THE 1ST PART ====="

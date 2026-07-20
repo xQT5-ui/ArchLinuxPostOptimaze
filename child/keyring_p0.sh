@@ -64,7 +64,7 @@ update_mirrors() {
     fi
 
     # Обновление списка зеркал
-    reflector --country Denmark,Norway,Russia,Finland,Sweden,Netherlands,Switzerland,Worldwide --latest 8 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+    reflector --country Denmark,Norway,Russia,Finland,Worldwide --latest 8 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 }
 
 # Функция для настройки автоматического обновления зеркал
@@ -83,7 +83,7 @@ Wants=network-online.target
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/reflector --country Denmark,Norway,Russia,Finland,Sweden,Netherlands,Switzerland,Worldwide --latest 8 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+ExecStart=/usr/bin/reflector --country Denmark,Norway,Russia,Finland,Worldwide --latest 8 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 
 [Install]
 WantedBy=multi-user.target

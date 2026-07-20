@@ -3,17 +3,16 @@
 
 # <file system> <dir> <type> <options> <dump> <pass>
 # /dev/nvme0n1p2
-UUID=1f1fe532-b15a-4f83-b947-dcfe6349f5d4	/         	btrfs     	rw,noatime,compress=zstd:1,ssd,subvol=/@	0 0
+UUID=1f1fe532-b15a-4f83-b947-dcfe6349f5d4	/         	btrfs     	rw,noatime,compress=zstd:1,ssd,commit=55,subvol=/@	0 0
 
 # /dev/nvme0n1p2
-UUID=1f1fe532-b15a-4f83-b947-dcfe6349f5d4	/home     	btrfs     	rw,noatime,compress=zstd:1,ssd,subvol=/@home	0 0
+UUID=1f1fe532-b15a-4f83-b947-dcfe6349f5d4	/home     	btrfs     	rw,noatime,compress=zstd:1,ssd,commit=55,subvol=/@home	0 0
 
 # /dev/nvme0n1p2
-UUID=1f1fe532-b15a-4f83-b947-dcfe6349f5d4	/var/cache/pacman/pkg	btrfs     	rw,noatime,compress=zstd:1,ssd,commit=60,subvol=/@pkg	0 0
+UUID=1f1fe532-b15a-4f83-b947-dcfe6349f5d4	/var/cache/pacman/pkg	btrfs     	rw,noatime,compress=zstd:1,ssd,commit=55,subvol=/@pkg	0 0
 
 # /dev/nvme0n1p2
-UUID=1f1fe532-b15a-4f83-b947-dcfe6349f5d4	/var/log  	btrfs     	rw,noatime,compress=zstd:1,ssd,commit=30,subvol=/@log	0 0
+UUID=1f1fe532-b15a-4f83-b947-dcfe6349f5d4	/var/log  	btrfs     	rw,noatime,compress=zstd:1,ssd,commit=34,subvol=/@log	0 0
 
 # /dev/nvme0n1p1
 UUID=0F1B-EA88      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
-

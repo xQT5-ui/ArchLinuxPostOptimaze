@@ -117,14 +117,14 @@ install_aur_packages() {
         "bibata-cursor-theme-bin"
         "adw-gtk-theme"
         #"papirus-folders" # Ошибка с верификацией ключа
-        "ventoy-bin"
+        #"ventoy-bin"
         "plex-media-server"
         "nautilus-admin-gtk4"
         #"nautilus-open-any-terminal"
         "v2raya"
         #"ttf-ms-fonts"
         #"mkinitcpio-firmware"
-        "cachyos-ananicy-rules-git"
+        #"cachyos-ananicy-rules-git"
         "xpadneo-dkms" # Для современной поддержки контроллеров
         "lmstudio-bin"
     )

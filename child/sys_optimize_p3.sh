@@ -148,7 +148,8 @@ EOF
     # nvidia-powerd
     # systemd-zram-setup@zram0.service
     # cronie.service = only for BTRFS
-    for service in bluetooth.service v2raya.service power-profiles-daemon irqbalance ananicy-cpp earlyoom paccache.timer systemd-oomd; do
+    # irqbalance ananicy-cpp systemd-oomd
+    for service in bluetooth.service v2raya.service power-profiles-daemon earlyoom paccache.timer; do
         if systemctl list-unit-files | grep -q "^${service}"; then
             systemctl enable ${service}
         else
@@ -214,7 +215,7 @@ EOF
 configure_earlyoom() {
     log_message "Setting up earlyoom rules..."
 
-    cp -f ./child/files/etc/earlyoom /etc/default/earlyoom
+    cp -f ./child/files/etc/default/earlyoom /etc/default/earlyoom
 }
 
 # Функция для настройки альтернативного планировщика
@@ -246,7 +247,7 @@ main() {
     change_shell_to_zsh
     #disable_nvmesh_scheduler
     configure_realtime_audio
-    #configure_earlyoom
+    configure_earlyoom
     configure_sched
 
     log_success "All operations have been completed successfully!"

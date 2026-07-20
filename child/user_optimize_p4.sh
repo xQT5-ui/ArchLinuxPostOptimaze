@@ -40,7 +40,7 @@ configure_pipewire() {
     log_message "Setting up and enabling Pipewire..."
 
     # Включение служб Pipewire
-    systemctl --user enable --now pipewire pipewire.socket pipewire-pulse wireplumber
+    #systemctl --user enable pipewire pipewire-pulse wireplumber
 
     # Создание директорий для конфигурации
     mkdir -p $HOME/.config/pipewire/pipewire.conf.d $HOME/.config/pipewire/pipewire-pulse.conf.d $HOME/.config/pipewire/client.conf.d
@@ -53,7 +53,7 @@ configure_pipewire() {
 }
 
 # Функция для оптимизации GNOME
-optimize_gnome() {
+optimize_gnome_services() {
     log_message "GNOME optimization..."
 
     # Маскирование ненужных служб GNOME
@@ -64,10 +64,9 @@ optimize_gnome() {
 configure_zsh() {
     log_message "ZSH configuration..."
 
-    cp -f ./child/files/zsh/zsh_history $HOME/.zsh_history
+    cp -f ./child/files/user/zsh/zsh_history $HOME/.zsh_history
     cp -f ./child/files/zsh/zshrc $HOME/.zshrc
     cp -f ./child/files/zsh/p10k.zsh $HOME/.p10k.zsh
-    cp -rf ./child/files/zsh/p10k-grachechkovski $HOME/.cache
 
     # Устанавливаем правильные права на файлы ZSH
     chown $USER:$USER $HOME/.zshrc $HOME/.zsh_history $HOME/.p10k.zsh
@@ -88,7 +87,7 @@ configure_papirus_folder_colors() {
 configure_fastfetch() {
     log_message "Set Fastfetch output format..."
 
-    cp -f ./child/files/fastfetch/config.jsonc $HOME/.config/fastfetch/config.jsonc
+    cp -f ./child/files/user/fastfetch/config.jsonc $HOME/.config/fastfetch/config.jsonc
 }
 
 # Функция копирования данных по LM Studio
@@ -111,7 +110,7 @@ configure_zen() {
 configure_flatpak() {
     log_message "Transfer Flatpak data..."
 
-    cp -rf ./child/files/flatpak/overrides $HOME/.local/share/flatpak/overrides
+    cp -rf ./child/files/user/flatpak/overrides $HOME/.local/share/flatpak/overrides
 }
 
 # Основная функция
@@ -119,12 +118,12 @@ main() {
     log_message "User settings optimize (Part 4)..."
 
     configure_pipewire
-    optimize_gnome
+    optimize_gnome_services
     configure_zsh
-    configure_papirus_folder_colors
+    #configure_papirus_folder_colors
     configure_fastfetch
     configure_lmstudio
-    #configure_zen
+    configure_zen
     configure_flatpak
 
     log_success "All operations have been completed successfully!"
