@@ -113,6 +113,12 @@ configure_flatpak() {
     cp -rf ./child/files/user/flatpak/overrides $HOME/.local/share/flatpak/overrides
 }
 
+configure_zed() {
+    log_message "Transfer Zed data..."
+
+    cp -f ./child/files/user/zed/settings.json $HOME/.config/zed/settings.json
+}
+
 # Основная функция
 main() {
     log_message "User settings optimize (Part 4)..."
