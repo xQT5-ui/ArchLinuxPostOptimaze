@@ -1,48 +1,48 @@
 #!/bin/bash
 
 # =====================================================
-# Скрипт для установки AUR-пакетов и настройки системы. Часть 2
+# Post Optimiztion for Arch Linux. Part 2
 # =====================================================
 
-# Включаем строгий режим для bash
-set -e  # Скрипт завершится при любой ошибке
-set -u  # Использование неопределенных переменных вызовет ошибку
+# Turn on strong mode for bash
+set -e  # Exit by any error
+set -u  # Only static variable
 
-# Цвета для вывода сообщений
+# Colors for output messages
 BLUE="\e[1;34m"
 RED="\e[1;31m"
 GREEN="\e[1;32m"
 YELLOW="\e[1;33m"
 RESET="\e[0m"
 
-# Функция для вывода информационных сообщений
+# INFO message
 log_message() {
     echo -e "${BLUE}[INFO] $1${RESET}"
 }
 
-# Функция для вывода сообщений об ошибках
+# ERROR message
 log_error() {
     echo -e "${RED}[ERROR] $1${RESET}" >&2
 }
 
-# Функция для вывода сообщений об успешном выполнении
+# SUCCESS message
 log_success() {
     echo -e "${GREEN}[SUCCESS] $1${RESET}"
 }
 
-# Функция для вывода предупреждений
+# WARNING message
 log_warning() {
     echo -e "${YELLOW}[WARNING] $1${RESET}"
 }
 
-# Проверка, что скрипт не запущен от имени root
+# Check NO superuser
 if [[ $EUID -eq 0 ]]; then
     log_error "This script should NOT be run with superuser rights"
     echo "Use: $0 without sudo"
     exit 1
 fi
 
-# Функция для установки yay
+# Install yay
 install_yay() {
     log_message "Installing yay..."
 
@@ -57,9 +57,8 @@ install_yay() {
     rm -rf $HOME/yay
 }
 
-# Функция для проверки и установки yay
+# Configure yay
 setup_yay() {
-    # Проверяем, установлен ли уже yay
     if command -v yay &> /dev/null; then
         log_message "yay is already installed"
     else
@@ -67,9 +66,7 @@ setup_yay() {
         install_yay
     fi
 
-    # Проверяем, успешно ли установился yay
     if command -v yay &> /dev/null; then
-        # Добавляем PATH в .bashrc для будущих сессий, если его там еще нет
         if ! grep -q 'export PATH="$PATH:~/.local/bin"' ~/.bashrc; then
             echo 'export PATH="$PATH:~/.local/bin"' >> ~/.bashrc
             log_message "PATH updated in ~/.bashrc"
@@ -80,7 +77,7 @@ setup_yay() {
     fi
 }
 
-# функция для установки пакета с повторными попытками
+# Repeat installs
 install_package() {
     local package=$1
     local max_attempts=3
@@ -103,14 +100,12 @@ install_package() {
     return 1
 }
 
-# Функция для установки AUR-пакетов
+# Install AUR packages
 install_aur_packages() {
     log_message "Installing packages from AUR..."
 
-    # Обновляем кэш
     yay -Sy
 
-    # Список пакетов для установки
     local packages=(
         "zsh-theme-powerlevel10k-git"
         "zsh-fast-syntax-highlighting"
@@ -129,7 +124,6 @@ install_aur_packages() {
         "lmstudio-bin"
     )
 
-    # Установка пакетов
     local failed_packages=()
     for package in "${packages[@]}"; do
         if ! install_package "$package"; then
@@ -137,7 +131,6 @@ install_aur_packages() {
         fi
     done
 
-    # Вывод информации о неудачных установках
     if [ ${#failed_packages[@]} -gt 0 ]; then
         log_error "The following packages could not be installed:"
         for package in "${failed_packages[@]}"; do
@@ -146,22 +139,20 @@ install_aur_packages() {
     fi
 }
 
-# Функция для настройки makepkg.conf
+# Configure makepkg.conf
 configure_makepkg() {
     log_message "Setting up makepkg.conf..."
 
     cp -f ./child/files/makepkg/makepkg.conf $HOME/.makepkg.conf
 }
 
-# Функция для создания дополнительных папок
+# Configure user folders
 create_directories() {
     log_message "Create additional folders..."
 
     mkdir -p $HOME/.themes $HOME/.icons $HOME"/Загрузки/Torrents" $HOME/.config/fastfetch
 
-    # Эти директории требуют sudo, поэтому обрабатываем их отдельно
     if sudo mkdir -p /media/movies /media/tvshows; then
-        # Создаем символические ссылки
         ln -sf /media/movies $HOME"/Загрузки/Torrents"
         ln -sf /media/tvshows $HOME"/Загрузки/Torrents"
     else
@@ -169,7 +160,7 @@ create_directories() {
     fi
 }
 
-# Функция для настройки полномочий пользователя
+# Configure usermod
 configure_user_permissions() {
     log_message "Setting up user permissions..."
 
@@ -182,7 +173,6 @@ configure_user_permissions() {
     fi
 }
 
-# Основная функция
 main() {
     log_message "Install AUR-packages (Part 2)..."
 
@@ -196,5 +186,4 @@ main() {
     log_message "===== END OF THE 2ND PART ====="
 }
 
-# Запуск основной функции
 main

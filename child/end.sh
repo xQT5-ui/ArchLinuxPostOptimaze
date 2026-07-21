@@ -1,68 +1,66 @@
 #!/bin/bash
 
 # =====================================================
-# Скрипт для завершающих работ по Arch Linux. Часть 5
+# Post Optimiztion for Arch Linux. Part 5
 # =====================================================
 
-# Включаем строгий режим для bash
-set -e  # Скрипт завершится при любой ошибке
-set -u  # Использование неопределенных переменных вызовет ошибку
+# Turn on strong mode for bash
+set -e  # Exit by any error
+set -u  # Only static variable
 
-# Цвета для вывода сообщений
+# Colors for output messages
 BLUE="\e[1;34m"
 RED="\e[1;31m"
 GREEN="\e[1;32m"
 YELLOW="\e[1;33m"
 RESET="\e[0m"
 
-# Функция для вывода информационных сообщений
+# INFO message
 log_message() {
     echo -e "${BLUE}[INFO] $1${RESET}"
 }
 
-# Функция для вывода сообщений об ошибках
+# ERROR message
 log_error() {
     echo -e "${RED}[ERROR] $1${RESET}" >&2
 }
 
-# Функция для вывода сообщений об успешном выполнении
+# SUCCESS message
 log_success() {
     echo -e "${GREEN}[SUCCESS] $1${RESET}"
 }
 
-# Функция для вывода предупреждений
+# WARNING message
 log_warning() {
     echo -e "${YELLOW}[WARNING] $1${RESET}"
 }
 
-# Проверка наличия прав суперпользователя
+# Check superuser
 if [[ $EUID -ne 0 ]]; then
     log_error "This script MUST be run with superuser rights"
     echo "Use: sudo $0"
     exit 1
 fi
 
-# Функция для удаления всех lib32-пакетов (актуально если всё основное ПО через Flatpak)
+# Delete lib32 packages
 delete_lib32() {
     log_message "Delete all lib32 packages..."
 
     pacman -Rs $(pacman -Qq | grep '^lib32')
 }
 
-# Функция очистки лишних пакетов
+# Delete orphans packages
 delete_old_packages() {
     log_message "Cleaning of excess packages..."
 
-    # Временно отключаем режим завершения при ошибке
     set +e
 
-    # Очистка кэша пакетов
+    # clear pacman cache
     pacman -Scc --noconfirm
     if [ $? -ne 0 ]; then
         log_warning "Failed to clear the packet cache, but continue execution"
     fi
 
-    # Удаление ненужных пакетов
     ORPHANS=$(pacman -Qtdq)
     if [ -n "$ORPHANS" ]; then
         pacman -Rscn $ORPHANS --noconfirm
@@ -73,18 +71,16 @@ delete_old_packages() {
         log_message "No unnecessary packages were found."
     fi
 
-    # Включаем режим завершения при ошибке обратно
     set -e
 }
 
-# Функция повтрного обновления initramfs и grub-загрузчик
+# Configure initramfs
 upd_init() {
     log_message "Updating initramfs..."
 
     mkinitcpio -P
 }
 
-# Основная функция
 main() {
     log_message "Delete orphans packages (Part 5)..."
 
@@ -96,5 +92,4 @@ main() {
     log_warning "Installation and optimization are complete. It is recommended to reboot the system!"
 }
 
-# Запуск основной функции
 main

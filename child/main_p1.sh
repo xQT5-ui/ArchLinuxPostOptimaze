@@ -1,84 +1,79 @@
 #!/bin/bash
 
 # =====================================================
-# Скрипт для оптимизации и настройки Arch Linux. Часть 1
+# Post Optimiztion for Arch Linux. Part 1
 # =====================================================
 
-# Включаем строгий режим для bash
-set -e  # Скрипт завершится при любой ошибке
-set -u  # Использование неопределенных переменных вызовет ошибку
+# Turn on strong mode for bash
+set -e  # Exit by any error
+set -u  # Only static variable
 
-# Цвета для вывода сообщений
+# Colors for output messages
 BLUE="\e[1;34m"
 RED="\e[1;31m"
 GREEN="\e[1;32m"
 YELLOW="\e[1;33m"
 RESET="\e[0m"
 
-# Функция для вывода информационных сообщений
+# INFO message
 log_message() {
     echo -e "${BLUE}[INFO] $1${RESET}"
 }
 
-# Функция для вывода сообщений об ошибках
+# ERROR message
 log_error() {
     echo -e "${RED}[ERROR] $1${RESET}" >&2
 }
 
-# Функция для вывода сообщений об успешном выполнении
+# SUCCESS message
 log_success() {
     echo -e "${GREEN}[SUCCESS] $1${RESET}"
 }
 
-# Функция для вывода предупреждений
+# WARNING message
 log_warning() {
     echo -e "${YELLOW}[WARNING] $1${RESET}"
 }
 
-# Функция для проверки наличия видеокарты NVIDIA
+# Check NVIDIA VRAM
 has_nvidia() {
     log_message "Checking for an NVIDIA graphics card..."
 
-    # Способ 1: Проверка через lspci
     if lspci | grep -i nvidia > /dev/null; then
         log_success "NVIDIA graphics card detected"
         return 0  # В bash 0 означает "истина" (успех)
     fi
 
-    # Способ 2: Проверка через наличие модуля ядра
     if lsmod | grep -i nvidia > /dev/null; then
         log_success "NVIDIA driver detected"
         return 0
     fi
 
     log_message "NVIDIA graphics card not detected"
-    return 1  # В bash 1 (и любое ненулевое значение) означает "ложь" (неудача)
+    return 1
 }
 
-# Глобальная переменная для хранения результата проверки
 NVIDIA_PRESENT=false
 
-# Выполняем проверку один раз и сохраняем результат
 if has_nvidia; then
     NVIDIA_PRESENT=true
 fi
 
-# Проверка наличия прав суперпользователя
+# Check superuser
 if [[ $EUID -ne 0 ]]; then
     log_error "This script must be run with superuser rights"
     echo "Use: sudo $0"
     exit 1
 fi
 
-# Функция для настройки pacman.conf
+# Configure pacman.conf
 configure_pacman() {
     log_message "Configuring the pacman.conf configuration..."
 
-    # Раскомментирование и установка Color и ParallelDownloads
     cp -f ./child/files/etc/pacman/pacman.conf /etc/pacman.conf
 }
 
-# функция для установки flatpak-пакета с повторными попытками
+# Install pacman packages
 install_pacman_package() {
     local package=$1
     local max_attempts=3
@@ -101,7 +96,7 @@ install_pacman_package() {
     return 1
 }
 
-# Функция для установки базового ПО
+# Pacman packages
 install_base_software() {
     log_message "Installing the basic software..."
 
@@ -146,7 +141,6 @@ install_base_software() {
         "intel-media-driver"
     )
 
-    # Установка пакетов
     local failed_pacmanPackages=()
     for package in "${pacmanPackages[@]}"; do
         if ! install_pacman_package "$package"; then
@@ -154,7 +148,6 @@ install_base_software() {
         fi
     done
 
-    # Вывод информации о неудачных установках
     if [ ${#failed_pacmanPackages[@]} -gt 0 ]; then
         log_error "The following pacman packages could not be installed:"
         for package in "${failed_pacmanPackages[@]}"; do
@@ -164,10 +157,9 @@ install_base_software() {
         log_success "All packages from Pacman have been successfully installed"
     fi
 
-    # Обновление кеша шрифтов
+    # Update font cache
     fc-cache -fv
 
-    # Блок для Intel + NVIDIA или другого оборудования
     if $NVIDIA_PRESENT; then
         local pacmanNVIDIA=(
             "nvidia-settings"
@@ -176,7 +168,6 @@ install_base_software() {
             "libxnvctrl"
         )
 
-        # Установка пакетов
         local failed_pacmanNVIDIA=()
         for package in "${pacmanNVIDIA[@]}"; do
             if ! install_pacman_package "$package"; then
@@ -184,7 +175,6 @@ install_base_software() {
             fi
         done
 
-        # Вывод информации о неудачных установках
         if [ ${#failed_pacmanNVIDIA[@]} -gt 0 ]; then
             log_error "The following pacman NVIDIA packages could not be installed:"
             for package in "${failed_pacmanNVIDIA[@]}"; do
@@ -196,7 +186,7 @@ install_base_software() {
     fi
 }
 
-# Функция для оптимизации GNOME
+# Delete GNOME packages
 delete_gnome_applications() {
     log_message "Optimize GNOME by removing unnecessary packages..."
 
@@ -204,7 +194,7 @@ delete_gnome_applications() {
     pacman -S --noconfirm flatpak
 }
 
-# функция для установки flatpak-пакета с повторными попытками
+# Install Flatpak packages
 install_flatpak_package() {
     local package=$1
     local max_attempts=3
@@ -227,11 +217,10 @@ install_flatpak_package() {
     return 1
 }
 
-# 4. Функция для установки Flatpak-приложений
+# Flatpak packages
 install_flatpak_apps() {
     log_message "Installing Flatpak-applications..."
 
-    #Список пакетов для установки
     local flatpakPackages=(
         "com.bitwig.BitwigStudio"
         "io.github.milkshiift.GoofCord"
@@ -283,8 +272,6 @@ install_flatpak_apps() {
         "org.gnome.meld"
     )
 
-    #flatpak install --noninteractive flathub
-    # Установка пакетов
     local failed_flatpakPackages=()
     for package in "${flatpakPackages[@]}"; do
         if ! install_flatpak_package "$package"; then
@@ -292,7 +279,6 @@ install_flatpak_apps() {
         fi
     done
 
-    # Вывод информации о неудачных установках
     if [ ${#failed_flatpakPackages[@]} -gt 0 ]; then
         log_error "The following flatpak packages could not be installed:"
         for package in "${failed_flatpakPackages[@]}"; do
@@ -305,11 +291,9 @@ install_flatpak_apps() {
     flatpak remove --unused -y
 }
 
-# Основная функция
 main() {
     log_message "Install main packages (Part 1)..."
 
-    # Вывод информации о наличии NVIDIA
     if $NVIDIA_PRESENT; then
         log_message "An NVIDIA graphics card has been detected. The appropriate settings will be applied."
     else
@@ -325,5 +309,4 @@ main() {
     log_message "===== END OF THE 1ST PART ====="
 }
 
-# Запуск основной функции
 main

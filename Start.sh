@@ -2,60 +2,51 @@
 #!/bin/bash
 
 # =====================================================
-# Скрипт постустановки и оптимизации системы
+# Post Optimiztion for Arch Linux
 # =====================================================
 #
 set -e
 
-# Цвета для вывода сообщений
+# Colors for output messages
 BLUE="\e[1;34m"
 RED="\e[1;31m"
 GREEN="\e[1;32m"
 YELLOW="\e[1;33m"
 RESET="\e[0m"
 
-# Функция для вывода информационных сообщений
+# INFO message
 log_message() {
-   echo -e "${BLUE}[INFO] $1${RESET}"
+    echo -e "${BLUE}[INFO] $1${RESET}"
 }
 
-# Функция для вывода сообщений об ошибках
+# ERROR message
 log_error() {
-   echo -e "${RED}[ERROR] $1${RESET}" >&2
+    echo -e "${RED}[ERROR] $1${RESET}" >&2
 }
 
-# Функция для вывода сообщений об успешном выполнении
+# SUCCESS message
 log_success() {
-   echo -e "${GREEN}[SUCCESS] $1${RESET}"
+    echo -e "${GREEN}[SUCCESS] $1${RESET}"
 }
 
-# Функция для вывода предупреждений
+# WARNING message
 log_warning() {
-   echo -e "${YELLOW}[WARNING] $1${RESET}"
+    echo -e "${YELLOW}[WARNING] $1${RESET}"
 }
 
-# Проверка, что скрипт не запущен от имени root
+# Check NO superuser
 if [[ $EUID -eq 0 ]]; then
     log_error "This script should NOT be run with superuser rights"
     echo "Use: $0 without sudo"
     exit 1
 fi
 
-# Функция выдачи прав на запуск скриптов
+# Configure right for executing
 add_right_running() {
     log_message "We grant the rights to run scripts..."
 
-    # Сохраняем текущую директорию
     CURRENT_DIR=$(pwd)
 
-    # Выдаём права на запуск для After_reboot.sh
-    if [ -f "./After_reboot.sh" ]; then
-        chmod +x "./After_reboot.sh"
-    else
-        log_error "The 'After_reboot.sh' file was not found in the current directory"
-    fi
-
-    # Выдаём права на запуск для скриптов в папке child
     if [ -d "./child" ]; then
         for script in ./child/*.sh; do
             if [ -f "$script" ]; then
@@ -64,11 +55,10 @@ add_right_running() {
         done
     else
         log_error "The directory './child' not found"
-        cd "$CURRENT_DIR" # Возвращаемся в исходную директорию
+        cd "$CURRENT_DIR"
         return 1
     fi
 
-    # Возвращаемся в исходную директорию
     cd "$CURRENT_DIR" || {
         log_error "Couldn't return to the original directory"
         return 1
@@ -77,14 +67,12 @@ add_right_running() {
     log_success "Scripts has right for running"
 }
 
-# Функция создания бэкапов
+# Create backups
 create_backups() {
     log_message "Creating backups..."
 
-    # Создаём структуру папок для бэкапов
     mkdir -p ./backups/security
 
-    # Массив файлов для бэкапа в корневую папку backups
     ROOT_BACKUPS=(
         "/etc/pacman.conf"
         "/etc/mkinitcpio.conf"
@@ -92,11 +80,9 @@ create_backups() {
         "/etc/fstab"
     )
 
-    # Копируем файлы в корневую папку бэкапов
     for file in "${ROOT_BACKUPS[@]}"; do
-        # Получаем только имя файла без пути
         filename=$(basename "$file")
-        # Проверяем, существует ли уже файл в папке бэкапов
+
         if [ -f "./backups/$filename" ]; then
             log_warning "The '$filename' file already exists in the backups folder, skip it"
         else
@@ -104,7 +90,6 @@ create_backups() {
         fi
     done
 
-    # Копируем остальные файлы
     if [ -f "./backups/security/limits.conf" ]; then
         log_warning "The 'limits.conf' file already exists in the backups/security folder, skip it"
     else
@@ -114,7 +99,6 @@ create_backups() {
     log_success "Backups have been created"
 }
 
-# Основная функция
 main() {
     {
         echo "=== Log strated at $(date) ==="
@@ -124,9 +108,8 @@ main() {
         create_backups
 
         log_message "Work begins on post-optimization of the system..."
-        log_warning "--> PLEASE DO NOT LEAVE BECAUSE YOU WILL NEED TO ENTER THE SUDO PASSWORD AT DIFFERENT POINTS IN TIME! <--"
+        log_warning "PLEASE DO NOT LEAVE BECAUSE YOU WILL NEED TO ENTER THE SUDO PASSWORD AT DIFFERENT POINTS IN TIME!"
 
-        # Запускаем скрипты последовательно
         sudo ./child/keyring_p0.sh && \
         sudo ./child/main_p1.sh && \
         ./child/yay_p2.sh && \
@@ -136,5 +119,4 @@ main() {
     } | tee -a ./jobs.log 2>&1
 }
 
-# Запуск основной функции
 main
