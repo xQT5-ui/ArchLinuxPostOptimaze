@@ -113,7 +113,7 @@ configure_flatpak() {
 configure_zed() {
     log_message "Transfer Zed data..."
 
-    cp -f ./child/files/user/zed/settings.json $HOME/.config/zed/settings.json
+    cp -f ./child/files/user/zed/settings.json $HOME/.var/app/dev.zed.Zed/config/zed/settings.json
 }
 
 main() {

@@ -136,7 +136,6 @@ install_base_software() {
         "fakeroot"
         "make"
         "gcc"
-        "zed"
         "intel-ucode"
         "intel-media-driver"
     )
@@ -157,7 +156,7 @@ install_base_software() {
         log_success "All packages from Pacman have been successfully installed"
     fi
 
-    # Update font cache
+    # update font cache
     fc-cache -fv
 
     if $NVIDIA_PRESENT; then
@@ -262,14 +261,15 @@ install_flatpak_apps() {
         #"org.nickvision.cavalier" # Для визуализации исходящего звука
         "it.mijorus.gearlever" # Для работы с AppImage
         "de.wwwtech.gitte"
-        #"it.fabiodistasio.AntaresSQL"
+        "it.fabiodistasio.AntaresSQL"
         "io.github.dzheremi2.lrcmake-gtk"
-        #"com.github.hydroxycarbamide.Gradience" # Надо вручную устанавливать
+        "io.github.swordpuffin.rewaita"
         "dev.bragefuglseth.Keypunch"
         "io.github.diegopvlk.Tomatillo"
         "io.gitlab.adhami3310.Impression"
         "org.gnome.Snapshot"
         "org.gnome.meld"
+        "dev.zed.Zed"
     )
 
     local failed_flatpakPackages=()
