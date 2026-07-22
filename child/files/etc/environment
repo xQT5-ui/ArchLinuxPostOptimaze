@@ -1,0 +1,14 @@
+#
+# This file is parsed by pam_env module
+#
+# Syntax: simple "KEY=VAL" pairs on separate lines
+#
+# --- Аппаратное ускорение видео (NVDEC/NVENC) ---
+LIBVA_DRIVER_NAME=nvidia
+# --- Оптимизации для игр (NVIDIA) ---
+__EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/50_mesa.json
+# Не очищать кэш шейдеров (сохраняется между сессиями)
+__GL_SHADER_DISK_CACHE_SKIP_CLEANUP=1
+#
+# При проблемах с раcкрытием окон на весь экран
+# GSK_RENDERER=cairo

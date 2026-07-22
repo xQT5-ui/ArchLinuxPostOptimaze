@@ -1,0 +1,85 @@
+# Enable Powerlevel10k instant prompt (должно быть в начале файла)
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+
+# ===== История команд
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+# Делиться историей между сессиями
+setopt sharehistory
+# Игнорировать команды, начинающиеся с пробела
+setopt histignorespace
+# Удалять дубликаты при сохранении
+setopt histsavenodups
+# Игнорировать дубликаты в истории
+setopt histignoredups
+# Не сохранять команду history в историю
+setopt histnostore
+# Показывать команду с подстановкой перед выполнением
+setopt histverify
+
+# ===== Автодополнение
+# Кэширование для ускорения
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path "$HOME/.zcompcache"
+# Инициализация автодополнения
+autoload -Uz compinit
+compinit -C -d "$HOME/.zcompdump"
+
+# ===== Переменные окружения
+# Редактор по умолчанию (измените на свой)
+export EDITOR='nano'
+export VISUAL='nano'
+
+# ===== Загрузка плагинов (с проверками)
+# Проверяем каждый плагин перед загрузкой
+if [[ -f /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme ]]; then
+	source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+else
+	echo "Warning: Powerlevel10k not found"
+fi
+
+if [[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
+	source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+	# Оптимизация производительности
+	ZSH_AUTOSUGGEST_MANUAL_REBIND=1
+else
+	echo "Warning: zsh-autosuggestions not found"
+fi
+
+if [[ -f /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh ]]; then
+	source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+	# Подсветка результатов поиска
+	zmodload zsh/terminfo
+	declare -gA key
+	key[Up]=${terminfo[kcuu1]}
+	key[Down]=${terminfo[kcud1]}
+	[[ -n "${key[Up]}" ]] && bindkey "${key[Up]}" history-substring-search-up
+	[[ -n "${key[Down]}" ]] && bindkey "${key[Down]}" history-substring-search-down
+else
+	echo "Warning: zsh-history-substring-search not found"
+fi
+
+if [[ -f /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh ]]; then
+	# fast-syntax-highlighting должен загружаться ПОСЛЕДНИМ
+	source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+else
+	echo "Warning: fast-syntax-highlighting not found"
+fi
+
+# ===== Go (с проверкой)
+if (( $+commands[go] )); then
+    export PATH="$PATH:$(go env GOPATH)/bin"
+else
+	echo "Warning: Go not found"
+fi
+
+# Применение конфигурации Powerlevel10k
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Added by LM Studio CLI (lms)
+if [[ -d "$HOME/.lmstudio/bin" ]]; then
+    export PATH="$PATH:$HOME/.lmstudio/bin"
+fi
+# End of LM Studio CLI section
+
