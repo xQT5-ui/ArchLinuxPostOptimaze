@@ -44,9 +44,8 @@ configure_pipewire() {
     mkdir -p $HOME/.config/pipewire/pipewire.conf.d $HOME/.config/pipewire/pipewire-pulse.conf.d $HOME/.config/pipewire/client.conf.d
 
     cp -f ./child/files/pipewire/10-sound.conf $HOME/.config/pipewire/pipewire.conf.d
-
-    cp /usr/share/pipewire/client.conf.avail/20-upmix.conf $HOME/.config/pipewire/pipewire-pulse.conf.d
-    cp /usr/share/pipewire/client.conf.avail/20-upmix.conf $HOME/.config/pipewire/client.conf.d
+    cp -f /usr/share/pipewire/client.conf.avail/20-upmix.conf $HOME/.config/pipewire/pipewire-pulse.conf.d/20-upmix.conf
+    cp -f /usr/share/pipewire/client.conf.avail/20-upmix.conf $HOME/.config/pipewire/client.conf.d/20-upmix.conf
 }
 
 # Configure GNOME services
@@ -89,7 +88,7 @@ configure_fastfetch() {
 configure_lmstudio() {
     log_message "Transfer LM Studio data..."
 
-    mkdir $HOME/.lmstudio
+    mkdir -p $HOME/.lmstudio
 
     cp -rf ./child/files/user/lmstudio/config-presets $HOME/.lmstudio/
     cp -rf ./child/files/user/lmstudio/conversations $HOME/.lmstudio/
@@ -99,21 +98,56 @@ configure_lmstudio() {
 configure_zen() {
     log_message "Transfer Zen data..."
 
-    cp -rf ./child/files/user/zen $HOME/.zen/
+    mkdir -p $HOME/.zen
+
+    cp -r ./child/files/user/zen/* $HOME/.zen/
 }
 
 # Configure Flatpak datas
 configure_flatpak() {
     log_message "Transfer Flatpak data..."
 
-    cp -rf ./child/files/user/flatpak/overrides $HOME/.local/share/flatpak/overrides
+    mkdir -p $HOME/.local/share/flatpak/overrides
+
+    cp -r ./child/files/user/flatpak/overrides/* $HOME/.local/share/flatpak/overrides/
 }
 
 # Configure Zed data
 configure_zed() {
     log_message "Transfer Zed data..."
 
-    cp -f ./child/files/user/zed/settings.json $HOME/.var/app/dev.zed.Zed/config/zed/settings.json
+    mkdir -p $HOME/.config/zed
+
+    cp -f ./child/files/user/zed/settings.json $HOME/.config/zed/settings.json
+}
+
+# Configure MangoHud
+configure_mangohud() {
+    log_message "Transfer MangoHud data..."
+
+    mkdir -p $HOME/.config/MangoHud
+
+    cp -f ./child/files/user/MangoHud/MangoHud.conf $HOME/.config/MangoHud/MangoHud.conf
+}
+
+# Configure EasyEffects
+configure_easyeffects() {
+    log_message "Transfer EasyEffects data..."
+
+    mkdir -p $HOME/.var/app/com.github.wwmm.easyeffects/data
+
+    cp -r ./child/files/user/easyeffects/* $HOME/.var/app/com.github.wwmm.easyeffects/data/
+}
+
+# Configure GNOME extentions
+configure_gnome_exts() {
+    log_message "Transfer GNOME extentions data..."
+
+    mkdir -p $HOME/.local/share/gnome-shell/extensions
+
+    cp -r ./child/files/user/gnomeexts/extensions/* $HOME/.local/share/gnome-shell/extensions/
+    cp -f ./child/files/user/gnomeexts/dconf/user $HOME/.config/dconf/user
+    dconf load /org/gnome/shell/extensions/ < ./child/files/user/gnomeexts/gnome-extensions-settings.txt
 }
 
 main() {
@@ -127,6 +161,9 @@ main() {
     configure_lmstudio
     configure_zen
     configure_flatpak
+    configure_mangohud
+    configure_easyeffects
+    configure_gnome_exts
 
     log_success "All operations have been completed successfully!"
     log_message "===== END OF THE 4TH PART ====="

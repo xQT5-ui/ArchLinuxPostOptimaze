@@ -138,6 +138,8 @@ install_base_software() {
         "gcc"
         "intel-ucode"
         "intel-media-driver"
+        "gnome-shell-extensions"
+        "zed"
     )
 
     local failed_pacmanPackages=()
@@ -189,7 +191,7 @@ install_base_software() {
 delete_gnome_applications() {
     log_message "Optimize GNOME by removing unnecessary packages..."
 
-    pacman -Rnsc --noconfirm gnome-connections gnome-software gnome-music gnome-maps gnome-contacts gnome-system-monitor gnome-tour gnome-weather loupe epiphany yelp decibels vim malcontent evince sushi baobab gvfs-onedrive gnome-backgrounds showtime papers snapshot
+    pacman -Rnsc --noconfirm gnome-connections gnome-software gnome-music gnome-maps gnome-contacts gnome-system-monitor gnome-tour gnome-weather loupe epiphany yelp decibels vim malcontent evince sushi baobab gvfs-onedrive gnome-backgrounds showtime papers snapshot gnome-calculator
     pacman -S --noconfirm flatpak
 }
 
@@ -258,7 +260,7 @@ install_flatpak_apps() {
         "com.valvesoftware.Steam"
         "org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/25.08"
         "app.devsuite.Ptyxis"
-        #"org.nickvision.cavalier" # Для визуализации исходящего звука
+        "org.nickvision.cavalier" # Для визуализации исходящего звука
         "it.mijorus.gearlever" # Для работы с AppImage
         "de.wwwtech.gitte"
         "it.fabiodistasio.AntaresSQL"
@@ -269,7 +271,6 @@ install_flatpak_apps() {
         "io.gitlab.adhami3310.Impression"
         "org.gnome.Snapshot"
         "org.gnome.meld"
-        "dev.zed.Zed"
     )
 
     local failed_flatpakPackages=()
