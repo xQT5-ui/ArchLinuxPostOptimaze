@@ -116,9 +116,9 @@ configure_flatpak() {
 configure_zed() {
     log_message "Transfer Zed data..."
 
-    mkdir -p $HOME/.var/app/dev.zed.Zed/config/zed
+    mkdir -p $HOME/.config/zed
 
-    cp -f ./child/files/user/zed/settings.json $HOME/.var/app/dev.zed.Zed/config/zed/settings.json
+    cp -f ./child/files/user/zed/settings.json $HOME/.config/zed/settings.json
 }
 
 # Configure MangoHud
