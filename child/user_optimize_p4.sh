@@ -150,6 +150,19 @@ configure_gnome_exts() {
     dconf load /org/gnome/shell/extensions/ < ./child/files/user/gnomeexts/gnome-extensions-settings.txt
 }
 
+# Configure Git config
+configure_git_data() {
+    log_message "Transfer Git data..."
+
+    mkdir -p $HOME/.ssh
+
+    cp -f ./child/files/user/git/gitconfig $HOME/.gitconfig
+    cp -r ./child/files/user/git/ssh/* $HOME/.ssh/
+
+    eval "$(ssh-agent -s)"
+    ssh-add ~/.ssh/id_ed25519
+}
+
 main() {
     log_message "User settings optimize (Part 4)..."
 
@@ -164,6 +177,7 @@ main() {
     configure_mangohud
     configure_easyeffects
     configure_gnome_exts
+    configure_git_data
 
     log_success "All operations have been completed successfully!"
     log_message "===== END OF THE 4TH PART ====="
