@@ -271,6 +271,7 @@ install_flatpak_apps() {
         "io.gitlab.adhami3310.Impression"
         "org.gnome.Snapshot"
         "org.gnome.meld"
+        "com.rafaelmardojai.Blanket"
     )
 
     local failed_flatpakPackages=()

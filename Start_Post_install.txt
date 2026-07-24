@@ -1,2 +1,3 @@
+chmod +x ./CollectUserData.sh && \
 chmod +x ./Start.sh && \
 ./Start.sh
