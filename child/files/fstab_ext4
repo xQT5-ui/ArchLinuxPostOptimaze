@@ -3,4 +3,4 @@
 
 # <file system> <dir> <type> <options> <dump> <pass>
 # /dev/nvme0n1p2
-UUID=1f1fe532-b15a-4f83-b947-dcfe6349f5d4	/         	ext4     	defaults,noatime,commit=55	0 0
+UUID=1f1fe532-b15a-4f83-b947-dcfe6349f5d4	/         	ext4     	rw,noatime,commit=8	0 0
