@@ -59,7 +59,7 @@ optimize_gnome_services() {
 configure_zsh() {
     log_message "ZSH configuration..."
 
-    cp -f ./child/files/user/zsh/zsh_history $HOME/.zsh_history
+    cp -f ./child/files/zsh/zsh_history $HOME/.zsh_history
     cp -f ./child/files/zsh/zshrc $HOME/.zshrc
     cp -f ./child/files/zsh/p10k.zsh $HOME/.p10k.zsh
 
