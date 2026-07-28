@@ -43,7 +43,7 @@ configure_pipewire() {
 
     mkdir -p $HOME/.config/pipewire/pipewire.conf.d $HOME/.config/pipewire/pipewire-pulse.conf.d $HOME/.config/pipewire/client.conf.d
 
-    cp -f ./child/files/pipewire/10-sound.conf $HOME/.config/pipewire/pipewire.conf.d
+    cp -f ./child/files/pipewire/10-sound.conf $HOME/.config/pipewire/pipewire.conf.d/10-sound.conf
     cp -f /usr/share/pipewire/client.conf.avail/20-upmix.conf $HOME/.config/pipewire/pipewire-pulse.conf.d/20-upmix.conf
     cp -f /usr/share/pipewire/client.conf.avail/20-upmix.conf $HOME/.config/pipewire/client.conf.d/20-upmix.conf
 }
@@ -158,6 +158,10 @@ configure_git_data() {
 
     cp -f ./child/files/user/git/gitconfig $HOME/.gitconfig
     cp -r ./child/files/user/git/ssh/* $HOME/.ssh/
+    
+    chmod 700 ~/.ssh
+    chmod 600 ~/.ssh/id_ed25519
+    chmod 644 ~/.ssh/id_ed25519.pub
 
     eval "$(ssh-agent -s)"
     ssh-add ~/.ssh/id_ed25519
@@ -174,6 +178,7 @@ main() {
     configure_lmstudio
     configure_zen
     configure_flatpak
+    configure_zed
     configure_mangohud
     configure_easyeffects
     configure_gnome_exts
