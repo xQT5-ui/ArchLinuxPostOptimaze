@@ -221,6 +221,11 @@ configure_firewall() {
 
     # Happ and etc
     firewall-cmd --permanent --zone=trusted --add-interface=tun0
+    # Plex Media Server
+    cp -f ./child/files/etc/firewalld/plex.xml /etc/firewalld/services/plex.xml
+    firewall-cmd --add-service=plex --permanent
+    # LM Studio
+    firewall-cmd --permanent --add-port=1234/tcp
 }
 
 main() {

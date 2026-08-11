@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>Plex</short>
+  <description> Plex Media Server (PMS) is the back-end media server component of Plex.</description>
+  <port protocol="tcp" port="32400"/>
+  <port protocol="udp" port="1900"/>
+  <port protocol="udp" port="5353"/>
+  <port protocol="udp" port="32410-32414"/>
+  <port protocol="tcp" port="32469"/> 
+</service>
