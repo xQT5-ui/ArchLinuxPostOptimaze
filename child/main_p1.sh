@@ -118,11 +118,11 @@ install_base_software() {
         "gdu"
         "duf"
         #"wireguard-tools"
+        "v2ray"
         "power-profiles-daemon"
         "alsa-utils"
         "pacman-contrib"
         "inxi"
-        "v2ray"
         "exfat-utils"
         "file-roller"
         "papirus-icon-theme"
@@ -230,7 +230,7 @@ install_flatpak_apps() {
         "io.bassi.Amberol"
         "com.github.tchx84.Flatseal"
         "com.mattjakeman.ExtensionManager"
-        "com.transmissionbt.Transmission"
+        "de.haeckerfelix.Fragments"
         "com.usebottles.bottles"
         "com.vysp3r.ProtonPlus"
         "io.github.diegopvlk.Cine"
@@ -263,7 +263,7 @@ install_flatpak_apps() {
         "org.nickvision.cavalier" # Для визуализации исходящего звука
         "it.mijorus.gearlever" # Для работы с AppImage
         "de.wwwtech.gitte"
-        "it.fabiodistasio.AntaresSQL"
+        "io.github.anil_e.Codd"
         "io.github.dzheremi2.lrcmake-gtk"
         "io.github.swordpuffin.rewaita"
         "dev.bragefuglseth.Keypunch"
@@ -272,6 +272,7 @@ install_flatpak_apps() {
         "org.gnome.Snapshot"
         "org.gnome.meld"
         "com.rafaelmardojai.Blanket"
+        "io.github.Foldex.AdwSteamGtk"
     )
 
     local failed_flatpakPackages=()
