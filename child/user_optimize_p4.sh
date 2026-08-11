@@ -158,13 +158,21 @@ configure_git_data() {
 
     cp -f ./child/files/user/git/gitconfig $HOME/.gitconfig
     cp -r ./child/files/user/git/ssh/* $HOME/.ssh/
-    
+
     chmod 700 ~/.ssh
     chmod 600 ~/.ssh/id_ed25519
     chmod 644 ~/.ssh/id_ed25519.pub
 
     eval "$(ssh-agent -s)"
     ssh-add ~/.ssh/id_ed25519
+}
+
+# Configure Happ config
+configure_happ() {
+    log_message "Transfer Happ data..."
+
+    mkdir -p $HOME/.config/Happ
+    cp -r /child/files/user/happ $HOME/.config/Happ
 }
 
 main() {
@@ -183,6 +191,7 @@ main() {
     configure_easyeffects
     configure_gnome_exts
     configure_git_data
+    configure_happ
 
     log_success "All operations have been completed successfully!"
     log_message "===== END OF THE 4TH PART ====="

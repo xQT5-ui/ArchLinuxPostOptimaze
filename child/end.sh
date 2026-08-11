@@ -55,6 +55,8 @@ delete_old_packages() {
 
     set +e
 
+    pacman -Rns gnome-console --noconfirm
+
     # clear pacman cache
     pacman -Scc --noconfirm
     if [ $? -ne 0 ]; then
