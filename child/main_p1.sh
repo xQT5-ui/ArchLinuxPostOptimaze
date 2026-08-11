@@ -118,7 +118,7 @@ install_base_software() {
         "gdu"
         "duf"
         #"wireguard-tools"
-        "v2ray"
+        #"v2ray"
         "power-profiles-daemon"
         "alsa-utils"
         "pacman-contrib"

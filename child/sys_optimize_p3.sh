@@ -215,6 +215,14 @@ configure_sched() {
     systemctl enable --now scx_loader.service
 }
 
+# Configure firewall rights
+configure_firewall() {
+    log_message "Setting up firewall rights..."
+
+    # Happ and etc
+    firewall-cmd --permanent --zone=trusted --add-interface=tun0
+}
+
 main() {
     log_message "System optimizations (Part 3)..."
 
@@ -236,6 +244,7 @@ main() {
     configure_realtime_audio
     configure_earlyoom
     configure_sched
+    configure_firewall
 
     log_success "All operations have been completed successfully!"
     log_message "===== END OF THE 3D PART ====="
