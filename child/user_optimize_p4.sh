@@ -70,10 +70,10 @@ configure_zsh() {
 configure_papirus_folder_colors() {
     log_message "Set Papirus folder colors..."
 
-     if command -v papirus-folders > /dev/null 2>&1; then
+    if command -v papirus-folders > /dev/null 2>&1; then
         papirus-folders -C cyan --theme Papirus-Dark
     else
-        log_warning "WARNING: papirus-folders not found in PATH. Skipping configuration."
+        log_warning "papirus-folders not found in PATH. Skipping configuration."
     fi
 }
 

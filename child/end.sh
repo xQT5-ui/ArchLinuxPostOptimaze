@@ -70,7 +70,7 @@ delete_old_packages() {
             log_warning "It was not possible to delete some unnecessary packages, but we continue to execute"
         fi
     else
-        log_message "No unnecessary packages were found."
+        log_warning "No unnecessary packages were found."
     fi
 
     set -e

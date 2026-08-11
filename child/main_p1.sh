@@ -300,7 +300,7 @@ main() {
     if $NVIDIA_PRESENT; then
         log_message "An NVIDIA graphics card has been detected. The appropriate settings will be applied."
     else
-        log_message "No NVIDIA graphics card detected. NVIDIA settings will be skipped."
+        log_warning "No NVIDIA graphics card detected. NVIDIA settings will be skipped."
     fi
 
     configure_pacman

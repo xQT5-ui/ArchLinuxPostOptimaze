@@ -98,7 +98,7 @@ configure_wayland() {
 
     if $NVIDIA_PRESENT; then
         cp -f ./child/files/etc/environment /etc/environment
-   fi
+    fi
 }
 
 # Configure Plex Media Server
@@ -228,13 +228,24 @@ configure_firewall() {
     firewall-cmd --permanent --add-port=1234/tcp
 }
 
+# Configure ntsync
+configure_ntsync() {
+    log_message "Setting up NTsync..."
+
+    if lsmod | grep -q ntsync; then
+        log_warning "NTSync module is already on"
+    else
+        pacman -S ntsync-autoload --noconfirm
+    fi
+}
+
 main() {
     log_message "System optimizations (Part 3)..."
 
     if $NVIDIA_PRESENT; then
         log_message "An NVIDIA graphics card has been detected. The appropriate settings will be applied."
     else
-        log_message "No NVIDIA graphics card detected. NVIDIA settings will be skipped."
+        log_warning "No NVIDIA graphics card detected. NVIDIA settings will be skipped."
     fi
 
     configure_initramfs
@@ -250,6 +261,7 @@ main() {
     configure_earlyoom
     configure_sched
     configure_firewall
+    configure_ntsync
 
     log_success "All operations have been completed successfully!"
     log_message "===== END OF THE 3D PART ====="
