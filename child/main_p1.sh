@@ -98,7 +98,7 @@ install_pacman_package() {
 
 # Pacman packages
 install_base_software() {
-    log_message "Installing the basic software..."
+    log_message "Installing native apps..."
 
     pacman -Syu --noconfirm
 
@@ -114,11 +114,9 @@ install_base_software() {
         "zsh-history-substring-search"
         "xorg-xrandr"
         "go"
-        #"gufw"
         "gdu"
         "duf"
         #"wireguard-tools"
-        #"v2ray"
         "power-profiles-daemon"
         "alsa-utils"
         "pacman-contrib"
@@ -220,13 +218,13 @@ install_flatpak_package() {
 
 # Flatpak packages
 install_flatpak_apps() {
-    log_message "Installing Flatpak-applications..."
+    log_message "Installing Flatpak apps..."
 
     local flatpakPackages=(
         "com.bitwig.BitwigStudio"
         "io.github.milkshiift.GoofCord"
-        "com.github.johnfactotum.Foliate"
-        "art.fatdawlf.Piccolo"
+        "com.andr2i.scrolex"
+        "com.github.finefindus.eyedropper"
         "io.bassi.Amberol"
         "com.github.tchx84.Flatseal"
         "com.mattjakeman.ExtensionManager"
@@ -246,7 +244,7 @@ install_flatpak_apps() {
         "org.torproject.torbrowser-launcher"
         "org.gtk.Gtk3theme.adw-gtk3-dark"
         "com.obsproject.Studio"
-        "net.nokyan.Resources"
+        "io.missioncenter.MissionCenter"
         "com.github.PintaProject.Pinta"
         "org.gnome.Calculator"
         "org.gnome.Loupe"
@@ -260,19 +258,16 @@ install_flatpak_apps() {
         "com.valvesoftware.Steam"
         "org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/25.08"
         "app.devsuite.Ptyxis"
-        "org.nickvision.cavalier" # Для визуализации исходящего звука
+        #"org.nickvision.cavalier" # Для визуализации исходящего звука
         "it.mijorus.gearlever" # Для работы с AppImage
         "de.wwwtech.gitte"
         "io.github.anil_e.Codd"
         "io.github.dzheremi2.lrcmake-gtk"
-        "io.github.swordpuffin.rewaita"
         "dev.bragefuglseth.Keypunch"
         "io.github.diegopvlk.Tomatillo"
         "io.gitlab.adhami3310.Impression"
         "org.gnome.Snapshot"
-        "org.gnome.meld"
         "com.rafaelmardojai.Blanket"
-        "io.github.Foldex.AdwSteamGtk"
     )
 
     local failed_flatpakPackages=()
