@@ -122,25 +122,10 @@ configure_system_services() {
 
     cp -f ./child/files/etc/systemd/zram-generator.conf /etc/systemd/zram-generator.conf
 
-    log_message "Creating a v2raya service configuration..."
-    cat << EOF > /etc/systemd/system/v2raya.service
-[Unit]
-Description=Proxy v2rayA Service
-After=network.target
-
-[Service]
-Type=simple
-ExecStart=/usr/bin/v2raya
-Restart=on-failure
-
-[Install]
-WantedBy=multi-user.target
-EOF
-
     # nvidia-powerd -> only for >= RTX 40xx
     # cronie.service -> only for BTRFS
     # irqbalance ananicy-cpp systemd-oomd
-    for service in bluetooth.service v2raya.service power-profiles-daemon earlyoom paccache.timer; do
+    for service in bluetooth.service power-profiles-daemon earlyoom paccache.timer v2raya; do
         if systemctl list-unit-files | grep -q "^${service}"; then
             systemctl enable ${service}
         else
@@ -148,7 +133,7 @@ EOF
         fi
     done
 
-    systemctl start bluetooth.service v2raya.service
+    systemctl start bluetooth.service v2raya
 
     # clear pacman cache
     if systemctl list-timers | grep -q pacman-cleaner.timer; then
@@ -219,7 +204,7 @@ configure_sched() {
 configure_firewall() {
     log_message "Setting up firewall rights..."
 
-    # Happ and etc
+    # v2rayA
     firewall-cmd --permanent --zone=trusted --add-interface=tun0
     # Plex Media Server
     cp -f ./child/files/etc/firewalld/plex.xml /etc/firewalld/services/plex.xml

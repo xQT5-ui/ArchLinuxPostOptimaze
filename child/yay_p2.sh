@@ -116,13 +116,12 @@ install_aur_packages() {
         "plex-media-server"
         "nautilus-admin-gtk4"
         #"nautilus-open-any-terminal"
-        #"v2raya"
+        "v2raya-bin"
         #"ttf-ms-fonts"
         #"mkinitcpio-firmware"
         #"cachyos-ananicy-rules-git"
         "xpadneo-dkms" # Для современной поддержки контроллеров
         "lmstudio-bin"
-        "happ-desktop-bin"
     )
 
     local failed_packages=()
