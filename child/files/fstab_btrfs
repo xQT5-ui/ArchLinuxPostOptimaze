@@ -16,3 +16,6 @@ UUID=1f1fe532-b15a-4f83-b947-dcfe6349f5d4	/var/log  	btrfs     	rw,noatime,compr
 
 # /dev/nvme0n1p1
 UUID=0F1B-EA88      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
+
+# swap
+/swapfile none swap defaults 0 0

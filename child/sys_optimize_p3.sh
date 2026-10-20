@@ -93,7 +93,7 @@ configure_sysctl() {
 }
 
 # Configure environments
-configure_wayland() {
+configure_envs() {
     log_message "Setting up environment variables..."
 
     if $NVIDIA_PRESENT; then
@@ -120,7 +120,8 @@ configure_system_services() {
 
     systemctl daemon-reload
 
-    cp -f ./child/files/etc/systemd/zram-generator.conf /etc/systemd/zram-generator.conf
+    # zram without the SWAP!
+    #cp -f ./child/files/etc/systemd/zram-generator.conf /etc/systemd/zram-generator.conf
 
     # nvidia-powerd -> only for >= RTX 40xx
     # cronie.service -> only for BTRFS
@@ -224,6 +225,19 @@ configure_ntsync() {
     fi
 }
 
+# Configure swap
+configure_swap() {
+    log_message "Setting up Swap..."
+
+    fallocate -l 8G /swapfile
+    chmod 600 /swapfile
+    # for BTRFS
+    #chattr +C /swapfile
+    mkswap /swapfile
+    swapon /swapfile
+    printf "\n/swapfile none swap defaults 0 0\n" >> /etc/fstab
+}
+
 main() {
     log_message "System optimizations (Part 3)..."
 
@@ -236,7 +250,7 @@ main() {
     configure_initramfs
     configure_bootloader
     configure_sysctl
-    configure_wayland
+    configure_envs
     configure_plex
     configure_system_services
     configure_nvidia
@@ -247,6 +261,7 @@ main() {
     configure_sched
     configure_firewall
     configure_ntsync
+    configure_swap
 
     log_success "All operations have been completed successfully!"
     log_message "===== END OF THE 3D PART ====="
