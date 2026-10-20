@@ -104,7 +104,7 @@ install_package() {
 install_aur_packages() {
     log_message "Installing packages from AUR..."
 
-    yay -Sy
+    yay -Syu
 
     local packages=(
         "zsh-theme-powerlevel10k-git"
@@ -120,9 +120,17 @@ install_aur_packages() {
         #"ttf-ms-fonts"
         #"mkinitcpio-firmware"
         #"cachyos-ananicy-rules-git"
-        "xpadneo-dkms" # Для современной поддержки контроллеров
+        # Для современной поддержки контроллеров
+        "xpadneo-dkms"
         "lmstudio-bin"
     )
+
+    if $GNOME; then
+        packages+=(
+            "pkgconf"
+            "gnome-rounded-blur"
+        )
+    fi
 
     local failed_packages=()
     for package in "${packages[@]}"; do

@@ -41,7 +41,8 @@ has_nvidia() {
 
     if lspci | grep -i nvidia > /dev/null; then
         log_success "NVIDIA graphics card detected"
-        return 0  # В bash 0 означает "истина" (успех)
+        # В bash 0 означает "истина" (успех)
+        return 0
     fi
 
     if lsmod | grep -i nvidia > /dev/null; then
@@ -49,14 +50,43 @@ has_nvidia() {
         return 0
     fi
 
-    log_message "NVIDIA graphics card not detected"
     return 1
 }
 
-NVIDIA_PRESENT=false
+has_gnome() {
+    log_message "Checking for an GNOME..."
+
+    if pacman -Q gnome-shell > /dev/null 2>&1; then
+        log_success "GNOME detected"
+        return 0
+    fi
+
+    return 1
+}
+
+has_mangowm() {
+    log_message "Checking for an MangoWM..."
+
+    if pacman -Q mangowm > /dev/null 2>&1; then
+        log_success "MangoWM detected"
+        return 0
+    fi
+
+    return 1
+}
+
+export NVIDIA=false
+export GNOME=false
+export MANGOWM=false
 
 if has_nvidia; then
-    NVIDIA_PRESENT=true
+    NVIDIA=true
+fi
+
+if has_gnome; then
+    GNOME=true
+else if has_mangowm; then
+    MANGOWM=true
 fi
 
 # Check superuser
@@ -136,9 +166,12 @@ install_base_software() {
         "gcc"
         "intel-ucode"
         "intel-media-driver"
-        "gnome-shell-extensions"
         "zed"
     )
+
+    if $GNOME; then
+        pacmanPackages+=("gnome-shell-extensions")
+    fi
 
     local failed_pacmanPackages=()
     for package in "${pacmanPackages[@]}"; do
@@ -159,7 +192,7 @@ install_base_software() {
     # update font cache
     fc-cache -fv
 
-    if $NVIDIA_PRESENT; then
+    if $NVIDIA; then
         local pacmanNVIDIA=(
             "nvidia-settings"
             "opencl-nvidia"
@@ -187,10 +220,12 @@ install_base_software() {
 
 # Delete GNOME packages
 delete_gnome_applications() {
-    log_message "Optimize GNOME by removing unnecessary packages..."
+    if $GNOME; then
+        log_message "Optimize GNOME by removing unnecessary packages..."
 
-    pacman -Rnsc --noconfirm gnome-connections gnome-software gnome-music gnome-maps gnome-contacts gnome-system-monitor gnome-tour gnome-weather loupe epiphany yelp decibels vim malcontent evince sushi baobab gvfs-onedrive gnome-backgrounds showtime papers snapshot gnome-calculator
-    pacman -S --noconfirm flatpak
+        pacman -Rnsc --noconfirm gnome-connections gnome-software gnome-music gnome-maps gnome-contacts gnome-system-monitor gnome-tour gnome-weather loupe epiphany yelp decibels vim malcontent evince sushi baobab gvfs-onedrive gnome-backgrounds showtime papers snapshot gnome-calculator
+        pacman -S --noconfirm flatpak
+    fi
 }
 
 # Install Flatpak packages
@@ -291,12 +326,6 @@ install_flatpak_apps() {
 
 main() {
     log_message "Install main packages (Part 1)..."
-
-    if $NVIDIA_PRESENT; then
-        log_message "An NVIDIA graphics card has been detected. The appropriate settings will be applied."
-    else
-        log_warning "No NVIDIA graphics card detected. NVIDIA settings will be skipped."
-    fi
 
     configure_pacman
     install_base_software
