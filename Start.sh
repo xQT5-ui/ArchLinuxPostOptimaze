@@ -1,9 +1,7 @@
 #!/bin/bash
 
-# =====================================================
-# Post Optimiztion for Arch Linux
-# =====================================================
-#
+# Turn on strong mode for bash
+#exit by any error
 set -e
 
 # Colors for output messages
@@ -13,22 +11,18 @@ GREEN="\e[1;32m"
 YELLOW="\e[1;33m"
 RESET="\e[0m"
 
-# INFO message
 log_message() {
     echo -e "${BLUE}[INFO] $1${RESET}"
 }
 
-# ERROR message
 log_error() {
     echo -e "${RED}[ERROR] $1${RESET}" >&2
 }
 
-# SUCCESS message
 log_success() {
     echo -e "${GREEN}[SUCCESS] $1${RESET}"
 }
 
-# WARNING message
 log_warning() {
     echo -e "${YELLOW}[WARNING] $1${RESET}"
 }
@@ -66,7 +60,6 @@ add_right_running() {
     log_success "Scripts has right for running"
 }
 
-# Create backups
 create_backups() {
     log_message "Creating backups..."
 
@@ -97,6 +90,60 @@ create_backups() {
 
     log_success "Backups have been created"
 }
+
+# Check NVIDIA VRAM
+has_nvidia() {
+    log_message "Checking for an NVIDIA graphics card..."
+
+    if lspci | grep -i nvidia > /dev/null; then
+        log_success "NVIDIA graphics card detected"
+        # В bash 0 означает "истина" (успех)
+        return 0
+    fi
+
+    if lsmod | grep -i nvidia > /dev/null; then
+        log_success "NVIDIA driver detected"
+        return 0
+    fi
+
+    return 1
+}
+
+has_gnome() {
+    log_message "Checking for an GNOME..."
+
+    if pacman -Q gnome-shell > /dev/null 2>&1; then
+        log_success "GNOME detected"
+        return 0
+    fi
+
+    return 1
+}
+
+has_mangowm() {
+    log_message "Checking for an MangoWM..."
+
+    if pacman -Q mangowm > /dev/null 2>&1; then
+        log_success "MangoWM detected"
+        return 0
+    fi
+
+    return 1
+}
+
+export NVIDIA=false
+export GNOME=false
+export MANGOWM=flase
+
+if has_nvidia; then
+    NVIDIA=true
+fi
+
+if has_gnome; then
+    GNOME=true
+else
+    MANGOWM=true
+fi
 
 main() {
     {

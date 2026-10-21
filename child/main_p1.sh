@@ -1,12 +1,10 @@
 #!/bin/bash
 
-# =====================================================
-# Post Optimiztion for Arch Linux. Part 1
-# =====================================================
-
 # Turn on strong mode for bash
-set -e  # Exit by any error
-set -u  # Only static variable
+#exit by any error
+set -e
+#only static variable
+set -u
 
 # Colors for output messages
 BLUE="\e[1;34m"
@@ -15,79 +13,21 @@ GREEN="\e[1;32m"
 YELLOW="\e[1;33m"
 RESET="\e[0m"
 
-# INFO message
 log_message() {
     echo -e "${BLUE}[INFO] $1${RESET}"
 }
 
-# ERROR message
 log_error() {
     echo -e "${RED}[ERROR] $1${RESET}" >&2
 }
 
-# SUCCESS message
 log_success() {
     echo -e "${GREEN}[SUCCESS] $1${RESET}"
 }
 
-# WARNING message
 log_warning() {
     echo -e "${YELLOW}[WARNING] $1${RESET}"
 }
-
-# Check NVIDIA VRAM
-has_nvidia() {
-    log_message "Checking for an NVIDIA graphics card..."
-
-    if lspci | grep -i nvidia > /dev/null; then
-        log_success "NVIDIA graphics card detected"
-        # В bash 0 означает "истина" (успех)
-        return 0
-    fi
-
-    if lsmod | grep -i nvidia > /dev/null; then
-        log_success "NVIDIA driver detected"
-        return 0
-    fi
-
-    return 1
-}
-
-has_gnome() {
-    log_message "Checking for an GNOME..."
-
-    if pacman -Q gnome-shell > /dev/null 2>&1; then
-        log_success "GNOME detected"
-        return 0
-    fi
-
-    return 1
-}
-
-has_mangowm() {
-    log_message "Checking for an MangoWM..."
-
-    if pacman -Q mangowm > /dev/null 2>&1; then
-        log_success "MangoWM detected"
-        return 0
-    fi
-
-    return 1
-}
-
-export NVIDIA=false
-export GNOME=false
-export MANGOWM=false
-
-if has_nvidia; then
-    NVIDIA=true
-fi
-
-if has_gnome; then
-    GNOME=true
-else if has_mangowm; then
-    MANGOWM=true
-fi
 
 # Check superuser
 if [[ $EUID -ne 0 ]]; then
@@ -96,14 +36,13 @@ if [[ $EUID -ne 0 ]]; then
     exit 1
 fi
 
-# Configure pacman.conf
 configure_pacman() {
     log_message "Configuring the pacman.conf configuration..."
 
     cp -f ./child/files/etc/pacman/pacman.conf /etc/pacman.conf
 }
 
-# Install pacman packages
+# Wrapper for installing pacman packages
 install_pacman_package() {
     local package=$1
     local max_attempts=3
@@ -126,8 +65,7 @@ install_pacman_package() {
     return 1
 }
 
-# Pacman packages
-install_base_software() {
+install_base_apps() {
     log_message "Installing native apps..."
 
     pacman -Syu --noconfirm
@@ -171,6 +109,13 @@ install_base_software() {
 
     if $GNOME; then
         pacmanPackages+=("gnome-shell-extensions")
+    else
+        pacmanPackages+=(
+            "mangowm"
+            "noctalia"
+            "greetd"
+            "noctalia-greeter"
+        )
     fi
 
     local failed_pacmanPackages=()
@@ -218,7 +163,6 @@ install_base_software() {
     fi
 }
 
-# Delete GNOME packages
 delete_gnome_applications() {
     if $GNOME; then
         log_message "Optimize GNOME by removing unnecessary packages..."
@@ -228,7 +172,7 @@ delete_gnome_applications() {
     fi
 }
 
-# Install Flatpak packages
+# Wrapper for installing Flatpak packages
 install_flatpak_package() {
     local package=$1
     local max_attempts=3
@@ -251,7 +195,6 @@ install_flatpak_package() {
     return 1
 }
 
-# Flatpak packages
 install_flatpak_apps() {
     log_message "Installing Flatpak apps..."
 
@@ -328,7 +271,7 @@ main() {
     log_message "Install main packages (Part 1)..."
 
     configure_pacman
-    install_base_software
+    install_base_apps
     install_flatpak_apps
     delete_gnome_applications
 

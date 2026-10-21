@@ -1,12 +1,10 @@
 #!/bin/bash
 
-# =====================================================
-# Post Optimiztion for Arch Linux. Part 3
-# =====================================================
-
 # Turn on strong mode for bash
-set -e  # Exit by any error
-set -u  # Only static variable
+#exit by any error
+set -e
+#only static variable
+set -u
 
 # Colors for output messages
 BLUE="\e[1;34m"
@@ -15,22 +13,18 @@ GREEN="\e[1;32m"
 YELLOW="\e[1;33m"
 RESET="\e[0m"
 
-# INFO message
 log_message() {
     echo -e "${BLUE}[INFO] $1${RESET}"
 }
 
-# ERROR message
 log_error() {
     echo -e "${RED}[ERROR] $1${RESET}" >&2
 }
 
-# SUCCESS message
 log_success() {
     echo -e "${GREEN}[SUCCESS] $1${RESET}"
 }
 
-# WARNING message
 log_warning() {
     echo -e "${YELLOW}[WARNING] $1${RESET}"
 }
@@ -42,14 +36,12 @@ if [[ $EUID -ne 0 ]]; then
     exit 1
 fi
 
-# Configure initramfs
 configure_initramfs() {
     log_message "Configuring initramfs images..."
 
     cp -f ./child/files/etc/mkinitcpio.conf /etc/mkinitcpio.conf
 }
 
-# Configure bootloader
 configure_bootloader() {
     log_message "Configuring the boot loader..."
 
@@ -64,7 +56,6 @@ configure_sysctl() {
     cp -f ./child/files/etc/sysctl.d/99-sysctl.conf /etc/sysctl.d/99-sysctl.conf
 }
 
-# Configure environments
 configure_envs() {
     if $NVIDIA; then
         log_message "Setting up environment variables..."
@@ -73,7 +64,6 @@ configure_envs() {
     fi
 }
 
-# Configure Plex Media Server
 configure_plex() {
     if yay -Q plex-media-server > /dev/null 2>&1; then
         log_message "The Plex Media Server add-on..."
@@ -88,7 +78,6 @@ configure_plex() {
     fi
 }
 
-# Configure services
 configure_system_services() {
     log_message "Configuring system services and daemons..."
 
@@ -120,7 +109,6 @@ configure_system_services() {
     systemd-run --on-calendar="Sun 10:00" --unit="pacman-cleaner" /sbin/pacman -Scc
 }
 
-# Configure NVIDIA attributes
 configure_nvidia() {
     if $NVIDIA; then
         log_message "Setting up NVIDIA..."
@@ -129,7 +117,6 @@ configure_nvidia() {
     fi
 }
 
-# Configure terminal
 change_shell_to_zsh() {
     if yay -Q zsh > /dev/null 2>&1; then
         log_message "Replacing bash with zsh..."
@@ -138,8 +125,7 @@ change_shell_to_zsh() {
     fi
 }
 
-# Configure NVMe scheduler
-disable_nvmesh_scheduler() {
+configure_nvme_scheduler() {
     if lsblk -d -o name | grep -iq 'nvm'; then
         log_message "Disabling the NVMe SSD scheduler..."
 
@@ -150,7 +136,6 @@ EOF
     fi
 }
 
-# Configure realtime
 configure_realtime_audio() {
     log_message "Configure realtime audio priority..."
 
@@ -160,7 +145,6 @@ configure_realtime_audio() {
 EOF
 }
 
-# Configure OOM
 configure_oom() {
     if yay -Q earlyoom > /dev/null 2>&1; then
         log_message "Setting up OOM rules..."
@@ -169,7 +153,7 @@ configure_oom() {
     fi
 }
 
-# Configure alternative scheduler
+# Configure alternative kernel scheduler
 configure_sched() {
     if yay -Q scx-scheds > /dev/null 2>&1; then
         log_message "Setting up alternative SCX scheduler..."
@@ -179,7 +163,6 @@ configure_sched() {
     fi
 }
 
-# Configure firewall rights
 configure_firewall() {
     if yay -Q firewalld > /dev/null 2>&1; then
         log_message "Setting up firewall rights..."
@@ -194,7 +177,6 @@ configure_firewall() {
     fi
 }
 
-# Configure ntsync
 configure_ntsync() {
     if lsmod | grep -q ntsync; then
         log_warning "NTSync module is already on"
@@ -205,7 +187,6 @@ configure_ntsync() {
     fi
 }
 
-# Configure swap
 configure_swap() {
     if swapon --show > /dev/null/ 2>&1; then
         log_message "Setting up Swap..."
@@ -232,7 +213,7 @@ main() {
     configure_system_services
     configure_nvidia
     change_shell_to_zsh
-    #disable_nvmesh_scheduler
+    #configure_nvme_scheduler
     configure_realtime_audio
     configure_oom
     configure_sched

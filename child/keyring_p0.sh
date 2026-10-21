@@ -1,12 +1,10 @@
 #!/bin/bash
 
-# =====================================================
-# Post Optimiztion for Arch Linux. Part 0
-# =====================================================
-
 # Turn on strong mode for bash
-set -e  # Exit by any error
-set -u  # Only static variable
+#exit by any error
+set -e
+#only static variable
+set -u
 
 # Colors for output messages
 BLUE="\e[1;34m"
@@ -15,22 +13,18 @@ GREEN="\e[1;32m"
 YELLOW="\e[1;33m"
 RESET="\e[0m"
 
-# INFO message
 log_message() {
     echo -e "${BLUE}[INFO] $1${RESET}"
 }
 
-# ERROR message
 log_error() {
     echo -e "${RED}[ERROR] $1${RESET}" >&2
 }
 
-# SUCCESS message
 log_success() {
     echo -e "${GREEN}[SUCCESS] $1${RESET}"
 }
 
-# WARNING message
 log_warning() {
     echo -e "${YELLOW}[WARNING] $1${RESET}"
 }
@@ -42,7 +36,6 @@ if [[ $EUID -ne 0 ]]; then
     exit 1
 fi
 
-# Configure mirrors
 update_mirrors() {
     log_message "Updating the list of mirrors..."
 
@@ -64,7 +57,6 @@ update_mirrors() {
     reflector --country Denmark,Norway,Russia,Finland,Worldwide --latest 8 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 }
 
-# Set mirror update service
 setup_mirror_update_timer() {
     log_message "Setting up automatic mirror updates..."
 
@@ -109,7 +101,6 @@ EOF
     fi
 }
 
-# Configure keys
 update_keys() {
     log_message "Updating Arch Linux keys..."
 

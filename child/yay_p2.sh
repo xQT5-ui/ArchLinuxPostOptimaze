@@ -1,12 +1,10 @@
 #!/bin/bash
 
-# =====================================================
-# Post Optimiztion for Arch Linux. Part 2
-# =====================================================
-
 # Turn on strong mode for bash
-set -e  # Exit by any error
-set -u  # Only static variable
+#exit by any error
+set -e
+#only static variable
+set -u
 
 # Colors for output messages
 BLUE="\e[1;34m"
@@ -15,22 +13,18 @@ GREEN="\e[1;32m"
 YELLOW="\e[1;33m"
 RESET="\e[0m"
 
-# INFO message
 log_message() {
     echo -e "${BLUE}[INFO] $1${RESET}"
 }
 
-# ERROR message
 log_error() {
     echo -e "${RED}[ERROR] $1${RESET}" >&2
 }
 
-# SUCCESS message
 log_success() {
     echo -e "${GREEN}[SUCCESS] $1${RESET}"
 }
 
-# WARNING message
 log_warning() {
     echo -e "${YELLOW}[WARNING] $1${RESET}"
 }
@@ -104,7 +98,7 @@ install_package() {
 install_aur_packages() {
     log_message "Installing packages from AUR..."
 
-    yay -Syu
+    yay -Syu --noconfirm
 
     local packages=(
         "zsh-theme-powerlevel10k-git"
@@ -158,7 +152,7 @@ configure_makepkg() {
 create_directories() {
     log_message "Create additional folders..."
 
-    mkdir -p $HOME/.themes $HOME/.icons $HOME"/Загрузки/Torrents" $HOME/.config/fastfetch
+    mkdir -p $HOME/.themes $HOME/.icons $HOME"/Загрузки/Torrents"
 
     if sudo mkdir -p /media/movies /media/tvshows; then
         ln -sf /media/movies $HOME"/Загрузки/Torrents"

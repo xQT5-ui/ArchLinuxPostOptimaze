@@ -1,12 +1,10 @@
 #!/bin/bash
 
-# =====================================================
-# Post Optimiztion for Arch Linux. Part 5
-# =====================================================
-
 # Turn on strong mode for bash
-set -e  # Exit by any error
-set -u  # Only static variable
+#exit by any error
+set -e
+#only static variable
+set -u
 
 # Colors for output messages
 BLUE="\e[1;34m"
@@ -15,22 +13,18 @@ GREEN="\e[1;32m"
 YELLOW="\e[1;33m"
 RESET="\e[0m"
 
-# INFO message
 log_message() {
     echo -e "${BLUE}[INFO] $1${RESET}"
 }
 
-# ERROR message
 log_error() {
     echo -e "${RED}[ERROR] $1${RESET}" >&2
 }
 
-# SUCCESS message
 log_success() {
     echo -e "${GREEN}[SUCCESS] $1${RESET}"
 }
 
-# WARNING message
 log_warning() {
     echo -e "${YELLOW}[WARNING] $1${RESET}"
 }
@@ -42,15 +36,13 @@ if [[ $EUID -ne 0 ]]; then
     exit 1
 fi
 
-# Delete lib32 packages
 delete_lib32() {
     log_message "Delete all lib32 packages..."
 
     pacman -Rs $(pacman -Qq | grep '^lib32')
 }
 
-# Delete orphans packages
-delete_old_packages() {
+delete_orphans_packages() {
     log_message "Cleaning of excess packages..."
 
     set +e
@@ -76,7 +68,6 @@ delete_old_packages() {
     set -e
 }
 
-# Configure initramfs
 upd_init() {
     log_message "Updating initramfs..."
 
@@ -86,8 +77,8 @@ upd_init() {
 main() {
     log_message "Delete orphans packages (Part 5)..."
 
-    delete_old_packages
     delete_lib32
+    delete_orphans_packages
     upd_init
 
     log_success "===== END OF THE 5TH PART ====="

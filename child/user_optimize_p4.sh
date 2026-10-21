@@ -1,12 +1,10 @@
 #!/bin/bash
 
-# =====================================================
-# Post Optimiztion for Arch Linux. Part 4
-# =====================================================
-
 # Turn on strong mode for bash
-set -e  # Exit by any error
-set -u  # Only static variable
+#exit by any error
+set -e
+#only static variable
+set -u
 
 # Colors for output messages
 BLUE="\e[1;34m"
@@ -15,27 +13,22 @@ GREEN="\e[1;32m"
 YELLOW="\e[1;33m"
 RESET="\e[0m"
 
-# INFO message
 log_message() {
     echo -e "${BLUE}[INFO] $1${RESET}"
 }
 
-# ERROR message
 log_error() {
     echo -e "${RED}[ERROR] $1${RESET}" >&2
 }
 
-# SUCCESS message
 log_success() {
     echo -e "${GREEN}[SUCCESS] $1${RESET}"
 }
 
-# WARNING message
 log_warning() {
     echo -e "${YELLOW}[WARNING] $1${RESET}"
 }
 
-# Configure Pipewire
 configure_pipewire() {
     if yay -Q pipewire > /dev/null 2>&1; then
         log_message "Setting up and enabling Pipewire..."
@@ -50,8 +43,7 @@ configure_pipewire() {
     fi
 }
 
-# Configure GNOME services
-optimize_gnome_services() {
+configure_gnome_services() {
     if $GNOME; then
         log_message "GNOME optimization..."
 
@@ -59,8 +51,7 @@ optimize_gnome_services() {
     fi
 }
 
-# Configure ZSH
-configure_zsh() {
+configure_zsh_data() {
     if yay -Q zsh > /dev/null 2>&1; then
         log_message "ZSH configuration..."
 
@@ -81,16 +72,15 @@ configure_papirus_folder_colors() {
     fi
 }
 
-# Configure Fastfetch
 configure_fastfetch() {
     if yay -Q fastfetch > /dev/null 2>&1; then
         log_message "Set Fastfetch output format..."
 
+        mkdir -p $HOME/.config/fastfetch
         cp -f ./child/files/user/fastfetch/config.jsonc $HOME/.config/fastfetch/config.jsonc
     fi
 }
 
-# Configure LM Studio
 configure_lmstudio() {
     if yay -Q lmstudio-bin > /dev/null 2>&1; then
         log_message "Transfer LM Studio data..."
@@ -102,7 +92,6 @@ configure_lmstudio() {
     fi
 }
 
-# Configure Zen
 configure_zen() {
     if flatpak list --app | grep zen > /dev/null 2>&1; then
         log_message "Transfer Zen data..."
@@ -113,7 +102,7 @@ configure_zen() {
     fi
 }
 
-# Configure Flatpak datas
+# Configure Flatpak data
 configure_flatpak() {
     if flatpak list --app | grep flatseal > /dev/null 2>&1; then
         log_message "Transfer Flatpak data..."
@@ -124,7 +113,6 @@ configure_flatpak() {
     fi
 }
 
-# Configure Zed data
 configure_zed() {
     if yay -Q zed > /dev/null 2>&1; then
         log_message "Transfer Zed data..."
@@ -135,7 +123,6 @@ configure_zed() {
     fi
 }
 
-# Configure MangoHud
 configure_mangohud() {
     if flatpak list --runtime | grep MangoHud > /dev/null 2>&1; then
         log_message "Transfer MangoHud data..."
@@ -146,7 +133,6 @@ configure_mangohud() {
     fi
 }
 
-# Configure EasyEffects
 configure_easyeffects() {
     if flatpak list --app | grep easyeffects > /dev/null 2>&1; then
         log_message "Transfer EasyEffects data..."
@@ -157,7 +143,6 @@ configure_easyeffects() {
     fi
 }
 
-# Configure GNOME extentions
 configure_gnome_exts() {
     if $GNOME; then
         log_message "Transfer GNOME extentions data..."
@@ -189,7 +174,6 @@ configure_git_data() {
     fi
 }
 
-# Configure Happ config
 configure_happ() {
     if yay -Q happ-desktop-bin > /dev/null 2>&1; then
         log_message "Transfer Happ data..."
@@ -199,11 +183,35 @@ configure_happ() {
     fi
 }
 
+configure_mangowm() {
+    if $MANGOWM; then
+        log_message "Transfer MangoWM data..."
+
+        mkdir -p $HOME/.config/mango
+        cp -r /child/files/user/mango $HOME/.config/mango
+
+        if yay -Q noctalia > /dev/null 2>&1; then
+            mkdir -p $HOME/.config/noctalia
+            cp -f /child/files/user/noctalia/noctalia-config.toml $HOME/.config/noctalia/config.toml
+        fi
+
+        if yay -Q noctalia-greeter > /dev/null 2>&1; then
+            sudo cp -f /child/files/user/noctalia/greetd/config.toml /etc/greetd/config.toml
+            sudo cp -f /child/files/user/noctalia/greetd/noctalia-greeter/greeter.toml /var/lib/noctalia-greeter/greeter.toml
+        fi
+
+        yay -Rns fuzzel alacritty mako niri swaybg swayidle swaylock waybar lightdm-grk-greeter --noconfirm
+
+        sudo systemctl disable --now lightdm.service
+        sudo systemctl enable --now greetd
+    fi
+}
+
 main() {
     log_message "User settings optimize (Part 4)..."
 
     configure_pipewire
-    optimize_gnome_services
+    configure_gnome_services
     configure_zsh
     #configure_papirus_folder_colors
     configure_fastfetch
