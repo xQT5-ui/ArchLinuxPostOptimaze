@@ -86,7 +86,7 @@ install_base_apps() {
         "duf"
         #"wireguard-tools"
         "power-profiles-daemon"
-        "alsa-utils"
+        #"alsa-utils"
         "pacman-contrib"
         "inxi"
         "exfat-utils"
@@ -103,7 +103,7 @@ install_base_apps() {
         "make"
         "gcc"
         "debugedit"
-        "intel-ucode"
+        #"intel-ucode"
         "intel-media-driver"
         "zed"
     )
@@ -238,7 +238,8 @@ install_flatpak_apps() {
         "org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/25.08"
         "app.devsuite.Ptyxis"
         #"org.nickvision.cavalier" # Для визуализации исходящего звука
-        "it.mijorus.gearlever" # Для работы с AppImage
+        # Для работы с AppImage
+        "it.mijorus.gearlever"
         "de.wwwtech.gitte"
         "io.github.anil_e.Codd"
         "io.github.dzheremi2.lrcmake-gtk"

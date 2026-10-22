@@ -47,7 +47,9 @@ delete_orphans_packages() {
 
     set +e
 
-    pacman -Rns gnome-console --noconfirm
+    if $GNOME; then
+        pacman -Rns gnome-console --noconfirm
+    fi
 
     # clear pacman cache
     pacman -Scc --noconfirm

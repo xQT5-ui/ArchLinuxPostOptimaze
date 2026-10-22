@@ -77,6 +77,7 @@ configure_fastfetch() {
         log_message "Set Fastfetch output format..."
 
         mkdir -p $HOME/.config/fastfetch
+
         cp -f ./child/files/user/fastfetch/config.jsonc $HOME/.config/fastfetch/config.jsonc
     fi
 }
@@ -151,6 +152,7 @@ configure_gnome_exts() {
 
         cp -r ./child/files/user/gnomeexts/extensions/* $HOME/.local/share/gnome-shell/extensions/
         cp -f ./child/files/user/gnomeexts/dconf/user $HOME/.config/dconf/user
+
         dconf load /org/gnome/shell/extensions/ < ./child/files/user/gnomeexts/gnome-extensions-settings.txt
     fi
 }
@@ -188,10 +190,12 @@ configure_mangowm() {
         log_message "Transfer MangoWM data..."
 
         mkdir -p $HOME/.config/mango
+
         cp -r /child/files/user/mango $HOME/.config/mango
 
         if yay -Q noctalia > /dev/null 2>&1; then
             mkdir -p $HOME/.config/noctalia
+
             cp -f /child/files/user/noctalia/noctalia-config.toml $HOME/.config/noctalia/config.toml
         fi
 

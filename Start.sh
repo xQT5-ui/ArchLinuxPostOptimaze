@@ -141,7 +141,7 @@ fi
 
 if has_gnome; then
     GNOME=true
-else
+else if has_mangowm; then
     MANGOWM=true
 fi
 
@@ -156,7 +156,6 @@ main() {
         log_message "Work begins on post-optimization of the system..."
         log_warning "PLEASE DO NOT LEAVE BECAUSE YOU WILL NEED TO ENTER THE SUDO PASSWORD AT DIFFERENT POINTS IN TIME!"
 
-        sudo ./child/keyring_p0.sh && \
         sudo ./child/main_p1.sh && \
         ./child/yay_p2.sh && \
         sudo ./child/sys_optimize_p3.sh && \

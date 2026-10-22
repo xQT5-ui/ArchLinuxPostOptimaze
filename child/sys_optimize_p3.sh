@@ -89,7 +89,7 @@ configure_system_services() {
     # nvidia-powerd -> only for >= RTX 40xx
     # irqbalance ananicy-cpp -> only without scx_sched
     # systemd-oomd -> only 1 oom
-    for service in bluetooth.service power-profiles-daemon earlyoom paccache.timer v2raya; do
+    for service in bluetooth.service power-profiles-daemon earlyoom paccache.timer v2raya reflector.timer; do
         if systemctl list-unit-files | grep -q "^${service}"; then
             systemctl enable ${service}
         else
@@ -98,15 +98,6 @@ configure_system_services() {
     done
 
     systemctl start bluetooth.service v2raya
-
-    # clear pacman cache
-    if systemctl list-timers | grep -q pacman-cleaner.timer; then
-        systemctl stop pacman-cleaner.timer
-        systemctl disable pacman-cleaner.timer
-        rm -f /etc/systemd/system/pacman-cleaner.timer
-    fi
-
-    systemd-run --on-calendar="Sun 10:00" --unit="pacman-cleaner" /sbin/pacman -Scc
 }
 
 configure_nvidia() {
@@ -231,7 +222,7 @@ main() {
     configure_initramfs
     #configure_bootloader
     configure_sysctl
-    configure_envs
+    #configure_envs
     configure_plex
     configure_system_services
     configure_nvidia
