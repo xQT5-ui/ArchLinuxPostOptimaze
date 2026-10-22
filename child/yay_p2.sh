@@ -126,6 +126,14 @@ install_aur_packages() {
         )
     fi
 
+    if yay -Q snapper > /dev/null 2>&1; then
+        packages+=(
+            "btrfs-assistant"
+            "snap-pac"
+            "snapper-rollback"
+        )
+    fi
+
     local failed_packages=()
     for package in "${packages[@]}"; do
         if ! install_package "$package"; then

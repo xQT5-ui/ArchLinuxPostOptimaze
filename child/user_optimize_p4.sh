@@ -200,10 +200,10 @@ configure_mangowm() {
             sudo cp -f /child/files/user/noctalia/greetd/noctalia-greeter/greeter.toml /var/lib/noctalia-greeter/greeter.toml
         fi
 
-        yay -Rns fuzzel alacritty mako niri swaybg swayidle swaylock waybar lightdm-grk-greeter --noconfirm
-
         sudo systemctl disable --now lightdm.service
         sudo systemctl enable --now greetd
+
+        yay -Rns fuzzel alacritty mako niri swaybg swayidle swaylock waybar lightdm-gtk-greeter --noconfirm
     fi
 }
 
@@ -223,7 +223,8 @@ main() {
     configure_easyeffects
     configure_gnome_exts
     configure_git_data
-    configure_happ
+    #configure_happ
+    configure_mangowm
 
     log_success "All operations have been completed successfully!"
     log_message "===== END OF THE 4TH PART ====="

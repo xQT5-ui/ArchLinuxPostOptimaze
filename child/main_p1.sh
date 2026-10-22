@@ -102,6 +102,7 @@ install_base_apps() {
         "fakeroot"
         "make"
         "gcc"
+        "debugedit"
         "intel-ucode"
         "intel-media-driver"
         "zed"

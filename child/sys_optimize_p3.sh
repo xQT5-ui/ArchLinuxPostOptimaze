@@ -202,6 +202,22 @@ configure_swap() {
     fi
 }
 
+configure_snapper() {
+    log_message "Setting up Snapper..."
+
+    umount /.snapshots
+    rm -rf /.snapshots
+
+    snapper -c root create-config /
+    chmod 750 /.snapshots
+
+    sed -i 's/^TIMELINE_LIMIT_HOURLY.*/TIMELINE_LIMIT_HOURLY=\"0\"/' /etc/snapper/configs/root
+    sed -i 's/^TIMELINE_LIMIT_DAILY.*/TIMELINE_LIMIT_DAILY=\"5\"/' /etc/snapper/configs/root
+    sed -i 's/^TIMELINE_LIMIT_WEEKLY.*/TIMELINE_LIMIT_WEEKLY=\"0\"/' /etc/snapper/configs/root
+    sed -i 's/^TIMELINE_LIMIT_MONTHLY.*/TIMELINE_LIMIT_MONTHLY=\"0\"/' /etc/snapper/configs/root
+    sed -i 's/^TIMELINE_LIMIT_YEARLY.*/TIMELINE_LIMIT_YEARLY=\"0\"/' /etc/snapper/configs/root
+}
+
 main() {
     log_message "System optimizations (Part 3)..."
 
@@ -220,6 +236,7 @@ main() {
     configure_firewall
     configure_ntsync
     configure_swap
+    configure_snapper
 
     log_success "All operations have been completed successfully!"
     log_message "===== END OF THE 3D PART ====="
