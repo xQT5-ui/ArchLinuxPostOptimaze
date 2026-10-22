@@ -87,8 +87,8 @@ configure_system_services() {
     #cp -f ./child/files/etc/systemd/zram-generator.conf /etc/systemd/zram-generator.conf
 
     # nvidia-powerd -> only for >= RTX 40xx
-    # cronie.service -> only for BTRFS
-    # irqbalance ananicy-cpp systemd-oomd
+    # irqbalance ananicy-cpp -> only without scx_sched
+    # systemd-oomd -> only 1 oom
     for service in bluetooth.service power-profiles-daemon earlyoom paccache.timer v2raya; do
         if systemctl list-unit-files | grep -q "^${service}"; then
             systemctl enable ${service}
@@ -218,6 +218,13 @@ configure_snapper() {
     sed -i 's/^TIMELINE_LIMIT_YEARLY.*/TIMELINE_LIMIT_YEARLY=\"0\"/' /etc/snapper/configs/root
 }
 
+configure_btrfs() {
+    log_message "Setting up BTRFS maintenance..."
+
+    systemctl enable --now btrfs-scrub@-.timer
+    systemctl enable --now btrfs-scrub@home.timer
+}
+
 main() {
     log_message "System optimizations (Part 3)..."
 
@@ -237,6 +244,7 @@ main() {
     configure_ntsync
     configure_swap
     configure_snapper
+    configure_btrfs
 
     log_success "All operations have been completed successfully!"
     log_message "===== END OF THE 3D PART ====="
