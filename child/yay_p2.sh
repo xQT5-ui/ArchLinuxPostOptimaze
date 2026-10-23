@@ -105,7 +105,7 @@ install_aur_packages() {
         "zsh-fast-syntax-highlighting"
         "bibata-cursor-theme-bin"
         "adw-gtk-theme"
-        #"papirus-folders" # Ошибка с верификацией ключа
+        #"papirus-folders"
         #"ventoy-bin"
         "plex-media-server"
         "nautilus-admin-gtk4"

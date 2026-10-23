@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# ==================================
-# Copy user data from system
-# ==================================
-
 # Turn on strong mode for bash
 set -e  # Exit by any error
 set -u  # Only static variable
@@ -15,22 +11,18 @@ GREEN="\e[1;32m"
 YELLOW="\e[1;33m"
 RESET="\e[0m"
 
-# INFO message
 log_message() {
     echo -e "${BLUE}[INFO] $1${RESET}"
 }
 
-# ERROR message
 log_error() {
     echo -e "${RED}[ERROR] $1${RESET}" >&2
 }
 
-# SUCCESS message
 log_success() {
     echo -e "${GREEN}[SUCCESS] $1${RESET}"
 }
 
-# WARNING message
 log_warning() {
     echo -e "${YELLOW}[WARNING] $1${RESET}"
 }
@@ -83,6 +75,15 @@ configure_transfer_data() {
     mkdir -p ./child/files/user/git/ssh
     cp -f $HOME/.gitconfig ./child/files/user/git/gitconfig
     cp -r $HOME/.ssh/* ./child/files/user/git/ssh/
+
+    # MangoWM
+    mkdir -p ./child/files/user/mango
+    cp -r $HOME/.config/mango/* ./child/files/user/mango/
+
+    # Noctalia
+    mkdir -p ./child/files/user/noctalia ./child/files/user/noctalia/greetd ./child/files/user/noctalia/greetd/noctalia-greeter
+    cp -f $HOME/.config/noctalia/config.toml ./child/files/user/noctalia/config.toml
+    sudo cp -f /var/lib/noctalia-greeter/greeter.toml ./child/files/user/noctalia/greetd/noctalia-greeter/greeter.toml
 }
 
 main() {

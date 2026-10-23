@@ -80,13 +80,13 @@ install_base_apps() {
         "zsh-autosuggestions"
         "zsh-completions"
         "zsh-history-substring-search"
-        "xorg-xrandr"
+        #"xorg-xrandr"
         "go"
         "gdu"
         "duf"
         #"wireguard-tools"
         "power-profiles-daemon"
-        #"alsa-utils"
+        "alsa-utils"
         "pacman-contrib"
         "inxi"
         "exfat-utils"
@@ -103,15 +103,17 @@ install_base_apps() {
         "make"
         "gcc"
         "debugedit"
-        #"intel-ucode"
-        "intel-media-driver"
         "zed"
+        "intel-ucode"
+        "intel-media-driver"
+        "vulkan-intel"
     )
 
     if $GNOME; then
         pacmanPackages+=("gnome-shell-extensions")
     else
         pacmanPackages+=(
+            "flatpak"
             "mangowm"
             "noctalia"
             "greetd"
@@ -140,9 +142,9 @@ install_base_apps() {
 
     if $NVIDIA; then
         local pacmanNVIDIA=(
-            "nvidia-settings"
             "opencl-nvidia"
-            "libvdpau-va-gl"
+            "libva-nvidia-driver"
+            "nvidia-settings"
             "libxnvctrl"
         )
 
@@ -237,7 +239,8 @@ install_flatpak_apps() {
         "com.valvesoftware.Steam"
         "org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/25.08"
         "app.devsuite.Ptyxis"
-        #"org.nickvision.cavalier" # Для визуализации исходящего звука
+        # Для простой волновой визуализации исходящего звука
+        #"org.nickvision.cavalier
         # Для работы с AppImage
         "it.mijorus.gearlever"
         "de.wwwtech.gitte"
