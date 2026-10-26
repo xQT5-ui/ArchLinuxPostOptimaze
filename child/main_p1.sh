@@ -1,10 +1,7 @@
 #!/bin/bash
 
 # Turn on strong mode for bash
-#exit by any error
-set -e
-#only static variable
-set -u
+set -euo pipefail
 
 # Colors for output messages
 BLUE="\e[1;34m"
@@ -90,7 +87,6 @@ install_base_apps() {
         "pacman-contrib"
         "inxi"
         "exfat-utils"
-        "file-roller"
         "papirus-icon-theme"
         #"irqbalance"
         #"ananicy-cpp"
@@ -106,10 +102,12 @@ install_base_apps() {
         "zed"
         "intel-ucode"
         "intel-media-driver"
+        "libva-intel-driver"
         "vulkan-intel"
+        "vpl-gpu-rt"
     )
 
-    if $GNOME; then
+    if [ "$GNOME" = "true" ]; then
         pacmanPackages+=("gnome-shell-extensions")
     else
         pacmanPackages+=(
@@ -140,10 +138,9 @@ install_base_apps() {
     # update font cache
     fc-cache -fv
 
-    if $NVIDIA; then
+    if [ "$NVIDIA" = "true" ]; then
         local pacmanNVIDIA=(
             "opencl-nvidia"
-            "libva-nvidia-driver"
             "nvidia-settings"
             "libxnvctrl"
         )
@@ -167,10 +164,10 @@ install_base_apps() {
 }
 
 delete_gnome_applications() {
-    if $GNOME; then
+    if [ "$GNOME" = "true" ]; then
         log_message "Optimize GNOME by removing unnecessary packages..."
 
-        pacman -Rnsc --noconfirm gnome-connections gnome-software gnome-music gnome-maps gnome-contacts gnome-system-monitor gnome-tour gnome-weather loupe epiphany yelp decibels vim malcontent evince sushi baobab gvfs-onedrive gnome-backgrounds showtime papers snapshot gnome-calculator
+        pacman -Rnsc --noconfirm gnome-connections gnome-software gnome-music gnome-maps gnome-contacts gnome-system-monitor gnome-tour gnome-weather loupe epiphany yelp decibels vim malcontent evince sushi baobab gvfs-onedrive gnome-backgrounds showtime papers snapshot gnome-calculator gnome-logs file-roller
         pacman -S --noconfirm flatpak
     fi
 }
@@ -251,6 +248,8 @@ install_flatpak_apps() {
         "io.gitlab.adhami3310.Impression"
         "org.gnome.Snapshot"
         "com.rafaelmardojai.Blanket"
+        "org.gnome.Logs"
+        "org.gnome.FileRoller"
     )
 
     local failed_flatpakPackages=()
