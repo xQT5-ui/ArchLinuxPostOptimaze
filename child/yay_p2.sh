@@ -1,10 +1,7 @@
 #!/bin/bash
 
 # Turn on strong mode for bash
-#exit by any error
-set -e
-#only static variable
-set -u
+set -euo pipefail
 
 # Colors for output messages
 BLUE="\e[1;34m"
@@ -119,7 +116,7 @@ install_aur_packages() {
         "lmstudio-bin"
     )
 
-    if $GNOME; then
+    if [ "$GNOME" = "true" ]; then
         packages+=(
             "pkgconf"
             "gnome-rounded-blur"

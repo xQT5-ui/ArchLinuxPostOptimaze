@@ -1,10 +1,7 @@
 #!/bin/bash
 
 # Turn on strong mode for bash
-#exit by any error
-set -e
-#only static variable
-set -u
+set -euo pipefail
 
 # Colors for output messages
 BLUE="\e[1;34m"
@@ -37,9 +34,11 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 delete_lib32() {
-    log_message "Delete all lib32 packages..."
+    if pacman -Qq | grep '^lib32' > /dev/null 2>&1; then
+        log_message "Delete all lib32 packages..."
 
-    pacman -Rs $(pacman -Qq | grep '^lib32')
+        pacman -Rs $(pacman -Qq | grep '^lib32')
+    fi
 }
 
 delete_orphans_packages() {
@@ -47,14 +46,8 @@ delete_orphans_packages() {
 
     set +e
 
-    if $GNOME; then
+    if [ "$GNOME" = "true" ]; then
         pacman -Rns gnome-console --noconfirm
-    fi
-
-    # clear pacman cache
-    pacman -Scc --noconfirm
-    if [ $? -ne 0 ]; then
-        log_warning "Failed to clear the packet cache, but continue execution"
     fi
 
     ORPHANS=$(pacman -Qtdq)
@@ -76,12 +69,20 @@ upd_init() {
     mkinitcpio -P
 }
 
+change_greeter() {
+    if [ "$MANGOWM" = "true" ]; then
+        systemctl disable --now lightdm.service
+        systemctl enable --now greetd
+    fi
+}
+
 main() {
     log_message "Delete orphans packages (Part 5)..."
 
     delete_lib32
     delete_orphans_packages
     upd_init
+    change_greeter
 
     log_success "===== END OF THE 5TH PART ====="
     log_warning "Installation and optimization are complete. It is recommended to reboot the system!"

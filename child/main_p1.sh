@@ -105,6 +105,8 @@ install_base_apps() {
         "libva-intel-driver"
         "vulkan-intel"
         "vpl-gpu-rt"
+        "gnome-text-editor"
+        "reflector"
     )
 
     if [ "$GNOME" = "true" ]; then
@@ -116,6 +118,7 @@ install_base_apps() {
             "noctalia"
             "greetd"
             "noctalia-greeter"
+            "nwg-look"
         )
     fi
 

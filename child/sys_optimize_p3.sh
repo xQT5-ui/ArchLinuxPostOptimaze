@@ -1,10 +1,7 @@
 #!/bin/bash
 
 # Turn on strong mode for bash
-#exit by any error
-set -e
-#only static variable
-set -u
+set -euo pipefail
 
 # Colors for output messages
 BLUE="\e[1;34m"
@@ -46,7 +43,6 @@ configure_bootloader() {
     log_message "Configuring the boot loader..."
 
     cp -f ./child/files/boot/loader.conf /boot/loader/loader.conf
-    #sed -i 's/^options.*/options rw quiet splash/' /boot/loader/entries/arch-linux.conf
 }
 
 # Configure kernel attributes
@@ -57,7 +53,7 @@ configure_sysctl() {
 }
 
 configure_envs() {
-    if $NVIDIA; then
+    if [ "$NVIDIA" = "true" ]; then
         log_message "Setting up environment variables..."
 
         cp -f ./child/files/etc/environment /etc/environment
@@ -78,30 +74,8 @@ configure_plex() {
     fi
 }
 
-configure_system_services() {
-    log_message "Configuring system services and daemons..."
-
-    systemctl daemon-reload
-
-    # zram without the SWAP!
-    #cp -f ./child/files/etc/systemd/zram-generator.conf /etc/systemd/zram-generator.conf
-
-    # nvidia-powerd -> only for >= RTX 40xx
-    # irqbalance ananicy-cpp -> only without scx_sched
-    # systemd-oomd -> only 1 oom
-    for service in bluetooth.service power-profiles-daemon earlyoom paccache.timer v2raya reflector.timer; do
-        if systemctl list-unit-files | grep -q "^${service}"; then
-            systemctl enable ${service}
-        else
-            log_error "Service not found: ${service}"
-        fi
-    done
-
-    systemctl start bluetooth.service v2raya
-}
-
 configure_nvidia() {
-    if $NVIDIA; then
+    if [ "$NVIDIA" = "true" ]; then
         log_message "Setting up NVIDIA..."
 
         cp -f ./child/files/etc/modprobe.d/nvidia.conf /etc/modprobe.d/nvidia.conf
@@ -112,7 +86,7 @@ change_shell_to_zsh() {
     if yay -Q zsh > /dev/null 2>&1; then
         log_message "Replacing bash with zsh..."
 
-        chsh -s /bin/zsh
+        chsh -s /usr/bin/zsh "$USER"
     fi
 }
 
@@ -150,7 +124,6 @@ configure_sched() {
         log_message "Setting up alternative SCX scheduler..."
 
         cp -f ./child/files/etc/scx_loader.toml /etc/scx_loader.toml
-        systemctl enable --now scx_loader.service
     fi
 }
 
@@ -179,28 +152,28 @@ configure_ntsync() {
 }
 
 configure_swap() {
-    if swapon --show > /dev/null/ 2>&1; then
-        log_message "Setting up Swap..."
+    log_message "Setting up Swap..."
 
-        fallocate -l 8G /swapfile
-        chmod 600 /swapfile
-        # for BTRFS
-        #chattr +C /swapfile
-        mkswap /swapfile
-        swapon /swapfile
-        printf "\n/swapfile none swap defaults 0 0\n" >> /etc/fstab
-        echo " zswap.compressor=zstd zswap.max_pool_percent=21" >> /boot/limine.cfg
+    # отключить все активные swap-устройства
+    swapoff -a
+    rm -f /swap/swapfile
+    btrfs subvolume delete /swap
+
+    btrfs subvolume create /swap
+    # создать swap-файл 8G с чистым UUID
+    btrfs filesystem mkswapfile --size 8G --uuid clear /swap/swapfile
+    swapon /swap/swapfile
+
+    if ! grep -qi "swapfile" /etc/fstab; then
+        printf "# zswap\n/swap/swapfile none swap defaults 0 0\n" >> /etc/fstab
+        sed -i 's/$/ zswap.enabled=1 zswap.compressor=zstd zswap.max_pool_percent=21/' /etc/kernel/cmdline
+    else
+        log_warning "swapfile already exists in /etc/fstab"
     fi
 }
 
 configure_snapper() {
     log_message "Setting up Snapper..."
-
-    umount /.snapshots
-    rm -rf /.snapshots
-
-    snapper -c root create-config /
-    chmod 750 /.snapshots
 
     sed -i 's/^TIMELINE_LIMIT_HOURLY.*/TIMELINE_LIMIT_HOURLY=\"0\"/' /etc/snapper/configs/root
     sed -i 's/^TIMELINE_LIMIT_DAILY.*/TIMELINE_LIMIT_DAILY=\"5\"/' /etc/snapper/configs/root
@@ -216,15 +189,32 @@ configure_btrfs() {
     systemctl enable --now btrfs-scrub@home.timer
 }
 
+configure_system_services() {
+    log_message "Configuring system services and daemons..."
+
+    systemctl daemon-reload
+
+    # zram without the SWAP!
+    #cp -f ./child/files/etc/systemd/zram-generator.conf /etc/systemd/zram-generator.conf
+
+    # nvidia-powerd -> only for >= RTX 40xx
+    # irqbalance ananicy-cpp -> only without scx_sched
+    # systemd-oomd -> only 1 oom
+    for service in bluetooth.service power-profiles-daemon paccache.timer v2raya reflector.timer scx_loader.service earlyoom btrfs-scrub@-.timer btrfs-scrub@home.timer; do
+        if ! systemctl enable --now "$service" 2>/dev/null; then
+            log_error "Failed to enable/start: $service"
+        fi
+    done
+}
+
 main() {
     log_message "System optimizations (Part 3)..."
 
     configure_initramfs
-    #configure_bootloader
+    configure_bootloader
     configure_sysctl
     #configure_envs
     configure_plex
-    configure_system_services
     configure_nvidia
     change_shell_to_zsh
     #configure_nvme_scheduler
@@ -236,6 +226,7 @@ main() {
     configure_swap
     configure_snapper
     configure_btrfs
+    configure_system_services
 
     log_success "All operations have been completed successfully!"
     log_message "===== END OF THE 3D PART ====="

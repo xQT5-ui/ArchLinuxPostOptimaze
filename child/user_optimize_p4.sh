@@ -1,10 +1,7 @@
 #!/bin/bash
 
 # Turn on strong mode for bash
-#exit by any error
-set -e
-#only static variable
-set -u
+set -euo pipefail
 
 # Colors for output messages
 BLUE="\e[1;34m"
@@ -31,7 +28,7 @@ log_warning() {
 
 configure_pipewire() {
     if yay -Q pipewire > /dev/null 2>&1; then
-        log_message "Setting up and enabling Pipewire..."
+        log_message "Transfer Pipewire data..."
 
         #systemctl --user enable pipewire pipewire-pulse wireplumber
 
@@ -44,7 +41,7 @@ configure_pipewire() {
 }
 
 configure_gnome_services() {
-    if $GNOME; then
+    if [ "$GNOME" = "true" ]; then
         log_message "GNOME optimization..."
 
         systemctl --user mask org.gnome.SettingsDaemon.Wacom.service org.gnome.SettingsDaemon.Smartcard.service
@@ -53,7 +50,7 @@ configure_gnome_services() {
 
 configure_zsh_data() {
     if yay -Q zsh > /dev/null 2>&1; then
-        log_message "ZSH configuration..."
+        log_message "Transfer ZSH data..."
 
         cp -f ./child/files/zsh/zsh_history $HOME/.zsh_history
         cp -f ./child/files/zsh/zshrc $HOME/.zshrc
@@ -63,7 +60,6 @@ configure_zsh_data() {
     fi
 }
 
-# Configure Papirus icons theme
 configure_papirus_folder_colors() {
     if command -v papirus-folders > /dev/null 2>&1; then
         log_message "Set Papirus folder colors..."
@@ -74,7 +70,7 @@ configure_papirus_folder_colors() {
 
 configure_fastfetch() {
     if yay -Q fastfetch > /dev/null 2>&1; then
-        log_message "Set Fastfetch output format..."
+        log_message "Transfer Fastfetch data..."
 
         mkdir -p $HOME/.config/fastfetch
 
@@ -103,7 +99,6 @@ configure_zen() {
     fi
 }
 
-# Configure Flatpak data
 configure_flatpak() {
     if flatpak list --app | grep flatseal > /dev/null 2>&1; then
         log_message "Transfer Flatpak data..."
@@ -145,7 +140,7 @@ configure_easyeffects() {
 }
 
 configure_gnome_exts() {
-    if $GNOME; then
+    if [ "$GNOME" = "true" ]; then
         log_message "Transfer GNOME extentions data..."
 
         mkdir -p $HOME/.local/share/gnome-shell/extensions
@@ -157,22 +152,22 @@ configure_gnome_exts() {
     fi
 }
 
-# Configure Git config
 configure_git_data() {
     if yay -Q git > /dev/null 2>&1; then
-        log_message "Transfer Git data..."
+        if ! [ -d "$HOME/.ssh" ]; then
+            log_message "Transfer Git data..."
+            mkdir -p $HOME/.ssh
 
-        mkdir -p $HOME/.ssh
+            cp -f ./child/files/user/git/gitconfig $HOME/.gitconfig
+            cp -r ./child/files/user/git/ssh/* $HOME/.ssh/
 
-        cp -f ./child/files/user/git/gitconfig $HOME/.gitconfig
-        cp -r ./child/files/user/git/ssh/* $HOME/.ssh/
+            chmod 700 $HOME/.ssh
+            chmod 600 $HOME/.ssh/id_ed25519
+            chmod 644 $HOME/.ssh/id_ed25519.pub
 
-        chmod 700 ~/.ssh
-        chmod 600 ~/.ssh/id_ed25519
-        chmod 644 ~/.ssh/id_ed25519.pub
-
-        eval "$(ssh-agent -s)"
-        ssh-add ~/.ssh/id_ed25519
+            eval "$(ssh-agent -s)"
+            ssh-add $HOME/.ssh/id_ed25519
+        fi
     fi
 }
 
@@ -181,31 +176,35 @@ configure_happ() {
         log_message "Transfer Happ data..."
 
         mkdir -p $HOME/.config/Happ
-        cp -r /child/files/user/happ $HOME/.config/Happ
+
+        cp -r ./child/files/user/happ $HOME/.config/Happ
     fi
 }
 
 configure_mangowm() {
-    if $MANGOWM; then
+    if [ "$MANGOWM" = "true" ]; then
         log_message "Transfer MangoWM data..."
 
         mkdir -p $HOME/.config/mango
 
-        cp -r /child/files/user/mango $HOME/.config/mango
+        cp -r ./child/files/user/mango/* $HOME/.config/mango
+    fi
+}
+
+configure_wmshell() {
+    if [ "$MANGOWM" = "true" ]; then
+        log_message "Transfer WM Shell data..."
 
         if yay -Q noctalia > /dev/null 2>&1; then
             mkdir -p $HOME/.config/noctalia
 
-            cp -f /child/files/user/noctalia/noctalia-config.toml $HOME/.config/noctalia/config.toml
+            cp -f ./child/files/user/noctalia/config.toml $HOME/.config/noctalia/config.toml
         fi
 
         if yay -Q noctalia-greeter > /dev/null 2>&1; then
-            sudo cp -f /child/files/user/noctalia/greetd/config.toml /etc/greetd/config.toml
-            sudo cp -f /child/files/user/noctalia/greetd/noctalia-greeter/greeter.toml /var/lib/noctalia-greeter/greeter.toml
+            sudo cp -f ./child/files/user/noctalia/greetd/config.toml /etc/greetd/config.toml
+            sudo cp -f ./child/files/user/noctalia/greetd/noctalia-greeter/greeter.toml /var/lib/noctalia-greeter/greeter.toml
         fi
-
-        sudo systemctl disable --now lightdm.service
-        sudo systemctl enable --now greetd
 
         yay -Rns fuzzel alacritty mako niri swaybg swayidle swaylock waybar lightdm-gtk-greeter --noconfirm
     fi
@@ -216,7 +215,7 @@ main() {
 
     configure_pipewire
     configure_gnome_services
-    configure_zsh
+    configure_zsh_data
     #configure_papirus_folder_colors
     configure_fastfetch
     configure_lmstudio
@@ -229,6 +228,7 @@ main() {
     configure_git_data
     #configure_happ
     configure_mangowm
+    configure_wmshell
 
     log_success "All operations have been completed successfully!"
     log_message "===== END OF THE 4TH PART ====="

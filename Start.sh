@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # Turn on strong mode for bash
-#exit by any error
-set -e
+set -euo pipefail
 
 # Colors for output messages
 BLUE="\e[1;34m"
@@ -38,7 +37,7 @@ fi
 add_right_running() {
     log_message "We grant the rights to run scripts..."
 
-    CURRENT_DIR=$(pwd)
+    local CURRENT_DIR=$(pwd)
 
     if [ -d "./child" ]; then
         for script in ./child/*.sh; do
@@ -65,11 +64,12 @@ create_backups() {
 
     mkdir -p ./backups/security
 
-    ROOT_BACKUPS=(
+    local ROOT_BACKUPS=(
         "/etc/pacman.conf"
         "/etc/mkinitcpio.conf"
         "/etc/environment"
         "/etc/fstab"
+        "/etc/security/limits.conf"
     )
 
     for file in "${ROOT_BACKUPS[@]}"; do
@@ -81,12 +81,6 @@ create_backups() {
             cp "$file" ./backups/
         fi
     done
-
-    if [ -f "./backups/security/limits.conf" ]; then
-        log_warning "The 'limits.conf' file already exists in the backups/security folder, skip it"
-    else
-        cp /etc/security/limits.conf ./backups/security/
-    fi
 
     log_success "Backups have been created"
 }
@@ -133,7 +127,7 @@ has_mangowm() {
 
 export NVIDIA=false
 export GNOME=false
-export MANGOWM=flase
+export MANGOWM=false
 
 if has_nvidia; then
     NVIDIA=true
@@ -141,7 +135,7 @@ fi
 
 if has_gnome; then
     GNOME=true
-else if has_mangowm; then
+elif has_mangowm; then
     MANGOWM=true
 fi
 
@@ -156,12 +150,12 @@ main() {
         log_message "Work begins on post-optimization of the system..."
         log_warning "PLEASE DO NOT LEAVE BECAUSE YOU WILL NEED TO ENTER THE SUDO PASSWORD AT DIFFERENT POINTS IN TIME!"
 
-        sudo ./child/main_p1.sh && \
-        ./child/yay_p2.sh && \
-        sudo ./child/sys_optimize_p3.sh && \
-        ./child/user_optimize_p4.sh && \
-        sudo ./child/end.sh
-    } | tee -a ./jobs.log 2>&1
+        sudo NVIDIA="$NVIDIA" GNOME="$GNOME" MANGOWM="$MANGOWM" ./child/main_p1.sh
+        ./child/yay_p2.sh
+        sudo NVIDIA="$NVIDIA" GNOME="$GNOME" MANGOWM="$MANGOWM" ./child/sys_optimize_p3.sh
+        ./child/user_optimize_p4.sh
+        sudo NVIDIA="$NVIDIA" GNOME="$GNOME" MANGOWM="$MANGOWM" ./child/end.sh
+    } | tee -a ./Process.log 2>&1
 }
 
 main
