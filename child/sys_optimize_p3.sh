@@ -198,7 +198,6 @@ configure_system_services() {
     #cp -f ./child/files/etc/systemd/zram-generator.conf /etc/systemd/zram-generator.conf
 
     # nvidia-powerd -> only for >= RTX 40xx
-    # irqbalance ananicy-cpp -> only without scx_sched
     # systemd-oomd -> only 1 oom
     for service in bluetooth.service power-profiles-daemon paccache.timer v2raya reflector.timer scx_loader.service earlyoom btrfs-scrub@-.timer btrfs-scrub@home.timer; do
         if ! systemctl enable --now "$service" 2>/dev/null; then

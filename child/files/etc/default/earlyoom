@@ -2,7 +2,7 @@
 # /etc/init.d/earlyoom or by systemd from earlyoom.service.
 
 # Options to pass to earlyoom
-EARLYOOM_ARGS="-m 5 -s 5 -r 55 --avoid '(^|/)(init|systemd|systemd-.*|Xwayland|pipewire|dbus-.*|sshd|xdg-desktop-portal.*|gnome-shell|mango|noctalia|mmsg)$'"
+EARLYOOM_ARGS="-g -m 5 -s 5 -r 55 --avoid '(^|/)(init|systemd|systemd-.*|Xwayland|pipewire|dbus-.*|sshd|xdg-desktop-portal.*|gnome-shell|mango|noctalia|mmsg)$'"
 
 # Examples:
 

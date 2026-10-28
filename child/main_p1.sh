@@ -77,7 +77,6 @@ install_base_apps() {
         "zsh-autosuggestions"
         "zsh-completions"
         "zsh-history-substring-search"
-        #"xorg-xrandr"
         "go"
         "gdu"
         "duf"
@@ -88,8 +87,6 @@ install_base_apps() {
         "inxi"
         "exfat-utils"
         "papirus-icon-theme"
-        #"irqbalance"
-        #"ananicy-cpp"
         "fwupd"
         "earlyoom"
         "fastfetch"
@@ -107,6 +104,8 @@ install_base_apps() {
         "vpl-gpu-rt"
         "gnome-text-editor"
         "reflector"
+        "ttf-adwaitamono-nerd"
+        "adwaita-fonts"
     )
 
     if [ "$GNOME" = "true" ]; then
@@ -208,7 +207,6 @@ install_flatpak_apps() {
         "com.github.finefindus.eyedropper"
         "io.bassi.Amberol"
         "com.github.tchx84.Flatseal"
-        "com.mattjakeman.ExtensionManager"
         "de.haeckerfelix.Fragments"
         "com.usebottles.bottles"
         "com.vysp3r.ProtonPlus"
@@ -237,7 +235,7 @@ install_flatpak_apps() {
         "com.github.wwmm.easyeffects"
         "io.github.radiolamp.mangojuice"
         "com.valvesoftware.Steam"
-        "org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/25.08"
+        "org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/26.08"
         "app.devsuite.Ptyxis"
         # Для простой волновой визуализации исходящего звука
         #"org.nickvision.cavalier
@@ -253,7 +251,19 @@ install_flatpak_apps() {
         "com.rafaelmardojai.Blanket"
         "org.gnome.Logs"
         "org.gnome.FileRoller"
+        "org.gnome.Chess"
+        "org.nicotine_plus.Nicotine"
     )
+
+    if [ "$GNOME" = "true" ]; then
+        flatpakPackages+=(
+            "com.mattjakeman.ExtensionManager"
+        )
+    else
+        flatpakPackages+=(
+            "io.github.flattool.Ignition"
+        )
+    fi
 
     local failed_flatpakPackages=()
     for package in "${flatpakPackages[@]}"; do
