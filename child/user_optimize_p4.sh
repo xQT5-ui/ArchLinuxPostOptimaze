@@ -206,7 +206,7 @@ configure_wmshell() {
             sudo cp -f ./child/files/user/noctalia/greetd/noctalia-greeter/greeter.toml /var/lib/noctalia-greeter/greeter.toml
         fi
 
-        yay -Rns fuzzel alacritty mako niri swaybg swayidle swaylock waybar lightdm-gtk-greeter --noconfirm
+        yay -Rns fuzzel alacritty mako niri swaybg swayidle swaylock waybar lightdm-gtk-greeter xdg-desktop-portal-gnome --noconfirm
     fi
 }
 
