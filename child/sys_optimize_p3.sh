@@ -157,7 +157,9 @@ configure_swap() {
     # отключить все активные swap-устройства
     swapoff -a
     rm -f /swap/swapfile
-    btrfs subvolume delete /swap
+    if btrfs subvolume show /swap > /dev/null 2>&1; then
+        btrfs subvolume delete /swap
+    fi
 
     btrfs subvolume create /swap
     # создать swap-файл 8G с чистым UUID
