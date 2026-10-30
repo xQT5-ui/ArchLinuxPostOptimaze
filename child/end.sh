@@ -1,12 +1,7 @@
 #!/bin/bash
 
-# =====================================================
-# Post Optimiztion for Arch Linux. Part 5
-# =====================================================
-
 # Turn on strong mode for bash
-set -e  # Exit by any error
-set -u  # Only static variable
+set -euo pipefail
 
 # Colors for output messages
 BLUE="\e[1;34m"
@@ -15,22 +10,18 @@ GREEN="\e[1;32m"
 YELLOW="\e[1;33m"
 RESET="\e[0m"
 
-# INFO message
 log_message() {
     echo -e "${BLUE}[INFO] $1${RESET}"
 }
 
-# ERROR message
 log_error() {
     echo -e "${RED}[ERROR] $1${RESET}" >&2
 }
 
-# SUCCESS message
 log_success() {
     echo -e "${GREEN}[SUCCESS] $1${RESET}"
 }
 
-# WARNING message
 log_warning() {
     echo -e "${YELLOW}[WARNING] $1${RESET}"
 }
@@ -42,23 +33,21 @@ if [[ $EUID -ne 0 ]]; then
     exit 1
 fi
 
-# Delete lib32 packages
 delete_lib32() {
-    log_message "Delete all lib32 packages..."
+    if pacman -Qq | grep '^lib32' > /dev/null 2>&1; then
+        log_message "Delete all lib32 packages..."
 
-    pacman -Rs $(pacman -Qq | grep '^lib32')
+        pacman -Rs $(pacman -Qq | grep '^lib32')
+    fi
 }
 
-# Delete orphans packages
-delete_old_packages() {
+delete_orphans_packages() {
     log_message "Cleaning of excess packages..."
 
     set +e
 
-    # clear pacman cache
-    pacman -Scc --noconfirm
-    if [ $? -ne 0 ]; then
-        log_warning "Failed to clear the packet cache, but continue execution"
+    if [ "$GNOME" = "true" ]; then
+        pacman -Rns gnome-console --noconfirm
     fi
 
     ORPHANS=$(pacman -Qtdq)
@@ -68,25 +57,32 @@ delete_old_packages() {
             log_warning "It was not possible to delete some unnecessary packages, but we continue to execute"
         fi
     else
-        log_message "No unnecessary packages were found."
+        log_warning "No unnecessary packages were found."
     fi
 
     set -e
 }
 
-# Configure initramfs
 upd_init() {
     log_message "Updating initramfs..."
 
     mkinitcpio -P
 }
 
+change_greeter() {
+    if [ "$MANGOWM" = "true" ]; then
+        systemctl disable --now lightdm.service
+        systemctl enable --now greetd
+    fi
+}
+
 main() {
     log_message "Delete orphans packages (Part 5)..."
 
-    delete_old_packages
     delete_lib32
+    delete_orphans_packages
     upd_init
+    change_greeter
 
     log_success "===== END OF THE 5TH PART ====="
     log_warning "Installation and optimization are complete. It is recommended to reboot the system!"

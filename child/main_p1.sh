@@ -1,12 +1,7 @@
 #!/bin/bash
 
-# =====================================================
-# Post Optimiztion for Arch Linux. Part 1
-# =====================================================
-
 # Turn on strong mode for bash
-set -e  # Exit by any error
-set -u  # Only static variable
+set -euo pipefail
 
 # Colors for output messages
 BLUE="\e[1;34m"
@@ -15,49 +10,21 @@ GREEN="\e[1;32m"
 YELLOW="\e[1;33m"
 RESET="\e[0m"
 
-# INFO message
 log_message() {
     echo -e "${BLUE}[INFO] $1${RESET}"
 }
 
-# ERROR message
 log_error() {
     echo -e "${RED}[ERROR] $1${RESET}" >&2
 }
 
-# SUCCESS message
 log_success() {
     echo -e "${GREEN}[SUCCESS] $1${RESET}"
 }
 
-# WARNING message
 log_warning() {
     echo -e "${YELLOW}[WARNING] $1${RESET}"
 }
-
-# Check NVIDIA VRAM
-has_nvidia() {
-    log_message "Checking for an NVIDIA graphics card..."
-
-    if lspci | grep -i nvidia > /dev/null; then
-        log_success "NVIDIA graphics card detected"
-        return 0  # В bash 0 означает "истина" (успех)
-    fi
-
-    if lsmod | grep -i nvidia > /dev/null; then
-        log_success "NVIDIA driver detected"
-        return 0
-    fi
-
-    log_message "NVIDIA graphics card not detected"
-    return 1
-}
-
-NVIDIA_PRESENT=false
-
-if has_nvidia; then
-    NVIDIA_PRESENT=true
-fi
 
 # Check superuser
 if [[ $EUID -ne 0 ]]; then
@@ -66,14 +33,13 @@ if [[ $EUID -ne 0 ]]; then
     exit 1
 fi
 
-# Configure pacman.conf
 configure_pacman() {
     log_message "Configuring the pacman.conf configuration..."
 
     cp -f ./child/files/etc/pacman/pacman.conf /etc/pacman.conf
 }
 
-# Install pacman packages
+# Wrapper for installing pacman packages
 install_pacman_package() {
     local package=$1
     local max_attempts=3
@@ -96,9 +62,8 @@ install_pacman_package() {
     return 1
 }
 
-# Pacman packages
-install_base_software() {
-    log_message "Installing the basic software..."
+install_base_apps() {
+    log_message "Installing native apps..."
 
     pacman -Syu --noconfirm
 
@@ -112,9 +77,7 @@ install_base_software() {
         "zsh-autosuggestions"
         "zsh-completions"
         "zsh-history-substring-search"
-        "xorg-xrandr"
         "go"
-        #"gufw"
         "gdu"
         "duf"
         #"wireguard-tools"
@@ -122,12 +85,8 @@ install_base_software() {
         "alsa-utils"
         "pacman-contrib"
         "inxi"
-        "v2ray"
         "exfat-utils"
-        "file-roller"
         "papirus-icon-theme"
-        #"irqbalance"
-        #"ananicy-cpp"
         "fwupd"
         "earlyoom"
         "fastfetch"
@@ -136,11 +95,31 @@ install_base_software() {
         "fakeroot"
         "make"
         "gcc"
+        "debugedit"
+        "zed"
         "intel-ucode"
         "intel-media-driver"
-        "gnome-shell-extensions"
-        "zed"
+        "libva-intel-driver"
+        "vulkan-intel"
+        "vpl-gpu-rt"
+        "gnome-text-editor"
+        "reflector"
+        "ttf-adwaitamono-nerd"
+        "adwaita-fonts"
     )
+
+    if [ "$GNOME" = "true" ]; then
+        pacmanPackages+=("gnome-shell-extensions")
+    else
+        pacmanPackages+=(
+            "flatpak"
+            "mangowm"
+            "noctalia"
+            "greetd"
+            "noctalia-greeter"
+            "nwg-look"
+        )
+    fi
 
     local failed_pacmanPackages=()
     for package in "${pacmanPackages[@]}"; do
@@ -161,11 +140,10 @@ install_base_software() {
     # update font cache
     fc-cache -fv
 
-    if $NVIDIA_PRESENT; then
+    if [ "$NVIDIA" = "true" ]; then
         local pacmanNVIDIA=(
-            "nvidia-settings"
             "opencl-nvidia"
-            "libvdpau-va-gl"
+            "nvidia-settings"
             "libxnvctrl"
         )
 
@@ -187,15 +165,16 @@ install_base_software() {
     fi
 }
 
-# Delete GNOME packages
 delete_gnome_applications() {
-    log_message "Optimize GNOME by removing unnecessary packages..."
+    if [ "$GNOME" = "true" ]; then
+        log_message "Optimize GNOME by removing unnecessary packages..."
 
-    pacman -Rnsc --noconfirm gnome-connections gnome-software gnome-music gnome-maps gnome-contacts gnome-system-monitor gnome-tour gnome-weather loupe epiphany yelp decibels vim malcontent evince sushi baobab gvfs-onedrive gnome-backgrounds showtime papers snapshot gnome-calculator
-    pacman -S --noconfirm flatpak
+        pacman -Rnsc --noconfirm gnome-connections gnome-software gnome-music gnome-maps gnome-contacts gnome-system-monitor gnome-tour gnome-weather loupe epiphany yelp decibels vim malcontent evince sushi baobab gvfs-onedrive gnome-backgrounds showtime papers snapshot gnome-calculator gnome-logs file-roller
+        pacman -S --noconfirm flatpak
+    fi
 }
 
-# Install Flatpak packages
+# Wrapper for installing Flatpak packages
 install_flatpak_package() {
     local package=$1
     local max_attempts=3
@@ -218,19 +197,17 @@ install_flatpak_package() {
     return 1
 }
 
-# Flatpak packages
 install_flatpak_apps() {
-    log_message "Installing Flatpak-applications..."
+    log_message "Installing Flatpak apps..."
 
     local flatpakPackages=(
         "com.bitwig.BitwigStudio"
         "io.github.milkshiift.GoofCord"
-        "com.github.johnfactotum.Foliate"
-        "art.fatdawlf.Piccolo"
+        "com.andr2i.scrolex"
+        "com.github.finefindus.eyedropper"
         "io.bassi.Amberol"
         "com.github.tchx84.Flatseal"
-        "com.mattjakeman.ExtensionManager"
-        "com.transmissionbt.Transmission"
+        "de.haeckerfelix.Fragments"
         "com.usebottles.bottles"
         "com.vysp3r.ProtonPlus"
         "io.github.diegopvlk.Cine"
@@ -246,7 +223,7 @@ install_flatpak_apps() {
         "org.torproject.torbrowser-launcher"
         "org.gtk.Gtk3theme.adw-gtk3-dark"
         "com.obsproject.Studio"
-        "net.nokyan.Resources"
+        "io.missioncenter.MissionCenter"
         "com.github.PintaProject.Pinta"
         "org.gnome.Calculator"
         "org.gnome.Loupe"
@@ -258,21 +235,35 @@ install_flatpak_apps() {
         "com.github.wwmm.easyeffects"
         "io.github.radiolamp.mangojuice"
         "com.valvesoftware.Steam"
-        "org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/25.08"
+        "org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/26.08"
         "app.devsuite.Ptyxis"
-        "org.nickvision.cavalier" # Для визуализации исходящего звука
-        "it.mijorus.gearlever" # Для работы с AppImage
+        # Для простой волновой визуализации исходящего звука
+        #"org.nickvision.cavalier
+        # Для работы с AppImage
+        "it.mijorus.gearlever"
         "de.wwwtech.gitte"
-        "it.fabiodistasio.AntaresSQL"
+        "io.github.anil_e.Codd"
         "io.github.dzheremi2.lrcmake-gtk"
-        "io.github.swordpuffin.rewaita"
         "dev.bragefuglseth.Keypunch"
         "io.github.diegopvlk.Tomatillo"
         "io.gitlab.adhami3310.Impression"
         "org.gnome.Snapshot"
-        "org.gnome.meld"
         "com.rafaelmardojai.Blanket"
+        "org.gnome.Logs"
+        "org.gnome.FileRoller"
+        "org.gnome.Chess"
+        "org.nicotine_plus.Nicotine"
     )
+
+    if [ "$GNOME" = "true" ]; then
+        flatpakPackages+=(
+            "com.mattjakeman.ExtensionManager"
+        )
+    else
+        flatpakPackages+=(
+            "io.github.flattool.Ignition"
+        )
+    fi
 
     local failed_flatpakPackages=()
     for package in "${flatpakPackages[@]}"; do
@@ -296,14 +287,8 @@ install_flatpak_apps() {
 main() {
     log_message "Install main packages (Part 1)..."
 
-    if $NVIDIA_PRESENT; then
-        log_message "An NVIDIA graphics card has been detected. The appropriate settings will be applied."
-    else
-        log_message "No NVIDIA graphics card detected. NVIDIA settings will be skipped."
-    fi
-
     configure_pacman
-    install_base_software
+    install_base_apps
     install_flatpak_apps
     delete_gnome_applications
 

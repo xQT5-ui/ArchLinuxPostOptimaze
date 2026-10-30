@@ -1,10 +1,7 @@
 #!/bin/bash
 
-# =====================================================
-# Post Optimiztion for Arch Linux
-# =====================================================
-#
-set -e
+# Turn on strong mode for bash
+set -euo pipefail
 
 # Colors for output messages
 BLUE="\e[1;34m"
@@ -13,22 +10,18 @@ GREEN="\e[1;32m"
 YELLOW="\e[1;33m"
 RESET="\e[0m"
 
-# INFO message
 log_message() {
     echo -e "${BLUE}[INFO] $1${RESET}"
 }
 
-# ERROR message
 log_error() {
     echo -e "${RED}[ERROR] $1${RESET}" >&2
 }
 
-# SUCCESS message
 log_success() {
     echo -e "${GREEN}[SUCCESS] $1${RESET}"
 }
 
-# WARNING message
 log_warning() {
     echo -e "${YELLOW}[WARNING] $1${RESET}"
 }
@@ -44,7 +37,7 @@ fi
 add_right_running() {
     log_message "We grant the rights to run scripts..."
 
-    CURRENT_DIR=$(pwd)
+    local CURRENT_DIR=$(pwd)
 
     if [ -d "./child" ]; then
         for script in ./child/*.sh; do
@@ -66,17 +59,17 @@ add_right_running() {
     log_success "Scripts has right for running"
 }
 
-# Create backups
 create_backups() {
     log_message "Creating backups..."
 
     mkdir -p ./backups/security
 
-    ROOT_BACKUPS=(
+    local ROOT_BACKUPS=(
         "/etc/pacman.conf"
         "/etc/mkinitcpio.conf"
         "/etc/environment"
         "/etc/fstab"
+        "/etc/security/limits.conf"
     )
 
     for file in "${ROOT_BACKUPS[@]}"; do
@@ -89,14 +82,62 @@ create_backups() {
         fi
     done
 
-    if [ -f "./backups/security/limits.conf" ]; then
-        log_warning "The 'limits.conf' file already exists in the backups/security folder, skip it"
-    else
-        cp /etc/security/limits.conf ./backups/security/
-    fi
-
     log_success "Backups have been created"
 }
+
+# Check NVIDIA VRAM
+has_nvidia() {
+    log_message "Checking for an NVIDIA graphics card..."
+
+    if lspci | grep -i nvidia > /dev/null; then
+        log_success "NVIDIA graphics card detected"
+        # В bash 0 означает "истина" (успех)
+        return 0
+    fi
+
+    if lsmod | grep -i nvidia > /dev/null; then
+        log_success "NVIDIA driver detected"
+        return 0
+    fi
+
+    return 1
+}
+
+has_gnome() {
+    log_message "Checking for an GNOME..."
+
+    if pacman -Q gnome-shell > /dev/null 2>&1; then
+        log_success "GNOME detected"
+        return 0
+    fi
+
+    return 1
+}
+
+has_mangowm() {
+    log_message "Checking for an MangoWM..."
+
+    if pacman -Q mangowm > /dev/null 2>&1; then
+        log_success "MangoWM detected"
+        return 0
+    fi
+
+    return 1
+}
+
+export NVIDIA=false
+export GNOME=false
+export MANGOWM=false
+
+if has_nvidia; then
+    NVIDIA=true
+fi
+
+if has_gnome; then
+    GNOME=true
+elif has_mangowm; then
+    MANGOWM=true
+fi
 
 main() {
     {
@@ -109,13 +150,12 @@ main() {
         log_message "Work begins on post-optimization of the system..."
         log_warning "PLEASE DO NOT LEAVE BECAUSE YOU WILL NEED TO ENTER THE SUDO PASSWORD AT DIFFERENT POINTS IN TIME!"
 
-        sudo ./child/keyring_p0.sh && \
-        sudo ./child/main_p1.sh && \
-        ./child/yay_p2.sh && \
-        sudo ./child/sys_optimize_p3.sh && \
-        ./child/user_optimize_p4.sh && \
-        sudo ./child/end.sh
-    } | tee -a ./jobs.log 2>&1
+        sudo NVIDIA="$NVIDIA" GNOME="$GNOME" MANGOWM="$MANGOWM" ./child/main_p1.sh
+        ./child/yay_p2.sh
+        sudo NVIDIA="$NVIDIA" GNOME="$GNOME" MANGOWM="$MANGOWM" ./child/sys_optimize_p3.sh
+        ./child/user_optimize_p4.sh
+        sudo NVIDIA="$NVIDIA" GNOME="$GNOME" MANGOWM="$MANGOWM" ./child/end.sh
+    } | tee -a ./Process.log 2>&1
 }
 
 main

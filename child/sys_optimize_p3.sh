@@ -1,12 +1,7 @@
 #!/bin/bash
 
-# =====================================================
-# Post Optimiztion for Arch Linux. Part 3
-# =====================================================
-
 # Turn on strong mode for bash
-set -e  # Exit by any error
-set -u  # Only static variable
+set -euo pipefail
 
 # Colors for output messages
 BLUE="\e[1;34m"
@@ -15,22 +10,18 @@ GREEN="\e[1;32m"
 YELLOW="\e[1;33m"
 RESET="\e[0m"
 
-# INFO message
 log_message() {
     echo -e "${BLUE}[INFO] $1${RESET}"
 }
 
-# ERROR message
 log_error() {
     echo -e "${RED}[ERROR] $1${RESET}" >&2
 }
 
-# SUCCESS message
 log_success() {
     echo -e "${GREEN}[SUCCESS] $1${RESET}"
 }
 
-# WARNING message
 log_warning() {
     echo -e "${YELLOW}[WARNING] $1${RESET}"
 }
@@ -42,47 +33,16 @@ if [[ $EUID -ne 0 ]]; then
     exit 1
 fi
 
-# Check NVIDIA VRAM
-has_nvidia() {
-    log_message "Checking for an NVIDIA graphics card..."
-
-    if lspci | grep -i nvidia > /dev/null; then
-        log_success "NVIDIA graphics card detected"
-        return 0  # В bash 0 означает "истина" (успех)
-    fi
-
-    if lsmod | grep -i nvidia > /dev/null; then
-        log_success "NVIDIA driver detected"
-        return 0
-    fi
-
-    log_message "NVIDIA graphics card not detected"
-    return 1
-}
-
-if has_nvidia; then
-    NVIDIA_PRESENT=true
-else
-    NVIDIA_PRESENT=false
-fi
-
-# Configure initramfs
 configure_initramfs() {
     log_message "Configuring initramfs images..."
 
     cp -f ./child/files/etc/mkinitcpio.conf /etc/mkinitcpio.conf
-    if [[ -f /etc/mkinitcpio.conf ]]; then
-        mkinitcpio -P
-        log_success "Initramfs rebuilt successfully"
-    fi
 }
 
-# Configure bootloader
 configure_bootloader() {
     log_message "Configuring the boot loader..."
 
     cp -f ./child/files/boot/loader.conf /boot/loader/loader.conf
-    #sed -i 's/^options.*/options rw quiet splash/' /boot/loader/entries/arch-linux.conf
 }
 
 # Configure kernel attributes
@@ -92,97 +52,48 @@ configure_sysctl() {
     cp -f ./child/files/etc/sysctl.d/99-sysctl.conf /etc/sysctl.d/99-sysctl.conf
 }
 
-# Configure environments
-configure_wayland() {
-    log_message "Setting up environment variables..."
+configure_envs() {
+    if [ "$NVIDIA" = "true" ]; then
+        log_message "Setting up environment variables..."
 
-    if $NVIDIA_PRESENT; then
         cp -f ./child/files/etc/environment /etc/environment
-   fi
+    fi
 }
 
-# Configure Plex Media Server
 configure_plex() {
-    log_message "The Plex Media Server add-on..."
+    if yay -Q plex-media-server > /dev/null 2>&1; then
+        log_message "The Plex Media Server add-on..."
 
-    # set owner
-    chown -R plex:plex /media
-    # add rights
-    chmod -R 775 /media
+        # set owner
+        chown -R plex:plex /media
+        # add rights
+        chmod -R 775 /media
 
-    systemctl enable plexmediaserver.service
-    systemctl start plexmediaserver.service
-}
-
-# Configure services
-configure_system_services() {
-    log_message "Configuring system services and daemons..."
-
-    systemctl daemon-reload
-
-    cp -f ./child/files/etc/systemd/zram-generator.conf /etc/systemd/zram-generator.conf
-
-    log_message "Creating a v2raya service configuration..."
-    cat << EOF > /etc/systemd/system/v2raya.service
-[Unit]
-Description=Proxy v2rayA Service
-After=network.target
-
-[Service]
-Type=simple
-ExecStart=/usr/bin/v2raya
-Restart=on-failure
-
-[Install]
-WantedBy=multi-user.target
-EOF
-
-    # nvidia-powerd -> only for >= RTX 40xx
-    # cronie.service -> only for BTRFS
-    # irqbalance ananicy-cpp systemd-oomd
-    for service in bluetooth.service v2raya.service power-profiles-daemon earlyoom paccache.timer; do
-        if systemctl list-unit-files | grep -q "^${service}"; then
-            systemctl enable ${service}
-        else
-            log_error "Service not found: ${service}"
-        fi
-    done
-
-    systemctl start bluetooth.service v2raya.service
-
-    # clear pacman cache
-    if systemctl list-timers | grep -q pacman-cleaner.timer; then
-        systemctl stop pacman-cleaner.timer
-        systemctl disable pacman-cleaner.timer
-        rm -f /etc/systemd/system/pacman-cleaner.timer
+        systemctl enable plexmediaserver.service
+        systemctl start plexmediaserver.service
     fi
-
-    systemd-run --on-calendar="Sun 10:00" --unit="pacman-cleaner" /sbin/pacman -Scc
 }
 
-# Configure NVIDIA attributes
 configure_nvidia() {
-    if ! $NVIDIA_PRESENT; then
-        log_message "The NVIDIA graphics card is not detected. Skipping NVIDIA settings"
-        return 0
+    if [ "$NVIDIA" = "true" ]; then
+        log_message "Setting up NVIDIA..."
+
+        cp -f ./child/files/etc/modprobe.d/nvidia.conf /etc/modprobe.d/nvidia.conf
     fi
-
-    log_message "Setting up NVIDIA..."
-
-    cp -f ./child/files/etc/modprobe.d/nvidia.conf /etc/modprobe.d/nvidia.conf
 }
 
-# Configure terminal
 change_shell_to_zsh() {
-    log_message "Replacing bash with zsh..."
+    if yay -Q zsh > /dev/null 2>&1; then
+        log_message "Replacing bash with zsh..."
 
-    chsh -s /bin/zsh
+        chsh -s /usr/bin/zsh "$USER"
+    fi
 }
 
-# Configure NVMe scheduler
-disable_nvmesh_scheduler() {
+configure_nvme_scheduler() {
     if lsblk -d -o name | grep -iq 'nvm'; then
         log_message "Disabling the NVMe SSD scheduler..."
+
         cat << EOF > /etc/udev/rules.d/60-ioschedulers.rules
 # NVMe SSD
 ACTION=="add|change", KERNEL=="nvme[0-9]*", ATTR{queue/rotational}=="0", ATTR{queue/scheduler}="none"
@@ -190,7 +101,6 @@ EOF
     fi
 }
 
-# Configure realtime
 configure_realtime_audio() {
     log_message "Configure realtime audio priority..."
 
@@ -200,42 +110,124 @@ configure_realtime_audio() {
 EOF
 }
 
-# Configure OOM
-configure_earlyoom() {
-    log_message "Setting up earlyoom rules..."
+configure_oom() {
+    if yay -Q earlyoom > /dev/null 2>&1; then
+        log_message "Setting up OOM rules..."
 
-    cp -f ./child/files/etc/default/earlyoom /etc/default/earlyoom
+        cp -f ./child/files/etc/default/earlyoom /etc/default/earlyoom
+    fi
 }
 
-# Configure alternative scheduler
+# Configure alternative kernel scheduler
 configure_sched() {
-    log_message "Setting up alternative SCX scheduler..."
+    if yay -Q scx-scheds > /dev/null 2>&1; then
+        log_message "Setting up alternative SCX scheduler..."
 
-    cp -f ./child/files/etc/scx_loader.toml /etc/scx_loader.toml
-    systemctl enable --now scx_loader.service
+        cp -f ./child/files/etc/scx_loader.toml /etc/scx_loader.toml
+    fi
+}
+
+configure_firewall() {
+    if yay -Q firewalld > /dev/null 2>&1; then
+        log_message "Setting up firewall rights..."
+
+        # v2rayA
+        firewall-cmd --permanent --zone=trusted --add-interface=tun0
+        # Plex Media Server
+        cp -f ./child/files/etc/firewalld/plex.xml /etc/firewalld/services/plex.xml
+        firewall-cmd --add-service=plex --permanent
+        # LM Studio
+        firewall-cmd --permanent --add-port=1234/tcp
+    fi
+}
+
+configure_ntsync() {
+    if lsmod | grep -q ntsync; then
+        log_warning "NTSync module is already on"
+    else
+        log_message "Setting up NTsync..."
+
+        pacman -S ntsync-autoload --noconfirm
+    fi
+}
+
+configure_swap() {
+    log_message "Setting up Swap..."
+
+    # отключить все активные swap-устройства
+    swapoff -a
+    rm -f /swap/swapfile
+    if btrfs subvolume show /swap > /dev/null 2>&1; then
+        btrfs subvolume delete /swap
+    fi
+
+    btrfs subvolume create /swap
+    # создать swap-файл 8G с чистым UUID
+    btrfs filesystem mkswapfile --size 8G --uuid clear /swap/swapfile
+    swapon /swap/swapfile
+
+    if ! grep -qi "swapfile" /etc/fstab; then
+        printf "# zswap\n/swap/swapfile none swap defaults 0 0\n" >> /etc/fstab
+        sed -i 's/$/ zswap.enabled=1 zswap.compressor=zstd zswap.max_pool_percent=21/' /etc/kernel/cmdline
+    else
+        log_warning "swapfile already exists in /etc/fstab"
+    fi
+}
+
+configure_snapper() {
+    log_message "Setting up Snapper..."
+
+    sed -i 's/^TIMELINE_LIMIT_HOURLY.*/TIMELINE_LIMIT_HOURLY=\"0\"/' /etc/snapper/configs/root
+    sed -i 's/^TIMELINE_LIMIT_DAILY.*/TIMELINE_LIMIT_DAILY=\"5\"/' /etc/snapper/configs/root
+    sed -i 's/^TIMELINE_LIMIT_WEEKLY.*/TIMELINE_LIMIT_WEEKLY=\"0\"/' /etc/snapper/configs/root
+    sed -i 's/^TIMELINE_LIMIT_MONTHLY.*/TIMELINE_LIMIT_MONTHLY=\"0\"/' /etc/snapper/configs/root
+    sed -i 's/^TIMELINE_LIMIT_YEARLY.*/TIMELINE_LIMIT_YEARLY=\"0\"/' /etc/snapper/configs/root
+}
+
+configure_btrfs() {
+    log_message "Setting up BTRFS maintenance..."
+
+    systemctl enable --now btrfs-scrub@-.timer
+    systemctl enable --now btrfs-scrub@home.timer
+}
+
+configure_system_services() {
+    log_message "Configuring system services and daemons..."
+
+    systemctl daemon-reload
+
+    # zram without the SWAP!
+    #cp -f ./child/files/etc/systemd/zram-generator.conf /etc/systemd/zram-generator.conf
+
+    # nvidia-powerd -> only for >= RTX 40xx
+    # systemd-oomd -> only 1 oom
+    for service in bluetooth.service power-profiles-daemon paccache.timer v2raya reflector.timer scx_loader.service earlyoom btrfs-scrub@-.timer btrfs-scrub@home.timer; do
+        if ! systemctl enable --now "$service" 2>/dev/null; then
+            log_error "Failed to enable/start: $service"
+        fi
+    done
 }
 
 main() {
     log_message "System optimizations (Part 3)..."
 
-    if $NVIDIA_PRESENT; then
-        log_message "An NVIDIA graphics card has been detected. The appropriate settings will be applied."
-    else
-        log_message "No NVIDIA graphics card detected. NVIDIA settings will be skipped."
-    fi
-
     configure_initramfs
     configure_bootloader
     configure_sysctl
-    configure_wayland
+    #configure_envs
     configure_plex
-    configure_system_services
     configure_nvidia
     change_shell_to_zsh
-    #disable_nvmesh_scheduler
+    #configure_nvme_scheduler
     configure_realtime_audio
-    configure_earlyoom
+    configure_oom
     configure_sched
+    configure_firewall
+    configure_ntsync
+    configure_swap
+    configure_snapper
+    configure_btrfs
+    configure_system_services
 
     log_success "All operations have been completed successfully!"
     log_message "===== END OF THE 3D PART ====="

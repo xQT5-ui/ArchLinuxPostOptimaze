@@ -1,12 +1,7 @@
 #!/bin/bash
 
-# =====================================================
-# Post Optimiztion for Arch Linux. Part 2
-# =====================================================
-
 # Turn on strong mode for bash
-set -e  # Exit by any error
-set -u  # Only static variable
+set -euo pipefail
 
 # Colors for output messages
 BLUE="\e[1;34m"
@@ -15,22 +10,18 @@ GREEN="\e[1;32m"
 YELLOW="\e[1;33m"
 RESET="\e[0m"
 
-# INFO message
 log_message() {
     echo -e "${BLUE}[INFO] $1${RESET}"
 }
 
-# ERROR message
 log_error() {
     echo -e "${RED}[ERROR] $1${RESET}" >&2
 }
 
-# SUCCESS message
 log_success() {
     echo -e "${GREEN}[SUCCESS] $1${RESET}"
 }
 
-# WARNING message
 log_warning() {
     echo -e "${YELLOW}[WARNING] $1${RESET}"
 }
@@ -104,25 +95,41 @@ install_package() {
 install_aur_packages() {
     log_message "Installing packages from AUR..."
 
-    yay -Sy
+    yay -Syu --noconfirm
 
     local packages=(
         "zsh-theme-powerlevel10k-git"
         "zsh-fast-syntax-highlighting"
         "bibata-cursor-theme-bin"
         "adw-gtk-theme"
-        #"papirus-folders" # Ошибка с верификацией ключа
+        #"papirus-folders"
         #"ventoy-bin"
         "plex-media-server"
         "nautilus-admin-gtk4"
         #"nautilus-open-any-terminal"
-        "v2raya"
+        "v2raya-bin"
         #"ttf-ms-fonts"
         #"mkinitcpio-firmware"
         #"cachyos-ananicy-rules-git"
-        "xpadneo-dkms" # Для современной поддержки контроллеров
+        # Для современной поддержки контроллеров
+        "xpadneo-dkms"
         "lmstudio-bin"
     )
+
+    if [ "$GNOME" = "true" ]; then
+        packages+=(
+            "pkgconf"
+            "gnome-rounded-blur"
+        )
+    fi
+
+    if yay -Q snapper > /dev/null 2>&1; then
+        packages+=(
+            "btrfs-assistant"
+            "snap-pac"
+            "snapper-rollback"
+        )
+    fi
 
     local failed_packages=()
     for package in "${packages[@]}"; do
@@ -150,7 +157,7 @@ configure_makepkg() {
 create_directories() {
     log_message "Create additional folders..."
 
-    mkdir -p $HOME/.themes $HOME/.icons $HOME"/Загрузки/Torrents" $HOME/.config/fastfetch
+    mkdir -p $HOME/.themes $HOME/.icons $HOME"/Загрузки/Torrents"
 
     if sudo mkdir -p /media/movies /media/tvshows; then
         ln -sf /media/movies $HOME"/Загрузки/Torrents"
