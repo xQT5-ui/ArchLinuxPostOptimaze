@@ -53,7 +53,7 @@ configure_transfer_data() {
     fi
 
     # Zen
-    if flatpak list --app | grep -iq "Zen" > /dev/null 2>&1; then
+    if flatpak list --app | grep -iq "zen" > /dev/null 2>&1; then
         mkdir -p ./child/files/user/zen
         cp -r $HOME/.zen/* ./child/files/user/zen/
     fi
@@ -71,13 +71,13 @@ configure_transfer_data() {
     fi
 
     # MangoHud
-    if flatpak list --app | grep -iq "MangoJuice" > /dev/null 2>&1; then
+    if flatpak list --app | grep -iq "mangojuice" > /dev/null 2>&1; then
         mkdir -p ./child/files/user/MangoHud
         cp -f $HOME/.config/MangoHud/MangoHud.conf ./child/files/user/MangoHud/MangoHud.conf
     fi
 
     # EasyEffects
-    if flatpak list --app | grep -iq "EasyEffects" > /dev/null 2>&1; then
+    if flatpak list --app | grep -iq "easyeffects" > /dev/null 2>&1; then
         mkdir -p ./child/files/user/easyeffects
         cp -r $HOME/.var/app/com.github.wwmm.easyeffects/data/* ./child/files/user/easyeffects/
     fi

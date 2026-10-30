@@ -90,7 +90,7 @@ configure_lmstudio() {
 }
 
 configure_zen() {
-    if flatpak list --app | grep zen > /dev/null 2>&1; then
+    if flatpak list --app | grep -iq "zen" > /dev/null 2>&1; then
         log_message "Transfer Zen data..."
 
         mkdir -p $HOME/.zen
@@ -100,7 +100,7 @@ configure_zen() {
 }
 
 configure_flatpak() {
-    if flatpak list --app | grep flatseal > /dev/null 2>&1; then
+    if flatpak list --app | grep -iq "flatseal" > /dev/null 2>&1; then
         log_message "Transfer Flatpak data..."
 
         mkdir -p $HOME/.local/share/flatpak/overrides
@@ -120,7 +120,7 @@ configure_zed() {
 }
 
 configure_mangohud() {
-    if flatpak list --runtime | grep MangoHud > /dev/null 2>&1; then
+    if flatpak list --runtime | grep -iq "mangohud" > /dev/null 2>&1; then
         log_message "Transfer MangoHud data..."
 
         mkdir -p $HOME/.config/MangoHud
@@ -130,7 +130,7 @@ configure_mangohud() {
 }
 
 configure_easyeffects() {
-    if flatpak list --app | grep easyeffects > /dev/null 2>&1; then
+    if flatpak list --app | grep -iq "easyeffects" > /dev/null 2>&1; then
         log_message "Transfer EasyEffects data..."
 
         mkdir -p $HOME/.var/app/com.github.wwmm.easyeffects/data
@@ -206,6 +206,7 @@ configure_wmshell() {
             sudo cp -f ./child/files/user/noctalia/greetd/noctalia-greeter/greeter.toml /var/lib/noctalia-greeter/greeter.toml
         fi
 
+        # from Niri desktop installation
         yay -Rns fuzzel alacritty mako niri swaybg swayidle swaylock waybar lightdm-gtk-greeter xdg-desktop-portal-gnome --noconfirm
     fi
 }
