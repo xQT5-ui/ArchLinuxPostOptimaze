@@ -109,6 +109,14 @@ configure_transfer_data() {
         cp -f $HOME/.config/noctalia/config.toml ./child/files/user/noctalia/config.toml
         sudo cp -f /var/lib/noctalia-greeter/greeter.toml ./child/files/user/noctalia/greetd/noctalia-greeter/greeter.toml
     fi
+
+    # v2rayA
+    if command -v yay &> /dev/null; then
+        if yay -Q v2raya-bin > /dev/null 2>&1; then
+            sudo cp -f /etc/v2raya/config.json ./child/files/user/v2rayA/config/config.json
+            sudo cp -f /etc/v2raya/v2raya.db ./child/files/user/v2rayA/config/v2raya.db
+        fi
+    fi
 }
 
 main() {
