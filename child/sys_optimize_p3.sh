@@ -191,6 +191,16 @@ configure_btrfs() {
     systemctl enable --now btrfs-scrub@home.timer
 }
 
+configure_v2raya() {
+    if yay -Q v2raya-bin > /dev/null 2>&1; then
+        log_message "Setting up v2rayA system data..."
+
+        cp -rf ./child/files/user/v2rayA/config/* /etc/v2raya/
+
+        chown -R root:root /etc/v2raya
+    fi
+}
+
 configure_system_services() {
     log_message "Configuring system services and daemons..."
 
@@ -227,6 +237,7 @@ main() {
     configure_swap
     configure_snapper
     configure_btrfs
+    configure_v2raya
     configure_system_services
 
     log_success "All operations have been completed successfully!"
