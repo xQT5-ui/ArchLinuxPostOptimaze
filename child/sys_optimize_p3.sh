@@ -82,14 +82,6 @@ configure_nvidia() {
     fi
 }
 
-change_shell_to_zsh() {
-    if yay -Q zsh > /dev/null 2>&1; then
-        log_message "Replacing bash with zsh..."
-
-        chsh -s /usr/bin/zsh "$USER"
-    fi
-}
-
 configure_nvme_scheduler() {
     if lsblk -d -o name | grep -iq 'nvm'; then
         log_message "Disabling the NVMe SSD scheduler..."
@@ -152,25 +144,27 @@ configure_ntsync() {
 }
 
 configure_swap() {
-    log_message "Setting up Swap..."
+    if yay -Q btrfs-progs > /dev/null 2>&1; then
+        log_message "Setting up Swap..."
 
-    # отключить все активные swap-устройства
-    swapoff -a
-    rm -f /swap/swapfile
-    if btrfs subvolume show /swap > /dev/null 2>&1; then
-        btrfs subvolume delete /swap
-    fi
+        # turn off all active swap-devices
+        swapoff -a
+        rm -f /swap/swapfile
+        if btrfs subvolume show /swap > /dev/null 2>&1; then
+            btrfs subvolume delete /swap
+        fi
 
-    btrfs subvolume create /swap
-    # создать swap-файл 8G с чистым UUID
-    btrfs filesystem mkswapfile --size 8G --uuid clear /swap/swapfile
-    swapon /swap/swapfile
+        btrfs subvolume create /swap
+        # create swap-file 8G with clear UUID
+        btrfs filesystem mkswapfile --size 8G --uuid clear /swap/swapfile
+        swapon /swap/swapfile
 
-    if ! grep -qi "swapfile" /etc/fstab; then
-        printf "# zswap\n/swap/swapfile none swap defaults 0 0\n" >> /etc/fstab
-        sed -i 's/$/ zswap.enabled=1 zswap.compressor=zstd zswap.max_pool_percent=21/' /etc/kernel/cmdline
-    else
-        log_warning "swapfile already exists in /etc/fstab"
+        if ! grep -qi "swapfile" /etc/fstab; then
+            printf "# zswap\n/swap/swapfile none swap defaults 0 0\n" >> /etc/fstab
+            sed -i 's/$/ zswap.enabled=1 zswap.compressor=zstd zswap.max_pool_percent=21/' /etc/kernel/cmdline
+        else
+            log_warning "swapfile already exists in /etc/fstab"
+        fi
     fi
 }
 
@@ -185,19 +179,11 @@ configure_snapper() {
 }
 
 configure_btrfs() {
-    log_message "Setting up BTRFS maintenance..."
+    if yay -Q btrfs-progs > /dev/null 2>&1; then
+        log_message "Setting up BTRFS maintenance..."
 
-    systemctl enable --now btrfs-scrub@-.timer
-    systemctl enable --now btrfs-scrub@home.timer
-}
-
-configure_v2raya() {
-    if yay -Q v2raya-bin > /dev/null 2>&1; then
-        log_message "Setting up v2rayA system data..."
-
-        cp -rf ./child/files/user/v2rayA/config/* /etc/v2raya/
-
-        chown -R root:root /etc/v2raya
+        systemctl enable --now btrfs-scrub@-.timer
+        systemctl enable --now btrfs-scrub@home.timer
     fi
 }
 
@@ -237,7 +223,6 @@ main() {
     configure_swap
     configure_snapper
     configure_btrfs
-    configure_v2raya
     configure_system_services
 
     log_success "All operations have been completed successfully!"
