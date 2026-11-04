@@ -105,7 +105,6 @@ install_aur_packages() {
         "nautilus-admin-gtk4"
         #"nautilus-open-any-terminal"
         "v2raya-bin"
-        #"ttf-ms-fonts"
         #"mkinitcpio-firmware"
         #"cachyos-ananicy-rules-git"
         # Modern game controller support

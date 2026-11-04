@@ -68,9 +68,6 @@ configure_plex() {
         chown -R plex:plex /media
         # add rights
         chmod -R 775 /media
-
-        systemctl enable plexmediaserver.service
-        systemctl start plexmediaserver.service
     fi
 }
 
@@ -126,8 +123,7 @@ configure_firewall() {
         # v2rayA
         firewall-cmd --permanent --zone=trusted --add-interface=tun0
         # Plex Media Server
-        cp -f ./child/files/etc/firewalld/plex.xml /etc/firewalld/services/plex.xml
-        firewall-cmd --add-service=plex --permanent
+        firewall-cmd --permanent --add-port=32400/tcp
         # LM Studio
         firewall-cmd --permanent --add-port=1234/tcp
     fi
@@ -197,7 +193,7 @@ configure_system_services() {
 
     # nvidia-powerd -> only for >= RTX 40xx
     # systemd-oomd -> only 1 oom
-    for service in bluetooth.service power-profiles-daemon paccache.timer v2raya reflector.timer scx_loader.service earlyoom btrfs-scrub@-.timer btrfs-scrub@home.timer; do
+    for service in bluetooth.service power-profiles-daemon paccache.timer v2raya reflector.timer scx_loader.service earlyoom btrfs-scrub@-.timer btrfs-scrub@home.timer plexmediaserver.service; do
         if ! systemctl enable --now "$service" 2>/dev/null; then
             log_error "Failed to enable/start: $service"
         fi
@@ -219,7 +215,7 @@ main() {
     configure_oom
     configure_sched
     configure_firewall
-    configure_ntsync
+    #configure_ntsync
     configure_swap
     configure_snapper
     configure_btrfs
