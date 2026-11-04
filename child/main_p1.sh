@@ -81,7 +81,6 @@ install_base_apps() {
         "gdu"
         "duf"
         #"wireguard-tools"
-        "power-profiles-daemon"
         "alsa-utils"
         "pacman-contrib"
         "inxi"
@@ -97,7 +96,6 @@ install_base_apps() {
         "gcc"
         "debugedit"
         "zed"
-        "intel-ucode"
         "intel-media-driver"
         "libva-intel-driver"
         "vulkan-intel"
@@ -118,6 +116,7 @@ install_base_apps() {
             "greetd"
             "noctalia-greeter"
             "nwg-look"
+            "gnome-keyring"
         )
     fi
 
@@ -237,9 +236,7 @@ install_flatpak_apps() {
         "com.valvesoftware.Steam"
         "org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/26.08"
         "app.devsuite.Ptyxis"
-        # Для простой волновой визуализации исходящего звука
-        #"org.nickvision.cavalier
-        # Для работы с AppImage
+        # For AppImage
         "it.mijorus.gearlever"
         "de.wwwtech.gitte"
         "io.github.anil_e.Codd"
@@ -258,10 +255,6 @@ install_flatpak_apps() {
     if [ "$GNOME" = "true" ]; then
         flatpakPackages+=(
             "com.mattjakeman.ExtensionManager"
-        )
-    else
-        flatpakPackages+=(
-            "io.github.flattool.Ignition"
         )
     fi
 

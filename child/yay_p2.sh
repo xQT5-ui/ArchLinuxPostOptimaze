@@ -48,7 +48,6 @@ install_yay() {
     rm -rf $HOME/yay
 }
 
-# Configure yay
 setup_yay() {
     if command -v yay &> /dev/null; then
         log_message "yay is already installed"
@@ -91,7 +90,6 @@ install_package() {
     return 1
 }
 
-# Install AUR packages
 install_aur_packages() {
     log_message "Installing packages from AUR..."
 
@@ -102,16 +100,14 @@ install_aur_packages() {
         "zsh-fast-syntax-highlighting"
         "bibata-cursor-theme-bin"
         "adw-gtk-theme"
-        #"papirus-folders"
         #"ventoy-bin"
         "plex-media-server"
         "nautilus-admin-gtk4"
         #"nautilus-open-any-terminal"
         "v2raya-bin"
-        #"ttf-ms-fonts"
         #"mkinitcpio-firmware"
         #"cachyos-ananicy-rules-git"
-        # Для современной поддержки контроллеров
+        # Modern game controller support
         "xpadneo-dkms"
         "lmstudio-bin"
     )
@@ -120,15 +116,19 @@ install_aur_packages() {
         packages+=(
             "pkgconf"
             "gnome-rounded-blur"
+            "papirus-folders"
         )
     fi
 
     if yay -Q snapper > /dev/null 2>&1; then
         packages+=(
-            "btrfs-assistant"
             "snap-pac"
             "snapper-rollback"
         )
+    fi
+
+    if yay -Q btrfs-progs > /dev/null 2>&1; then
+        packages+=("btrfs-assistant")
     fi
 
     local failed_packages=()
@@ -146,15 +146,13 @@ install_aur_packages() {
     fi
 }
 
-# Configure makepkg.conf
 configure_makepkg() {
     log_message "Setting up makepkg.conf..."
 
     cp -f ./child/files/makepkg/makepkg.conf $HOME/.makepkg.conf
 }
 
-# Configure user folders
-create_directories() {
+create_user_dirs() {
     log_message "Create additional folders..."
 
     mkdir -p $HOME/.themes $HOME/.icons $HOME"/Загрузки/Torrents"
@@ -167,7 +165,6 @@ create_directories() {
     fi
 }
 
-# Configure usermod
 configure_user_permissions() {
     log_message "Setting up user permissions..."
 
@@ -186,7 +183,7 @@ main() {
     configure_makepkg
     setup_yay
     install_aur_packages
-    create_directories
+    create_user_dirs
     configure_user_permissions
 
     log_success "All operations have been completed successfully!"

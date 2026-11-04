@@ -56,7 +56,9 @@ configure_zsh_data() {
         cp -f ./child/files/zsh/zshrc $HOME/.zshrc
         cp -f ./child/files/zsh/p10k.zsh $HOME/.p10k.zsh
 
-        chown $USER:$USER $HOME/.zshrc $HOME/.zsh_history $HOME/.p10k.zsh
+        sudo chown $USER:$USER $HOME/.zshrc $HOME/.zsh_history $HOME/.p10k.zsh
+
+        sudo chsh -s /usr/bin/zsh "$USER"
     fi
 }
 
@@ -207,7 +209,17 @@ configure_wmshell() {
         fi
 
         # from Niri desktop installation
-        yay -Rns fuzzel alacritty mako niri swaybg swayidle swaylock waybar lightdm-gtk-greeter xdg-desktop-portal-gnome --noconfirm
+        yay -Rns fuzzel alacritty mako niri swaybg swayidle swaylock waybar lightdm-gtk-greeter xdg-desktop-portal-gnome vim --noconfirm
+    fi
+}
+
+configure_v2raya() {
+    if yay -Q v2raya-bin > /dev/null 2>&1; then
+        log_message "Setting up v2rayA system data..."
+
+        sudo cp -rf ./child/files/user/v2rayA/config/* /etc/v2raya/
+
+        sudo chown -R root:root /etc/v2raya
     fi
 }
 
@@ -230,6 +242,7 @@ main() {
     #configure_happ
     configure_mangowm
     configure_wmshell
+    configure_v2raya
 
     log_success "All operations have been completed successfully!"
     log_message "===== END OF THE 4TH PART ====="
