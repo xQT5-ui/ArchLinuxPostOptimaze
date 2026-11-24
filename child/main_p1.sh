@@ -117,6 +117,8 @@ install_base_apps() {
             "noctalia-greeter"
             "nwg-look"
             "gnome-keyring"
+            "xdg-desktop-portal-wlr"
+            "gpu-screen-recorder"
         )
     fi
 
@@ -203,7 +205,7 @@ install_flatpak_apps() {
         "com.bitwig.BitwigStudio"
         "io.github.milkshiift.GoofCord"
         "com.andr2i.scrolex"
-        "com.github.finefindus.eyedropper"
+        "io.github.josephmawa.Bella"
         "io.bassi.Amberol"
         "com.github.tchx84.Flatseal"
         "de.haeckerfelix.Fragments"
@@ -218,10 +220,9 @@ install_flatpak_apps() {
         "app.drey.EarTag"
         "org.nickvision.tubeconverter"
         "org.onlyoffice.desktopeditors"
-        "org.telegram.desktop"
+        "io.github.kukuruzka165.materialgram"
         "org.torproject.torbrowser-launcher"
         "org.gtk.Gtk3theme.adw-gtk3-dark"
-        "com.obsproject.Studio"
         "io.missioncenter.MissionCenter"
         "com.github.PintaProject.Pinta"
         "org.gnome.Calculator"
@@ -240,7 +241,7 @@ install_flatpak_apps() {
         "it.mijorus.gearlever"
         "de.wwwtech.gitte"
         "io.github.anil_e.Codd"
-        "io.github.dzheremi2.lrcmake-gtk"
+        "io.github.weiteck.Lyricade"
         "dev.bragefuglseth.Keypunch"
         "io.github.diegopvlk.Tomatillo"
         "io.gitlab.adhami3310.Impression"

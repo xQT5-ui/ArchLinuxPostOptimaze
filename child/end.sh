@@ -71,9 +71,17 @@ upd_init() {
 
 change_greeter() {
     if [ "$MANGOWM" = "true" ]; then
+        log_message "Change greeter..."
+
         systemctl disable --now lightdm.service
         systemctl enable --now greetd
     fi
+}
+
+replace_sudo() {
+    log_message "Replace sudo..."
+
+    yay -S run0-sudo-shim --noconfirm
 }
 
 main() {
@@ -83,6 +91,7 @@ main() {
     delete_orphans_packages
     upd_init
     change_greeter
+    replace_sudo
 
     log_success "===== END OF THE 5TH PART ====="
     log_warning "Installation and optimization are complete. It is recommended to reboot the system!"

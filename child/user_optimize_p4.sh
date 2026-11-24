@@ -223,6 +223,16 @@ configure_v2raya() {
     fi
 }
 
+configure_screen_recorder() {
+    if [ "$MANGOWM" = "true" ]; then
+        if yay -Q gpu-screen-recorder > /dev/null 2>&1; then
+            log_message "Setting up GPU Screen Recorder data..."
+
+            cp -f ./child/files/user/xdg-desktop-portal-wlr/config $HOME/.config/xdg-desktop-portal-wlr/config
+        fi
+    fi
+}
+
 main() {
     log_message "User settings optimize (Part 4)..."
 
@@ -243,6 +253,7 @@ main() {
     configure_mangowm
     configure_wmshell
     configure_v2raya
+    configure_screen_recorder
 
     log_success "All operations have been completed successfully!"
     log_message "===== END OF THE 4TH PART ====="
